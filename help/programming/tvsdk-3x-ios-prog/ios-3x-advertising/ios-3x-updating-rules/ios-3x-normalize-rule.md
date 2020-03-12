@@ -1,0 +1,106 @@
+---
+description: La regla de normalización define una transformación de URL para aplicarla a una URL creativa de origen obtenida de una respuesta VAST/VMAP.
+keywords: normalize rule;creative selection rules
+seo-description: La regla de normalización define una transformación de URL para aplicarla a una URL creativa de origen obtenida de una respuesta VAST/VMAP.
+seo-title: Normalizar reglas
+title: Normalizar reglas
+uuid: c5cdc40c-7f8c-4b4a-8044-217494e2f466
+translation-type: tm+mt
+source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+
+---
+
+
+# Normalizar reglas {#normalize-rules}
+
+La regla de normalización define una transformación de URL para aplicarla a una URL creativa de origen obtenida de una respuesta VAST/VMAP.
+
+**Tabla 2: La regla normalizar tiene los atributos y valores posibles siguientes:**
+
+<table id="table_ljp_tgx_hz">  
+ <thead> 
+  <tr> 
+   <th class="entry"><b>Clave</b></th> 
+   <th class="entry"><b>Tipo</b></th> 
+   <th class="entry"><b>Valores</b></th> 
+   <th class="entry"><b>Descripción</b></th> 
+  </tr> 
+ </thead>
+ <tbody> 
+  <tr> 
+   <td><span class="codeph"> type</span></td> 
+   <td><span class="codeph"> Cadena</span></td> 
+   <td><span class="codeph"> normalizar</span></td> 
+   <td>El valor siempre debe ser <span class="codeph"> normalizado</span>.</td> 
+  </tr> 
+  <tr> 
+   <td><span class="codeph"> item</span></td> 
+   <td><span class="codeph"> Cadena</span></td> 
+   <td><span class="codeph"> host</span></td> 
+   <td>Actualmente solo se admite <span class="codeph"> host</span> . Este atributo debe estar presente cuando se definen <span class="codeph"> coincidencias</span> y <span class="codeph"> valores</span> .</td> 
+  </tr> 
+  <tr> 
+   <td><span class="codeph"> matches</span></td> 
+   <td></td> 
+   <td></td> 
+   <td>Valores posibles:
+    <ul id="ul_tnf_2hx_hz"> 
+     <li><span class="codeph"> eq</span> - es igual a</li> 
+     <li><span class="codeph"> ne</span> - no es igual a</li> 
+     <li><span class="codeph"> co</span> - contiene</li> 
+     <li><span class="codeph"> nc</span> : no contiene</li> 
+     <li><span class="codeph"> sw</span> - comienza con</li> 
+     <li><span class="codeph"> Nuevo</span> : termina con</li> 
+    </ul></td> 
+  </tr> 
+  <tr> 
+   <td><span class="codeph"> values</span></td> 
+   <td><span class="codeph"> Matriz</span></td> 
+   <td></td> 
+   <td>TVSDK utilizará el atributo <span class="codeph"> matches</span> en el <span class="codeph"> elemento</span> del elemento creativo de origen y coincidirá con los valores definidos en esta matriz.</td> 
+  </tr> 
+  <tr> 
+   <td><span class="codeph"> buscar</span></td> 
+   <td><span class="codeph"> regex</span></td> 
+   <td></td> 
+   <td> Expresión regular que se aplicará en la URL creativa de origen para que coincida.</td> 
+  </tr> 
+  <tr> 
+   <td><span class="codeph"> reemplazar</span></td> 
+   <td><span class="codeph"> regex</span></td> 
+   <td></td> 
+   <td> Expresión regular que se aplicará en la URL creativa de origen para reemplazar en función de la coincidencia.</td> 
+  </tr> 
+ </tbody> 
+</table>
+
+```
+{
+    "ads": {
+        "rules": {
+            "default": [
+                {
+                ...
+                }
+                {
+                    "
+<b>type</b>": "
+<b>normalize</b>",
+                    "
+<b>item</b>": "host",
+                    "
+<b>matches</b>": "ew",
+                    "
+<b>values</b>": [
+                        "redirector.gvt1.com"
+                    ],
+                    "
+<b>find</b>": "videoplayback/(.*?)/expire/.*?/(.*?)/signature/.*?/",
+                    "
+<b>replace</b>": "videoplayback/$1/expire//$2/signature//"
+                }                
+            ]
+        }
+    }
+}
+```
