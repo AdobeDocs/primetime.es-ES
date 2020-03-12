@@ -1,0 +1,23 @@
+---
+description: La mayoría de los anunciantes requieren información detallada sobre cuándo, durante cuánto tiempo y con qué éxito se vieron sus publicidades. El método más eficaz es hacer que el reproductor cliente envíe informes mientras reproduce las publicidades, pero el servidor de manifiesto también admite el seguimiento de anuncios híbridos y del lado del servidor.
+seo-description: La mayoría de los anunciantes requieren información detallada sobre cuándo, durante cuánto tiempo y con qué éxito se vieron sus publicidades. El método más eficaz es hacer que el reproductor cliente envíe informes mientras reproduce las publicidades, pero el servidor de manifiesto también admite el seguimiento de anuncios híbridos y del lado del servidor.
+seo-title: Seguimiento de publicidades
+title: Seguimiento de publicidades
+uuid: 184b8c36-5e51-42a7-b905-53f2b7b15e49
+translation-type: tm+mt
+source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+
+---
+
+
+# Seguimiento de publicidades {#ad-tracking}
+
+La mayoría de los anunciantes requieren información detallada sobre cuándo, durante cuánto tiempo y con qué éxito se vieron sus publicidades. El método más eficaz es hacer que el reproductor cliente envíe informes mientras reproduce las publicidades, pero el servidor de manifiesto también admite el seguimiento de anuncios híbridos y del lado del servidor.
+
+Al habilitar el seguimiento de publicidad, el cliente especifica uno de los siguientes enfoques:
+
+* **Lado** del cliente Junto con la lista de reproducción enlazada con publicidad, el servidor envía al cliente una estructura JSON, VMAP o in-manifest que especifica eventos de seguimiento y direcciones URL. Este método es compatible con Interactive Advertising Bureau (IAB)
+
+* **Servidor** El cliente no participa en el seguimiento de anuncios. El servidor envía la información de seguimiento de publicidad que pueda. Los datos de seguimiento se calculan únicamente en el servidor y es posible que no coincidan con la actividad de reproducción del lado del cliente. Por ejemplo, si un usuario final no ve toda la publicidad, después de que se entreguen los segmentos, el servidor seguirá considerando que la publicidad se está reproduciendo.
+
+* **Híbrido** Es como el seguimiento del lado del cliente, pero el cliente envía sus informes al servidor de manifiesto, que los reenvía a las direcciones URL correspondientes. Los anunciantes reciben la misma información que con el seguimiento del lado del cliente. Este modo se adapta a los clientes que se ejecutan con acceso a Internet restringido.
