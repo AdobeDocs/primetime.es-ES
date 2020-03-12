@@ -1,0 +1,82 @@
+---
+description: Cargue un recurso creando una instancia directa de MediaResource y cargando el contenido del vídeo que se va a reproducir. Esta es una forma de cargar un recurso de medios.
+seo-description: Cargue un recurso creando una instancia directa de MediaResource y cargando el contenido del vídeo que se va a reproducir. Esta es una forma de cargar un recurso de medios.
+seo-title: Cargar un recurso de medios en MediaPlayer
+title: Cargar un recurso de medios en MediaPlayer
+uuid: 6ee8032f-0728-423f-a1d2-5030aa7db14f
+translation-type: tm+mt
+source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+
+---
+
+
+# Cargar un recurso de medios en MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
+
+Cargue un recurso creando una instancia directa de MediaResource y cargando el contenido del vídeo que se va a reproducir. Esta es una forma de cargar un recurso de medios.
+
+1. Configure el elemento que se puede reproducir de MediaPlayer con el nuevo recurso que se va a reproducir.
+
+   Reemplace el elemento que se puede reproducir en este momento en MediaPlayer llamando `MediaPlayer.replaceCurrentItem` y pasando una `MediaResource` instancia existente.
+
+1. Registre una implementación de la `MediaPlayer.PlaybackEventListener` interfaz con la `MediaPlayer` instancia.
+
+   * `onPrepared`
+   * `onStateChanged`y compruebe si hay INICIALIZADO y ERROR.
+
+1. Cuando el estado del reproductor de medios cambia a INICIALIZADO, puede llamar a `MediaPlayer.prepareToPlay`
+
+   El estado INITIALIZED indica que el medio se ha cargado correctamente. La llamada `prepareToPlay` inicia el proceso de resolución y colocación de la publicidad, si existe.
+1. Cuando TVSDK llama a la llamada de retorno, el flujo de medios se ha cargado correctamente y está preparado para la reproducción. `onPrepared`
+
+   Cuando se carga el flujo de medios, `MediaPlayerItem` se crea un.
+>Si se produce un error, el `MediaPlayer` cambia al estado ERROR. También notifica a la aplicación llamando a la `PlaybackEventListener.onStateChanged`llamada de retorno.
+>
+>Esto pasa varios parámetros: >
+>* Un `state` parámetro de tipo `MediaPlayer.PlayerState` con el valor de `MediaPlayer.PlayerState.ERROR`.
+   >
+   >
+* Un `notification` parámetro de tipo `MediaPlayerNotification` que contiene información de diagnóstico sobre el evento de error.
+
+
+El siguiente código de muestra simplificado ilustra el proceso de carga de un recurso de medios:
+
+>```java>
+>// mediaResource is a properly configured MediaResource instance 
+>// mediaPlayer is a MediaPlayer instance 
+>// register a PlaybackEventListener implementation with the MediaPlayer  
+>instancemediaPlayer.addEventListener( 
+>   MediaPlayer.Event.PLAYBACK, 
+>   new MediaPlayer.PlaybackEventListener()) { 
+>       @Overridepublic void onPrepared() { 
+>               // at this point, the resource is successfully loaded and available 
+>               // and the MediaPlayer is ready to start the playback 
+>               // once the resource is loaded, the MediaPlayer is able to 
+>               // provide a reference to the current "playable item" 
+> 
+>        
+       MediaPlayerItem playerItem = mediaPlayer.CurrentItem(); 
+> 
+>        
+       if (playerItem != null) {     
+>                       // here we can take a look at the properties of the     
+>                       // loaded stream 
+>               } 
+>       } @Overridepublic void onStateChanged( 
+>               MediaPlayer.PlayerState state,  
+>               MediaPlayerNotification notification) { 
+>               if (state == MediaPlayer.PlayerState.ERROR) { 
+>                       // something bad happened - the resource cannot be loaded    
+>                       // details about the problem are provided via the  
+>                       // MediaPlayerNotification instance 
+>               }  
+>               elseif (state == MediaPlayer.PlayerState.INITIALIZED) {     
+>                       mediaPlayer.prepareToPlay(); 
+>               } 
+>       } 
+>       // implementation of the other methods in the PlaybackEventListener interface... 
+>} 
+>
+>
+```>
+
+
