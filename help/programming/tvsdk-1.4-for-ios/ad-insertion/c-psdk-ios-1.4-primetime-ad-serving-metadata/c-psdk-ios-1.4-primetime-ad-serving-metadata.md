@@ -1,0 +1,113 @@
+---
+description: TVSDK es compatible con la resolución e inserción de anuncios para VOD y flujos en directo/lineal.
+seo-description: TVSDK es compatible con la resolución e inserción de anuncios para VOD y flujos en directo/lineal.
+seo-title: Metadatos del servidor de publicidad Primetime
+title: Metadatos del servidor de publicidad Primetime
+uuid: 314f14c0-4da4-4da6-96f9-5a5ffea22a99
+translation-type: tm+mt
+source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+
+---
+
+
+# Información general {#primetime-ad-server-metadata-overview}
+
+TVSDK es compatible con la resolución e inserción de anuncios para VOD y flujos en directo/lineal.
+
+>[!NOTE] {othertype=&quot;Prequisite&quot;}
+>
+>Antes de incluir publicidad en el contenido del vídeo, proporcione la siguiente información de metadatos:
+>
+>* Un `mediaID`, que identifica el contenido específico que se va a reproducir.
+>* Su `zoneID`, que identifica a su empresa o sitio web.
+>* El dominio del servidor de publicidad, que especifica el dominio del servidor de publicidad asignado.
+>* Otros parámetros de objetivo.
+>
+
+
+
+## Configurar metadatos de Primetime y de servidor {#section_86C4A3B2DF124770B9B7FD2511394313}
+
+La aplicación debe proporcionar a TVSDK la `PTAuditudeMetadata` información necesaria para conectarse al servidor de publicidad.
+
+Para configurar los metadatos del servidor de publicidad:
+
+1. Cree una instancia de [PTAuditudeMetadata](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTAuditudeMetadata.html) y defina sus propiedades.
+
+   ```
+   PTAuditudeMetadata *adMetadata = [[PTAuditudeMetadata alloc] init];  
+   adMetadata.zoneId = @"INSERT_YOUR_ZONE_ID_HERE"; 
+   adMetadata.domain = @"INSERT_YOUR_DOMAIN_HERE"; 
+   // Optionally set user agent 
+   adMetadata.userAgent = @"INSERT_AGENT_NAME_HERE; 
+   ```
+
+1. Defina la `PTAuditudeMetadata` instancia como metadatos para los `PTMediaPlayerItem` metadatos actuales utilizando `PTAdResolvingMetadataKey`.
+
+   ```
+   // Metadata is an instance of PTMetadata that is used to create the PTMediaPlayerItem 
+   [metadata setMetadata:adMetadata forKey:PTAdResolvingMetadataKey];  
+   [adMetadata release];
+   ```
+
+   Este es un ejemplo:
+
+   ```
+   PTMetadata *metadata = [self createMetadata]; 
+   PTMediaPlayerItem *item =  
+     [[[PTMediaPlayerItem alloc] initWithUrl:url mediaId:yourMediaID metadata:metadata] autorelease]; 
+   
+   - (PTMetadata *) createMetadata { 
+       PTMetadata* metadata = [[[PTMetadata alloc] init] autorelease]; 
+   
+       PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init] autorelease];  
+       adMetadata.zoneId = yourZoneID; 
+       adMetadata.domain = yourAdServerDomain; 
+   
+       [metadata setMetadata:adMetadata forKey:PTAdResolvingMetadataKey]; 
+   
+       return metadata; 
+   }
+   ```
+
+## Habilitar publicidades en la reproducción de eventos completos {#section_6016E1DAF03645C8A8388D03C6AB7571}
+
+La reproducción de eventos completos (FER) es un recurso de VOD que actúa como recurso de directo/DVR, por lo que la aplicación debe tomar los pasos necesarios para garantizar que los anuncios se coloquen correctamente.
+
+Para el contenido en directo, TVSDK utiliza los metadatos/indicaciones del manifiesto para determinar dónde colocar los anuncios. Sin embargo, a veces el contenido en directo o lineal puede parecerse al contenido de VOD. Por ejemplo, cuando se completa el contenido activo, se agrega una `EXT-X-ENDLIST` etiqueta al manifiesto activo. Para HLS, la `EXT-X-ENDLIST` etiqueta significa que el flujo es un flujo VOD. TVSDK no puede diferenciar automáticamente este flujo de un flujo de VOD normal para insertar correctamente anuncios.
+
+La aplicación debe indicar a TVSDK si el contenido está activo o VOD especificando el `PTAdSignalingMode`.
+
+Para un flujo FER, el servidor de decisiones y primetime de Adobe no debe proporcionar la lista de los saltos de publicidad que deben insertarse en la línea de tiempo antes de iniciar la reproducción. Este es el proceso habitual para el contenido de VOD. En su lugar, al especificar un modo de señalización diferente, TVSDK lee todos los puntos de referencia del manifiesto FER y va al servidor de publicidad para cada punto de referencia para solicitar una pausa publicitaria. Este proceso es similar al contenido en directo/DVR.
+
+Además de cada solicitud asociada a un punto de referencia, TVSDK realiza una solicitud de publicidad adicional para anuncios previos.
+
+1. Desde un origen externo, como vCMS, obtenga el modo de señalización que debe utilizarse.
+1. Cree los metadatos relacionados con la publicidad.
+1. Si se debe sobrescribir el comportamiento predeterminado, especifique el `PTAdSignalingMode` mediante `PTAdMetadata.signalingMode`.
+
+   Los valores válidos son `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues`y `PTAdSignalingModeServerMap`.
+
+   Debe establecer el modo de señalización de publicidad antes de llamar `prepareToPlay`. Después de que TVSDK empiece a resolver y colocar anuncios en la línea de tiempo, se omiten los cambios en el modo de señalización de publicidad. Establezca el modo cuando cree los metadatos de publicidad para el recurso.
+
+1. Continúe con la reproducción.
+
+   ```
+      PTMetadata *metadata = [[[PTMetadata alloc] init] autorelease]; 
+   PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init] autorelease]; 
+   adMetadata.zoneId = your-auditude-zone-id; 
+   adMetadata.domain = @"your-auditude-domain"; 
+   //adMetadata.enableDVRAds = YES; // FOR LIVE DVR case 
+   //adMetadata.signalingMode = PTAdSignalingModeManifestCues;  
+   // FOR VOD FER case 
+   NSMutableDictionary *targetingParameters = [[[NSMutableDictionary alloc] init] autorelease]; 
+   [targetingParameters setValue:@"ipad" forKey:@"device"]; 
+   [targetingParameters setValue:@"preroll" forKey:@"AD_OPPORTUNITY_ID"]; 
+   adMetadata.targetingParameters = targetingParameters; 
+   NSMutableDictionary *customParameters = [[[NSMutableDictionary alloc] init] autorelease]; 
+   [customParameters setValue:@"your-media-id" forKey:@"NW_ID"]; 
+   [customParameters setValue:@"preroll" forKey:@"AD_OPPORTUNITY_ID"]; 
+   adMetadata.customParameters = customParameters; 
+   [metadata setMetadata:adMetadata forKey:PTAdResolvingMetadataKey]; 
+   ```
+
