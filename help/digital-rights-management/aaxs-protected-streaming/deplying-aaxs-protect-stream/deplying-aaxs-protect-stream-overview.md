@@ -1,0 +1,26 @@
+---
+seo-title: Implementación de Adobe Access Server para flujo continuo protegido, descripción general
+title: Implementación de Adobe Access Server para flujo continuo protegido, descripción general
+uuid: 48a7e452-520a-4ff8-97e9-11210221256d
+translation-type: tm+mt
+source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+
+---
+
+
+# Implementación de Adobe Access Server para flujo continuo protegido, descripción general {#deploying-the-adobe-access-server-for-protected-streaming-overview}
+
+Antes de implementar Adobe Access Server para flujo protegido, asegúrese de haber instalado las versiones de Java y Tomcat que se enumeran en la sección Requisitos.
+
+El paquete Adobe Access Server for Protected Streaming incluye [!DNL flashaccesserver.war]. Para implementar este archivo WAR, cópielo en el directorio de Tomcat [!DNL webapps] . Si ya ha implementado el archivo WAR, es posible que tenga que borrar manualmente el directorio WAR desempacado ( [!DNL flashaccessserver] en el [!DNL webapps] directorio de Tomcat). Para evitar que Tomcat descomprima archivos WAR, edite el [!DNL server.xml] archivo en el directorio [!DNL conf] de Tomcat y defina el `unpackWARs` atributo en `false`.
+
+>[!NOTE] {class=&quot;- topic/note &quot;}
+>
+>Si ha configurado Tomcat para que incluya [!DNL commons-logging.jar] en la ruta de clases del sistema (no es necesario para Adobe Access Server for Protected Streaming), el registro común debe configurarse para utilizar Log4J.
+
+El servidor opcionalmente utiliza una biblioteca específica de la plataforma ( [!DNL jsafe.dll] en Microsoft Windows o [!DNL libjsafe.so] en Linux) para un rendimiento óptimo. Copie la biblioteca adecuada para su plataforma desde la [!DNL thirdparty/cryptoj/]*plataforma *a una ubicación especificada por la variable de`PATH`entorno (o`LD_LIBRARY_PATH`en Linux).
+
+>[!NOTE] {class=&quot;- topic/note &quot;}
+>
+>La versión de 64 bits solo debe utilizarse si tanto el sistema operativo como JDK admiten 64 bits, de lo contrario se utiliza la versión de 32 bits.
+
