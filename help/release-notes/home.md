@@ -4,7 +4,7 @@ seo-title: Notas de la versión de Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 2b1ce2cfea7db0a644507ffdb9d18569b55c84da
+source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
 
 ---
 
@@ -25,9 +25,9 @@ La versión se centró en resolver los principales problemas de los clientes.
 
 Consulte para obtener más información sobre la versión actual publicada para [Android](../release-notes/tvsdk-3x-android.md).
 
-## Mejoras y correcciones en PTAI 19.11.1
+## Mejoras y correcciones en PTAI 20.3.3
 
-Centrado en las actualizaciones de mantenimiento.
+Centrado en las correcciones de problemas del cliente.
 
 Para obtener más información sobre la versión actual de la inserción de publicidad dinámica, consulte las notas de la versión de [PTAI](ptai-19x-release-notes.md).
 
@@ -40,7 +40,7 @@ Para obtener más información sobre la versión actual de la inserción de publ
 | [Implementación de referencia](/help/android-reference-implementation/home.md) | Ayuda a comprender el SDK de TVSDK y a modificar los administradores de funciones para personalizar su reproductor personal. |
 | [Referencias de la API de Primetime](/help/reference/api-references.md) | Proporciona información detallada sobre las funciones de TVSDK, las estructuras de datos y otras construcciones de programación. |
 | [Administración de derechos digitales](/help/digital-rights-management/home.md) | Ayuda a conocer más sobre los distintos escenarios de usuario en Digital Rights Management (DRM) |
-| [Ayuda para la inserción de publicidad dinámica](/help/dynamic-ad-insertion/home.md) | Explica cómo monetizar el contenido mediante la inserción de publicidad dinámica dirigida por el usuario en el servidor y captar a la audiencia con anuncios personalizados. |
+| [Ayuda para la inserción de publicidad dinámica](/help/dynamic-ad-insertion/home.md) | Explica cómo monetizar el contenido mediante la inserción de publicidad dinámica dirigida por el usuario en el servidor y captar la audiencia con anuncios personalizados. |
 | [Archivos](https://helpx.adobe.com/primetime/archives.html) | Descargue archivos PDF de la documentación archivada. |
 
 ## Recursos útiles
