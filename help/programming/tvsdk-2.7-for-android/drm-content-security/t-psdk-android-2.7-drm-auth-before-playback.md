@@ -5,7 +5,7 @@ seo-title: Autenticación DRM antes de la reproducción
 title: Autenticación DRM antes de la reproducción
 uuid: 6b4fbcfb-95fd-4591-bbb2-a17afd783383
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 16b88f07468811f2c84decb1324b0c5bd2372131
 
 ---
 
@@ -48,26 +48,25 @@ En este ejemplo, puede utilizar `DRMHelper` métodos para descargar el contenido
 
 1. Implemente las rellamadas en la `DRMLoadMetadataListener`.
 
-       La función &quot;loadDRMMetadata&quot; llama a estos controladores de eventos.
-       
- &quot;java     interfaz
- pública DRMLoadMetadataListener {     
-     
-     public void onLoadMetadataUrlStart();
-       
-     /**
-     * @param authNeeded
-     * si se necesita autenticación DRM.
-       * @param drmMetadata
-     * obtuvo la DRMMetadata analizada.    */
-     public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata);
-       public void onLoadMetadataUrlError();
-       }
-     
-     &quot;
-     
-     A continuación se proporcionan más detalles sobre los controladores:
+   El `loadDRMMetadata` llama a estos controladores de evento.
+
+   ```java
+   public interface DRMLoadMetadataListener { 
    
+       public void onLoadMetadataUrlStart(); 
+   
+       /** 
+       * @param authNeeded 
+       * whether DRM authentication is needed. 
+       * @param drmMetadata 
+       * the parsed DRMMetadata obtained.    */ 
+       public void onLoadMetadataUrlComplete(boolean authNeeded, DRMMetadata drmMetadata); 
+       public void onLoadMetadataUrlError(); 
+   } 
+   ```
+
+   A continuación se proporcionan más detalles sobre los controladores:
+
    * `onLoadMetadataUrlStart` detecta cuándo ha comenzado la carga de la URL de metadatos.
    * `onLoadMetadataUrlComplete` detecta cuándo ha terminado de cargarse la URL de metadatos.
    * `onLoadMetadataUrlError` indica que los metadatos no se han podido cargar.
@@ -94,7 +93,7 @@ En este ejemplo, puede utilizar `DRMHelper` métodos para descargar el contenido
    } 
    ```
 
-1. Lleve a cabo una de las siguientes tareas:
+1. Complete una de las siguientes tareas:
 
    * Si no se requiere autenticación, comience la reproducción.
    * Si se requiere autenticación, complete la autenticación adquiriendo la licencia.
@@ -153,7 +152,7 @@ En este ejemplo, puede utilizar `DRMHelper` métodos para descargar el contenido
       }); 
       ```
 
-1. Use un detector de eventos para comprobar el estado de autenticación.
+1. Use un detector de evento para comprobar el estado de la autenticación.
 
    Este proceso implica una comunicación de red, por lo que también es una operación asincrónica.
 
@@ -191,7 +190,7 @@ En este ejemplo, puede utilizar `DRMHelper` métodos para descargar el contenido
    } 
    ```
 
-1. Si la autenticación se realiza correctamente, inicie la reproducción.
-1. Si la autenticación no se realiza correctamente, notifíquelo al usuario y no inicie la reproducción.
+1. Si la autenticación se realiza correctamente, inicio la reproducción.
+1. Si la autenticación no se realiza correctamente, notifíquelo al usuario y no dé inicio a la reproducción.
 
    La aplicación debe gestionar cualquier error de autenticación. Al no autenticarse correctamente antes de reproducir, TVSDK se encuentra en un estado de error y la reproducción se detiene. La aplicación debe resolver el problema, restablecer el reproductor y volver a cargar el recurso.
