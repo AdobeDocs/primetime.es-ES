@@ -5,7 +5,7 @@ seo-title: Carga de un recurso de medios en el reproductor de medios
 title: Carga de un recurso de medios en el reproductor de medios
 uuid: 0334fa69-1d92-44d8-8891-2bc90a1ea498
 translation-type: tm+mt
-source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+source-git-commit: 67975894814fbed8cfc49764a54b80d123032a49
 
 ---
 
@@ -18,7 +18,7 @@ Cargue un recurso creando una instancia directa de MediaResource y cargando el c
 
    Reemplace el elemento que se puede reproducir actualmente llamando `MediaPlayer.replaceCurrentResource()` y pasando una `MediaResource` instancia existente.
 
-   Esto inicia el proceso de carga de recursos.
+   Esto inicio el proceso de carga de recursos.
 
 1. Registre el `MediaPlayerEvent.STATUS_CHANGED` evento con la `MediaPlayer` instancia. En la llamada de retorno, compruebe al menos los siguientes valores de estado:
 
@@ -28,35 +28,36 @@ Cargue un recurso creando una instancia directa de MediaResource y cargando el c
    A través de estos eventos, el `MediaPlayer` objeto notifica a la aplicación cuando ha cargado correctamente el recurso multimedia.
 1. Cuando el estado del reproductor de medios cambia a `INITIALIZED`, puede llamar a `MediaPlayer.prepareToPlay()`.
 
-   Este estado indica que el medio se ha cargado correctamente. El nuevo `MediaPlayerItem` está listo para la reproducción. La llamada `prepareToPlay()` inicia el proceso de resolución y colocación de la publicidad, si existe.
+   Este estado indica que el medio se ha cargado correctamente. El nuevo `MediaPlayerItem` está listo para la reproducción. La llamada `prepareToPlay()` inicio el proceso de resolución y colocación de la publicidad, si existe.
 
 Si se produce un error, el reproductor de medios cambia al `ERROR` estado.
 
 El siguiente código de muestra simplificado ilustra el proceso de carga de un recurso de medios:
->```java>
->// mediaResource is a properly configured MediaResource instance 
+
+```java
+// mediaResource is a properly configured MediaResource instance 
 // mediaPlayer is a MediaPlayer instance 
 // register a PlaybackEventListener implementation with the MediaPlayer instance 
 mediaPlayer.addEventListener(MediaPlayerEvent.STATUS_CHANGED,  
- new StatusChangeEventListener() { 
-   @Override 
-   public void onStatusChanged(MediaPlayerStatus status) { 
-       if(event.getStatus() == MediaPlayerStatus.PREPARED) { 
-           // The resource is successfully loaded and available. The  
-           // MediaPlayer is ready to start the playback and can 
-           // provide a reference to the current playable item 
-           MediaPlayerItem playerItem = mediaPlayer.getCurrentItem(); 
-           if (playerItem != null) { 
-               // We can look at the properties of the loaded stream 
-           } 
-       } 
-       else if (event.getStatus() == MediaPlayerStatus.ERROR) { 
-           //Something bad happened - the resource cannot be loaded. 
-           // The Metadata object in the event provides details. 
-       } 
-       else if (status == MediaPlayerStatus.INITIALIZED) { 
-           mediaPlayer.prepareToPlay(); 
-       } 
-   } 
+  new StatusChangeEventListener() { 
+    @Override 
+    public void onStatusChanged(MediaPlayerStatus status) { 
+        if(event.getStatus() == MediaPlayerStatus.PREPARED) { 
+            // The resource is successfully loaded and available. The  
+            // MediaPlayer is ready to start the playback and can 
+            // provide a reference to the current playable item 
+            MediaPlayerItem playerItem = mediaPlayer.getCurrentItem(); 
+            if (playerItem != null) { 
+                // We can look at the properties of the loaded stream 
+            } 
+        } 
+        else if (event.getStatus() == MediaPlayerStatus.ERROR) { 
+            //Something bad happened - the resource cannot be loaded. 
+            // The Metadata object in the event provides details. 
+        } 
+        else if (status == MediaPlayerStatus.INITIALIZED) { 
+            mediaPlayer.prepareToPlay(); 
+        } 
+    } 
 } 
 ```
