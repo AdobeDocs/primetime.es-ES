@@ -3,7 +3,7 @@ seo-title: Habilitar la demostración del modelo de uso
 title: Habilitar la demostración del modelo de uso
 uuid: 43930ebb-e936-4f48-990d-7ad19992e326
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 6e949c2f88deef88f0d0ac95b18c006da1c89d2f
 
 ---
 
@@ -15,12 +15,10 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
    Si va a empaquetar contenido con la herramienta de línea de comandos de Media Packager, introduzca:
 
    ```
-   java -jar AdobeMediaPackager.jar [
-   
-<i>source_file</i>] [<i>dest_file</i>] -k RI_UsageModelDemo=true
+   java -jar AdobeMediaPackager.jar [<i>source_file</i>] [<i>dest_file</i>] -k RI_UsageModelDemo=true
+   ```
 
-```
->[!NOTE] {class="- topic/note "}
+>[!NOTE] {class=&quot;- topic/note &quot;}
 >
->If you do not activate the optional demo mode at packaging time, the license server issues a license based on the first valid DRM policy it processes.
+>Si no activa el modo de demostración opcional en el momento del empaquetado, el servidor de licencias emite una licencia basada en la primera directiva DRM válida que procesa.
 
