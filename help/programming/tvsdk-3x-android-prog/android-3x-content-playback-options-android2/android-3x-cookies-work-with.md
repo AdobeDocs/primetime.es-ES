@@ -5,7 +5,7 @@ seo-title: Trabajar con cookies
 title: Trabajar con cookies
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
-source-git-commit: ad58732842eb651514a47dd565e31e3d98a84c46
+source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
 
 ---
 
@@ -16,7 +16,7 @@ Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookies par
 
 Esta es una solicitud de muestra al servidor de claves con cierta autenticación:
 
-1. El cliente inicia sesión en el sitio web en un navegador y su inicio de sesión muestra que este cliente puede ver el contenido.
+1. El cliente inicia sesión en el sitio web en un navegador y su inicio de sesión muestra que este cliente puede realizar vistas del contenido.
 1. Según lo que espera el servidor de licencias, la aplicación genera un autentificador.
 
    Este valor se pasa a TVSDK.
@@ -45,7 +45,7 @@ Para trabajar con cookies:
    >
    >Cuando se habilita la redirección 302, la solicitud de publicidad puede redirigirse a un dominio diferente del dominio al que pertenece la cookie.
 
-   TVSDK realiza esta consulta en tiempo de ejecución, comprueba si hay cookies asociadas con la dirección URL y las utiliza automáticamente. `cookieManager`
+   TVSDK lo consulta `cookieManager` en tiempo de ejecución, comprueba si hay cookies asociadas con la dirección URL y las utiliza automáticamente.
 
    Si es necesario actualizar las cookies en la aplicación durante la reproducción, no utilice `networkConfiguration.setCookieHeaders` la API, ya que la actualización se producirá en el almacén de cookies de JAVA.
 
@@ -64,8 +64,9 @@ Para trabajar con cookies:
    `config.setNetworkConfiguration(networkConfiguration)`
 
    >[!NOTE]
-   Después de establecer &#39;setReadSetCookieHeader&#39; en false, configure las cookies para las solicitudes clave mediante el administrador de cookies JAVA.
    >
+   >Después de establecer &#39;setReadSetCookieHeader&#39; en false, configure las cookies para las solicitudes clave mediante el administrador de cookies JAVA.
+
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
 Esta API de llamada de retorno se activará cada vez que haya una actualización en las cookies de C++ (cookies que proceden de la respuesta http). La aplicación necesita escuchar esta llamada de retorno y puede actualizar su CookieStore de JAVA según corresponda para que sus llamadas de red en JAVA puedan utilizar las cookies como se muestra a continuación:
 
