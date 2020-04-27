@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e41213acf027e4dc4d016ef31c2d3d1665f54dfc
+source-git-commit: 3e5078c25a1426c3991669809426eefab0386ac9
 
 ---
 
@@ -290,20 +290,16 @@ Cuando TVSDK abre una conexión, solicita al servidor una conexión *permanente*
 
 * **SizeAvaliableEventListener**
 
-   * Los métodos getHeight() y getWidth() de SizeAvailableEvent ahora devolverán la salida en altura y anchura respectivamente. La relación de aspecto de visualización se puede calcular de la siguiente manera:
+   * `getHeight()` y `getWidth()` los métodos de `SizeAvailableEvent` ahora devolverán la salida en altura y anchura respectivamente. La relación de aspecto de visualización se puede calcular de la siguiente manera:
 
-   ```java
-   SizeAvailableEvent e;
-   DAR = e.getWidth()/ e.getHeight();
-   ```
+      SizeAvailableEvent e;
+DAR = e.getWidth()/ e.getHeight();
 
-   La relación de aspecto de Almacenamiento en cuanto a la anchura de la barra vertical y la altura de la barra también se puede utilizar para calcular la anchura del marco y la altura del marco:
+      La relación de aspecto de Almacenamiento en cuanto a la anchura de la barra vertical y la altura de la barra también se puede utilizar para calcular la anchura del marco y la altura del marco:
 
-   ```java
-   SAR = e.getSarWidth()/e.getSarHeight();
-   frameHeight = e.getHeight();
-   frameWidth = e.getWidth()/SAR;
-   ```
+      SAR = e.getSarWidth()/e.getSarHeight();
+frameHeight = e.getHeight();
+frameWidth = e.getWidth()/SAR;
 
 * **Cookies**
 
