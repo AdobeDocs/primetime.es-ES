@@ -5,7 +5,7 @@ seo-title: DRM amplio
 title: DRM amplio
 uuid: 3a5fd786-4319-4e92-83b6-0f5328df6a44
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: ddcdf38fb7a77b7609a21bbdf6b32188b917e22c
 
 ---
 
@@ -18,30 +18,70 @@ Póngase en contacto con su representante de Adobe para obtener la información 
 
 <!--<a id="section_1385440013EF4A9AA45B6AC98919E662"></a>-->
 
-Puede utilizar la DRM nativa de Android Widevine con flujos DASH.
+Puede utilizar la DRM nativa de Android Widevine con flujos CMAF HLS.
 
-Llame a la siguiente `com.adobe.mediacore.drm.DRMManager` API antes de iniciar la reproducción:
+>[!NOTE]
+>
+> El esquema CTR de Widevine CENC requiere la versión mínima de Android 4.4 (Nivel de API 19).
+>
+> El esquema amplio de CBCS requiere la versión mínima de Android 7.1 (nivel de API 25).
+
+## Configurar detalles del servidor de licencias {#license-server-details}
+
+Llame a la siguiente `com.adobe.mediacore.drm.DRMManager` API antes de cargar el recurso de MediaPlayer:
 
 ```java
-public static void setProtectionData( 
-    String drm,  
-    String licenseServerURL,   
-    Map<String, String> requestProperties)
+public static void setProtectionData(
+String drm,
+String licenseServerURL,
+Map<String, String> requestProperties)
 ```
 
-Argumentos:
+### Argumentos {#arguments-license-server}
 
 * `drm` - `"com.widevine.alpha"` para Widevine.
 
 * `licenseServerURL` - Dirección URL del servidor de licencias Widevine que recibe solicitudes de licencia.
+
 * `requestProperties` - Contiene encabezados adicionales para incluirlos en la solicitud de licencia saliente.
 
 Por ejemplo, al usar contenido empaquetado para Expresiones DRM, utilice el siguiente código antes de reproducir:
 
 ```java
-DRMManager.setProtectionData( 
+DRMManager.setProtectionData(
   "com.widevine.alpha",  
   "https://wv.service.expressplay.com/hms/wv/rights/?ExpressPlayToken= 
 <i>token</i>",  
-  null); 
+  null);
 ```
+
+## Proporcionar llamada de retorno personalizada {#custom-callback}
+
+Llame a la siguiente `com.adobe.mediacore.drm.DRMManager` API antes de cargar el recurso de MediaPlayer.
+
+```java
+public static void setMediaDrmCallback(
+MediaDrmCallback callback)
+```
+
+### Argumentos {#arguments-custom-callback}
+
+* `callback` - implementación personalizada de MediaDrmCallback para usar en lugar de usar el valor predeterminado `com.adobe.mediacore.drm.WidevineMediaDrmCallback`.
+
+Para obtener más información, consulte Referencia de API 3.11.
+
+## Buscar el cuadro PSSH del recurso de MediaPlayer cargado actualmente {#pssh-box-mediaplayer-resoource}
+
+Llame a la siguiente `com.adobe.mediacore.drm.DRMManager` API, preferiblemente en la implementación de llamada de retorno personalizada.
+
+```java
+public static byte[] getPSSH()
+```
+
+La API devuelve el Cuadro de encabezado específico del sistema de protección asociado al recurso de medios Widevine cargado.
+
+Hay un cuadro válido disponible para una duración corta (entre la creación de instancias de DRM y la carga de claves). `MediaDrmCallback callback executeKeyRequest()` Puede utilizarla para personalizar la recuperación de claves de licencia.
+
+>[!NOTE]
+>
+> `getPSSH()` La API solo se admite en instancias de un solo reproductor. Varios reproductores o la función Instant On deben inicializarse en serie para recibir el cuadro correcto.
