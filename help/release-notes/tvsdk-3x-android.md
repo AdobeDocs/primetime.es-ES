@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 5cf340119147799cd7b2c40a2a312595eebaa737
+source-git-commit: e84c50037557e157a044b1cec1fdea84cb156ea0
 
 ---
 
@@ -396,7 +396,7 @@ Cuando la resolución está asociada a un problema informado, se muestra una ref
 
 En esta sección se ofrece un resumen del problema resuelto en la versión de Android de TVSDK 3.11.
 
-* Los caracteres coreanos se muestran como símbolos de glifos que faltan para los manifiestos HLS con WebVTT en la aplicación de referencia TVSDK de Android.
+* ZD#41252 - Los caracteres coreanos se muestran como símbolos de glifos que faltan para los manifiestos HLS con WebVTT en la aplicación de referencia TVSDK para Android.
 
 ### Problemas resueltos en versiones anteriores
 
