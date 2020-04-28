@@ -5,7 +5,7 @@ seo-title: DRM amplio
 title: DRM amplio
 uuid: 3a5fd786-4319-4e92-83b6-0f5328df6a44
 translation-type: tm+mt
-source-git-commit: ddcdf38fb7a77b7609a21bbdf6b32188b917e22c
+source-git-commit: 0271af21b74e80455ddb2c53571cd75f3a0f56ba
 
 ---
 
@@ -68,7 +68,7 @@ MediaDrmCallback callback)
 
 * `callback` - implementación personalizada de MediaDrmCallback para usar en lugar de usar el valor predeterminado `com.adobe.mediacore.drm.WidevineMediaDrmCallback`.
 
-Para obtener más información, consulte Referencia de API 3.11.
+Para obtener más información, consulte la documentación [de la API de](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html)Android TVSDK 3.11.
 
 ## Buscar el cuadro PSSH del recurso de MediaPlayer cargado actualmente {#pssh-box-mediaplayer-resoource}
 
