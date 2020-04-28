@@ -5,7 +5,7 @@ description: Las API le ayudan a crear una aplicación o integración funcional 
 seo-description: Las API le ayudan a crear una aplicación o integración funcional de forma rápida y sencilla.
 topic-tags: API-references
 translation-type: tm+mt
-source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
+source-git-commit: b063235ed1eb27f537d4b311f2f07d7f5750206b
 
 ---
 
@@ -13,7 +13,7 @@ source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 # Referencias de la API de Adobe Primetime {#api-references}
 
 + TVSDK 3.11 {#tvsdk-311}
-   + [TVSDK 3.11 para Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_311/index.html)
+   + [TVSDK 3.11 para Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.11/index.html)
 
 + TVSDK 3.5 {#tvsdk-35}
    + [TVSDK 3.5 para iOS](https://help.adobe.com/en_US/primetime/api/psdk/appledoc_v35/index.html)
@@ -49,5 +49,5 @@ source-git-commit: 33abc0364a7dbe123ef1e6e444ad8578b5596f63
 + Varios {#miscellaneous}
    + [Video Heartbeat Library](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/index.html)
    + [DHPK 2.0 C++](https://help.adobe.com/en_US/primetime/api/psdk/psdk_doxygen/index.html)
-   + [Módulo de interfaz de usuario para el SDK de TVSDK de explorador 2.4](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
+   + [Módulo de interfaz de usuario para el SDK 2.4 de TVSDK de explorador](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
    + [API públicas de PSDK FlashRuntime](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls/)
