@@ -1,5 +1,5 @@
 ---
-title: Notas de la versión de TVSDK 3.10 para Android
+title: Notas de la versión de TVSDK 3.11 para Android
 seo-title: Notas de la versión de TVSDK 3.11 para Android
 description: Las notas de la versión de TVSDK 3.11 para Android describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de dispositivo en TVSDK Android 3.10
 seo-description: Las notas de la versión de TVSDK 3.11 para Android describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de dispositivo en TVSDK Android 3.11
@@ -8,14 +8,14 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 1f03dd8975fed27836a34159a403ba4aeec199c1
+source-git-commit: 26b0622f807405eaec9cfe162799111ed340e02c
 
 ---
 
 
-# Notas de la versión de TVSDK 3.10 para Android {#tvsdk-for-android-release-notes}
+# Notas de la versión de TVSDK 3.11 para Android {#tvsdk-for-android-release-notes}
 
-Las notas de la versión de TVSDK 3.10 para Android describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de dispositivo en TVSDK Android 3.10.
+Las notas de la versión de TVSDK 3.11 para Android describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de dispositivo en TVSDK Android 3.11.
 
 El reproductor de referencia de Android se incluye con Android TVSDK en el directorio samples/ de su distribución. El archivo README.md que lo acompaña explica cómo crear el reproductor de referencia.
 
@@ -33,20 +33,20 @@ TVSDK para Android proporciona muchas mejoras de rendimiento con respecto a las 
 
 El conjunto completo de funciones compatibles y no compatibles se presenta en la sección Matriz [de](#feature-matrix) funciones de las notas de la versión.
 
+## Android TVSDK 3.11
+
+**Cabecera específica del sistema de protección (PSSH) Casilla permitida**
+
+TVSDK ahora permite recuperar el cuadro de encabezado específico del sistema de protección asociado al recurso de medios cargado actualmente. Se `getPSSH()` ha agregado una nueva API a `com.adobe.mediacore.drm.DRMManager`.
+Para obtener más información, consulte [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
+
+Los principales problemas de los clientes corregidos en la versión actual se mencionan en la sección de problemas [](#resolved-issues) resueltos.
+
+### Nuevas funciones y mejoras en las versiones anteriores
+
 **Android TVSDK 3.10**
 
 Esta versión se centró en solucionar los principales problemas de los clientes, como se indica en la sección de problemas [](#resolved-issues) resueltos.
-
-<!-- ## New features {#new-features} -->
-
-<!--
-## Android TVSDK 3.11
-**Protection System Specific Header (PSSH) Box fetching allowed**
-TVSDK now allows fetching of Protection System Specific Header Box associated with current loaded Media Resource. New API `getPSSH()` has been added to `com.adobe.mediacore.drm.DRMManager`.
-For more information, see [Widevine DRM](../programming/tvsdk-3x-android-prog/android-3x-content-security/android-3x-drm-widevine.md).
-Top customer issues fixed in the current release are mentioned in [resolved issues](#resolved-issues) section. -->
-
-## Nuevas funciones y mejoras en las versiones anteriores
 
 **Android TVSDK 3.9**
 
@@ -391,15 +391,17 @@ En las tablas de funciones siguientes, una &#39;Y&#39; indica que la función es
 
 Cuando la resolución está asociada a un problema informado, se muestra una referencia de Zendesk, por ejemplo ZD#xxxxx.
 
+**Android TVSDK 3.11**
+
+En esta sección se ofrece un resumen del problema resuelto en la versión de Android de TVSDK 3.11.
+
+* ZD#41252 - Los caracteres coreanos se muestran como símbolos de glifos que faltan para los manifiestos HLS con WebVTT en la aplicación de referencia TVSDK para Android.
+
+### Problemas resueltos en versiones anteriores
+
 **Android TVSDK 3.10**
 
 * ZD#40340 - La aplicación se bloquea con el error &quot;App Not Responding&quot; al intentar reproducir después de poner en la lista negra todos los archivos TS (TypeScript).
-
-<!-- **Android TVSDK 3.11**
-This section provides a summary of the issue resolved in TVSDK 3.11 Android release.
-* ZD#41252 - Korean characters are displayed as missing glyph symbols for HLS manifests with WebVTT in Android TVSDK reference app. -->
-
-### Problemas resueltos en versiones anteriores
 
 **Android TVSDK 3.8**
 
