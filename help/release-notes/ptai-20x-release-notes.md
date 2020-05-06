@@ -1,10 +1,10 @@
 ---
-title: Notas de la versión de PTAI 20.3.3
+title: Notas de la versión de PTAI 20.5.1
 description: Las notas de la versión de PTAI 20.5.1 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2020.
 translation-type: tm+mt
-source-git-commit: 2a5866be64895ba13994720bf943dc676c2595bf
+source-git-commit: 266b884707e9160d539a06fd089732ef8ade21ba
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen 
 
 **Cuando:** Martes 5 de mayo de 2020, de las 4:00 a las 5:00 AM ESTE
 
-* Se ha corregido un problema para garantizar que se proporcionan los encabezados CORS correctos al enviar los encabezados If-Modified-Since.
+* Se ha corregido un problema para garantizar que se proporcionen encabezados CORS correctos al enviar encabezados If-Modified-Since.
 
 * Corrección de errores en el panel CRS.
 
@@ -30,7 +30,7 @@ Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen 
 
 **Cuando:** Miércoles 1 de abril de 2020, de 03:00 a 04:00 AM ESTE
 
-* Se ha corregido un problema que provocaba que los subtítulos no estuvieran sincronizados tras la inserción de anuncios en VOD/WebVTT.
+* Se ha corregido un problema que provocaba que los subtítulos no estuvieran sincronizados tras la inserción de anuncios en VOD/ WebVTT.
 
 * Actualizaciones de seguridad.
 
@@ -48,11 +48,13 @@ Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen 
 
 **Cuando:** Martes, 28 de enero de 2020 de las 2:00 a las 03:00 am ESTE
 
-* **VMAP con compatibilidad FER para CueFormat** Convertir señales del flujo FER en parámetros de anulación de línea de tiempo FW, cuando se utiliza ptcueformat=nbc y el flujo es un flujo VOD con señales en manifiesto y anuncios integrados.
+* **VMAP con compatibilidad FER para nbc CueFormat**
+
+   Convertir señales del flujo FER en parámetros de anulación de línea de tiempo FW, cuando `ptcueformat=nbc` se utiliza y el flujo es un flujo VOD con señales en manifiesto y anuncios integrados.
 
 * Sanice el campo user-agent en el encabezado HTTP antes de reenviarlo a proveedores de publicidad de terceros/CDN.
 
-* Filtre los caracteres de control y no imprimibles (código ascii &lt; 32) de los encabezados HTTP &quot;user-agent&quot; antes de enviarlos a Auditude y otros proveedores de publicidad, CDN. Auditude Ad-Call solía fallar para encabezados no válidos.
+* Filtre los caracteres de control/no imprimibles (código ASCII &lt; 32) de los encabezados HTTP de usuario-agente antes de enviarlos a Auditude y otros proveedores de publicidad, CDN. Auditude Ad-Call solía fallar para encabezados no válidos.
 
 * Purgue los objetos V1 antiguos de los grupos de NetStorage para mantener el recuento de objetos dentro de los límites seguros de Akamai.
 
