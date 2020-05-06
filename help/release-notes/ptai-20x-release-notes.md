@@ -1,17 +1,40 @@
 ---
 title: Notas de la versión de PTAI 20.3.3
-description: Las notas de la versión de PTAI 20.3.3 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2020.
+description: Las notas de la versión de PTAI 20.5.1 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2020.
 translation-type: tm+mt
-source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
+source-git-commit: 2a5866be64895ba13994720bf943dc676c2595bf
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
 
-# Notas de la versión 20.3.3 de Primetime Dynamic Ad Insertion
+# Notas de la versión 20.5.1 de Primetime Dynamic Ad Insertion
 
-Las notas de la versión de Inserción dinámica de publicidad 20.3.3 describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en Inserción dinámica de publicidad en Primetime en el año 2020.
+Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en la inserción de publicidad dinámica de Primetime en el año 2020.
 
-## Novedades de PTAI 20.3.3
+## Novedades de PTAI 20.5.1
+
+**Cuando:** Martes 5 de mayo de 2020, de las 4:00 a las 5:00 AM ESTE
+
+* Se ha corregido un problema para garantizar que se proporcionan los encabezados CORS correctos al enviar los encabezados If-Modified-Since.
+
+* Corrección de errores en el panel CRS.
+
+* Actualizaciones de mantenimiento.
+
+## Qué ha cambiado en versiones anteriores
+
+### Versión 20.3.4
+
+**Cuando:** Miércoles 1 de abril de 2020, de 03:00 a 04:00 AM ESTE
+
+* Se ha corregido un problema que provocaba que los subtítulos no estuvieran sincronizados tras la inserción de anuncios en VOD/WebVTT.
+
+* Actualizaciones de seguridad.
+
+### Versión 20.3.3
 
 **Cuando:** Jueves 26 de marzo de 2020 de 3:00 a 04:00 am ESTE
 
@@ -19,17 +42,19 @@ Las notas de la versión de Inserción dinámica de publicidad 20.3.3 describen 
 
 * Se corrigió un problema con los encabezados X-Forwarded-For, donde las direcciones IPv6 no se codificaban correctamente en la dirección URL cuando se pasaban a los servidores de publicidad.
 
-* Se corrigió un problema con los flujos de audio CMAF/desmuestreados, en el cual en determinados escenarios los números EXT-X-MEDIA-SECUENCE se incrementaban incorrectamente
+* Se corrigió un problema con los flujos de audio CMAF/desmuestreados, en el cual en determinados escenarios los números EXT-X-MEDIA-SEQUENCE se incrementaban incorrectamente.
 
-## Qué ha cambiado en versiones anteriores
+### Versión 20.1.3
 
-### Versión
+**Cuando:** Martes, 28 de enero de 2020 de las 2:00 a las 03:00 am ESTE
 
-**Cuando:**
+* **VMAP con compatibilidad FER para CueFormat** Convertir señales del flujo FER en parámetros de anulación de línea de tiempo FW, cuando se utiliza ptcueformat=nbc y el flujo es un flujo VOD con señales en manifiesto y anuncios integrados.
 
-### Versión
+* Sanice el campo user-agent en el encabezado HTTP antes de reenviarlo a proveedores de publicidad de terceros/CDN.
 
-**Cuando:**
+* Filtre los caracteres de control y no imprimibles (código ascii &lt; 32) de los encabezados HTTP &quot;user-agent&quot; antes de enviarlos a Auditude y otros proveedores de publicidad, CDN. Auditude Ad-Call solía fallar para encabezados no válidos.
+
+* Purgue los objetos V1 antiguos de los grupos de NetStorage para mantener el recuento de objetos dentro de los límites seguros de Akamai.
 
 ## Problemas resueltos
 
