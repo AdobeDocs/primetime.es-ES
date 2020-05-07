@@ -2,9 +2,9 @@
 title: Notas de la versión de PTAI 20.5.1
 description: Las notas de la versión de PTAI 20.5.1 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2020.
 translation-type: tm+mt
-source-git-commit: 75f95c1ddbca6fc9aa2a722635b1bfb6f097f8cc
+source-git-commit: e5fb84a7199e16a5eb7b6fd61aa7a1e50bb05c73
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen 
 
 **Cuando:** Jueves 26 de marzo de 2020 de las 3:00 a las 4:00 AM Hora del Este
 
-* Las respuestas de SSAI 4XX y 5XX ahora proporcionan correctamente encabezados relacionados con CORS, lo que permite a los clientes de javascript/webview entre dominios leer correctamente las respuestas de error.
+* Las respuestas de SSAI 4XX y 5XX ahora proporcionan correctamente encabezados relacionados con CORS, lo que permite a los clientes de vistas web de javascript entre dominios leer correctamente las respuestas de error.
 
 * Se corrigió un problema con los encabezados X-Forwarded-For, donde las direcciones IPv6 no se codificaban correctamente en la dirección URL cuando se pasaban a los servidores de publicidad.
 
@@ -85,7 +85,7 @@ Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen 
 
 * Purgue los objetos V1 antiguos de los grupos de NetStorage para mantener el recuento de objetos dentro de los límites seguros de Akamai.
 
-### Versión 20.1.2 [Revisión]
+### Versión 20.1.2 (revisión)
 
 **Cuando:** Lunes 20 de enero de 2020 de las 02:00 a las 03:00 AM hora del Este
 
@@ -103,7 +103,7 @@ Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen 
 
 ## Problemas resueltos
 
-Cuando la resolución está asociada a un problema informado, se muestra una referencia de Zendesk. Por ejemplo, ZD#xxxxx.
+Cuando la resolución está asociada a un problema informado, se muestra una referencia de Zendesk. Por ejemplo, `ZD#xxxxx`
 
 **PTAI 20.5.1**
 
