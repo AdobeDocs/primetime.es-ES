@@ -2,9 +2,9 @@
 title: Notas de la versión de PTAI 20.5.1
 description: Las notas de la versión de PTAI 20.5.1 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2020.
 translation-type: tm+mt
-source-git-commit: 266b884707e9160d539a06fd089732ef8ade21ba
+source-git-commit: 90f75f263e96ea37dd93a91f4392077ea2c70f32
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen 
 
 ## Novedades de PTAI 20.5.1
 
-**Cuando:** Martes 5 de mayo de 2020, de las 4:00 a las 5:00 AM ESTE
+**Cuando:** Martes 5 de mayo de 2020, de las 4:00 a las 5:00 AM hora del Este
 
 * Se ha corregido un problema para garantizar que se proporcionen encabezados CORS correctos al enviar encabezados If-Modified-Since.
 
@@ -28,7 +28,7 @@ Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen 
 
 ### Versión 20.3.4
 
-**Cuando:** Miércoles 1 de abril de 2020, de 03:00 a 04:00 AM ESTE
+**Cuando:** Miércoles 1 de abril de 2020, de 03:00 AM a 04:00 AM Hora del Este
 
 * Se ha corregido un problema que provocaba que los subtítulos no estuvieran sincronizados tras la inserción de anuncios en VOD/ WebVTT.
 
@@ -36,7 +36,7 @@ Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen 
 
 ### Versión 20.3.3
 
-**Cuando:** Jueves 26 de marzo de 2020 de 3:00 a 04:00 am ESTE
+**Cuando:** Jueves 26 de marzo de 2020 de las 3:00 a las 4:00 AM Hora del Este
 
 * Las respuestas de SSAI 4XX y 5XX ahora proporcionan correctamente encabezados relacionados con CORS, lo que permite a los clientes de javascript/webview entre dominios leer correctamente las respuestas de error.
 
@@ -44,9 +44,16 @@ Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen 
 
 * Se corrigió un problema con los flujos de audio CMAF/desmuestreados, en el cual en determinados escenarios los números EXT-X-MEDIA-SEQUENCE se incrementaban incorrectamente.
 
+### Versión 20.2.1
+
+**Cuando:** Jueves 13 de febrero de 2020 de las 4:30 a las 5:30 AM hora del Este
+
+* Se ha Añadido la compatibilidad con la vinculación de recursos de publicidad que contienen varios flujos de solo audio en función del idioma, el códec o la velocidad de bits.
+* Pequeñas mejoras de rendimiento y actualizaciones de mantenimiento.
+
 ### Versión 20.1.3
 
-**Cuando:** Martes, 28 de enero de 2020 de las 2:00 a las 03:00 am ESTE
+**Cuando:** Martes 28 de enero de 2020 de las 2:00 a las 03:00 AM hora del Este
 
 * **VMAP con compatibilidad FER para nbc CueFormat**
 
@@ -57,6 +64,22 @@ Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen 
 * Filtre los caracteres de control/no imprimibles (código ASCII &lt; 32) de los encabezados HTTP de usuario-agente antes de enviarlos a Auditude y otros proveedores de publicidad, CDN. Auditude Ad-Call solía fallar para encabezados no válidos.
 
 * Purgue los objetos V1 antiguos de los grupos de NetStorage para mantener el recuento de objetos dentro de los límites seguros de Akamai.
+
+### Versión 20.1.2 [Revisión]
+
+**Cuando:** Lunes 20 de enero de 2020 de las 02:00 a las 03:00 AM hora del Este
+
+* Actualizaciones de mantenimiento.
+
+### Versión 20.1.1
+
+**Cuando:** Miércoles 15 de enero de 2020 de las 4:00 a las 5:00 AM Hora del Este
+
+* El servicio de reempaquetado creativo ahora ofrece una inserción de anuncios más rápida al poner en la lista negra automáticamente los elementos creativos malformados.
+
+* Se Añadió la compatibilidad de la fase 1 con el nuevo formato de señal SCTE 35 en la inserción de anuncios en el servidor.
+
+* Actualizaciones de mantenimiento.
 
 ## Problemas resueltos
 
