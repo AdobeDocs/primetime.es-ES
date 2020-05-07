@@ -2,9 +2,9 @@
 title: Notas de la versión de PTAI 20.5.1
 description: Las notas de la versión de PTAI 20.5.1 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2020.
 translation-type: tm+mt
-source-git-commit: 4f97591b819d705891a053961eccd50a3cd05aa2
+source-git-commit: 9c117678a049e34bfcf960e992a4ce7361968f3e
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,16 @@ Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen 
 ## Problemas resueltos
 
 Cuando la resolución está asociada a un problema informado, se muestra una referencia de Zendesk. Por ejemplo, ZD#xxxxx.
+
+**PTAI 20.5.1**
+
+* Problemas con los encabezados CORS cuando se envían los encabezados If-Modified-Since.
+
+* Problemas en el panel de CRS.
+
+**PTAI 20.3.4**
+
+* Problema que causaba que los subtítulos no estuvieran sincronizados después de insertarlos en VOD/ WebVTT.
 
 **PTAI 20.3.3**
 
