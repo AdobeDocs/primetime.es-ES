@@ -1,29 +1,36 @@
 ---
-title: Notas de la versión de TVSDK 3.11 para iOS
-description: Las notas de la versión de TVSDK 3.11 para iOS describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de dispositivo en TVSDK iOS 3.11.
+title: Notas de la versión de TVSDK 3.12 para iOS
+description: Las notas de la versión de TVSDK 3.12 para iOS describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de dispositivo en TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: ac75f63f98060e1937570476362bb5d4458d1f85
+source-git-commit: f6a0fbaec3d164dd0c15d2738b58c7486bbc6e57
+workflow-type: tm+mt
+source-wordcount: '7665'
+ht-degree: 0%
 
 ---
 
 
-# Notas de la versión de TVSDK 3.11 para iOS {#tvsdk-for-ios-release-notes}
+# Notas de la versión de TVSDK 3.12 para iOS {#tvsdk-for-ios-release-notes}
 
-Las notas de la versión de TVSDK 3.11 para iOS describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de dispositivo en TVSDK iOS 3.11.
+Las notas de la versión de TVSDK 3.12 para iOS describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de dispositivo en TVSDK iOS 3.12.
 
 ## Requisitos de sistema y software {#system-software-requirements}
 
-Antes de descargar iOS 3.11, asegúrese de que las versiones de hardware, sistema operativo y aplicación cumplen los siguientes requisitos:
+Antes de descargar iOS 3.12, asegúrese de que las versiones de hardware, sistema operativo y aplicación cumplen los siguientes requisitos:
 
 Sistema operativo: iOS 8.0 o posterior.
 
-## iOS TVSDK 3.11
+## iOS TVSDK 3.12
 
-Se han proporcionado correcciones para los problemas del cliente en los que `isFallbackOnInvalidCreativeEnabled` y el método `customParams` provocan el bloqueo de la aplicación.
+Se ha corregido un problema por el que el flujo en directo fallaba tras 15 minutos de reproducción.
 
 Para ver las correcciones en la versión actual, consulte Problemas [del cliente corregidos](#resolved-issues) y para ver las limitaciones, consulte la sección Problemas [conocidos y Limitaciones](#known-issues-and-limitations) .
 
 ### Nuevas funciones y correcciones de las versiones anteriores {#whats-new-previous}
+
+**iOS TVSDK 3.11**
+
+Se han proporcionado correcciones para los problemas del cliente en los que `isFallbackOnInvalidCreativeEnabled` y el método `customParams` provocan el bloqueo de la aplicación.
 
 **iOS TVSDK 3.10**
 
@@ -132,7 +139,7 @@ Esta versión no incorpora nuevas funciones ni mejoras.
    * Los rastreadores de anuncios para el anuncio parcial reproducido (segundo anuncio) no se activan. Los rastreadores solo para el tercer anuncio se activan.
 
 * Se Añadió la propiedad enableVodPreroll del tipo booleano en la interfaz PTAdMetadata. La propiedad se puede utilizar para habilitar el predesplazamiento en un flujo de VoD. Si enableVodPreroll es NO, PSDK no reproduce pre-roll. Esto, sin embargo, no afecta a los midrolls. El valor predeterminado de enableVodPreroll es YES.
-* la API ClosedCaptionDisplayEnabled de la interfaz de PTMediaPlayer está marcada como obsoleta desde iOS v1.4.43 en adelante. Para determinar si hay subtítulos opcionales disponibles para un PTMediaPlayerItem determinado, examine la propiedad subtitlesOptions de PTMediaPlayerMediaItem.
+* la API ClosedCaptionDisplayEnabled de la interfaz de PTMediaPlayer está marcada como obsoleta en iOS v1.4.43 y versiones posteriores. Para determinar si hay subtítulos opcionales disponibles para un PTMediaPlayerItem determinado, examine la propiedad subtitlesOptions de PTMediaPlayerMediaItem.
 
 **Versión 1.4.42**
 
@@ -166,7 +173,7 @@ Integrar y certificar VHL 2.0 en iOS TVSDK : Reduzca la barrera en la implementa
 
 **Información de publicidad de red**
 
-Las API de TVSDK ahora proporcionan información adicional sobre las respuestas VAST de terceros. La ID de publicidad, el sistema de publicidad y las extensiones de publicidad VAST se proporcionan en `PTNetworkAdInfo` clase a la que se puede acceder mediante `networkAdInfo` la propiedad en un recurso de publicidad. Esta información se puede utilizar para la integración con otras plataformas de análisis de publicidad, como **Moat Analytics**.
+Las API de TVSDK ahora proporcionan información adicional sobre las respuestas de VAST de terceros. La ID de publicidad, el sistema de publicidad y las extensiones de publicidad VAST se proporcionan en `PTNetworkAdInfo` clase a la que se puede acceder mediante `networkAdInfo` la propiedad en un recurso de publicidad. Esta información se puede utilizar para la integración con otras plataformas de análisis de publicidad, como **Moat Analytics**.
 
 **Versión 1.4.31**
 
@@ -291,14 +298,17 @@ Comment Type: draft
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
 </note>
  -->
+**iOS TVSDK 3.12**
+
+* La transmisión en directo falla tras 15 minutos de reproducción al utilizar TVSDK para iOS 3.10.
+
+### Problemas resueltos en versiones anteriores {#resolved-issues-previous}
 
 **iOS TVSDK 3.11**
 
 * (ZD#40998): `isFallbackOnInvalidCreativeEnabled` hace que la aplicación se bloquee.
 
 * (ZD#41289): `NSInvalidArgumentException` se observa con el método `customParams` que provoca el bloqueo de la aplicación.
-
-### Problemas resueltos en versiones anteriores {#resolved-issues-previous}
 
 **iOS TVSDK 3.10**
 
@@ -499,7 +509,7 @@ Se ha mejorado la corrección proporcionada para el problema cerrado Nº 34385 e
 
 Uso de ID creativos y AdSystem en solicitudes CRS basadas en reglas de normalización CRS
 
-* (ZD #29176) - Accidente `PTAdPolicyDeligate``satAdBreakAsWatched:position`
+* (ZD #29176) - Accidente `PTAdPolicyDeligate` `satAdBreakAsWatched:position`
 
 Ahora se controla el bloqueo debido a AdBreak vacío.
 
