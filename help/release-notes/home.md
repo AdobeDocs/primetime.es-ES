@@ -4,7 +4,7 @@ seo-title: Notas de la versión de Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 8e19c638caf2f9ea37dbf2ec7373ae9f470b93fe
+source-git-commit: bc9f03647d0b6114b6030ded058eb452e2b80887
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
@@ -14,24 +14,25 @@ ht-degree: 0%
 
 # Notas de la versión de Primetime
 
-Bienvenido a las Notas de la versión de Adobe Primetime. Los documentos enumerados en el panel de navegación izquierdo proporcionan información específica de la versión, requisitos del sistema, limitaciones, problemas fijos y problemas conocidos.
+Bienvenido a las Notas de la versión de Adobe Primetime. Los documentos enumerados en el panel de navegación izquierdo proporcionan información específica de la versión, requisitos del sistema, limitaciones, problemas fijos y problemas conocidos
 
-## Mejoras y correcciones en PTAI 20.5.1
-
-Centrado en solucionar los principales problemas de los clientes.
-
-## Correcciones en TVSDK 3.11 para Android
-
-La versión mejoró la compatibilidad con Widevine DRM y resolvió los principales problemas de los clientes.
-Consulte para obtener más información sobre la versión actual publicada para [Android](../release-notes/tvsdk-3x-android.md).
-
-## Mejoras y correcciones en las notas de la versión de TVSDK 3.11 para iOS
+## Mejoras y correcciones en las notas de la versión de TVSDK 3.12 para iOS
 
 La versión se centró en resolver los principales problemas de los clientes.
 
 Consulte para obtener más información sobre la versión actual publicada para [iOS](../release-notes/tvsdk-3x-ios.md).
 
-Para obtener más información sobre la versión actual de la inserción de publicidad dinámica, consulte las notas de la versión de [PTAI](ptai-19x-release-notes.md).
+## Mejoras y correcciones en PTAI 20.5.1
+
+Centrado en solucionar los principales problemas de los clientes.
+
+Para obtener más información sobre la versión actual de la inserción de publicidad dinámica, consulte las notas de la versión de [PTAI](ptai-20x-release-notes.md).
+
+## Correcciones en TVSDK 3.11 para Android
+
+La versión mejoró la compatibilidad con Widevine DRM y resolvió los principales problemas de los clientes.
+
+Consulte para obtener más información sobre la versión actual publicada para [Android](../release-notes/tvsdk-3x-android.md).
 
 ## Consulte también
 
