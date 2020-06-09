@@ -1,20 +1,40 @@
 ---
-title: Notas de la versión de PTAI 20.5.1
-description: Las notas de la versión de PTAI 20.5.1 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2020.
+title: Notas de la versión de PTAI 20.6.1
+description: Las notas de la versión de PTAI 20.6.1 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2020.
 translation-type: tm+mt
-source-git-commit: e5fb84a7199e16a5eb7b6fd61aa7a1e50bb05c73
+source-git-commit: fc09f185489ff7e3decb7c77b495825e4c9c7c09
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
 
 
-# Notas de la versión 20.5.1 de Primetime Dynamic Ad Insertion
+# Notas de la versión 20.6.1 de Primetime Dynamic Ad Insertion
 
-Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en la inserción de publicidad dinámica de Primetime en el año 2020.
+Las notas de la versión de Inserción de publicidad dinámica 20.6.1 describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en la inserción de publicidad dinámica de Primetime en el año 2020.
 
-## Novedades de PTAI 20.5.1
+## Novedades de PTAI 20.6.1
+
+**Cuando:** Martes 2 de junio de 2020, de las 3:00 a las 5:00 AM hora del Este
+
+**Nuevas funciones**
+
+Póngase en contacto con el servicio de asistencia técnica de Adobe para habilitar las siguientes funciones nuevas mediante la configuración del servidor:
+
+* Manipulación de manifiesto: Las direcciones URL de recursos y segmentos HLS ahora se pueden transformar entre HTTP y HTTPS para aumentar el rendimiento reduciendo los apretones de manos TLS en las solicitudes back-end. También se puede utilizar para unificar los fragmentos de publicidad y contenido en las mismas CDN.
+
+* VOD de forma larga: Se han mejorado las API para mantener viva la sesión con los recursos de VOD de forma larga.
+
+**Corrección de errores**
+
+* Se corrigió un problema en el cual los fragmentos de WebVTT siempre se solicitaban en el protocolo http independientemente del protocolo original solicitado.
+
+* Se corrigió un problema en el cual las etiquetas EXT-X-DISCONTINUITY se eliminaban de la parte superior de la lista de reproducción al cambiar de publicidades a contenido. Póngase en contacto con la asistencia de Adobe para habilitar esta corrección.
+
+## Qué ha cambiado en versiones anteriores
+
+### Versión 20.5.1
 
 **Cuando:** Martes 5 de mayo de 2020, de las 4:00 a las 5:00 AM hora del Este
 
@@ -23,8 +43,6 @@ Las notas de la versión de Inserción de publicidad dinámica 20.5.1 describen 
 * Corrección de errores en el panel CRS.
 
 * Actualizaciones de mantenimiento.
-
-## Qué ha cambiado en versiones anteriores
 
 ### Versión 20.3.4
 
