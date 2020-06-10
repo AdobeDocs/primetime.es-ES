@@ -2,7 +2,10 @@
 title: Notas de la versión de PTAI 19.11.1
 description: Las notas de la versión de PTAI 19.11.1 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2019.
 translation-type: tm+mt
-source-git-commit: ededb36a0b460fff4644a3716b36971ff9454c37
+source-git-commit: 0a58cce0d80ade581e32b5dd9376d336e02fac8b
+workflow-type: tm+mt
+source-wordcount: '1968'
+ht-degree: 0%
 
 ---
 
@@ -48,6 +51,7 @@ Se corrigió un error en el cual los reproductores de Chromecast salieron inespe
 **Cuando:** Miércoles 21 de agosto de 2019 de 2:00 a 3:00 AM hora del Este
 
 * Panel de SSAI: Estadísticas de sesión. Puede exportar los eventos de sesión mediante la opción Descargar CSV.
+
 * Actualizaciones de mantenimiento
 
 ### Versión 19.8.1
@@ -67,7 +71,7 @@ Se corrigió un error en el cual los reproductores de Chromecast salieron inespe
 
 **Cuando:** Miércoles, 10 de julio
 
-* SSAI: Para valores ptcueformat que admiten la señalización de interrupción y salida EXT-X-CUE-OUT en flujos en directo, se ha añadido una macro genérica para pasar datos de atributos en el ejemplo de etiqueta EXT-X-ASSET: Etiqueta que acompaña a la etiqueta #EXT-X-CUE-OUT: #EXT-X-ASSET:CAID=75BCD15,GENRE=Noticias,Programa=Macros de NewsAt10: # se puede utilizar para pasar Noticias (desde el atributo GENRE) a una dirección URL de llamada de publicidad # para pasar NewsAt10 (desde el atributo Programa) a una excepción de dirección URL de llamada de publicidad: Para la compatibilidad con versiones anteriores, # y # tienen la misma funcionalidad. Ambas macros pueden utilizarse para pasar el valor del atributo CAID, después de convertir el valor de hex a long. El valor long es 123456789 para el valor hex, 75BCD15, en el ejemplo anterior. Ambas macros se utilizarían para pasar 123456789 a una dirección URL de llamada de publicidad. La macro siempre inicio con #. La macro distingue entre mayúsculas y minúsculas, pero el atributo de la etiqueta EXT-X-ASSET no lo hace. Es decir, tanto el PROGRAMA como el Programa están permitidos en la etiqueta EXT-X-ASSET
+* SSAI: Para valores ptcueformat que admiten la señalización de interrupción y salida EXT-X-CUE-OUT en flujos activos, se ha añadido una macro genérica para pasar datos de atributos en el ejemplo de etiqueta EXT-X-ASSET: Etiqueta que acompaña a la etiqueta #EXT-X-CUE-OUT: #EXT-X-ASSET:CAID=75BCD15,GENRE=Noticias,Programa=Macros de NewsAt10: # se puede utilizar para pasar Noticias (desde el atributo GENRE) a una dirección URL de llamada de publicidad # para pasar NewsAt10 (desde el atributo Programa) a una excepción de dirección URL de llamada de publicidad: Para la compatibilidad con versiones anteriores, # y # tienen la misma funcionalidad. Ambas macros pueden utilizarse para pasar el valor del atributo CAID, después de convertir el valor de hex a long. El valor long es 123456789 para el valor hex, 75BCD15, en el ejemplo anterior. Ambas macros se utilizarían para pasar 123456789 a una dirección URL de llamada de publicidad. La macro siempre inicio con #. La macro distingue entre mayúsculas y minúsculas, pero el atributo de la etiqueta EXT-X-ASSET no lo hace. Es decir, tanto el PROGRAMA como el Programa están permitidos en la etiqueta EXT-X-ASSET
 * SSAI: Cambios de configuración para un cliente específico para lo siguiente:
    * Duración de la ventana deslizante (lista de reproducción activa) de cuatro minutos
    * Si se produce una excepción de tiempo de espera de socket cuando el servidor de manifiesto obtiene el contenido de origen, el servidor de manifiesto devolverá el código de respuesta HTTP (404) en lugar de 500
