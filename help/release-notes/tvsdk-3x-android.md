@@ -8,7 +8,10 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: fdb4e4eb741dd066017d96205cea8cbd15dcbc7b
+source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+workflow-type: tm+mt
+source-wordcount: '5490'
+ht-degree: 0%
 
 ---
 
@@ -334,7 +337,8 @@ En las tablas de funciones siguientes, una &#39;Y&#39; indica que la función es
 | Reproducción general (Reproducir, Pausa, Buscar) | VOD + Activo | Y |
 | FER: reproducción general (Reproducir, Pausa, Buscar) | FER VOD | Y |
 | Buscar cuando se está reproduciendo un anuncio | VOD + Activo | No admitido |
-| AC3 | VOD + Activo | No admitido |
+| Reproducción HEVC | VOD + Activo | Solo contenedor fMP4 |
+| AC3 y EAC3 | VOD + Activo | No admitido |
 | MP3 | VOD | No admitido |
 | Reproducción de contenido MP4 | VOD | Y |
 | Lógica de conmutación de velocidad de bits adaptable | VOD + Activo | Y |
@@ -354,7 +358,6 @@ En las tablas de funciones siguientes, una &#39;Y&#39; indica que la función es
 | Enlace de audio tardío | VOD + Activo | Y |
 | 302 Redirección | VOD + Activo | Y |
 | Reproducción con desplazamiento | VOD + Activo | Y |
-| Reproducción solo de audio | VOD + Activo | Y |
 | Reproducción de trucos | VOD + Activo | Y |
 | Movimiento lento en reproducción de truco | VOD + Activo | No admitido |
 | Reproducción suave de trucos (con ABR) | VOD + Activo | Y |
@@ -384,19 +387,43 @@ En las tablas de funciones siguientes, una &#39;Y&#39; indica que la función es
 | Resolución de publicidad diferida | VOD | Y |
 | Compatibilidad con los marcadores de discontinuidad - SSAI | VOD + Activo | Y |
 | Publicidades complementarias, publicidades tipo titular y publicidades en las que se puede hacer clic | VOD + Activo | Y |
+| 302 Fijación de redirección | VOD + Activo | Y |
+
+| Función | Tipo de contenido | HLS |
+|---|---|---|
+| Reproducción general, publicidades habilitadas | VOD + Activo | Y |
+| Contenido FER con anuncios habilitados | VOD | Y |
+| Comportamientos de publicidad predeterminados | VOD + Activo | Y |
+| VAST 2.0/3.0 | VOD + Activo | Y |
+| VMAP 1.0 | VOD + Activo | Y |
+| Publicidades MP4 | VOD + Activo | Y (de CRS) |
+| Reproducción de trucos con publicidades habilitadas | VOD + Activo | Y |
+| Solo publicidad | VOD | Y |
+| Parámetros de objetivo | VOD + Activo | Y |
+| Parámetros personalizados | VOD + Activo | Y |
+| Comportamientos de publicidad personalizados | VOD + Activo | Y |
+| Etiquetas de publicidad personalizadas | Live Live | Y |
+| Resoluciones de publicidad personalizadas | VOD + Activo | Y |
+| Resolución de publicidad personalizada FreeWheel | VOD | Y |
+| C3 | VOD + Activo | No admitido |
+| Resolución de publicidad diferida | VOD | Y |
+| Compatibilidad con los marcadores de discontinuidad - SSAI | VOD + Activo | Y |
+| Publicidades complementarias, publicidades tipo titular y publicidades en las que se puede hacer clic | VOD + Activo | Y |
 | VPAID 2.0 | VOD + Activo | Y (JS) |
 | Salida de publicidad anticipada | Live Live | Y |
 | Prioridad creativa basada en reglas | VOD + Activo | Y |
 | Reglas de CRS | VOD + Activo | Y |
 | JSON Ad Resolver | VOD + Activo | No admitido |
 | Integración de Moat | VOD + Activo | Y |
+| Inserción parcial de pausa publicitaria | Live Live | Y |
 
 | Función | Tipo de contenido | HLS |
 |---|---|---|
 | Cifrado AES | VOD + Activo | Y |
 | Cifrado AES de muestra | VOD + Activo | Y |
 | Flujos tokenizados | VOD + Activo | Y |
-| DRM | VOD + Activo | Solo DRM de Primetime (Futuro: Widevine) |
+| DRM amplio | VOD + Activo | Solo contenedor fMP4 |
+| DRM Primetime | VOD + Activo | Y |
 | Reproducción externa (RBOP) | VOD + Activo | Solo DRM de Primetime |
 | Rotación de licencia | VOD + Activo | Solo DRM de Primetime |
 | Rotación de clave | VOD + Activo | Solo DRM de Primetime |
