@@ -4,7 +4,7 @@ seo-title: Notas de la versión de Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 4060de986dbf3d1ee57a415a4af302b1631db6a3
+source-git-commit: 8f8b9d167d7456968879edac847c51e6c9e1da3c
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -15,6 +15,12 @@ ht-degree: 0%
 # Notas de la versión de Primetime
 
 Bienvenido a las Notas de la versión de Adobe Primetime. Los documentos enumerados en el panel de navegación izquierdo proporcionan información específica de la versión, requisitos del sistema, limitaciones, problemas fijos y problemas conocidos.
+
+## Correcciones en TVSDK 3.12 para Android
+
+La versión se centra en actualizar la versión de gradle de la aplicación Primetime Reference a la versión 5.6.4.
+
+Consulte para obtener más información sobre la versión actual publicada para [Android](../release-notes/tvsdk-3x-android.md).
 
 ## Mejoras y correcciones en PTAI 20.6.1
 
@@ -27,12 +33,6 @@ Para obtener más información sobre la versión actual de la inserción de publ
 La versión se centró en resolver los principales problemas de los clientes.
 
 Consulte para obtener más información sobre la versión actual publicada para [iOS](../release-notes/tvsdk-3x-ios.md).
-
-## Correcciones en TVSDK 3.11 para Android
-
-La versión mejoró la compatibilidad con Widevine DRM y resolvió los principales problemas de los clientes.
-
-Consulte para obtener más información sobre la versión actual publicada para [Android](../release-notes/tvsdk-3x-android.md).
 
 ## Consulte también
 
