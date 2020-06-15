@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: db3f488e29468fc29ea8bf033877124a9abdecd0
+source-git-commit: d1881d1fe97d416ee0f69f62828aef46c5ad21bb
 workflow-type: tm+mt
-source-wordcount: '5531'
+source-wordcount: '5415'
 ht-degree: 0%
 
 ---
@@ -371,28 +371,6 @@ En las tablas de funciones siguientes, una &#39;Y&#39; indica que la función es
 | Apagón de anuncios | VOD + Activo | No admitido |
 | Instantáneo activado | VOD + Activo | No admitido |
 | Compatibilidad con los marcadores de discontinuidad | VOD + Activo | Y |
-| 302 Fijación de redirección | VOD + Activo | Y |
-
-| Función | Tipo de contenido | HLS |
-|---|---|---|
-| Reproducción general, publicidades habilitadas | VOD + Activo | Y |
-| Contenido FER con anuncios habilitados | VOD | Y |
-| Comportamientos de publicidad predeterminados | VOD + Activo | Y |
-| VAST 2.0/3.0 | VOD + Activo | Y |
-| VMAP 1.0 | VOD + Activo | Y |
-| Publicidades MP4 | VOD + Activo | Y (de CRS) |
-| Reproducción de trucos con publicidades habilitadas | VOD + Activo | Y |
-| Solo publicidad | VOD | Y |
-| Parámetros de objetivo | VOD + Activo | Y |
-| Parámetros personalizados | VOD + Activo | Y |
-| Comportamientos de publicidad personalizados | VOD + Activo | Y |
-| Etiquetas de publicidad personalizadas | Live Live | Y |
-| Resoluciones de publicidad personalizadas | VOD + Activo | Y |
-| Resolución de publicidad personalizada FreeWheel | VOD | Y |
-| C3 | VOD + Activo | No admitido |
-| Resolución de publicidad diferida | VOD | Y |
-| Compatibilidad con los marcadores de discontinuidad - SSAI | VOD + Activo | Y |
-| Publicidades complementarias, publicidades tipo titular y publicidades en las que se puede hacer clic | VOD + Activo | Y |
 | 302 Fijación de redirección | VOD + Activo | Y |
 
 | Función | Tipo de contenido | HLS |
