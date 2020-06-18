@@ -2,7 +2,7 @@
 title: Notas de la versión de TVSDK 3.12 para iOS
 description: Las notas de la versión de TVSDK 3.12 para iOS describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de dispositivo en TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: f6a0fbaec3d164dd0c15d2738b58c7486bbc6e57
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -139,7 +139,7 @@ Esta versión no incorpora nuevas funciones ni mejoras.
    * Los rastreadores de anuncios para el anuncio parcial reproducido (segundo anuncio) no se activan. Los rastreadores solo para el tercer anuncio se activan.
 
 * Se Añadió la propiedad enableVodPreroll del tipo booleano en la interfaz PTAdMetadata. La propiedad se puede utilizar para habilitar el predesplazamiento en un flujo de VoD. Si enableVodPreroll es NO, PSDK no reproduce pre-roll. Esto, sin embargo, no afecta a los midrolls. El valor predeterminado de enableVodPreroll es YES.
-* la API ClosedCaptionDisplayEnabled de la interfaz de PTMediaPlayer está marcada como obsoleta en iOS v1.4.43 y versiones posteriores. Para determinar si hay subtítulos opcionales disponibles para un PTMediaPlayerItem determinado, examine la propiedad subtitlesOptions de PTMediaPlayerMediaItem.
+* la API ClosedCaptionDisplayEnabled de la interfaz de PTMediaPlayer está marcada como obsoleta desde iOS v1.4.43 en adelante. Para determinar si hay subtítulos opcionales disponibles para un PTMediaPlayerItem determinado, examine la propiedad subtitlesOptions de PTMediaPlayerMediaItem.
 
 **Versión 1.4.42**
 
@@ -173,7 +173,7 @@ Integrar y certificar VHL 2.0 en iOS TVSDK : Reduzca la barrera en la implementa
 
 **Información de publicidad de red**
 
-Las API de TVSDK ahora proporcionan información adicional sobre las respuestas de VAST de terceros. La ID de publicidad, el sistema de publicidad y las extensiones de publicidad VAST se proporcionan en `PTNetworkAdInfo` clase a la que se puede acceder mediante `networkAdInfo` la propiedad en un recurso de publicidad. Esta información se puede utilizar para la integración con otras plataformas de análisis de publicidad, como **Moat Analytics**.
+Las API de TVSDK ahora proporcionan información adicional sobre las respuestas de VAST de terceros. La ID de publicidad, el sistema de publicidad y las extensiones de publicidad VAST se proporcionan en `PTNetworkAdInfo` clase a la que se puede acceder mediante `networkAdInfo` la propiedad en un recurso de publicidad. Esta información se puede utilizar para la integración con otras plataformas de Ad Analytics como **Moat Analytics**.
 
 **Versión 1.4.31**
 
@@ -187,7 +187,7 @@ Las API de TVSDK ahora proporcionan información adicional sobre las respuestas 
 
 En la `PTSDKConfig` clase, se ha agregado la API forceHTTPS.
 
-La `PTSDKConfig` clase proporciona métodos para aplicar SSL en las solicitudes realizadas a los servidores de toma de decisiones, DRM y Video Analytics de Adobe Primetime. Para obtener más información, consulte los `forceHTTPS` métodos y `isForcingHTTPS` en esta clase. Si un manifiesto se carga a través de HTTPS, TVSDK conserva el uso de contenido de HTTPS y respeta este uso al cargar cualquier URL relativa de ese manifiesto.
+La `PTSDKConfig` clase proporciona métodos para aplicar SSL en las solicitudes realizadas a los servidores de Analytics, DRM y Video Primetime y de toma de decisiones. Para obtener más información, consulte los `forceHTTPS` métodos y `isForcingHTTPS` en esta clase. Si un manifiesto se carga a través de HTTPS, TVSDK conserva el uso de contenido de HTTPS y respeta este uso al cargar cualquier URL relativa de ese manifiesto.
 
 >[!NOTE] Las solicitudes a dominios de terceros, como píxeles de seguimiento de publicidad, URL de publicidad y contenido, y solicitudes similares, no se modifican, y es responsabilidad de los proveedores de contenido y los servidores de publicidad proporcionar direcciones URL compatibles con HTTPS.
 
@@ -257,7 +257,7 @@ Las directivas DRM ahora pueden especificar la resolución más alta permitida, 
 
 * **Actualización de Video Heartbeat Library (VHL) a la versión 1.4.1.1**
 
-   * Se Añadió la capacidad de compilar distintos casos de uso de análisis, desde otros SDK o reproductores, con Adobe Analytics Video Essentials.
+   * Se Añadió la capacidad de compilar diferentes casos de uso de análisis, desde otros SDK o reproductores, con Adobe Analytics Video Essentials.
    * El seguimiento de anuncios se ha optimizado eliminando los `trackAdBreakStart` métodos y `trackAdBreakComplete` . La pausa publicitaria se deduce de las llamadas de método `trackAdStart` y `trackAdComplete` .
    * La `playhead` propiedad ya no es necesaria al rastrear anuncios.
    * Compatibilidad Añadida con el ID de Visitante de Marketing Cloud.
@@ -340,11 +340,12 @@ No hay problemas nuevos en esta versión.
 
 **Versión 3.3**
 
-(ZD#37820): lista blanca Añadida para el encabezado personalizado HS-Id, HS-SSAI-TAG.
+(ZD#37820): se ha Añadido la posibilidad de incluir el encabezado personalizado HS-Id, HS-SSAI-TAG.
 
 **Versión 3.2**
 
 * **Ticket#36588** - El reproductor se bloquea cuando se llama al método MediaPlayer STOP.
+
 Se corrigió un bloqueo intermitente observado cuando se llama al método STOP para algunos flujos con subtítulos.
 
 * **ticket#37080** - Solicitudes de Duplicado vistas para llamadas de manifiesto.
@@ -438,24 +439,29 @@ Se ha mejorado la corrección proporcionada para el problema cerrado Nº 34385 e
    Se ha corregido el error al intentar reproducir contenido en Apple TV, que impedía la reproducción completa
 * (ZD #32146)- No `PTMediaPlayerStatusError` se recibe ningún contenido de HLS Live sobre el bloqueo de iOS 11 dev beta
 
-   No `PTMediaPlayerStatusError` se recibe ningún contenido de HLS Live y VOD para bloquear mediante Charles (Conexión de caída y 403)
-* (ZD #29242) - La reproducción de vídeo de reproducción de Airplay falla con las publicidades activadas
+   No `PTMediaPlayerStatusError` se recibe ningún contenido de HLS Live y VOD sobre el bloqueo mediante Charles (Conexión de caída y 403).
 
-   Cuando los anuncios están activados y AirPlay está habilitado al iniciar la reproducción de un vídeo, la reproducción de vídeo nunca inicio y no se muestra ningún error
-* (ZD#33341): `DRMInterface.h` activa las advertencias de compilación en Xcode 9
+* (ZD #29242) - La reproducción de vídeo de reproducción de Airplay falla con las publicidades activadas.
 
-   Se corrigieron dos prototipos de bloques en los `DRMInterface.h` que faltaba la palabra &#39;void&#39; en sus listas de parámetros
-* (ZD#31979): no se compila/ejecuta cuando es iOS 10 o posterior para iPhone 7/iPhone7+
+   Cuando los anuncios están activados y AirPlay está activado al iniciar la reproducción de un vídeo, la reproducción de vídeo nunca inicio y no se muestra ningún error.
 
-   Se corrigió la compilación de documentos IB para versiones anteriores a iOS 7 que ya no se admite
-* (ZD#32920): pantalla en blanco dentro de una pausa publicitaria y sin finalización de pausa publicitaria
+* (ZD#33341): `DRMInterface.h` activa las advertencias de compilación en Xcode 9.
 
-   Cuando un salto de publicidad está presentando instancias de publicidad y una vez finalizada una instancia de publicidad, se muestra una pantalla en blanco
-* (ZD#32509) - Deshabilitar grabación de pantalla en iOS 11 Deshabilitar grabación de pantalla en iOS 11
+   Se corrigieron dos prototipos de bloques en los `DRMInterface.h` que faltaba la palabra &#39;void&#39; en sus listas de parámetros.
 
-* (ZD#33179): error intermitente de evento en iOS11
+* (ZD#31979): no se compila o ejecuta cuando es iOS 10 o posterior para iPhone 7/iPhone7+.
 
-   Se ha corregido el error de evento en iOS 11
+   Se ha corregido la compilación de documentos IB para versiones anteriores a iOS 7, que ya no se admite.
+
+* (ZD#32920): pantalla en blanco dentro de una pausa publicitaria y sin finalización de pausa publicitaria.
+
+   Cuando un salto de publicidad presenta instancias de publicidad y una vez finalizada la instancia de publicidad, se muestra una pantalla en blanco.
+
+* (ZD#32509) - Deshabilitar grabación de pantalla en iOS 11 Deshabilitar grabación de pantalla en iOS 11.
+
+* (ZD#33179): error intermitente de evento en iOS11.
+
+   Se ha corregido el error de evento en iOS 11.
 
 **Versión 1.4.40** (1.4.40.72)
 
@@ -466,7 +472,7 @@ Se ha mejorado la corrección proporcionada para el problema cerrado Nº 34385 e
 * (ZD #31951) - Error de TVSDK durante las rotaciones de licencia.
 
    Se corrigió el problema de rotación de licencia.
-* (ZD #31951): pantalla en blanco dentro de una pausa publicitaria y sin finalización de pausa publicitaria.
+* (ZD #31951) - Pantalla en blanco dentro de una pausa publicitaria y sin finalización de pausa publicitaria.
 
    Se ha corregido un problema por el cual las publicidades VPAID de Facebook solían devolver varios bloques CDATA en un solo nodo `<AdParameters>` VAST.
 * (ZD #33336) - iOS TVSDK - Los pods de anuncios no se rellenan, a pesar de que FreeWheel devuelve suficientes anuncios.
@@ -625,9 +631,9 @@ Este problema se resolvió proporcionando una solución alternativa para los flu
 
 En esta versión se han solucionado los siguientes problemas de TVSDK:
 
-* (ZD# 24180) Añada un encabezado personalizado en lista blanca
+* (ZD# 24180) Añada un encabezado personalizado para permitir la lista.
 
-Se ha agregado un nuevo encabezado personalizado a la lista blanca de TVSDK.
+Se ha agregado un nuevo encabezado personalizado a la lista de permitidos de TVSDK.
 
 * (ZD# 25016) El flujo de conmutación por error se selecciona de forma aleatoria cuando se establecen los parámetros de control de ABR
 
@@ -647,7 +653,7 @@ Cuando el tiempo de inicio de la última pausa publicitaria del VMAP cae antes d
 
 * Video Heartbeat Library (VHL) se ha actualizado a la versión 1.5.9 para resolver los siguientes problemas:
 
-* (ZD #22351) VHL - Análisis: Duración de recursos de vídeo en directo
+* (ZD #22351) VHL - Analytics: Duración de recursos de vídeo en directo
 
 Este problema se resolvió agregando la API assetDuration a PTVideoAnalyticsTrackingMetadata para actualizar la duración del recurso para flujos interactivos/lineales y proporcionar una lógica para comprobar el flujo en directo.
 
@@ -655,11 +661,11 @@ Este problema se resolvió agregando la API assetDuration a PTVideoAnalyticsTrac
 
 Este problema es el mismo que ZD #22351.
 
-* (ZD #25908) VHL - Análisis: Adobe Heartbeat Evento Crash
+* (ZD #25908) VHL - Analytics: Adobe Heartbeat Evento Crash
 
 Este problema se resolvió actualizando la implementación para utilizar la última versión de VHL para iOS versión 1.5.9 con el fin de mejorar la estabilidad y el rendimiento.
 
-* (ZD #25956) VHL - Análisis: Bloquear al reproducir vídeos repetidamente
+* (ZD #25956) VHL - Analytics: Bloquear al reproducir vídeos repetidamente
 
 Este problema es el mismo que ZD #25908.
 
@@ -771,7 +777,7 @@ Este problema se resolvió actualizando la lógica para mostrar la vista del rep
 
 Este problema se resolvió actualizando VideoAnalyticsTracker para detectar correctamente el inicio/finalización de capítulos al realizar la transición entre los límites de capítulos y no capítulos.
 
-* (ZD #20784) - Análisis: Se completa el contenido de activación para transiciones de vídeo en directo
+* (ZD #20784) - Analytics: Se completa el contenido de activación para transiciones de vídeo en directo
 
 Este problema se resolvió agregando una lógica para activar manualmente la finalización de contenido durante una sesión de seguimiento de vídeo.
 
