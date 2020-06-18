@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Programming Help
+user-guide-title: Ayuda de programación de Primetime
 translation-type: tm+mt
-source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '4307'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
          + [Suspender y restaurar MediaPlayer](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayerobjects-working-with/android-3x-suspend-and-restore.md)
       + Escuchar eventos de Primetime Player {#listen-primetime-player-events}
          + [Información general](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/events-listen-for/android-3x-events-listen-for.md)
-         + [Implementar escuchas de eventos y rellamadas](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/events-listen-for/android-3x-event-listeners-implement.md)
+         + [Implementar escuchas de evento y rellamadas](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/events-listen-for/android-3x-event-listeners-implement.md)
       + [Configurar la gestión de errores](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-error-handling-set-up.md)
       + Configurar la interfaz de usuario del reproductor {#configure-player-user-interface}
          + [Esperar un estado válido](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md)
@@ -77,7 +80,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
          + [Reproducción de medios y conmutación por error](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/failover-for-playback/android-3x-failover-media-playback.md)
          + [Inserción de publicidad y conmutación por error para VOD](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/failover-for-playback/android-3x-failover-ad-insertion-for-vod.md)
       + [Reproducción sin conexión con Android](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-offline-playback-with-android.md)
-      + [Entrega segura a través de HTTPS](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-secure-delivery.md)
+      + [Envío seguro sobre HTTPS](tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-secure-delivery.md)
    + Publicidad {#advertising}
       + [Publicidad y sus requisitos](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-3x-ad-insertion.md)
       + Insertar publicidades {#insert-ads}
@@ -103,7 +106,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + Metadatos de inserción de anuncio {#ad-insertion-metadata}
          + [Información general](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md)
          + [Configurar metadatos de inserción de publicidad](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata-set-up.md)
-         + [Habilitar publicidades en la reproducción de eventos completos](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-full-event-replay.md)
+         + [Habilitar publicidades en reproducción de evento completo](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-full-event-replay.md)
          + [Modo de señalización de publicidad](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/ad-full-event-replay/android-3x-ad-signaling-mode.md)
       + Publicidades tipo titular complementarias {#companion-banner-ads}
          + [Prácticas recomendadas para anuncios en titulares complementarios](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/comp-banner-ads/android-3x-banners-best-practices.md)
@@ -124,13 +127,13 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
          + [Métodos de clase Config para etiquetas](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-psdkconfig-methods.md)
          + [Clase de metadatos temporizados](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-timedmetadata-class.md)
          + [Suscripción a etiquetas personalizadas](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-subscribe.md)
-         + [Adición de oyentes para notificaciones de metadatos temporizados](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-receive-notifications.md)
+         + [Añadir oyentes para notificaciones de metadatos temporizadas](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-custom-tags-receive-notifications.md)
          + [Almacenar objetos de metadatos temporizados a medida que se distribuyen](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/custom-tags-configure/android-3x-timed-metadata-store.md)
       + Compatibilidad con anuncios VPAID 2.0 {#vpaid-ad-support}
          + [Información general](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-vpaid-ads.md)
          + [Implementación de la integración con VPAID 2.0](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/vpaid-ads/android-3x-include-vpaid-support.md)
       + [Mediciones de anuncios de Moat](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/android-3x-ad-measurements-from-moat.md)
-      + Agregar marcadores de publicidad personalizados {#add-custom-ad}
+      + Añadir marcadores de publicidad personalizados {#add-custom-ad}
          + [Información general](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-ad-markers-add-custom.md)
          + [Clase TimeRange](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-timerange-class.md)
          + [Clases MediaPlayer y MediaResource](tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-markers-add-custom/android-3x-mediaplayer-mediaresource-classes.md)
@@ -170,14 +173,14 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Inicializar y configurar el análisis de vídeo](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-integrate-heartbeats.md)
       + [Implementar compatibilidad con metadatos personalizados](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-custom-metadata.md)
       + [Implementar compatibilidad con capítulos](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-chapter-support.md)
-      + [Configuración de informes de análisis de vídeo en el servidor](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-server-side-reporting-set-up.md)
+      + [Configuración del sistema de informes de análisis de vídeo en el servidor](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-server-side-reporting-set-up.md)
       + [Acceso a los informes de análisis de vídeo](tvsdk-3x-android-prog/va-integration-overview/android-3x-va-integration-overview/android-3x-va-reports-access.md)
    + Eventos y notificaciones {#events-and-notifications}
       + [Notificaciones y eventos para el estado, la actividad, los errores y el registro del reproductor](tvsdk-3x-android-prog/android-3x-events-notifications/android-3x-notification-system.md)
       + [Códigos de notificación](tvsdk-3x-android-prog/android-3x-events-notifications/notification-codes/android-3x-notification-codes.md)
       + [Códigos de error de PSDK](tvsdk-3x-android-prog/android-3x-events-notifications/notification-codes/android-3x-error-codes.md)
       + [Detalles de la notificación NATIVE_ERROR](tvsdk-3x-android-prog/android-3x-events-notifications/notification-codes/android-3x-native-error-summary.md)
-      + [Resumen de eventos de Primetime player](tvsdk-3x-android-prog/android-3x-events-notifications/events-summary/android-3x-events-summary.md)
+      + [Resumen de eventos de Primetime Player](tvsdk-3x-android-prog/android-3x-events-notifications/events-summary/android-3x-events-summary.md)
    + Facturación {#billing}
       + [Métricas de facturación](tvsdk-3x-android-prog/android-3x-billing-title/billing/android-3x-billing.md)
       + [Configurar métricas de facturación](tvsdk-3x-android-prog/android-3x-billing-title/billing/android-3x-billing-config.md)
@@ -212,7 +215,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Resolución de anuncios justo a tiempo](tvsdk-3x-ios-prog/ios-3x-advertising/c-ios-lazy-ad-resolving.md)
    + Primetime y metadatos del servidor {#ad-server-metadata}
       + [Configurar metadatos de Primetime y de servidor](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)
-      + [Habilitar publicidades en la reproducción de eventos completos](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-full-event-replay.md)
+      + [Habilitar publicidades en reproducción de evento completo](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-full-event-replay.md)
       + [Modo de señalización de publicidad](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-ad-signaling-mode.md)
    + [Publicidades tipo titular complementarias](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-companion-banner-ads/ios-3x-companion-banner-ads.md)
    + [Publicidades en las que se puede hacer clic](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-clickable-ads.md)
@@ -227,7 +230,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Métodos de clase Config para etiquetas](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-psdkconfig-methods.md)
       + [Clase de metadatos temporizados](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-timedmetadata-class.md)
       + [Suscripción a etiquetas personalizadas](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-subscribe.md)
-      + [Adición de oyentes para notificaciones de metadatos temporizados](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-receive-notifications.md)
+      + [Añadir oyentes para notificaciones de metadatos temporizadas](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-custom-tags-receive-notifications.md)
       + [Almacenar objetos de metadatos temporizados a medida que se distribuyen](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md)
       + [Uso de metadatos temporizados](tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-use.md)
    + Actualización de las reglas de selección creativa de publicidad {#update-rules}
@@ -261,12 +264,12 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Implementar compatibilidad con metadatos personalizados](tvsdk-3x-ios-prog/ios-3x-va-integration-overview/ios-3x-va-integration/ios-3x-va-custom-metadata.md)
       + [Implementar compatibilidad con capítulos](tvsdk-3x-ios-prog/ios-3x-va-integration-overview/ios-3x-va-integration/ios-3x-va-chapter-support.md)
       + [Implementar actualizaciones de tiempo personalizadas](tvsdk-3x-ios-prog/ios-3x-va-integration-overview/ios-3x-va-integration/ios-3x-imp-cust-time-updates.md)
-      + [Configuración de informes de análisis de vídeo en el servidor](tvsdk-3x-ios-prog/ios-3x-va-integration-overview/ios-3x-va-integration/ios-3x-va-server-side-reporting-set-up.md)
+      + [Configuración del sistema de informes de análisis de vídeo en el servidor](tvsdk-3x-ios-prog/ios-3x-va-integration-overview/ios-3x-va-integration/ios-3x-va-server-side-reporting-set-up.md)
       + [Acceso a los informes de análisis de vídeo](tvsdk-3x-ios-prog/ios-3x-va-integration-overview/ios-3x-va-integration/ios-3x-va-reports-access.md)
    + Protección del contenido {#content-protection}
       + [Información general sobre la interfaz de DRM de Primetime](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-drm-interface.md)
       + [Apple FairPlay en aplicaciones TVSDK](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md)
-      + [Lista blanca de la aplicación iOS](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-whitelist-your-ios-application.md)
+      + [Permitir la lista de aplicaciones de iOS](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md)
    + [Notificaciones de estado, actividad, errores y registros del reproductor](tvsdk-3x-ios-prog/ios-3x-notification-system/ios-3x-notification-content.md)
    + [Registro personalizado](tvsdk-3x-ios-prog/ios-3x-customized-logging/c-ios-customized-logging/c-ios-customized-logging.md)
    + [Conmutación por error](tvsdk-3x-ios-prog/ios-3x-understanding-failover.md)
@@ -280,7 +283,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Clases de escala de tiempo](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-timeline.md)
       + [Clases de publicidad de línea de tiempo](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-timeline-advertising.md)
       + [Clases de Digital Rights Management](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-digital-rights-management-ios.md)
-      + [Clases de Video Analytics](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-video-analytics.md)
+      + [Clases de Analytics de vídeo](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-video-analytics.md)
    + Códigos de notificación {#notification-codes}
       + [Sistema de notificación TVSDK](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/c-ios-notification-codes.md)
       + [Códigos de notificación de ERROR](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/ios-3x-notifications-errors.md)
@@ -289,7 +292,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Código de optimización de ingresos](tvsdk-3x-ios-prog/ios-3x-notification-codes/c-ios-notification-codes/ios-3x-revenue-optimization.md)
 + TVSDK 2.7 para Android {#tvsdk-2-7-for-android}
    + Descripción general del producto, audiencia y esta guía {#overview}
-      + [Descripción general del producto, audiencia y esta guía general](tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-prod-audience-guide.md)
+      + [Información general del producto, audiencia y esta guía general](tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-prod-audience-guide.md)
       + [Funciones de Primetime TVSDK](tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md)
       + [Consideraciones y prácticas recomendadas](tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-considerations.md)
       + [Requisitos](tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md)
@@ -302,9 +305,9 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
          + [Reutilización o eliminación de una instancia de MediaPlayer](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-mediaplayer-reuse-or-remove.md)
          + [Inspeccionar la línea de tiempo de reproducción](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/t-psdk-android-2.7-timeline-inspect-playback.md)
          + [Suspender y restaurar MediaPlayer](tvsdk-2.7-for-android/content-playback-options/mediaplayerobjects-working-with/c-psdk-android-2.7-suspend-and-restore.md)
-      + Escuchar eventos de Primetime Player {#listen-primetime-player-events}
+      + Escuchar eventos de Primetime Player   {#listen-primetime-player-events}
          + [Información general](tvsdk-2.7-for-android/content-playback-options/c-psdk-android-2.7-events-listen-for.md)
-         + [Implementar escuchas de eventos y rellamadas](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-event-listeners-implement.md)
+         + [Implementar escuchas de evento y rellamadas](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-event-listeners-implement.md)
       + [Configurar la gestión de errores](tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-error-handling-set-up.md)
       + Configurar la interfaz de usuario del reproductor {#configure-user-interface}
          + [Esperar un estado válido](tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-state-prepared-wait-for.md)
@@ -376,7 +379,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + Metadatos de inserción de anuncio {#ad-insertion-metadata}
          + [Información general](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/c-psdk-android-2.7-ad-insertion-metadata.md)
          + [Configurar metadatos de inserción de publicidad](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/t-psdk-android-2.7-ad-insertion-metadata-set-up.md)
-         + [Habilitar publicidades en la reproducción de eventos completos](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/t-psdk-android-2.7-ad-full-event-replay.md)
+         + [Habilitar publicidades en reproducción de evento completo](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/t-psdk-android-2.7-ad-full-event-replay.md)
          + [Modo de señalización de publicidad](tvsdk-2.7-for-android/ad-insertion/ad-insertion-metadata/ad-full-event-replay/r-psdk-android-2.7-ad-signaling-mode.md)
       + Publicidades tipo titular complementarias {#companion-banner-ads}
          + [Prácticas recomendadas para anuncios en titulares complementarios](tvsdk-2.7-for-android/ad-insertion/comp-banner-ads/c-psdk-android-2.7-companion-banners-best-practices.md)
@@ -397,13 +400,13 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
          + [Métodos de clase Config para etiquetas](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/c-psdk-android-2.7-custom-tags-psdkconfig-methods.md)
          + [Clase de metadatos temporizados](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/r-psdk-android-2.7-custom-tags-timedmetadata-class.md)
          + [Suscripción a etiquetas personalizadas](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-custom-tags-subscribe.md)
-         + [Adición de oyentes para notificaciones de metadatos temporizados](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-custom-tags-receive-notifications.md)
+         + [Añadir oyentes para notificaciones de metadatos temporizadas](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-custom-tags-receive-notifications.md)
          + [Almacenar objetos de metadatos temporizados a medida que se distribuyen](tvsdk-2.7-for-android/ad-insertion/custom-tags-configure/t-psdk-android-2.7-timed-metadata-store.md)
       + Compatibilidad con anuncios VPAID 2.0 {#vpaid-ad-support}
          + [Información general](tvsdk-2.7-for-android/ad-insertion/vpaid-2.0-ads/c-psdk-android-2.7-vpaid-2.0-ads.md)
          + [Implementación de la integración con VPAID 2.0](tvsdk-2.7-for-android/ad-insertion/vpaid-2.0-ads/t-psdk-android-2.7-include-vpaid20-support.md)
       + [Mediciones de anuncios de Moat](tvsdk-2.7-for-android/ad-insertion/c-psdk-android-2.7-ad-measurements-from-moat.md)
-      + Agregar marcadores de publicidad personalizados {#add-custom-markers}
+      + Añadir marcadores de publicidad personalizados {#add-custom-markers}
          + [Información general](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/c-psdk-android-2.7-ad-markers-add-custom.md)
          + [Clase TimeRange](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/r-psdk-android-2.7-timerange-class.md)
          + [Clases MediaPlayer y MediaResource](tvsdk-2.7-for-android/ad-insertion/ad-markers-add-custom/r-psdk-android-2.7-mediaplayer-mediaresource-classes.md)
@@ -445,14 +448,14 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Inicializar y configurar el análisis de vídeo](tvsdk-2.7-for-android/va-integration-overview/t-psdk-android-2.7-va-integrate-heartbeats.md)
       + [Implementar compatibilidad con metadatos personalizados](tvsdk-2.7-for-android/va-integration-overview/t-psdk-android-2.7-va-custom-metadata.md)
       + [Implementar compatibilidad con capítulos](tvsdk-2.7-for-android/va-integration-overview/t-psdk-android-2.7-va-chapter-support.md)
-      + [Configuración de informes de análisis de vídeo en el servidor](tvsdk-2.7-for-android/va-integration-overview/t-psdk-android-2.7-va-server-side-reporting-set-up.md)
+      + [Configuración del sistema de informes de análisis de vídeo en el servidor](tvsdk-2.7-for-android/va-integration-overview/t-psdk-android-2.7-va-server-side-reporting-set-up.md)
       + [Acceso a los informes de análisis de vídeo](tvsdk-2.7-for-android/va-integration-overview/t-psdk-android-2.7-va-reports-access.md)
    + Eventos y notificaciones {#event-notifications}
       + [Notificaciones y eventos para el estado, la actividad, los errores y el registro del reproductor](tvsdk-2.7-for-android/events-and-notifications/c-psdk-android-2.7-notification-system.md)
       + Códigos de notificación {#notification-codes}
          + [Información general](tvsdk-2.7-for-android/events-and-notifications/notification-codes/c-psdk-android-2.7-notification-codes.md)
          + [Detalles de la notificación NATIVE_ERROR](tvsdk-2.7-for-android/events-and-notifications/notification-codes/c-psdk-android-2.7-native-error-summary.md)
-      + [Resumen de eventos de Primetime player](tvsdk-2.7-for-android/events-and-notifications/events-summary/c-psdk-android-2.7-events-summary.md)
+      + [Resumen de eventos de Primetime Player](tvsdk-2.7-for-android/events-and-notifications/events-summary/c-psdk-android-2.7-events-summary.md)
       + Métricas de facturación {#billing-metrics}
          + [Información general](tvsdk-2.7-for-android/billing/c-psdk-android-2.7-billing.md)
          + [Configurar métricas de facturación](tvsdk-2.7-for-android/billing/t-psdk-android-2.7-billing-config.md)
@@ -466,7 +469,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
    + [Configuración de MediaPlayer](tvsdk-1.4-for-android/android-1.4-mediaplayer-set-up.md)
    + Escuchar eventos de Primetime Player {#listen-primetime-player-events}
       + [Información general](tvsdk-1.4-for-android/android-1.4-primetime-player-events/events-listen-for/android-1.4-events-listen-for.md)
-      + [Implementar escuchas de eventos y rellamadas](tvsdk-1.4-for-android/android-1.4-primetime-player-events/events-listen-for/android-1.4-event-listeners-implement.md)
+      + [Implementar escuchas de evento y rellamadas](tvsdk-1.4-for-android/android-1.4-primetime-player-events/events-listen-for/android-1.4-event-listeners-implement.md)
    + [Configurar la gestión de errores](tvsdk-1.4-for-android/android-1.4-error-handling-set-up.md)
    + Configurar la interfaz de usuario del reproductor {#configure-user-interface}
       + [Esperar un estado válido](tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)
@@ -527,7 +530,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + Metadatos de inserción de anuncio {#ad-insertion-metadata}
          + [Información general](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata.md)
          + [Configurar metadatos de inserción de publicidad](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata-set-up.md)
-         + [Habilitar publicidades en la reproducción de eventos completos](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-full-event-replay.md)
+         + [Habilitar publicidades en reproducción de evento completo](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-full-event-replay.md)
          + [Modo de señalización de publicidad](tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-signaling-mode.md)
       + Publicidades en las que se puede hacer clic {#clickable-ads}
          + [Información general](tvsdk-1.4-for-android/ad-insertion/clickable-ads/android-1.4-clickable-ads.md)
@@ -544,10 +547,10 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
          + [Métodos de clase Config para etiquetas](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-psdkconfig.md)
          + [Clase de metadatos temporizados](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-timedmetadata.md)
          + [Suscripción a etiquetas personalizadas](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-subscribe.md)
-         + [Adición de oyentes para notificaciones de metadatos temporizados](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-receive-notifications.md)
+         + [Añadir oyentes para notificaciones de metadatos temporizadas](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-custom-tags-receive-notifications.md)
          + [Almacenar objetos de metadatos temporizados a medida que se distribuyen](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-timed-metadata-store.md)
          + [Uso de metadatos temporizados](tvsdk-1.4-for-android/ad-insertion/custom-tags-configure/android-1.4-timed-metadata-use.md)
-      + Agregar marcadores de publicidad personalizados {#ad-markers}
+      + Añadir marcadores de publicidad personalizados {#ad-markers}
          + [Información general](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-ad-markers-add-custom.md)
          + [Clase TimeRange](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-timerange-class.md)
          + [Clases MediaPlayer y MediaResource](tvsdk-1.4-for-android/ad-insertion/ad-markers-add-custom/android-1.4-mediaplayer-mediaresource-classes.md)
@@ -596,7 +599,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
          + [Implementar compatibilidad con metadatos personalizados](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-custom-metadata.md)
          + [Implementar compatibilidad con capítulos](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-chapter-support.md)
          + [Implementar actualizaciones de tiempo personalizadas](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-imp-cust-time-updates.md)
-         + [Configuración de informes de análisis de vídeo en el servidor](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-server-side-set-up.md)
+         + [Configuración del sistema de informes de análisis de vídeo en el servidor](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-server-side-set-up.md)
          + [Acceso a los informes de análisis de vídeo](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-reports-access.md)
       + Protección del contenido {#content-protection}
          + Interfaz DRM de Primetime {#drm-interface}
@@ -615,12 +618,12 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
          + [Fase de resolución de publicidad](tvsdk-1.4-for-android/failover-for-playback/failover-ad-insertion-for-vod/android-1.4-failover-ad-resolving-phase.md)
          + [Fase de inserción de publicidad](tvsdk-1.4-for-android/failover-for-playback/failover-ad-insertion-for-vod/android-1.4-failover-ad-insertion-phase.md)
          + [Fase de reproducción de publicidad](tvsdk-1.4-for-android/failover-for-playback/failover-ad-insertion-for-vod/android-1.4-failover-ad-playback-phase.md)
-      + Resumen de eventos de Primetime player {#primetime-player-events-summary}
-         + [Eventos de reproducción](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer-playback.md)
-         + [Eventos de reproducción de anuncios](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer.md)
-         + [Eventos de QoS](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer-qos.md)
-         + [Eventos DRM](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer-drm.md)
-         + [Eventos de cargador](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer-itemloader.md)
+      + Resumen de eventos de Primetime Player {#primetime-player-events-summary}
+         + [eventos de reproducción](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer-playback.md)
+         + [eventos de reproducción de publicidad](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer.md)
+         + [eventos de QoS](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer-qos.md)
+         + [eventos DRM](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer-drm.md)
+         + [eventos del cargador](tvsdk-1.4-for-android/android-1.4-events-notifications/events-summary/android-1.4-event-listener-mediaplayer-itemloader.md)
       + Resumen de las clases de Primetime player {#classes-summary}
          + [Clases de Mediacore](tvsdk-1.4-for-android/class-summary/android-1.4-classes-mediacore.md)
          + [Clases de información](tvsdk-1.4-for-android/class-summary/android-1.4-classes-info.md)
@@ -681,7 +684,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Métodos de clase Config para etiquetas](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/c-psdk-ios-1.4-custom-tags-psdkconfig-methods.md)
       + [Clase de metadatos temporizados](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/r-psdk-ios-1.4-custom-tags-timedmetadata-class.md)
       + [Suscripción a etiquetas personalizadas](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-custom-tags-subscribe.md)
-      + [Adición de oyentes para notificaciones de metadatos temporizados](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-custom-tags-receive-notifications.md)
+      + [Añadir oyentes para notificaciones de metadatos temporizadas](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-custom-tags-receive-notifications.md)
       + [Almacenar objetos de metadatos temporizados a medida que se distribuyen](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md)
       + [Uso de metadatos temporizados](tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-use.md)
    + Actualización de las reglas de selección creativa de publicidad {#update-rules}
@@ -715,12 +718,12 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Implementar compatibilidad con metadatos personalizados](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/t-psdk-ios-1.4-va-custom-metadata.md)
       + [Implementar compatibilidad con capítulos](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/t-psdk-ios-1.4-va-chapter-support.md)
       + [Implementar actualizaciones de tiempo personalizadas](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/t-psdk-ios-1.4-imp-cust-time-updates.md)
-      + [Configuración de informes de análisis de vídeo en el servidor](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/t-psdk-ios-1.4-va-server-side-reporting-set-up.md)
+      + [Configuración del sistema de informes de análisis de vídeo en el servidor](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/t-psdk-ios-1.4-va-server-side-reporting-set-up.md)
       + [Acceso a los informes de análisis de vídeo](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/t-psdk-ios-1.4-va-reports-access.md)
    + Protección del contenido {#content-protection}
       + [Información general sobre la interfaz de DRM de Primetime](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/r-psdk-ios-1.4-drm-interface.md)
       + [Apple FairPlay en aplicaciones TVSDK](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)
-      + [Lista blanca de la aplicación iOS](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/t-psdk-ios-1.4-whitelist-your-ios-application.md)
+      + [Permitir la lista de aplicaciones de iOS](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/t-psdk-ios-1.4-allowlist-your-ios-application.md)
    + [Notificación del estado, actividad, errores y registros del reproductor ](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md)
    + [Registro personalizado](tvsdk-1.4-for-ios/c-psdk-ios-1.4-customized-logging/c-psdk-ios-1.4-customized-logging.md)
    + [Conmutación por error](tvsdk-1.4-for-ios/c-psdk-ios-1.4-understanding-failover.md)
@@ -734,7 +737,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Clases de escala de tiempo](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-timeline.md)
       + [Clases de publicidad de línea de tiempo](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-timeline-advertising.md)
       + [Clases de Digital Rights Management](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-digital-rights-management-ios.md)
-      + [Clases de Video Analytics](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-video-analytics.md)
+      + [Clases de Analytics de vídeo](tvsdk-1.4-for-ios/c-psdk-ios-1.4-primetime-player-class-summary/r-psdk-ios-1.4-classes-video-analytics.md)
    + Códigos de notificación {#notification-codes}
       + [Sistema de notificación TVSDK](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-codes/c-psdk-ios-1.4-notification-codes.md)
       + [Códigos de notificación de ERROR](tvsdk-1.4-for-ios/c-psdk-ios-1.4-notification-codes/r-psdk-ios-1.4-notifications-errors.md)
@@ -760,14 +763,14 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Cargar el token firmado](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-get-signed-token.md)
    + Escuchar eventos de Primetime Player {#listen}
       + [Información general](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-listen-for.md)
-      + Implementar escuchas de eventos y rellamadas {#implement}
+      + Implementar escuchas de evento y rellamadas {#implement}
          + [Información general](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-listeners-overview.md)
          + [Orden de los eventos de reproducción](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-playback.md)
          + [Orden de los eventos publicitarios](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-ad-playback.md)
-         + [Eventos de QoS](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-qos.md)
-         + [Eventos DRM](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-drm.md)
-         + [Eventos de cargador](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-loader.md)
-         + [Eventos de metadatos temporizados](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-timed-metadata.md)
+         + [eventos de QoS](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-qos.md)
+         + [eventos DRM](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-drm.md)
+         + [eventos del cargador](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-loader.md)
+         + [eventos de metadatos temporizados](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-events-listen-for/c-psdk-dhls-1.4-events-order-timed-metadata.md)
       + [Configurar la gestión de errores](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/t-psdk-dhls-1.4-error-handling-set-up.md)
       + Configurar la interfaz de usuario del reproductor {#configure-interface}
          + [Esperar un estado válido](tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)
@@ -827,14 +830,14 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
          + [Clase de metadatos temporizados](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/r-psdk-dhls-1.4-custom-tags-timedmetadata-class.md)
          + [Notificaciones para etiquetas de manifiesto](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/c-psdk-dhls-1.4-custom-tags-notifications.md)
          + [Suscripción a etiquetas personalizadas](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/t-psdk-dhls-1.4-custom-tags-subscribe.md)
-         + [Adición de oyentes para notificaciones de metadatos temporizados](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/t-psdk-dhls-1.4-custom-tags-receive-notifications.md)
+         + [Añadir oyentes para notificaciones de metadatos temporizadas](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-tags-configure/t-psdk-dhls-1.4-custom-tags-receive-notifications.md)
       + [Volver a empaquetar anuncios incompatibles con el servicio Adobe Creative Repackusing](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-transcoding/c-psdk-dhls-1.4-ad-transcoding.md)
       + [Devolución de anuncios para anuncios VAST y VMAP](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-fallback/c-psdk-dhls-1.4-ad-fallback.md)
       + Publicidades personalizadas {#custom-ads}
          + [Requisitos de publicidad personalizados](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/c-psdk-dhls-1.4-custom-ads-req.md)
-         + [Eventos de publicidad personalizados](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/r-psdk-dhls-1.4-custom-ad-events.md)
+         + [eventos de publicidad personalizados](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/r-psdk-dhls-1.4-custom-ad-events.md)
          + [Mostrar publicidades VPAID lineales en una pausa publicitaria](tvsdk-1.4-for-desktop-hls/ad-insertion/custom-ads/t-psdk-dhls-1.4-display-linear-vpaid-ads.md)
-      + Agregar marcadores de publicidad personalizados {#add-markers}
+      + Añadir marcadores de publicidad personalizados {#add-markers}
          + [Información general](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/c-psdk-dhls-1.4-ad-markers-add-custom.md)
          + [Clase TimeRange](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/r-psdk-dhls-1.4-timerange-class.md)
          + [Clases MediaPlayer y MediaResource](tvsdk-1.4-for-desktop-hls/ad-insertion/ad-markers-add-custom/r-psdk-dhls-1.4-mediaplayer-mediaresource-classes.md)
@@ -883,7 +886,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Implementar compatibilidad con metadatos personalizados](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/t-psdk-dhls-1.4-va-custom-metadata.md)
       + [Implementar compatibilidad con capítulos](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/t-psdk-dhls-1.4-va-chapter-support.md)
       + [Implementar actualizaciones de tiempo personalizadas](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/t-psdk-dhls-1.4-imp-cust-time-updates.md)
-      + [Configuración de informes de análisis de vídeo en el servidor](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/t-psdk-dhls-1.4-va-server-side-reporting-set-up.md)
+      + [Configuración del sistema de informes de análisis de vídeo en el servidor](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/t-psdk-dhls-1.4-va-server-side-reporting-set-up.md)
       + [Acceso a los informes de análisis de vídeo](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-integration/va-integration-overview/t-psdk-dhls-1.4-va-reports-access.md)
    + Protección del contenido {#content-protection}
       + [Sistemas DRM admitidos](tvsdk-1.4-for-desktop-hls/drm-content-security/t-psdk-dhls-1.4-drm-support.md)
@@ -893,7 +896,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Información general](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/c-psdk-dhls-1.4-notification-system.md)
       + [Contenido de notificación](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/c-psdk-dhls-1.4-notification-content.md)
       + [Configurar el sistema de notificaciones](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-notification-setup.md)
-      + [Agregar registro y depuración en tiempo real](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-notification-realtime-logging-debugging.md)
+      + [Añadir el registro y la depuración en tiempo real](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-notification-realtime-logging-debugging.md)
       + [Etiquetas ID3](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-id3-metadata-retrieve.md)
       + [Seguimiento de advertencias de AVE en el reproductor](tvsdk-1.4-for-desktop-hls/r-psdk-dhls-1.4-notification-system/notification-system/t-psdk-dhls-1.4-track-ave-warnings-in-player.md)
    + Reproducción y conmutación por error {#playback-and-failover}
@@ -902,17 +905,17 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Inserción de publicidad y conmutación por error para VOD](tvsdk-1.4-for-desktop-hls/failover-for-playback/c-psdk-dhls-1.4-failover-ad-insertion-for-vod.md)
       + [Actualización de manifiesto maestro activo](tvsdk-1.4-for-desktop-hls/failover-for-playback/c-psdk-dhls-1.4-manifest-update-intro.md)
       + [Obtener información sobre el conmutador de perfil](tvsdk-1.4-for-desktop-hls/failover-for-playback/t-psdk-dhls-1.4-profile-switch-info.md)
-   + Resumen de eventos de Primetime player {#events-summary}
-      + [Eventos de reproducción](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-playback.md)
-      + [Eventos de reproducción de anuncios](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-adplayback.md)
-      + [Servicio de publicidad/eventos de metadatos temporizados](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-adserving.md)
-      + [Eventos de QoS](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-qos.md)
-      + [Eventos DRM](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-drm.md)
-      + [Eventos de cargador](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-itemloader.md)
+   + Resumen de eventos de Primetime Player {#events-summary}
+      + [eventos de reproducción](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-playback.md)
+      + [eventos de reproducción de publicidad](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-adplayback.md)
+      + [eventos de metadatos temporizados/servicio de publicidad](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-adserving.md)
+      + [eventos de QoS](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-qos.md)
+      + [eventos DRM](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-drm.md)
+      + [eventos del cargador](tvsdk-1.4-for-desktop-hls/events-summary/r-psdk-dhls-1.4-event-listener-mediaplayer-itemloader.md)
    + Resumen de las clases de Primetime player {#classes-summary}
       + [Clases de Mediacore](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-mediacore.md)
       + [Clases de error](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-error.md)
-      + [Clases de eventos](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-events.md)
+      + [Eventos, clases](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-events.md)
       + [Clases de información](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-info.md)
       + [Clases de registro](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-logging.md)
       + [Clases de metadatos](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-metadata.md)
@@ -930,7 +933,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Clases de operaciones de línea de tiempo](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-timeline-operations.md)
       + [Clases de resolución de línea de tiempo](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-timeline-resolvers.md)
       + [Clases de utilidades](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-utility.md)
-      + [Clases de Video Analytics](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-video-analytics.md)
+      + [Clases de Analytics de vídeo](tvsdk-1.4-for-desktop-hls/primetime-player-classes-summary/r-psdk-dhls-1.4-classes-video-analytics.md)
    + Códigos de notificación {#notification-codes}
       + [Información general](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-notification-codes.md)
       + [Códigos de notificación de ERROR](tvsdk-1.4-for-desktop-hls/c-psdk-dhls-1.4-events-and-notifications/notification-codes/r-psdk-dhls-1.4-notifications-errors.md)
@@ -966,11 +969,11 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Rótulos](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-captions.md)
       + Publicidades {#ads}
          + [Información general sobre las publicidades](browser-tvsdk-2.4/getting-started/about-ads/c-psdk-browser-tvsdk-2.4-ads.md)
-         + [Agregar publicidad](browser-tvsdk-2.4/getting-started/about-ads/t-psdk-browser-tvsdk-2.4-add-adverts.md)
+         + [Añadir publicidad](browser-tvsdk-2.4/getting-started/about-ads/t-psdk-browser-tvsdk-2.4-add-adverts.md)
       + [Administración de derechos digitales](browser-tvsdk-2.4/getting-started/about-drm/c-psdk-browser-tvsdk-2.4-drm.md)
       + [Almacenamiento en búfer](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-buffering.md)
       + [Métricas](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-metrics.md)
-      + [Forzar la reserva Flash mediante la lista de fuentes de medios](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-force-flash-fallback.md)
+      + [Forzar el respaldo Flash mediante la lista de origen de medios](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-force-flash-fallback.md)
       + [Depuración y registro](browser-tvsdk-2.4/getting-started/c-psdk-browser-tvsdk-2.4-debugging.md)
    + Marco de interfaz de usuario {#user-interface-framework}
       + [El marco de la interfaz de usuario](browser-tvsdk-2.4/c-psdk-browser-2.4-userinterface/c-psdk-browser-tvsdk-2.4-ui-framework.md)
@@ -980,18 +983,18 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
       + [Configuración de MediaPlayer](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/t-psdk-browser-tvsdk-2.4-mediaplayer-set-up.md)
       + Inicializar el reproductor de medios para un vídeo específico {#initialize-specific-video}
          + [Crear un recurso de medios](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-media-resource-create.md)
-         + [Uso compartido de recursos de origen cruzado](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-cors-cred-support.md)
+         + [Uso compartido de recursos entre orígenes](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-cors-cred-support.md)
          + [Cargar un recurso de medios en MediaPlayer](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayer-initialize-for-video/t-psdk-browser-tvsdk-2.4-media-resource-load.md)
       + [Aplicación Google Cast para TVSDK de explorador](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/r-psdk-browser-tvsdk-2.4-chromecast.md)
       + [Flujos sin extensión](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-extensionless-streams.md)
       + [Almacenamiento en búfer](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/c-psdk-browser-tvsdk-2.4-buffering-configuration.md)
       + Escuchar eventos de Primetime Player {#listen-events}
          + [Información general](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/c-psdk-browser-tvsdk-2.4-events-listen-for.md)
-         + [Implementar escuchas de eventos y rellamadas](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/t-psdk-browser-tvsdk-2.4-event-listeners-implement.md)
-         + [Tipos y clases de eventos para llamadas de retorno](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/r-psdk-browser-tvsdk-2.4-event-listeners-type-table.md)
+         + [Implementar escuchas de evento y rellamadas](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/t-psdk-browser-tvsdk-2.4-event-listeners-implement.md)
+         + [Tipos de evento y clases para llamadas de retorno](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/r-psdk-browser-tvsdk-2.4-event-listeners-type-table.md)
          + [Orden de los eventos publicitarios](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/c-psdk-browser-tvsdk-2.4-events-order-ad-playback.md)
          + [Orden de los eventos de reproducción](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/c-psdk-browser-tvsdk-2.4-events-order-playback.md)
-         + [Eventos de QoS](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/c-psdk-browser-tvsdk-2.4-events-order-qos.md)
+         + [eventos de QoS](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/c-psdk-browser-tvsdk-2.4-events-order-qos.md)
          + [Sistema de notificaciones](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/events-listen-for/c-psdk-browser-tvsdk-2.4-notification-system.md)
       + [Configurar la gestión de errores](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/t-psdk-browser-tvsdk-2.4-error-handling-set-up.md)
       + [Implemente un avance rápido y rebobine](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/t-psdk-browser-tvsdk-2.4-trick-play-implement.md)
@@ -1016,7 +1019,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
          + [Atributos de MediaPlayer para acceder a la información de MediaResource](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/r-psdk-browser-tvsdk-2.4-mediaplayer-methods-for-accessing-mediaresource.md)
          + [Reutilización o eliminación de una instancia de MediaPlayer](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/c-psdk-browser-tvsdk-2.4-mediaplayer-reuse-or-remove.md)
          + [Inspeccionar la línea de tiempo de reproducción](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-inspect-playback.md)
-         + [Agregar oyentes para TimelineUpdatedEvent](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-update-add-listener.md)
+         + [Añadir oyentes para TimelineUpdatedEvent](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/mediaplayerobjects-working-with/t-psdk-browser-tvsdk-2.4-timeline-update-add-listener.md)
       + Trabajo con subtítulos opcionales {#closed-captions}
          + [Información general](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/c-psdk-browser-tvsdk-2.4-closed-captions-set-up.md)
          + [Control de la visibilidad de los subtítulos opcionales](browser-tvsdk-2.4/content-playback-options-browser-tvsdk/closed-captions-set-up/t-psdk-browser-tvsdk-2.4-closed-caption-visibility-control.md)
@@ -1046,7 +1049,7 @@ source-git-commit: 9d8fa7b8deffcf0d86f0c8343b11fad042d8d4df
          + [Clase de metadatos temporizados](browser-tvsdk-2.4/ad-insertion/custom-tags/r-psdk-browser-tvsdk-2.4-custom-tags-timedmetadata-class.md)
          + [Notificaciones para etiquetas de manifiesto](browser-tvsdk-2.4/ad-insertion/custom-tags/r-psdk-browser-tvsdk-2.4-manifest-tag-notifications.md)
          + [Suscripción a etiquetas de publicidad personalizadas](browser-tvsdk-2.4/ad-insertion/custom-tags/t-psdk-browser-tvsdk-2.4-custom-tags-subscribe.md)
-         + [Adición de oyentes para notificaciones de metadatos temporizados](browser-tvsdk-2.4/ad-insertion/custom-tags/t-psdk-browser-tvsdk-2.4-custom-tags-receive-notifications.md)
+         + [Añadir oyentes para notificaciones de metadatos temporizados](browser-tvsdk-2.4/ad-insertion/custom-tags/t-psdk-browser-tvsdk-2.4-custom-tags-receive-notifications.md)
       + Personalización de detectores de oportunidades y resolución de contenido {#customize}
          + [Información general](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/c-psdk-browser-tvsdk-2.4-content-resolver.md)
          + [Generadores de oportunidades y solucionadores de contenido](browser-tvsdk-2.4/ad-insertion/opp-det-cont-resolve/c-psdk-browser-tvsdk-2.4-content-resolver-about.md)
