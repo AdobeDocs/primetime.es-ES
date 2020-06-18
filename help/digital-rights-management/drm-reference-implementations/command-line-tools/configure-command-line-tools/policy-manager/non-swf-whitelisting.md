@@ -3,16 +3,19 @@ seo-title: Lista blanca de aplicaciones que no son SWF
 title: Lista blanca de aplicaciones que no son SWF
 uuid: d4f93b15-e556-4749-95ab-f7f58b1061d7
 translation-type: tm+mt
-source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
 
 # Lista blanca de aplicaciones que no son SWF {#non-swf-application-whitelisting}
 
-AIR fue la primera plataforma que presentó la lista de aplicaciones permitidas y el nombre de la propiedad que se utiliza para incluir en la lista blanca aplicaciones que no son SWF (Adobe AIR, iOS, Android, etc.) conserva su nombre original: `policy.allowedAIRApplication.n`. Esto permite que el contenido se reproduzca en todas las aplicaciones que no sean Flash y que estén firmadas con un certificado de firma antes de la publicación. Esto se conoce como ID *de aplicación*. Puede extraer el ID de aplicación mediante la [!DNL AdobePublisherIDUtility.jar] herramienta. Esta lista blanca se aplicará a cualquier cliente que admita Primetime DRM.
+AIR fue la primera plataforma que presentó la lista de aplicaciones permitidas y el nombre de la propiedad que se utiliza para incluir en la lista blanca aplicaciones que no son SWF (Adobe AIR, iOS, Android, etc.) conserva su nombre original: `policy.allowedAIRApplication.n`. Esto permite que el contenido se reproduzca en todas las aplicaciones que no sean Flash y que estén firmadas con un certificado de firma antes de la publicación. Esto se denomina *ID de aplicación*. Puede extraer el ID de aplicación utilizando la [!DNL AdobePublisherIDUtility.jar] herramienta. Esta lista blanca se aplicará a cualquier cliente que admita Primetime DRM.
 
-El ID de la aplicación se deriva de la clave pública del certificado de firma utilizado para firmar una aplicación concreta. Si la clave pública del certificado caduca alguna vez, todo el contenido anterior en la lista blanca que se reproduzca únicamente en las aplicaciones firmadas con el certificado antiguo no se reproducirá en la nueva aplicación (firmado con el nuevo certificado).
+El ID de aplicación se deriva de la clave pública del certificado de firma utilizado para firmar una aplicación concreta. Si la clave pública del certificado caduca alguna vez, todo el contenido anterior en la lista blanca que se reproduzca únicamente en las aplicaciones firmadas con el certificado antiguo no se reproducirá en la nueva aplicación (firmado con el nuevo certificado).
 
 Si se encuentra en una situación en la que tiene una biblioteca de contenido en la lista de elementos permitidos en aplicaciones que se firmaron con un certificado de firma concreto, dicho certificado caduca y se le emite un nuevo certificado (con un par de claves público/privado diferente), el contenido antiguo no se reproducirá en la nueva aplicación *a menos* que realice una de las siguientes acciones:
 
@@ -27,4 +30,4 @@ Consulte `policy.allowedAIRApplication.n` en Propiedades ** de configuración pa
 
 >[!NOTE]
 >
->La lista blanca de aplicaciones de iOS requiere un enfoque especial. Consulte [Lista blanca de la aplicación](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-whitelist-your-ios-application.md) iOS en la Guía *del programador de* TVSDK para iOS.
+>Permitir que la lista de una aplicación de iOS requiere un enfoque especial. Consulte [Permitir la lista de aplicaciones](../../../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md) de iOS en la Guía *del programador de* TVSDK para iOS.
