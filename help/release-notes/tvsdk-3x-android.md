@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: d1881d1fe97d416ee0f69f62828aef46c5ad21bb
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
 workflow-type: tm+mt
-source-wordcount: '5415'
+source-wordcount: '5417'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Se ha actualizado `targetSdkVersion` de 19 a 27 para un buen funcionamiento.
 
 * **Activación del audio de fondo**
 
-   Para activar la reproducción de audio cuando la aplicación pasa del primer plano al segundo plano, la aplicación debe llamar a la `enableAudioPlaybackInBackground` API de MediaPlayer con true como argumento cuando el reproductor está en estado PREPARADO.
+   Para activar la reproducción de audio cuando la aplicación pasa de primer plano a segundo plano, la aplicación debe llamar a la `enableAudioPlaybackInBackground` API de MediaPlayer con true como argumento cuando el reproductor está en estado PREPARADO.
 
 * **alwaysUseAudioOutputLatency(valor booleano) en la clase MediaPlayer**
 
@@ -296,7 +296,7 @@ Cuando TVSDK abre una conexión, solicita al servidor una conexión *permanente*
 * **Compatibilidad con flujos de trabajo**
 
    * **Integración de facturación directa:** envía métricas de facturación al servidor de Adobe Analytics, certificado por Adobe Primetime para flujos utilizados por el cliente.
-   TVSDK recopila automáticamente métricas, de acuerdo con el contrato de venta del cliente, para generar informes de uso periódicos requeridos para fines de facturación. En todos los eventos de inicio de flujo, TVSDK utiliza la API de inserción de datos de Adobe Analytics para enviar métricas de facturación como, por ejemplo, el tipo de contenido, los indicadores habilitados para la inserción de anuncios y los indicadores habilitados para drm (según la duración del flujo facturable) al grupo de informes propiedad de Adobe Analytics Primetime. Esto no interfiere con los grupos de informes de Adobe Analytics ni con las llamadas al servidor del cliente ni se incluye en ellos. Si se solicita, este informe de uso de facturación se envía a los clientes de forma periódica. Esta es la primera fase de la función de facturación que admite únicamente la facturación de uso. Se puede configurar en función del contrato de venta mediante las API descritas en la documentación. Esta función está habilitada de forma predeterminada. Para desactivar esta función, consulte la muestra del reproductor de referencia.
+   TVSDK recopila automáticamente métricas, de acuerdo con el contrato de venta del cliente, para generar informes de uso periódicos requeridos para fines de facturación. En todos los eventos de inicio de flujo, TVSDK utiliza la API de inserción de datos de Adobe Analytics para enviar métricas de facturación como, por ejemplo, el tipo de contenido, los indicadores habilitados para la inserción de anuncios y los indicadores habilitados para drm (según la duración del flujo facturable) al grupo de informes propiedad de Adobe Analytics Primetime. Esto no interfiere con los grupos de informes o las llamadas al servidor de Adobe Analytics del cliente ni se incluye en ellos. Si se solicita, este informe de uso de facturación se envía a los clientes de forma periódica. Esta es la primera fase de la función de facturación que admite únicamente la facturación de uso. Se puede configurar en función del contrato de venta mediante las API descritas en la documentación. Esta función está habilitada de forma predeterminada. Para desactivar esta función, consulte la muestra del reproductor de referencia.
 
    * **Compatibilidad con failover mejorada: se han implementado estrategias adicionales para continuar la reproducción ininterrumpida, a pesar de los fallos de los servidores host, los archivos de listas de reproducción y los segmentos.**
 
@@ -357,7 +357,7 @@ En las tablas de funciones siguientes, una &#39;Y&#39; indica que la función es
 | Failover avanzado | VOD + Activo | Y |
 | Notificaciones de QoS y reproductor | VOD + Activo | Y |
 | Compatibilidad con encabezados de cookie | VOD + Activo | Y |
-| Compatibilidad con encabezados HTTP personalizados | VOD + Activo | Y (se requiere una lista blanca) |
+| Compatibilidad con encabezados HTTP personalizados | VOD + Activo | Y (se requiere que permita el listado) |
 | Establecer parámetros de control de búfer | VOD + Activo | Y |
 | Establecer controles de velocidad de bits adaptables | VOD + Activo | Y |
 | Etiquetas de manifiesto personalizadas | VOD + Activo | Y |
@@ -414,7 +414,7 @@ En las tablas de funciones siguientes, una &#39;Y&#39; indica que la función es
 
 | Función | Tipo de contenido | HLS |
 |---|---|---|
-| Integración VHL de Adobe Analytics | VOD + Activo | Y |
+| Integración con Adobe Analytics VHL | VOD + Activo | Y |
 | Facturación | VOD + Activo | Y |
 
 ## Problemas resueltos {#resolved-issues}
@@ -468,7 +468,7 @@ En esta sección se ofrece un resumen del problema resuelto en la versión de An
    * Se corrigió un caso específico en torno a los eventos de seguimiento de publicidad.
 * ZD#37491 - El código de estado HTTP con error meta no está presente.
    * Se trabajó en la propagación de errores de red más altos en la pila.
-* ZD#37808 - Lista blanca de nuevo encabezado personalizado.
+* ZD#37808 - Permitir la lista Nuevo encabezado personalizado.
    * Se agregó compatibilidad con SSAI_TAG como parte de esta corrección.
 * ZD#37622 - Errores de sintaxis de pods de publicidad específicos.
    * Se ha corregido un problema por el que la reproducción de flujo se bloqueaba cuando la aplicación de Android del cliente ofrecía anuncios que contenían un % sin codificar
