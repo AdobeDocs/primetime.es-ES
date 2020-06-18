@@ -5,7 +5,10 @@ seo-title: Rótulos
 title: Rótulos
 uuid: 4dedcedc-50e5-4983-bb09-3f316337117e
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+workflow-type: tm+mt
+source-wordcount: '64'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 
 Puede mostrar subtítulos al reproducir contenido de vídeo.
 
-Para gestionar rótulos, debe agregar el detector `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` de eventos:
+Para gestionar rótulos, debe agregar el detector de `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` eventos:
 
 ```js
 ... 
@@ -56,4 +59,3 @@ player:{
  
 }); 
 ```
-
