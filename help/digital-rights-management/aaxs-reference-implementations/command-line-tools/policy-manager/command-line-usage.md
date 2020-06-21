@@ -3,7 +3,10 @@ seo-title: Uso de la línea de comandos
 title: Uso de la línea de comandos
 uuid: e549a98e-b027-4472-8860-6aa1d56d4a8b
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1024'
+ht-degree: 0%
 
 ---
 
@@ -81,7 +84,7 @@ En la tabla siguiente se describen las opciones de la línea de comandos que se 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -authNS </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">El espacio de nombres de autenticación. Si se especifica, el cliente debe autenticarse con un nombre de usuario y una contraseña emitidos por la autoridad especificada. Esta opción no se puede usar con <span class="codeph"> -x </span>. No está permitido para actualizaciones. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">La Área de nombres de autenticación. Si se especifica, el cliente debe autenticarse con un nombre de usuario y una contraseña emitidos por la autoridad especificada. Esta opción no se puede usar con <span class="codeph"> -x </span>. No está permitido para actualizaciones. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -x </span> </td> 
@@ -89,27 +92,27 @@ En la tabla siguiente se describen las opciones de la línea de comandos que se 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -air pubId </span>[: <span class="+ topic/ph pr-d/codeph codeph"> appId </span>[:[ <span class="+ topic/ph pr-d/codeph codeph"> min </span>]:[ <span class="+ topic/ph pr-d/codeph codeph"> max </span>]]] </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Lista blanca de aplicaciones de AIR con permiso para reproducir contenido protegido. Utilice esta opción para restringir qué editores, aplicaciones y versiones pueden acceder al contenido protegido con esta política. </p> <p class="- topic/p ">Si no se especifica <i class="+ topic/ph hi-d/i ">appId</i> , se permiten todas las aplicaciones para publisher <i class="+ topic/ph hi-d/i ">pubId</i> . </p> <p class="- topic/p "><i class="+ topic/ph hi-d/i ">los números de versión mínima</i> y <i class="+ topic/ph hi-d/i ">máxima</i> son opcionales. </p> <p class="- topic/p ">Se pueden especificar varias opciones <span class="codeph"> -air </span> para permitir varias aplicaciones. Si no se especifica ninguna aplicación AIR o SWF, todas las aplicaciones pueden acceder a este contenido. Durante una actualización, utilice -air sin los argumentos restantes para eliminar todas las entradas de la lista. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Lista permitida de aplicaciones de AIR que permiten reproducir contenido protegido. Utilice esta opción para restringir qué editores, aplicaciones y versiones pueden acceder al contenido protegido con esta política. </p> <p class="- topic/p ">Si no se especifica <i class="+ topic/ph hi-d/i ">appId</i> , se permiten todas las aplicaciones para publisher <i class="+ topic/ph hi-d/i ">pubId</i> . </p> <p class="- topic/p "><i class="+ topic/ph hi-d/i ">los números de versión mínima</i> y <i class="+ topic/ph hi-d/i ">máxima</i> son opcionales. </p> <p class="- topic/p ">Se pueden especificar varias opciones <span class="codeph"> -air </span> para permitir varias aplicaciones. Si no se especifica ninguna aplicación AIR o SWF, todas las aplicaciones pueden acceder a este contenido. Durante una actualización, utilice -air sin los argumentos restantes para eliminar todas las entradas de la lista. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmBlacklist nombre </span><i class="+ topic/ph hi-d/i ">/</i> pares de valor <span class="+ topic/ph pr-d/codeph codeph"></span> <i class="+ topic/ph hi-d/i "></i> <span class="+ topic/ph pr-d/codeph codeph"></span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Los clientes de DRM restringieron el acceso al contenido protegido. El valor consta de pares nombre:valor separados por comas con el siguiente formato: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> o| release= stringValue </span> </p> <p class="- topic/p ">Por ejemplo, <span class="codeph"> os=Win,release=2.0.1 </span>. Durante una actualización, utilice <span class="codeph"> -drmBlacklist </span> sin los argumentos restantes para eliminar todas las entradas de la lista. </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmBlacklist nombre </span><i class="+ topic/ph hi-d/i ">/</i> pares de valor <span class="+ topic/ph pr-d/codeph codeph"></span> <i class="+ topic/ph hi-d/i "></i> <span class="+ topic/ph pr-d/codeph codeph"> </span> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Los clientes de DRM restringieron el acceso al contenido protegido. El valor consta de pares nombre:valor separados por comas con el siguiente formato: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | release= stringValue </span> </p> <p class="- topic/p ">Por ejemplo, <span class="codeph"> os=Win,release=2.0.1 </span>. Durante una actualización, utilice <span class="codeph"> -drmBlacklist </span> sin los argumentos restantes para eliminar todas las entradas de la lista. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -drmLevel int </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indica que los clientes de DRM deben tener el nivel de seguridad mínimo especificado para acceder al contenido protegido. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -opAnalog NO_PROTECTION| USE_IF_AVAILABLE| NECESARIO| NO_PLAYBACK| ACP_REQUIRED| CGMS-A_REQUIRED| USE_ACP_IF_AVAILABLE| USE_CGMS-A_IF_AVAILABLE </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -opAnalog NO_PROTECTION | USE_IF_AVAILABLE | NECESARIO | NO_PLAYBACK | ACP_REQUIRED | CGMS-A_REQUIRED | USE_ACP_IF_AVAILABLE | USE_CGMS-A_IF_AVAILABLE </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Restricciones de protección de salida analógica. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -opDigital NO_PROTECTION| USE_IF_AVAILABLE| NECESARIO| NO_PLAYBACK </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -opDigital NO_PROTECTION | USE_IF_AVAILABLE | NECESARIO | NO_PLAYBACK </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Restricciones de protección de salida digital. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -RuntimeBlacklist nombre </span><i class="+ topic/ph hi-d/i ">/</i> pares de valor <span class="+ topic/ph pr-d/codeph codeph"></span> <i class="+ topic/ph hi-d/i "></i> <span class="+ topic/ph pr-d/codeph codeph"></span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Los tiempos de ejecución de la aplicación restringieron el acceso al contenido protegido. El valor consta de pares nombre:valor separados por comas con el siguiente formato: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> o| aplicación| release= stringValue </span> </p> <p class="- topic/p ">Por ejemplo, <span class="codeph"> os=Win,release=2.0.1,application=AIR </span>. Durante una actualización, utilice <span class="codeph"> -RuntimeBlacklist </span> sin los argumentos restantes para eliminar todas las entradas de la lista. </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -RuntimeBlacklist nombre </span><i class="+ topic/ph hi-d/i ">/</i> pares de valor <span class="+ topic/ph pr-d/codeph codeph"></span> <i class="+ topic/ph hi-d/i "></i> <span class="+ topic/ph pr-d/codeph codeph"> </span> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Los tiempos de ejecución de la aplicación restringieron el acceso al contenido protegido. El valor consta de pares nombre:valor separados por comas con el siguiente formato: </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> os | aplicación | release= stringValue </span> </p> <p class="- topic/p ">Por ejemplo, <span class="codeph"> os=Win,release=2.0.1,application=AIR </span>. Durante una actualización, utilice <span class="codeph"> -RuntimeBlacklist </span> sin los argumentos restantes para eliminar todas las entradas de la lista. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -RuntimeLevel int </span> </td> 
@@ -117,7 +120,7 @@ En la tabla siguiente se describen las opciones de la línea de comandos que se 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf url </span> </p> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -swf file= archivo_swf </span>, tiempo= <span class="+ topic/ph pr-d/codeph codeph"> max_time_to_verify </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Lista blanca de aplicaciones SWF con permiso para reproducir contenido protegido. Se pueden especificar varias opciones -swf para permitir varias aplicaciones. Si no se especifica ninguna aplicación AIR o SWF, todas las aplicaciones pueden acceder a este contenido. Durante una actualización, utilice -swf sin los argumentos restantes para eliminar todas las entradas de la lista. Para identificar un SWF por su valor hash, especifique el archivo SWF para el que desea calcular el hash y el tiempo máximo para permitir que se complete la verificación SWF (en segundos). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Lista de aplicaciones SWF permitidas para reproducir contenido protegido. Se pueden especificar varias opciones -swf para permitir varias aplicaciones. Si no se especifica ninguna aplicación AIR o SWF, todas las aplicaciones pueden acceder a este contenido. Durante una actualización, utilice -swf sin los argumentos restantes para eliminar todas las entradas de la lista. Para identificar un SWF por su valor hash, especifique el archivo SWF para el que desea calcular el hash y el tiempo máximo para permitir que se complete la verificación SWF (en segundos). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -k name= valor </span> </td> 
@@ -125,7 +128,7 @@ En la tabla siguiente se describen las opciones de la línea de comandos que se 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -p name= valor </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Agrega una propiedad personalizada que aparecerá en la licencia generada para cada cliente. Se pueden especificar varias opciones <span class="codeph"> -p </span> para agregar varias propiedades. Durante una actualización, utilice <span class="codeph"> -p </span> sin los argumentos restantes para quitar todas las propiedades. La interpretación o el tratamiento de estos datos depende completamente de la implementación de la aplicación cliente. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Añade una propiedad personalizada que aparecerá en la licencia generada para cada cliente. Se pueden especificar varias opciones <span class="codeph"> -p </span> para agregar varias propiedades. Durante una actualización, utilice <span class="codeph"> -p </span> sin los argumentos restantes para quitar todas las propiedades. La interpretación o el tratamiento de estos datos depende completamente de la implementación de la aplicación cliente. </p> </td> 
   </tr> 
  </tbody> 
 </table>
