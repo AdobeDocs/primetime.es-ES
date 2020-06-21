@@ -8,9 +8,9 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
-source-wordcount: '5417'
+source-wordcount: '5418'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ Se ha actualizado `targetSdkVersion` de 19 a 27 para un buen funcionamiento.
 
 * **Activación del audio de fondo**
 
-   Para activar la reproducción de audio cuando la aplicación pasa de primer plano a segundo plano, la aplicación debe llamar a la `enableAudioPlaybackInBackground` API de MediaPlayer con true como argumento cuando el reproductor está en estado PREPARADO.
+   Para activar la reproducción de audio cuando la aplicación pasa del primer plano al segundo plano, la aplicación debe llamar a la `enableAudioPlaybackInBackground` API de MediaPlayer con true como argumento cuando el reproductor está en estado PREPARADO.
 
 * **alwaysUseAudioOutputLatency(valor booleano) en la clase MediaPlayer**
 
@@ -435,7 +435,7 @@ En esta sección se ofrece un resumen del problema resuelto en la versión de An
 
 **Android TVSDK 3.10**
 
-* ZD#40340 - La aplicación se bloquea con el error &quot;App Not Responding&quot; al intentar reproducir después de poner en la lista negra todos los archivos TS (TypeScript).
+* ZD#40340 - La aplicación se bloquea con el error &quot;App Not Responding&quot; al intentar la reproducción después de que el bloque enumera todos los archivos TS (TypeScript).
 
 **Android TVSDK 3.8**
 
