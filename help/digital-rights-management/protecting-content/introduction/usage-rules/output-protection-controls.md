@@ -3,7 +3,10 @@ seo-title: Controles de protección de salida
 title: Controles de protección de salida
 uuid: a0518392-cd33-4ef0-834c-f90145a9b421
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '655'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ El parámetro de protección de salida controla si la salida a dispositivos de p
 
 Controla si se debe restringir la salida a dispositivos de procesamiento externos. Un dispositivo externo se define como cualquier dispositivo de audio o vídeo que no esté incrustado en el equipo. Las pantallas integradas, como en los equipos portátiles, no se consideran externas en el escenario de controles de protección de salida.
 
-Los tipos de conexión a través del aire (OTA) están bloqueados de forma predeterminada, pero se pueden incluir explícitamente en la lista blanca si es necesario. Las conexiones OTA admitidas incluyen: Miracast, AirPlay, DLNA y WIDI.
+Todos los tipos de conexión a través del aire (OTA) están enumerados de forma predeterminada, pero se pueden permitir de forma explícita si es necesario. Las conexiones OTA admitidas incluyen: Miracast, AirPlay, DLNA y WIDI.
 
 **Protección de salida basada en resolución: (Disponible a partir de la versión 5.3.) ** Esto proporciona protección de salida basada en el recuento vertical de píxeles del contenido, lo que permite especificar una serie de requisitos de protección en función de los recuentos verticales de píxeles.
 
