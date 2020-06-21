@@ -2,9 +2,9 @@
 title: Notas de la versión de PTAI 20.6.1
 description: Las notas de la versión de PTAI 20.6.1 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2020.
 translation-type: tm+mt
-source-git-commit: 5dd5015c01565964b53ef82659308190ee350a89
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Póngase en contacto con el servicio de asistencia técnica de Adobe para habili
 
 **Cuando:** Miércoles 15 de enero de 2020 de las 4:00 a las 5:00 AM Hora del Este
 
-* El servicio de reempaquetado creativo ahora ofrece una inserción de anuncios más rápida al poner en la lista negra automáticamente los elementos creativos malformados.
+* El servicio de reempaquetado creativo ahora ofrece una inserción de anuncios más rápida mediante el bloqueo automático de los elementos creativos malformados.
 
 * Se Añadió la compatibilidad de la fase 1 con el nuevo formato de señal SCTE 35 en la inserción de anuncios en el servidor.
 
