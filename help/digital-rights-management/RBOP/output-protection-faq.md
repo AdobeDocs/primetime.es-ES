@@ -5,7 +5,10 @@ seo-title: Preguntas más frecuentes sobre RBOP
 title: Preguntas más frecuentes sobre RBOP
 uuid: 7dcd337c-369a-474c-8768-409c48b5cee5
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '347'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ Preguntas más frecuentes sobre el uso de la protección de salida basada en res
    }
    ```
 
-* **P.** ¿ *Las restricciones de píxeles de RBOP son discretas o están basadas en el rango?* **A.** Las restricciones de píxeles de RBOP se clasifican según el rango. Cada recuento de píxeles define los requisitos para todos los recuentos de píxeles inferiores o iguales al recuento dado o hasta el recuento más grande menor que ese valor si existe más de una restricción de píxeles. En pocas palabras, los valores se aplican como umbrales máximos para cada recuento vertical de píxeles.
+* **P.** *¿Las restricciones de píxeles de RBOP son discretas o están basadas en el rango?* **A.** Las restricciones de píxeles de RBOP se clasifican según el rango. Cada recuento de píxeles define los requisitos para todos los recuentos de píxeles inferiores o iguales al recuento dado o hasta el recuento más grande menor que ese valor si existe más de una restricción de píxeles. En pocas palabras, los valores se aplican como umbrales máximos para cada recuento vertical de píxeles.
 
    Supongamos que se pasa a su reproductor un flujo MBR con resoluciones verticales de 240, 480, 600, 720 y 1080 con la siguiente configuración de RBOP.
 
@@ -44,12 +47,12 @@ Preguntas más frecuentes sobre el uso de la protección de salida basada en res
 
    * 240, 480: Ambos son &lt;= 480; no se requerirá OP y los flujos se cargarán con o sin HDCP presente.
    * 600, 720: Ambos son &lt;= 720; Se requiere HDCP para la reproducción
-   * 1080: > 720; la secuencia está bloqueada (error devuelto) ya que no se encuentra en las reglas anteriores.
+   * 1080: > 720; el flujo aparece en la lista de bloques (error devuelto), ya que no se encuentra en las reglas anteriores.
 
 
 * **P.** En algunos de mis dispositivos Android, las restricciones de recuento de píxeles que he definido no se aplican exactamente como se define. ¿Qué está pasando?
 
-   **A.** Algunos dispositivos Android informan de tamaños de fotogramas ligeramente superiores al tamaño normal. Para remediar esta situación, ajuste los tamaños de los marcos ( `maxPixel` y `pixelCount` los ajustes) hacia arriba en 20 píxeles. Por ejemplo, ajuste la configuración del tamaño del fotograma hacia arriba, desde:
+   **A.** Algunos dispositivos Android tienen un tamaño de fotograma de sistema de informes ligeramente superior al tamaño normal. Para remediar esta situación, ajuste los tamaños de los marcos ( `maxPixel` y `pixelCount` los ajustes) hacia arriba en 20 píxeles. Por ejemplo, ajuste la configuración del tamaño del fotograma hacia arriba, desde:
 
    ```
    { 
