@@ -3,7 +3,10 @@ seo-title: Implementación del servidor de claves DRM Primetime información gen
 title: Implementación del servidor de claves DRM Primetime información general
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 105dedcfe47a5f454a067e66a95827e638290742
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1077'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Antes de implementar Primetime DRM Key Server, asegúrese de haber instalado las
 
 La descarga de Primetime DRM Key Server incluye [!DNL faxsks.war]. Para implementar este archivo WAR, copie el archivo en el directorio de Tomcat [!DNL webapps] . Si ya ha implementado el archivo WAR, es posible que tenga que borrar manualmente el directorio WAR desempacado, [!DNL faxsks] en el [!DNL webapps] directorio de Tomcat). Para evitar que Tomcat descomprima archivos WAR, edite el [!DNL server.xml] archivo en el directorio [!DNL conf] de Tomcat y defina el `unpackWARs` atributo en `false`.
 
-El servidor de claves Primetime DRM utiliza opcionalmente una biblioteca específica de la plataforma (`jsafe.dll` en Windows o `libjsafe.so` en Linux) para mejorar el rendimiento. Copie la biblioteca adecuada para su plataforma de `thirdparty/cryptoj/platform` a una ubicación especificada por la variable de `PATH` entorno (o `LD_LIBRARY_PATH` en Linux).
+El servidor de claves Primetime DRM utiliza opcionalmente una biblioteca específica de la plataforma (`jsafe.dll` en Windows o `libjsafe.so` en Linux) para mejorar el rendimiento. Copie la biblioteca adecuada para su plataforma de `thirdparty/cryptoj/platform` a una ubicación especificada por la variable `PATH` entorno (o `LD_LIBRARY_PATH` en Linux).
 
 >[!NOTE]
 >
@@ -22,7 +25,7 @@ El servidor de claves Primetime DRM utiliza opcionalmente una biblioteca especí
 
 ## Configuración SSL {#ssl-configuration}
 
-Se requiere SSL para la entrega de claves HTTPS remotas. Las conexiones SSL podrían ser manejadas por el servidor de aplicaciones (es decir, configurando SSL en Tomcat) o pueden ser manejadas por otro servidor (es decir, un equilibrador de carga, un acelerador SSL o Apache). La entrega remota de claves HTTPS requiere una conexión SSL. El servidor necesita un certificado SSL emitido por una CA de confianza.
+Se requiere SSL para el envío de claves HTTPS remotas. Las conexiones SSL podrían ser manejadas por el servidor de aplicaciones (es decir, configurando SSL en Tomcat) o pueden ser manejadas por otro servidor (es decir, un equilibrador de carga, un acelerador SSL o Apache). El envío de clave HTTPS remota requiere una conexión SSL. El servidor necesita un certificado SSL emitido por una CA de confianza.
 
 Existen diversas opciones para configurar SSL. A continuación se muestran ejemplos para configurar SSL con autenticación de cliente en Apache y Tomcat.
 
@@ -74,7 +77,7 @@ Tiene la opción de establecer las dos siguientes propiedades del sistema Java p
 
 * `XboxKeyServer.LogRoot` - Este es un directorio de registro que contiene los registros de la aplicación Xbox Key Server. Si no se establece, el valor predeterminado es el mismo que `KeyServer.ConfigRoot`.
 
-Si utiliza [!DNL catalina.bat] o [!DNL catalina.sh] para iniciar Tomcat, estas propiedades del sistema se pueden establecer fácilmente con la variable `JAVA_OPTS` environment. Cualquier opción de Java configurada aquí se utilizará cuando se inicie Tomcat. Por ejemplo, set:
+Si utiliza [!DNL catalina.bat] o [!DNL catalina.sh] para inicio Tomcat, estas propiedades del sistema se pueden establecer fácilmente mediante la variable `JAVA_OPTS` entorno. Cualquier opción de Java configurada aquí se utilizará cuando se inicie Tomcat. Por ejemplo, set:
 
 ```
 JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder” 
@@ -147,13 +150,13 @@ Todos los archivos de configuración de inquilinos incluyen:
 
 El archivo de configuración del inquilino de **iOS** incluye:
 
-* Ventana de entrega de claves: (opcional) especifica la ventana de validez de la marca de hora de la solicitud de entrega de claves (en segundos). El valor predeterminado es 500 segundos.
+* Ventana Envío de clave: (opcional) especifica la ventana de validez de la marca de tiempo de solicitud de envío clave (en segundos). El valor predeterminado es 500 segundos.
 
 El archivo de configuración del inquilino de **Xbox 360** incluye:
 
 * Credencial XSTS: especifica la credencial del desarrollador de la aplicación utilizada para descifrar tokens XSTS
 * Certificado de firma XSTS: especifica el certificado utilizado para verificar la firma en los tokens XSTS.
-* Lista blanca de Packager: certificados de Packager en los que el servidor de claves confía. Si no hay certificados de empaquetador en la lista, todos los certificados de empaquetador serán de confianza.
+* Lista de permitidos de Packager: certificados de Packager en los que el servidor de claves confía. Si no hay certificados de empaquetador contenidos en la lista, todos los certificados de empaquetador serán de confianza.
 
 ## Archivos de registro {#log-files}
 
@@ -166,4 +169,4 @@ Los archivos de registro se distinguen por tipo de cliente. Hay dos registros po
 
 ## Inicio del servidor de claves {#starting-the-key-server}
 
-Para iniciar Key Server, inicie Tomcat.
+Para inicio del servidor de claves, inicio Tomcat.
