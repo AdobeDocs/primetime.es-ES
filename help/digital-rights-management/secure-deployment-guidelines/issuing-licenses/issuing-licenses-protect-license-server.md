@@ -5,7 +5,10 @@ seo-title: Protección del servidor de licencias
 title: Protección del servidor de licencias
 uuid: 7b5de17d-d0a7-41df-9651-4ff51c9965c6
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1199'
+ht-degree: 0%
 
 ---
 
@@ -16,9 +19,9 @@ Debe asegurarse de que está emitiendo licencias de forma segura. Tenga en cuent
 
 ## Consumo de CRL generadas localmente {#consuming-locally-generated-crls}
 
-Para consumir listas de revocación de certificados (CRL) generadas localmente y listas de actualización de políticas, utilice las API de DRM de Adobe Primetime para verificar la firma.
+Para consumir listas de revocación de certificados (CRL) generadas localmente y listas de actualización de políticas, utilice las API de DRM de Adobe Primetime para comprobar la firma.
 
-Las siguientes API comprueban que las listas no se han manipulado y que las listas están firmadas por el servidor de licencias correcto:
+Las siguientes API comprueban que las listas no se han manipulado y que el servidor de licencias correcto ha firmado las listas:
 
 * Llame a [RevocationList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html#verifySignature(java.security.cert.X509Certificate)) para comprobar la firma antes de proporcionar [RevocationList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html) a cualquier API.
 
@@ -44,7 +47,7 @@ Para generar CRL, consulte [RevocationListFactory](https://help.adobe.com/en_US/
 
 ## Detección de retroceso {#rollback-detection}
 
-Si la implementación de Adobe Primetime DRM utiliza reglas comerciales que requieren que el cliente mantenga el estado (por ejemplo, el intervalo de la ventana de reproducción), Adobe recomienda que el servidor rastree el contador de rollback y utilice la lista blanca de AIR o SWF.
+Si la implementación de Adobe Primetime DRM utiliza reglas comerciales que requieren que el cliente mantenga el estado (por ejemplo, el intervalo de la ventana de reproducción), Adobe recomienda que el servidor realice un seguimiento del contador de reversión y utilice la lista de permitidas de AIR o SWF.
 
 El contador de reversión se envía al servidor en la mayoría de las solicitudes del cliente. Si la implementación de DRM de Primetime no requiere el contador de reversión, se puede ignorar. De lo contrario, Adobe recomienda que el servidor almacene el ID de equipo aleatorio, que se obtiene mediante [MachineToken.getUniqueId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId()), y el valor de contador actual en una base de datos.
 
@@ -72,11 +75,11 @@ Un ataque DoS es un intento de los atacantes de evitar que los usuarios legítim
 
 Para obtener más información sobre la protección contra la reproducción, consulte [ AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId()).
 
-## Mantener una lista blanca de empaquetadores de contenido de confianza{#maintain-a-whitelist-of-trusted-content-packagers}
+## Mantener una lista de permitidas de los empaquetadores de contenido de confianza{#maintain-a-allowlist-of-trusted-content-packagers}
 
-Una lista blanca es una lista de entidades de confianza.
+Una lista de permitidos es una lista de entidades de confianza.
 
-Para los empaquetadores de contenido, las entidades son organizaciones en las que el propietario del contenido confía para empaquetar (o cifrar) los archivos de vídeo y crear contenido protegido con DRM. Al implementar Adobe Primetime DRM, debe mantener una lista blanca de empaquetadores de contenido de confianza. También debe comprobar la identidad del empaquetador de contenido en los metadatos DRM de un archivo protegido con DRM antes de emitir una licencia.
+Para los empaquetadores de contenido, las entidades son organizaciones en las que el propietario del contenido confía para empaquetar (o cifrar) los archivos de vídeo y crear contenido protegido con DRM. Al implementar Adobe Primetime DRM, debe mantener una lista de permitidas de los empaquetadores de contenido de confianza. También debe comprobar la identidad del empaquetador de contenido en los metadatos DRM de un archivo protegido con DRM antes de emitir una licencia.
 
 Para obtener información sobre la entidad que empaquetó el contenido, consulte [V2ContentMetaData.getPackagerInfo()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/media/drm/keys/v2/V2ContentMetaData.html#getPackagerInfo()).
 
@@ -92,4 +95,4 @@ Para obtener más información sobre las solicitudes de autenticación, consulte
 
 Al emitir una licencia, el servidor de licencias puede anular las reglas de uso especificadas en la directiva.
 
-Si la política especifica una fecha de inicio, no se genera una licencia antes de esa fecha de inicio. Sin embargo, puede establecer una fecha de inicio futura en la licencia una vez generada la licencia. Esta opción debe utilizarse con precaución, ya que el cliente no puede evitar que el usuario mueva el tiempo del sistema hacia adelante para evitar la fecha de inicio.
+Si la política especifica una fecha de inicio, no se genera una licencia antes de esa fecha de inicio. Sin embargo, puede establecer una fecha de inicio futura en la licencia después de generarla. Esta opción debe utilizarse con precaución, ya que el cliente no puede evitar que el usuario mueva el tiempo del sistema hacia adelante para eludir la fecha de inicio.
