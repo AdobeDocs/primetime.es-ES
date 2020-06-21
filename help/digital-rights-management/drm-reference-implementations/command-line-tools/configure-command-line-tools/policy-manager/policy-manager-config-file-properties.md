@@ -6,18 +6,21 @@ seo-title: Propiedades de configuración
 title: Propiedades de configuración
 uuid: 216921d1-a9c1-4650-9dce-c025836986e5
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1216'
+ht-degree: 0%
 
 ---
 
 
-# Propiedades de configuración{#configuration-properties}
+# Propiedades de configuración {#configuration-properties}
 
 <!--<a id="section_20A96CDCC5C340DEAF455C6E300E5712"></a>-->
 
 >[!NOTE]
 >
->Para los nombres de propiedad que incluyen `.n`, el `n` representa un entero que comienza por 1 y aumenta para cada instancia de la propiedad. Por ejemplo: `policy.license.customProp.n`.
+>Para los nombres de propiedad que incluyen `.n`, el `n` representa un entero que inicio con 1 y aumenta para cada instancia de la propiedad. Por ejemplo: `policy.license.customProp.n`.
 
 <table class="+ topic/table " id="table_p3x_54y_n4"> 
  <thead class="- topic/thead "> 
@@ -35,7 +38,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.requireKeyServer</span> <p class="- topic/p "><span class="codeph"> -keyServer</span> <i class="+ topic/ph hi-d/i ">booleano</i> </p> </td> 
    <td colname="2" class="- topic/entry ">Se aplican las siguientes condiciones: 
     <ul id="ul_AF4EBD6C19DC4DFAAB4756EF24BAC57D"> 
-     <li id="li_6CC48ABF78EC426E9FC51458BD946BC9">Si es true, se requiere un servidor de claves HTTPS para la entrega de claves a iOS. </li> 
+     <li id="li_6CC48ABF78EC426E9FC51458BD946BC9">Si es true, se requiere un servidor de claves HTTPS para el envío de claves en iOS. </li> 
      <li id="li_63046A4ED7354C1E9E823B475E4AEFF7">Si no se especifica, el valor predeterminado es false. </li> 
     </ul> </td> 
   </tr> 
@@ -68,8 +71,8 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
    <td colname="2" class="- topic/entry ">Especifica si se permite el registro de dominios anónimos. Establece la propiedad en true o incluye esta opción de línea de comandos para permitir el acceso anónimo. <p>Nota: Esta opción no se puede usar con <span class="codeph"> -domainAuthNS</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.authNamespace</span> <p class="- topic/p "><span class="codeph"> -domainAuthNS</span> , <i class="+ topic/ph hi-d/i ">espacio de nombres</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>El espacio de nombres de autenticación para el registro de dominios. Si se especifica, el cliente debe autenticarse con un nombre de usuario y una contraseña emitidos por la autoridad especificada. </p> <p>Para las actualizaciones, la opción de línea de comandos no está disponible y se omite la propiedad. </p> <p>Nota: Esta opción no se puede usar con <span class="codeph"> -domainAnon</span>. </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.authNamespace</span> <p class="- topic/p "><span class="codeph"> -domainAuthNS</span> , <i class="+ topic/ph hi-d/i ">Área de nombres</i> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>La Área de nombres de autenticación para el registro de dominios. Si se especifica, el cliente debe autenticarse con un nombre de usuario y una contraseña emitidos por la autoridad especificada. </p> <p>Para las actualizaciones, la opción de línea de comandos no está disponible y se omite la propiedad. </p> <p>Nota: Esta opción no se puede usar con <span class="codeph"> -domainAnon</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.outputProtection.analog</span> <p class="- topic/p "><span class="codeph"> -opAnalog</span> <i class="+ topic/ph hi-d/i ">AnalogOption</i> </p> </td> 
@@ -87,11 +90,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -drmBlacklist</span> pares <i class="+ topic/ph hi-d/i ">nombre/valor</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>Los clientes de DRM que tienen restricciones para acceder a contenido protegido. Esta opción especifica una lista de versiones de módulos DRM que no se pueden utilizar (lista negra). </p> <p>El valor consiste en pares <span class="codeph"> name=value</span> separados por comas en el siguiente formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Los pares de nombre y valor adicionales deben separarse con comas. Por ejemplo, <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Los clientes de DRM que tienen restricciones para acceder a contenido protegido. Esta opción especifica una lista de versiones de módulos DRM que no se pueden utilizar (lista de bloqueo). </p> <p>El valor consiste en pares <span class="codeph"> name=value</span> separados por comas en el siguiente formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Los pares de nombre y valor adicionales deben separarse con comas. Por ejemplo, <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.RuntimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -RuntimeBlacklsit</span> <i class="+ topic/ph hi-d/i ">nombre/pares de valor</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p>Los tiempos de ejecución de la aplicación están restringidos para acceder al contenido protegido. Esta opción especifica una lista de versiones de módulos de tiempo de ejecución que no se pueden utilizar (lista negra). </p> <p>El valor consiste en pares <span class="codeph"> name=value</span> separados por comas en el siguiente formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Los pares de nombre y valor adicionales deben separarse con comas. Por ejemplo, <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Los tiempos de ejecución de la aplicación están restringidos para acceder al contenido protegido. Esta opción especifica una lista de versiones de módulos de tiempo de ejecución que no se pueden utilizar (lista de bloqueo). </p> <p>El valor consiste en pares <span class="codeph"> name=value</span> separados por comas en el siguiente formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Los pares de nombre y valor adicionales deben separarse con comas. Por ejemplo, <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapabilities</span> <p class="- topic/p "><span class="codeph"> -devCapabilitiesV1</span> <i class="+ topic/ph hi-d/i ">nombre/pares de valor</i> </p> </td> 
@@ -99,9 +102,9 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.syncFrequency</span> <p class="- topic/p "><span class="codeph"> -sync</span> pares <i class="+ topic/ph hi-d/i ">nombre/valor</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica la frecuencia con la que los clientes deben enviar mensajes de sincronización al servidor. </p> <p>Si no se establece la propiedad, los clientes no enviarán mensajes de sincronización cuando reproduzcan contenido protegido con una directiva DRM. El valor consiste en pares <span class="codeph"> name=value</span> separados por comas en el siguiente formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> start|force=numberValue</span> </p> <p class="- topic/p ">La siguiente lista proporciona información adicional sobre las opciones: 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica la frecuencia con la que los clientes deben enviar mensajes de sincronización al servidor. </p> <p>Si no se establece la propiedad, los clientes no enviarán mensajes de sincronización cuando reproduzcan contenido protegido con una directiva DRM. El valor consiste en pares <span class="codeph"> name=value</span> separados por comas en el siguiente formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> inicio|force=numberValue</span> </p> <p class="- topic/p ">La siguiente lista proporciona información adicional sobre las opciones: 
      <ul id="ul_a5j_q4t_44"> 
-      <li id="li_FD2C0C6DA19E455AA1917A56E09A7F84">(obligatorio) <span class="codeph"> start</span> especifica que el cliente debe empezar a sincronizar con el servidor en los minutos especificados desde la última sincronización. </li> 
+      <li id="li_FD2C0C6DA19E455AA1917A56E09A7F84">(obligatorio) <span class="codeph"> inicio</span> especifica que el cliente necesita sincronizar con el servidor en los minutos especificados desde la última sincronización. </li> 
       <li id="li_9DEBC57385A442C3929AE3D0E3FA8992">(opcional) <span class="codeph"> force</span> es la probabilidad (0-100) con la que el cliente necesita forzar un mensaje de sincronización durante la reproducción. </li> 
      </ul>Durante la actualización, utilice <span class="codeph"> -sync</span> sin los argumentos restantes para eliminar los requisitos de sincronización. </p> </td> 
   </tr> 
@@ -123,7 +126,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.expiration.duration</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Tiempo en minutos en el que el contenido se vuelve no válido. El tiempo comienza cuando se empaqueta contenido. </p> <p>Nota: No puede especificar <span class="codeph"> policy.expiration.endDate</span> y <span class="codeph"> policy.expiration.duration</span> de forma simultánea. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Tiempo en minutos en el que el contenido se vuelve no válido. El inicio de tiempo en el que se empaqueta el contenido. </p> <p>Nota: No puede especificar <span class="codeph"> policy.expiration.endDate</span> y <span class="codeph"> policy.expiration.duration</span> de forma simultánea. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.licenseCaching.duration</span> </td> 
@@ -161,7 +164,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.outputProtection.ota</span> </td> 
-   <td colname="2" class="- topic/entry ">Especifica los tipos de conexión a través del aire (OTA) que se deben incluir en la lista blanca. Los tipos de conexión válidos incluyen: 
+   <td colname="2" class="- topic/entry ">Especifica los tipos de conexión a través del aire (OTA) que deben permitirse en la lista. Los tipos de conexión válidos incluyen: 
     <ul id="ul_iz5_4fp_fs"> 
      <li id="li_FB07519EFEFE4B95B3B1F5BFD4DE6591"><span class="codeph"> MIRACAST</span> </li> 
      <li id="li_51E7DE83679F4630B01264407DAD0E84"><span class="codeph"> AIRPLAY</span> </li> 
@@ -183,11 +186,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowAIRApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Lista blanca de aplicaciones que no son Flash (Adobe AIR, iOS, Android, etc.) que pueden reproducir contenido protegido. La propiedad debe utilizar el siguiente formato: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">máx</span>]]] </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Una lista de aplicaciones que no son Flash (Adobe AIR, iOS, Android, etc.) que pueden reproducir contenido protegido. La propiedad debe utilizar el siguiente formato: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">máx</span>]]] </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowSWFApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Lista blanca de aplicaciones SWF con permiso para reproducir contenido protegido. La propiedad debe utilizar el siguiente formato: </p> <p class="- topic/p "> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Una lista de aplicaciones SWF permitidas para reproducir contenido protegido. La propiedad debe utilizar el siguiente formato: </p> <p class="- topic/p "> 
      <ul id="ul_EC20F52AD95C4BE3B7F703048A43CDF0"> 
       <li id="li_3E4A47D925C24834A2C25BC5943279D4"><span class="+ topic/ph pr-d/codeph codeph">URL</span> </li> 
       <li id="li_9A7CAF081C5F488FB5CDA6D38C5552F6"><span class="+ topic/ph pr-d/codeph codeph">file=swf_file</span> </li> 
