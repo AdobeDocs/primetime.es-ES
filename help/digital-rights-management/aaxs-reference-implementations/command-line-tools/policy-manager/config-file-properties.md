@@ -3,7 +3,10 @@ seo-title: Propiedades del archivo de configuración
 title: Propiedades del archivo de configuración
 uuid: aec5fee7-4d77-4299-8d85-3e9042b2bbd1
 translation-type: tm+mt
-source-git-commit: 99d7eea63b18a97d2b99d0bb7aab5cdc50ae5ffc
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '1121'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ El archivo de configuración especifica las siguientes propiedades. Para los nom
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.requireKeyServer</span> <p class="- topic/p "><span class="codeph"> -keyServer</span> <i class="+ topic/ph hi-d/i ">booleano</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> Si es true, se requiere un servidor de claves HTTPS para la entrega de claves a iOS. Si no se especifica, el valor predeterminado es false. </td> 
+   <td colname="2" class="- topic/entry "> Si es true, se requiere un servidor de claves HTTPS para el envío de claves en iOS. Si no se especifica, el valor predeterminado es false. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.forceJailbreak</span> <p class="- topic/p "><span class="codeph"> -forceJailbreak</span> <i class="+ topic/ph hi-d/i ">booleano</i> </p> </td> 
@@ -53,8 +56,8 @@ El archivo de configuración especifica las siguientes propiedades. Para los nom
    <td colname="2" class="- topic/entry "> Especifica si se permite el registro de dominios anónimos. Establezca la propiedad en true o incluya esta opción de línea de comandos para permitir el acceso anónimo. Esta opción no se puede usar con -domainAuthNS. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.authNamespace</span> <p class="- topic/p "><span class="codeph"> -domainAuthNS</span> , <i class="+ topic/ph hi-d/i ">espacio de nombres</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> El espacio de nombres de autenticación para el registro de dominios. Si se especifica, el cliente debe autenticarse con un nombre de usuario y una contraseña emitidos por la autoridad especificada. Para las actualizaciones, la opción de línea de comandos no está permitida y la propiedad se ignora. Esta opción no se puede usar con -domainAnon. </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph"> policy.domain.authNamespace</span> <p class="- topic/p "><span class="codeph"> -domainAuthNS</span> , <i class="+ topic/ph hi-d/i ">Área de nombres</i> </p> </td> 
+   <td colname="2" class="- topic/entry "> La Área de nombres de autenticación para el registro de dominios. Si se especifica, el cliente debe autenticarse con un nombre de usuario y una contraseña emitidos por la autoridad especificada. Para las actualizaciones, la opción de línea de comandos no está permitida y la propiedad se ignora. Esta opción no se puede usar con -domainAnon. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.outputProtection.analog</span> <p class="- topic/p "><span class="codeph"> -opAnalog</span> <i class="+ topic/ph hi-d/i ">AnalogOption</i> </p> </td> 
@@ -72,11 +75,11 @@ El archivo de configuración especifica las siguientes propiedades. Para los nom
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.drmVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -drmBlacklist</span> pares <i class="+ topic/ph hi-d/i ">nombre/valor</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">Los clientes de DRM no tienen acceso al contenido protegido. Esta opción especifica una lista de versiones de módulos DRM que no se pueden utilizar (lista negra). El valor consiste en pares nombre=valor separados por comas con el siguiente formato: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Los pares de nombre y valor adicionales deben separarse con comas. Por ejemplo: <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
+   <td colname="2" class="- topic/entry ">Los clientes de DRM no tienen acceso al contenido protegido. Esta opción especifica una lista de versiones de módulos DRM que no se pueden utilizar (lista de bloques). El valor consiste en pares nombre=valor separados por comas con el siguiente formato: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Los pares de nombre y valor adicionales deben separarse con comas. Por ejemplo: <span class="codeph"> os=Win,release=2.0,arch=32</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.RuntimeVersionBlacklist.n</span> <p class="- topic/p "><span class="codeph"> -RuntimeBlacklsit</span> <i class="+ topic/ph hi-d/i ">nombre/pares de valor</i> </p> </td> 
-   <td colname="2" class="- topic/entry ">Los tiempos de ejecución de la aplicación están restringidos para acceder a contenido protegido. Esta opción especifica una lista de versiones de módulos de tiempo de ejecución que no se pueden utilizar (lista negra). El valor consiste en pares nombre=valor separados por comas con el siguiente formato: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Los pares de nombre y valor adicionales deben separarse con comas. Por ejemplo, <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
+   <td colname="2" class="- topic/entry ">Los tiempos de ejecución de la aplicación están restringidos para acceder a contenido protegido. Esta opción especifica una lista de versiones de módulos de tiempo de ejecución que no se pueden utilizar (lista de bloques). El valor consiste en pares nombre=valor separados por comas con el siguiente formato: <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> os|release|application|arch|model|vendor|env|screen=value</span> </p> <p class="- topic/p ">Los pares de nombre y valor adicionales deben separarse con comas. Por ejemplo, <span class="codeph"> os=Win,application=AIR</span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.v1DeviceCapabilities</span> <p class="- topic/p "><span class="codeph"> -devCapabilitiesV1</span> <i class="+ topic/ph hi-d/i ">nombre/pares de valor</i> </p> </td> 
@@ -84,9 +87,9 @@ El archivo de configuración especifica las siguientes propiedades. Para los nom
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> policy.syncFrequency</span> <p class="- topic/p "><span class="codeph"> -sync</span> pares <i class="+ topic/ph hi-d/i ">nombre/valor</i> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifique la frecuencia con la que los clientes deben enviar mensajes de sincronización al servidor. Si no se establece, los clientes no enviarán mensajes de sincronización al reproducir contenido protegido con esta política. El valor consiste en pares <span class="codeph"> name=value</span> separados por comas con el siguiente formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> start|force|hardStop=numberValue</span> </p> <p class="- topic/p "> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifique la frecuencia con la que los clientes deben enviar mensajes de sincronización al servidor. Si no se establece, los clientes no enviarán mensajes de sincronización al reproducir contenido protegido con esta política. El valor consiste en pares <span class="codeph"> name=value</span> separados por comas con el siguiente formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph"> inicio|force|hardStop=numberValue</span> </p> <p class="- topic/p "> 
      <ul id="ul_a5j_q4t_44"> 
-      <li id="li_25CAF96C27F34848A95B2E3693847C71"><span class="codeph"> start</span> (requerido): el intervalo de inicio especifica que el cliente debe empezar a sincronizarse con el servidor en estos minutos desde la última sincronización. </li> 
+      <li id="li_25CAF96C27F34848A95B2E3693847C71"><span class="codeph"> inicio</span> (requerido): el intervalo de Inicio especifica que el cliente debe realizar la sincronización de inicio con el servidor en estos minutos desde la última sincronización. </li> 
       <li id="li_CC9068CFE75645029C947C9E1B53351F"><span class="codeph"> force</span> (opcional): la probabilidad de sincronización forzada es la probabilidad (0-100) con la que el cliente debe forzar un mensaje de sincronización durante la reproducción. </li> 
       <li id="li_C31A6250F19348FBB8B7569D00C6314E"><span class="codeph"> hardStop</span> (opcional): el intervalo de parada dura es el tiempo en minutos después del cual el cliente fallará la reproducción si no puede sincronizarse. Si se establece, debe ser bueno que el intervalo de inicio. </li> 
      </ul>Durante la actualización, utilice <span class="codeph"> -sync</span> sin los argumentos restantes para eliminar los requisitos de sincronización. </p> </td> 
@@ -145,11 +148,11 @@ El archivo de configuración especifica las siguientes propiedades. Para los nom
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowAIRApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Lista blanca de aplicaciones de Adobe AIR o iOS con permiso para reproducir contenido protegido. La propiedad debe utilizar el siguiente formato: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">máx</span>]]] </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Una lista de aplicaciones de Adobe AIR o iOS con permiso para reproducir contenido protegido. La propiedad debe utilizar el siguiente formato: <span class="+ topic/ph pr-d/codeph codeph">pubId</span>[:<span class="+ topic/ph pr-d/codeph codeph">appId</span>[:[<span class="+ topic/ph pr-d/codeph codeph">min</span>]:[<span class="+ topic/ph pr-d/codeph codeph">máx</span>]]] </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.allowSWFApplication.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Lista blanca de aplicaciones SWF con permiso para reproducir contenido protegido. Utilice el siguiente formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> o archivo=<span class="+ topic/ph pr-d/codeph codeph">swf_file</span>,time=<i class="+ topic/ph hi-d/i ">max_time_to_verify</i> <i class="+ topic/ph hi-d/i ">swf_file</i> es el archivo SWF para el que se calcula el hash y <i class="+ topic/ph hi-d/i ">max_time_to_verify</i> es el tiempo máximo para permitir que se complete la descarga y verificación del SWF (en segundos). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Una lista de aplicaciones SWF permitidas para reproducir contenido protegido. Utilice el siguiente formato: </p> <p class="- topic/p "><span class="+ topic/ph pr-d/codeph codeph">URL</span> o archivo=<span class="+ topic/ph pr-d/codeph codeph">swf_file</span>,time=<i class="+ topic/ph hi-d/i ">max_time_to_verify</i> <i class="+ topic/ph hi-d/i ">swf_file</i> es el archivo SWF para el que se calcula el hash y <i class="+ topic/ph hi-d/i ">max_time_to_verify</i> es el tiempo máximo para permitir que se complete la descarga y verificación del SWF (en segundos). </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">policy.license.customProp.n</span> </td> 
