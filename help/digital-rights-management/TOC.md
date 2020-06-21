@@ -2,9 +2,12 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Primetime Digital Rights Management Help
+user-guide-title: Ayuda de Primetime Digital Rights Management
 translation-type: tm+mt
-source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '2197'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
    + [Acerca de los certificados](certificate-enrollment-guide/about-certs.md)
    + [Requisitos previos](certificate-enrollment-guide/prerequisites.md)
    + [Acerca de los roles de inscripción de certificados](certificate-enrollment-guide/about-cert-enrollment.md)
-   + [Agregar solicitantes](certificate-enrollment-guide/add-requesters.md)
+   + [Añadir solicitantes](certificate-enrollment-guide/add-requesters.md)
    + [Crear un administrador secundario](certificate-enrollment-guide/add-secondary-admin.md)
    + Solicitar certificados {#request-certs}
       + [Información general](certificate-enrollment-guide/request-certs/request-certs-overview.md)
@@ -49,7 +52,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
    + Escenarios de implementación adicionales {#additional-deployment-scenarios}
       + [Medios UltraViolet y Adobe Primetime DRM](drm-sdk-overview/adobe-access-components/additional-deployment-scenarios/ultra-violet-media-adobe-access.md)
       + [Autenticación Adobe Primetime y Adobe Primetime DRM](drm-sdk-overview/adobe-access-components/additional-deployment-scenarios/adobe-pass-and-adobe-access.md)
-+ Guía de inicio rápido de DRM {#drm-quick-start}
++ Guía de Inicio rápido de DRM {#drm-quick-start}
    + [Introducción](quick-start/getting-started.md)
    + [Instalar Tomcat](quick-start/install-tomcat.md)
    + [Configuración e implementación del servidor para flujo continuo protegido](quick-start/setup-deploy-drm-server-ps.md)
@@ -57,7 +60,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
    + [Instalación de Flash Player y contenido de prueba de reproducción](quick-start/install-fp-playback-test.md)
    + [Reproducción de un vídeo empaquetado localmente](quick-start/playback-locally-pkgd-video.md)
    + [Próximos pasos](quick-start/next-steps.md)
-+ Guía de inicio rápido de Adobe Primetime Cloud DRM {#cloud-drm-quickstart}
++ Guía de Inicio rápido de Adobe Primetime Cloud DRM {#cloud-drm-quickstart}
    + [Qué incluye Primetime Cloud DRM](cloud-quick-start/whats-included.md)
    + [¿Qué NO es compatible con Primetime Cloud DRM?](cloud-quick-start/not-supported.md)
    + [Requisitos previos](cloud-quick-start/prerequisites.md)
@@ -99,9 +102,9 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Protección del servidor de licencias](secure-deployment-guidelines/issuing-licenses/issuing-licenses-protect-license-server.md)
       + [Licencias de pregeneración](secure-deployment-guidelines/issuing-licenses/issuing-licenses-pre-gen.md)
       + [Administración de dominios](secure-deployment-guidelines/issuing-licenses/issuing-licenses-domains.md)
-+ Flujos de trabajo multiDRM {#multi-drm-workflows}
-   + [Flujos de trabajo multiDRM](multi-drm-workflows/title-page/overview.md)
-   + Inicio rápido de Primetime DRM Cloud {#quick-start}
++ Flujos de trabajo de varios DRM {#multi-drm-workflows}
+   + [Flujos de trabajo de varios DRM](multi-drm-workflows/title-page/overview.md)
+   + inicio rápido de Primetime DRM Cloud {#quick-start}
       + [Información general](multi-drm-workflows/quick-start/quick-overview.md)
       + [Obtener aprovisionamiento (cuentas, etc.)](multi-drm-workflows/quick-start/get-provisioned.md)
       + [Teclas, ID y autenticadores](multi-drm-workflows/quick-start/keys-ids-and-authenticators.md)
@@ -109,7 +112,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Configuración de políticas](multi-drm-workflows/quick-start/what-about-policies.md)
       + [Licencias](multi-drm-workflows/quick-start/handle-the-licensing.md)
       + [Reproducción del contenido protegido](multi-drm-workflows/quick-start/playback-protected-content.md)
-      + [Solución de problemas de inicio rápido](multi-drm-workflows/quick-start/troubleshoot-quickstart.md)
+      + [Solución de problemas del inicio rápido](multi-drm-workflows/quick-start/troubleshoot-quickstart.md)
    + Flujos de trabajo: Paquete, licencia y reproducción {#package-license-play}
       + [Flujo de trabajo de varios DRM para FairPlay](multi-drm-workflows/p-l-and-p/fairplay-workflow.md)
       + [Flujo de trabajo de varios DRM para Widevine y PlayReady](multi-drm-workflows/p-l-and-p/widevine-workflow.md)
@@ -186,10 +189,10 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Reglas basadas en el tiempo](protecting-content/introduction/usage-rules/authentication/time-based-rules.md)
       + [Requisitos para la sincronización](protecting-content/introduction/usage-rules/authentication/synchronization.md)
    + Restricciones de tiempo de ejecución y aplicación {#runtime-application-restrictions}
-      + [Lista blanca para aplicaciones DRM Primetime con permiso para reproducir contenido protegido...](protecting-content/introduction/usage-rules/runtime-application-restrictions/whitelist-air.md)
-      + [Lista blanca para archivos SWF de Adobe® Flash® Player](protecting-content/introduction/usage-rules/runtime-application-restrictions/whitelist-flash.md)
-      + [Lista negra de clientes de DRM con acceso restringido al contenido protegido](protecting-content/introduction/usage-rules/runtime-application-restrictions/blacklist-drm-clients.md)
-      + [Lista negra de los tiempos de ejecución de la aplicación](protecting-content/introduction/usage-rules/runtime-application-restrictions/blacklist-app-runtimes.md)
+      + [Allowlist para aplicaciones DRM Primetime permitidas para reproducir contenido protegido...](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
+      + [Lista de permisos para archivos SWF de Adobe® Flash® Player](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
+      + [Bloquear la lista de clientes de DRM que no tienen acceso al contenido protegido](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md)
+      + [Bloquear lista de tiempos de ejecución de aplicaciones](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-app-runtimes.md)
       + [Nivel mínimo de seguridad para DRM y los tiempos de ejecución](protecting-content/introduction/usage-rules/runtime-application-restrictions/min-sec-level-for-drm.md)
       + [Funciones de dispositivo necesarias para reproducir contenido protegido](protecting-content/introduction/usage-rules/runtime-application-restrictions/device-capabilities.md)
       + [Aplicación de Jailbreak (requiere Adobe Primetime DRM)](protecting-content/introduction/usage-rules/runtime-application-restrictions/jailbreak-enforcement.md)
@@ -197,7 +200,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Reglas de uso personalizadas](protecting-content/introduction/usage-rules/other-policy-options/custom-usage-rules.md)
       + [encadenamiento de licencias mejorado](protecting-content/introduction/usage-rules/other-policy-options/enhanced-license-chaining.md)
       + [Derechos de reproducción múltiple](protecting-content/introduction/usage-rules/other-policy-options/multiple-play-rights.md)
-      + [Entrega remota y local de claves de iOS](protecting-content/introduction/usage-rules/other-policy-options/remote-key-delivery.md)
+      + [envío de claves de iOS local y remota](protecting-content/introduction/usage-rules/other-policy-options/remote-key-delivery.md)
    + [Registro del dominio del grupo de dispositivos](protecting-content/introduction/usage-rules/domain-registration.md)
    + [Controles de protección de salida](protecting-content/introduction/usage-rules/output-protection-controls.md)
    + Opciones de paquete {#packaging-options}
@@ -219,7 +222,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Creación de una directiva DRM con la API de Java](protecting-content/working-policies-overview/creating-policy-using-java-api.md)
       + [Actualización de una directiva DRM con la API de Java](protecting-content/working-policies-overview/updating-policy-using-java-api.md)
       + [Crítica de las políticas de DRM](protecting-content/working-policies-overview/policy-criticality.md)
-      + [Uso de listas de actualización de directivas DRM](protecting-content/working-policies-overview/policy-update-lists/working-with-policy-update-lists.md)
+      + [Uso de Listas de actualización de directivas DRM](protecting-content/working-policies-overview/policy-update-lists/working-with-policy-update-lists.md)
    + Empaquetado de archivos multimedia {#packaging-media}
       + [Información general](protecting-content/packaging-media-overview/packaging-media-files.md)
       + [Opciones de paquete](protecting-content/packaging-media-overview/content-packaging-options.md)
@@ -242,9 +245,9 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
          + [Gestión de errores de solicitud de licencia](protecting-content/implementing-the-license-server/handling-license-reqs/license-request-errors.md)
          + [Generación de licencias](protecting-content/implementing-the-license-server/handling-license-reqs/generating-licenses.md)
          + [Emisión de licencias enlazadas a dominios](protecting-content/implementing-the-license-server/handling-license-reqs/domian-bound-licenses.md)
-         + [Emisión de licencias para la entrega de claves remotas a clientes de iOS (requiere Adobe Primetime)](protecting-content/implementing-the-license-server/handling-license-reqs/issuing-licenses-remote-ios.md)
+         + [Emisión de licencias para envíos de claves remotas a clientes de iOS (requiere Adobe Primetime)](protecting-content/implementing-the-license-server/handling-license-reqs/issuing-licenses-remote-ios.md)
          + [Versión mínima del cliente](protecting-content/implementing-the-license-server/handling-license-reqs/minimum-client-version.md)
-         + [Vista previa de licencia](protecting-content/implementing-the-license-server/handling-license-reqs/license-preview.md)
+         + [previsualización de licencia](protecting-content/implementing-the-license-server/handling-license-reqs/license-preview.md)
          + [Licencias basadas en identidad](protecting-content/implementing-the-license-server/handling-license-reqs/identity-based-licenses.md)
          + [Actualización de directivas DRM](protecting-content/implementing-the-license-server/handling-license-reqs/updating-policies.md)
       + encadenamiento de licencias {#license-chaining}
@@ -278,11 +281,11 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Administrador de directivas de DRM](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-overview.md)
       + [Uso de la línea de comandos del Administrador de directivas](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-command-line-usage.md)
       + [Propiedades de configuración](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/policy-manager-config-file-properties.md)
-      + [Lista blanca de aplicaciones que no son SWF](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/non-swf-whitelisting.md)
-      + [Lista blanca de aplicaciones SWF](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/swf-whitelisting.md)
+      + [Listas permitidas para aplicaciones que no son SWF](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/non-swf-allowlisting.md)
+      + [Lista de permitidos de la aplicación SWF](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-manager/swf-allowlisting.md)
    + [DRM Media Packager](drm-reference-implementations/command-line-tools/configure-command-line-tools/media-packager/media-packager-overview.md)
-   + [Administrador de lista de actualización de directivas de DRM](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-update-list-manager/policy-update-list-manager-overview.md)
-   + [Administrador de listas de revocación de DRM](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-revocation-list-manager/policy-revocation-list-manager-overview.md)
+   + [Administrador de Listas de actualización de directivas de DRM](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-update-list-manager/policy-update-list-manager-overview.md)
+   + [Administrador de Listas de revocación de DRM](drm-reference-implementations/command-line-tools/configure-command-line-tools/policy-revocation-list-manager/policy-revocation-list-manager-overview.md)
    + [Generador de licencias DRM](drm-reference-implementations/command-line-tools/configure-command-line-tools/license-generator/license-generator-overview.md)
    + [Incrustación de licencias DRM](drm-reference-implementations/command-line-tools/configure-command-line-tools/license-embedder/license-embedder-overview.md)
    + [Utilidad de ID de AIR Publisher](drm-reference-implementations/command-line-tools/configure-command-line-tools/air-publisher-id-utility/air-publisher-id-utility-overview.md)
@@ -292,7 +295,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Preparación de contraseñas para los archivos de propiedades del servidor](drm-reference-implementations/configuration/config-prep-pws-for-server-props-files.md)
       + [Preparación de contraseñas con Ant](drm-reference-implementations/configuration/config-prep-pws-for-server-with-ant.md)
       + [Preparación de contraseñas mediante Java](drm-reference-implementations/configuration/config-prep-pws-for-server-with-java.md)
-      + [Propiedades de entrega de claves remotas (iOS)](drm-reference-implementations/configuration/remote-key-properties.md)
+      + [Propiedades del envío de clave remota (iOS)](drm-reference-implementations/configuration/remote-key-properties.md)
       + [Configuración de la base de datos del servidor de licencias](drm-reference-implementations/configuration/setting-up-db-jndi.md)
       + [Configurar la base de datos del servidor de licencias](drm-reference-implementations/configuration/configure-db-jndi.md)
       + [Configuración de HSM](drm-reference-implementations/configuration/hsm-config.md)
@@ -324,7 +327,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
    + [Servidor de licencias DRM de Primetime](tvsdk-drm-workflow/license-server.md)
    + [Información general sobre el proceso de adquisición de licencias](tvsdk-drm-workflow/content-protection-process-overview.md)
    + [Detalles del proceso de adquisición de licencias](tvsdk-drm-workflow/content-protection-process-details.md)
-   + [Licencias de precarga para reproducción sin conexión](tvsdk-drm-workflow/preloading-licenses/preloading-licenses.md)
+   + [Licencias de Precarga para reproducción sin conexión](tvsdk-drm-workflow/preloading-licenses/preloading-licenses.md)
    + [Uso de la clase DRMStatusEvent](tvsdk-drm-workflow/using-drmstatusevent/using-drmstatusevent.md)
    + Uso de la clase DRMAuthenticateEvent{#using-drmauthenticateevent}
       + [Creación de un controlador DRMAuthenticateEvent](tvsdk-drm-workflow/using-drmauthenticateevent/create-drmauthnevent-handler.md)
@@ -334,7 +337,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
    + [Uso de la clase DRMContentData](tvsdk-drm-workflow/using-drmcontentdata.md)
    + [Licencias fuera de banda](tvsdk-drm-workflow/about-out-of-band-licenses.md)
    + [Compatibilidad con dominios de dispositivo](tvsdk-drm-workflow/device-domain-support.md)
-   + [Vista previa de licencia](tvsdk-drm-workflow/license-preview.md)
+   + [previsualización de licencia](tvsdk-drm-workflow/license-preview.md)
    + [Distribución de contenido](tvsdk-drm-workflow/delivering-content.md)
 + [Referencia de mensajes de error del cliente DRM](client-error-message-reference.md)
 + Uso de DRM de Adobe Access con un sistema de gestión de claves externas {#external-cek}
@@ -398,7 +401,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Detección de retroceso](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection.md)
       + [Recuento de equipos al emitir licencias](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection-machine-count.md)
       + [Protección contra repetición](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-replay-detection.md)
-      + [Mantener una lista blanca de empaquetadores de contenido de confianza](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-whitelist.md)
+      + [Mantener una lista de permitidas de los empaquetadores de contenido de confianza](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-allowlist.md)
       + [Tiempo de espera para los tokens de autenticación](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-timeout-for-authn-tokens.md)
       + [Anular opciones de directiva](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-override-policy-options.md)
       + [Licencias de pregeneración](aaxs-secure-deployment-guidelines/issuing-licenses/pre-gen-licenses.md)
@@ -421,17 +424,17 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
    + [Autenticación de usuarios](aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md)
    + [Reglas basadas en el tiempo](aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md)
    + Restricciones de tiempo de ejecución y aplicación {#runtime-and-application-restrictions}
-      + [Lista blanca para las aplicaciones Adobe® Primetime con permiso para reproducir contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-whitelist-air.md)
-      + [Lista blanca para archivos SWF de Adobe® Flash® Player con permiso para reproducir contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-whitelist-flash.md)
-      + [Lista negra de clientes de DRM con acceso restringido al contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blacklist-drm-clients.md)
-      + [Lista negra de los tiempos de ejecución de la aplicación restringidos para acceder al contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blacklist-app-runtimes.md)
+      + [Permitir lista para aplicaciones Adobe® Primetime con permiso para reproducir contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)
+      + [Permitir la lista de archivos SWF de Adobe® Flash® Player con permiso para reproducir contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-flash.md)
+      + [Bloquear la lista de clientes de DRM que no tienen acceso al contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-drm-clients.md)
+      + [Bloquear la lista de tiempos de ejecución de aplicaciones restringidos para acceder al contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-app-runtimes.md)
       + [Nivel mínimo de seguridad para DRM y los tiempos de ejecución](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-min-sec-level-for-drm.md)
       + [Funciones de dispositivo necesarias para reproducir contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-device-capabilities.md)
       + [Aplicación de la fuga de la cárcel (requiere Adobe Primetime)](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-jailbreak-enforcement.md)
    + Otras opciones de política {#content-other-policy-options}
       + [encadenamiento de licencias mejorado](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-enhanced-license-chaining.md)
       + [Derechos de reproducción múltiple](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-multiple-play-rights.md)
-      + [Entrega remota y local de claves de iOS](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-remote-key-delivery.md)
+      + [Envío de claves de iOS local y remota](aaxs-protecting-content/content-introduction/content-usage-rules/content-other-policy-options/content-remote-key-delivery.md)
       + [Registro del dominio del grupo de dispositivos](aaxs-protecting-content/content-introduction/content-usage-rules/content-domain-registration.md)
    + [Controles de protección de salida](aaxs-protecting-content/content-introduction/content-usage-rules/output-protection/output-protection-controls.md)
    + Opciones de paquete {#packaging-option}
@@ -453,8 +456,8 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Creación de una directiva mediante la API de Java](aaxs-protecting-content/content-working-with-policies/content-creating-policy-using-java-api.md)
       + [Actualización de una directiva mediante la API de Java](aaxs-protecting-content/content-working-with-policies/content-updating-policy-using-java-api.md)
       + [Criticidad de las políticas](aaxs-protecting-content/content-working-with-policies/content-policy-criticality.md)
-      + [Listas de actualización de directivas](aaxs-protecting-content/content-working-with-policies/protecting-content-policy-update-lists.md)
-      + [Uso de listas de actualización de directivas](aaxs-protecting-content/content-working-with-policies/content-working-with-policy-update-lists.md)
+      + [listas de actualización de directivas](aaxs-protecting-content/content-working-with-policies/protecting-content-policy-update-lists.md)
+      + [Uso de Listas de actualización de directivas](aaxs-protecting-content/content-working-with-policies/content-working-with-policy-update-lists.md)
    + Empaquetado de archivos multimedia {#packaging-media-files}
       + [Empaquetado de archivos multimedia](aaxs-protecting-content/content-packaging-media-files/content-packaging-media-files-overview.md)
       + [Cifrado de contenido](aaxs-protecting-content/content-packaging-media-files/content-encrypting-content.md)
@@ -485,9 +488,9 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [encadenamiento de licencias](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-license-chaining.md)
       + [Encadenamiento de licencias mejorado](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-gen-enhanced-license-chaining.md)
       + [Emisión de licencias enlazadas al dominio](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-domian-bound-licenses.md)
-      + [Emisión de licencias para la entrega de claves remotas a clientes de iOS (requiere Adobe Primetime)](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-issuing-licenses-remote-ios.md)
+      + [Emisión de licencias para envíos de claves remotas a clientes de iOS (requiere Adobe Primetime)](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-issuing-licenses-remote-ios.md)
       + [Versión mínima del cliente](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md)
-      + [Vista previa de licencia](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-license-preview.md)
+      + [previsualización de licencia](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-license-preview.md)
       + Licencias basadas en identidad {#licenses}
          + [Información general sobre las licencias basadas en ID](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-identity-based-licenses.md)
          + [Actualización de directivas](aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-updating-policies.md)
@@ -506,7 +509,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
    + [Creación de reproductores de vídeo](aaxs-protecting-content/content-creating-video-players.md)
 + Implementaciones de referencia de Adobe Access {#reference-implementation}
    + [Información general: Uso de las implementaciones de referencia](aaxs-reference-implementations/overview.md)
-   + [Herramientas de la línea de comandos para empaquetar contenido y crear listas de revocaciones ](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
+   + [Herramientas de la línea de comandos para empaquetar contenido y crear listas de revocación ](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
    + Administrador de directivas {#policy-manager}
       + [Uso del Administrador de directivas](aaxs-reference-implementations/command-line-tools/policy-manager/using-aaxs-policy-manager.md)
       + [Propiedades del archivo de configuración](aaxs-reference-implementations/command-line-tools/policy-manager/config-file-properties.md)
@@ -515,12 +518,12 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + [Uso de Media Packager](aaxs-reference-implementations/command-line-tools/media-packager/using-aaxs-media-packager.md)
       + [Propiedades del archivo de configuración](aaxs-reference-implementations/command-line-tools/media-packager/media-packager-config-file-props.md)
       + [Uso de la línea de comandos](aaxs-reference-implementations/command-line-tools/media-packager/media-packager-command-line-usage.md)
-   + Administrador de listas de actualización de directivas {#policy-update-list-manager}
-      + [Información general sobre el Administrador de listas de actualizaciones de directivas](aaxs-reference-implementations/command-line-tools/policy-update-list-manager/policy-update-list-manager-overview.md)
+   + Administrador de Listas de actualización de directivas {#policy-update-list-manager}
+      + [Visión general del Administrador de Listas de actualización de directivas](aaxs-reference-implementations/command-line-tools/policy-update-list-manager/policy-update-list-manager-overview.md)
       + [Propiedades del archivo de configuración](aaxs-reference-implementations/command-line-tools/policy-update-list-manager/policy-update-config-file-props.md)
       + [Uso de la línea de comandos](aaxs-reference-implementations/command-line-tools/policy-update-list-manager/policy-update-command-line-usage.md)
-   + Administrador de listas de revocación {#policy-revocation-list-manager}
-      + [Información general sobre el Administrador de listas de revocación](aaxs-reference-implementations/command-line-tools/policy-revocation-list-manager/policy-revocation-list-manager-overview.md)
+   + Administrador de Listas de revocación {#policy-revocation-list-manager}
+      + [Información general sobre el Administrador de Listas de revocación](aaxs-reference-implementations/command-line-tools/policy-revocation-list-manager/policy-revocation-list-manager-overview.md)
       + [Propiedades del archivo de configuración](aaxs-reference-implementations/command-line-tools/policy-revocation-list-manager/revocation-config-file-props.md)
       + [Uso de la línea de comandos](aaxs-reference-implementations/command-line-tools/policy-revocation-list-manager/revocation-command-line-usage.md)
    + Utilidad de ID de AIR Publisher {#air-publisher-id-utility}
@@ -572,7 +575,7 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
       + Configuración de preferencias {#setting-preferences}
          + [Descripción general de la configuración de preferencias](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-set-prefs-overview.md)
          + [Preferencias de Packager](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pkg-prefs.md)
-         + [Preferencias de lista de actualización de directivas](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pul-prefs.md)
+         + [Preferencias de Lista de actualización de directivas](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pul-prefs.md)
          + [Preferencias de HSM](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-hsm-prefs.md)
       + Creación de políticas {#policy-creation}
          + [Crear una nueva directiva](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-policy-create-new.md)
@@ -580,6 +583,6 @@ source-git-commit: 5cf90a75d8805fb64d7d145722ad10a1ce77a14d
          + [Derechos de reproducción](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-policy-play-rights.md)
          + [Datos personalizados](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-policy-custom-data.md)
          + [Actualizar una directiva existente](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-creation/initial-fam-usage-policy-update-existing.md)
-      + [Lista de actualización de directivas](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-update-list.md)
+      + [lista de actualización de directivas](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-policy-update-list.md)
       + [Empaquetado de medios](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-pkg-media.md)
       + [Carpetas vigiladas](aaxs-reference-implementations/fam-air-app-usage/initial-fam-usage-watched-folders.md)
