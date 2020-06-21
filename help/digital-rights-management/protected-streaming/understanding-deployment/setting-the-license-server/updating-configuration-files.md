@@ -5,7 +5,10 @@ seo-title: Actualización de archivos de configuración
 title: Actualización de archivos de configuración
 uuid: 34b3247c-3458-49de-b1b0-dc0ebbf61c88
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+workflow-type: tm+mt
+source-wordcount: '644'
+ht-degree: 0%
 
 ---
 
@@ -34,4 +37,4 @@ Puede modificar la contraseña de HSM en [!DNL flashaccess-global.xml] cualquier
 
 ## Actualización del archivo de configuración del inquilino {#section_71624DB8DF28480F84F34F0FF7FD4365}
 
-Puede modificar todos los valores especificados en el [!DNL flashaccess-tenant.xml] archivo en cualquier momento. Los cambios tendrán efecto la próxima vez que el servidor vuelva a cargar el archivo de configuración. Además, el servidor comprueba si hay modificaciones en todos los archivos de credenciales ( [!DNL .pfx]) y en los archivos de certificados de la lista blanca del empaquetador a los que se hace referencia en el archivo de configuración del inquilino.
+Puede modificar todos los valores especificados en el [!DNL flashaccess-tenant.xml] archivo en cualquier momento. Los cambios tendrán efecto la próxima vez que el servidor vuelva a cargar el archivo de configuración. Además, el servidor comprueba si hay modificaciones en todos los archivos de credenciales ( [!DNL .pfx]) y el empaquetador permite archivos de certificados de lista a los que se hace referencia en el archivo de configuración del inquilino.
