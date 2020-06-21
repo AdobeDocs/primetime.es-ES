@@ -2,7 +2,7 @@
 title: Notas de la versión de PTAI 19.11.1
 description: Las notas de la versión de PTAI 19.11.1 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2019.
 translation-type: tm+mt
-source-git-commit: 0a58cce0d80ade581e32b5dd9376d336e02fac8b
+source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
 workflow-type: tm+mt
 source-wordcount: '1968'
 ht-degree: 0%
@@ -71,7 +71,7 @@ Se corrigió un error en el cual los reproductores de Chromecast salieron inespe
 
 **Cuando:** Miércoles, 10 de julio
 
-* SSAI: Para valores ptcueformat que admiten la señalización de interrupción y salida EXT-X-CUE-OUT en flujos activos, se ha añadido una macro genérica para pasar datos de atributos en el ejemplo de etiqueta EXT-X-ASSET: Etiqueta que acompaña a la etiqueta #EXT-X-CUE-OUT: #EXT-X-ASSET:CAID=75BCD15,GENRE=Noticias,Programa=Macros de NewsAt10: # se puede utilizar para pasar Noticias (desde el atributo GENRE) a una dirección URL de llamada de publicidad # para pasar NewsAt10 (desde el atributo Programa) a una excepción de dirección URL de llamada de publicidad: Para la compatibilidad con versiones anteriores, # y # tienen la misma funcionalidad. Ambas macros pueden utilizarse para pasar el valor del atributo CAID, después de convertir el valor de hex a long. El valor long es 123456789 para el valor hex, 75BCD15, en el ejemplo anterior. Ambas macros se utilizarían para pasar 123456789 a una dirección URL de llamada de publicidad. La macro siempre inicio con #. La macro distingue entre mayúsculas y minúsculas, pero el atributo de la etiqueta EXT-X-ASSET no lo hace. Es decir, tanto el PROGRAMA como el Programa están permitidos en la etiqueta EXT-X-ASSET
+* SSAI: Para valores ptcueformat que admiten la señalización de interrupción y salida EXT-X-CUE-OUT en flujos en directo, se ha añadido una macro genérica para pasar datos de atributos en el ejemplo de etiqueta EXT-X-ASSET: Etiqueta que acompaña a la etiqueta #EXT-X-CUE-OUT: #EXT-X-ASSET:CAID=75BCD15,GENRE=Noticias,Programa=Macros de NewsAt10: # se puede utilizar para pasar Noticias (desde el atributo GENRE) a una dirección URL de llamada de publicidad # para pasar NewsAt10 (desde el atributo Programa) a una excepción de dirección URL de llamada de publicidad: Para la compatibilidad con versiones anteriores, # y # tienen la misma funcionalidad. Ambas macros pueden utilizarse para pasar el valor del atributo CAID, después de convertir el valor de hex a long. El valor long es 123456789 para el valor hex, 75BCD15, en el ejemplo anterior. Ambas macros se utilizarían para pasar 123456789 a una dirección URL de llamada de publicidad. La macro siempre inicio con #. La macro distingue entre mayúsculas y minúsculas, pero el atributo de la etiqueta EXT-X-ASSET no lo hace. Es decir, tanto el PROGRAMA como el Programa están permitidos en la etiqueta EXT-X-ASSET
 * SSAI: Cambios de configuración para un cliente específico para lo siguiente:
    * Duración de la ventana deslizante (lista de reproducción activa) de cuatro minutos
    * Si se produce una excepción de tiempo de espera de socket cuando el servidor de manifiesto obtiene el contenido de origen, el servidor de manifiesto devolverá el código de respuesta HTTP (404) en lugar de 500
@@ -174,13 +174,13 @@ Se corrigió un error en el cual los reproductores de Chromecast salieron inespe
    * Estructura de clave de búsqueda antigua: Zona, sistema de publicidad, ID de publicidad, ID creativo, URL creativa y parámetros de formato (duración del destinatario, formato de salida, CDN de destino)
    * Las claves de búsqueda de recursos CRS existentes se actualizarán para que coincidan con la nueva estructura antes de la versión de producción, pero tenga en cuenta que los nuevos recursos transcodificados entre la actualización de las claves de búsqueda y la versión de producción podrían perderse. En caso afirmativo, iniciarían una nueva solicitud de CRS la próxima vez que se encuentren después del lanzamiento
 
-* CRS: Se ha Añadido la capacidad de incluir en la lista negra/lista blanca solicitudes CRS de sistemas de publicidad específicos, ID de publicidad, ID creativos, URL creativas y/o formato creativo
+* CRS: Se ha Añadido la capacidad de bloquear/permitir listas de solicitudes CRS de sistemas de publicidad específicos, ID de publicidad, ID creativos, URL creativas y/o formato creativo
 
    >Nota
    >
-   >Adobe agregará reglas de lista negra cuando se encuentren proveedores de publicidad con valores dinámicos (por ejemplo, parámetro dinámico en la dirección URL) para la misma publicidad. Estas reglas de lista negra se desactivarán una vez resuelto el componente dinámico, ya sea por el proveedor o a través de una regla de normalización.
+   >Adobe agregará reglas de listas de bloqueo cuando se encuentren proveedores de publicidad con valores dinámicos (por ejemplo, parámetro dinámico en la dirección URL) para la misma publicidad. Estas reglas de listas de bloqueo se desactivarán una vez resuelto el componente dinámico, ya sea por el proveedor o a través de una regla de normalización.
 
-   * Si desea agregar una lista negra o regla de lista blanca para su zona, comuníquese con el administrador técnico de cuentas para obtener ayuda.
+   * Si desea agregar una lista de bloqueo o regla de lista de permitidos para su zona, comuníquese con el administrador técnico de cuentas para obtener ayuda.
 
 ### Versión 19.1.1
 
