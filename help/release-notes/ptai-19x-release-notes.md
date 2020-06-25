@@ -2,9 +2,9 @@
 title: Notas de la versión de PTAI 19.11.1
 description: Las notas de la versión de PTAI 19.11.1 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2019.
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 369dc8d987f5d49467ec376d4df5ffc46ea6d36c
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1974'
 ht-degree: 0%
 
 ---
@@ -174,13 +174,13 @@ Se corrigió un error en el cual los reproductores de Chromecast salieron inespe
    * Estructura de clave de búsqueda antigua: Zona, sistema de publicidad, ID de publicidad, ID creativo, URL creativa y parámetros de formato (duración del destinatario, formato de salida, CDN de destino)
    * Las claves de búsqueda de recursos CRS existentes se actualizarán para que coincidan con la nueva estructura antes de la versión de producción, pero tenga en cuenta que los nuevos recursos transcodificados entre la actualización de las claves de búsqueda y la versión de producción podrían perderse. En caso afirmativo, iniciarían una nueva solicitud de CRS la próxima vez que se encuentren después del lanzamiento
 
-* CRS: Se ha Añadido la capacidad de bloquear/permitir listas de solicitudes CRS de sistemas de publicidad específicos, ID de publicidad, ID creativos, URL creativas y/o formato creativo
+* CRS: Se ha Añadido la capacidad de bloquear/permitir solicitudes de CRS de lista de sistemas de publicidad específicos, ID de publicidad, ID creativos, URL creativas y/o formato creativo
 
    >Nota
    >
-   >Adobe agregará reglas de listas de bloqueo cuando se encuentren proveedores de publicidad con valores dinámicos (por ejemplo, parámetro dinámico en la dirección URL) para la misma publicidad. Estas reglas de listas de bloqueo se desactivarán una vez resuelto el componente dinámico, ya sea por el proveedor o a través de una regla de normalización.
+   >Adobe agregará reglas de lista de bloques cuando se encuentren proveedores de publicidad con valores dinámicos (por ejemplo, parámetro dinámico en la dirección URL) para la misma publicidad. Estas reglas de lista de bloques se desactivarán una vez resuelto el componente dinámico, ya sea por el proveedor o a través de una regla de normalización.
 
-   * Si desea agregar una lista de bloqueo o regla de lista de permitidos para su zona, comuníquese con el administrador técnico de cuentas para obtener ayuda.
+   * Si desea agregar una lista de bloques o permitir una regla de lista para su zona, comuníquese con el administrador técnico de cuentas para obtener ayuda.
 
 ### Versión 19.1.1
 
