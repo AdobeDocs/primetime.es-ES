@@ -3,9 +3,9 @@ seo-title: Empaquetado de contenido
 title: Empaquetado de contenido
 uuid: 5d1d4b9d-f241-4291-9577-e9de5a8b92be
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---
@@ -27,4 +27,4 @@ https://mylicenseserver.com:8080/flashaccessserver/tenant1
 
 Si cada inquilino utiliza un servidor de licencias y una credencial de transporte diferentes, asegúrese de especificar el certificado del inquilino correcto en el empaquetador.
 
-Para asegurarse de que el servidor emite licencias solo para contenido empaquetado por los empaquetadores conocidos, incluya el certificado del empaquetador en la lista de permitidas del empaquetador del archivo de configuración del inquilino.
+Para asegurarse de que el servidor emite licencias solo para contenido empaquetado por los empaquetadores conocidos, incluya el certificado del empaquetador en la lista de permitidos del empaquetador del archivo de configuración del inquilino.
