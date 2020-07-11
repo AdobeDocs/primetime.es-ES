@@ -5,7 +5,7 @@ seo-title: Información general
 title: Información general
 uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -43,4 +43,4 @@ El SDK proporciona una API de Java para realizar estas tareas e incluye implemen
 
 Especifica reglas de uso personalizadas. Los datos personalizados pueden incluirse en las licencias emitidas por el servidor de licencias. La interpretación y el manejo de estos datos depende completamente de la implementación de la aplicación cliente y del servidor de licencias.
 
-Ejemplo de caso de uso: Permite la extensibilidad de las reglas de uso al permitir que otras reglas comerciales se transmitan de forma segura como parte de la política o licencia de contenido. Por motivos de seguridad, como estas reglas de uso se aplican en el código de la aplicación cliente personalizada, esta opción debe usarse junto con la aplicación de AIR o con las opciones de lista de permitidas por Flash Player SWF. Para obtener más información, consulte &quot;Restricciones[de](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)tiempo de ejecución y aplicación&quot;.
+Ejemplo de caso de uso: Permite la extensibilidad de las reglas de uso al permitir que otras reglas comerciales se transmitan de forma segura como parte de la directiva o la licencia de contenido. Por motivos de seguridad, como estas reglas de uso se aplican en el código de la aplicación cliente personalizada, esta opción debe usarse junto con las opciones de lista de permitidos SWF de la aplicación de AIR o Flash Player. Para obtener más información, consulte Restricciones [de aplicación y](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)tiempo de ejecución.
