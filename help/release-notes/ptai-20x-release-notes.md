@@ -1,20 +1,44 @@
 ---
-title: Notas de la versión de PTAI 20.6.1
-description: Las notas de la versión de PTAI 20.6.1 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2020.
+title: Notas de la versión de PTAI 20.7.1
+description: Las notas de la versión de PTAI 20.7.1 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2020.
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
 
 
-# Notas de la versión 20.6.1 de Primetime Dynamic Ad Insertion
+# Notas de la versión 20.7.1 de Primetime Dynamic Ad Insertion
 
-Las notas de la versión de Inserción de publicidad dinámica 20.6.1 describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en la inserción de publicidad dinámica de Primetime en el año 2020.
+Las notas de la versión de Inserción dinámica de publicidad 20.7.1 describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en Inserción dinámica de publicidad en Primetime en el año 2020.
 
-## Novedades de PTAI 20.6.1
+## Novedades de PTAI 20.7.1
+
+**Cuando:** Jueves 9 de julio de 2020, de 03:00 AM a 05:00 AM Hora del Este
+
+**Nuevas funciones y mejoras**
+
+* Mejora de SCTE35 para utilizar los mensajes de Inicio/finalización de publicidad de proveedor o los mensajes de interrupción del Inicio/finalización para identificar el aviso.
+
+* Se ha actualizado el encabezado X-ADBE-AI-X1 con información adicional para ayudar a solucionar problemas.
+
+* Agregación de métricas mejorada.
+
+* Panel mejorado de la consola de SSAI para el panel Estadísticas de sesión.
+
+### Mejoras y correcciones en versiones anteriores
+
+#### Versión 20.6.2
+
+**Cuando:** Jueves 18 de junio de 2020 de las 3:00 a las 4:00 AM Hora del Este
+
+**Mejoras**
+
+Se ha mejorado la sincronización de flujo para los clientes de vídeo que requieren una precisión de milisegundos. Póngase en contacto con la asistencia de Adobe para habilitar la precisión de milisegundos para `#EXT-X-PROGRAM-DATE-TIME tags`.
+
+#### Versión 20.6.1
 
 **Cuando:** Martes 2 de junio de 2020, de las 3:00 a las 5:00 AM hora del Este
 
@@ -26,13 +50,13 @@ Póngase en contacto con el servicio de asistencia técnica de Adobe para habili
 
 * VOD de forma larga: Se han mejorado las API para mantener viva la sesión con los recursos de VOD de forma larga.
 
-**Corrección de errores**
+**Correcciones de errores**
 
 * Se corrigió un problema en el cual los fragmentos de WebVTT siempre se solicitaban en el protocolo http independientemente del protocolo original solicitado.
 
 * Se corrigió un problema en el cual las etiquetas EXT-X-DISCONTINUITY se eliminaban de la parte superior de la lista de reproducción al cambiar de publicidades a contenido. Póngase en contacto con la asistencia de Adobe para habilitar esta corrección.
 
-### Versión 20.5.1
+#### Versión 20.5.1
 
 **Cuando:** Martes 5 de mayo de 2020, de las 4:00 a las 5:00 AM hora del Este
 
@@ -42,7 +66,7 @@ Póngase en contacto con el servicio de asistencia técnica de Adobe para habili
 
 * Actualizaciones de mantenimiento.
 
-### Versión 20.3.4
+#### Versión 20.3.4
 
 **Cuando:** Miércoles 1 de abril de 2020, de 03:00 AM a 04:00 AM Hora del Este
 
@@ -50,7 +74,7 @@ Póngase en contacto con el servicio de asistencia técnica de Adobe para habili
 
 * Actualizaciones de seguridad.
 
-### Versión 20.3.3
+#### Versión 20.3.3
 
 **Cuando:** Jueves 26 de marzo de 2020 de las 3:00 a las 4:00 AM Hora del Este
 
@@ -60,7 +84,7 @@ Póngase en contacto con el servicio de asistencia técnica de Adobe para habili
 
 * Se corrigió un problema con los flujos de audio CMAF/desmuestreados, en el cual en determinados escenarios los números EXT-X-MEDIA-SEQUENCE se incrementaban incorrectamente.
 
-### Versión 20.3.2
+#### Versión 20.3.2
 
 **Cuando:** Miércoles 11 de marzo de 2020 de las 5:30 a las 7:00 AM hora del Este
 
@@ -68,7 +92,7 @@ Póngase en contacto con el servicio de asistencia técnica de Adobe para habili
 
 * Actualizaciones de mantenimiento.
 
-### Versión 20.3.1
+#### Versión 20.3.1
 
 **Cuando:** Jueves 5 de marzo de 2020 de las 02:30 a las 04:30 AM hora del Este
 
@@ -80,14 +104,14 @@ Póngase en contacto con el servicio de asistencia técnica de Adobe para habili
 
 * Correcciones de seguridad y mantenimiento.
 
-### Versión 20.2.1
+#### Versión 20.2.1
 
 **Cuando:** Jueves 13 de febrero de 2020 de las 4:30 a las 5:30 AM hora del Este
 
 * Se ha Añadido la compatibilidad con la vinculación de recursos de publicidad que contienen varios flujos de solo audio en función del idioma, el códec o la velocidad de bits.
 * Pequeñas mejoras de rendimiento y actualizaciones de mantenimiento.
 
-### Versión 20.1.3
+#### Versión 20.1.3
 
 **Cuando:** Martes 28 de enero de 2020 de las 2:00 a las 03:00 AM hora del Este
 
@@ -101,13 +125,13 @@ Póngase en contacto con el servicio de asistencia técnica de Adobe para habili
 
 * Purgue los objetos V1 antiguos de los grupos de NetStorage para mantener el recuento de objetos dentro de los límites seguros de Akamai.
 
-### Versión 20.1.2 (revisión)
+#### Versión 20.1.2 (revisión)
 
 **Cuando:** Lunes 20 de enero de 2020 de las 02:00 a las 03:00 AM hora del Este
 
 * Actualizaciones de mantenimiento.
 
-### Versión 20.1.1
+#### Versión 20.1.1
 
 **Cuando:** Miércoles 15 de enero de 2020 de las 4:00 a las 5:00 AM Hora del Este
 
@@ -120,6 +144,12 @@ Póngase en contacto con el servicio de asistencia técnica de Adobe para habili
 ## Problemas resueltos
 
 Cuando la resolución está asociada a un problema informado, se muestra una referencia de Zendesk. Por ejemplo, `ZD#xxxxx`
+
+**PTAI 20.6.1**
+
+* `WebVTT` los fragmentos siempre se solicitaban en el protocolo http independientemente del protocolo original solicitado.
+
+* `EXT-X-DISCONTINUITY` las etiquetas se eliminan de la parte superior de la lista de reproducción al cambiar de publicidades a contenido. Póngase en contacto con la asistencia de Adobe para habilitar esta corrección.
 
 **PTAI 20.5.1**
 
