@@ -4,7 +4,7 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Notas de la versión de Primetime
 translation-type: tm+mt
-source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
+source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -15,8 +15,8 @@ ht-degree: 0%
 # Notas de la versión de Primetime {#release-notes}
 
 + [Información general sobre las notas de la versión](home.md)
-+ Inserción dinámica de publicidad en Primetime {#ptai}
-   + [Notas de la versión de PTAI 20.7.1](ptai-20x-release-notes.md)
++ Ad Insertion dinámico de Primetime {#ptai}
+   + [Notas de la versión de PTAI 20.8.1](ptai-20x-release-notes.md)
    + [Notas de la versión de PTAI 19.11.1](ptai-19x-release-notes.md)
 + TVSDK para iOS {#tvsdk-ios}
    + [Notas de la versión de TVSDK 3.12 para iOS](tvsdk-3x-ios.md)
@@ -36,5 +36,5 @@ ht-degree: 0%
    + [Versiones de Primetime Streaming Server versión 1](primetime-streaming-server-1x.md)
 + TVSDK para Playstation 4 {#tvsdk-playstation}
    + [Notas de la versión de TVSDK 2.1 PlayStation 4](tvsdk-21-ps4.md)
-+ Administración de derechos digitales {#drm}
++ Digital Rights Management {#drm}
    + [Notas de la versión de DRM 5.3.1](drm-531-release-notes.md)
