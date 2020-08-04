@@ -1,20 +1,30 @@
 ---
-title: Notas de la versión de PTAI 20.7.1
-description: Las notas de la versión de PTAI 20.7.1 describen las novedades o los cambios que se han producido en la inserción de publicidad dinámica de Primetime en el año 2020.
+title: Notas de la versión de PTAI 20.8.1
+description: Las notas de la versión de PTAI 20.8.1 describen las novedades o los cambios que se han producido en Primetime Dynamic Ad Insertion en el año 2020.
 translation-type: tm+mt
-source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
+source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
 
 
-# Notas de la versión 20.7.1 de Primetime Dynamic Ad Insertion
+# Notas de la versión de Primetime Dynamic Ad Insertion 20.8.1
 
-Las notas de la versión de Inserción dinámica de publicidad 20.7.1 describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en Inserción dinámica de publicidad en Primetime en el año 2020.
+Las notas de la versión de Ad Insertion dinámico 20.8.1 describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en Primetime Dynamic Ad Insertion en el año 2020.
 
-## Novedades de PTAI 20.7.1
+## Novedades de PTAI 20.8.1
+
+**Cuando:** Martes 4 de agosto de 2020, de las 3:00 AM a las 6:00 AM, hora del Este
+
+**Mejoras y correcciones**
+
+Actualizaciones de mantenimiento.
+
+### Mejoras y correcciones en versiones anteriores
+
+#### Versión 20.7.1
 
 **Cuando:** Jueves 9 de julio de 2020, de 03:00 AM a 05:00 AM Hora del Este
 
@@ -26,9 +36,7 @@ Las notas de la versión de Inserción dinámica de publicidad 20.7.1 describen 
 
 * Agregación de métricas mejorada.
 
-* Panel mejorado de la consola de SSAI para el panel Estadísticas de sesión.
-
-### Mejoras y correcciones en versiones anteriores
+* Panel mejorado de la consola de SSAI para el panel Estadísticas de sesión
 
 #### Versión 20.6.2
 
@@ -44,7 +52,7 @@ Se ha mejorado la sincronización de flujo para los clientes de vídeo que requi
 
 **Nuevas funciones**
 
-Póngase en contacto con el servicio de asistencia técnica de Adobe para habilitar las siguientes funciones nuevas mediante la configuración del servidor:
+Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nuevas funciones mediante la configuración del lado del servidor:
 
 * Manipulación de manifiesto: Las direcciones URL de recursos y segmentos HLS ahora se pueden transformar entre HTTP y HTTPS para aumentar el rendimiento reduciendo los apretones de manos TLS en las solicitudes back-end. También se puede utilizar para unificar los fragmentos de publicidad y contenido en las mismas CDN.
 
