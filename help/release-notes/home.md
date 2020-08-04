@@ -4,9 +4,9 @@ seo-title: Notas de la versión de Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 7c8b9778f9b63151617e57bc2318ba77e0b630bc
+source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
@@ -16,17 +16,17 @@ ht-degree: 0%
 
 Bienvenido a las Notas de la versión de Adobe Primetime. Los documentos enumerados en el panel de navegación izquierdo proporcionan información específica de la versión, requisitos del sistema, limitaciones, problemas fijos y problemas conocidos.
 
+## Mejoras y correcciones en PTAI 20.8.1
+
+La versión se centró en las actualizaciones de mantenimiento.
+
+Para obtener más información sobre la versión actual de Ad Insertion dinámico, consulte las notas de la versión de [PTAI](ptai-20x-release-notes.md).
+
 ## Correcciones en TVSDK 3.12 para Android
 
 La versión se centra en actualizar la versión de gradle de la aplicación Primetime Reference a la versión 5.6.4.
 
 Consulte para obtener más información sobre la versión actual publicada para [Android](../release-notes/tvsdk-3x-android.md).
-
-## Mejoras y correcciones en PTAI 20.7.1
-
-La versión se centró en la mejora de SCTE35, la adición de más información en encabezados de respuesta HTTP X-ADBE-AI-X1, la agregación de métricas mejorada y el panel &quot;Estadísticas de sesión&quot;.
-
-Para obtener más información sobre la versión actual de la inserción de publicidad dinámica, consulte las notas de la versión de [PTAI](ptai-20x-release-notes.md).
 
 ## Mejoras y correcciones en las notas de la versión de TVSDK 3.12 para iOS
 
@@ -42,8 +42,8 @@ Consulte para obtener más información sobre la versión actual publicada para 
 | [Ayuda de conversión y migración de Primetime](/help/migration-guides/home.md) | Explica el proceso de conversión y migración para pasar de su grupo de TVSDK de Primetime existente al grupo de próxima generación. |
 | [Implementación de referencia](/help/android-reference-implementation/home.md) | Ayuda a comprender el SDK de TVSDK y a modificar los administradores de funciones para personalizar su reproductor personal. |
 | [Referencias de la API de Primetime](/help/reference/api-references.md) | Proporciona información detallada sobre las funciones de TVSDK, las estructuras de datos y otras construcciones de programación. |
-| [Administración de derechos digitales](/help/digital-rights-management/home.md) | Ayuda a conocer más sobre los distintos escenarios de usuario en Digital Rights Management (DRM) |
-| [Ayuda para la inserción de publicidad dinámica](/help/dynamic-ad-insertion/home.md) | Explica cómo monetizar el contenido mediante la inserción de publicidad dinámica dirigida por el usuario en el servidor y captar la audiencia con anuncios personalizados. |
+| [Digital Rights Management](/help/digital-rights-management/home.md) | Ayuda a conocer más sobre los distintos escenarios de usuario en Digital Rights Management (DRM) |
+| [Ayuda de Ad Insertion dinámico](/help/dynamic-ad-insertion/home.md) | Explica cómo monetizar el contenido mediante la inserción de publicidad dinámica dirigida por el usuario en el servidor y captar la audiencia con anuncios personalizados. |
 | [Archivos](https://helpx.adobe.com/primetime/archives.html) | Descargue archivos PDF de la documentación archivada. |
 
 ## Recursos útiles
