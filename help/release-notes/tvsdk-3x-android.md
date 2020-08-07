@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: e467153067bb10107054a5d4166b1d9c2ac646ab
 workflow-type: tm+mt
 source-wordcount: '5418'
 ht-degree: 0%
@@ -28,8 +28,6 @@ El reproductor de referencia de Android se incluye con Android TVSDK en el direc
 >
 >1. Descargue VideoHeartbeat.jar de [https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) (VideoHeartbeat Library para Android v2.0.0)
 >1. Extraiga VideoHeartbeat.jar en la carpeta libs/.
->
-
 
 
 TVSDK para Android proporciona muchas mejoras de rendimiento con respecto a las versiones anteriores. Proporciona una experiencia de visualización de alta calidad y incorpora todas las características de la versión 1.4, con la excepción de la compatibilidad con Multi-CDN.
@@ -145,9 +143,9 @@ El anuncio previo, si está disponible, se reproduce y, a continuación, el cont
 
 * **Justo en el tiempo: la resolución de publicidades más cercanas a los marcadoresLa resolución de publicidades flojas ahora resuelve cada pausa publicitaria de forma independiente.** Anteriormente, la resolución de anuncios era un enfoque de dos fases: se resolvieron los pre-rolls antes del inicio de reproducción y todas las ranuras de rollover media/post combinadas después de iniciar la reproducción. Con esta función mejorada, cada pausa publicitaria ahora se resuelve en un momento específico antes del punto de referencia del anuncio.
 
-> [!NOTE]
+>[!NOTE]
 >
-> La resolución diferida de publicidad ahora ha cambiado para desactivarse de forma predeterminada y debe habilitarse explícitamente.
+>La resolución diferida de publicidad ahora ha cambiado para desactivarse de forma predeterminada y debe habilitarse explícitamente.
 
 Se agrega una nueva API a `AdvertisingMetadata::setDelayAdLoadingTolerance` para obtener la tolerancia de carga de anuncios retrasados asociada con estos metadatos de publicidad.\
 Ahora se permite la búsqueda inmediatamente después de la PREPARACIÓN, la búsqueda por sobrecostos de anuncios resultará en una resolución inmediata antes de que finalice la búsqueda.\
@@ -277,9 +275,9 @@ Cuando TVSDK abre una conexión, solicita al servidor una conexión *permanente*
 
 * **Reproducción de contenido MP4: no es necesario volver a transcodificar los clips cortos MP4 para que se reproduzcan dentro del TVSDK.**
 
-   > [!NOTE]
+   >[!NOTE]
    >
-   > El cambio de ABR, la reproducción mediante trucos, la inserción de anuncios, el enlace de audio tardío y la subsegmentación no son compatibles con la reproducción de MP4.
+   >El cambio de ABR, la reproducción mediante trucos, la inserción de anuncios, el enlace de audio tardío y la subsegmentación no son compatibles con la reproducción de MP4.
 
 * **Reproducción de trucos con velocidad de bits adaptable (ABR):** esta función permite que TVSDK cambie entre flujos de iFrame mientras se encuentra en modo de reproducción de trucos. Puede utilizar perfiles que no sean de iFrame para realizar el juego con trucos a velocidades más bajas.
 
@@ -296,7 +294,8 @@ Cuando TVSDK abre una conexión, solicita al servidor una conexión *permanente*
 * **Compatibilidad con flujos de trabajo**
 
    * **Integración de facturación directa:** envía métricas de facturación al servidor de Adobe Analytics, certificado por Adobe Primetime para flujos utilizados por el cliente.
-   TVSDK recopila automáticamente métricas, de acuerdo con el contrato de venta del cliente, para generar informes de uso periódicos requeridos para fines de facturación. En todos los eventos de inicio de flujo, TVSDK utiliza la API de inserción de datos de Adobe Analytics para enviar métricas de facturación como, por ejemplo, el tipo de contenido, los indicadores habilitados para la inserción de anuncios y los indicadores habilitados para drm (según la duración del flujo facturable) al grupo de informes propiedad de Adobe Analytics Primetime. Esto no interfiere con los grupos de informes o las llamadas al servidor de Adobe Analytics del cliente ni se incluye en ellos. Si se solicita, este informe de uso de facturación se envía a los clientes de forma periódica. Esta es la primera fase de la función de facturación que admite únicamente la facturación de uso. Se puede configurar en función del contrato de venta mediante las API descritas en la documentación. Esta función está habilitada de forma predeterminada. Para desactivar esta función, consulte la muestra del reproductor de referencia.
+
+   TVSDK recopila automáticamente métricas, de acuerdo con el contrato de venta del cliente, para generar informes de uso periódicos requeridos para fines de facturación. En todos los eventos de inicio de flujo, TVSDK utiliza la API de inserción de datos de Adobe Analytics para enviar métricas de facturación como, por ejemplo, tipo de contenido, marcas habilitadas para la inserción de anuncios y marcas habilitadas para drm (basadas en la duración del flujo facturable) al grupo de informes propiedad de Adobe Analytics Primetime. Esto no interfiere con los grupos de informes o las llamadas al servidor de Adobe Analytics del cliente ni se incluye en ellos. Si se solicita, este informe de uso de facturación se envía a los clientes de forma periódica. Esta es la primera fase de la función de facturación que admite únicamente la facturación de uso. Se puede configurar en función del contrato de venta mediante las API descritas en la documentación. Esta función está habilitada de forma predeterminada. Para desactivar esta función, consulte la muestra del reproductor de referencia.
 
    * **Compatibilidad con failover mejorada: se han implementado estrategias adicionales para continuar la reproducción ininterrumpida, a pesar de los fallos de los servidores host, los archivos de listas de reproducción y los segmentos.**
 
@@ -309,7 +308,7 @@ Cuando TVSDK abre una conexión, solicita al servidor una conexión *permanente*
 
 * **Analytics**
 
-   * **VHL 2.0:** Esta es la última integración optimizada de Video Heartbeat Library (VHL) para la recopilación automática de datos de uso para Adobe Analytics. La complejidad de las API se ha reducido para facilitar la implementación. Descargue la biblioteca VHL [v2.0.0 para Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) y extraiga el archivo JAR en la carpeta libs.
+   * **VHL 2.0 -** Esta es la última integración optimizada de Video Heartbeat Library (VHL) para la recopilación automática de datos de uso para Adobe Analytics. La complejidad de las API se ha reducido para facilitar la implementación. Descargue la biblioteca VHL [v2.0.0 para Android](https://github.com/Adobe-Marketing-Cloud/video-heartbeat-v2/releases) y extraiga el archivo JAR en la carpeta libs.
 
 * **SizeAvaliableEventListener**
 
@@ -320,7 +319,7 @@ Cuando TVSDK abre una conexión, solicita al servidor una conexión *permanente*
       DAR = e.getWidth()/ e.getHeight();
       ```
 
-      La relación de aspecto de Almacenamiento en cuanto a la anchura de la barra vertical y la altura de la barra también se puede utilizar para calcular la anchura del marco y la altura del marco:
+      La relación de aspecto de almacenamiento en cuanto a la anchura de la barra vertical y la altura de la barra también se puede utilizar para calcular la anchura del marco y la altura del marco:
 
       ```java
       SAR = e.getSarWidth()/e.getSarHeight();
@@ -468,12 +467,12 @@ En esta sección se ofrece un resumen del problema resuelto en la versión de An
    * Se corrigió un caso específico en torno a los eventos de seguimiento de publicidad.
 * ZD#37491 - El código de estado HTTP con error meta no está presente.
    * Se trabajó en la propagación de errores de red más altos en la pila.
-* ZD#37808 - Permitir la lista Nuevo encabezado personalizado.
+* ZD#37808 - Lista de permitidos de nuevo encabezado personalizado.
    * Se agregó compatibilidad con SSAI_TAG como parte de esta corrección.
 * ZD#37622 - Errores de sintaxis de pods de publicidad específicos.
    * Se ha corregido un problema por el que la reproducción de flujo se bloqueaba cuando la aplicación de Android del cliente ofrecía anuncios que contenían un % sin codificar
 * ZD#37631 - Mecanismo de reintento de manifiesto maestro para Android TVSDK.
-   * Se Añadió una nueva API en la configuración de red para gestionar esta mejora. Si no se utiliza esta API, no se volverá a intentar el manifiesto. Si se utiliza, se volverá a intentar el manifiesto para gestionar errores de red y tiempos de espera.
+   * Se añadió una nueva API en la configuración de red para gestionar esta mejora. Si no se utiliza esta API, no se volverá a intentar el manifiesto. Si se utiliza, se volverá a intentar el manifiesto para gestionar errores de red y tiempos de espera.
 
 **Versión 3.2**
 
@@ -515,7 +514,7 @@ En esta sección se ofrece un resumen del problema resuelto en la versión de An
 
 * ZD #31533 - Reproducción de audio en Android después de enviar la aplicación al fondo.
 
-   * API `enableAudioPlaybackInBackground` Añadida de MediaPlayer a la que se debe llamar con &#39;True&#39; como argumento (cuando el reproductor está en estado PREPARADO) para activar la reproducción de audio cuando la aplicación está en segundo plano.
+   * API `enableAudioPlaybackInBackground` añadida de MediaPlayer a la que se debe llamar con &#39;True&#39; como argumento (cuando el reproductor está en estado PREPARADO) para activar la reproducción de audio cuando la aplicación está en segundo plano.
 
 **Android TVSDK 2.5.5**
 
@@ -543,7 +542,7 @@ En esta sección se ofrece un resumen del problema resuelto en la versión de An
 
    * Se corrigió el escenario para evitar el bloqueo.
 
-* ZD #32256 - Problema de rotación de licencias y rotaciones clave - Adobe Access
+* ZD #32256 - Problema de rotación de licencias y rotaciones clave - Acceso a Adobe
 
    * Se corrigió la inicialización de segmentos con los metadatos DRM para el contenido de SampleAES. Funciona bien con contenido AES128.
 
@@ -565,7 +564,7 @@ En esta sección se ofrece un resumen del problema resuelto en la versión de An
 
 * ZD #34793 - TVSDK 2.5.x se utilizaba para bloquear con la resolución de contenido personalizado en algunos casos cuando VideoEngine suponía que auditudeSettings estaba disponible y no lo estaba.
 
-   * El bloqueo se producía debido a una llamada de función en un puntero compartido Null (auditudeSettings). Se ha Añadido una comprobación condicional dentro de VideoEngineTimeline::placeToSourceTimeline() para asegurarse de que auditudeSettings esté disponible antes de llamar a cualquier elemento de ese objeto.
+   * El bloqueo se producía debido a una llamada de función en un puntero compartido Null (auditudeSettings). Se ha añadido una comprobación condicional dentro de VideoEngineTimeline::placeToSourceTimeline() para asegurarse de que auditudeSettings esté disponible antes de llamar a cualquier elemento de ese objeto.
 
 * ZD #32584 - No se puede acceder a la información completa presente en el nodo &lt;Extensions> de una respuesta VAST.
 
@@ -622,7 +621,7 @@ WebViewDebuging se establece en False de forma predeterminada. Para habilitar la
 * El flujo de resolución Zendesk#32794- 1080P no se reproduce en Android
 
    hemos cambiado los métodos SizeAvailableEvent y Anteriormente, getHeight() y getWidth() de SizeAvailableEvent en 2.5 para devolver la altura y la anchura del fotograma, que el formato de medios devuelve. Ahora devuelve la altura de salida y la anchura de salida, respectivamente, que devuelve el descodificador.
-* Zendesk #19359 Flash Player se bloquea debido a la posición del atributo #EXT-X-FAXS-CM en el manifiesto de nivel de conjunto.
+* El Flash Player Zendesk #19359 se bloquea debido a la posición del atributo #EXT-X-FAXS-CM en el manifiesto de nivel de conjunto.
 
    La etiqueta #EXT-X-FAXS-CM siempre debe aparecer en la lista de reproducción superior para que la velocidad de bits individual o los segmentos aparezcan en la lista de reproducción.
 
