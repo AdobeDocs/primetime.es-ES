@@ -5,7 +5,10 @@ seo-title: Reglas del cortafuegos
 title: Reglas del cortafuegos
 uuid: 309b35b5-8c0a-4cd7-9289-b6b035955697
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '383'
+ht-degree: 0%
 
 ---
 
@@ -41,7 +44,7 @@ Los usuarios externos pueden acceder a las siguientes direcciones URL mediante e
      <li id="li_01B2E17BF4DB456383FD6E18E9DE28F5"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
      <li id="li_096D349CCD7945B387CB80C3E99063C7"><span class="filepath"> /flashaccess/authn/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para autenticar usuarios. </p> <p>Esta URL debe ser accesible si utiliza las API de cliente de Adobe Primetime DRM para la autenticación de usuarios. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para autenticar usuarios. </p> <p>Esta URL debe ser accesible si utiliza las API de cliente Adobe Primetime DRM para la autenticación de usuarios. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -90,7 +93,7 @@ Los usuarios externos pueden acceder a las siguientes direcciones URL mediante e
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL del servicio Web LiveCycle Rights Management ES. Si el contenido se ha publicado con una versión anterior de FMRMS, esta URL permite que los clientes más antiguos se conecten al servidor. Se solicita a estos clientes que actualicen a Adobe Primetime DRM. </p> <p class="- topic/p ">Nota: Esta dirección URL debe utilizar SSL (HTTPS). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL del servicio web de LiveCycle Rights Management ES. Si el contenido se ha publicado con una versión anterior de FMRMS, esta URL permite que los clientes más antiguos se conecten al servidor. Se solicita a estos clientes que actualicen a Adobe Primetime DRM. </p> <p class="- topic/p ">Nota: Esta dirección URL debe utilizar SSL (HTTPS). </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> 
@@ -103,7 +106,7 @@ Los usuarios externos pueden acceder a las siguientes direcciones URL mediante e
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >El servidor de seguridad interno solo debe permitir conexiones al servidor de licencias DRM Primetime a través del proxy inverso y solo a las direcciones URL de la tabla. Para mejorar la escalabilidad, utilice HTTP para las conexiones entre el proxy inverso y Primetime DRM.
 
