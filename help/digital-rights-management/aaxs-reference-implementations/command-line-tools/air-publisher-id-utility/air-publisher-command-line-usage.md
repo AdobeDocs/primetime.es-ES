@@ -3,7 +3,10 @@ seo-title: Uso de la línea de comandos
 title: Uso de la línea de comandos
 uuid: 54b1e867-c6cc-4355-b8e6-a7ec910bd33d
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ java -jar AdobePublisherIDUtility.jar
 
 * `signingcert` especifica el certificado utilizado para firmar la aplicación de AIR
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->Para determinar el ID de editor de una aplicación de iOS, utilice la `-s` opción y especifique el certificado utilizado para firmar la aplicación de iOS. ***Se requiere Adobe Primetime para crear aplicaciones de iOS que puedan reproducir contenido*** protegido por Access.
+>Para determinar el ID de editor de una aplicación de iOS, utilice la `-s` opción y especifique el certificado utilizado para firmar la aplicación de iOS. ***Se requiere Adobe Primetime para crear aplicaciones de iOS que puedan reproducir contenido*** protegido con Access.
 
