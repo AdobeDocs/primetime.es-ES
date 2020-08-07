@@ -3,7 +3,10 @@ seo-title: Introducción a la implementación de los modelos de uso
 title: Introducción a la implementación de los modelos de uso
 uuid: 1041bb84-9996-4284-b2a0-d6fc6d4b73d9
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '589'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ La implementación de referencia incluye lógica empresarial para demostrar cóm
 
 * Descargar en propiedad (DTO)
 * Alquiler/Vídeo a petición (VOD)
-* Suscripción (todo lo que pueda comer)
+* Suscripción (todo lo que puedas comer)
 * Financiado con publicidad
 
 Para habilitar la demostración del modelo de uso, especifique la propiedad personalizada `RI_UsageModelDemo=true` en el momento del empaquetado. Si va a empaquetar contenido con la herramienta de línea de comandos de Media Packager, especifique:
@@ -23,13 +26,13 @@ Para habilitar la demostración del modelo de uso, especifique la propiedad pers
     java -jar AdobeMediaPackager.jar source.flv dest.flv -k RI_UsageModelDemo=true
 ```
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Si no activa el modo de demostración opcional en el momento del empaquetado, el servidor de licencias utiliza la directiva especificada en el momento del empaquetado para emitir una licencia. Si se han especificado varias directivas, el servidor de licencias utiliza la primera directiva válida.
 
 En la demostración, la lógica empresarial del servidor controla los atributos reales de las licencias generadas. En el momento del empaquetado, solo se debe incluir en el contenido una información mínima sobre las políticas. Específicamente, la política solo necesita indicar si se requiere autenticación para acceder al contenido. Para habilitar los cuatro modelos de uso, incluya una directiva que permita el acceso anónimo (para el modelo financiado con publicidad) y una directiva que requiera autenticación de nombre de usuario/contraseña (para los otros 3 modelos de uso). Al solicitar una licencia, una aplicación cliente puede determinar si se solicita al usuario la autenticación en función de la información de autenticación de las directivas.
 
-Para controlar el modelo de uso en el que se emitirá una licencia a un usuario determinado, se pueden agregar entradas a la base de datos de implementación de referencia. La `Customer` tabla contiene nombres de usuario y contraseñas para autenticar usuarios. También indica si el usuario tiene una suscripción. A los usuarios con suscripciones se les otorgarán licencias bajo el modelo de uso de *suscripción* . Para conceder acceso a un usuario en los modelos de uso de *Descargar a su propiedad* o *Vídeo a petición* , se puede agregar una entrada a la `CustomerAuthorization` tabla, que especifica cada parte del contenido al que se permite acceder el usuario y el modelo de uso. Consulte la [!DNL PopulateSampleDB.sql] secuencia de comandos para obtener más información sobre cómo rellenar cada tabla.
+Para controlar el modelo de uso en el que se emitirá una licencia a un usuario determinado, se pueden agregar entradas a la base de datos de implementación de referencia. La `Customer` tabla contiene nombres de usuario y contraseñas para autenticar usuarios. También indica si el usuario tiene una suscripción. A los usuarios con suscripciones se les expedirán licencias con arreglo al modelo de uso de la *Suscripción* . Para conceder acceso a un usuario en los modelos de uso de *Descargar a su propiedad* o *Vídeo a petición* , se puede agregar una entrada a la `CustomerAuthorization` tabla, que especifica cada parte del contenido al que se permite acceder el usuario y el modelo de uso. Consulte la [!DNL PopulateSampleDB.sql] secuencia de comandos para obtener más información sobre cómo rellenar cada tabla.
 
 Cuando un usuario solicita una licencia, el servidor de implementación de referencia comprueba los metadatos enviados por el cliente para determinar si el contenido se empaquetó con la `RI_UsageModelDemo` propiedad . Si es así, se utilizan las siguientes reglas comerciales:
 
@@ -37,7 +40,7 @@ Cuando un usuario solicita una licencia, el servidor de implementación de refer
 
    * Si la solicitud contiene un token de autenticación válido, busque al usuario en la tabla Base de datos de clientes. Si se encontró al usuario:
 
-      * Si la `Customer.IsSubscriber` propiedad es `true`, genere una licencia para el modelo de uso de *suscripción* y envíela al usuario.
+      * Si la `Customer.IsSubscriber` propiedad es `true`, genere una licencia para el modelo de uso de la *Suscripción* y envíela al usuario.
 
       * Busque un registro en la tabla de la `CustomerAuthorization` base de datos para este usuario y el ID de contenido. Si se encontró un registro:
 
