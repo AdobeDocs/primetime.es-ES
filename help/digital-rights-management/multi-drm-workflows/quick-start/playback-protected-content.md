@@ -1,18 +1,21 @@
 ---
-description: Para probar la solución DRM, necesita una aplicación de vídeo que pueda procesar la solución DRM concreta con la que está trabajando. Este reproductor puede ser un reproductor de muestra que Adobe ponga a disposición o su propia aplicación de vídeo basada en TVSDK.
-seo-description: Para probar la solución DRM, necesita una aplicación de vídeo que pueda procesar la solución DRM concreta con la que está trabajando. Este reproductor puede ser un reproductor de muestra que Adobe ponga a disposición o su propia aplicación de vídeo basada en TVSDK.
+description: Para probar la solución DRM, necesita una aplicación de vídeo que pueda procesar la solución DRM concreta con la que está trabajando. Este reproductor puede ser un reproductor de muestra disponible por Adobe o su propia aplicación de vídeo basada en TVSDK.
+seo-description: Para probar la solución DRM, necesita una aplicación de vídeo que pueda procesar la solución DRM concreta con la que está trabajando. Este reproductor puede ser un reproductor de muestra disponible por Adobe o su propia aplicación de vídeo basada en TVSDK.
 seo-title: Reproducción del contenido protegido
 title: Reproducción del contenido protegido
 uuid: 84f73ee7-43d0-481c-a5e7-14f92169323c
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '592'
+ht-degree: 0%
 
 ---
 
 
 # Reproducción del contenido protegido {#playback-your-protected-content}
 
-Para probar la solución DRM, necesita una aplicación de vídeo que pueda procesar la solución DRM concreta con la que está trabajando. Este reproductor puede ser un reproductor de muestra que Adobe ponga a disposición o su propia aplicación de vídeo basada en TVSDK.
+Para probar la solución DRM, necesita una aplicación de vídeo que pueda procesar la solución DRM concreta con la que está trabajando. Este reproductor puede ser un reproductor de muestra disponible por Adobe o su propia aplicación de vídeo basada en TVSDK.
 
 1. Use la URL del servidor de licencias de la respuesta de token que obtuvo del servidor ExpressPlay para comprobar si puede reproducir el contenido protegido.
 
@@ -48,7 +51,7 @@ Para probar la solución DRM, necesita una aplicación de vídeo que pueda proce
 
    **Comprobación de la reproducción al probar la configuración de FairPlay:** FairPlay requiere algunos pasos adicionales para reproducir contenido cuando se utilizan los servidores de licencias ExpressPlay. Si utiliza [!DNL curl] para probar sus conexiones (como se describe en [Licencias](../../multi-drm-workflows/quick-start/handle-the-licensing.md)), debe *editar el manifiesto* M3U8 (su contenido empaquetado) de la siguiente manera:
 
-1. Agregue la respuesta que obtuvo de su solicitud de token de licencia a la `#EXT-X-KEY:` etiqueta del manifiesto; y
+1. Añada la respuesta que obtuvo de su solicitud de token de licencia a la `#EXT-X-KEY:` etiqueta del manifiesto; y
 1. Cambie el protocolo de esa URL de la respuesta (ahora en el manifiesto) de `https://` a `skd://`.
 
    A continuación se muestra un ejemplo completo para probar la reproducción con FairPlay, incluido el paso de la licencia:
@@ -82,7 +85,7 @@ Para probar la solución DRM, necesita una aplicación de vídeo que pueda proce
    KEYFORMAT="com.apple.streamingkeydelivery",KEYFORMATVERSIONS="1"
    ```
 
-   >[!NOTE] {important=&quot;high&quot;}
+   >[!NOTE]
    >
    >La información anterior se aplica solamente a la prueba de la configuración de FairPlay. Puede que no se aplique a la configuración de producción, según cómo configure el controlador FairPlay. Consulte [Habilitar Apple FairPlay en aplicaciones](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md) iOS para obtener más información.
 
