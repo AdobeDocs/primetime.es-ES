@@ -5,12 +5,15 @@ seo-title: Apple FairPlay en aplicaciones TVSDK
 title: Apple FairPlay en aplicaciones TVSDK
 uuid: 4384d379-37cd-46c5-8c25-0cda16bdebb8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 0%
 
 ---
 
 
-# Apple FairPlay en aplicaciones TVSDK {#apple-fairplay-in-tvsdk-applications}
+# Apple FairPlay en aplicaciones TVSDK  {#apple-fairplay-in-tvsdk-applications}
 
 Para implementar el flujo de FairPlay en la aplicación TVSDK, debe escribir un cargador de recursos que envíe una solicitud de adquisición de licencia a su servidor de flujo de FairPlay.
 
@@ -30,7 +33,7 @@ El cargador de recursos da formato a la solicitud y adjunta un token de ExpressP
 
 Al empaquetar el contenido, el empaquetador inserta `skd:` direcciones URL en el manifiesto M3U8. Después de la `skd:` entrada, puede colocar cualquier dato en el manifiesto. Puede utilizar estos datos en el código de la aplicación para completar las tareas que se enumeran arriba. Por ejemplo, puede usar `skd:{content_id}` para que la aplicación pueda determinar el ID del contenido que se está reproduciendo y solicitar un token para ese contenido específico. También puede usar, por ejemplo, `skd:{entitlement_server_url}?cid={content_id}`, para que la aplicación no necesite tener la URL del servidor de asignación de derechos codificada.
 
-Es posible que no necesite información en la dirección URL si, al iniciar la reproducción, ya conoce el ID de contenido a través de otros canales. `skd:` El segundo ejemplo es una solución ideal para probar la configuración, pero también puede utilizarla en un entorno de producción.
+Es posible que no necesite información en la dirección URL si, cuando la reproducción inicio, ya conoce el ID de contenido a través de otros canales. `skd:` El segundo ejemplo es una solución ideal para probar la configuración, pero también puede utilizarla en un entorno de producción.
 
 >[!TIP]
 >
@@ -158,11 +161,11 @@ Puede implementar Apple FairPlay Streaming, que es la solución DRM de Apple, en
 
    >[!NOTE]
    >
-   >Asegúrese de seguir las instrucciones de la Guía *del programa de flujo* FairPlay ( *FairPlayStreaming_PG.pdf*), que se incluye en el SDK de [FairPlay Server para el desarrollo de una aplicación](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)compatible con FPS).
+   >Asegúrese de seguir las instrucciones de la Guía *de Programa de flujo* FairPlay ( *FairPlayStreaming_PG.pdf*), que se incluye en el SDK de [FairPlay Server para el desarrollo de una aplicación](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)con FPS).
 
    El `resourceLoader:shouldWaitForLoadingOfRequestedResource` método equivale a lo que está en `AVAssetResourceLoaderDelegate`.
 
-   >[!IMPORTANT] {important=&quot;high&quot;}
+   >[!IMPORTANT]
    >
    >En el caso del servidor de licencias ExpressPlay, para reproducir contenido, cambie el esquema de URL en la URL de solicitud de licencia del servidor ExpressPlay FairPlay de `skd://` a `https://` (o `https://`).
 
