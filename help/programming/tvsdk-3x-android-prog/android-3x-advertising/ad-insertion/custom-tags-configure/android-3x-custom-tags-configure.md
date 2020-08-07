@@ -5,7 +5,10 @@ seo-title: Etiquetas personalizadas
 title: Etiquetas personalizadas
 uuid: 2892712f-bb01-4112-baee-6dcafd4fb923
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '372'
+ht-degree: 0%
 
 ---
 
@@ -20,13 +23,15 @@ Los flujos de medios pueden incluir metadatos adicionales en forma de etiquetas 
 >
 >Esta función no está disponible para Safari en equipos Apple, ya que TVSDK utiliza la etiqueta de vídeo, en lugar de Flash o MSE, para reproducir contenido HLS.
 
-TVSDK proporciona compatibilidad lista para usar con etiquetas `#EXT` publicitarias específicas. La aplicación puede utilizar etiquetas personalizadas para mejorar el flujo de trabajo de la publicidad o para admitir situaciones de bloqueo. Para admitir flujos de trabajo avanzados, TVSDK le permite especificar y suscribirse a etiquetas adicionales en el manifiesto. Puede recibir una notificación cuando estas etiquetas aparezcan en el archivo de manifiesto.
+TVSDK proporciona compatibilidad lista para usar con etiquetas `#EXT` publicitarias específicas. La aplicación puede utilizar etiquetas personalizadas para mejorar el flujo de trabajo de la publicidad o para admitir situaciones de bloqueo. Para admitir flujos de trabajo avanzados, TVSDK permite especificar y suscribirse a etiquetas adicionales en el manifiesto. Puede recibir una notificación cuando estas etiquetas aparezcan en el archivo de manifiesto.
 
 >[!TIP]
 >
 >Puede suscribirse a etiquetas personalizadas tanto para VOD como para flujos en directo/lineales.
 
->[!LIMITATION] {othertype=&quot;Limitation&quot;}
+>[!NOTE]
+>
+>**Limitación**
 >
 >Cuando se reproduce HLS con la etiqueta Vídeo en Safari y no con Flash Fallback, esta función no estará disponible en Safari.
 
