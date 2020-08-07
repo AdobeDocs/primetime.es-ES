@@ -5,7 +5,10 @@ seo-title: Configuración de HSM
 title: Configuración de HSM
 uuid: 2741ac40-aa42-4aa7-9864-037f3ed3dee2
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
@@ -23,9 +26,9 @@ keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunP
   -providerArg pkcs11.cfg -list
 ```
 
-Ha configurado el HSM correctamente si puede ver sus credenciales en la lista.
+Ha configurado el HSM correctamente si puede vista sus credenciales en la lista.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->A partir de Java 1.7, Sun Java de 64 bits para Windows ya no admite las interfaces PKCS#11 que requiere Adobe Primetime DRM para comunicarse con dispositivos HSM. Si planea utilizar un HSM, asegúrese de utilizar una versión de 32 bits de Java o un JDK que admita las interfaces PKCS#11 completas.
+>A partir de Java 1.7, Sun Java de 64 bits para Windows ya no admite las interfaces PKCS#11 que Adobe Primetime DRM requiere para comunicarse con dispositivos HSM. Si planea utilizar un HSM, asegúrese de utilizar una versión de 32 bits de Java o un JDK que admita las interfaces PKCS#11 completas.
 
