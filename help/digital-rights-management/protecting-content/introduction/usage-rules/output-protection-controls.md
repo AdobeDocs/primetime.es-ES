@@ -3,9 +3,9 @@ seo-title: Controles de protección de salida
 title: Controles de protección de salida
 uuid: a0518392-cd33-4ef0-834c-f90145a9b421
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '652'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Existen las siguientes opciones y niveles de cumplimiento:
 | **Sin protección** — No se aplica ninguna habilitación de protección de salida para salidas analógicas y digitales. | SÍ | SÍ |
 | **Sin reproducción** — No permita la reproducción en un dispositivo externo para salidas analógicas y digitales. | SÍ | SÍ |
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Aunque estas reglas se aplican de manera consistente en todas las plataformas, solo puede activar de forma segura la protección de salida en las plataformas Windows. En otras plataformas, como Macintosh y Linux, no hay funciones de sistema operativo compatibles disponibles para aplicaciones de terceros.
 
