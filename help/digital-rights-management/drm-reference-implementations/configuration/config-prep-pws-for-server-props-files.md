@@ -5,7 +5,10 @@ seo-title: Preparación de contraseñas para los archivos de propiedades del ser
 title: Preparación de contraseñas para los archivos de propiedades del servidor
 uuid: 3e00ba9b-b692-4713-8306-5ab896461f2a
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
@@ -20,6 +23,6 @@ Para ejecutar la herramienta, puede utilizar una secuencia de comandos Ant o Jav
 
 La utilidad genera la contraseña cifrada, que debe copiar en el [!DNL flashaccess-refimpl.properties] archivo.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Las contraseñas que se han codificado con el `ScrambleUtil.class` que se ha proporcionado con la implementación de referencia no funcionan con Primetime DRM Server para flujo protegido.
