@@ -3,7 +3,10 @@ seo-title: Actualizar una directiva existente
 title: Actualizar una directiva existente
 uuid: 081e5dab-e735-4ae9-bcfd-15dd9819bef3
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '80'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Para actualizar una directiva existente, elija el nombre del archivo en la lista
 
 Cuando termine, haga clic en **[!UICONTROL Save]**. El archivo de política del [!DNL Resource] Directorio se reemplazará con la versión actualizada.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Aunque se cambie el nombre de la política, no se modificará el nombre del archivo en el [!DNL Resource] Directorio.
 
