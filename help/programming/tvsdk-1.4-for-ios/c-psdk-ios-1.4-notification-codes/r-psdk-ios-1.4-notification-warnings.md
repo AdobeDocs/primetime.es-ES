@@ -5,7 +5,10 @@ seo-title: Códigos de notificación de ADVERTENCIA
 title: Códigos de notificación de ADVERTENCIA
 uuid: 136b5a65-b842-40fd-8ddd-efe01d73c388
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '378'
+ht-degree: 3%
 
 ---
 
@@ -166,4 +169,6 @@ La mayoría de las advertencias contienen metadatos relevantes, por ejemplo, la 
  </tbody> 
 </table>
 
->[!NOTE] adID y el origen (URL) se pueden recuperar mediante PTAdAsset en los metadatos de notificación con la `AD_ASSET` clave.
+>[!NOTE]
+>
+>adID y el origen (URL) se pueden recuperar mediante PTAdAsset en los metadatos de notificación con la `AD_ASSET` clave.
