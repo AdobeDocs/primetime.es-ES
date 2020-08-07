@@ -3,9 +3,9 @@ seo-title: Ejecución del servidor DRM para flujo continuo protegido
 title: Ejecución del servidor DRM para flujo continuo protegido
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Ejecución del servidor DRM para flujo continuo protegido {#running-the-drm-server-for-protected-streaming}
 
-Antes de poder realizar el inicio del servidor de Adobe Primetime DRM para flujo protegido, se recomienda comprobar la validez de la configuración en los archivos de configuración.
+Antes de poder realizar el inicio del servidor DRM de Adobe Primetime para flujo protegido, se recomienda comprobar la validez de la configuración en los archivos de configuración.
 
 Puede comprobar la validez de la configuración utilizando las utilidades proporcionadas con el servidor de licencias. (Consulte Validador *de configuración* en esta guía.
 
@@ -25,7 +25,7 @@ Una vez iniciado el servidor, debe comprobar que se ha configurado correctamente
 
 Los archivos de registro generados por la aplicación Adobe Primetime DRM Server for Protected Streaming se encuentran en el directorio especificado por LicenseServer.LogRoot.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Si los archivos de registro actuales se eliminan o mueven mientras se ejecuta el servidor, es posible que no se vuelva a crear el archivo de registro. Por lo tanto, se puede eliminar parte de la información de registro.
 
@@ -84,4 +84,4 @@ Puede modificar la contraseña de HSM en [!DNL flashaccess-global.xml] cualquier
 
 ### Actualización del archivo de configuración del inquilino {#section_71624DB8DF28480F84F34F0FF7FD4365}
 
-Puede modificar todos los valores especificados en el [!DNL flashaccess-tenant.xml] archivo en cualquier momento. Los cambios tendrán efecto la próxima vez que el servidor vuelva a cargar el archivo de configuración. Además, el servidor comprueba si hay modificaciones en todos los archivos de credenciales ( [!DNL .pfx]) y el empaquetador permite archivos de certificados de lista a los que se hace referencia en el archivo de configuración del inquilino.
+Puede modificar todos los valores especificados en el [!DNL flashaccess-tenant.xml] archivo en cualquier momento. Los cambios tendrán efecto la próxima vez que el servidor vuelva a cargar el archivo de configuración. Además, el servidor comprueba si hay modificaciones en todos los archivos de credenciales ( [!DNL .pfx]) y los archivos de certificados de lista de permitidos del empaquetador a los que se hace referencia en el archivo de configuración del inquilino.
