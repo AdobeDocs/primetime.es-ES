@@ -1,11 +1,14 @@
 ---
-description: Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de toma de decisiones de anuncios de Adobe Primetime.
-seo-description: Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de toma de decisiones de anuncios de Adobe Primetime.
+description: Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de Adobe Primetime para la toma de decisiones de publicidad.
+seo-description: Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de Adobe Primetime para la toma de decisiones de publicidad.
 seo-title: Requisitos de publicidad
 title: Requisitos de publicidad
 uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '144'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adResolutionTimeout = 15 seconds
 ```
 
-A continuación, siga la sección: Metadatos [del servidor de publicidad Primetime](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
+A continuación, siga la sección: [Metadatos](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)del servidor de publicidad Primetime.
 
 **API relevantes para el tiempo de espera de AdManifest**
 
@@ -59,4 +62,4 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adManifestTimeout = 5 seconds
 ```
 
-A continuación, siga la sección: Metadatos [del servidor de publicidad Primetime](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
+A continuación, siga la sección: [Metadatos](../..//tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md)del servidor de publicidad Primetime.
