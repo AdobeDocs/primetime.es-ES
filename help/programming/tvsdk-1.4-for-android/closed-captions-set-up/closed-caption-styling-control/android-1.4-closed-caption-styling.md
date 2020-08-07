@@ -5,7 +5,10 @@ seo-title: Control del estilo de los subtítulos opcionales
 title: Control del estilo de los subtítulos opcionales
 uuid: 331b0833-3e8a-482e-a3df-5e92b69d0a94
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '685'
+ht-degree: 0%
 
 ---
 
@@ -144,8 +147,9 @@ public TextFormatBuilder(
  String bottomInset)
 ```
 
-[!TIP]
-En las opciones que definen los valores predeterminados (por ejemplo, PREDETERMINADO), ese valor hace referencia a la configuración que tenía cuando se especificó originalmente el rótulo.
+>[!TIP]
+>
+>En las opciones que definen los valores predeterminados (por ejemplo, PREDETERMINADO), ese valor hace referencia a la configuración que tenía cuando se especificó originalmente el rótulo.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -157,11 +161,11 @@ En las opciones que definen los valores predeterminados (por ejemplo, PREDETERMI
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Fuente </td> 
-   <td colname="2"> <p>Tipo de fuente. </p> <p>Solo se puede establecer en un valor definido por la enumeración <span class="codeph"> TextFormat.Font </span> y que represente, por ejemplo, un solo espacio con o sin serifs. </p> <p>Sugerencia:  Las fuentes disponibles en un dispositivo pueden variar y se utilizan sustituciones cuando es necesario. Monospace con serifs se utiliza generalmente como sustituto, aunque esta sustitución puede ser específica del sistema. </p> </td> 
+   <td colname="2"> <p>Tipo de fuente. </p> <p>Solo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Font </span> y que represente, por ejemplo, un solo espacio con o sin serifs. </p> <p>Sugerencia:  Las fuentes disponibles en un dispositivo pueden variar y se utilizan sustituciones cuando es necesario. Monospace con serifs se utiliza generalmente como sustituto, aunque esta sustitución puede ser específica del sistema. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Tamaño </td> 
-   <td colname="2"> <p>Tamaño del rótulo. </p> <p> Solo se puede establecer en un valor definido por la enumeración <span class="codeph"> TextFormat.Size </span> : 
+   <td colname="2"> <p>Tamaño del rótulo. </p> <p> Solo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Size </span> : 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIO </span> - Tamaño estándar </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE </span> - Aproximadamente 30% mayor que medio </li> 
@@ -171,11 +175,11 @@ En las opciones que definen los valores predeterminados (por ejemplo, PREDETERMI
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Borde de fuente </td> 
-   <td colname="2"> <p>Efecto utilizado para el borde de la fuente, como elevado o ninguno. </p> <p>Solo se puede establecer en un valor definido por la enumeración <span class="codeph"> TextFormat.FontEdge </span> . </p> </td> 
+   <td colname="2"> <p>Efecto utilizado para el borde de la fuente, como elevado o ninguno. </p> <p>Solo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.FontEdge </span> . </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Color de fuente </td> 
-   <td colname="2"> <p>Color de fuente. </p> <p>Solo se puede establecer en un valor definido por la enumeración <span class="codeph"> TextFormat.Color </span> . </p> </td> 
+   <td colname="2"> <p>Color de fuente. </p> <p>Solo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Color </span> . </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Color de borde </td> 
