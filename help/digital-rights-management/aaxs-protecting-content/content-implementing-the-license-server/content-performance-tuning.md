@@ -3,7 +3,10 @@ seo-title: Ajuste del rendimiento
 title: Ajuste del rendimiento
 uuid: bb5321a0-48ef-49cb-aaf0-00d7ab9562fe
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '161'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ Utilice las siguientes sugerencias para ayudar a aumentar el rendimiento:
 * El uso de un HSM de red puede ser considerablemente más lento que el uso de un HSM conectado directamente.
 * Para mejorar el rendimiento, si lo desea, puede activar la compatibilidad nativa con operaciones criptográficas mediante la implementación de las bibliotecas específicas de la plataforma situadas en la carpeta &quot;thirdparty/cryptoj&quot; del SDK. Para habilitar la compatibilidad nativa, agregue la biblioteca para su plataforma (jsafe.dll para Windows o libjsafe.so para Linux) a la ruta.
 
-   >[!NOTE] {class=&quot;- topic/note &quot;}
+   >[!NOTE]
    >
    >Si ejecuta varias aplicaciones web en la misma instancia de Tomcat y tiene `jsafe.dll` en la ruta, solo la primera aplicación web que se cargue podrá cargar la `jsafe.dll` biblioteca. Por lo tanto, solo la primera aplicación web obtiene el beneficio de la compatibilidad nativa. En esos casos, para mejorar el rendimiento de todas las aplicaciones web, coloque `cryptoj.jar`fuera del archivo de la GUERRA. Por ejemplo, en el `<tomcat_installation_folder>/lib` directorio.
 
