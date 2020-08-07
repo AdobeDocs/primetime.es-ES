@@ -1,19 +1,22 @@
 ---
-description: Puede utilizar las funciones del sistema Primetime Digital Rights Management (DRM) para proporcionar un acceso seguro al contenido de vídeo. Como alternativa, puede utilizar soluciones DRM de terceros como alternativa a la solución DRM integrada de Adobe Primetime.
+description: Puede utilizar las funciones del sistema Primetime Digital Rights Management (DRM) para proporcionar un acceso seguro al contenido del vídeo. Como alternativa, puede utilizar soluciones DRM de terceros como alternativa a la solución DRM integrada de Primetime de Adobe.
 keywords: DRM;DASH;HLS
-seo-description: Puede utilizar las funciones del sistema Primetime Digital Rights Management (DRM) para proporcionar un acceso seguro al contenido de vídeo. Como alternativa, puede utilizar soluciones DRM de terceros como alternativa a la solución DRM integrada de Adobe Primetime.
+seo-description: Puede utilizar las funciones del sistema Primetime Digital Rights Management (DRM) para proporcionar un acceso seguro al contenido del vídeo. Como alternativa, puede utilizar soluciones DRM de terceros como alternativa a la solución DRM integrada de Primetime de Adobe.
 seo-title: Información general sobre la interfaz de DRM de Primetime
 title: Información general sobre la interfaz de DRM de Primetime
 uuid: 5e794147-cc58-448c-b8ec-065e80ef01fd
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '464'
+ht-degree: 0%
 
 ---
 
 
 # Información general sobre la interfaz de DRM de Primetime {#primetime-drm-interface-overview}
 
-Puede utilizar las funciones del sistema Primetime Digital Rights Management (DRM) para proporcionar un acceso seguro al contenido de vídeo. Como alternativa, puede utilizar soluciones DRM de terceros como alternativa a la solución DRM integrada de Adobe Primetime.
+Puede utilizar las funciones del sistema Primetime Digital Rights Management (DRM) para proporcionar un acceso seguro al contenido del vídeo. Como alternativa, puede utilizar soluciones DRM de terceros como alternativa a la solución DRM integrada de Primetime de Adobe.
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
@@ -23,7 +26,7 @@ El elemento clave del lado del cliente del sistema de administración de derecho
 
 Primetime DRM proporciona un flujo de trabajo escalable y eficaz para implementar la protección de contenido en aplicaciones TVSDK. Para proteger y administrar los derechos del contenido de vídeo, cree una licencia para cada archivo de medios digitales.
 
-TVSDK admite la integración de DRM Primetime como flujos de trabajo de DRM personalizados. Esto significa que la aplicación debe implementar los flujos de trabajo de autenticación DRM antes de reproducir el flujo mediante Flash DRMManager. Para habilitarlo, MediaPlayer le proporciona el administrador de DRM para la autenticación.
+TVSDK admite la integración de DRM Primetime como flujos de trabajo DRM personalizados. Esto significa que la aplicación debe implementar los flujos de trabajo de autenticación DRM antes de reproducir el flujo mediante Flash DRMManager. Para habilitarlo, MediaPlayer le proporciona el administrador de DRM para la autenticación.
 
 Consulte el código del reproductor de muestra DRM incluido en el paquete TVSDK.
 
@@ -43,9 +46,9 @@ TVSDK emite una `PTMediaPlayerItemDRMMetadataChanged` notificación cuando cambi
 
 Si el flujo protegido por DRM está codificado con varias velocidades de bits (MBR), los metadatos DRM que se utilizan para la lista de reproducción variante deben ser los mismos que los metadatos que se utilizan en todos los flujos de velocidad de bits.
 
-[!TIP] {important=&quot;high&quot;}
+[!TIP]
 
-Al hacer referencia a direcciones URL de recursos protegidos por DRM en la aplicación de iOS, el parámetro de cadena de consulta `?faxs=1` debe agregarse a la dirección URL M3U8 de nivel de conjunto (MBR). Por ejemplo:
+Al hacer referencia a URL de recursos protegidos por DRM en la aplicación de iOS, el parámetro de cadena de consulta `?faxs=1` debe agregarse a la URL M3U8 de nivel de conjunto (MBR). Por ejemplo:
 
 ```
 https://your.domain.com/hls/[...]/index.m3u8?faxs=1
