@@ -5,7 +5,10 @@ seo-title: Archivos de registro
 title: Archivos de registro
 uuid: 4498fe60-65af-4f99-8f9b-e85013d0c9e9
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '213'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Los archivos de registro generados por la aplicación Adobe Primetime DRM Server for Protected Streaming se encuentran en el directorio especificado por LicenseServer.LogRoot.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Si los archivos de registro actuales se eliminan o mueven mientras se ejecuta el servidor, es posible que no se vuelva a crear el archivo de registro. Por lo tanto, se puede eliminar parte de la información de registro.
 
