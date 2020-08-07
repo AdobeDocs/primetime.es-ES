@@ -5,7 +5,10 @@ seo-title: Códigos de notificación de ERROR
 title: Códigos de notificación de ERROR
 uuid: cea75277-7747-4f9b-ad59-98f9f1a5ac2f
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 5%
 
 ---
 
@@ -40,7 +43,7 @@ La mayoría de los errores contienen metadatos relevantes, por ejemplo, la direc
    <td colname="1"><span class="codeph"> 100000 </span> </td> 
    <td colname="2"><span class="codeph"> DRM_ERROR </span> </td> 
    <td colname="3"> </td> 
-   <td colname="4"><span class="codeph"> DESCRIPCIÓN DE MAJOR_DRM_CODE </span><span class="codeph"> MINOR_DRM_CODE </span><span class="codeph"></span> </td> 
+   <td colname="4"><span class="codeph"> DESCRIPCIÓN DE MAJOR_DRM_CODE </span><span class="codeph"> MINOR_DRM_CODE </span><span class="codeph"> </span> </td> 
    <td colname="5"></td> 
   </tr> 
   <tr rowsep="1"> 
@@ -123,7 +126,7 @@ La mayoría de los errores contienen metadatos relevantes, por ejemplo, la direc
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 104006 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_UNREACHABLE </span> </td> 
+   <td colname="2"><span class="codeph"> AD_INACCESIBLE </span> </td> 
    <td colname="3"> Ninguno </td> 
    <td colname="4"> Ninguno </td> 
    <td colname="5"> </td> 
@@ -249,12 +252,14 @@ La mayoría de los errores contienen metadatos relevantes, por ejemplo, la direc
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 170011 </span> </td> 
-   <td colname="2"><span class="codeph"> AD_TARGET_DURATION_INCOMPATIBLE </span> </td> 
+   <td colname="2"><span class="codeph"> AD_DESTINATARIO_DURATION_INCOMPATIBLE </span> </td> 
    <td colname="3"> Ninguno </td> 
    <td colname="4"> <span class="codeph"> AD_ASSET</span> </td> 
-   <td colname="5"> <p>La duración de TARGET de la publicidad es superior a la duración de TARGET del contenido. </p> </td> 
+   <td colname="5"> <p>La duración del DESTINATARIO de la publicidad es mayor que la duración del DESTINATARIO del contenido. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
->[!NOTE] adID y el origen (URL) se pueden recuperar mediante el `PTAdAsset` en los metadatos de notificación con la `AD_ASSET` clave.
+>[!NOTE]
+>
+>adID y el origen (URL) se pueden recuperar mediante el `PTAdAsset` en los metadatos de notificación con la `AD_ASSET` clave.
