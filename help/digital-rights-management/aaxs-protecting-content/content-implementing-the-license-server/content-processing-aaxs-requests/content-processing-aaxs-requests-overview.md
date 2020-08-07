@@ -3,7 +3,10 @@ seo-title: Información general
 title: Información general
 uuid: 870c32f5-1119-4fec-abed-25e51dd1ebe3
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '312'
+ht-degree: 0%
 
 ---
 
@@ -12,11 +15,11 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 El método general para gestionar solicitudes es crear un controlador, analizar la solicitud, establecer los datos de respuesta o el código de error y cerrar el controlador.
 
-La clase base utilizada para controlar la interacción de una solicitud o respuesta es `com.adobe.flashaccess.sdk.protocol.MessageHandlerBase`. Se utiliza una instancia de la `HandlerConfiguration` clase para inicializar el controlador. `HandlerConfiguration` almacena información de configuración del servidor, incluidas las credenciales de transporte, la tolerancia de marca de hora, las listas de actualizaciones de directivas y las listas de revocación. El controlador lee los datos de la solicitud y analiza la solicitud en una instancia de `RequestMessageBase`. El llamante puede examinar la información de la solicitud y decidir si devuelve un error o una respuesta correcta (las subclases de `RequestMessageBase` proporcionan un método para configurar los datos de respuesta).
+La clase base utilizada para controlar la interacción de una solicitud o respuesta es `com.adobe.flashaccess.sdk.protocol.MessageHandlerBase`. Se utiliza una instancia de la `HandlerConfiguration` clase para inicializar el controlador. `HandlerConfiguration` almacena información de configuración del servidor, incluidas las credenciales de transporte, la tolerancia de marca de hora, las listas de actualización de directiva y las listas de revocación. El controlador lee los datos de la solicitud y los analiza en una instancia de `RequestMessageBase`. El llamante puede examinar la información de la solicitud y decidir si devuelve un error o una respuesta correcta (las subclases de `RequestMessageBase` proporcionan un método para configurar los datos de respuesta).
 
 Si la solicitud es correcta, configure los datos de respuesta; de lo contrario, invoque `RequestMessageBase.setErrorData()` si se produce un error. Siempre finalice la implementación invocando el `close()` método (se recomienda que `close()` se llame en el `finally` bloque de una `try` instrucción). Consulte la documentación de referencia de la `MessageHandlerBase` API para ver un ejemplo de cómo invocar el controlador.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >El código de estado HTTP 200 (OK) debe enviarse en respuesta a todas las solicitudes procesadas por el controlador. Si no se pudo crear el controlador debido a un error de servidor, el servidor puede responder con otro código de estado, como 500 (error interno del servidor).
 
