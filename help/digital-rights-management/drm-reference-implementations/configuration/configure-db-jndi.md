@@ -5,14 +5,17 @@ seo-title: Configurar la base de datos del servidor de licencias
 title: Configurar la base de datos del servidor de licencias
 uuid: 6d34e849-1616-46bd-ad18-4f98e6c45af7
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 0%
 
 ---
 
 
 # Configurar la base de datos del servidor de licencias{#configure-the-license-server-database}
 
-Para configurar la base de datos de ejemplo configurando el esquema de base de datos y rellenando la base de datos con datos de ejemplo:
+Para configurar la base de datos de ejemplo, configure el esquema de la base de datos y rellene la base de datos con datos de ejemplo:
 
 1. Sube la línea de comandos de MySQL.
 
@@ -35,7 +38,7 @@ Para configurar la base de datos de ejemplo configurando el esquema de base de d
    Esta secuencia de comandos se encuentra en la `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\dbscript\ dbscript\` carpeta.
 1. Ejecute la [!DNL PopulateSampleDB] secuencia de comandos para rellenar los datos como lo hizo en el paso 2.
 
-   >[!NOTE] {class=&quot;- topic/note &quot;}
+   >[!NOTE]
    >
    >La primera vez que ejecute la [!DNL CreateSampleDB.sql] secuencia de comandos se producirá el siguiente error:
 
