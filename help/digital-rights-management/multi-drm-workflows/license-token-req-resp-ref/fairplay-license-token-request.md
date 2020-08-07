@@ -5,7 +5,10 @@ seo-title: Solicitud o respuesta del token de licencia de FairPlay
 title: Solicitud o respuesta del token de licencia de FairPlay
 uuid: 10d4a760-8895-4fb3-8288-1c3a640df587
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '829'
+ht-degree: 5%
 
 ---
 
@@ -43,16 +46,16 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
    https://fp.service.expressplay.com:80/hms/fp/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
    ```
 
-**Parámetros de consulta de solicitud**
+**Parámetros de Consulta de solicitudes**
 
-**Tabla 3: Parámetros de consulta de token**
+**Tabla 3: Parámetros de Consulta de token**
 
 | Parámetro de consulta | Descripción | ¿Requerido? |
 |--- |--- |--- |
 | customerAuthenticator Autenticación de cliente como parámetro de consulta customerAuthenticator FairPlay | Ésta es la clave de API del cliente, una para los entornos de producción y prueba. Puede encontrarlo en la ficha Panel de administración de ExpressPlay. | Sí |
-| errorFormat | html o json. Si html (valor predeterminado), se proporciona una representación HTML de cualquier error en el cuerpo de entidad de la respuesta. Si se especifica json, se devuelve una respuesta estructurada en formato JSON. Consulte Errores [](https://www.expressplay.com/developer/restapi/#json-errors) JSON para obtener más información. El tipo de MIME de la respuesta es text/uri-list en caso de éxito, text/html para el formato de error HTML o application/json para el formato de error JSON. | No |
+| errorFormat | html o json. Si html (valor predeterminado), se proporciona una representación HTML de cualquier error en el cuerpo de entidad de la respuesta. Si se especifica json, se devuelve una respuesta estructurada en formato JSON. Consulte Errores [](https://www.expressplay.com/developer/restapi/#json-errors) JSON para obtener más información. El tipo de MIME de la respuesta es text/uri-lista si culmina con éxito, text/html para el formato de error HTML o application/json para el formato de error JSON. | No |
 
-**Tabla 4: Parámetros de consulta de licencia**
+**Tabla 4: Parámetros de Consulta de licencias**
 
 | **Parámetro de consulta** | **Descripción** | **¿Requerido?** |
 |---|---|---|
@@ -65,7 +68,7 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
 | `rentalDuration` | Duración del alquiler en segundos (predeterminado - 0) | No |
 | `fpExtension` | Un breve ajuste de formulario `extensionType` y `extensionPayload`, como una cadena separada por comas. Por ejemplo: […] `&fpExtension=wudo,AAAAAA==&`[…] | No, se puede utilizar cualquier número |
 
-**Tabla 5: Parámetros de consulta de restricción de tokens**
+**Tabla 5: Parámetros de Consulta de restricción de tokens**
 
 <table id="table_ar3_lsx_pv">  
  <thead> 
@@ -84,11 +87,11 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
  </tbody> 
 </table>
 
-**Tabla 6: Parámetros de consulta de correlación**
+**Tabla 6: Parámetros de Consulta de correlación**
 
 | **Parámetro de consulta** | **Descripción** | **¿Requerido?** |
 |---|---|---|
-| `cookie` | Una cadena arbitraria de hasta 32 caracteres, que se incluye en el token y se registra en el servidor de canje de tokens. Se puede utilizar para correlacionar las entradas de registro en el servidor de canje y las de los servidores del proveedor de servicios. | No |
+| `cookie` | Una cadena arbitraria de hasta 32 caracteres, que se incluye en el token y se registra en el servidor de canje de tokens. Se puede utilizar para correlacionar las entradas de registro en el servidor de canje y las de los servidores del proveedor de servicio. | No |
 
 **Respuesta**
 
@@ -170,7 +173,7 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
   </tr> 
   <tr> 
    <td> -2031 </td> 
-   <td> Cuenta de servicio deshabilitada </td> 
+   <td> Cuenta deshabilitada de servicios </td> 
   </tr> 
   <tr> 
    <td> -2033 </td> 
