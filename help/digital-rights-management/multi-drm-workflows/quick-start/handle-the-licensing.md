@@ -5,7 +5,10 @@ seo-title: Licencias
 title: Licencias
 uuid: 9f433d62-5609-4d88-95fd-c1e7c0f6aa75
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
 
 La licencia es el mecanismo principal mediante el cual se permite o se deniega a los usuarios la capacidad de reproducir un fragmento de contenido de vídeo protegido. A un usuario legítimo (autorizado) se le puede otorgar una licencia (una clave) para descifrar y reproducir un fragmento específico del contenido cifrado de su proveedor de contenido.
 
-Antes de que la aplicación o la página web de un usuario final pueda reproducir contenido protegido con DRM, debe adquirir un token de un servidor de asignación de derechos o de tienda que usted, el cliente, utilice. Adobe proporciona un servidor de referencia de muestra con este fin: Servidor [de referencia: Ejemplo de ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+Antes de que la aplicación o la página web de un usuario final pueda reproducir contenido protegido con DRM, debe adquirir un token de un servidor de asignación de derechos o de tienda que usted, el cliente, utilice. Adobe proporciona un servidor de referencia de muestra para este fin: [Servidor de referencia: Ejemplo de ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
 El servidor de asignación de derechos o de tienda solicitará un token de licencia del servidor ExpressPlay correspondiente, solo después de comprobar con sus propios sistemas back-end si el usuario específico tiene derecho a ver el contenido solicitado. La respuesta devuelta por la solicitud de token de licencia es una URL lista para usar para el servidor de licencias o bien la respuesta contiene la URL en una estructura JSON, según la solución DRM con la que esté trabajando.
 
@@ -27,7 +30,7 @@ El servidor de asignación de derechos o de tienda solicitará un token de licen
 
 1. Realice la solicitud del token de licencia.
 
-   En un escenario de inicio rápido, en el que solo desea asegurarse de que los distintos componentes implicados están funcionando juntos, puede que desee utilizar algo como [!DNL curl] hacer su solicitud de token de licencia (en lugar de obtener inicialmente una aplicación y ejecutarla y probar las llamadas desde allí). Por ejemplo:
+   En un caso de inicio rápido, en el que solo desea asegurarse de que los distintos componentes implicados funcionan en conjunto, puede que desee utilizar algo como [!DNL curl] hacer su solicitud de token de licencia (en lugar de obtener inicialmente una aplicación y ejecutarla y probar las llamadas desde allí). Por ejemplo:
 
    * Amplia:
 
