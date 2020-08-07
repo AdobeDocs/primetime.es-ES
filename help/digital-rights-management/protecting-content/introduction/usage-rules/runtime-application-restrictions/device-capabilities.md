@@ -5,7 +5,10 @@ seo-title: Funciones de dispositivo necesarias para reproducir contenido protegi
 title: Funciones de dispositivo necesarias para reproducir contenido protegido
 uuid: 1490711b-65d9-4716-8779-ae1da7d2c82c
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '131'
+ht-degree: 0%
 
 ---
 
@@ -39,9 +42,9 @@ Los atributos siguientes pueden identificar las capacidades del dispositivo:
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
->Esta regla de uso es compatible con los clientes DRM de Adobe Primetime versión 2.0.2 y posterior. El comportamiento de los clientes más antiguos depende de la versión mínima del cliente admitida por el servidor de licencias.
+>Esta regla de uso es compatible con los clientes de Adobe Primetime DRM versión 2.0.2 y posterior. El comportamiento de los clientes más antiguos depende de la versión mínima del cliente admitida por el servidor de licencias.
 >
 >Consulte Versión [](../../../../protecting-content/setting-up-the-sdk/setup-dev-env.md)mínima del cliente.
 
