@@ -3,7 +3,10 @@ seo-title: Funciones de dispositivo necesarias para reproducir contenido protegi
 title: Funciones de dispositivo necesarias para reproducir contenido protegido
 uuid: 16ed73d9-e02f-4c86-bf15-2d3e7122bf5a
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '132'
+ht-degree: 0%
 
 ---
 
@@ -37,7 +40,7 @@ Las capacidades del dispositivo pueden identificarse mediante los atributos espe
  </tbody> 
 </table>
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Esta regla de uso es compatible con los clientes de Adobe Access versión 2.0.2 y posterior. El comportamiento de los clientes más antiguos depende de la versión mínima del cliente admitida por el servidor de licencias. Consulte Versión [mínima del cliente](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md).
 
