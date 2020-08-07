@@ -3,14 +3,17 @@ seo-title: Uso de la línea de comandos
 title: Uso de la línea de comandos
 uuid: 5f24f18d-09ef-400a-9404-50a9fcf4316d
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '567'
+ht-degree: 0%
 
 ---
 
 
 # Uso de la línea de comandos {#command-line-usage}
 
-Antes de utilizar Media Packager, asegúrese de que cumple los requisitos enumerados en Requisitos y de que el archivo de configuración contiene la información necesaria (consulte Archivo de configuración en *Uso de las implementaciones* de referencia de Adobe Access.
+Antes de utilizar Media Packager, asegúrese de que cumple los requisitos enumerados en Requisitos y de que el archivo de configuración contiene la información necesaria (consulte Archivo de configuración en *Uso de las implementaciones* de referencia de acceso a Adobe.
 
 Media Packager está en el [!DNL \Reference Implementation\Command Line tools] directorio del DVD. Para cifrar un solo archivo, utilice la sintaxis siguiente:
 
@@ -48,7 +51,7 @@ java -jar AdobePackager.jar
 * `sourcefiles` es una serie de entradas de origen delimitadas por espacios en blanco que representan los archivos que se van a codificar.
 * `dest-directory` especifica dónde se escribirá el contenido cifrado. Los archivos cifrados se guardarán en esta carpeta utilizando los mismos nombres de archivo que los archivos de origen, pero el directorio no debe ser el directorio que contiene los archivos de origen.
 
-Para ver información sobre un archivo cifrado, utilice la sintaxis siguiente:
+Para vista de información sobre un archivo cifrado, utilice la sintaxis siguiente:
 
 ```
 java -jar AdobePackager.jar -d  
@@ -59,7 +62,7 @@ java -jar AdobePackager.jar -d
 
 * `encryptedfile` es el archivo cifrado.
 
-Para ver información sobre un archivo de metadatos, utilice la sintaxis siguiente:
+Para vista de información sobre un archivo de metadatos, utilice la sintaxis siguiente:
 
 ```
 java -jar AdobePackager.jar -dm <metadatafile> [-e]
@@ -67,7 +70,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
 
 * `metadatafile` es un [!DNL .metadata] archivo que contiene los metadatos DRM.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Durante el empaquetado, Media Packager ya no generará un archivo .header de forma predeterminada. Para generar este archivo, utilice la `-h` opción durante el empaquetado.
 
