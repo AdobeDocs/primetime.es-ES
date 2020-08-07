@@ -3,7 +3,10 @@ seo-title: Configuración de HSM
 title: Configuración de HSM
 uuid: 1cc5be99-c24c-4c1e-9348-fb69f96d8ca5
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '147'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +22,7 @@ No se requiere el uso de un HSM, pero se recomienda. La implementación de refer
 
 Si ve sus credenciales en la lista, el HSM está configurado correctamente.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Desde Java 1.7, Sun Java de 64 bits para Windows no admite las interfaces PKCS11 que requiere Adobe Access DRM para comunicarse con dispositivos HSM. Si planea utilizar un HSM, utilice una versión de 32 bits de Java o un JDK que admita las interfaces PKCS11 completas.
 
