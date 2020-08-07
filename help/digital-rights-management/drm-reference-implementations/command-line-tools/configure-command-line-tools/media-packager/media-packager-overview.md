@@ -5,7 +5,10 @@ seo-title: Información general
 title: Información general
 uuid: f4474837-9460-479d-89c2-dd697e0fb997
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '1317'
+ht-degree: 0%
 
 ---
 
@@ -60,7 +63,7 @@ java -jar AdobePackager.jar
 * `sourcefiles` - Una serie de entradas de origen delimitadas por espacios en blanco para los archivos que desea cifrar.
 * `dest-directory` - El directorio de destino en el que desea escribir contenido cifrado. Los archivos cifrados se guardan automáticamente en este directorio utilizando los mismos nombres de archivo que los archivos de origen. Sin embargo, el directorio de destino no puede incluir ningún archivo de origen.
 
-**Ver información sobre un archivo cifrado:**
+**Información de vista sobre un archivo cifrado:**
 
 ```
 java -jar AdobePackager.jar -d  
@@ -69,7 +72,7 @@ java -jar AdobePackager.jar -d
 </i class="+ topic>
 ```
 
-**Ver información sobre un archivo de metadatos:**
+**Información de vista sobre un archivo de metadatos:**
 
 ```
 java -jar AdobePackager.jar -dm <metadatafile> [-e]
@@ -77,7 +80,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
 
 * `metadatafile` es un [!DNL .metadata] archivo que incluye metadatos DRM.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Durante el empaquetado, Media Packager ya no puede generar un [!DNL .header] archivo de forma predeterminada. Para generar un [!DNL .header] archivo, utilice la `-h` opción durante el empaquetado.
 
@@ -97,11 +100,11 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-d <span class="+ topic/ph pr-d/codeph codeph"> archivo cifrado </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Permite ver información sobre un archivo que ya se ha empaquetado. </p> <p class="- topic/p ">Los archivos de origen y destino no son obligatorios. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Permite realizar vistas de información sobre un archivo que ya se ha empaquetado. </p> <p class="- topic/p ">Los archivos de origen y destino no son obligatorios. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> metadatafile </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Permite ver información sobre metadatos existentes. </p> <p class="- topic/p ">Los archivos de origen y destino no son obligatorios. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Permite realizar vistas de información sobre metadatos existentes. </p> <p class="- topic/p ">Los archivos de origen y destino no son obligatorios. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-e </p> </td> 
@@ -144,7 +147,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
 
 >[!NOTE]
 >
->Para los nombres de propiedad que incluyen* n*, *n* representa un entero que comienza por 1 y aumenta para cada instancia de la propiedad.
+>Para los nombres de propiedad que incluyen* n*, *n* representa un entero que inicio con 1 y aumenta para cada instancia de la propiedad.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_dx4_mpy_n4"> 
  <thead class="- topic/thead "> 
@@ -168,7 +171,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.video.level</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indica el nivel de codificación de vídeo. </p> <p class="- topic/p ">Se utiliza un valor <span class="codeph"> alto</span> para cifrar todo el contenido de vídeo, mientras que los valores <span class="codeph"> medios</span> y <span class="codeph"> bajos</span> se utilizan para cifrar partes del contenido de vídeo para archivos mp4 que incluyen contenido H.264. </p> <p class="- topic/p ">value = <span class="codeph"> high| medium| low</span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indica el nivel de codificación de vídeo. </p> <p class="- topic/p ">Se utiliza un valor <span class="codeph"> alto</span> para cifrar todo el contenido de vídeo, mientras que los valores <span class="codeph"> medios</span> y <span class="codeph"> bajos</span> se utilizan para cifrar partes del contenido de vídeo para archivos mp4 que incluyen contenido H.264. </p> <p class="- topic/p ">value = <span class="codeph"> high | medium | low</span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.secondsUnencrypt</span> </td> 
