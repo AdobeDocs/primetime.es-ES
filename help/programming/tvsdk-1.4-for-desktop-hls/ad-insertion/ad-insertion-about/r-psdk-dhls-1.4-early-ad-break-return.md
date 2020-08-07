@@ -5,7 +5,10 @@ seo-title: Implementación de un retorno de pausa publicitaria temprano
 title: Implementación de un retorno de pausa publicitaria temprano
 uuid: 984b6ed0-c929-49a3-9553-e30d1a7758ed
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '413'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Para la inserción de anuncios en directo, es posible que tenga que salir de una pausa publicitaria antes de que todas las publicidades del desglose se reproduzcan hasta la finalización.
 
->[!NOTE] {othertype=&quot;Requisito previo&quot;}
+>[!NOTE]
 >
 >Debe suscribirse a los marcadores de anuncios de empalme de salida/entrada ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN`, y `#EXT-X-CUE`).
 
@@ -69,7 +72,7 @@ En el ejemplo de un marcador con diferentes tipos, si la duración del `SpliceOu
 
 **Dos marcadores independientes**
 
-El escenario más típico es un `SpliceOut` marcador con una duración distinta de cero y que no necesita los `SpliceIn` marcadores de emparejamiento. Aquí, un marcador de emparejamiento marca el final de la pausa publicitaria durante la reproducción de la pausa publicitaria, pero la pausa publicitaria se corta en la posición del `SpliceIn` `SpliceIn` marcador y el contenido principal comienza a reproducirse en esta posición.
+El escenario más típico es un `SpliceOut` marcador con una duración distinta de cero y que no necesita los `SpliceIn` marcadores de emparejamiento. Aquí, un `SpliceIn` marcador de emparejamiento marca el final de la pausa publicitaria durante la reproducción de pausa publicitaria, pero la pausa publicitaria se corta en la posición del `SpliceIn` marcador y los inicios de contenido principal se reproducen en esta posición.
 
 Por ejemplo, a continuación se muestran dos marcadores independientes:
 
