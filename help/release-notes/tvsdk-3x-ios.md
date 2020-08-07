@@ -2,7 +2,7 @@
 title: Notas de la versión de TVSDK 3.12 para iOS
 description: Las notas de la versión de TVSDK 3.12 para iOS describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de dispositivo en TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -94,7 +94,7 @@ TVSDK 3.3 ahora es compatible con iOS 11 SDK. Todas las API obsoletas se han sus
 
 **Compatibilidad adicional de registro (fase 2)**
 
-Compatibilidad Añadida para notificaciones de error, en caso de:
+Compatibilidad añadida para notificaciones de error, en caso de:
 
 * La versión HLS de la publicidad utiliza un nivel mayor que el contenido.
 
@@ -106,7 +106,7 @@ Compatibilidad Añadida para notificaciones de error, en caso de:
 
 * **Compatibilidad** con el registro adicional Añadió la compatibilidad con las notificaciones descriptivas en caso de que se produjeran errores en la reproducción del anuncio.
 
-* **Ahora se admiten** flujos CMAF cifrados de Fairplay Añadidos compatibles conflujos CMAF cifrados de Fairplay con reproducción de códec AVC.
+* **Ahora se admiten** flujos CMAF cifrados de Fairplay añadidos compatibles conflujos CMAF cifrados de Fairplay con reproducción de códec AVC.
 
 **Versión 3.0.1**
 
@@ -118,7 +118,7 @@ Esta versión no incorpora nuevas funciones ni mejoras.
 
 * Justo en el tiempo: resolución de publicidades más cercanas a los marcadores de publicidad.
 
-Propiedad `enableDelayAdLoading` Añadida de tipo booleano en la interfaz de nivel de aplicación para activar JIT. Si `enableDelayAdLoading` es NO, pasará `setadMetadata.delayAdLoading`a True (propiedad de la interfaz PTAdMetadata).
+Propiedad `enableDelayAdLoading` añadida de tipo booleano en la interfaz de nivel de aplicación para activar JIT. Si `enableDelayAdLoading` es NO, pasará `setadMetadata.delayAdLoading`a True (propiedad de la interfaz PTAdMetadata).
 
 Con esta propiedad habilitada, TVSDK resuelve cada pausa publicitaria anterior a su posición en función del valor de tolerancia definido. De forma predeterminada, `delayAdTolerance` se establece en 5 segundos.
 
@@ -138,7 +138,7 @@ Esta versión no incorpora nuevas funciones ni mejoras.
    * El segundo anuncio se reproduce durante el resto de la duración (20 segundos) seguido del tercer anuncio.
    * Los rastreadores de anuncios para el anuncio parcial reproducido (segundo anuncio) no se activan. Los rastreadores solo para el tercer anuncio se activan.
 
-* Se Añadió la propiedad enableVodPreroll del tipo booleano en la interfaz PTAdMetadata. La propiedad se puede utilizar para habilitar el predesplazamiento en un flujo de VoD. Si enableVodPreroll es NO, PSDK no reproduce pre-roll. Esto, sin embargo, no afecta a los midrolls. El valor predeterminado de enableVodPreroll es YES.
+* Se añadió la propiedad enableVodPreroll del tipo booleano en la interfaz PTAdMetadata. La propiedad se puede utilizar para habilitar el predesplazamiento en un flujo de VoD. Si enableVodPreroll es NO, PSDK no reproduce pre-roll. Esto, sin embargo, no afecta a los midrolls. El valor predeterminado de enableVodPreroll es YES.
 * la API ClosedCaptionDisplayEnabled de la interfaz de PTMediaPlayer está marcada como obsoleta desde iOS v1.4.43 en adelante. Para determinar si hay subtítulos opcionales disponibles para un PTMediaPlayerItem determinado, examine la propiedad subtitlesOptions de PTMediaPlayerMediaItem.
 
 **Versión 1.4.42**
@@ -173,23 +173,25 @@ Integrar y certificar VHL 2.0 en iOS TVSDK : Reduzca la barrera en la implementa
 
 **Información de publicidad de red**
 
-Las API de TVSDK ahora proporcionan información adicional sobre las respuestas de VAST de terceros. La ID de publicidad, el sistema de publicidad y las extensiones de publicidad VAST se proporcionan en `PTNetworkAdInfo` clase a la que se puede acceder mediante `networkAdInfo` la propiedad en un recurso de publicidad. Esta información se puede utilizar para la integración con otras plataformas de Ad Analytics como **Moat Analytics**.
+Las API de TVSDK ahora proporcionan información adicional sobre las respuestas VAST de terceros. La ID de publicidad, el sistema de publicidad y las extensiones de publicidad VAST se proporcionan en `PTNetworkAdInfo` clase a la que se puede acceder mediante `networkAdInfo` la propiedad en un recurso de publicidad. Esta información se puede utilizar para la integración con otras plataformas de análisis de publicidad, como **Moat Analytics**.
 
 **Versión 1.4.31**
 
 * **Métricas** de facturación Para dar cabida a los clientes que solo desean pagar por lo que utilizan, en lugar de una tasa fija independientemente del uso real, Adobe recopila métricas de uso y utiliza estas métricas para determinar cuánto facturar a los clientes.
 
-   Cada vez que TVSDK genera un evento de inicio de flujo, el reproductor inicio enviar mensajes HTTP periódicamente al sistema de facturación de Adobe. El período, conocido como duración facturable, puede ser diferente para VOD estándar, VOD pro (anuncios intermedios habilitados) y contenido activo. La duración predeterminada para cada tipo de contenido es de 30 minutos, pero el contrato con Adobe determina los valores reales.
+   Cada vez que TVSDK genera un evento de inicio de flujo, el reproductor inicio enviar mensajes HTTP periódicamente al sistema de facturación del Adobe. El período, conocido como duración facturable, puede ser diferente para VOD estándar, VOD pro (anuncios intermedios habilitados) y contenido activo. La duración predeterminada para cada tipo de contenido es de 30 minutos, pero el contrato con Adobe determina los valores reales.
 
-* **Compatibilidad con Multi-CDN para anuncios** CRS TVSDK ahora es compatible con Multi-CDN para anuncios de CRS. Al proporcionar detalles de FTP para las publicidades de CRS, puede especificar ubicaciones de CDN distintas de la CDN predeterminada de propiedad de Adobe, como Akamai.
+* **Compatibilidad con Multi-CDN para anuncios** CRS TVSDK ahora es compatible con Multi-CDN para anuncios de CRS. Al proporcionar detalles de FTP para las publicidades de CRS, puede especificar ubicaciones de CDN, distintas de la CDN de propiedad del Adobe predeterminada, como Akamai.
 
 **Versión 1.4.29**
 
 En la `PTSDKConfig` clase, se ha agregado la API forceHTTPS.
 
-La `PTSDKConfig` clase proporciona métodos para aplicar SSL en las solicitudes realizadas a los servidores de Analytics, DRM y Video Primetime y de toma de decisiones. Para obtener más información, consulte los `forceHTTPS` métodos y `isForcingHTTPS` en esta clase. Si un manifiesto se carga a través de HTTPS, TVSDK conserva el uso de contenido de HTTPS y respeta este uso al cargar cualquier URL relativa de ese manifiesto.
+La `PTSDKConfig` clase proporciona métodos para aplicar SSL en las solicitudes realizadas a los servidores de decisiones de anuncios de Adobe Primetime, DRM y Video Analytics. Para obtener más información, consulte los `forceHTTPS` métodos y `isForcingHTTPS` en esta clase. Si un manifiesto se carga a través de HTTPS, TVSDK conserva el uso de contenido de HTTPS y respeta este uso al cargar cualquier URL relativa de ese manifiesto.
 
->[!NOTE] Las solicitudes a dominios de terceros, como píxeles de seguimiento de publicidad, URL de publicidad y contenido, y solicitudes similares, no se modifican, y es responsabilidad de los proveedores de contenido y los servidores de publicidad proporcionar direcciones URL compatibles con HTTPS.
+>[!NOTE]
+>
+>Las solicitudes a dominios de terceros, como píxeles de seguimiento de publicidad, URL de publicidad y contenido, y solicitudes similares, no se modifican, y es responsabilidad de los proveedores de contenido y los servidores de publicidad proporcionar direcciones URL compatibles con HTTPS.
 
 **Versión 1.4.18**
 
@@ -217,13 +219,15 @@ Primetime iOS TVSDK ahora es compatible con los elementos creativos de Javascrip
 
 * Actualmente no se admiten las siguientes funciones:
 
-   * Administración de derechos digitales (DRM)
+   * Digital Rights Management (DRM)
    * Letreros de publicidad
    * Lenguaje de marcado de TV (TVML)
 
 **Versión 1.4.13**
 
->[!NOTE] El módulo Nielsen se ha eliminado de la compilación de TVSDK, el TVSDK se actualizará en un futuro próximo con un nuevo módulo de integración de Nielsen.
+>[!NOTE]
+>
+>El módulo Nielsen se ha eliminado de la compilación de TVSDK, el TVSDK se actualizará en un futuro próximo con un nuevo módulo de integración de Nielsen.
 
 **Acontecimiento publicitario, encadenamiento margarita en la lógica de selección de anuncios (Zendesk #3103)**
 
@@ -247,7 +251,7 @@ Como parte de la actualización 1.4 de TVSDK, ahora también se admite entrar y 
 
 * **Asistencia para la individualización in situ**
 
-Compatibilidad con instalaciones in situ de Adobe Individualization Server para personalizar la solicitud de individualización del cliente para ir a otro extremo.
+Compatibilidad con instalaciones in situ del servidor de individualización de Adobe para personalizar la solicitud de individualización del cliente para ir a otro extremo.
 
 * **Protección de salida basada en resolución**
 
@@ -257,10 +261,10 @@ Las directivas DRM ahora pueden especificar la resolución más alta permitida, 
 
 * **Actualización de Video Heartbeat Library (VHL) a la versión 1.4.1.1**
 
-   * Se Añadió la capacidad de compilar diferentes casos de uso de análisis, desde otros SDK o reproductores, con Adobe Analytics Video Essentials.
+   * Se añadió la capacidad de compilar diferentes casos de uso de análisis, desde otros SDK o reproductores, con Adobe Analytics Video Essentials.
    * El seguimiento de anuncios se ha optimizado eliminando los `trackAdBreakStart` métodos y `trackAdBreakComplete` . La pausa publicitaria se deduce de las llamadas de método `trackAdStart` y `trackAdComplete` .
    * La `playhead` propiedad ya no es necesaria al rastrear anuncios.
-   * Compatibilidad Añadida con el ID de Visitante de Marketing Cloud.
+   * Se añadió la compatibilidad con el ID de Visitante de Marketing Cloud.
 
 * **Integración del SDK de Nielsen**
 
@@ -386,7 +390,7 @@ Se implementaron comprobaciones adicionales para tratar el caso cuando hay una d
 * **Ticket34801** - currentTime y localTime no se actualizaban al buscar una nueva posición durante el estado pausadoEl tiempo actual de Player ahora se puede establecer en cero en caso de que el reproductor esté en estado de pausa; antes, la hora actual se establecía en cero solo en estado de reproducción.
 
 * **Ticket35037** - La reproducción se bloquea con una dirección URL incorrecta al volver de la inserción de anuncios basada en señales.
-Se ha mejorado la corrección proporcionada para el problema cerrado Nº 34385 en la versión 1.4.42. Se Añadió el código de control de excepciones y comprobaciones isCanceled para que la cola de operaciones sea más sólida.
+Se ha mejorado la corrección proporcionada para el problema cerrado Nº 34385 en la versión 1.4.42. Se añadió el código de control de excepciones y comprobaciones isCanceled para que la cola de operaciones sea más sólida.
 
 **Versión 1.4.43**
 
@@ -424,7 +428,7 @@ Se ha mejorado la corrección proporcionada para el problema cerrado Nº 34385 e
 
 * (ZD#33815): los clientes no pueden actualizar sus reglas de CRS de normalización y priorización sin necesidad de actualizar la aplicación.
 
-   Se han Añadido las `getCRSRulesJsonURL` API y `setCRSRulesJsonURL` las API al iOS TVSDK.
+   Se han añadido las `getCRSRulesJsonURL` API y `setCRSRulesJsonURL` las API al iOS TVSDK.
 
 **Versión 1.4.41 (1.4.41.76)**
 
@@ -521,7 +525,7 @@ Ahora se controla el bloqueo debido a AdBreak vacío.
 
 * (ZD #30125): Los anuncios programáticos no funcionan en la plataforma iOS
 
-Compatibilidad Añadida con anuncios programáticos en iOS.
+Compatibilidad añadida con anuncios programáticos en iOS.
 
 * (ZD #30782) - #EXT-X-PROGRAMA-Notificación de FECHA-HORA
 
@@ -587,7 +591,7 @@ Habilitado mediante el envío de la dirección URL creativa original para la sol
 
 Este problema se resolvió actualizando la carga de recursos para que se vieran desde todos los paquetes disponibles.
 
-* (ZD# 27460) Primera llamada de anuncio de mitad de carrera: POST para `cdn.auditude.com` devolver 403.
+* (ZD# 27460) Primera llamada de anuncio de mitad de carrera: POST a `cdn.auditude.com` devolver 403.
 
 La nueva cuenta de CDN no puede gestionar una solicitud de CDN POST. Este problema se resolvió actualizando el código para que la solicitud de `cdn.auditude.com` publicidad sea GET en lugar de POST.
 
@@ -631,9 +635,9 @@ Este problema se resolvió proporcionando una solución alternativa para los flu
 
 En esta versión se han solucionado los siguientes problemas de TVSDK:
 
-* (ZD# 24180) Añada un encabezado personalizado para permitir la lista.
+* (ZD# 24180) Añada un encabezado personalizado en la lista de permitidos.
 
-Se ha agregado un nuevo encabezado personalizado a la lista de permitidos de TVSDK.
+Se ha agregado un nuevo encabezado personalizado a la lista de permitidos TVSDK.
 
 * (ZD# 25016) El flujo de conmutación por error se selecciona de forma aleatoria cuando se establecen los parámetros de control de ABR
 
@@ -653,7 +657,7 @@ Cuando el tiempo de inicio de la última pausa publicitaria del VMAP cae antes d
 
 * Video Heartbeat Library (VHL) se ha actualizado a la versión 1.5.9 para resolver los siguientes problemas:
 
-* (ZD #22351) VHL - Analytics: Duración de recursos de vídeo en directo
+* (ZD #22351) VHL - Análisis: Duración de recursos de vídeo en directo
 
 Este problema se resolvió agregando la API assetDuration a PTVideoAnalyticsTrackingMetadata para actualizar la duración del recurso para flujos interactivos/lineales y proporcionar una lógica para comprobar el flujo en directo.
 
@@ -661,11 +665,11 @@ Este problema se resolvió agregando la API assetDuration a PTVideoAnalyticsTrac
 
 Este problema es el mismo que ZD #22351.
 
-* (ZD #25908) VHL - Analytics: Adobe Heartbeat Evento Crash
+* (ZD #25908) VHL - Análisis: Adobe Heartbeat Evento bloqueo
 
 Este problema se resolvió actualizando la implementación para utilizar la última versión de VHL para iOS versión 1.5.9 con el fin de mejorar la estabilidad y el rendimiento.
 
-* (ZD #25956) VHL - Analytics: Bloquear al reproducir vídeos repetidamente
+* (ZD #25956) VHL - Análisis: Bloquear al reproducir vídeos repetidamente
 
 Este problema es el mismo que ZD #25908.
 
@@ -777,7 +781,7 @@ Este problema se resolvió actualizando la lógica para mostrar la vista del rep
 
 Este problema se resolvió actualizando VideoAnalyticsTracker para detectar correctamente el inicio/finalización de capítulos al realizar la transición entre los límites de capítulos y no capítulos.
 
-* (ZD #20784) - Analytics: Se completa el contenido de activación para transiciones de vídeo en directo
+* (ZD #20784) - Análisis: Se completa el contenido de activación para transiciones de vídeo en directo
 
 Este problema se resolvió agregando una lógica para activar manualmente la finalización de contenido durante una sesión de seguimiento de vídeo.
 
@@ -800,7 +804,7 @@ En la versión 1.4.23, se corrigió el bloqueo causado por la presencia de carac
 
 Este problema se resolvió administrando los caracteres no seguros y permitiendo que se reprodujeran los anuncios.
 
-* (ZD #22694) - PTMediaPlayer.  El reproductor oculta la Vista
+* (ZD #22694) - PTMediaPlayer.  El reproductor oculta la vista
 
 Este problema se resolvió actualizando la lógica para mostrar la vista del reproductor si un anuncio de VPAID no se puede reproducir.
 
@@ -816,7 +820,7 @@ Este problema se resolvió proporcionando protección adicional frente a los pro
 
 * (ZD #21782) - Código de error de iOS 10100
 
-Se ha solucionado el problema por el que el TVSDK devolvía un error 101000 al iniciar la reproducción en flujos DRM de Adobe Access.
+Se ha solucionado el problema por el que el TVSDK devolvía un error 101000 al iniciar la reproducción en flujos DRM de acceso a Adobe.
 
 * (ZD #21889): Falla la reproducción de anuncios en línea y contenido sin conexión
 
@@ -828,13 +832,13 @@ Este problema se resolvió mejorando el manejo de las etiquetas de publicidad VA
 
 * (ZD #22257) - El TVSDK no puede reproducir el flujo DRM
 
-Se ha solucionado el problema del TVSDK que devolvía un error 101000 al iniciar la reproducción en flujos DRM de Adobe Access.
+Se ha solucionado el problema del TVSDK que devolvía un error 101000 al iniciar la reproducción en flujos DRM de acceso a Adobe.
 
 **Versión 1.4.22** (1.4.22.627) para iOS 6.0+
 
 * (ZD #18709) - Bloqueo en TVSDK para iOS
 
-Se ha solucionado el problema de un bloqueo que se producía en algunos flujos protegidos con DRM de Adobe Access.
+Se ha solucionado el problema de un bloqueo que se producía en algunos flujos protegidos con DRM de acceso a Adobe.
 
 * (ZD #18850) - Actualice la lógica de selección creativa basada en las reglas de CRS
 
@@ -991,7 +995,7 @@ El TVSDK se bloqueaba en el sistema operativo Android M cuando la biblioteca TVS
 
 * (Zendesk #18072) - Android M - Bloqueo de aplicaciones
 
-Este bloqueo se produce al llamar a las API de MediaCodecList y MediaCodecInfo al comprobar si el perfil y el nivel son compatibles. Adobe está buscando la asistencia técnica de Google para obtener información adicional. Este problema se resolvió proporcionando un trabajo temporal cargando toda la información del códec con antelación para evitar llamar a estas API solo cuando se necesita información del códec.
+Este bloqueo se produce al llamar a las API de MediaCodecList y MediaCodecInfo al comprobar si el perfil y el nivel son compatibles. Adobe está buscando el soporte técnico de Google para una perspectiva adicional. Este problema se resolvió proporcionando un trabajo temporal cargando toda la información del códec con antelación para evitar llamar a estas API solo cuando se necesita información del códec.
 
 * (Zendesk #18074) - Subtítulos en árabe que no funcionan en Nexus con Android 6.0
 
@@ -1003,7 +1007,7 @@ Este problema se resolvió proporcionando compatibilidad con el mapa de fuentes 
 
 * (ZD #2228): error al recuperar el manifiesto no disponible en MediaPlayerNotification
 
-Metadatos Añadidos para exponer el contenido cuando se produce la notificación M3U8_PARSER_ERROR.
+Metadatos añadidos para exponer el contenido cuando se produce la notificación M3U8_PARSER_ERROR.
 
 * (ZD #4437): errores dentro del SDK de Adobe Primetime
 
@@ -1066,7 +1070,7 @@ Se corrigió un error cuando un recurso de publicidad utilizaba una dirección U
 
 * (ZD #3075) Problema de accesibilidad de Internet - iOS
 
-Notificación Añadida para detectar si la reproducción se ha detenido.
+Notificación añadida para detectar si la reproducción se ha detenido.
 
 * (ZD #3193) Solicitud de una API de cambio de Perfil en TVSDK
 
@@ -1082,13 +1086,13 @@ Compatibilidad con el ping de direcciones URL de seguimiento de errores de publi
 
 **Versión 1.4.7** (1.4.7.382)
 
-* (ZD #2197) Seguimiento de errores de publicidad. La notificación Añadida para el recurso no pudo cargar el manifiesto.
+* (ZD #2197) Seguimiento de errores de publicidad. La notificación añadida para el recurso no pudo cargar el manifiesto.
 * (ZD #2894) Player Realiza 4 solicitudes de manifiesto de nivel superior durante la reproducción.
 * (ZD #2992) Duraciones e identificadores extraños del Sistema de informes de la audiencia.
 
 **Versión 1.4.6**(1.4.6.325)
 
-* (ZD #2197) Seguimiento de errores de publicidad. La notificación Añadida para el recurso no pudo cargar el manifiesto
+* (ZD #2197) Seguimiento de errores de publicidad. La notificación añadida para el recurso no pudo cargar el manifiesto
 
 **Versión 1.4.5** (1.4.5.283)
 
@@ -1155,7 +1159,7 @@ Esta versión del TVSDK ha sido certificada con la compatibilidad FairPlay para 
 
    **Nota**: Recuerde las siguientes directrices de compilación:
 
-   * La compatibilidad con tvOs de TVSDK está limitada a flujos cifrados que no son de Adobe DRM. Debe eliminar la referencia a drmNativeInterface.framework en la configuración de la compilación de tvOS. Los flujos cifrados AES siguen siendo compatibles.
+   * La compatibilidad con TVSDK tvOs está limitada a flujos cifrados con DRM no Adobe. Debe eliminar la referencia a drmNativeInterface.framework en la configuración de la compilación de tvOS. Los flujos cifrados AES siguen siendo compatibles.
    * Apple requiere que todas las aplicaciones de Apple TV estén habilitadas para el código de bits, por lo que debe activar este indicador en los ajustes del proyecto.
 
 ## Problemas y limitaciones conocidos {#known-issues-and-limitations}
