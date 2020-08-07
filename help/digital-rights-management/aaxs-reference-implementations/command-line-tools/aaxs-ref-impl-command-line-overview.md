@@ -1,20 +1,23 @@
 ---
-seo-title: 'Herramientas de la línea de comandos para empaquetar contenido y crear listas de revocaciones '
-title: 'Herramientas de la línea de comandos para empaquetar contenido y crear listas de revocaciones '
+seo-title: 'Herramientas de la línea de comandos para empaquetar contenido y crear listas de revocación '
+title: 'Herramientas de la línea de comandos para empaquetar contenido y crear listas de revocación '
 uuid: 2c740521-2004-4320-88e1-118b84e80e31
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '458'
+ht-degree: 0%
 
 ---
 
 
-# Herramientas de la línea de comandos para empaquetar contenido y crear listas de revocaciones {#command-line-tools-for-packaging-content-revocation-lists}
+# Herramientas de la línea de comandos para empaquetar contenido y crear listas de revocación {#command-line-tools-for-packaging-content-revocation-lists}
 
 La implementación de referencia incluye las siguientes herramientas de línea de comandos:
 
 * Administrador de directivas: Una herramienta para crear y administrar políticas
-* Administrador de lista de actualización de directivas: Herramienta para crear y ver listas de actualización de directivas
-* Administrador de listas de revocación: Herramienta para crear y ver listas de revocación
+* Administrador de Listas de actualización de directivas: Herramienta para crear y ver listas de actualización de directivas
+* Administrador de Listas de revocación: Herramienta para crear y ver listas de revocación
 * Media Packager: Herramienta para crear archivos FLV y F4V cifrados
 * ID de editor de AIR
 * Generador de licencias de utilidad
@@ -25,9 +28,9 @@ La implementación de referencia incluye las siguientes herramientas de línea d
 Los requisitos para utilizar las herramientas de línea de comandos disponibles en las implementaciones de referencia son los siguientes:
 
 * Todas las herramientas de la línea de comandos requieren Java 1.5 o superior.
-* Credenciales de Packager y del servidor de licencias (certificado y contraseña) emitidas por Adobe. Necesita credenciales para cifrar y firmar archivos de vídeo, para firmar listas de revocación y actualización de directivas y para generar licencias previamente.
+* Credenciales de Packager y del servidor de licencias (certificado y contraseña) que se emiten mediante Adobe. Necesita credenciales para cifrar y firmar archivos de vídeo, para firmar listas de revocación y actualización de directivas y para generar licencias previamente.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Debido a un error de Java, los argumentos que se utilizan en la línea de comandos (como nombres de archivo, nombres de política o descripciones) deben utilizar sólo caracteres del conjunto de caracteres predeterminado del sistema operativo.
 
@@ -44,7 +47,7 @@ El archivo de configuración utiliza el formato de archivo de propiedad Java. Si
 
 Defina los valores de las propiedades en el archivo de configuración antes de ejecutar las herramientas. Para algunas de las herramientas de la línea de comandos, puede establecer los valores de algunas opciones a través de la línea de comandos o del archivo de configuración. En esos casos, los valores que se establecen a través de la línea de comandos tienen prioridad sobre cualquier valor del archivo de configuración.
 
-## Instalación de las herramientas de la línea de comandos {#installing-the-command-line-tools}
+## Instalación de las herramientas de la línea de comandos  {#installing-the-command-line-tools}
 
 Puede copiar los archivos que necesita desde el [!DNL \Reference Implementation\Command Line Tools] directorio del DVD, que contiene el archivo de configuración predeterminado, y un [!DNL flashaccesstools.properties] [!DNL libs] directorio, que contiene los archivos JAR para las herramientas.
 
