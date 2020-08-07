@@ -3,7 +3,10 @@ seo-title: Definición de reglas basadas en el tiempo
 title: Definición de reglas basadas en el tiempo
 uuid: 17c69869-ac81-4561-9fb6-b1c5c9c4006d
 translation-type: tm+mt
-source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '577'
+ht-degree: 0%
 
 ---
 
@@ -12,7 +15,7 @@ source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
 
 Adobe Access utiliza la &quot;aplicación suave&quot; de las restricciones de licencia basadas en el tiempo. Si un derecho de tiempo caduca durante la reproducción de un vídeo, el comportamiento predeterminado de Adobe Access es no restringir la reproducción hasta la próxima vez que se vuelva a crear el flujo de vídeo (llamando `Netstream.stop()` y `Netstream.play()`).
 
-Aunque la aplicación en pantalla es el comportamiento predeterminado, también puede activar la aplicación en estado estricto realizando una de las siguientes tareas:
+Aunque la aplicación en pantalla es el comportamiento predeterminado, también puede activar la aplicación en firme realizando una de las siguientes tareas:
 
 * Pida al reproductor de vídeo que sondee periódicamente la licencia para asegurarse de que ninguna de las restricciones de tiempo ha caducado. Esto se puede lograr llamando a `DRMManager.loadVoucher(LOCAL_ONLY).`un código de error que indica que la licencia almacenada localmente ya no es válida.
 * Siempre que el usuario haga clic en el botón Pausa, podrá grabar la marca de tiempo del vídeo actual y, a continuación, llamar `Netstream.stop().`Cuando el usuario haga clic en el botón Reproducir, podrá buscar la ubicación grabada y, a continuación, llamar `Netstream.play()`.
@@ -55,10 +58,10 @@ Especifica la frecuencia con la que el cliente sincronizará su estado con el se
 
 El comportamiento de sincronización se define con los siguientes parámetros:
 
-* Intervalo de inicio — Especifica cuánto tiempo se espera después de la última sincronización correcta para iniciar otra solicitud de sincronización.
+* Intervalo de inicio — Especifica cuánto tiempo se espera después de la última sincronización correcta para realizar el inicio de otra solicitud de sincronización.
 * Intervalo de parada dura — (Opcional). No permitir la reproducción si no se ha producido una sincronización correcta en el tiempo especificado.
 * Forzar la probabilidad de sincronización — (Opcional). Probabilidad con la que el cliente debe enviar un mensaje de sincronización antes del siguiente intervalo de inicio.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Esta regla de uso es compatible con los clientes de Adobe Access versión 3.0 y posterior. El comportamiento de los clientes más antiguos depende de la versión mínima del cliente admitida por el servidor de licencias. Consulte Versión [mínima del cliente](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
