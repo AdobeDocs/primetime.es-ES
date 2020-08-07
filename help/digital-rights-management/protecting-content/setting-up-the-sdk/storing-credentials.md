@@ -3,7 +3,10 @@ seo-title: Almacenamiento de credenciales
 title: Almacenamiento de credenciales
 uuid: a9e9db72-c921-4c28-ad1d-3fd3c2283f14
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '396'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +17,13 @@ El SDK de DRM de Primetime admite diferentes formas de almacenar credenciales, i
 
 Debe proteger de cerca las claves privadas para garantizar la seguridad del contenido y del servidor de licencias. PKCS12 es un formato de archivo estándar para almacenar credenciales cifradas con una contraseña. (También puede cifrar y firmar el propio archivo PKCS12). La extensión de archivo [!DNL .pfx] se utiliza normalmente para los archivos que admiten este formato.
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >Adobe recomienda utilizar un HSM para una máxima seguridad.
 >
 >Consulte la Guía de directrices *de implementación segura de* Adobe Primetime DRM.
 
->[!NOTE] {important=&quot;high&quot;}
+>[!NOTE]
 >
 >A partir de Java 1.7, Sun Java de 64 bits para Windows ya no admite las interfaces PKCS11 que Primetime DRM requiere para la comunicación con dispositivos HSM. Si planea utilizar un HSM, debe utilizar una versión de 32 bits de Java o un JDK que admita las interfaces PKCS11 completas.
 
