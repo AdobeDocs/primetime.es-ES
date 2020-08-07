@@ -5,7 +5,10 @@ seo-title: Etiquetas personalizadas
 title: Etiquetas personalizadas
 uuid: 0f47bed6-2ae8-4e4b-9f6f-672020dc3265
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '370'
+ht-degree: 0%
 
 ---
 
@@ -20,13 +23,13 @@ Los flujos de medios pueden incluir metadatos adicionales en forma de etiquetas 
 >
 >Esta función no está disponible para Safari en equipos Apple, ya que TVSDK utiliza la etiqueta de vídeo, en lugar de Flash o MSE, para reproducir contenido HLS.
 
-TVSDK proporciona compatibilidad lista para usar con etiquetas de publicidad #EXT específicas. La aplicación puede utilizar etiquetas personalizadas para mejorar el flujo de trabajo de la publicidad o para admitir situaciones de bloqueo. Para admitir flujos de trabajo avanzados, TVSDK le permite especificar y suscribirse a etiquetas adicionales en el manifiesto. Puede recibir una notificación cuando estas etiquetas aparezcan en el archivo de manifiesto.
+TVSDK proporciona compatibilidad lista para usar con etiquetas de publicidad #EXT específicas. La aplicación puede utilizar etiquetas personalizadas para mejorar el flujo de trabajo de la publicidad o para admitir situaciones de bloqueo. Para admitir flujos de trabajo avanzados, TVSDK permite especificar y suscribirse a etiquetas adicionales en el manifiesto. Puede recibir una notificación cuando estas etiquetas aparezcan en el archivo de manifiesto.
 
 >[!TIP]
 >
 >Puede suscribirse a etiquetas personalizadas tanto para VOD como para flujos en directo/lineales.
 
->[!NOTE] {othertype=&quot;Limitation&quot;}
+>[!NOTE]
 >
 >Cuando se reproduce HLS con la etiqueta Vídeo en Safari y no con Flash Fallback, esta función no estará disponible en Safari.
 
@@ -65,6 +68,6 @@ La aplicación puede configurar los siguientes escenarios:
 * Una notificación cuando `#EXT-X-ASSET` las etiquetas, o cualquier otro conjunto de nombres de etiquetas personalizados al que se haya suscrito, existan en el archivo.
 * Inserte publicidades cuando se encuentre una `#EXT-X-AD` etiqueta o cualquier otro nombre de etiqueta personalizado en el flujo.
 
-Puede suscribirse a cualquiera de las etiquetas siguientes como etiquetas personalizadas: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`.. Se le notifica con un `TimedMetadata` evento durante el análisis de los archivos de manifiesto.
+Puede suscribirse a cualquiera de las etiquetas siguientes como etiquetas personalizadas: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Se le notifica con un `TimedMetadata` evento durante el análisis de los archivos de manifiesto.
 
 Hay algunas etiquetas de publicidad, como `EXT-X-CUE`la que ya está suscrito. Estas etiquetas de publicidad también se utilizan en el generador de oportunidades predeterminado. Puede especificar qué etiquetas de publicidad utiliza el generador de oportunidades predeterminado si establece la `adTags` propiedad.
