@@ -5,7 +5,10 @@ seo-title: Servidor de licencias
 title: Servidor de licencias
 uuid: 39cb0d0f-f3dc-48e9-b6fd-6960a9ade291
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+workflow-type: tm+mt
+source-wordcount: '297'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +32,7 @@ Después de instalar Tomcat y MySQL, póngase en contacto con Adobe para obtener
 
 ## Crear el servidor de licencias {#build-the-license-server}
 
->[!NOTE] {class=&quot;- topic/note &quot;}
+>[!NOTE]
 >
 >La creación del servidor de licencias solo es necesaria si desea modificar el código fuente. Para fines de evaluación, puede simplemente utilizar los archivos WAR tal como se enviaron.
 
