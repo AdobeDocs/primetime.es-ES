@@ -5,9 +5,9 @@ seo-title: Preguntas más frecuentes sobre RBOP
 title: Preguntas más frecuentes sobre RBOP
 uuid: 7dcd337c-369a-474c-8768-409c48b5cee5
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: fa9e89dd63c8b4c9d6eee78258957cfd30c29088
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Preguntas más frecuentes sobre el uso de la protección de salida basada en resolución.
 
-* **P.** *Al definir un requisito de salida digital para una restricción de píxeles, se producen errores de análisis/formato al dejar la versión HDCP fuera, pero no tengo ningún requisito de HDCP. ¿Cómo debo configurar mis requisitos de salida digital en este caso?* **A.** Dado que la comprobación de versiones de HDCP no es compatible con el cliente en este momento, Adobe recomienda configurar la versión de HDCP en `1.0`. Esto garantizará que la configuración tenga el formato correcto y sea semánticamente coherente en el futuro cuando se admita la comprobación de versiones de HDCP. El siguiente fragmento ilustra una configuración con este valor HDCP.
+* **P.** *Al definir un requisito de salida digital para una restricción de píxeles, se producen errores de análisis/formato al dejar la versión HDCP fuera, pero no tengo ningún requisito de HDCP. ¿Cómo debo configurar mis requisitos de salida digital en este caso?* **A.** Dado que actualmente el cliente no admite la comprobación de versiones de HDCP, Adobe recomienda configurar la versión de HDCP en `1.0`. Esto garantizará que la configuración tenga el formato correcto y sea semánticamente coherente en el futuro cuando se admita la comprobación de versiones de HDCP. El siguiente fragmento ilustra una configuración con este valor HDCP.
 
    ```
    { "pixelConstraints":  
@@ -41,6 +41,7 @@ Preguntas más frecuentes sobre el uso de la protección de salida basada en res
 
    * 720P: se requiere HDCP
    * 480P - Sin OP
+
    Se aplicarán las siguientes reglas a cada variante.
 
    **Flujos:**
@@ -56,18 +57,27 @@ Preguntas más frecuentes sobre el uso de la protección de salida basada en res
 
    ```
    { 
-       "maxPixel":  
-   
-<b>800</b>,&quot;pixelConstraints&quot;: [{ &quot;pixelCount&quot;:\
-<b>532</b>, &quot;digital&quot;: [{&quot;output&quot;: &quot;REQUERIDO&quot;, &quot;hdcp&quot;:{&quot;major&quot;: 1, &quot;menor&quot;: 0}}],&quot;analógico&quot;: {&quot;output&quot;: &quot;REQUERIDO&quot;}},...
+       "maxPixel": 800, 
+       "pixelConstraints": [ 
+           { "pixelCount": 532, 
+             "digital": [{"output": "REQUIRED", "hdcp":{"major": 1,"minor": 0}}], 
+             "analog": {"output": "REQUIRED"} 
+           }, 
+   ... 
+   ```
 
-```
-to: 
-```
-{&quot;maxPixel&quot;:\
-<b>820</b>,&quot;pixelConstraints&quot;: [{ &quot;pixelCount&quot;:\
-<b>552</b>, &quot;digital&quot;: [{&quot;output&quot;: &quot;REQUERIDO&quot;, &quot;hdcp&quot;:{&quot;major&quot;: 1, &quot;menor&quot;: 0}}],&quot;analógico&quot;: {&quot;output&quot;: &quot;REQUERIDO&quot;}},...
+   a:
 
-```
-throughout, for all instances of `maxPixel` and `pixelCount`.
+   ```
+   { 
+       "maxPixel": 820, 
+       "pixelConstraints": [ 
+           { "pixelCount": 552, 
+             "digital": [{"output": "REQUIRED", "hdcp":{"major": 1,"minor": 0}}], 
+             "analog": {"output": "REQUIRED"} 
+           }, 
+   ... 
+   ```
+
+   en todas las instancias de `maxPixel` y `pixelCount`.
 
