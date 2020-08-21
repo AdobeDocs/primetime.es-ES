@@ -5,7 +5,10 @@ seo-title: Crear un recurso de medios
 title: Crear un recurso de medios
 uuid: 9ae86c04-7bbe-43fb-9f57-1d9fa2fa73d0
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: bdeab54aeb083f1fc8d27db1fd94bf89d74429da
+workflow-type: tm+mt
+source-wordcount: '316'
+ht-degree: 0%
 
 ---
 
@@ -43,7 +46,7 @@ La clase MediaResource representa el contenido que debe cargar la instancia de M
    </tr> 
    <tr> 
       <td colname="col1"> <span class="codeph"> metadatos </span> </td> 
-      <td colname="col2"> Una instancia de la <span class="codeph"> clase Metadata </span> (una estructura parecida a un diccionario), que puede contener información adicional sobre el contenido que se va a cargar, como contenido alternativo o de anuncio para colocar dentro del contenido principal. Si utiliza publicidad, configure <span class="codeph"> AuditudeSettings </span> antes de utilizar este constructor (consulte href=Ad insert metadata](.../../android-3.5-publicidad/ad-insert/ad-insert-metadata/android-3.5-ad-insert-metadata.md). </td> 
+      <td colname="col2"> Una instancia de la <span class="codeph"> clase Metadata </span> (una estructura parecida a un diccionario), que puede contener información adicional sobre el contenido que se va a cargar, como contenido alternativo o de anuncio para colocar dentro del contenido principal. Si utiliza publicidad, configure <span class="codeph"> AuditudeSettings </span> antes de utilizar este constructor <a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md"> Metadatos de inserción de publicidad </a>. </td> 
    </tr> 
    </tbody> 
    </table>
@@ -70,6 +73,7 @@ La clase MediaResource representa el contenido que debe cargar la instancia de M
 
    * La instancia de MediaPlayer.
    * `MediaPlayerItemLoader` Para obtener más información, consulte [Carga de un recurso multimedia mediante MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md).
+
    >[!IMPORTANT]
    >
    >No cargue el recurso de medios en un subproceso en segundo plano. La mayoría de las operaciones de TVSDK deben ejecutarse en el subproceso principal y ejecutarlas en un subproceso en segundo plano puede provocar que la operación arroje un error y salga.
