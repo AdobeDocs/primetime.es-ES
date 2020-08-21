@@ -5,7 +5,10 @@ seo-title: Trabajar con cookies
 title: Trabajar con cookies
 uuid: f060b520-ceec-48ca-929f-683566fe6ae7
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '268'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookies par
 
 A continuación se muestra un ejemplo con algún tipo de autenticación al realizar solicitudes al servidor de claves:
 
-1. El cliente inicia sesión en el sitio web en un navegador y su inicio de sesión muestra que puede ver el contenido.
+1. El cliente inicia sesión en el sitio web en un navegador y su inicio de sesión muestra que puede realizar vistas de contenido.
 1. La aplicación genera un autentificador, basado en lo que espera del servidor de licencias. Pase ese valor a TVSDK.
 1. TVSDK establece ese valor en el encabezado de la cookie.
 1. Cuando TVSDK realiza una solicitud al servidor de claves para obtener una clave para descifrar el contenido, esa solicitud contiene el valor de autenticación en el encabezado de la cookie, de modo que el servidor de claves sabe que la solicitud es válida.
@@ -45,22 +48,21 @@ Para trabajar con cookies:
 
    Otra opción es usar `cookieHeaders` en `NetworkConfiguration` para establecer una cadena de encabezado de cookie arbitraria que se utilizará en las solicitudes. De forma predeterminada, este encabezado de cookie se envía solamente con solicitudes de clave. Para enviar el encabezado de la cookie con todas las solicitudes, utilice el `NetworkConfiguration` método `setUseCookieHeadersForAllRequests`:
 
-   ```java
+```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 
-   
+    
    Metadata cookie = new MetadataNode(); 
    cookie.setValue("reqPayload", “1234567”); 
    networkConfiguration.setCookieHeaders(cookie); 
    networkConfiguration.setUseCookieHeadersForAllRequests( true ); 
-   
+    
    // Set NetworkConfiguration as Metadata:                                                                   
-   MetadataNode resourceMetadata = new MetadataNode();  
+   MetadataNode resourceMetadata = new MetadataNode(); 
    resourceMetadata.setNode(DefaultMetadataKeys.NETWORK_CONFIGURATION.getValue(),  
                             networkConfiguration); 
-   
+    
    // Call MediaResource.createFromURL to set the metadata: 
    MediaResource resource = MediaResource.createFromURL(url, resourceMetadata); 
-    // Load the resource 
+   // Load the resource 
    mediaPlayer.replaceCurrentItem(resource);
-   ```
-
+```
