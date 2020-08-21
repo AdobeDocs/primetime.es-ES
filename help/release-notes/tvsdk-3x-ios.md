@@ -2,7 +2,7 @@
 title: Notas de la versión de TVSDK 3.12 para iOS
 description: Las notas de la versión de TVSDK 3.12 para iOS describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de dispositivo en TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -541,7 +541,7 @@ Problema de reproducción cuando la etiqueta # EXT-X-PLAYLIST-TYPE del flujo se 
 
 Uso de ID creativos y AdSystem en solicitudes CRS basadas en reglas de normalización CRS.
 
-* [ ZD #29462) - La publicidad de TremorHub en VOD de A&amp;E provoca un bloqueo en las aplicaciones de iOS
+* (ZD #29462) - La publicidad de TremorHub en A&amp;E VOD provoca un bloqueo en las aplicaciones de iOS
 
 **Versión 1.4.36 (1.4.36.835)**
 
@@ -1098,7 +1098,7 @@ Compatibilidad con el ping de direcciones URL de seguimiento de errores de publi
 
 * (ZD #2141) Implementación de Analytics para la aplicación TreeHouse, se ha añadido `AdobeAnalyticsPlugin.a` una biblioteca para crear el paquete .
 * Actualización de la biblioteca de Video Heartbeat a 1.4.1.2
-* [PTPALY-4226] [relacionada con ZD #2423) La restauración de DRM puede resultar en la eliminación de datos de Documento de aplicaciones.
+* (PTPALY-4226) (relacionado con ZD #2423) La restauración de DRM puede resultar en la eliminación de datos de Documento de la aplicación.
 
 **Versión 1.4.4** (1.4.4.242)
 
