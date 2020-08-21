@@ -5,7 +5,10 @@ seo-title: Usar el comportamiento de reproducción predeterminado
 title: Usar el comportamiento de reproducción predeterminado
 uuid: 36f76c42-4c6c-4620-9b47-ec97519a642a
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Puede elegir usar comportamientos de publicidad predeterminados.
 
-1. Para utilizar comportamientos predeterminados, realice una de las siguientes tareas:
+1. Para utilizar los comportamientos predeterminados, realice una de las siguientes tareas:
 
    * Si implementa su propia `AdvertisingFactory` clase, devuelva null para `createAdPolicySelector`.
 
@@ -40,19 +43,20 @@ Para personalizar los comportamientos de publicidad:
 1. Implementar la `AdPolicySelector` interfaz y todos sus métodos.
 1. Asigne la instancia de directiva que usará TVSDK a través de la fábrica de publicidad.
 
->[!NOTE]
->class CustomContentFactory extiende ContentFactory {
->...
->@Override
->public AdPolicySelector recuperarAdPolicySelector>>(MediaPlayerItem mediaPlayerItem) {
->return new CustomAdPolicySelector(mediaPlayerItem);
->}
->...
->}
->// registrar la fábrica de contenido personalizado con el reproductor de medios
->Configuración de MediaPlayerItemConfig = new MediaPlayerItemConfig();
->config.setAdvertisingFactory(new CustomContentFactory());
->// esta configuración debe pasarse más tarde mientras se carga >el recurso
->mediaPlayer.replaceCurrentResource(resource, config);
+   >[!NOTE]
+   >
+   >class CustomContentFactory extiende ContentFactory &amp;lbrace;
+   >...
+   >@Override
+   >public AdPolicySelector recuperarAdPolicySelector>>(MediaPlayerItem mediaPlayerItem) &amp;lbrace;
+   >return new CustomAdPolicySelector(mediaPlayerItem);
+   >&amp;rbrace;
+   >...
+   >&amp;rbrace;
+   >// registrar la fábrica de contenido personalizado con el reproductor de medios
+   >Configuración de MediaPlayerItemConfig = new MediaPlayerItemConfig();
+   >config.setAdvertisingFactory(new CustomContentFactory());
+   >// esta configuración debe pasarse más tarde mientras se carga >el recurso
+   >mediaPlayer.replaceCurrentResource(resource, config);
 
 1. Implemente sus personalizaciones.
