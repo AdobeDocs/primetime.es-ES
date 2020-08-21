@@ -13,7 +13,10 @@ pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: b77f4988103b68d0ce8926407d2ccb2e0c68e322
+source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+workflow-type: tm+mt
+source-wordcount: '2430'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ La herramienta admite problemas de depuración e inserción en cualquiera de las
 
 Para admitir todos estos casos, la herramienta no requiere ni utiliza códigos de editor del reproductor.
 
-Al iniciar una sesión de servidor de manifiesto, puede establecer un parámetro en la dirección URL de la solicitud para pedirle que registre la información de depuración. Si utiliza diferentes valores de ese parámetro, también puede solicitar al servidor de manifiesto que devuelva determinados fragmentos de información de depuración en encabezados HTTP, pero los encabezados sólo pueden contener una cantidad limitada de información. Puede obtener credenciales de Adobe para acceder a archivos de registro completos, que el servidor de manifiesto guarda periódicamente (por ejemplo, cada hora) en un servidor de archivos. Una vez que tenga las credenciales de ese servidor, puede acceder a él directamente en cualquier momento.
+Al iniciar una sesión de servidor de manifiesto, puede establecer un parámetro en la dirección URL de la solicitud para pedirle que registre la información de depuración. Si utiliza diferentes valores de ese parámetro, también puede solicitar al servidor de manifiesto que devuelva determinados fragmentos de información de depuración en encabezados HTTP, pero los encabezados sólo pueden contener una cantidad limitada de información. Puede obtener las credenciales de Adobe para acceder a archivos de registro completos, que el servidor de manifiesto guarda periódicamente (por ejemplo, cada hora) en un servidor de archivos. Una vez que tenga las credenciales de ese servidor, puede acceder a él directamente en cualquier momento.
 
 <!-- You can also see the [server side event tracking captured in the SSAI dashboard](ssai-debugging-dashboard.md).-->
 
@@ -45,7 +48,7 @@ Al invocar la herramienta de depuración, tiene varias opciones para la informac
 Al iniciar el registro de depuración para una sesión de servidor de manifiesto, puede agregar el parámetro ptdebug a la dirección URL de la solicitud para especificar las siguientes opciones para la información que devuelve el servidor de manifiesto en los encabezados HTTP:
 
 * ptdebug=true Todos los registros excepto `TRACE_HTTP_HEADER` y la mayoría `call/response data` de `TRACE_AD_CALL` registros.
-* ptdebug=AdCall Solamente registros TRACE_AD_*type* (por ejemplo, TRACE_AD_CALL).
+* ptdebug=AdCall Sólo registros TRACE_AD_*type* (por ejemplo, TRACE_AD_CALL).
 * ptdebug=Sólo encabezado Registros TRACE_HTTP_HEADER.
 
 Las opciones no afectan a lo que el servidor de manifiesto coloca en los archivos de registro. Usted no tiene control de eso, pero los archivos de registro son archivos de texto, por lo que puede aplicar una amplia variedad de herramientas para extraer y cambiar el formato de la información que le interesa.
@@ -179,7 +182,7 @@ Los registros de este tipo registran los resultados de las solicitudes de public
 |--- |--- |--- |
 | status | string | Código de estado HTTP devuelto |
 | request_duration | integer | Tiempo (milisegundos) entre la solicitud y la respuesta |
-| ad_server_query_url | string | Dirección URL de la llamada de publicidad, incluidos los parámetros de consulta |
+| ad_server_consulta_url | string | Dirección URL de la llamada de publicidad, incluidos los parámetros de consulta |
 | ad_system_id | string | Sistema de publicidad, desde la respuesta del servidor de publicidad (Auditude si no se especifica) |
 | avail_id | string | ID del valor, de la señal de anuncio en el archivo de manifiesto de contenido (N/D para VOD) |
 | avail_duration | number | Duración (segundos) del valor promedio, a partir de la señal de anuncio en el archivo de manifiesto de contenido (N/D para VOD) |
@@ -192,7 +195,7 @@ Un ejemplo:
 200 8 https://ad.stg2.auditude.com/adserver/a?cip=0.0.0.0&g=1000012&of=1.5 &ptcueformat=turner&ptdebug=true&tl=l,150,30,m&tm=63&u=ceceb. . . Auditude IvpIyC. . . 150 PD94bWw. . .
 ```
 
-### Registros TRACE_AD_INSERT, TRACE_AD_RESOLVE y TRACE_AD_REDIRECT {#trace-ad-insert-trace-ad-resolve-and-trace-ad-redirect-records}
+### TRACE_AD_INSERT, TRACE_AD_RESOLVE y TRACE_AD_REDIRECT registros {#trace-ad-insert-trace-ad-resolve-and-trace-ad-redirect-records}
 
 Los registros de este tipo registran los resultados de las solicitudes de publicidad indicadas por el tipo de registro. Los campos más allá del tipo de registro aparecen en el orden que se muestra en la tabla, separados por tabuladores.
 
@@ -240,7 +243,7 @@ Los registros de este tipo registran los resultados de las solicitudes de public
 
 | Campo | Tipo | Descripción |
 |--- |--- |--- |
-| pt | number | Marca de hora del programa. Tiempo dentro del video para llamar a la dirección URL. |
+| pt | number | Marca de hora de programa. Tiempo dentro del video para llamar a la dirección URL. |
 | ad_system | string | Sistema de publicidad (audiencia o rueda libre) |
 | url | string | Ping de URL |
 | status | string | Estado HTTP devuelto por el ping |
@@ -259,7 +262,7 @@ Los registros de este tipo registran un elemento creativo de publicidad que falt
 
 | Campo | Tipo | Descripción |
 |--- |--- |--- |
-| ad_id | string | ID de publicidad completa `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]`] Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]`] PROTOCOLO: AUDITUDE,VAST) |
+| ad_id | string | ID de publicidad completa `(FQ_AD_ID: Q_AD_ID[;Q_AD_ID[;Q_AD_ID...]]` Q_AD_ID: `PROTOCOL:AD_SYSTEM:AD_ID[:CREATIVE_ID[:MEDIA_ID]]` PROTOCOLO: AUDITUDE,VAST`)` |
 
 ### Registros TRACE_TRANSCODING_REQUESTED {#trace-transcoding-requested-records}
 
@@ -271,7 +274,7 @@ Los registros de este tipo registran los resultados de las solicitudes de transc
 | ad_manifest_url | string | Dirección URL del archivo de manifiesto de la publicidad, desde la respuesta del servidor de publicidad |
 | creative_type | string | Tipo de medio |
 | indicadores | string | ID3 indica si la solicitud de transcodificación incluye una solicitud para agregar una etiqueta ID3 |
-| target_duration | string | Duración de destino (segundos) del elemento creativo transcodificado |
+| destinatario_duration | string | Duración del destinatario (segundos) del elemento creativo transcodificado |
 
 ### Registros TRACE_TRACKING_REQUEST {#trace-tracking-request-records}
 
@@ -280,12 +283,12 @@ Los registros de este tipo indican una solicitud para realizar el seguimiento de
 | Campo | Tipo | Descripción |
 |--- |--- |--- |
 | tracking_url_count | integer | Número de direcciones URL de seguimiento |
-| start | float | Tiempo de inicio del fragmento PTS (segundos con precisión milisegundos) |
+| inicio | float | Tiempo de inicio del fragmento PTS (segundos con precisión milisegundos) |
 | end | float | Tiempo de finalización del fragmento PTS (segundos con precisión milisegundos) |
 
 ### Registros de TRACE_TRACKING_REQUEST_URL {#trace-tracking-request-url-records}
 
-Los registros de este tipo proporcionan una dirección URL de seguimiento para el seguimiento del lado del servidor. Los campos más allá de TRACE_TRACKING_REQUEST_URL aparecen en el orden que se muestra en la tabla, separados por tabuladores.
+Los registros de este tipo proporcionan una dirección URL de seguimiento para el seguimiento del lado del servidor. Los campos más allá de TRACE_TRACKING_REQUEST_URL aparecen en el orden mostrado en la tabla, separados por tabuladores.
 
 | Campo | Tipo | Descripción |
 |--- |--- |--- |
@@ -295,13 +298,13 @@ Los registros de este tipo proporcionan una dirección URL de seguimiento para e
 
 ### Registros TRACE_WEBVTT_REQUEST {#trace-webvtt-request-records}
 
-Registros de este tipo de solicitudes de registro que el servidor de manifiesto realiza para los rótulos WEBVTT. Los campos más allá de TRACE_WEBVTT_REQUEST aparecen en el orden que se muestra en la tabla, separados por tabuladores.
+Registros de este tipo de solicitudes de registro que el servidor de manifiesto realiza para los rótulos WEBVTT. Los campos más allá de TRACE_WEBVTT_REQUEST aparecen en el orden mostrado en la tabla, separados por tabuladores.
 
 | Campo | Tipo | Descripción |
 |--- |--- |--- |
 | status | string | Código de estado HTTP devuelto |
 | vtt_uri | string | URL para solicitud |
-| start | float | Tiempo de inicio dividido (segundos con precisión milisegundos) |
+| inicio | float | Tiempo de inicio dividido (segundos con precisión milisegundos) |
 | end | float | Tiempo de finalización dividido (segundos con precisión milisegundos) |
 
 ### Registros TRACE_WEBVTT_RESPONSE {#trace-webvtt-response-records}
@@ -313,7 +316,7 @@ Registra ``of ``este ``type ``registro ``responses ``del ``manifest ``servidor `
 | status | string | Código de estado HTTP devuelto |
 | response | string | Respuesta codificada en base64 enviada al cliente |
 
-### Registros TRACE_WEBVTT_SOURCE {#trace-webvtt-source-records}
+### Registros de TRACE_WEBVTT_SOURCE {#trace-webvtt-source-records}
 
 Registros de este tipo de respuestas de registro a solicitudes que el servidor de manifiesto realiza para subtítulos WEBVTT. Los campos más allá de TRACE_WEBVTT_SOURCE aparecen en el orden que se muestra en la tabla, separados por tabuladores.
 
@@ -325,32 +328,32 @@ Registros de este tipo de respuestas de registro a solicitudes que el servidor d
 
 ### Registros TRACE_MISC {#trace-misc-records}
 
-Los registros de este tipo permiten que el servidor de manifiesto registre eventos e información que no se hayan planificado de otro modo cuando ingesta publicidades. El campo más allá de TRACE_MISC consiste en una cadena de mensaje. Los mensajes que podrían aparecer incluyen lo siguiente:
+Los registros de este tipo permiten que el servidor de manifiesto registre eventos e información que no se haya planificado de otro modo cuando ingesta publicidades. El campo más allá de TRACE_MISC consiste en una cadena de mensaje. Los mensajes que podrían aparecer incluyen lo siguiente:
 
 * Anuncio omitido:AdPlacement `[adManifestURL=https://cdn2.auditude.com/assets/3p/v2/8c/2b/8c2bb. . . .m3u8, durationSeconds=15.0, ignore=false, redirectAd=false, priority=1]`
 * AdPlacement adManifestURL=*adManifestURL*, durationSeconds=*seconds*, ignore=*ignore*, redirectAd=*redirectAd*, priority=*priority*
 * La colocación de la publicidad devolvió un valor nulo.
 * La publicidad se ha vinculado correctamente.
-* Error en la llamada de publicidad: mensaje *de error*.
-* Adición de User-Agent para recuperar el manifiesto sin procesar: *user-agent*.
-* Adición de una cookie para recuperar el manifiesto sin procesar: [cookie]
+* Error en la llamada de publicidad: *mensaje* de error.
+* Añadiendo User-Agent para recuperar el manifiesto sin procesar: *user-agent*.
+* Añadiendo cookie para recuperar el manifiesto sin procesar: [cookie]
 * Mensaje *de error de URL* solicitada incorrecta. (No se pudo analizar la URL de variante)
 * Dirección URL llamada: La dirección URL *obtuvo retorno: código* de respuesta. (URL en directo)
 * Dirección URL llamada: Código de *devolución de URL: código* de respuesta. (URL de VOD)
-* Conflicto encontrado al resolver anuncios: uno de los extremos de inicio de rodadura media o de rodadura media se encuentra dentro de la prerodadura o prerollo contenido en el rollo medio (VOD).
-* Excepción no controlada detectada lanzada por el controlador para URI: URL *de* solicitud.
+* Conflicto encontrado al resolver anuncios: uno de los inicios de rodadura media o uno de los extremos de rodadura media se encuentra dentro de la prerodadura o de la prerodadura incluida en el rollo medio (VOD).
+* Excepción no controlada detectada lanzada por el controlador para URI: *dirección URL* de solicitud.
 * Finalizó la generación del manifiesto de variante. (Variante)
 * Finalizó la generación del manifiesto de variante.
-* Excepción en la gestión de redireccionamiento VAST *redireccionamiento de URL *error: mensaje *de error*.
+* Excepción en la gestión de redireccionamiento VAST *redireccionamiento de URL *error: *mensaje* de error.
 * No se pudo recuperar la lista de reproducción de la publicidad para la dirección URL *del manifiesto de* publicidad.
 * No se pudo generar el manifiesto de objetivo. (HLSManifestResolver)
-* No se pudo analizar la respuesta de la primera llamada de publicidad: mensaje *de error*.
-* No se pudo procesar *GET|POST *solicitud de ruta: URL *de* solicitud. (Activo/VOD)
-* No se pudo procesar la solicitud de manifiesto activo: URL *de* solicitud. (Activo)
-* Error al devolver un manifiesto de variante: mensaje *de error*.
-* No se pudo validar el ID de grupo: ID *de grupo*.
-* Obteniendo manifiesto sin procesar: URL *de contenido*. (Activo)
-* Redirección VAST siguiente: URL *de redireccionamiento*.
+* No se pudo analizar la respuesta de la primera llamada de publicidad: *mensaje* de error.
+* No se pudo procesar *GET|POST *solicitud de ruta: *dirección URL* de solicitud. (Activo/VOD)
+* No se pudo procesar la solicitud de manifiesto activo: *dirección URL* de solicitud. (Activo)
+* Error al devolver un manifiesto de variante: *mensaje* de error.
+* No se pudo validar el ID de grupo: *ID* del grupo.
+* Obteniendo manifiesto sin procesar: *dirección URL* de contenido. (Activo)
+* Redirección VAST siguiente: *dirección URL* de redireccionamiento.
 * Se han encontrado recursos vacíos. (VOD)
 * Se encontró *número *anuncios. (VOD)
 * Solicitud HTTP recibida. (Muy primer mensaje)
@@ -360,17 +363,17 @@ Los registros de este tipo permiten que el servidor de manifiesto registre event
 * Omitiendo el valor de duración promedio que proporcionó un valor de duración no válido: *duration *for availId = *avail ID*.
 * Inicialice una nueva sesión. (Variante)
 * Método HTTP no válido. Debe ser un GET. (VOD)
-* Método HTTP no válido. La solicitud de seguimiento debe ser GET. (Activo)
+* Método HTTP no válido. La solicitud de seguimiento debe ser una GET. (Activo)
 * Mensaje *de error de URL* solicitada no válida. (Variante)
 * Grupo no válido. (HLSManifestResolver)
 * Solicitud no válida. El rótulo no es una solicitud de seguimiento válida. (VOD)
 * Solicitud no válida. La solicitud de subtítulos debe realizarse después de que se establezca la sesión. (VOD)
 * Solicitud no válida. La solicitud de seguimiento debe realizarse después de que se establezca la sesión. (VOD)
-* Instancia de servidor no válida para el identificador de grupo de sobrecarga: ID *de grupo*. (Activo)
+* Instancia de servidor no válida para el identificador de grupo de sobrecarga: *ID* del grupo. (Activo)
 * Se ha alcanzado el límite de redirecciones VAST: *número*.
-* Realizar llamada de publicidad: dirección URL *de llamada de* publicidad.
-* No se encontró ningún manifiesto para: URL *de contenido*. (Activo)
-* No se encontró ningún valor coincidente para el ID de avail: ID *de avail*. (HLSManifestResolver)
+* Realizar llamada de publicidad: *dirección URL* de llamada de publicidad.
+* No se encontró ningún manifiesto para: *dirección URL* de contenido. (Activo)
+* No se encontró ningún valor coincidente para el ID de avail: *ID* de avail. (HLSManifestResolver)
 * No se encontró ninguna sesión de reproducción. (HLSManifestResolver)
 * Procesamiento de la solicitud de VOD para la URL *de* contenido de manifiesto.
 * Procesando variante.
@@ -378,22 +381,22 @@ Los registros de este tipo permiten que el servidor de manifiesto registre event
 * Procesando solicitud de seguimiento. (VOD)
 * La respuesta de anuncio de redireccionamiento está vacía. (VASTStAX)
 * Solicitando: *URL*.
-* Devolviendo la respuesta de error para la solicitud GET porque no se encontró ninguna sesión de reproducción. (VOD)
-* Devolviendo la respuesta de error para la solicitud GET debido a un error interno del servidor.
-* Devolviendo la respuesta de error para la solicitud GET que especifica un recurso no válido: ID *de solicitud* de publicidad. (VOD)
-* Devolviendo la respuesta de error para la solicitud GET especificando un ID de grupo no válido o vacío: ID *de grupo*. (VOD)
-* Devolviendo la respuesta de error para la solicitud GET que especifica un valor de posición de seguimiento no válido. (VOD)
-* Devolviendo la respuesta de error para la solicitud GET con sintaxis no válida: dirección URL *de* solicitud. (Activo/VOD)
+* Devolviendo la respuesta de error para la solicitud de GET porque no se encontró ninguna sesión de reproducción. (VOD)
+* Devolviendo la respuesta de error para la solicitud de GET debido a un error interno del servidor.
+* Devolviendo la respuesta de error para la solicitud de GET que especifica un recurso no válido: *ID* de solicitud de publicidad. (VOD)
+* Devolviendo la respuesta de error para la solicitud de GET que especifica un ID de grupo no válido o vacío: *ID* del grupo. (VOD)
+* Devolviendo la respuesta de error para la solicitud de GET que especifica un valor de posición de seguimiento no válido. (VOD)
+* Devolviendo respuesta de error para solicitud de GET con sintaxis no válida: dirección URL *de* solicitud. (Activo/VOD)
 * Devolviendo respuesta de error para la solicitud con método HTTP no admitido: *GET|POST*. (Activo/VOD)
 * Devolviendo el manifiesto desde la caché. (VOD)
 * El servidor está sobrecargado. Continúe sin la solicitud de punteado de publicidad. (Variante)
-* Empiece a generar un manifiesto de objetivo. (HLSManifestResolver)
-* Empiece a generar el manifiesto de variante desde: URL *de contenido*. (Variante)
-* Empiece a poner las publicidades en manifiesto. (VODHLSResolver)
-* Tratando de sujetar un anuncio en *HH:MM:SS*: AdPlacement [adManifestURL=*ad Manifest URL*, durationSeconds=*seconds*, ignore=*ignore*, redirectAd=*redirect ad*, priority=*priority*. (HLSManifestResolver)
+* Inicio que genera el manifiesto objetivo. (HLSManifestResolver)
+* Manifiesto de variante que genera inicios de: *dirección URL* de contenido. (Variante)
+* Inicio de poner los anuncios en manifiesto. (VODHLSResolver)
+* Tratando de sujetar un anuncio en *HH:MM:SS*: AdPlacement adManifestURL=*ad Manifest URL*, durationSeconds=*seconds*, ignore=*ignore*, redirectAd=*redirect ad*, priority=*priority*. (HLSManifestResolver)
 * No se pueden obtener publicidades debido a una cronología de tiempo no válida; se devolvió el contenido sin publicidades. (VOD)
 * No se pueden obtener publicidades: se devolvió el contenido sin publicidades. (VOD)
-* No se pudo obtener la consulta de publicidad y no se proporcionó ninguna dirección URL de contenido. (VOD)
+* No se pudo obtener la consulta de la publicidad y no se proporcionó ninguna dirección URL de contenido. (VOD)
 * Se recibió una dirección URL válida. (VOD/Variant)
 * No se encontró la variante M3U8. (Variante)
 
