@@ -5,7 +5,10 @@ seo-title: Configurar la reproducción personalizada
 title: Configurar la reproducción personalizada
 uuid: 9cbf0bcf-7932-409e-a690-e79f284eaf74
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +33,7 @@ Para personalizar los comportamientos de publicidad:
 
 1. Asigne la instancia de directiva que usará TVSDK a través de la fábrica de publicidad.
 
->[!ATTENTION]
+>[!IMPORTANT]
 >
 >Las directivas de publicidad personalizadas que se registran al principio de >reproducción se borran cuando la instancia de MediaPlayer está >desasignada.La aplicación debe registrar una instancia de directiva >selector cada vez que se cree una nueva sesión de reproducción.
 
