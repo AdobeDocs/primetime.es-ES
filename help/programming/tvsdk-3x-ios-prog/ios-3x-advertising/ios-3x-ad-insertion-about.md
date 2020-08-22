@@ -5,7 +5,10 @@ seo-title: Insertar publicidades
 title: Insertar publicidades
 uuid: 6e31cae5-7363-454f-82dd-e03c1e34cd3f
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '628'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ TVSDK admite varios casos de uso para la resolución e inserción de anuncios de
 * Inserción de anuncio intermedia, donde se inserta al menos un anuncio en medio del contenido.
 * Inserción de anuncio posterior, donde al menos una publicidad se anexa al final del contenido.
 
-TVSDK resuelve las publicidades, inserta las publicidades en ubicaciones definidas por el servidor de publicidad y calcula la línea de tiempo virtual antes de que se inicie la reproducción. Una vez que se inicia la reproducción, no se pueden producir cambios, como la inserción o eliminación de anuncios insertados.
+TVSDK resuelve las publicidades, inserta las publicidades en ubicaciones definidas por el servidor de publicidad y calcula la línea de tiempo virtual antes de los inicios de reproducción. Después de los inicios de reproducción, no se pueden producir cambios, como anuncios insertados o insertados que se eliminan.
 
 ## Resolver e insertar anuncios en directo y lineales {#section_A6A1BB262D084462A1D134083556B7CC}
 
@@ -79,7 +82,7 @@ La capacidad de salir de una pausa publicitaria antes se identifica mediante una
       [PTSDKConfig setSubscribedTags:[NSArray arrayWithObject:@"#EXT-X-CUE-IN"]];
       ```
 
-   1. Agregue la resolución de oportunidad de inicio de sesión.
+   1. Añada la resolución de la oportunidad de inicio de sesión.
 
       ```
       // self.player is the PTMediaPlayer instance created for content and ad playback 
@@ -93,11 +96,11 @@ La capacidad de salir de una pausa publicitaria antes se identifica mediante una
 
 1. Si la aplicación está compartiendo la misma señal para indicar el cue-out/splice-out y el cue-in/splice-in, extienda `PTDefaultAdOpportunityResolver` e implemente el `preparePlacementOpportunity` método.
 
-   [!TIP]
+   >[!TIP]
+   >
+   >El código siguiente supone que la aplicación tiene una implementación para el `isCueInOpportunity` método.
 
-   El código siguiente supone que la aplicación tiene una implementación para el `isCueInOpportunity` método.
-
-```
+   ```
    - (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
    { 
          if ([self isCueInOpportunity:timedMetadata]) 
@@ -109,7 +112,7 @@ La capacidad de salir de una pausa publicitaria antes se identifica mediante una
                return [super preparePlacementOpportunity:timedMetadata]; 
          } 
    }
-```
+   ```
 
 1. Registre la resolución de oportunidad extendida en la `PTDefaultMediaPlayerClientFactory` instancia.
 
