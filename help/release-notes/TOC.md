@@ -3,8 +3,9 @@ cloud: experience-cloud
 product: adobe primetime
 audience: end-user
 user-guide-title: Notas de la versión de Primetime
+user-guide-description: Provides release-specific information, system requirements, limitations, fixed issues, and known issues.
 translation-type: tm+mt
-source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -27,7 +28,7 @@ ht-degree: 0%
    + [Notas de la versión de TVSDK 2.4.1 para Android](tvsdk-24-android.md)
    + [Notas de la versión de TVSDK 1.4 para Android](tvsdk-1-4-android.md)
 + TVSDK del explorador {#browser-tvsdk}
-   + [Notas de la versión del explorador TVSDK 2.4](tvsdk-24-browser.md)
+   + [Notas de la versión de TVSDK 2.4 del explorador](tvsdk-24-browser.md)
 + TVSDK para HLS de escritorio {tvsdk-desktop-hls}
    + [Notas de la versión de TVSDK 1.4 for Desktop HLS](tvsdk-1-4-desktop-hls.md)
 + Primetime Offline Packager {#offline-packager}
