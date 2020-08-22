@@ -5,7 +5,10 @@ seo-title: Anuncios VAST
 title: Anuncios VAST
 uuid: 052dae0c-2425-456c-aebe-531f68bb5aa8
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '368'
+ht-degree: 0%
 
 ---
 
@@ -56,14 +59,18 @@ A continuación encontrará más información sobre los tipos de publicidad:
       * `MediaFiles`
 
       * `MediaFile`
-         [!TIP]
-En este elemento, se admiten los atributos `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`y `type` .
+
+         >[!TIP]
+         >
+         >En este elemento, se admiten los atributos `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`y `type` .
 
 * **Anuncios** no lineales Se admiten los siguientes elementos:
 
    * `Non-linear`
-      [!TIP]
-En este elemento, se admiten los atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`y `minSuggestedDuration` .
+
+      >[!TIP]
+      >
+      >En este elemento, se admiten los atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`y `minSuggestedDuration` .
 
       * `StaticResource`
       * `IFrameResource`
@@ -74,8 +81,10 @@ En este elemento, se admiten los atributos `id`, `width`, `height`, `apiFramewor
 * **Anuncios** complementarios Se admiten los siguientes elementos:
 
    * `Companion`
-      [!TIP]
-En este elemento, se admiten los atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth`y `expandedHeight` .
+
+      >[!TIP]
+      >
+      >En este elemento, se admiten los atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth`y `expandedHeight` .
 
       * `StaticResource`
       * `IFrameResource`
@@ -84,7 +93,8 @@ En este elemento, se admiten los atributos `id`, `width`, `height`, `apiFramewor
 
 ## Extensiones {#section_17401C75F419453BAE83637EEB6E1E60}
 
-[!TIP]
-Solo se admiten extensiones específicas de Auditude.
+>[!TIP]
+>
+>Solo se admiten extensiones específicas de Auditude.
 
 * `Extension`
