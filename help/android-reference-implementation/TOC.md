@@ -2,9 +2,13 @@
 cloud: experience-cloud
 product: primetime
 audience: end-user
-user-guide-title: Primetime Reference Implementation Help
+user-guide-title: Ayuda para la implementación de referencia de Primetime
+user-guide-description: Helps understand the TVSDK and modify the feature managers to customize your personal player.
 translation-type: tm+mt
-source-git-commit: abcbe6991d9a024f62554c3b5ec057f9b3c71c53
+source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 0%
 
 ---
 
@@ -44,12 +48,12 @@ source-git-commit: abcbe6991d9a024f62554c3b5ec057f9b3c71c53
       + [DVR sin inserción de anuncio](implement-video-playback/dvr/dvr-without-ad-insertion.md)
       + [DVR con inserción de anuncios](implement-video-playback/dvr/dvr-with-ad-insertion.md)
       + [Elección de un punto de partida personalizado para DVR](implement-video-playback/dvr/dvr-custom-start-point.md)
-      + [Establecer una hora de inicio personalizada en la implementación de referencia](implement-video-playback/dvr/set-custom-start-time-dvr.md)
+      + [Establecer un tiempo de inicio personalizado en la implementación de referencia](implement-video-playback/dvr/set-custom-start-time-dvr.md)
    + [Mostrar estadísticas de dispositivos y reproducción de QoS](implement-video-playback/qos-statistics.md)
    + Insertar publicidades {#insert-ads}
       + [Inserción de publicidad](insert-ads/ad-insertion.md)
       + [Tipos de inserción de publicidad](insert-ads/ad-insertion-types.md)
-      + [Agregar publicidad](insert-ads/add-advertising.md)
+      + [Añadir publicidad](insert-ads/add-advertising.md)
       + [Documentación de API relacionada](insert-ads/aps-callbacks-ad-insertion.md)
    + Enlace tardío de audio {#late-binding-audio}
       + [Información general](late-binding-audio/late-binding-audio-overview.md)
@@ -60,7 +64,7 @@ source-git-commit: abcbe6991d9a024f62554c3b5ec057f9b3c71c53
       + [Información general](paytvpass-entitlement/paytvpass-entitlement-overview.md)
       + [Información general de Entitlement Manager](paytvpass-entitlement/entitlement-overvivew.md)
       + [Integración de la autenticación Primetime](paytvpass-entitlement/integrate-pass.md)
-      + [Configurar informes de Adobe Analytics](paytvpass-entitlement/pass-analytics-setup.md)
+      + [Configurar Adobe Analytics Sistema de informes](paytvpass-entitlement/pass-analytics-setup.md)
       + [Documentación de API relacionada](paytvpass-entitlement/pass-apis-callbacks.md)
    + Análisis de vídeo {#video-analytics}
       + [Análisis de vídeo](video-analytics/video-analytics-overview.md)
