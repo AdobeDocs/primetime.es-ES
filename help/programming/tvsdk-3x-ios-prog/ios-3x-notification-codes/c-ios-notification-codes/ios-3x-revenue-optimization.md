@@ -4,9 +4,9 @@ seo-description: 'Esta tabla proporciona información detallada sobre las notifi
 seo-title: Código de optimización de ingresos
 title: Código de optimización de ingresos
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: df3d60874701383325be1afdd1ec5fe036f855f8
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Para habilitar este sistema de informes, utilice la API de PTMediaPlayer: `[medi
 >
 >La mayoría de las notificaciones informativas contienen metadatos relevantes, por ejemplo, la dirección URL del recurso que no se pudo descargar. Algunas notificaciones contienen metadatos para especificar si el problema se produjo en el contenido del vídeo principal, en el contenido de audio alternativo o en un anuncio.
 
-|Código |Nombre |Notificación interna |Claves de metadatos |Comentarios |
-|—|—|—|—|—|
-|401001 | REVENUE_OPTIMIZATION_SISTEMA DE INFORMES | Ninguno | Consulte la tabla siguiente para ver las claves de metadatos basadas en diferentes eventos. | Ninguno |
+| Código | Nombre | Notificación interna | Claves de metadatos | Comentarios |
+|---|---|---|---|---|
+| 401001 | REVENUE_OPTIMIZATION_SISTEMA DE INFORMES | Ninguno | Consulte la tabla siguiente para ver las claves de metadatos basadas en diferentes eventos. | Ninguno |
 
 | Detalles del evento | ContextMetadata |
 |---|---|
