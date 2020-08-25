@@ -5,7 +5,10 @@ seo-title: Metadatos del servidor de publicidad Primetime
 title: Metadatos del servidor de publicidad Primetime
 uuid: 61e224dd-551a-438f-8560-e64915087fef
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 9d60bff4035963572e49fa49effa576ca854f799
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,12 +17,12 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 TVSDK es compatible con la resolución e inserción de anuncios para VOD y flujos en directo/lineal.
 
-[!PREREQUISITE] {othertype=&quot;Prequisite&quot;}
+## Requisito previo
 
 Antes de incluir publicidad en el contenido del vídeo, proporcione la siguiente información de metadatos:
 
 * Un `mediaID`, que identifica el contenido específico que se va a reproducir.
-* Su `zoneID`, que identifica a su empresa o sitio web.
+* Su `zoneID`, que identifica su compañía o sitio web.
 * El dominio del servidor de publicidad, que especifica el dominio del servidor de publicidad asignado.
 * Otros parámetros de objetivo.
 
