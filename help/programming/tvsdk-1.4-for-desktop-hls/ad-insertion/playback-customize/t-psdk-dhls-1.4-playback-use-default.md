@@ -5,7 +5,10 @@ seo-title: Usar el comportamiento de reproducción predeterminado
 title: Usar el comportamiento de reproducción predeterminado
 uuid: 7139384c-167a-4cab-816a-c02fb723a5cb
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '71'
+ht-degree: 0%
 
 ---
 
@@ -16,23 +19,23 @@ Puede elegir usar comportamientos de publicidad predeterminados.
 
 Para utilizar comportamientos predeterminados:
 
-    * Si implementa su propia clase &quot;ContentFactory&quot;, devuelva una nueva instancia de &quot;DefaultAdPolicySelector&quot; en la implementación de &quot;doRetrieveAdPolicySelector&quot;.
-    
-    &quot;CustomContentFactory de clase
-    pública amplía ContentFactory {
-    
-    //...
-    // su código personalizado para clases
-    publicitarias//...
-    
-    /**
-    * @inheritDoc
-    */
-    override protected
-    functionRetrieveAdPolicySelector(item:MediaPlayerItem):AdPolicySelector {
-    return new DefaultAdPolicySelector(item);
-    }
-    }
-    &quot;
-    
-    * Si no tiene una implementación personalizada para la clase `ContentFactory`, TVSDK utiliza el selector de &quot;AdPolicyAdPredeterminado&quot;&quot;.
+* Si implementa su propia `ContentFactory` clase, devuelva una nueva instancia de `DefaultAdPolicySelector` en la implementación de `doRetrieveAdPolicySelector`.
+
+   ```
+   public class CustomContentFactory extends ContentFactory { 
+   
+       //... 
+       // your custom code for advertising classes 
+       //... 
+   
+       /** 
+        * @inheritDoc 
+        */ 
+       override protected function  
+         doRetrieveAdPolicySelector(item:MediaPlayerItem):AdPolicySelector { 
+           return new DefaultAdPolicySelector(item); 
+       } 
+   }
+   ```
+
+* Si no tiene una implementación personalizada para la `ContentFactory` clase, TVSDK utiliza `DefaultAdPolicySelector`.
