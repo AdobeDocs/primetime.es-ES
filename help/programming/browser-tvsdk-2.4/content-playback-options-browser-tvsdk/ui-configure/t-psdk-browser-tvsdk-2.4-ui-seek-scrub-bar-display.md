@@ -5,7 +5,10 @@ seo-title: Administrar la búsqueda al utilizar la barra de búsqueda
 title: Administrar la búsqueda al utilizar la barra de búsqueda
 uuid: a7c74141-581f-40a3-9d28-ce56ba56773c
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -36,17 +39,17 @@ En el TVSDK del explorador, puede buscar una posición específica (tiempo) en u
    void seek(long position) throws IllegalStateException;
    ```
 
-1. Espere a que TVSDK del explorador active el `AdobePSDK.PSDKEventType.SEEK_END` evento, que devuelve la posición ajustada en el `actualPosition` atributo del evento:
+1. Espere a que TVSDK del explorador active el `AdobePSDK.PSDKEventType.SEEK_END` evento, que devuelve la posición ajustada en el atributo `actualPosition` del evento:
 
-       &quot;js
-     player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete);
-       onSeekComplete = function (event) {
-     // event.actualPosition
-     }
-     &quot;
-     
-     Esto es importante porque la posición de inicio real después de la búsqueda podría ser diferente de la posición solicitada. Pueden aplicarse algunas de las siguientes reglas:
-   
+   ```js
+   player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
+   onSeekComplete = function (event) {
+       // event.actualPosition
+   }
+   ```
+
+   Esto es importante porque la posición de inicio real después de la búsqueda podría ser diferente de la posición solicitada. Pueden aplicarse algunas de las siguientes reglas:
+
    * El comportamiento de reproducción se ve afectado si una búsqueda, u otro cambio de posición, termina en medio de una pausa publicitaria o omite los saltos publicitarios.
    * Solo puede buscar en la duración de búsqueda del recurso. Para VOD, es decir, desde 0 hasta la duración del recurso.
 
@@ -66,7 +69,7 @@ En el TVSDK del explorador, puede buscar una posición específica (tiempo) en u
                }); 
    ```
 
-1. Configure las llamadas de retorno de oyentes de eventos para los cambios en la actividad de búsqueda del usuario.
+1. Configure las llamadas de retorno de oyentes de evento para los cambios en la actividad de búsqueda del usuario.
 
        La operación de búsqueda es asincrónica, por lo que el SDK de TVSDK del explorador distribuye estos eventos relacionados con la búsqueda:
    
