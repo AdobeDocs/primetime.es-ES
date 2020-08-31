@@ -5,7 +5,10 @@ seo-title: Inicializar y configurar el análisis de vídeo
 title: Inicializar y configurar el análisis de vídeo
 uuid: 98017a20-4997-42f7-9b03-fd9c4b6ccd92
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 0%
 
 ---
 
@@ -32,7 +35,7 @@ Antes de activar el seguimiento de vídeo (Video Heartbeat), asegúrese de que d
   </tr> 
   <tr> 
    <td colname="col1"> Extremo del servidor de seguimiento de análisis de vídeo </td> 
-   <td colname="col2"> Dirección URL del extremo de la colección back-end de análisis de vídeo. Aquí es donde se envían todas las llamadas de seguimiento de Video Heartbeat. <p>Sugerencia:  La dirección URL del servidor de seguimiento de visitantes es la misma que la del servidor de seguimiento de Analytics. Para obtener información sobre la implementación del servicio de ID de visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementación del servicio de ID </a>. </p> </td> 
+   <td colname="col2"> Dirección URL del extremo de la colección back-end de análisis de vídeo. Aquí es donde se envían todas las llamadas de seguimiento de Video Heartbeat. <p>Sugerencia:  La dirección URL del servidor de seguimiento de visitante es la misma que la del servidor de seguimiento de Analytics. Para obtener información sobre la implementación del servicio de ID de Visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementación del servicio de ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nombre de la cuenta </td> 
@@ -49,37 +52,38 @@ Para configurar el seguimiento de videos en su reproductor:
 
 1. Confirme que las opciones de tiempo de carga del archivo de `ADBMobileConfig.json` recursos son correctas.
 
-       &quot;
-     {
-     &quot;version&quot; : &quot;1.1&quot;,
-     &quot;análisis&quot;: {
-     &quot;rsids&quot;: &quot;adobedevelopment&quot;,
-     &quot;server&quot; : &quot;10.131.129.149:3000&quot;,
-     &quot;charset&quot;: &quot;UTF-8&quot;,
-     &quot;ssl&quot; : false,
-     &quot;offlineEnabled&quot;: false,
-     &quot;lifecycleTimeout&quot; : 5,
-     &quot;batchLimit&quot;: 50,
-     &quot;privacyDefault&quot; : &quot;optedin&quot;,
-     &quot;poi&quot; : []
-     },
-     &quot;marketingCloud&quot;: {
- &quot;     org&quot;: &quot;VALOR PROPORCIONADO POR ADOBE&quot;
-     },
-     &quot;objetivo&quot;: {
-     &quot;clientCode&quot; : &quot;&quot;,
-     &quot;timeout&quot; : 5
-     },
-     &quot;audienceManager&quot;: {
- &quot;     server&quot;: &quot;&quot;
-     }
-     }
-     &quot;
-     
-     Este archivo de configuración con formato JSON se incluye como un recurso con TVSDK. El reproductor lee estos valores solo en el momento de la carga y los valores permanecen constantes mientras se ejecuta la aplicación.
-       
- Para     configurar las opciones de tiempo de carga:
-   
+   ```
+   { 
+       "version" : "1.1", 
+       "analytics" : { 
+           "rsids" : "adobedevelopment", 
+           "server" : "10.131.129.149:3000", 
+           "charset" : "UTF-8", 
+           "ssl" : false, 
+           "offlineEnabled" : false, 
+           "lifecycleTimeout" : 5, 
+           "batchLimit" : 50, 
+           "privacyDefault" : "optedin", 
+           "poi" : [] 
+       }, 
+       "marketingCloud": { 
+           "org": "ADOBE PROVIDED VALUE"  
+       }, 
+       "target" : { 
+           "clientCode" : "", 
+           "timeout" : 5 
+       }, 
+       "audienceManager" : { 
+           "server" : "" 
+       } 
+   }
+   ```
+
+   Este archivo de configuración con formato JSON se incluye como un recurso con TVSDK. El reproductor lee estos valores solo en el momento de la carga y los valores permanecen constantes mientras se ejecuta la aplicación.
+
+   Para configurar las opciones de tiempo de carga:
+
+
    1. Confirme que el `ADBMobileConfig.json` archivo contiene los valores adecuados (proporcionados por Adobe).
    1. Confirme que este archivo se encuentra en la `assets/` carpeta.
 
@@ -156,7 +160,7 @@ Para configurar el seguimiento de videos en su reproductor:
 
    1. Marque manualmente el flujo en directo/lineal como completo.
 
-      Si tiene varios episodios en un flujo en directo, puede marcar manualmente un episodio como completado mediante la API completa. Esto finaliza la sesión de seguimiento de vídeo del episodio de vídeo actual y puede iniciar una nueva sesión de seguimiento del siguiente episodio.
+      Si tiene varios episodios en un flujo en directo, puede marcar manualmente un episodio como completado mediante la API completa. Esto finaliza la sesión de seguimiento de vídeo para el episodio de vídeo actual y puede crear un inicio de una nueva sesión de seguimiento para el siguiente episodio.
 
       >[!TIP]
       >
