@@ -1,11 +1,11 @@
 ---
-description: Puede permitir la lista de sus aplicaciones de iOS mediante la herramienta machotools de Adobe.
-seo-description: Puede permitir la lista de sus aplicaciones de iOS mediante la herramienta machotools de Adobe.
-seo-title: Permitir la lista de aplicaciones de iOS
-title: Permitir la lista de aplicaciones de iOS
+description: Puede realizar la lista de permitidos de sus aplicaciones de iOS mediante la herramienta de herramientas de MacOS de Adobe.
+seo-description: Puede realizar la lista de permitidos de sus aplicaciones de iOS mediante la herramienta de herramientas de MacOS de Adobe.
+seo-title: Lista de permitidos de la aplicación iOS
+title: Lista de permitidos de la aplicación iOS
 uuid: 52ce1dd7-5f10-418e-9916-cec60eae874e
 translation-type: tm+mt
-source-git-commit: 9c6a6f0b5ecff78796e37daf9d7bdb9fa686ee0c
+source-git-commit: 0d3d74cb2b36acb3682304122ab61ba8636f640f
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Permitir la lista de aplicaciones de iOS {#allowlist-your-ios-application}
+# Lista de permitidos de la aplicación iOS {#allowlist-your-ios-application}
 
-Puede permitir la lista de sus aplicaciones de iOS mediante la herramienta machotools de Adobe.
+Puede realizar la lista de permitidos de sus aplicaciones de iOS mediante la herramienta de herramientas de MacOS de Adobe.
 
-Por lo general, al completar una aplicación TVSDK, puede utilizar las herramientas de la línea de comandos de Adobe Primetime DRM para permitir la lista de la aplicación.
+Por lo general, al completar una aplicación TVSDK, puede utilizar las herramientas de la línea de comandos de Adobe Primetime DRM para la lista de permitidos de la aplicación.
 
 >[!TIP]
 >
@@ -31,11 +31,11 @@ Antes de enviar una aplicación de iOS, debe firmarla y publicarla en Apple.
 >
 >Apple quita la firma del desarrollador y vuelve a firmar la aplicación con su propio certificado.
 
-Debido a la nueva firma, no se puede utilizar la información de lista que generó antes de enviarla a Apple App Store.
+Debido a la nueva firma, no se puede utilizar la información de la lista permitida que generó antes de enviarla a Apple App Store.
 
 Para trabajar con esta directiva de envío, Adobe ha creado una `machotools` herramienta que imprimirá con el dedo la aplicación iOS para crear un valor de compendio, firmar este valor e inyectarlo en la aplicación iOS. Después de imprimir el dedo de la aplicación de iOS, puede enviarla a Apple App Store. Cuando un usuario ejecuta la aplicación desde la App Store, Primetime DRM realiza un cálculo en tiempo de ejecución de la huella digital de la aplicación y lo confirma con el valor de compendio que se insertó anteriormente en la aplicación. Si la huella digital coincide, se confirma que la aplicación está permitida en la lista y se permite reproducir contenido protegido.
 
-La herramienta Adobe `machotools` se incluye en el SDK de iOS TVSDK, en el archivo [!DNL [...]/tools/DRM].
+La herramienta de Adobe `machotools` se incluye en el SDK de iOS TVSDK, en el [!DNL [...]/tools/DRM].
 
 Para usar `machotools`:
 
@@ -43,7 +43,7 @@ Para usar `machotools`:
 
    Para utilizar una utilidad como OpenSSL, abra una ventana de comandos e introduzca lo siguiente:
 
-   ```
+   ```shell
    openssl genrsa -des3 -out selfsigncert-ios.key 1024
    ```
 
@@ -52,7 +52,7 @@ Para usar `machotools`:
    Las contraseñas deben contener al menos 12 caracteres, y los caracteres deben incluir una mezcla de caracteres y números ASCII en mayúsculas y minúsculas.
 1. Para utilizar OpenSSL para generar una contraseña segura, abra una ventana de comandos e introduzca lo siguiente:
 
-   ```
+   ```shell
    openssl rand -base64 8
    ```
 
@@ -60,7 +60,7 @@ Para usar `machotools`:
 
    Para utilizar OpenSSL para generar un CSR, abra una ventana de comandos e introduzca lo siguiente:
 
-   ```
+   ```shell
    openssl req -new -key selfsigncert-ios.key -out selfsigncert-ios.csr -batch
    ```
 
@@ -68,14 +68,14 @@ Para usar `machotools`:
 
    El siguiente ejemplo proporciona una caducidad de 20 años:
 
-   ```
+   ```shell
    openssl x509 -req -days 7300 -in selfsigncert-ios.csr  
      -signkey selfsigncert-ios.key -out selfsigncert-ios.crt
    ```
 
 1. Convierta el certificado autofirmado en un archivo PKCS#12:
 
-   ```
+   ```shell
    openssl pkcs12 -export -out selfsigncert-ios.pfx  
      -inkey selfsigncert-ios.key -in selfsigncert-ios.crt
    ```
@@ -85,7 +85,7 @@ Para usar `machotools`:
 1. Actualice la ubicación del archivo PFX y la contraseña.
 1. Antes de crear la aplicación en Xcode, vaya a **[!UICONTROL Build Phases]** > **[!UICONTROL Run Script]** y agregue el siguiente comando a la secuencia de comandos de ejecución:
 
-   ```
+   ```shell
    mkdir -p "${PROJECT_DIR}/generatedRes" "${PROJECT_DIR}/machotools" sign  
      -in "${CODESIGNING_FOLDER_PATH}/${EXECUTABLE_NAME}"  
      -out "${PROJECT_DIR}/generatedRes/AAXSAppDigest.digest"  
@@ -95,15 +95,15 @@ Para usar `machotools`:
 
 1. Ejecutar [!DNL machotools] para generar el valor hash del ID de editor de la aplicación.
 
-   ```
+   ```shell
    ./machotools dumpMachoSignature -in ${PROJECT_DIR}/generatedRes/AAXSAppDigest.digest
    ```
 
 1. Cree una nueva directiva DRM o actualice la directiva existente para incluir el valor hash de ID de editor devuelto.
 1. Con el [!DNL AdobePolicyManager.jar], cree una nueva directiva DRM (actualice la directiva existente) para incluir el valor hash de ID de editor devuelto, un ID de aplicación opcional y los atributos de versión mínimo y máximo en el archivo incluido [!DNL flashaccess-tools.properties] .
 
-   ```
-   java -jar libs/AdobePolicyManager.jar new app_whitelist.pol
+   ```shell
+   java -jar libs/AdobePolicyManager.jar new app_allowlist.pol
    ```
 
 1. Empaquete el contenido mediante la nueva directiva DRM y confirme la reproducción del contenido permitido de la lista en la aplicación de iOS.
