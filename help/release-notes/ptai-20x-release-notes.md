@@ -1,20 +1,38 @@
 ---
-title: Notas de la versión de PTAI 20.8.1
-description: Las notas de la versión de PTAI 20.8.1 describen las novedades o los cambios que se han producido en Primetime Dynamic Ad Insertion en el año 2020.
+title: Notas de la versión de PTAI 20.9.1
+description: Las notas de la versión de PTAI 20.9.1 describen las novedades o los cambios que se han producido en Primetime Dynamic Ad Insertion en el año 2020.
 translation-type: tm+mt
-source-git-commit: 6b2aaa96f8604af27810cceee5a8a98c4feebd6f
+source-git-commit: f17a9fdf2a7c22d1d7b0833c7eac8f1202cebe87
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '860'
 ht-degree: 0%
 
 ---
 
 
-# Notas de la versión de Primetime Dynamic Ad Insertion 20.8.1
+# Notas de la versión de Primetime Dynamic Ad Insertion 20.9.1
 
-Las notas de la versión de Ad Insertion dinámico 20.8.1 describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en Primetime Dynamic Ad Insertion en el año 2020.
+Las notas de la versión de Ad Insertion dinámico 20.9.1 describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en Primetime Dynamic Ad Insertion en el año 2020.
 
-## Novedades de PTAI 20.8.1
+## Novedades de PTAI 20.9.1
+
+**Cuando:** Martes 1 de septiembre de 2020, de las 3:30 a.m. a las 7:30 a.m. hora del Este
+
+**Correcciones**
+
+・ Se corrigió el problema con los clientes que usaban HLS/CMAF, donde a veces faltaban tokens de CDN o etiquetas EXT-X-MAP que a veces salían incorrectamente de la ventana de DVR.
+
+### Mejoras y correcciones en versiones anteriores
+
+#### Versión 20.8.4
+
+**Cuando:** Miércoles 19 de agosto de 2020 de las 3:30 a las 7:30 AM hora del Este
+
+**Mejoras y correcciones**
+
+Actualizaciones de mantenimiento.
+
+#### Versión 20.8.1
 
 **Cuando:** Martes 4 de agosto de 2020, de las 3:00 AM a las 6:00 AM, hora del Este
 
@@ -22,11 +40,9 @@ Las notas de la versión de Ad Insertion dinámico 20.8.1 describen las novedade
 
 Actualizaciones de mantenimiento.
 
-### Mejoras y correcciones en versiones anteriores
-
 #### Versión 20.7.1
 
-**Cuando:** Jueves 9 de julio de 2020, de 03:00 AM a 05:00 AM Hora del Este
+**Cuando:** Jueves 9 de julio de 2020, de las 3:00 AM a las 5:00 AM Hora del Este
 
 **Nuevas funciones y mejoras**
 
@@ -106,9 +122,9 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 * Mejoras de rendimiento:
 
-   * Se Añadió la compatibilidad de caché para los manifiestos m3u8 maestro/medio. Estos manifiestos ahora responden a Cache-Control: los encabezados public y Max-Age, que a menudo pueden mejorar el rendimiento del inicio de vídeo.
+   * Se añadió la compatibilidad de caché para los manifiestos m3u8 maestro/medio. Estos manifiestos ahora responden a Cache-Control: los encabezados public y Max-Age, que a menudo pueden mejorar el rendimiento del inicio de vídeo.
 
-   * Se ha Añadido la compatibilidad para forzar la captura de elementos creativos https mediante http, lo que también puede mejorar el rendimiento del inicio de vídeo.
+   * Se ha añadido la compatibilidad para forzar la captura de elementos creativos https mediante http, lo que también puede mejorar el rendimiento del inicio de vídeo.
 
 * Correcciones de seguridad y mantenimiento.
 
@@ -116,7 +132,7 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 **Cuando:** Jueves 13 de febrero de 2020 de las 4:30 a las 5:30 AM hora del Este
 
-* Se ha Añadido la compatibilidad con la vinculación de recursos de publicidad que contienen varios flujos de solo audio en función del idioma, el códec o la velocidad de bits.
+* Se ha añadido la compatibilidad con la vinculación de recursos de publicidad que contienen varios flujos de solo audio en función del idioma, el códec o la velocidad de bits.
 * Pequeñas mejoras de rendimiento y actualizaciones de mantenimiento.
 
 #### Versión 20.1.3
@@ -145,7 +161,7 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 * El servicio de reempaquetado creativo ahora ofrece una inserción de anuncios más rápida mediante el bloqueo automático de los elementos creativos malformados.
 
-* Se Añadió la compatibilidad de la fase 1 con el nuevo formato de señal SCTE 35 en la inserción de anuncios en el servidor.
+* Se añadió la compatibilidad de la fase 1 con el nuevo formato de señal SCTE 35 en la inserción de anuncios en el servidor.
 
 * Actualizaciones de mantenimiento.
 
