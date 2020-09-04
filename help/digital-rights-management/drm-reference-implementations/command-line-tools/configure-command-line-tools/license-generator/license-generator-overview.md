@@ -3,7 +3,10 @@ seo-title: Información general
 title: Información general
 uuid: 857390be-dd14-46c0-b8f7-2bc661c515d4
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '672'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ java -jar AdobeLicenseGenerator.jar -m
 </i class="+ topic>
 ```
 
-* `metadata` - Incluye los metadatos de DRM de Adobe Primetime.
+* `metadata` - Incluye los metadatos DRM de Adobe Primetime.
 
    Puede recuperar este archivo del contenido protegido con las `-d -m` opciones de Media Packager.
 
@@ -96,7 +99,7 @@ Antes de ejecutar el Generador de licencias, debe especificar los valores de las
 
 >[!NOTE]
 >
->Para los nombres de propiedad que incluyen *n*, *n* representa un entero que comienza por 1 y aumenta para cada instancia de la propiedad.
+>Para los nombres de propiedad que incluyen *n*, *n* representa un entero que inicio con 1 y aumenta para cada instancia de la propiedad.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_qk1_rry_n4"> 
  <thead class="- topic/thead "> 
@@ -112,7 +115,7 @@ Antes de ejecutar el Generador de licencias, debe especificar los valores de las
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licencisegen.keyServerCert</span> </td> 
-   <td colname="2" class="- topic/entry "> Certificado de servidor de claves, que es un certificado de servidor de licencias emitido por Adobe que utiliza el servidor de claves. Este certificado se aplica únicamente si la directiva de metadatos/DRM indica que se requiere un servidor clave para la entrega de claves a dispositivos iOS. </td> 
+   <td colname="2" class="- topic/entry "> Certificado de servidor de claves, que es un certificado de servidor de licencias emitido por Adobes que utiliza el servidor de claves. Este certificado se aplica únicamente si la directiva de metadatos/DRM indica que se requiere un servidor clave para el envío de claves en dispositivos iOS. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licencisegen.sign.certfile</span> </td> 
@@ -124,20 +127,18 @@ Antes de ejecutar el Generador de licencias, debe especificar los valores de las
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licencisegen.domainca.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Si genera licencias enlazadas a dominios, debe especificar uno o más certificados de CA de dominio para indicar a las autoridades de dominio en las que el emisor de licencias puede confiar. </p> <p>Si el destinatario de la licencia es un certificado de dominio, que no ha sido emitido por una de las CA de dominio especificadas, no se puede generar una licencia. Esta propiedad especifica un archivo <span class="filepath"> .cer</span> que incluye el certificado en el formato PEM o DER. <span class="codeph">n</span> debe aumentar monotónicamente, comenzando desde 1. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Si genera licencias enlazadas a dominios, debe especificar uno o más certificados de CA de dominio para indicar a las autoridades de dominio en las que el emisor de licencias puede confiar. </p> <p>Si el destinatario de licencia es un certificado de dominio, que no ha sido emitido por una de las CA de dominio especificadas, no se puede generar una licencia. Esta propiedad especifica un archivo <span class="filepath"> .cer</span> que incluye el certificado en el formato PEM o DER. <span class="codeph">n</span> debe aumentar monotónicamente, comenzando desde 1. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
-    <lines>
-     <span class="+ topic/ph pr-d/codeph codeph">licencisegen.keys.asymmetric. licenseServerCredential.n</span>
-    </lines> </td> 
+    <code>licensegen.keys.asymmetric. licenseServerCredential.n</code>
+   </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Archivo PKCS12 opcional que incluye credenciales adicionales del servidor de licencias para descifrar el CEK en los metadatos y la directiva DRM. Puede configurar credenciales adicionales si el contenido se ha empaquetado previamente con un certificado de servidor de licencias distinto de las credenciales especificadas con <span class="codeph"> licencisegen.sign.certfile</span>. Esta propiedad necesita hacer referencia a un archivo <span class="filepath"> .pfx</span> que incluye un certificado y una clave privada. <span class="codeph">n</span> debe aumentar monotónicamente, comenzando desde 1. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
-    <lines>
-     <span class="+ topic/ph pr-d/codeph codeph">licencisegen.keys.asymmetric. licenseServerCredential.n.password</span>
-    </lines> </td> 
+    <code>licensegen.keys.asymmetric. licenseServerCredential.n.password</code>
+   </td> 
    <td colname="2" class="- topic/entry "> <p>La contraseña se aplica para proteger el archivo especificado con la propiedad licencisegen.keys.asiymmetric.licenseServerCredential.n<span class="+ topic/ph pr-d/codeph codeph"></span> . </p> </td> 
   </tr> 
  </tbody> 
