@@ -2,7 +2,7 @@
 title: Notas de la versión de TVSDK 3.12 para iOS
 description: Las notas de la versión de TVSDK 3.12 para iOS describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de dispositivo en TVSDK iOS 3.12.
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
 source-wordcount: '7665'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Revisión para un escenario en el que la reproducción se detenía cuando se rea
 
 **iOS TVSDK 3.6**
 
-**Correcciones en la propiedad vastoXML de la clase`PTNetworkAdInfo`**
+**Correcciones en vastosXML, propiedad de la clase`PTNetworkAdInfo`**
 
 La propiedad vastoXML no se estaba configurando correctamente y devolvía un valor nulo.
 
@@ -136,10 +136,10 @@ Esta versión no incorpora nuevas funciones ni mejoras.
    Ejemplo: El usuario se une en el medio (a los 40 segundos) de una pausa publicitaria de 90 segundos que consta de tres anuncios de 30 segundos. Pasarán 10 segundos desde el segundo anuncio de la pausa.
 
    * El segundo anuncio se reproduce durante el resto de la duración (20 segundos) seguido del tercer anuncio.
-   * Los rastreadores de anuncios para el anuncio parcial reproducido (segundo anuncio) no se activan. Los rastreadores solo para el tercer anuncio se activan.
+   * Los rastreadores de publicidad para el anuncio parcial reproducido (segundo anuncio) no se activan. Los rastreadores solo para el tercer anuncio se activan.
 
 * Se añadió la propiedad enableVodPreroll del tipo booleano en la interfaz PTAdMetadata. La propiedad se puede utilizar para habilitar el predesplazamiento en un flujo de VoD. Si enableVodPreroll es NO, PSDK no reproduce pre-roll. Esto, sin embargo, no afecta a los midrolls. El valor predeterminado de enableVodPreroll es YES.
-* la API ClosedCaptionDisplayEnabled de la interfaz de PTMediaPlayer está marcada como obsoleta desde iOS v1.4.43 en adelante. Para determinar si hay subtítulos opcionales disponibles para un PTMediaPlayerItem determinado, examine la propiedad subtitlesOptions de PTMediaPlayerMediaItem.
+* la API ClosedCaptionDisplayEnabled de la interfaz de PTMediaPlayer está marcada como obsoleta en iOS v1.4.43 y versiones posteriores. Para determinar si hay subtítulos opcionales disponibles para un PTMediaPlayerItem determinado, examine la propiedad subtitlesOptions de PTMediaPlayerMediaItem.
 
 **Versión 1.4.42**
 
@@ -173,7 +173,7 @@ Integrar y certificar VHL 2.0 en iOS TVSDK : Reduzca la barrera en la implementa
 
 **Información de publicidad de red**
 
-Las API de TVSDK ahora proporcionan información adicional sobre las respuestas VAST de terceros. La ID de publicidad, el sistema de publicidad y las extensiones de publicidad VAST se proporcionan en `PTNetworkAdInfo` clase a la que se puede acceder mediante `networkAdInfo` la propiedad en un recurso de publicidad. Esta información se puede utilizar para la integración con otras plataformas de análisis de publicidad, como **Moat Analytics**.
+Las API de TVSDK ahora proporcionan información adicional sobre las respuestas de VAST de terceros. La ID de publicidad, el sistema de publicidad y las extensiones de publicidad VAST se proporcionan en `PTNetworkAdInfo` clase a la que se puede acceder mediante `networkAdInfo` la propiedad en un recurso de publicidad. Esta información se puede utilizar para la integración con otras plataformas de análisis de publicidad, como **Moat Analytics**.
 
 **Versión 1.4.31**
 
@@ -288,19 +288,19 @@ Cuando la resolución está asociada a un problema informado, se muestra una ref
 
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>All TVSDK customers who use CRS are strongly encouraged to upgrade to TVSDK 1.4.39 or latest on iOS and Android. This upgrade is a drop-in replacement to the existing app implementation. After the upgrade, check for the CRS creative URL requests in a proxy tool (for example, Charles) to verify that the version in the path reflects version 3.1. For example:</p> 
  <p><span class="code">https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/ 167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784bf3586d.m3u8</span></p> 
-</note>
+`</note>`
 
  -->
 
 <!--
 Comment Type: draft
 
-<note type="note"> 
+`<note type="note"> `
  <p>TVSDK versions earlier than version 1.4.28 sometimes exhibit a long delay in the startup time when ad-enabled content is played on devices that are running on iOS 10. To resolve this issue, upgrade to version 1.4.28 or later. Version 1.4.28 was released on August 31, 2016, and iOS 10 was released on September 13, 2016.</p> 
-</note>
+`</note>`
  -->
 **iOS TVSDK 3.12**
 
@@ -828,7 +828,7 @@ Se ha solucionado el problema por el que la reproducción fallaba después de qu
 
 * (ZD #22074) - El bloqueo de AUDVAST se produce una vez al minuto en iOS
 
-Este problema se resolvió mejorando el manejo de las etiquetas de publicidad VAST de terceros que tienen caracteres no válidos en la dirección URL.
+Este problema se resolvió mejorando el manejo de etiquetas de anuncios VAST de terceros que tienen caracteres no válidos en la dirección URL.
 
 * (ZD #22257) - El TVSDK no puede reproducir el flujo DRM
 
