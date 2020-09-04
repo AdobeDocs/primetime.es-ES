@@ -5,9 +5,9 @@ seo-title: Archivo de configuración del inquilino
 title: Archivo de configuración del inquilino
 uuid: bc9ee4a1-63b6-4362-9929-3e9fe8251075
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 El archivo de configuración flashaccess-tenant.xml incluye opciones que se aplican a un inquilino específico del servidor de licencias.
 
-Cada inquilino admite su propia instancia de este archivo de configuración que se encuentra en [!DNL &lt;LicenseServer.ConfigRoot>/flashaccesserver/inants/<tenantname>]. Consulte el [!DNL configs/flashaccessserver/tenants/sampletenant] directorio para ver un archivo de configuración de inquilino de ejemplo.
+Cada inquilino admite su propia instancia de este archivo de configuración que se encuentra en `<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`. Consulte el `configs/flashaccessserver/tenants/sampletenant` directorio para ver un archivo de configuración de inquilino de ejemplo.
 
-Puede especificar todas las rutas de acceso de archivo en el archivo de configuración del inquilino como rutas absolutas o como rutas relativas al directorio de configuración del inquilino ( [!DNL &lt;LicenseServer.ConfigRoot>/flashaccesserver/inquilants/<tenantname>]).
+Puede especificar todas las rutas de archivo del archivo de configuración del inquilino como rutas absolutas o como rutas relativas al directorio de configuración del inquilino (`<LicenseServer.ConfigRoot>/flashaccessserver/tenants/<tenantname>`).
 
 El archivo de configuración del inquilino incluye:
 
@@ -35,7 +35,7 @@ El archivo de configuración del inquilino incluye:
 
 * *Autorizadores* personalizados — De forma opcional, especifica las clases de autorizador personalizadas que se van a invocar para cada solicitud de licencia. Si se especifican varios autorizadores, se invocan en el orden en que aparecen.
 * *Lista de envases* autorizados — De forma opcional, especifica certificados que identifican entidades autorizadas para empaquetar contenido para este servidor de licencias. Si no se especifica ningún certificado de empaquetador, el servidor emite licencias para contenido empaquetado por cualquier empaquetador. Si el servidor recibe una solicitud de licencia de un empaquetador no autorizado, se deniega la solicitud.
-* *Versión* mínima del cliente admitida Consulte Uso del SDK de DRM de Adobe Primetime para la protección de contenido.
+* *Versión* mínima del cliente admitida Consulte Uso del SDK de Adobe Primetime DRM para la protección de contenido.
 
 * *Reglas de uso*
 
@@ -48,24 +48,25 @@ El archivo de configuración del inquilino incluye:
    * *Reproducir a la derecha* — Se debe especificar un mínimo de un derecho. Si especifica varios derechos, el cliente utilizará el primer derecho que cumpla todos los requisitos.
 
       * *Protección* de salida — Controla si se debe proteger la salida a dispositivos de procesamiento externos.
-      * *Restricciones* de aplicaciones AIR y SWF — Permita una lista opcional de aplicaciones SWF y AIR que pueden reproducir el contenido (por ejemplo, solo se permiten las aplicaciones especificadas). Las aplicaciones SWF se identifican mediante una URL o mediante el compendio del SWF y el tiempo máximo para permitir la descarga y verificación del compendio.
+      * *Restricciones* de aplicaciones AIR y SWF — Lista de permitidos opcional de aplicaciones SWF y AIR que pueden reproducir el contenido (por ejemplo, solo se permiten las aplicaciones especificadas). Las aplicaciones SWF se identifican mediante una URL o mediante el compendio del SWF y el tiempo máximo para permitir la descarga y verificación del compendio.
 
          Consulte Calculadora de hash *SWF* para obtener información sobre cómo calcular el compendio SWF.
 
          Un ID de editor y un ID de aplicación opcional, una versión mínima y una versión máxima identifican las aplicaciones de AIR e iOS. Si no especifica ninguna restricción de aplicación, cualquier aplicación SWF o AIR puede reproducir el contenido.
 
-      * *Restricciones* de módulos DRM y Runtime — Especifica el nivel de seguridad mínimo necesario para el módulo DRM/Runtime. De forma opcional, incluye una lista de bloques de versiones que no pueden reproducir el contenido. Las versiones de módulos se identifican mediante atributos, como sistema operativo y/o número de versión.
+      * *Restricciones* de módulos DRM y Runtime — Especifica el nivel de seguridad mínimo necesario para el módulo DRM/Runtime. Opcionalmente, incluye una lista de bloqueados de versiones que no pueden reproducir el contenido. Las versiones de módulos se identifican mediante atributos, como sistema operativo y/o número de versión.
 
          Las restricciones del módulo DRM y las restricciones del módulo de tiempo de ejecución ahora admiten los atributos adicionales siguientes:
 
          * `oemVendor`
          * `model`
          * `screenType`
+
          Los siguientes atributos ahora son opcionales:
 
          * `osVersion`
          * `version`
-      * *Requisitos* de capacidad del dispositivo: De forma opcional, especifica las capacidades de hardware necesarias para acceder al contenido.
+      * *Requisitos* de capacidad del dispositivo — De forma opcional, especifica las capacidades de hardware necesarias para acceder al contenido.
       * *Requisitos* de detección de saltos de cárcel — De forma opcional, especifica que no se permite la reproducción en dispositivos en los que se detecta un salto de página.
 
 
