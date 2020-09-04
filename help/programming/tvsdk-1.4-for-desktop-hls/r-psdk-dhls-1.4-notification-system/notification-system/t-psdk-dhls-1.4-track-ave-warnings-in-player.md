@@ -5,7 +5,10 @@ seo-title: Seguimiento de advertencias de AVE en el reproductor
 title: Seguimiento de advertencias de AVE en el reproductor
 uuid: 236aee5e-6b1a-4298-9d3b-f33b40416c19
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '187'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 
 Con NotificationEvent, puede rastrear las advertencias que se pasan desde el motor de vídeo de Adobe (AVE).
 
-La aplicación de reproductor puede realizar el seguimiento de las advertencias y errores de reproducción generados por el AVE, como los eventos de conmutación por error o de apagado de red que no detienen la reproducción y no requieren necesariamente ninguna acción por parte de la aplicación. Aunque algunos errores de AVE son tratados por el TVSDK, `NotificationEvent` sirve como mecanismo general de paso a la capa de aplicación para advertencias de AVE. Después de recibir advertencias de AVE, puede elegir realizar alguna acción, como detener la reproducción de forma proactiva, activar un plan de contingencia, registrar mensajes, etc.
+La aplicación de reproductor puede realizar un seguimiento de las advertencias y los errores de reproducción generados por el AVE, como la conmutación por error o los eventos de apagado de red que no detienen la reproducción y no requieren necesariamente ninguna acción por parte de la aplicación. Aunque algunos errores de AVE son tratados por el TVSDK, `NotificationEvent` sirve como mecanismo general de paso a la capa de aplicación para advertencias de AVE. Después de recibir advertencias de AVE, puede elegir realizar alguna acción, como detener la reproducción de forma proactiva, activar un plan de contingencia, registrar mensajes, etc.
 
 Utilice los siguientes elementos de API para rastrear las advertencias de AVE en el reproductor:
 
@@ -76,7 +79,7 @@ public class NotificationEvent extends Event {
 }
 ```
 
-Agregue un detector de eventos a su reproductor para capturar advertencias de AVE.
+Añada un detector de eventos a su reproductor para captar advertencias de AVE.
 
 Por ejemplo:
 
@@ -108,10 +111,10 @@ Este es un ejemplo de advertencias de AVE que se rastrearon usando `Notification
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [runtimeCodeMessage:SEGMENT_SKIPPED_ON_FAILURE] 
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [eventType:Warning] 
  
-<ph>
+<pre>
   [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [description:url::= 
    https://xyz.corp.adobe.com/pmp/assets/abc/failover/tc.1.04/content/backup-01/ 
    low-res/main-stream4-4x3-info6.ts,periodIndex::=0, 
    sizeBytes::=0,downloadTime(ms)::=0,mediaDuration(ms)::=0] 
-</ph>
+</pre>
 ```
