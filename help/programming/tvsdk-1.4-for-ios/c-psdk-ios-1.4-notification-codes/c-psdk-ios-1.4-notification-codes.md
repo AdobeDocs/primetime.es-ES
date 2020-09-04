@@ -5,7 +5,10 @@ seo-title: Códigos de notificación
 title: Códigos de notificación
 uuid: 8a332057-8fda-4497-9264-a2caac92e900
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '241'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 El sistema de notificaciones TVSDK genera varios avisos de error, advertencia y de información que proporcionan metadatos de diagnóstico.
 
-Los objetos de notificación proporcionan información relacionada con el estado del reproductor. TVSDK proporciona una lista ordenada cronológicamente de objetos de notificación y cada notificación contiene los metadatos siguientes:
+Los objetos de notificación proporcionan información relacionada con el estado del reproductor. TVSDK proporciona una lista ordenada cronológicamente de los objetos de notificación y cada notificación contiene los metadatos siguientes:
 
 <table frame="all" colsep="1" rowsep="1" id="table_DBA8CACF02DB4AF2B053E560850B49CE"> 
  <thead> 
@@ -27,9 +30,9 @@ Los objetos de notificación proporcionan información relacionada con el estado
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> type</span></td> 
    <td colname="2">El tipo de notificación. Según la plataforma, esta propiedad hace referencia a un tipo enumerado con posibles valores de 
-    <ph>
+    <pre>
       INFORMACIÓN, ADVERTENCIA o ERROR. Es la agrupación de nivel superior para las notificaciones.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> code</span></td> 
