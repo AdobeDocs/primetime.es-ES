@@ -3,9 +3,9 @@ seo-title: Implementación del servidor de claves DRM Primetime información gen
 title: Implementación del servidor de claves DRM Primetime información general
 uuid: 86630675-c15d-4f32-8212-d7343f4f92e0
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1075'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ El servidor de claves Primetime DRM utiliza opcionalmente una biblioteca especí
 
 ## Configuración SSL {#ssl-configuration}
 
-Se requiere SSL para el envío de claves HTTPS remotas. Las conexiones SSL podrían ser manejadas por el servidor de aplicaciones (es decir, configurando SSL en Tomcat) o pueden ser manejadas por otro servidor (es decir, un equilibrador de carga, un acelerador SSL o Apache). El envío de clave HTTPS remota requiere una conexión SSL. El servidor necesita un certificado SSL emitido por una CA de confianza.
+Se requiere SSL para el envío de claves HTTPS remotas. Las conexiones SSL podrían ser manejadas por el servidor de aplicaciones (es decir, configurando SSL en Tomcat) o podrían ser manejadas por otro servidor (es decir, un equilibrador de carga, un acelerador SSL o Apache). El envío de clave HTTPS remota requiere una conexión SSL. El servidor necesita un certificado SSL emitido por una CA de confianza.
 
 Existen diversas opciones para configurar SSL. A continuación se muestran ejemplos para configurar SSL con autenticación de cliente en Apache y Tomcat.
 
@@ -71,7 +71,7 @@ Copie [!DNL server.cer]y [!DNL server.key] en el directorio Tomcat. Especifique 
 
 Tiene la opción de establecer las dos siguientes propiedades del sistema Java para modificar la ubicación de los archivos de configuración y registro para el servidor de claves DRM Primetime:
 
-* `KeyServer.ConfigRoot` - Este directorio contiene todos los archivos de configuración para el servidor de claves Primetime DRM. Para obtener más información sobre el contenido de estos archivos, consulte Archivos [de configuración de](#key-server-configuration-files)Key Server. Si no se establece, el valor predeterminado es [!DNL CATALINA_BASE/keyserver].
+* `KeyServer.ConfigRoot` - Este directorio contiene todos los archivos de configuración para el servidor de claves de Primetime DRM. Para obtener más información sobre el contenido de estos archivos, consulte Archivos [de configuración de](#key-server-configuration-files)Key Server. Si no se establece, el valor predeterminado es [!DNL CATALINA_BASE/keyserver].
 
 * `KeyServer.LogRoot` - Es un directorio de registro que contiene los registros de la aplicación iOS Key Server. Si no se establece, el valor predeterminado es el mismo que `KeyServer.ConfigRoot`
 
@@ -88,11 +88,11 @@ JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder”
 
 Para procesar solicitudes clave de clientes Primetime DRM iOS y Xbox 360, el servidor de claves Primetime DRM debe configurarse con un conjunto de credenciales emitidas por Adobe. Estas credenciales se pueden almacenar en archivos PKCS#12 ( [!DNL .pfx]) o en un HSM.
 
-Los [!DNL .pfx] archivos se pueden ubicar en cualquier lugar, pero para facilitar la configuración, Adobe recomienda colocar los [!DNL .pfx] archivos en el directorio de configuración del inquilino. Para obtener más información, consulte Archivos [de configuración de](#key-server-configuration-files)Key Server.
+Los [!DNL .pfx] archivos pueden ubicarse en cualquier lugar, pero para facilitar la configuración, Adobe recomienda colocar los [!DNL .pfx] archivos en el directorio de configuración del inquilino. Para obtener más información, consulte Archivos [de configuración de](#key-server-configuration-files)Key Server.
 
 ### Configuración de HSM {#section_13A19E3E32934C5FA00AEF621F369877}
 
-Si decide utilizar un HSM para almacenar sus credenciales de servidor, debe cargar las claves privadas y los certificados en el HSM y crear un archivo de configuración *pkcs11.cfg* . Este archivo debe encontrarse en el directorio *KeyServer.ConfigRoot* . Consulte la [!DNL <Primetime DRM Key Server>/configs] para un archivo de configuración PKCS 11 de ejemplo. Para obtener información sobre el formato de [!DNL pkcs11.cfg], consulte la documentación del proveedor PKCS11 de Sun.
+Si decide utilizar un HSM para almacenar sus credenciales de servidor, debe cargar las claves privadas y los certificados en el HSM y crear un archivo de configuración *pkcs11.cfg* . Este archivo debe encontrarse en el directorio *KeyServer.ConfigRoot* . Consulte el `<Primetime DRM Key Server>/configs` directorio para ver un archivo de configuración PKCS 11 de ejemplo. Para obtener información sobre el formato de [!DNL pkcs11.cfg], consulte la documentación del proveedor PKCS11 de Sun.
 
 Para comprobar que los archivos de configuración de HSM y Sun PKCS11 están correctamente configurados, puede utilizar el siguiente comando desde el directorio donde se encuentra el [!DNL pkcs11.cfg] archivo ( [!DNL keytool] se instala con Java JRE y JDK):
 
@@ -112,7 +112,7 @@ Primetime DRM Key Server requiere dos tipos de archivos de configuración:
 
 Si se realizan cambios en los archivos de configuración, se debe reiniciar el servidor para que los cambios surtan efecto.
 
-Para evitar que las contraseñas estén disponibles en texto sin formato en los archivos de configuración, todas las contraseñas especificadas en los archivos de configuración global e inquilino deben estar cifradas. Para obtener más información sobre la codificación de contraseñas, consulte [*Password Scrambler *en* Uso del servidor Primetime DRM para flujo *](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md)protegido.
+Para evitar que las contraseñas estén disponibles en texto sin formato en los archivos de configuración, todas las contraseñas especificadas en los archivos de configuración global e inquilino deben estar cifradas. Para obtener más información sobre la codificación de contraseñas, consulte [*Password Scrambler* en *Uso del servidor Primetime DRM para flujo*](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md) protegido.
 
 ## Estructura del directorio de configuración {#configuration-directory-structure}
 
@@ -136,7 +136,7 @@ El archivo de configuración [!DNL flashaccess-keyserver-global.xml] contiene op
 * Registro: especifica el nivel de registro y la frecuencia con la que se desplazan los archivos de registro.
 * Contraseña de HSM: solo se requiere si se utiliza un HSM para almacenar las credenciales del servidor.
 
-Consulte los comentarios del archivo de configuración global de ejemplo ubicado en [!DNL <Primetime DRM Key Server>/configs] para obtener más información.
+Consulte los comentarios en el archivo de configuración global de ejemplo ubicado en `<Primetime DRM Key Server>/configs` para obtener más información.
 
 ## Archivos de configuración del inquilino {#tenant-configuration-files}
 
