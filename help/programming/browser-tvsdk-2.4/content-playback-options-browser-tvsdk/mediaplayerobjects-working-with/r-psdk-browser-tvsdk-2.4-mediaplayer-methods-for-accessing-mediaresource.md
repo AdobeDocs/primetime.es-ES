@@ -5,7 +5,10 @@ seo-title: Atributos de MediaPlayer para acceder a la información de MediaResou
 title: Atributos de MediaPlayer para acceder a la información de MediaResource
 uuid: d26f39d6-0a6b-4072-b99a-8767a511a846
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -48,14 +51,14 @@ Los métodos de la clase MediaPlayerItem permiten obtener información sobre el 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> audioTracks </span> </td> 
-   <td colname="3"> Proporciona una lista de pistas de audio alternativas disponibles. </td> 
+   <td colname="3"> Proporciona una lista de las pistas de audio alternativas disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> <span class="codeph"> selectedAudioTrack </span> </td> 
    <td colname="3"> 
-    <ph>
+    <pre>
       Recupera la pista de audio seleccionada actualmente con <span class="codeph"> selectAudioTrack </span>. 
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Metadatos temporizados </td> 
@@ -72,7 +75,7 @@ Los métodos de la clase MediaPlayerItem permiten obtener información sobre el 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="3"> Proporciona una lista de los perfiles de velocidad de bits asociados a este flujo. <p>Nota:  Puede recuperar la velocidad de bits de cada perfil y la altura y la anchura del perfil. </p> </td> 
+   <td colname="3"> Proporciona una lista de los perfiles de velocidad de bits asociados a este flujo. <p>Nota:  Puede recuperar la velocidad de bits de cada perfil y la altura y anchura del perfil. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Recurso multimedia </td> 
