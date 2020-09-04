@@ -3,9 +3,9 @@ seo-title: Ejecución del servidor DRM para flujo continuo protegido
 title: Ejecución del servidor DRM para flujo continuo protegido
 uuid: 9bbe211d-268b-43c2-9e55-7ce62de40d30
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 51b3713e04fcb4adeaa7a8d1b700372b1dba7cf6
 workflow-type: tm+mt
-source-wordcount: '804'
+source-wordcount: '795'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ Puede comprobar la validez de la configuración utilizando las utilidades propor
 
 Si quieres inicio a Tomcat y al servidor de licencias, necesitas ejecutarlo [!DNL catalina.bat start] o [!DNL catalina.sh start] desde el [!DNL bin] directorio de Tomcat.
 
-Una vez iniciado el servidor, debe comprobar que se ha configurado correctamente abriendo [!DNL https://<lic<span></span>ense-server-host:port>/flashaccesserver/<tenant-name>/flashaccess/license/v1] en una ventana del explorador. Si la configuración del inquilino se ha cargado correctamente, aparece un mensaje de confirmación.
+Una vez iniciado el servidor, debe comprobar que se ha configurado correctamente abriéndolo `https://<lic<span></span>ense-server-host:port>/flashaccessserver/<tenant-name>/flashaccess/license/v1` en una ventana del explorador. Si la configuración del inquilino se ha cargado correctamente, aparece un mensaje de confirmación.
 
-## Archivos de registro {#log-files}
+## de registro {#log-files}
 
 Los archivos de registro generados por la aplicación Adobe Primetime DRM Server for Protected Streaming se encuentran en el directorio especificado por LicenseServer.LogRoot.
 
@@ -54,11 +54,11 @@ El archivo de registro global, [!DNL flashaccess-global.log], se encuentra en *L
 
 ### Archivo de registro de partición {#section_5660137CD6AA40519E72A4315534846B}
 
-El archivo de registro de partición, [!DNL flashaccess-partition.log], se encuentra en el [!DNL <LicenseServer.LogRoot>/flashaccesserver] directorio. Incluye los mensajes de registro que se han generado durante el procesamiento de una solicitud de licencia.
+El archivo de registro de partición, [!DNL flashaccess-partition.log], se encuentra en el `<LicenseServer.LogRoot>/flashaccesserver` directorio. Incluye los mensajes de registro que se han generado durante el procesamiento de una solicitud de licencia.
 
 ### Archivo de registro del inquilino {#section_F0257CC0831647F18A746B4F02E3E910}
 
-El archivo de registro de inquilinos de cada inquilino, [!DNL flashaccess-tenant.log], se encuentra en [!DNL &lt;LicenseServer.LogRoot>/flashaccesserver/inants/<tenantname>]. El registro de inquilinos incluye información de auditoría que describe cada licencia que se genera para este inquilino.
+El archivo de registro de inquilinos de cada inquilino [!DNL flashaccess-tenant.log], se encuentra en `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. El registro de inquilinos incluye información de auditoría que describe cada licencia que se genera para este inquilino.
 
 ## Actualización de archivos de configuración {#updating-configuration-files}
 
