@@ -5,7 +5,10 @@ seo-title: Clases QoS
 title: Clases QoS
 uuid: fc175269-ec4a-415e-91f3-7fa036290fa6
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '197'
+ht-degree: 0%
 
 ---
 
@@ -36,17 +39,17 @@ Estas clases proporcionan información que le ayuda a determinar el rendimiento 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTPlaybackInformation.html" format="html" scope="external"> PTPlaybackInformation</a> </td> 
-   <td colname="2"> Proporciona información sobre el rendimiento de la reproducción. Esto incluye la velocidad de fotogramas, la velocidad de bits del perfil, el tiempo total empleado en el almacenamiento en búfer, el número de intentos de almacenamiento en búfer, el tiempo que tardó en obtenerse el primer byte del primer fragmento de vídeo, el tiempo que tardó en procesarse el primer fotograma, la longitud almacenada en el búfer actualmente y el tiempo de búfer. </td> 
+   <td colname="2"> Proporciona información sobre el rendimiento de la reproducción. Esto incluye la velocidad de fotogramas, la velocidad de bits de perfil, el tiempo total empleado en el almacenamiento en búfer, el número de intentos de almacenamiento en búfer, el tiempo que tardó en obtenerse el primer byte del primer fragmento de vídeo, el tiempo que tardó en procesarse el primer fotograma, la longitud almacenada en el búfer actualmente y el tiempo de búfer. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTQoSProvider.html" format="html" scope="external"> PTQoSProvider</a> </td> 
    <td colname="2">
-    <ph>
+    <pre>
       Proporciona métricas de QoS esenciales tanto para la reproducción como para el dispositivo.
-    </ph>
-    <ph>
+    </pre>
+    <pre>
       Clase de proveedor de información QOS.
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
  </tbody> 
 </table>
