@@ -5,7 +5,10 @@ seo-title: Elementos de API para reproducción de publicidad
 title: Elementos de API para reproducción de publicidad
 uuid: 61ebbfd7-696c-4a5b-8dbb-682770cd5840
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+workflow-type: tm+mt
+source-wordcount: '259'
+ht-degree: 0%
 
 ---
 
@@ -27,9 +30,9 @@ Los siguientes elementos de API son útiles para personalizar la reproducción:
   <tr> 
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
    <td colname="col2">Controle si un salto de publicidad debe marcarse como visto por un visor y, en caso afirmativo, cuándo debe marcarse. Configurar y obtener la directiva observada mediante 
-    <ph>
+    <pre>
      la <span class="codeph"> propiedad adBreakAsWatched</span> .
-    </ph> </td> 
+    </pre> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AdBreakPolicy</span> </td> 
