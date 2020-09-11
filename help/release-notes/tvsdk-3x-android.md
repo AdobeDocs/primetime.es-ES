@@ -8,7 +8,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: 3a27379f-3cef-4ea3-bcae-21382dc1e9fd
 translation-type: tm+mt
-source-git-commit: e467153067bb10107054a5d4166b1d9c2ac646ab
+source-git-commit: 33509042e32c2167fab21788042bfb2bb877c0f4
 workflow-type: tm+mt
 source-wordcount: '5418'
 ht-degree: 0%
@@ -254,7 +254,7 @@ Android TVSDK v2.5.2 oferta importantes correcciones de errores y algunos cambio
 
 Las nuevas funciones importantes lanzadas en Android 2.5.1.
 
-* **Mejoras de rendimiento:** la nueva arquitectura TVSDK 2.5.1 ofrece una serie de mejoras de rendimiento. Según las estadísticas de un estudio de evaluación comparativa de terceros, la nueva arquitectura ofrece una reducción de 5 veces en el tiempo de inicio y de 3,8 veces menos en comparación con el promedio del sector:
+* **Mejoras de rendimiento:** la nueva arquitectura TVSDK 2.5.1 ofrece una serie de mejoras de rendimiento. Según las estadísticas de un estudio de evaluación comparativa de terceros, la nueva arquitectura ofrece una reducción de 5 veces en el tiempo de inicio y 3,8 veces menos en comparación con el promedio del sector:
 
 * **Activado instantáneamente para VOD y en directo:** cuando se activa la activación instantánea, TVSDK inicializa y almacena en búfer los medios antes de los inicios de reproducción. Dado que puede iniciar varias instancias de MediaPlayerItemLoader simultáneamente en segundo plano, puede almacenar en búfer varios flujos. Cuando un usuario cambia el canal y el flujo se almacena correctamente en el búfer, la reproducción en los nuevos inicios de canal se realiza inmediatamente. TVSDK 2.5.1 también admite la activación instantánea para flujos **en directo** . Los flujos activos se vuelven a almacenar en búfer cuando se mueve la ventana activa.
 
@@ -374,7 +374,7 @@ En las tablas de funciones siguientes, una &#39;Y&#39; indica que la función es
 
 | Función | Tipo de contenido | HLS |
 |---|---|---|
-| Reproducción general, publicidades habilitadas | VOD + Activo | Y |
+| Reproducción general, publicidades habilitadas | VOD + Activo | Desplazamiento |
 | Contenido FER con anuncios habilitados | VOD | Y |
 | Comportamientos de publicidad predeterminados | VOD + Activo | Y |
 | VAST 2.0/3.0 | VOD + Activo | Y |
@@ -389,13 +389,13 @@ En las tablas de funciones siguientes, una &#39;Y&#39; indica que la función es
 | Resoluciones de publicidad personalizadas | VOD + Activo | Y |
 | Resolución de publicidad personalizada FreeWheel | VOD | Y |
 | C3 | VOD + Activo | No admitido |
-| Resolución de publicidad diferida | VOD | Y |
-| Compatibilidad con los marcadores de discontinuidad - SSAI | VOD + Activo | Y |
+| Resolución de publicidad diferida | VOD | Desplazamiento |
+| Compatibilidad con los marcadores de discontinuidad - SSAI | VOD + Activo | Desplazamiento |
 | Publicidades complementarias, publicidades tipo titular y publicidades en las que se puede hacer clic | VOD + Activo | Y |
 | VPAID 2.0 | VOD + Activo | Y (JS) |
-| Salida de publicidad anticipada | Live Live | Y |
-| Prioridad creativa basada en reglas | VOD + Activo | Y |
-| Reglas de CRS | VOD + Activo | Y |
+| Salida de publicidad anticipada | Live Live | Desplazamiento |
+| Prioridad creativa basada en reglas | VOD + Activo | Desplazamiento |
+| Reglas de CRS | VOD + Activo | Desplazamiento |
 | JSON Ad Resolver | VOD + Activo | No admitido |
 | Integración de Moat | VOD + Activo | Y |
 | Inserción parcial de pausa publicitaria | Live Live | Y |
@@ -403,7 +403,7 @@ En las tablas de funciones siguientes, una &#39;Y&#39; indica que la función es
 | Función | Tipo de contenido | HLS |
 |---|---|---|
 | Cifrado AES | VOD + Activo | Y |
-| Cifrado AES de muestra | VOD + Activo | Y |
+| Cifrado AES de muestra | VOD + Activo | Desplazamiento |
 | Flujos tokenizados | VOD + Activo | Y |
 | DRM amplio | VOD + Activo | Solo contenedor fMP4 |
 | DRM Primetime | VOD + Activo | Y |
