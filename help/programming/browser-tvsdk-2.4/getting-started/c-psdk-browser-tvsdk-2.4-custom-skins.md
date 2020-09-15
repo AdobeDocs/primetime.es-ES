@@ -5,7 +5,10 @@ seo-title: Pieles personalizadas
 title: Pieles personalizadas
 uuid: bc71926e-0dec-4628-8248-911224a7a6c2
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 0%
 
 ---
 
@@ -41,14 +44,11 @@ Puede realizar los siguientes tipos de cambios:
 
       >[!TIP]
       >
-      >Para utilizar cualquiera de los spinners en búfer, debe agregar la clase en el elemento buffering-overlay. Por ejemplo, para usar `overlay-text`, agregue las siguientes líneas en el `BufferOverlay.js` archivo:       >
+      >Para utilizar cualquiera de los spinners en búfer, debe agregar la clase en el elemento buffering-overlay. Por ejemplo, para usar `overlay-text`, agregue las siguientes líneas en el `BufferOverlay.js` archivo:
       >
       >
-      ```js      >
+      ```js
       >var overlay = document.getElementById("buffering-overlay"); 
       >overlay.classList.add ("spinner");
-      >```      >
-      >
-
-
+      >```
 
