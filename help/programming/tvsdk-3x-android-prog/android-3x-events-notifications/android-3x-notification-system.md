@@ -5,7 +5,10 @@ seo-title: Notificaciones y eventos para el estado, la actividad, los errores y 
 title: Notificaciones y eventos para el estado, la actividad, los errores y el registro del reproductor
 uuid: c4a108e7-72aa-4c96-9538-b1385343d6af
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '503'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Los eventos y las notificaciones le ayudan a administrar los aspectos asincrónicos de la aplicación de vídeo.
 
-`MediaPlayerStatus` los objetos proporcionan información sobre los cambios en el estado del reproductor. `Notification` los objetos proporcionan información sobre advertencias y errores. Los errores que detienen la reproducción del vídeo también provocan un cambio en el estado del reproductor. Los oyentes de eventos se implementan para capturar y responder a eventos ( `MediaPlayerEvent` objetos).
+`MediaPlayerStatus` los objetos proporcionan información sobre los cambios en el estado del reproductor. `Notification` los objetos proporcionan información sobre advertencias y errores. Los errores que detienen la reproducción del vídeo también provocan un cambio en el estado del reproductor. Los oyentes de evento se implementan para capturar y responder a eventos ( `MediaPlayerEvent` objetos).
 
 La aplicación puede recuperar información de notificación y estado. Con esta información, también puede crear un sistema de registro para diagnósticos y validación.
 
@@ -22,7 +25,7 @@ La aplicación puede recuperar información de notificación y estado. Con esta 
 
 `MediaPlayerNotification` proporciona información relacionada con el estado del reproductor.
 
-TVSDK proporciona una lista cronológica de `MediaPlayerNotification` notificaciones y cada notificación contiene la siguiente información:
+TVSDK proporciona una lista cronológica de `MediaPlayerNotification` las notificaciones y cada notificación contiene la siguiente información:
 
 * Marca de hora
 * Metadatos de diagnóstico que constan de los siguientes elementos:
@@ -34,7 +37,7 @@ TVSDK proporciona una lista cronológica de `MediaPlayerNotification` notificaci
 
    * `innerNotification`:: Referencia a otro `MediaPlayerNotification` objeto que afecta directamente a esta notificación.
 
-Puede almacenar esta información de forma local para analizarla posteriormente o enviarla a un servidor remoto para que registre y muestre una representación gráfica.
+Puede almacenar esta información localmente para su posterior análisis o enviarla a un servidor remoto para que la registre y la represente en forma gráfica.
 
 ## Configurar el sistema de notificaciones {#section_9E37C09ECFA54B3DA8D3AA9ED1BAFC17}
 
@@ -55,7 +58,7 @@ Para recibir notificaciones, escuche las notificaciones de la siguiente manera:
    * `INFO`
    * `WARNING`
 
-## Agregar registro y depuración en tiempo real {#section_9D4004308CB243AD9B50818895D10005}
+## Añadir el registro y la depuración en tiempo real {#section_9D4004308CB243AD9B50818895D10005}
 
 Puede utilizar las notificaciones para implementar el registro en tiempo real en la aplicación de vídeo.
 
@@ -67,22 +70,23 @@ El sistema de notificaciones le permite recopilar información de registro y dep
 
 A continuación se muestra un ejemplo de cómo recuperar notificaciones:
 
-1. Cree un subproceso de ejecución basado en temporizador para la aplicación de vídeo que consulte periódicamente los datos recopilados por el sistema de notificación TVSDK.
-1. Si el intervalo del temporizador es demasiado grande y el tamaño de la lista de eventos es demasiado pequeño, la lista de eventos de notificación se desbordará.
+1. Cree un subproceso de ejecución basado en temporizador para la aplicación de vídeo que consulta periódicamente los datos recopilados por el sistema de notificaciones TVSDK.
+1. Si el intervalo del temporizador es demasiado grande y el tamaño de la lista del evento es demasiado pequeño, la lista del evento de notificación se desbordará.
 
    >[!NOTE]
    >
-   >Para evitar este desbordamiento, realice una de las siguientes acciones:    >
-   >    
-   >    
-   >    1. Reduzca el intervalo de tiempo que genera el subproceso que sondea para nuevos eventos.
-   >    1. Aumente el tamaño de la lista de notificaciones.
+   >Para evitar este desbordamiento, realice una de las siguientes acciones:
+   >
+   >1. Disminuya el intervalo de tiempo que impulsa el subproceso que sondea por nuevos eventos.
+      >
+      >
+   1. Aumente el tamaño de la lista de notificación.
 
 
-1. Serialice las últimas entradas de eventos de notificación en formato JSON y envíe las entradas a un servidor remoto para su postprocesamiento.
+1. Serialice las últimas entradas de evento de notificación en formato JSON y envíe las entradas a un servidor remoto para su postprocesamiento.
 
    >[!NOTE]
    >
    >El servidor remoto puede mostrar gráficamente los datos proporcionados en tiempo real.
 
-1. Para detectar la pérdida de eventos de notificación, busque espacios en la secuencia de valores de índice de eventos.
+1. Para detectar la pérdida de eventos de notificación, busque espacios en la secuencia de valores de índice de evento.
