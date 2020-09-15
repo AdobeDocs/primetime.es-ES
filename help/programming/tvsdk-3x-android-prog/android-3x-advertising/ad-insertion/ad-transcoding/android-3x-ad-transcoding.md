@@ -5,7 +5,10 @@ seo-title: Volver a empaquetar anuncios incompatibles con el servicio de reempaq
 title: Volver a empaquetar anuncios incompatibles con el servicio de reempaquetado creativo de Adobe (CRS)
 uuid: ef542d13-6d52-4429-8a1e-0af2df236f12
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '363'
+ht-degree: 0%
 
 ---
 
@@ -16,17 +19,19 @@ Algunos anuncios (o elementos creativos) de terceros no se pueden incluir en el 
 
 Las publicidades que se proporcionan desde varios terceros, como un servidor de publicidad de la agencia, su socio de inventario o una red de publicidad, suelen entregarse en formatos incompatibles, como el formato MP4 de descarga progresiva.
 
-Cuando TVSDK encuentra por primera vez una publicidad incompatible, el reproductor ignora la publicidad y envía una solicitud al servicio creativo de reempaquetado (CRS), que forma parte del back-end de inserción y Primetime, para volver a empaquetar la publicidad en un formato compatible. CRS intenta generar varias representaciones M3U8 de velocidad de bits de la publicidad y almacena estas representaciones en la red de entrega de contenido Primetime (CDN). La próxima vez que TVSDK reciba una respuesta de publicidad que apunte a esa publicidad, el reproductor utilizará la versión M3U8 compatible con HLS de la CDN.
+Cuando TVSDK encuentra por primera vez una publicidad incompatible, el reproductor ignora la publicidad y envía una solicitud al servicio creativo de reempaquetado (CRS), que forma parte del back-end de inserción y Primetime, para volver a empaquetar la publicidad en un formato compatible. CRS intenta generar varias representaciones M3U8 de velocidad de bits del anuncio y almacena estas representaciones en la red de Envío de contenido Primetime (CDN). La próxima vez que TVSDK reciba una respuesta de publicidad que apunte a esa publicidad, el reproductor utilizará la versión M3U8 compatible con HLS de la CDN.
 
 Para activar esta función de CRS opcional, póngase en contacto con su representante de Adobe.
 
 >[!NOTE]
 >
->Para los clientes de CRS versión 3.0 (y anteriores), a partir de CRS versión 3.1, los siguientes cambios han mejorado tanto la seguridad como el rendimiento: >
+>Para los clientes de CRS versión 3.0 (y anteriores), a partir de CRS versión 3.1, los siguientes cambios han mejorado tanto la seguridad como el rendimiento:
+>
 >* CRS 3.1 continúa `https:` si se utiliza el contenido que se está reempaquetando `https:`. Esto reduce el potencial de algunos reproductores para presentar contenido no seguro.
    >
    >
 * CRS 3.1 minimiza en gran medida las llamadas de red, lo que mejora el tiempo de inicio del vídeo.
+
 >
 
 
