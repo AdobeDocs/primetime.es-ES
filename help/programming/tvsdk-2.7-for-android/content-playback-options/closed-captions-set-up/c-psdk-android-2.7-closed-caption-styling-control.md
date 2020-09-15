@@ -5,7 +5,7 @@ seo-title: Control del estilo de los subtítulos opcionales
 title: Control del estilo de los subtítulos opcionales
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 4ccc99f1ad6536ceb5e09c898dba3f71fa2de3f3
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 0%
@@ -143,10 +143,11 @@ Puede aplicar estilo al texto de subtítulos opcionales con métodos TVSDK.
       >y así sucesivamente.
       >
       >En la aplicación, cada vez que se pasa información de estilo de color a `TextFormatBuilder`, se sigue utilizando la `Color` lista desglosada como antes, pero ahora se debe agregar `getValue()` al color para obtener el valor como una cadena. Por ejemplo:
-
+      >
+      >
       ```
-      tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
-      ```
+      >tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
+      >```
 
 
 
@@ -174,7 +175,8 @@ public TextFormatBuilder(
 ```
 
 >[!TIP]
-En las opciones que definen los valores predeterminados (por ejemplo, `DEFAULT`), ese valor hace referencia a la configuración cuando se especificó originalmente el rótulo.
+>
+>En las opciones que definen los valores predeterminados (por ejemplo, `DEFAULT`), ese valor hace referencia a la configuración cuando se especificó originalmente el rótulo.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
