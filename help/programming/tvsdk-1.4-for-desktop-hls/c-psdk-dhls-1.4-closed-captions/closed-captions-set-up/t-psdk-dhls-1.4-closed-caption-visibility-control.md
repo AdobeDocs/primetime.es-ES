@@ -5,7 +5,10 @@ seo-title: Control de la visibilidad de los subtítulos opcionales
 title: Control de la visibilidad de los subtítulos opcionales
 uuid: 360d1158-67d9-40d9-b4b6-8ef46f9d73c0
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '243'
+ht-degree: 0%
 
 ---
 
@@ -20,14 +23,13 @@ Puede controlar la visibilidad de los subtítulos opcionales. Cuando la visibili
 
 >[!NOTE]
 >
->Los valores de visibilidad de los subtítulos cerrados se definen en `ClosedCaptionsVisibility`. >
+>Los valores de visibilidad de los subtítulos cerrados se definen en `ClosedCaptionsVisibility`.
 >
-```>
+>
+```
 >public static const HIDDEN:String = hidden; 
 >public static const VISIBLE:String = visible;
->```>
-
-
+>```
 
 1. Espere a que el `MediaPlayer` estado PREPARADO (consulte [Esperar un estado](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)válido).
 1. Para obtener la configuración de visibilidad actual de los subtítulos cerrados, utilice el método getter en `MediaPlayer`, que devuelve un valor de visibilidad.
@@ -74,7 +76,7 @@ Puede controlar la visibilidad de los subtítulos opcionales. Cuando la visibili
    player.removeEventListener(MediaPlayerItemEvent.CAPTIONS_UPDATED, onCaptionUpdated);
    ```
 
-1. Cree y actualice la lista cuando un usuario elija una opción de la lista.
+1. Cree y actualice la lista cuando un usuario elija una opción en la lista.
 
    ```
    private function onCCTrackChange(event:IndexChangeEvent):void { 
