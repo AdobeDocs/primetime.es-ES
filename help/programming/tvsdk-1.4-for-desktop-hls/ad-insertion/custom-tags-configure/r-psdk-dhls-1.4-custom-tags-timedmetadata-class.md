@@ -5,7 +5,10 @@ seo-title: Clase de metadatos temporizados
 title: Clase de metadatos temporizados
 uuid: 827a3bcf-a584-4032-aa19-4fc7730778cc
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '423'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ La clase proporciona los siguientes elementos:
   <tr> 
    <td colname="col1"><span class="codeph"> content</span> </td> 
    <td colname="col02"> Cadena </td> 
-   <td colname="col2"> El contenido sin procesar de los metadatos temporizados. Si el tipo es TAG, el valor representa la lista completa de atributos de la etiqueta/cue. Si el tipo id3, es nulo. </td> 
+   <td colname="col2"> El contenido sin procesar de los metadatos temporizados. Si el tipo es TAG, el valor representa la lista completa del atributo de la etiqueta/cue. Si el tipo id3, es nulo. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> id</span> </td> 
@@ -70,16 +73,13 @@ Recuerde lo siguiente:
 
    >[!TIP]
    >
-   >Los datos complejos de las etiquetas personalizadas del manifiesto, como las cadenas con caracteres especiales, deben estar entre comillas. Por ejemplo:   >
+   >Los datos complejos de las etiquetas personalizadas del manifiesto, como las cadenas con caracteres especiales, deben estar entre comillas. Por ejemplo:
    >
    >
-   ```>
+   ```
    >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url=
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```  >
-   >
-
-
+   >```
 
 * Si la extracción falla debido a un formato de etiqueta personalizado, la propiedad metadata estará vacía y la aplicación debe extraer la información real. En este caso no se genera ningún error.
 
