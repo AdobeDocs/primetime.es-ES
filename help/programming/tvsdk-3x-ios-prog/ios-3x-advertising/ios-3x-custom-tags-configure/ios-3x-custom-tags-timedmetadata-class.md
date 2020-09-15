@@ -5,7 +5,10 @@ seo-title: Clase de metadatos temporizados
 title: Clase de metadatos temporizados
 uuid: d76b2a6b-2995-4559-b15d-82ded4c27eea
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '357'
+ht-degree: 0%
 
 ---
 
@@ -60,16 +63,13 @@ Recuerde lo siguiente:
 
    >[!TIP]
    >
-   >Los datos complejos de las etiquetas personalizadas del manifiesto, como las cadenas con caracteres especiales, deben estar entre comillas. Por ejemplo:   >
+   >Los datos complejos de las etiquetas personalizadas del manifiesto, como las cadenas con caracteres especiales, deben estar entre comillas. Por ejemplo:
    >
    >
-   ```>
+   ```
    >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url=
    >"www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```  >
-   >
-
-
+   >```
 
 * Si la extracción falla debido a un formato de etiqueta personalizado, la propiedad content siempre contiene los datos sin procesar de la etiqueta, que es la cadena después de los dos puntos. En este caso no se genera ningún error.
 
