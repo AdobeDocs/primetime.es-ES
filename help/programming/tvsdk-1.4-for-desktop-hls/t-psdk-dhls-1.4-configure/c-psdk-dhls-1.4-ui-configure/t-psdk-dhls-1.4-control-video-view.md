@@ -5,7 +5,10 @@ seo-title: Controlar la posición y el tamaño de la vista de vídeo
 title: Controlar la posición y el tamaño de la vista de vídeo
 uuid: 2231c574-03cd-45a8-ab00-4a42f8e044f0
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 0%
 
 ---
 
@@ -32,10 +35,10 @@ Puede anular el comportamiento predeterminado de la relación de aspecto especif
    >TVSDK utiliza un `StageVideo` objeto para mostrar el vídeo y, como `StageVideo` los objetos no están en la lista de visualización, el `viewPort` parámetro contiene las coordenadas absolutas del vídeo.
    >
    >
-   >Por ejemplo:    >
+   >Por ejemplo:
    >
    >
-   ```>
+   ```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
@@ -56,10 +59,7 @@ Puede anular el comportamiento predeterminado de la relación de aspecto especif
    >               [...] 
    >       } 
    >}
-   >```   >
-   >
-
-
+   >```
 
 1. Asigne la implementación a la `MediaPlayerView` propiedad.
 
@@ -68,7 +68,7 @@ Puede anular el comportamiento predeterminado de la relación de aspecto especif
    view.scalePolicy = new CustomScalePolicy();
    ```
 
-1. Agregue la vista a la `view` propiedad de Media Player.
+1. Añada la vista a la propiedad `view` de Media Player.
 
    ```
    addChild(view); 
@@ -78,7 +78,7 @@ Puede anular el comportamiento predeterminado de la relación de aspecto especif
 
 <!--<a id="example_7B08ECCDA17B4DD191FC672BD1F4C850"></a>-->
 
-**Por ejemplo: Ajuste la escala del vídeo para que ocupe toda la vista del vídeo sin mantener la proporción de aspecto:**
+**Por ejemplo: Ajuste la escala del vídeo para rellenar toda la vista del vídeo sin mantener la proporción de aspecto:**
 
 ```
 package com.adobe.mediacore.samples.utils { 
