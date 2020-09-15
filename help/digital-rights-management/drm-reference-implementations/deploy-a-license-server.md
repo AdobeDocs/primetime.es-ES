@@ -5,7 +5,10 @@ seo-title: Implementar el servidor de licencias
 title: Implementar el servidor de licencias
 uuid: bee7ead1-ed13-4894-80f9-5196bf2f818f
 translation-type: tm+mt
-source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '294'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
 
    >[!NOTE]
    >
-   >Si implementó anteriormente archivos WAR del servidor de licencias, es posible que tenga que eliminar los directorios WAR sin empaquetar en el [!DNL webapps] directorio del servidor Tomcat:        >
+   >Si implementó anteriormente archivos WAR del servidor de licencias, es posible que tenga que eliminar los directorios WAR sin empaquetar en el [!DNL webapps] directorio del servidor Tomcat:
    >
    >* [!DNL webapps/flashaccess]
    >* [!DNL webapps/edcws]
@@ -28,7 +31,7 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
 
    >[!NOTE]
    >
-   >No realice la implementación [!DNL edsws.war] a menos que requiera compatibilidad con versiones anteriores con contenido de Flash Media Rights Management (FMRMS) v1.5. (Este es un requisito muy raro).
+   >No realice la implementación [!DNL edsws.war] a menos que necesite compatibilidad con versiones anteriores con contenido de Flash Media Rights Management (FMRMS) v1.5. (Este es un requisito muy raro).
    >
    >Si prefiere evitar que Tomcat descomprima archivos WAR, edite `server.xml` en el `conf` directorio y defina `unpackWARs` en `false`.
 
@@ -39,7 +42,8 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
    * [!DNL flashaccesstools.properties] - El archivo de propiedades del servidor de licencias.
    * [!DNL log4j.xml] - Configuración de registro del servidor de licencias
    * [!DNL *.pol] - Archivos de política DRM de muestra.
-   Además, también puede copiar los archivos de certificación de Adobe en esta ubicación.
+
+   Además, también puede elegir copiar los archivos de certificación de Adobe en esta ubicación.
 
 1. Modifique la configuración del servidor de licencias en [!DNL flashaccesstools.properties] para reflejar la configuración del servidor.
 
@@ -74,7 +78,7 @@ source-git-commit: 29149594c4b41956a091ef27093304e74ff15f2f
    ...
    ```
 
-1. Desde el [!DNL bin] directorio Tomcat, inicie el servidor.
+1. Desde el [!DNL bin] directorio Tomcat, inicio el servidor.
 
    En Linux:
 
