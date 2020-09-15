@@ -5,7 +5,10 @@ seo-title: Control de la visibilidad de los subtítulos opcionales
 title: Control de la visibilidad de los subtítulos opcionales
 uuid: 42913347-8158-474e-aa3c-ba4d38baba12
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
@@ -20,16 +23,15 @@ Puede controlar la visibilidad de los subtítulos opcionales. Cuando la visibili
 
 >[!NOTE]
 >
->Los valores de visibilidad de los subtítulos cerrados se definen en `MediaPlayer.Visibility`. >
+>Los valores de visibilidad de los subtítulos cerrados se definen en `MediaPlayer.Visibility`.
 >
-```java>
+>
+```java
 >enum Visibility { 
 >       VISIBLE,  
 >       INVISIBLE 
 >}
->```>
-
-
+>```
 
 1. Espere a que MediaPlayer tenga al menos el estado PREPARADO (consulte [Esperar un estado](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)válido).
 1. Para obtener la configuración de visibilidad actual de los subtítulos cerrados, utilice el método getter en MediaPlayer, que devuelve un valor de visibilidad.
