@@ -5,7 +5,10 @@ seo-title: Velocidad de bits adaptable (ABR) para la calidad de vídeo
 title: Velocidad de bits adaptable (ABR) para la calidad de vídeo
 uuid: e3d5ef90-067d-48e0-a025-081de931d842
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '1011'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Puede establecer la directiva de conmutación de velocidad de bits adaptable (AB
  <tbody> 
   <tr> 
    <td colname="col01"> Velocidad de bits inicial </td> 
-   <td colname="col2"> <p>Velocidad de bits de reproducción deseada (en bits por segundo) para el primer segmento. Cuando se inicia la reproducción, se utiliza el perfil más cercano, que es igual o bueno a la velocidad de bits inicial, para el primer segmento. </p> <p> Si se define una velocidad de bits mínima y la velocidad de bits inicial es inferior a la velocidad mínima, TVSDK selecciona el perfil con la velocidad de bits más baja por encima de la velocidad de bits mínima. Si la velocidad inicial es superior a la velocidad máxima, TVSDK selecciona la velocidad más alta por debajo de la velocidad máxima. </p> <p>Si la velocidad de bits inicial es cero o indefinida, la velocidad de bits inicial viene determinada por la directiva ABR. </p> <p> <span class="apiname"> ABRInitialBitRate </span> devuelve un valor entero que representa el perfil byte por segundo. </p> </td> 
+   <td colname="col2"> <p>Velocidad de bits de reproducción deseada (en bits por segundo) para el primer segmento. Cuando se reproducen inicios, se utiliza el perfil más cercano, que es igual o bueno a la velocidad de bits inicial, para el primer segmento. </p> <p> Si se define una velocidad de bits mínima y la velocidad de bits inicial es inferior a la velocidad mínima, TVSDK selecciona el perfil con la velocidad de bits más baja por encima de la velocidad de bits mínima. Si la velocidad inicial es superior a la velocidad máxima, TVSDK selecciona la velocidad más alta por debajo de la velocidad máxima. </p> <p>Si la velocidad de bits inicial es cero o indefinida, la velocidad de bits inicial viene determinada por la directiva ABR. </p> <p> <span class="apiname"> ABRInitialBitRate </span> devuelve un valor entero que representa el perfil byte por segundo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Velocidad de bits mínima </td> 
@@ -34,12 +37,12 @@ Puede establecer la directiva de conmutación de velocidad de bits adaptable (AB
   </tr> 
   <tr> 
    <td colname="col01"> Política de conmutación ABR </td> 
-   <td colname="col2"> La reproducción cambia gradualmente al perfil de velocidad de bits más alta cuando es posible. Puede establecer la directiva para el cambio ABR, que determina la rapidez con la que TVSDK cambia entre perfiles. El valor predeterminado es <span class="codeph"> MODERATE_POLICY </span>. <p>Cuando TVSDK decide cambiar a una velocidad de bits más alta, el reproductor selecciona el perfil de velocidad de bits ideal para cambiar a según la directiva ABR actual: 
+   <td colname="col2"> La reproducción cambia gradualmente al perfil de velocidad de bits más alta cuando es posible. Puede establecer la directiva para el cambio ABR, que determina la rapidez con la que TVSDK cambia entre perfiles. El valor predeterminado es <span class="codeph"> MODERATE_POLICY </span>. <p>Cuando TVSDK decide cambiar a una velocidad de bits más alta, el reproductor selecciona el perfil de velocidad de bits ideal para cambiar según la directiva ABR actual: 
      <ul id="ul_058D0FFC944C476A83BB9E756B95DEBD"> 
-      <li id="li_C690A12DC34C4754B01C2D0616FB6A0A"> <span class="codeph"> CONSERVATIVE_POLICY </span>: Cambia al perfil con la siguiente velocidad de bits más alta cuando el ancho de banda es un 50 % superior a la velocidad de bits actual. </li> 
-      <li id="li_FF5BDB099B554940AC296938C7A12B81"> <span class="codeph"> MODERATE_POLICY </span>: Cambia al siguiente perfil de velocidad de bits más alta cuando el ancho de banda es un 20% mayor que la velocidad de bits actual. </li> 
-      <li id="li_E602508429864C279BF78360E95718A6"> <span class="codeph"> AGGRESSIVE_POLICY </span>: Cambia inmediatamente al perfil de velocidad de bits más alta cuando el ancho de banda es superior a la velocidad de bits actual. </li> 
-     </ul> </p> <p>Si la velocidad de bits inicial es cero o no se especifica, pero se especifica una política, la reproducción comienza con el perfil de velocidad de bits más bajo para el perfil conservador, el perfil más cercano a la velocidad de bits media de los perfiles disponibles para el moderado y el perfil de velocidad de bits más alto para el agresivo. </p> <p>La directiva funciona con las restricciones de las velocidades de bits mínimas y máximas, si se especifican estas velocidades. </p> <p> <span class="codeph"> ABRPolicy </span> devuelve la configuración actual de la enumeración <span class="codeph"> ABRControlParameters </span> : CONSERVATIVE_POLICY, MODERATE_POLICY o AGGRESSIVE_POLICY. </p> </td> 
+      <li id="li_C690A12DC34C4754B01C2D0616FB6A0A"> <span class="codeph"> CONSERVATIVE_POLICY </span>: Cambia al perfil con la siguiente velocidad de bits más alta cuando el ancho de banda es un 50% superior a la velocidad de bits actual. </li> 
+      <li id="li_FF5BDB099B554940AC296938C7A12B81"> <span class="codeph"> MODERATE_POLICY </span>: Cambia al siguiente perfil de velocidad de bits más alto cuando el ancho de banda es un 20% mayor que la velocidad de bits actual. </li> 
+      <li id="li_E602508429864C279BF78360E95718A6"> <span class="codeph"> AGGRESSIVE_POLICY </span>: Cambia inmediatamente al perfil de velocidad de bits más alto cuando el ancho de banda es mayor que la velocidad de bits actual. </li> 
+     </ul> </p> <p>Si la velocidad de bits inicial es cero o no se especifica, pero se especifica una política, la reproducción inicio con el perfil de velocidad de bits más bajo para los valores conservadores, el perfil más cercano a la velocidad de bits media de los perfiles disponibles para moderados y el perfil de velocidad de bits más alto para los valores agresivos. </p> <p>La directiva funciona con las restricciones de las velocidades de bits mínimas y máximas, si se especifican estas velocidades. </p> <p> <span class="codeph"> ABRPolicy </span> devuelve la configuración actual de la enumeración <span class="codeph"> ABRControlParameters </span> : CONSERVATIVE_POLICY, MODERATE_POLICY o AGGRESSIVE_POLICY. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -80,20 +83,17 @@ Esta clase también incluye el método `toABRControlParameters()` auxiliar. Util
 
    >[!NOTE]
    >
-   >Por ejemplo, en el siguiente ejemplo se inicializan todos los parámetros con los valores predeterminados y, a continuación, se establece únicamente la política en conservador y se restringe la velocidad máxima de bits a 1000000:    >
+   >Por ejemplo, en el siguiente ejemplo se inicializan todos los parámetros con los valores predeterminados y, a continuación, se establece únicamente la política en conservador y se restringe la velocidad máxima de bits a 1000000:
    >
    >
-   ```>
+   ```
    >var abrBuilder:ABRControlParametersBuilder =  
    >   new ABRControlParametersBuilder(); 
    >abrBuilder.policy = ABRControlParameters.CONSERVATIVE_POLICY; 
    >abrBuilder.maxBitRate = 1000000; 
    >mediaPlayer.abrControlParameters =  
    >   abrBuilder.toABRControlParameters();
-   >```   >
-   >
-
-
+   >```
 
 1. Modifique los parámetros de ABR individuales en tiempo de ejecución.
 
