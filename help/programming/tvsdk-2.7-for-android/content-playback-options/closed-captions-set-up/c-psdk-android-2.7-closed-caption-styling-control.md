@@ -5,7 +5,10 @@ seo-title: Control del estilo de los subtítulos opcionales
 title: Control del estilo de los subtítulos opcionales
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '882'
+ht-degree: 0%
 
 ---
 
@@ -128,21 +131,23 @@ Puede aplicar estilo al texto de subtítulos opcionales con métodos TVSDK.
 
       >[!IMPORTANT]
       >
-      >**Configuración de color:** En Android TVSDK 2.X, se ha mejorado el estilo de color de los subtítulos opcionales. La mejora permite definir colores de subtítulos cerrados mediante una cadena hexadecimal que representa valores de color RGB. La representación de color RGB hexadecimal es la cadena de 6 bytes que se utiliza en aplicaciones como Photoshop:       >
+      >**Configuración de color:** En Android TVSDK 2.X, se ha mejorado el estilo de color de los subtítulos opcionales. La mejora permite definir colores de subtítulos cerrados mediante una cadena hexadecimal que representa valores de color RGB. La representación de color RGB hexadecimal es la cadena de 6 bytes que se utiliza en aplicaciones como Photoshop:
       >
       >    * FFFFFF = negro
       >    * 000000 = Blanco
       >    * FF0000 = Rojo
       >    * 00FF00 = Verde
       >    * 0000FF = Azul
+
       >
       >y así sucesivamente.
       >
-      >En la aplicación, cada vez que se pasa información de estilo de color a `TextFormatBuilder`, se sigue utilizando la `Color` enumeración como antes, pero ahora se debe agregar `getValue()` al color para obtener el valor como una cadena. Por ejemplo:
-      >
+      >En la aplicación, cada vez que se pasa información de estilo de color a `TextFormatBuilder`, se sigue utilizando la `Color` lista desglosada como antes, pero ahora se debe agregar `getValue()` al color para obtener el valor como una cadena. Por ejemplo:
+
       ```
-      >tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
-      >```
+      tfb = tfb.setBackgroundColor(TextFormat.Color.RED <b>.getValue()</b>);
+      ```
+
 
 
 
@@ -169,8 +174,7 @@ public TextFormatBuilder(
 ```
 
 >[!TIP]
->
->En las opciones que definen los valores predeterminados (por ejemplo, `DEFAULT`), ese valor hace referencia a la configuración cuando se especificó originalmente el rótulo.
+En las opciones que definen los valores predeterminados (por ejemplo, `DEFAULT`), ese valor hace referencia a la configuración cuando se especificó originalmente el rótulo.
 
 <table frame="all" colsep="1" rowsep="1" id="table_87205DEFEE384AF4AF83952B15E18A42"> 
  <thead> 
@@ -182,11 +186,11 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Fuente </td> 
-   <td colname="2"> <p>Tipo de fuente. </p> <p>Solo se puede establecer en un valor definido por la enumeración <span class="codeph"> TextFormat.Font </span> y que represente, por ejemplo, un solo espacio con o sin serifs. </p> <p>Sugerencia:  Las fuentes disponibles en un dispositivo pueden variar y se utilizan sustituciones cuando es necesario. Monospace con serifs se utiliza generalmente como sustituto, aunque esta sustitución puede ser específica del sistema. </p> </td> 
+   <td colname="2"> <p>Tipo de fuente. </p> <p>Solo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Font </span> y que represente, por ejemplo, un solo espacio con o sin serifs. </p> <p>Sugerencia:  Las fuentes disponibles en un dispositivo pueden variar y se utilizan sustituciones cuando es necesario. Monospace con serifs se utiliza generalmente como sustituto, aunque esta sustitución puede ser específica del sistema. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Tamaño </td> 
-   <td colname="2"> <p>Tamaño del rótulo. </p> <p> Solo se puede establecer en un valor definido por la enumeración <span class="codeph"> TextFormat.Size </span> : 
+   <td colname="2"> <p>Tamaño del rótulo. </p> <p> Solo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Size </span> : 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIO </span> - Tamaño estándar </li> 
       <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE </span> - Aproximadamente 30% mayor que medio </li> 
@@ -196,11 +200,11 @@ public TextFormatBuilder(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Borde de fuente </td> 
-   <td colname="2"> <p>Efecto utilizado para el borde de la fuente, como elevado o ninguno. </p> <p>Solo se puede establecer en un valor definido por la enumeración <span class="codeph"> TextFormat.FontEdge </span> . </p> </td> 
+   <td colname="2"> <p>Efecto utilizado para el borde de la fuente, como elevado o ninguno. </p> <p>Solo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.FontEdge </span> . </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Color de fuente </td> 
-   <td colname="2"> <p>Color de fuente. </p> <p>Solo se puede establecer en un valor definido por la enumeración <span class="codeph"> TextFormat.Color </span> . </p> </td> 
+   <td colname="2"> <p>Color de fuente. </p> <p>Solo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Color </span> . </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Color de borde </td> 
