@@ -5,7 +5,10 @@ seo-title: Control de la visibilidad de los subtítulos opcionales
 title: Control de la visibilidad de los subtítulos opcionales
 uuid: f142e60d-5581-4d1c-9d4d-a4a58ac1b67b
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '212'
+ht-degree: 0%
 
 ---
 
@@ -18,16 +21,15 @@ Puede controlar la visibilidad de los subtítulos opcionales. Cuando se ha habil
 >
 >Si se muestra texto de subtítulos opcionales cuando el reproductor entra en el modo de búsqueda, el texto ya no se muestra una vez finalizada la búsqueda. En su lugar, después de unos segundos, TVSDK muestra el siguiente texto de subtítulos opcionales en el vídeo después de la posición de búsqueda final.
 >
->Los valores de visibilidad de los subtítulos cerrados se definen en `MediaPlayer.Visibility`. >
+>Los valores de visibilidad de los subtítulos cerrados se definen en `MediaPlayer.Visibility`.
 >
-```java>
+>
+```java
 >enum Visibility {  
 >       VISIBLE,  
 >       INVISIBLE 
 >}
->```>
-
-
+>```
 
 1. Espere a que el `MediaPlayer` estado esté al menos en el estado PREPARADO. Para obtener más información, consulte [Esperar un estado](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md)válido.
 
