@@ -5,7 +5,10 @@ seo-title: Funciones compatibles de DASH
 title: Funciones compatibles de DASH
 uuid: 299516a4-09ed-4b8a-b0bf-a04f204f385a
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+workflow-type: tm+mt
+source-wordcount: '506'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ El SDK TVSDK del explorador admite una serie de funciones DASH que se pueden imp
 
 >[!TIP]
 >
->En las siguientes tablas de matriz de características, ![](assets/supported15.png)>
+>En las tablas de características siguientes,  ![](assets/supported15.png)
 >significa que la función es compatible con la versión actual.
 
 Se admiten las siguientes funciones:
@@ -83,7 +86,7 @@ Se admiten las siguientes funciones:
 
 | Categoría | Tipo de contenido | Función | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Integraciones | VOD + Activo | Integración VHL de Adobe Analytics | ![](assets/supported15.png) |
+| Integraciones | VOD + Activo | Integración con Adobe Analytics VHL | ![](assets/supported15.png) |
 | Integraciones | VOD + Activo | Facturación | ![](assets/supported15.png) |
 | Integraciones | VOD + Activo | Explorar | ![](assets/supported15.png) |
 
@@ -91,26 +94,26 @@ Se admiten las siguientes funciones:
 
 | Categoría | Tipo de contenido | Función | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Inserción de publicidad | VOD | Solo publicidad | No admitido |
-| Inserción de publicidad | VOD | Parámetros de objetivo | Solo VOD |
-| Inserción de publicidad | VOD | Parámetros personalizados | Solo VOD |
-| Inserción de publicidad | VOD + Activo | Directiva de publicidad personalizada | No admitido |
-| Inserción de publicidad | VOD + Activo | Carga de anuncios diferida | No admitido |
-| Inserción de publicidad | VOD | Publicidades complementarias, publicidades tipo titular y publicidades en las que se puede hacer clic | No admitido |
-| Inserción de publicidad | VOD | VPAID 2.0 | No admitido |
+| Ad Insertion | VOD | Solo publicidad | No admitido |
+| Ad Insertion | VOD | Parámetros de objetivo | Solo VOD |
+| Ad Insertion | VOD | Parámetros personalizados | Solo VOD |
+| Ad Insertion | VOD + Activo | Directiva de publicidad personalizada | No admitido |
+| Ad Insertion | VOD + Activo | Carga de anuncios diferida | No admitido |
+| Ad Insertion | VOD | Publicidades complementarias, publicidades tipo titular y publicidades en las que se puede hacer clic | No admitido |
+| Ad Insertion | VOD | VPAID 2.0 | No admitido |
 
 ## Funciones de inserción de anuncios principales de DASH (CSAI) {#dash-core-ad-insertion}
 
 | Categoría | Tipo de contenido | Función | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Inserción de publicidad | VOD + Activo | Anteponer | Solo VOD |
-| Inserción de publicidad | VOD + Activo | Mid-roll | Solo VOD |
-| Inserción de publicidad | VOD + Activo | Post-roll | Solo VOD |
-| Inserción de publicidad | FER VOD | Resolución y comportamientos de publicidad | No admitido |
-| Inserción de publicidad | VOD + Activo | Directiva de publicidad predeterminada | Solo VOD |
-| Inserción de publicidad | VOD + Activo | VAST 2.0/3.0 | Solo VOD |
-| Inserción de publicidad | VOD + Activo | VMAP 1.0 | Solo VOD |
-| Inserción de publicidad | VOD + Activo | CRS v3.1 | Solo VOD |
+| Ad Insertion | VOD + Activo | Anteponer | Solo VOD |
+| Ad Insertion | VOD + Activo | Mid-roll | Solo VOD |
+| Ad Insertion | VOD + Activo | Post-roll | Solo VOD |
+| Ad Insertion | FER VOD | Resolución y comportamientos de publicidad | No admitido |
+| Ad Insertion | VOD + Activo | Directiva de publicidad predeterminada | Solo VOD |
+| Ad Insertion | VOD + Activo | VAST 2.0/3.0 | Solo VOD |
+| Ad Insertion | VOD + Activo | VMAP 1.0 | Solo VOD |
+| Ad Insertion | VOD + Activo | CRS v3.1 | Solo VOD |
 
 ## Funciones de protección de contenido DASH {#dash-content-protection}
 
