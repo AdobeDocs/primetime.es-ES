@@ -1,28 +1,43 @@
 ---
-title: Notas de la versión de PTAI 20.9.1
-description: Las notas de la versión de PTAI 20.9.1 describen las novedades o los cambios que se han producido en Primetime Dynamic Ad Insertion en el año 2020.
+title: Notas de la versión de PTAI 20.9.2
+description: Las notas de la versión de PTAI 20.9.2 describen las novedades o los cambios que se han producido en Primetime Dynamic Ad Insertion en el año 2020.
 translation-type: tm+mt
-source-git-commit: 699e6a463bce4f7853406cb7fe529fb09f87ca92
+source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '962'
 ht-degree: 0%
 
 ---
 
 
-# Notas de la versión de Primetime Dynamic Ad Insertion 20.9.1
+# Notas de la versión de Primetime Dynamic Ad Insertion 20.9.2
 
-Las notas de la versión de Ad Insertion dinámico 20.9.1 describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en Primetime Dynamic Ad Insertion en el año 2020.
+Las notas de la versión de Ad Insertion dinámico 20.9.2 describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en Primetime Dynamic Ad Insertion en el año 2020.
 
-## Novedades de PTAI 20.9.1
+## Novedades de PTAI 20.9.2
+
+**Cuando:** Martes 15 de septiembre de 2020, de las 3:30 a.m. a las 6:30 a.m. hora del Este
+
+**Mejoras**
+
+* Se proporcionó compatibilidad para la inclusión de tipos de publicidad no lineales mediante `EXT-X-MARKER` etiquetas.
+Para obtener más información o activar esta función, póngase en contacto con su representante de asistencia técnica.
+
+* Se proporciona compatibilidad para limitar el tiempo total de resolución de publicidad, si los proveedores tardan demasiado en responder. Para habilitar la limitación, establezca el parámetro de API de arranque en un valor en milisegundos `ptadtimeout` .
+
+   >[!NOTE]
+   >
+   >Este tiempo de espera solo se aplica a las solicitudes de publicidad, no a las solicitudes creativas de publicidad.
+
+### Mejoras y correcciones en versiones anteriores
+
+#### Versión 20.9.1
 
 **Cuando:** Martes 1 de septiembre de 2020, de las 3:30 a.m. a las 7:30 a.m. hora del Este
 
 **Cambios**
 
 * Se corrigió el problema con los clientes que usaban HLS/CMAF, donde a veces faltaban tokens CDN EXT-X-MAP o etiquetas EXT-X-MAP que a veces salían incorrectamente de la ventana DVR.
-
-### Mejoras y correcciones en versiones anteriores
 
 #### Versión 20.8.4
 
