@@ -5,7 +5,7 @@ seo-title: Control del estilo de los subtítulos opcionales
 title: Control del estilo de los subtítulos opcionales
 uuid: fa4f637f-f13c-465d-8eee-5e66a6dd9db2
 translation-type: tm+mt
-source-git-commit: 4ccc99f1ad6536ceb5e09c898dba3f71fa2de3f3
+source-git-commit: b02dfafdc78ca209da5ba0ed855342952be4288f
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 0%
@@ -133,11 +133,11 @@ Puede aplicar estilo al texto de subtítulos opcionales con métodos TVSDK.
       >
       >**Configuración de color:** En Android TVSDK 2.X, se ha mejorado el estilo de color de los subtítulos opcionales. La mejora permite definir colores de subtítulos cerrados mediante una cadena hexadecimal que representa valores de color RGB. La representación de color RGB hexadecimal es la cadena de 6 bytes que se utiliza en aplicaciones como Photoshop:
       >
-      >    * FFFFFF = negro
-      >    * 000000 = Blanco
-      >    * FF0000 = Rojo
-      >    * 00FF00 = Verde
-      >    * 0000FF = Azul
+      >* FFFFFF = negro
+      >* 000000 = Blanco
+      >* FF0000 = Rojo
+      >* 00FF00 = Verde
+      >* 0000FF = Azul
 
       >
       >y así sucesivamente.
