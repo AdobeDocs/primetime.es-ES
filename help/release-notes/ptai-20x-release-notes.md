@@ -1,20 +1,30 @@
 ---
-title: Notas de la versión de PTAI 20.9.2
-description: Las notas de la versión de PTAI 20.9.2 describen las novedades o los cambios que se han producido en Primetime Dynamic Ad Insertion en el año 2020.
+title: Notas de la versión de PTAI 20.9.3
+description: Las notas de la versión de PTAI 20.9.3 describen las novedades o los cambios que se han producido en Primetime Dynamic Ad Insertion en el año 2020.
 translation-type: tm+mt
-source-git-commit: e3d2811e40bc34bfdaacdab1529fa9b01e416a98
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
 
 
-# Notas de la versión de Primetime Dynamic Ad Insertion 20.9.2
+# Notas de la versión de Primetime Dynamic Ad Insertion 20.9.3
 
-Las notas de la versión de Ad Insertion dinámico 20.9.2 describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en Primetime Dynamic Ad Insertion en el año 2020.
+Las notas de la versión de Ad Insertion dinámico 20.9.3 describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en Primetime Dynamic Ad Insertion en el año 2020.
 
-## Novedades de PTAI 20.9.2
+## Novedades de PTAI 20.9.3
+
+**Cuando:** Miércoles 30 de septiembre de 2020 a las 3:30 AM a las 6:30 AM hora del Este
+
+**Cambios**
+
+* Parámetro de API de Bootstrap añadido `ptparallelstream`. Esto permite a los clientes con reproductores que solicitan flujos de audio o vídeo CMAF desactivados en paralelo para garantizar que los anuncios de las pistas de audio y vídeo sean coherentes. Establezca el valor del parámetro en true para habilitar esta función u omitir para deshabilitarla.
+
+### Mejoras y correcciones en versiones anteriores
+
+#### Versión 20.9.2
 
 **Cuando:** Martes 15 de septiembre de 2020, de las 3:30 a.m. a las 6:30 a.m. hora del Este
 
@@ -28,8 +38,6 @@ Para obtener más información o activar esta función, póngase en contacto con
    >[!NOTE]
    >
    >Este tiempo de espera solo se aplica a las solicitudes de publicidad, no a las solicitudes creativas de publicidad.
-
-### Mejoras y correcciones en versiones anteriores
 
 #### Versión 20.9.1
 
