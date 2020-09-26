@@ -5,9 +5,9 @@ seo-title: Parámetros de consulta del servidor de manifiesto
 title: Parámetros de consulta del servidor de manifiesto
 uuid: 03632da3-ae20-427c-bd24-4794ab627cc8
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '846'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 Los parámetros de consulta indican al servidor de manifiesto qué tipo de cliente envió la solicitud y qué desea que haga el servidor de manifiesto. Algunos son obligatorios y otros tienen determinados formatos o valores aceptables.
 
-La dirección URL completa consta de la dirección URL base seguida de un signo de interrogación y, a continuación, de `parameterName=value` argumentos separados por ampersands: `Base URL?name1=value1&name2=value2& . . .&name n=value n`
+La dirección URL completa consta de la dirección URL base seguida de un signo de interrogación y, a continuación, de `parameterName=value` argumentos separados por ampersands: `Base URL?name1=value1&name2=value2& . . .&name n=value n`.
 
-## Parámetros reconocidos {#section_072845B7FA94468C8068E9092983C9E6}
+## Parámetros reconocidos {#recognized-parameters}
 
 El servidor de manifiesto reconoce los siguientes parámetros. Los procesa o los pasa, junto con todos los parámetros no reconocidos, al servidor de publicidad.
 
@@ -50,3 +50,5 @@ El servidor de manifiesto reconoce los siguientes parámetros. Los procesa o los
 | scteTracking | Busque M3U8 antes de que la información de seguimiento de SCTE se pueda recuperar en el sidecar JSON V2.  <br/>Este parámetro indica al servidor de manifiesto que el reproductor que busca el M3U8 necesita recuperar la información de la etiqueta SCTE. | No (predeterminado:  false ) | verdadero o falso Nota:  Los datos de SCTE-35 se devuelven en el sidecar JSON con la siguiente combinación de valores de parámetro de consulta: <ul><li>`ptcueformat=turner | elemental | nfl | DPIScte35` </li><li>pttrackingversion=v2 </li><li>scteTracking=true</li></ul> |
 | vetargetmultiplier | Número de segmentos desde el punto activo El desplazamiento previo al lanzamiento se configura mediante:   `(  vetargetmultiplier  *  targetduration ) +  vebufferlength`  <br/><br/>**Nota**:  Solo en directo/lineal | No (predeterminado:  3.0 ) | Flotante |
 | vebufferLength | Número de segundos desde el punto activo Nota:  Solo en directo/lineal | No (predeterminado:  3.0 ) | Flotante |
+| ptadtimeout | Para limitar el tiempo total de resolución de publicidad, si los proveedores tardan demasiado en responder. | Sí, para habilitar | valor en milisegundos |
+| ptparallelstream | Permite a los clientes con reproductores que solicitan flujos de audio o vídeo CMAF desactivados en paralelo para garantizar que los anuncios de las pistas de audio y vídeo sean coherentes. | Sí, para habilitar la función u omitir para deshabilitarla. | true |
