@@ -5,7 +5,10 @@ seo-title: Apple FairPlay en aplicaciones TVSDK
 title: Apple FairPlay en aplicaciones TVSDK
 uuid: 5796d5af-0018-4c69-a755-65e4819ee838
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: e1c6ab1d50f9262aaf70aef34854cf293fb4f30d
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ El cargador de recursos da formato a la solicitud y adjunta un token de ExpressP
 
 Al empaquetar el contenido, el empaquetador inserta `skd:` direcciones URL en el manifiesto M3U8. Después de la `skd:` entrada, puede colocar cualquier dato en el manifiesto. Puede utilizar estos datos en el código de la aplicación para completar las tareas que se enumeran arriba. Por ejemplo, puede usar `skd:{content_id}` para que la aplicación pueda determinar el ID del contenido que se está reproduciendo y solicitar un token para ese contenido específico. También puede usar, por ejemplo, `skd:{entitlement_server_url}?cid={content_id}`, para que la aplicación no necesite tener la URL del servidor de asignación de derechos codificada.
 
-Es posible que no necesite información en la dirección URL si, al iniciar la reproducción, ya conoce el ID de contenido a través de otros canales. `skd:` El segundo ejemplo es una solución ideal para probar la configuración, pero también puede utilizarla en un entorno de producción.
+Es posible que no necesite información en la dirección URL si, cuando la reproducción inicio, ya conoce el ID de contenido a través de otros canales. `skd:` El segundo ejemplo es una solución ideal para probar la configuración, pero también puede utilizarla en un entorno de producción.
 
 >[!TIP]
 >
@@ -156,7 +159,7 @@ Puede implementar Apple FairPlay Streaming, que es la solución DRM de Apple, en
 
    >[!NOTE]
    >
-   >Asegúrese de seguir las instrucciones de la Guía *del programa de flujo* FairPlay ( *FairPlayStreaming_PG.pdf*), que se incluye en el SDK de [FairPlay Server para el desarrollo de una aplicación](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)compatible con FPS).
+   >Asegúrese de seguir las instrucciones de la Guía *de Programa de flujo* FairPlay ( *FairPlayStreaming_PG.pdf*), que se incluye en el SDK de [FairPlay Server para el desarrollo de una aplicación](https://developer.apple.com/services-account/download?path=/Developer_Tools/FairPlay_Streaming_SDK/FairPlay_Streaming_Server_SDK.zip)con FPS).
 
    El método `resourceLoader:shouldWaitForLoadingOfRequestedResource` es equivalente a lo que está en `AVAssetResourceLoaderDelegate`.
 
