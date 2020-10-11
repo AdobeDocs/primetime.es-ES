@@ -4,9 +4,9 @@ seo-title: Notas de la versión de Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 6d25fc11bc4ca91556cae0b944322cd224c89fb5
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 Bienvenido a las Notas de la versión de Adobe Primetime. Los documentos enumerados en el panel de navegación izquierdo proporcionan información específica de la versión, requisitos del sistema, limitaciones, problemas fijos y problemas conocidos.
 
-## Mejoras y correcciones en PTAI 20.9.3
+## Mejoras y correcciones en PTAI 20.10.1
 
-La versión se centra en proporcionar un parámetro de API de arranque `ptparallelstream`, para permitir que los clientes con reproductores que soliciten flujos de audio o vídeo CMAF desactivados en paralelo para garantizar que los anuncios en las pistas de audio y vídeo sean coherentes.
+La versión se centró en las actualizaciones de mantenimiento.
 
 ## Correcciones en TVSDK 3.12 para Android
 
