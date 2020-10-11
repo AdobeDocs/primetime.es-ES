@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: Ayuda de Ad Insertion dinámico de Primetime
 user-guide-description: Explains how to monetize content by inserting user-targeted dynamic ads on the server and engage audience with personalized ads.
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 7d74e526dbc4c9f623d1ec30e4bc70d9318a89f9
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,14 @@ ht-degree: 0%
 # Ayuda de Ad Insertion dinámico {#ad-insertion}
 
 + [Información general de Ad Insertion dinámico](home.md)
++ Introducción a Primetime Ad Insertion{#get-started}
+   + [Información general](get-started-ptai.md)
+   + [Preparación para el uso de Primetime Ad Insertion](setup-ptai.md)
+   + [Integrar el servidor de publicidad](integrate-ad-server.md)
+   + [Integrar su CDN](integrate-cdn.md)
+   + [Uso de inserción de anuncios en flujos en directo/lineales](ad-insertion-live-linear-stream.md)
+   + [Utilizar inserción de publicidad para VOD](ad-insertion-vod.md)
+   + [Configurar el seguimiento de publicidad](set-up-ad-tracking.md)
 + [Notas de la versión de Ad Insertion dinámico](https://docs.adobe.com/content/help/en/primetime/release-notes/ptai/ptai-19x-release-notes.html)
 + [Herramienta de depuración del servidor de manifiesto](manifest-server-debugging-tool.md)
 
@@ -38,7 +46,7 @@ ht-degree: 0%
       + [Reemplazar una línea de tiempo de VOD](msapi-topics/ms-changes-vod-timeline/t-ms-replace-vod-timeline.md)
    + Seguimiento de la eficacia de la publicidad {#ad}
       + [Seguimiento de publicidades](msapi-topics/ms-at-effectiveness/ms-at-overview.md)
-      + [Habilitar el seguimiento de publicidades de cliente](msapi-topics/ms-at-effectiveness/ms-enable-client-side-ad-tracking.md)
+      + [Habilitar el seguimiento de publicidades del lado del cliente](msapi-topics/ms-at-effectiveness/ms-enable-client-side-ad-tracking.md)
       + [Información general sobre el seguimiento del cliente que no es TVSDK](msapi-topics/ms-at-effectiveness/notvsdk-csat-overview.md)
       + [API para que los reproductores interactúen con el servidor de manifiesto](msapi-topics/ms-at-effectiveness/notvsdk-csat-ms-interface.md)
       + [Directiva EXT-X-MARKER](msapi-topics/ms-at-effectiveness/ms-api-playlists.md)
