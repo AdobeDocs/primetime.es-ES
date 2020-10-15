@@ -4,14 +4,17 @@ seo-title: Ayuda de Adobe Digital Rights Management
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: 8b1ae9a5258600c317aa073ec37567323fd0a309
+source-git-commit: fac84687085f289e984c189665bfe775337592b3
+workflow-type: tm+mt
+source-wordcount: '213'
+ht-degree: 49%
 
 ---
 
 
 # Ayuda de Primetime Digital Rights Management (DRM)
 
-Bienvenido a la ayuda de Digital Rights Management para Adobe Primetime. Los documentos enumerados en el panel de navegación izquierdo son los activadores clave para la distribución de contenido digital.
+Bienvenido a la ayuda de Digital Rights Management para Adobe Primetime. Los documentos enumerados en la navegación izquierda son los activadores clave para la distribución de contenido digital.
 
 ## Consulte también
 
@@ -21,7 +24,7 @@ Bienvenido a la ayuda de Digital Rights Management para Adobe Primetime. Los doc
 | [Ayuda de programación de Primetime](/help/programming/home.md) | Le permite aprender a desarrollar aplicaciones y reproductores de vídeo mediante Java en dispositivos Android y Objective-C en dispositivos iOS. |
 | [Ayuda de conversión y migración de Primetime](/help/migration-guides/home.md) | Explica el proceso de conversión y migración para pasar de su grupo de TVSDK de Primetime existente al grupo de próxima generación. |
 | [Implementación de referencia](/help/android-reference-implementation/home.md) | Ayuda a comprender el SDK de TVSDK y a modificar los administradores de funciones para personalizar su reproductor personal. |
-| [Ayuda para la inserción de publicidad dinámica](/help/dynamic-ad-insertion/home.md) | Explica cómo monetizar el contenido mediante la inserción de publicidad dinámica dirigida por el usuario en el servidor y captar a la audiencia con anuncios personalizados. |
+| [Ayuda de Ad Insertion de Primetime](/help/dynamic-ad-insertion/home.md) | Explica cómo monetizar el contenido mediante la inserción de publicidad dinámica dirigida por el usuario en el servidor y captar la atención de la audiencia con anuncios personalizados. |
 | [Referencias de la API de Primetime](/help/reference/api-references.md) | Proporciona información detallada sobre las funciones de TVSDK, las estructuras de datos y otras construcciones de programación. |
 | [Archivos](https://helpx.adobe.com/primetime/archives.html) | Descargue archivos PDF de la documentación archivada. |
 
