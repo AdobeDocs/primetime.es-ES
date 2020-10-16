@@ -5,7 +5,10 @@ seo-title: Funciones compatibles con MP3 y MP4
 title: Funciones compatibles con MP3 y MP4
 uuid: 33e3130f-fc78-40b8-a4b7-2fcdd5a2b4f9
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
+workflow-type: tm+mt
+source-wordcount: '220'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 El TVSDK del explorador admite varias funciones MP3 y MP4 que puede implementar para agregar funcionalidad a sus aplicaciones.
 * [Funciones de audio MP3: Reproducción básica](#core-playback)
 * [Funciones de audio MP4: Reproducción básica](#mp4-audio-features)
-* [Funciones de vídeo MP4: inserción de anuncios principales](#section_1A8CBC5AA4FA4477813FD9EFF26AC104)
+* [Funciones de vídeo MP4: Ad Insertion principal](#section_1A8CBC5AA4FA4477813FD9EFF26AC104)
 
 >[!TIP]
 >
@@ -31,7 +34,7 @@ El TVSDK del explorador admite varias funciones MP3 y MP4 que puede implementar 
 
 ## Funciones de audio MP4 {#mp4-audio-features}
 
-### Reproducción principal
+### Reproducción principal {#mp4-core-playback}
 
 | Categoría | Tipo de contenido | Función | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
@@ -43,5 +46,5 @@ El TVSDK del explorador admite varias funciones MP3 y MP4 que puede implementar 
 
 | Categoría | Tipo de contenido | Función | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Inserción de publicidad | VOD MP4 | Anteponer | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
-| Inserción de publicidad | VOD MP4 | Post-roll | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
+| Ad Insertion | VOD MP4 | Anteponer | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
+| Ad Insertion | VOD MP4 | Post-roll | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
