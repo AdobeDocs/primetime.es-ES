@@ -2,18 +2,18 @@
 cloud: experience-cloud
 product: adobe primetime
 audience: end-user
-user-guide-title: Ayuda de Digital Rights Management Primetime
-user-guide-description: Helps you learn more about various user scenarios in Digital Rights Management (DRM).
+user-guide-title: Ayuda de Primetime Digital Rights Management
+user-guide-description: Ayuda a conocer mejor los distintos casos de usuario en Digital Rights Management (DRM).
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2215'
 ht-degree: 0%
 
 ---
 
 
-# Ayuda de Digital Rights Management {#drm}
+# Digital Rights Management Help {#drm}
 
 + [Información general de DRM](home.md)
 + Guía de inscripción de certificados {#certificate-enrollment-guide}
@@ -216,7 +216,7 @@ ht-degree: 0%
    + Configuración del SDK {#setting-up-the-sdk}
       + [Configure el entorno de desarrollo](protecting-content/setting-up-the-sdk/setup-dev-env.md)
       + [Credenciales de Adobe Primetime DRM](protecting-content/setting-up-the-sdk/drm-credentials.md)
-      + [Video](protecting-content/setting-up-the-sdk/requesting-certs.md)
+      + [Solicitud de certificados](protecting-content/setting-up-the-sdk/requesting-certs.md)
       + [Almacenamiento de credenciales](protecting-content/setting-up-the-sdk/storing-credentials.md)
    + Trabajar con políticas de DRM {#working-policies}
       + [Información general](protecting-content/working-policies-overview/working-with-policies.md)
@@ -227,7 +227,7 @@ ht-degree: 0%
    + Empaquetado de archivos multimedia {#packaging-media}
       + [Información general](protecting-content/packaging-media-overview/packaging-media-files.md)
       + [Opciones de paquete](protecting-content/packaging-media-overview/content-packaging-options.md)
-      + [metamorfosis de contenido](protecting-content/packaging-media-overview/encrypting-content.md)
+      + [Cifrado de contenido](protecting-content/packaging-media-overview/encrypting-content.md)
       + [Examen del contenido de archivos cifrados](protecting-content/packaging-media-overview/examining-encrypted-file-content.md)
    + Licencias de pregeneración e incrustación {#pre-generating-and-embedded-licenses}
       + [Licencias de pregeneración](protecting-content/pre-generating-and-embedded-licenses/pre-generating-licenses.md)
@@ -235,7 +235,7 @@ ht-degree: 0%
    + Implementar un servidor de licencias {#implementing-the-license-server}
       + [Información general](protecting-content/implementing-the-license-server/implementing-license-overview.md)
       + [Opciones de implementación del servidor de licencias](protecting-content/implementing-the-license-server/license-server-deployment-options.md)
-      + [Procesamiento de solicitudes DRM de Adobe Primetime](protecting-content/implementing-the-license-server/processing-drm-requests.md)
+      + [Procesar solicitudes DRM de Adobe Primetime](protecting-content/implementing-the-license-server/processing-drm-requests.md)
       + [Administrar solicitudes de Obtención de versión del servidor](protecting-content/implementing-the-license-server/handling-get-server-version-reqs.md)
       + [Administrar solicitudes de registro de dominio](protecting-content/implementing-the-license-server/handling-domain-registration-reqs.md)
       + [Gestión de solicitudes de anulación del registro de dominio](protecting-content/implementing-the-license-server/handling-domain-de-registration-reqs.md)
@@ -450,7 +450,7 @@ ht-degree: 0%
    + Configuración del SDK {#setting-up-the-sdk}
       + [Configuración del entorno de desarrollo](aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)
       + [Credenciales de acceso a Adobe](aaxs-protecting-content/content-setting-up-the-sdk/content-aaxs-credentials.md)
-      + [Video](aaxs-protecting-content/content-setting-up-the-sdk/content-requesting-certs.md)
+      + [Solicitud de certificados](aaxs-protecting-content/content-setting-up-the-sdk/content-requesting-certs.md)
       + [Almacenamiento de credenciales](aaxs-protecting-content/content-setting-up-the-sdk/content-storing-credentials.md)
    + Uso de políticas {#working-with-policies}
       + [Uso de políticas](aaxs-protecting-content/content-working-with-policies/content-working-with-policies-overview.md)
@@ -461,7 +461,7 @@ ht-degree: 0%
       + [Uso de Listas de actualización de directivas](aaxs-protecting-content/content-working-with-policies/content-working-with-policy-update-lists.md)
    + Empaquetado de archivos multimedia {#packaging-media-files}
       + [Empaquetado de archivos multimedia](aaxs-protecting-content/content-packaging-media-files/content-packaging-media-files-overview.md)
-      + [metamorfosis de contenido](aaxs-protecting-content/content-packaging-media-files/content-encrypting-content.md)
+      + [Cifrado de contenido](aaxs-protecting-content/content-packaging-media-files/content-encrypting-content.md)
       + [Examen del contenido de archivos cifrados](aaxs-protecting-content/content-packaging-media-files/content-examining-encrypted-file-content.md)
    + Licencias de pregeneración e incrustación {#pre-generating-and-embedding-liceses}
       + [Licencias de pregeneración e incrustación](aaxs-protecting-content/content-pre-generating-and-embedded-licenses/content-pre-generating-embedded-licenses-overview.md)
