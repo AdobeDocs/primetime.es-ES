@@ -9,7 +9,7 @@ products: SG_PRIMETIME
 topic-tags: release-notes
 discoiquuid: e4437a26-9454-4da1-ae87-0fce664aac3d
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
 workflow-type: tm+mt
 source-wordcount: '5222'
 ht-degree: 0%
@@ -177,7 +177,7 @@ Este problema se resolvió permitiendo que TVSDK continuara la reproducción, in
 
 * Zendesk #23454 - Los anuncios de terceros (VPAID) no se gestionan correctamente
 
-Este problema se resolvió administrando correctamente las publicidades VPAID en función de las ID de contenido en lugar de intervalos de tiempo.
+Este problema se resolvió administrando correctamente las publicidades VPAID en función de los ID de contenido en lugar de los intervalos de tiempo.
 
 * Zendesk #24528 - Métricas de uso de TVSDK para facturación.
 
@@ -735,9 +735,6 @@ los tipos de MIME para el formato HLS distinguían entre mayúsculas y minúscul
 * Zendesk #1423 - Error de reproducción HLS está bloqueando el Flash Player (sin error informado)
 * Zendesk #1674 - ClosedCaption No aparece, se muestra correctamente el 708 subtítulos cuando faltan los códigos 0x03 ETX.
 
-</p>
-</details>
-
 ## Problemas conocidos {#known-issues}
 
 * El subtítulo cerrado no funcionará con contenido de solo audio porque el sistema de subtítulos necesita que el vídeo funcione.
@@ -754,7 +751,7 @@ _playbackManager.pause();
 }
 ```
 
-* **Versión 1.4.13** PTPLAY-8501 - Cuando VMAP devuelve dos anuncios directos no transcodificados MP4, se reproduce dos veces la misma versión de retorno y se reproduce dos veces.
+* **Versión 1.4.13** PTPLAY-8501 - Cuando VMAP devuelve dos anuncios directos no transcodificados MP4, se reproduce dos veces la misma caída y segunda.
 
 * **Versión 1.4.2** En la versión 16 de Flash Player, se identificó un problema con la lógica ABR &quot;apagado&quot;, después de que el reproductor se coloca en un evento de almacenamiento en búfer vacío. El problema evita que la velocidad de bits se apague en entornos de ancho de banda incorrectos una vez que el reproductor se encuentre en estado de almacenamiento en búfer. Para solucionar el problema, haga que la aplicación establezca el `BufferControlParameters.initialBufferTime` mismo valor que `BufferControlParameters.playbackBufferTime` temporalmente durante el estado de almacenamiento en búfer (es decir, en un `BufferEvent.BUFFERING_BEGIN` evento) y, a continuación, restablezca los valores establecidos en el `BufferEvent.BUFFERING_END` evento. La corrección de este problema estará disponible en la próxima versión de parche de Flash Player versión 16.
 
