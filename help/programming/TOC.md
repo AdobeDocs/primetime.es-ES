@@ -3,11 +3,11 @@ cloud: experience-cloud
 product: adobe primetime
 audience: end-user
 user-guide-title: Ayuda de programación de Primetime
-user-guide-description: Allows you to learn to develop applications and video players using Java on Android devices and Objective-C on iOS devices.
+user-guide-description: Le permite aprender a desarrollar aplicaciones y reproductores de vídeo mediante Java en dispositivos Android y Objective-C en dispositivos iOS.
 translation-type: tm+mt
 source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
 workflow-type: tm+mt
-source-wordcount: '4307'
+source-wordcount: '4327'
 ht-degree: 0%
 
 ---
@@ -273,7 +273,7 @@ ht-degree: 0%
       + [Lista de permitidos de la aplicación iOS](tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-allowlist-your-ios-application.md)
    + [Notificaciones de estado, actividad, errores y registros del reproductor](tvsdk-3x-ios-prog/ios-3x-notification-system/ios-3x-notification-content.md)
    + [Registro personalizado](tvsdk-3x-ios-prog/ios-3x-customized-logging/c-ios-customized-logging/c-ios-customized-logging.md)
-   + [El sistema de conmutación por error](tvsdk-3x-ios-prog/ios-3x-understanding-failover.md)
+   + [Conmutación por error](tvsdk-3x-ios-prog/ios-3x-understanding-failover.md)
    + [Métricas de facturación](tvsdk-3x-ios-prog/ios-3x-billing/ios-3x-billing-metrics/ios-3x-billing-metrics.md)
    + Resumen de las clases de Primetime Player {#primetime-player-classes-summary}
       + [Clases de reproductor de medios](tvsdk-3x-ios-prog/ios-3x-primetime-player-class-summary/ios-3x-classes-media-player-ios.md)
@@ -629,7 +629,7 @@ ht-degree: 0%
          + [Clases de Mediacore](tvsdk-1.4-for-android/class-summary/android-1.4-classes-mediacore.md)
          + [Clases de información](tvsdk-1.4-for-android/class-summary/android-1.4-classes-info.md)
          + [Clases de registro](tvsdk-1.4-for-android/class-summary/android-1.4-classes-logging.md)
-         + [Fair](tvsdk-1.4-for-android/class-summary/android-1.4-classes-metadata.md)
+         + [Clases de metadatos](tvsdk-1.4-for-android/class-summary/android-1.4-classes-metadata.md)
          + [Clases de notificación](tvsdk-1.4-for-android/class-summary/android-1.4-classes-notifications.md)
          + [Clases QoS](tvsdk-1.4-for-android/class-summary/android-1.4-classes-qos.md)
          + [Clases de escala de tiempo](tvsdk-1.4-for-android/class-summary/android-1.4-classes-timeline.md)
@@ -721,7 +721,7 @@ ht-degree: 0%
       + [Implementar actualizaciones de tiempo personalizadas](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/t-psdk-ios-1.4-imp-cust-time-updates.md)
       + [Configuración del sistema de informes de análisis de vídeo en el servidor](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/t-psdk-ios-1.4-va-server-side-reporting-set-up.md)
       + [Acceso a los informes de análisis de vídeo](tvsdk-1.4-for-ios/c-psdk-ios-1.4-va-integration-overview/t-psdk-ios-1.4-va-reports-access.md)
-   + Apple de contenido {#content-protection}
+   + Protección del contenido {#content-protection}
       + [Información general sobre la interfaz de DRM de Primetime](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/r-psdk-ios-1.4-drm-interface.md)
       + [Apple FairPlay en aplicaciones TVSDK](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/c-psdk-ios-1.4-apple-fairplay-tvsdk/c-psdk-ios-1.4-apple-fairplay-tvsdk.md)
       + [Lista de permitidos de la aplicación iOS](tvsdk-1.4-for-ios/c-psdk-ios-1.4-drm-content-security/t-psdk-ios-1.4-allowlist-your-ios-application.md)
