@@ -235,7 +235,7 @@ ht-degree: 0%
    + Implementar un servidor de licencias {#implementing-the-license-server}
       + [Información general](protecting-content/implementing-the-license-server/implementing-license-overview.md)
       + [Opciones de implementación del servidor de licencias](protecting-content/implementing-the-license-server/license-server-deployment-options.md)
-      + [Procesar solicitudes DRM de Adobe Primetime](protecting-content/implementing-the-license-server/processing-drm-requests.md)
+      + [Procesamiento de solicitudes DRM de Adobe Primetime](protecting-content/implementing-the-license-server/processing-drm-requests.md)
       + [Administrar solicitudes de Obtención de versión del servidor](protecting-content/implementing-the-license-server/handling-get-server-version-reqs.md)
       + [Administrar solicitudes de registro de dominio](protecting-content/implementing-the-license-server/handling-domain-registration-reqs.md)
       + [Gestión de solicitudes de anulación del registro de dominio](protecting-content/implementing-the-license-server/handling-domain-de-registration-reqs.md)
