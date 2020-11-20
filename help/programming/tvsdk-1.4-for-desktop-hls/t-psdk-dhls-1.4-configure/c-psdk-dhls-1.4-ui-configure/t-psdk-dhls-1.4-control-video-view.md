@@ -37,8 +37,7 @@ Puede anular el comportamiento predeterminado de la relación de aspecto especif
    >
    >Por ejemplo:
    >
-   >
-   ```
+   >```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
