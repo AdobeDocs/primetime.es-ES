@@ -11,9 +11,9 @@ ht-degree: 0%
 ---
 
 
-# Encadenamiento de licencias mejorado {#enhanced-license-chaining}
+# Encadenado de licencias mejorado {#enhanced-license-chaining}
 
-Con la formación de licencias mejorada en Adobe Access 3.0, se recomienda emitir una hoja y una raíz la primera vez que el usuario solicite una licencia para un equipo en particular. Si el usuario ya tiene la licencia de raíz, el servidor puede emitir sólo una hoja (llame `LicenseRequestMessage.clientHasEnhancedRootForPolicy()` para determinar si el cliente ya tiene una raíz mejorada 3.0). Para solicitudes de licencia posteriores, el cliente indicará que ya tiene una hoja y una raíz, por lo que el servidor debe emitir una nueva licencia de raíz. Cuando se utiliza la cadena de licencia mejorada, se debe llamar `setRootKeyRetrievalInfo()` para proporcionar las credenciales necesarias para descifrar la clave de cifrado raíz en la directiva.
+Con la formación de licencias mejorada en Adobe Access 3.0, se recomienda emitir una hoja y una raíz la primera vez que el usuario solicite una licencia para un equipo en particular. Si el usuario ya tiene la licencia de raíz, el servidor puede emitir sólo una hoja (llame a `LicenseRequestMessage.clientHasEnhancedRootForPolicy()` para determinar si el cliente ya tiene una raíz mejorada 3.0). Para solicitudes de licencia posteriores, el cliente indicará que ya tiene una hoja y una raíz, por lo que el servidor debe emitir una nueva licencia de raíz. Cuando se utiliza la cadena de licencia mejorada, se debe llamar a `setRootKeyRetrievalInfo()` para proporcionar las credenciales necesarias para descifrar la clave de cifrado raíz en la directiva.
 
 >[!NOTE]
 >
