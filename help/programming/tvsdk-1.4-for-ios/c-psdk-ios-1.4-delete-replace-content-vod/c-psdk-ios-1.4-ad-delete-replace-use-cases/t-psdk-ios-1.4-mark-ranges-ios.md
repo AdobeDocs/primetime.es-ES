@@ -6,15 +6,18 @@ title: Marcar rangos
 uuid: 994a8f07-0951-47ec-b21a-d74c9eeefd74
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '188'
+ht-degree: 0%
 
 ---
 
 
 # Marcar rangos{#mark-ranges}
 
-Para implementar los intervalos `PTTimeRangeCollection` y marcar el contenido como publicidades:
-1. Preparar el `PTTimeRangeCollection`.
-1. Defina el tipo del `PTTimeRangeCollection` en `PTTimeRangeCollectionTypeMarkRanges`.
+Para implementar los `PTTimeRangeCollection` y marcar intervalos de contenido como publicidades:
+1. Prepare el `PTTimeRangeCollection`.
+1. Establezca el tipo de `PTTimeRangeCollection` en `PTTimeRangeCollectionTypeMarkRanges`.
 
    Este paso notifica a TVSDK que los intervalos personalizados deben tratarse como anuncios.
 
@@ -54,7 +57,7 @@ Para implementar los intervalos `PTTimeRangeCollection` y marcar el contenido co
                                                                   metadata:metadata];
    ```
 
-1. Cree el reproductor e inicie la reproducción.
+1. Cree el reproductor y la reproducción de inicio.
 
    ```
    //Create PTMediaPlayer using the created PTMediaPlayer 
@@ -67,11 +70,11 @@ Para implementar los intervalos `PTTimeRangeCollection` y marcar el contenido co
    [player play];
    ```
 
-## Reemplazar intervalos{#replace-ranges}
+## Reemplazar rangos{#replace-ranges}
 
-Para implementar los intervalos de contenido `PTTimeRangeCollection` y eliminarlos como publicidades:
+Para implementar los `PTTimeRangeCollection` y eliminar intervalos de contenido como publicidades:
 1. Preparar `PTTimeRangeCollection`.
-1. Defina el tipo del `PTTimeRangeCollection` en `PTTimeRangeCollectionTypeReplaceRanges`.
+1. Establezca el tipo de `PTTimeRangeCollection` en `PTTimeRangeCollectionTypeReplaceRanges`.
 
    Este paso notifica a TVSDK que los intervalos proporcionados deben reemplazarse por contenido alternativo (anuncios).
 
@@ -94,7 +97,7 @@ Para implementar los intervalos de contenido `PTTimeRangeCollection` y eliminarl
 
    >[!TIP]
    >
-   >El argumento `replacementDuration` es opcional. Si no está definida, la variable `AdServer` determina la duración de la pausa publicitaria.
+   >El argumento `replacementDuration` es opcional. Si no se define, `AdServer` determina la duración de la pausa publicitaria.
 
 1. Cree el `PTAdMetadata` y establezca el `PTTimeRangeCollection`.
 
@@ -120,9 +123,9 @@ Para implementar los intervalos de contenido `PTTimeRangeCollection` y eliminarl
 
    >[!TIP]
    >
-   >Aunque el `signalingMode` se establece como `PTAdSignalingModeCustomRanges`, este modo de señalización de publicidad se establece automáticamente al configurar el `PTTimeRangeCollection` tipo `PTTimeRangeCollectionTypeReplace`.
+   >Aunque el `signalingMode` se establece como `PTAdSignalingModeCustomRanges`, este modo de señalización de publicidad se configura automáticamente al configurar el `PTTimeRangeCollection` de tipo `PTTimeRangeCollectionTypeReplace`.
 
-1. Cree el reproductor e inicie la reproducción.
+1. Cree el reproductor y la reproducción de inicio.
 
    ```
    //Create PTMediaPlayer using the created PTMediaPlayer 
@@ -135,10 +138,10 @@ Para implementar los intervalos de contenido `PTTimeRangeCollection` y eliminarl
    [player play];
    ```
 
-## Eliminar intervalos {#delete-ranges}
+## Eliminar rangos {#delete-ranges}
 
-Para implementar los intervalos de contenido `PTTimeRangeCollection` y eliminarlos como publicidades:
-1. Preparar el `PTTimeRangeCollection`.
+Para implementar los `PTTimeRangeCollection` y eliminar intervalos de contenido como publicidades:
+1. Prepare el `PTTimeRangeCollection`.
 1. Establezca el tipo de `PTTimeRangeCollection` en `PTTimeRangeCollectionTypeDeleteRanges`, que notifica a TVSDK que es necesario eliminar los intervalos proporcionados.
 
    ```
@@ -180,9 +183,9 @@ Para implementar los intervalos de contenido `PTTimeRangeCollection` y eliminarl
 
    >[!TIP]
    >
-   >La inserción de publicidad se produce después de eliminar los rangos personalizados en función del `PTAdMetadata` y el `PTAdSignalingMode`.
+   >La inserción de publicidad se produce después de eliminar los intervalos personalizados basados en `PTAdMetadata` y en el `PTAdSignalingMode` actual.
 
-1. Cree el reproductor e inicie la reproducción.
+1. Cree el reproductor y la reproducción de inicio.
 
    ```
    //Create PTMediaPlayer using the created PTMediaPlayer 
