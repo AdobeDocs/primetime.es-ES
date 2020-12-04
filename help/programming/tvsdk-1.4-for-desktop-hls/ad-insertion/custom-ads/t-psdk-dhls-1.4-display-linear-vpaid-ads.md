@@ -17,7 +17,7 @@ ht-degree: 0%
 
 TVSDK admite la visualización de publicidades de definición de interfaz de publicidad (VPAID) del reproductor de vídeo lineal en una pausa publicitaria. VPAID versión 1.0 requiere Flash, mientras que la versión 2.0 también funciona con Browser TVSDK y JavaScript.
 
-Para mostrar las publicidades VPAID correctamente, debe proporcionar un contenedor de publicidad ( `AdContainerView`) dentro de la `MediaPlayerContext` instancia.
+Para mostrar las publicidades VPAID correctamente, debe proporcionar un contenedor de publicidad ( `AdContainerView`) dentro de la instancia `MediaPlayerContext`.
 
 Limitaciones para las publicidades VPAID:
 
