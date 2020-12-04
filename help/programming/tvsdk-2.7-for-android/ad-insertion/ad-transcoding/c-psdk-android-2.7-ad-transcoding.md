@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Volver a empaquetar anuncios incompatibles con el servicio de reempaquetado creativo de Adobe (CRS) {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
+# Volver a empaquetar anuncios incompatibles mediante el servicio de reempaquetado creativo (CRS) de Adobe {#repackage-incompatible-ads-using-adobe-creative-repackaging-service-crs}
 
 Algunos anuncios (o elementos creativos) de terceros no se pueden incluir en el flujo de contenido HTTP Live Streaming (HLS) porque su formato de vídeo no es compatible con HLS. Primetime y TVSDK pueden intentar, opcionalmente, volver a empaquetar anuncios incompatibles en vídeos compatibles con M3U8.
 
@@ -27,7 +27,7 @@ Para activar esta función de CRS opcional, póngase en contacto con su represen
 >
 >Para los clientes de CRS versión 3.0 (y anteriores), a partir de CRS versión 3.1, los siguientes cambios han mejorado tanto la seguridad como el rendimiento:
 >
->* CRS 3.1 continúa `https:` si se utiliza el contenido que se está reempaquetando `https:`. Esto reduce el potencial de algunos reproductores para presentar contenido no seguro.
+>* CRS 3.1 continúa con `https:` si el contenido que se reempaqueta utiliza `https:`. Esto reduce el potencial de algunos reproductores para presentar contenido no seguro.
    >
    >
 * CRS 3.1 minimiza en gran medida las llamadas de red, lo que mejora el tiempo de inicio del vídeo.
@@ -36,7 +36,7 @@ Para activar esta función de CRS opcional, póngase en contacto con su represen
 
 
 
-Para obtener más información sobre CRS, consulte Servicio de empaquetado [creativo (CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_certificate_enrollment.pdf).
+Para obtener más información sobre CRS, consulte [Creative Packaging Service (CRS)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_certificate_enrollment.pdf).
 
 ## Habilitar CRS en aplicaciones TVSDK{#enable-crs-in-tvsdk-applications}
 
