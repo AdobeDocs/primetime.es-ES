@@ -6,6 +6,9 @@ title: Reproductor compatible con Browserify
 uuid: 1832c826-d5d0-41b0-852f-286c8e4fa0f3
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '149'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 Puede crear un reproductor compatible con Browserify mediante archivos JS proporcionados por el TVSDK del explorador.
 
-TVSDK del explorador proporciona dos archivos JS compatibles con Browserify. Una se utiliza con el módulo AdobePSDK; esto es para desarrollar aplicaciones sin el marco de interfaz de usuario. El otro se utiliza con el módulo UI-Framework; devuelve el espacio de nombres PTP que se utiliza para escribir aplicaciones mediante la interfaz de usuario-marco.
+TVSDK del explorador proporciona dos archivos JS compatibles con Browserify. Una se utiliza con el módulo AdobePSDK; esto es para desarrollar aplicaciones sin el marco de interfaz de usuario. El otro se utiliza con el módulo UI-Framework; devuelve la Área de nombres PTP que se utiliza para escribir aplicaciones mediante la interfaz de usuario de Framework.
 
-Para comenzar con Browserify, ejecute los siguientes comandos de configuración para crear [!DNL final.js] archivos (el archivo de paquete Browserify) dentro de los [!DNL example] directorios debajo [!DNL samples/browerify/reference] y [!DNL samples/browerify/ui-framework]:
+Para comenzar con Browserify, ejecute los siguientes comandos de configuración para crear [!DNL final.js] archivos (el archivo de paquete Browserify) dentro de los directorios [!DNL example] en [!DNL samples/browerify/reference] y [!DNL samples/browerify/ui-framework]:
 
 1. Vaya a [!DNL samples/browserify/reference/build].
 1. Ejecute los siguientes comandos:
