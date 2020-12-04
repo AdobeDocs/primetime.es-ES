@@ -46,8 +46,8 @@ El archivo de registro global, `flashaccess-global.log`, se encuentra en *Licens
 
 ## Archivo de registro de partición {#section_5660137CD6AA40519E72A4315534846B}
 
-El archivo de registro de partición, `flashaccess-partition.log`, se encuentra en el `<LicenseServer.LogRoot>/flashaccesserver` directorio. Incluye los mensajes de registro que se han generado durante el procesamiento de una solicitud de licencia.
+El archivo de registro de particiones, `flashaccess-partition.log`, se encuentra en el directorio `<LicenseServer.LogRoot>/flashaccesserver`. Incluye los mensajes de registro que se han generado durante el procesamiento de una solicitud de licencia.
 
-## Archivo de registro del inquilino {#section_F0257CC0831647F18A746B4F02E3E910}
+## Archivo de registro de inquilinos {#section_F0257CC0831647F18A746B4F02E3E910}
 
-El archivo de registro de inquilinos de cada inquilino `flashaccess-tenant.log`, se encuentra en `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. El registro de inquilinos incluye información de auditoría que describe cada licencia que se genera para este inquilino.
+El archivo de registro de inquilinos de cada inquilino, `flashaccess-tenant.log`, se encuentra en `<LicenseServer.LogRoot>/flashaccesserver/tenants/<tenantname>`. El registro de inquilinos incluye información de auditoría que describe cada licencia que se genera para este inquilino.
