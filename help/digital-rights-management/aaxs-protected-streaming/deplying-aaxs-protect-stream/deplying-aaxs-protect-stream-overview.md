@@ -11,17 +11,17 @@ ht-degree: 0%
 ---
 
 
-# Introducción a la implementación de Adobe Access Server para flujo continuo protegido {#deploying-the-adobe-access-server-for-protected-streaming-overview}
+# Implementación de la descripción general de Adobe Access Server para flujo protegido {#deploying-the-adobe-access-server-for-protected-streaming-overview}
 
-Antes de implementar Adobe Access Server para flujo continuo protegido, asegúrese de haber instalado las versiones de Java y Tomcat enumeradas en la sección Requisitos.
+Antes de implementar Adobe Access Server para flujo continuo protegido, asegúrese de haber instalado las versiones de Java y Tomcat que aparecen en la sección Requisitos.
 
-El paquete Adobe Access Server for Protected Streaming incluye [!DNL flashaccesserver.war]. Para implementar este archivo WAR, cópielo en el directorio de Tomcat [!DNL webapps] . Si ya ha implementado el archivo WAR, es posible que tenga que borrar manualmente el directorio WAR desempacado ( [!DNL flashaccessserver] en el [!DNL webapps] directorio de Tomcat). Para evitar que Tomcat descomprima archivos WAR, edite el [!DNL server.xml] archivo en el directorio [!DNL conf] de Tomcat y defina el `unpackWARs` atributo en `false`.
+El paquete Adobe Access Server para flujo continuo protegido incluye [!DNL flashaccesserver.war]. Para implementar este archivo WAR, cópielo en el directorio [!DNL webapps] de Tomcat. Si ya ha implementado el archivo WAR, es posible que tenga que eliminar manualmente el directorio WAR sin empaquetar ( [!DNL flashaccessserver] en el directorio [!DNL webapps] de Tomcat). Para evitar que Tomcat descomprima archivos WAR, edite el archivo [!DNL server.xml] en el directorio [!DNL conf] de Tomcat y establezca el atributo `unpackWARs` en `false`.
 
 >[!NOTE]
 >
->Si ha configurado Tomcat para que incluya [!DNL commons-logging.jar] en la ruta de clases del sistema (no es necesario para Adobe Access Server para flujo protegido), el registro común debe configurarse para utilizar Log4J.
+>Si ha configurado Tomcat para incluir [!DNL commons-logging.jar] en la ruta de clases del sistema (no es necesario para Adobe Access Server para flujo protegido), el registro de recursos comunes debe configurarse para utilizar Log4J.
 
-El servidor opcionalmente utiliza una biblioteca específica de la plataforma ( [!DNL jsafe.dll] en Microsoft Windows o [!DNL libjsafe.so] en Linux) para un rendimiento óptimo. Copie la biblioteca adecuada para su plataforma desde la [!DNL thirdparty/cryptoj/]*plataforma *a una ubicación especificada por la variable de`PATH`entorno (o`LD_LIBRARY_PATH`en Linux).
+El servidor opcionalmente utiliza una biblioteca específica de la plataforma ( [!DNL jsafe.dll] en Microsoft Windows o [!DNL libjsafe.so] en Linux) para un rendimiento óptimo. Copie la biblioteca adecuada para su plataforma de [!DNL thirdparty/cryptoj/]*platform* a una ubicación especificada por la variable de entorno `PATH` (o `LD_LIBRARY_PATH` en Linux).
 
 >[!NOTE]
 >
