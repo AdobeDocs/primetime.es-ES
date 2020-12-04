@@ -6,6 +6,9 @@ title: Estructura de implementación de referencia
 uuid: ae347a97-1500-476a-9fc8-c99e6b2ab8de
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '454'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
 
 Los administradores de funciones sirven de envoltorios en la biblioteca TVSDK.
 
-En Java, las clases están estructuradas en una jerarquía. Por ejemplo, todos los códigos relacionados con la IU debajo `com.adobe.primetime.reference.ui` y todos los administradores de funciones están en `com.adobe.primetime.reference.manager`.
+En Java, las clases están estructuradas en una jerarquía. Por ejemplo, todo el código relacionado con la interfaz de usuario en `com.adobe.primetime.reference.ui` y todos los administradores de funciones están en `com.adobe.primetime.reference.manager`.
 
 La implementación de referencia de Primetime contiene los siguientes paquetes:
 
@@ -32,4 +35,4 @@ La implementación de referencia de Primetime contiene los siguientes paquetes:
 | [com.adobe.primetime.reference.ui.player](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/ui/player/package-summary.html) | Contiene código de interfaz de usuario para el reproductor. |
 | [com.adobe.primetime.reference.ui.seón](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/ui/settings/package-summary.html) | Contiene código de interfaz de usuario para la configuración. |
 | [com.adobe.primetime.reference.utils](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/utils/package-summary.html) | Contiene clases generales de utilidades. |
-| [com.adobe.primetime.reference.utils.http](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/utils/http/package-summary.html) | Contiene `HTTP-specific` clases de utilidades. |
+| [com.adobe.primetime.reference.utils.http](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/utils/http/package-summary.html) | Contiene clases de utilidades `HTTP-specific`. |
