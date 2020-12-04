@@ -4,6 +4,9 @@ title: Monitoreo
 uuid: ee62c55f-0d44-40f4-a2c7-39456f4d3d99
 translation-type: tm+mt
 source-git-commit: 1547eb3dd220fafc08df923f40504736c16a866c
+workflow-type: tm+mt
+source-wordcount: '164'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ Tanto el servidor de individualización como el servidor de generación de clave
 
 * **Página de estado de la individualización:** [!DNL https://SERVER:PORT/flashaccess/status]
 
-   * Informa &quot;activo&quot; si el servidor de aplicaciones se está ejecutando y la aplicación puede realizar una solicitud GET al servidor de generación de claves
+   * Informa &quot;activo&quot; si el servidor de aplicaciones se está ejecutando y la aplicación puede realizar una solicitud de GET al servidor de generación de claves
    * La página informa &quot;Vivo&quot; o nada. No se muestra información sobre la aplicación, por lo que esta página se puede utilizar para monitorear desde fuera del cortafuegos.
 
 * **Página de estado de Generación de claves:** [!DNL https://SERVER:PORT/flashaccess-kgs/status]
