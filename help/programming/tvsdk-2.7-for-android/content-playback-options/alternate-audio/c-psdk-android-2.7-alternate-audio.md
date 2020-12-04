@@ -6,6 +6,9 @@ title: Audio alternativo
 uuid: 86aa5393-6a9e-49db-807b-7299e6b4ab2b
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
@@ -16,19 +19,19 @@ El audio alternativo permite cambiar entre las pistas de audio disponibles para 
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-Cuando TVSDK crea la `MediaPlayerItem` instancia para el vídeo actual, crea un `AudioTrack` elemento para cada pista de audio disponible. El elemento contiene una `name` propiedad, que es una cadena que generalmente contiene una descripción reconocible por el usuario del idioma de esa pista. El elemento también contiene información sobre si se utiliza esa pista de forma predeterminada. Cuando es hora de reproducir el vídeo, puede solicitar una lista de las pistas de audio disponibles, si lo desea, permitir al usuario seleccionar una pista y configurar el vídeo para que se reproduzca con la pista seleccionada.
+Cuando TVSDK crea la instancia `MediaPlayerItem` para el vídeo actual, crea un elemento `AudioTrack` para cada pista de audio disponible. El elemento contiene una propiedad `name`, que es una cadena que generalmente contiene una descripción reconocible por el usuario del idioma de esa pista. El elemento también contiene información sobre si se utiliza esa pista de forma predeterminada. Cuando es hora de reproducir el vídeo, puede solicitar una lista de las pistas de audio disponibles, si lo desea, permitir al usuario seleccionar una pista y configurar el vídeo para que se reproduzca con la pista seleccionada.
 
 >[!TIP]
 >
->Aunque no es habitual, si una pista de audio adicional está disponible después de que TVSDK cree el `MediaPlayerItem`, TVSDK activa un `MediaPlayerItem.AUDIO_TRACK_UPDATED` evento.
+>Aunque no es habitual, si hay disponible una pista de audio adicional después de que TVSDK cree el `MediaPlayerItem`, TVSDK activa un evento `MediaPlayerItem.AUDIO_TRACK_UPDATED`.
 
-## API agregadas {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
+## API añadidas {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
 Se han agregado las siguientes API para admitir audio alternativo:
 
 `hasAlternateAudio`
 
-Si el medio especificado tiene una pista de audio alternativa, distinta de la pista predeterminada, se devuelve esta función booleana `true`. Si no hay una pista de audio alternativa, la función devuelve `false`.
+Si el medio especificado tiene una pista de audio alternativa, distinta de la pista predeterminada, esta función booleana devuelve `true`. Si no hay una pista de audio alternativa, la función devuelve `false`.
 
 ```java
 boolean hasAlternateAudio();
@@ -36,7 +39,7 @@ boolean hasAlternateAudio();
 
 ** `getAudioTracks`**
 
-Esta función devuelve una lista de todas las pistas de audio disponibles en un medio especificado.
+Esta función devuelve la lista de todas las pistas de audio disponibles en un medio especificado.
 
 ```java
 List<AudioTrack> getAudioTracks();
