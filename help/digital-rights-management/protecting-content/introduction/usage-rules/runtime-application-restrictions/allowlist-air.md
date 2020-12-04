@@ -21,4 +21,4 @@ Ejemplo de caso de uso: Utilice esta regla para limitar la reproducción a una a
 
 >[!NOTE]
 >
->Si utiliza Adobe Flash Builder para crear aplicaciones protegidas, debe asegurarse de no implementar la aplicación en modo de depuración. Al implementar una aplicación en modo de depuración, el Flash Builder se anexa `.debug` al ID de aplicación de AIR, lo que hace que la funcionalidad de lista de permitidos en DRM de Primetime se comporte de forma inesperada.
+>Si utiliza Adobe Flash Builder para crear aplicaciones protegidas, debe asegurarse de no implementar la aplicación en modo de depuración. Cuando implementa una aplicación en modo de depuración, el Flash Builder anexa `.debug` al ID de aplicación de AIR, lo que hace que la funcionalidad de lista de permitidos en Primetime DRM se comporte de forma inesperada.
