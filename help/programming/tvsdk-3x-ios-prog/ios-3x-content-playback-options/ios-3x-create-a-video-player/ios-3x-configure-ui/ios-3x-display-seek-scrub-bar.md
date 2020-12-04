@@ -6,11 +6,14 @@ title: Mostrar una barra de búsqueda con la posición actual del tiempo de repr
 uuid: 3a13f4a5-538d-4e7e-ac24-043927f3f2ee
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '88'
+ht-degree: 0%
 
 ---
 
 
-# Mostrar una barra de búsqueda con la posición actual del tiempo de reproducción {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
+# Mostrar una barra de búsqueda con el tiempo de reproducción actual {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
 
 Puede mostrar el tiempo actual y restante del contenido que se está reproduciendo.
 
