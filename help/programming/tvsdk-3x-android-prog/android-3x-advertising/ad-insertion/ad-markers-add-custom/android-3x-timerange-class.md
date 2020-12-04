@@ -6,6 +6,9 @@ title: Clase TimeRange
 uuid: af3ce5e6-44b5-457f-a6e7-aa232defb91e
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '135'
+ht-degree: 0%
 
 ---
 
@@ -16,15 +19,15 @@ Los marcadores de publicidad personalizados le permiten pasar un conjunto de esp
 
 <!--<a id="section_42EB6D62627A424ABA250E3246EFEFC3"></a>-->
 
-Cada `TimeRange` especificación del conjunto representa un segmento en la línea de tiempo de reproducción que TVSDK mantiene internamente y que debe marcarse adecuadamente como un período relacionado con la publicidad.
+Cada especificación `TimeRange` del conjunto representa un segmento en la línea de tiempo de reproducción que TVSDK mantiene internamente y que debe marcarse adecuadamente como un período relacionado con la publicidad.
 
-La `TimeRange` clase es una estructura de datos sencilla que expone la posición inicial y la posición final en la línea de tiempo. Estas dos propiedades de sólo lectura abstraen la idea de un intervalo de tiempo en la línea de tiempo de reproducción.
+La clase `TimeRange` es una estructura de datos sencilla que expone la posición de inicio y la posición final en la línea de tiempo. Estas dos propiedades de sólo lectura abstraen la idea de un intervalo de tiempo en la línea de tiempo de reproducción.
 
 >[!TIP]
 >
 >Ambos valores se expresan en milisegundos.
 
-Este es un resumen de la `TimeRange` clase:
+Este es un resumen de la clase `TimeRange`:
 
 ```java
 public final class TimeRange {
