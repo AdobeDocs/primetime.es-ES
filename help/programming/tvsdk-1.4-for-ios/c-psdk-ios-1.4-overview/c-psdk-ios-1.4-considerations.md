@@ -6,6 +6,9 @@ title: Consideraciones y prácticas recomendadas
 uuid: b37a5710-e811-4c3e-be8c-7c34ee5944e5
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '409'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ Recuerde la siguiente información al utilizar TVSDK:
 * Adobe Primetime no funciona en los simuladores de iOS.
 
    Debe utilizar dispositivos reales para realizar pruebas.
-* La reproducción solo es compatible con el contenido de HTTP Live Streaming (HLS).
+* La reproducción solo se admite para el contenido de HTTP Live Streaming (HLS).
 * El contenido de vídeo principal se puede multiplexar, donde los flujos de vídeo y audio están en la misma representación, o no multiplexados, donde los flujos de audio y vídeo están en representaciones independientes.
 * La API de TVSDK se implementa en Objective-C.
 * La reproducción de vídeo requiere el marco de trabajo nativo de Apple AV Foundation. Esto afecta a cómo y cuándo se puede acceder a los recursos de medios, incluidos los subtítulos cerrados y las líneas de tiempo:
@@ -31,7 +34,7 @@ Recuerde la siguiente información al utilizar TVSDK:
       Por ejemplo, un anuncio no se puede eliminar de la línea de tiempo después de reproducirse. Si el usuario vuelve a buscar en la presentación, el mismo anuncio se reproduce incluso si la política hubiera sido eliminar el anuncio.
    * Según la precisión del codificador, la duración real del medio codificado puede diferir de las duraciones registradas en el manifiesto del recurso de flujo.
 
-      No hay una manera confiable de resincronizar entre la línea de tiempo virtual ideal y la línea de tiempo de reproducción real. El seguimiento del progreso de la reproducción del flujo para la administración de publicidad y Video Analytics debe utilizar el tiempo de reproducción real, por lo que el comportamiento de la interfaz de usuario y los informes puede no rastrear con precisión el contenido de los anuncios y los medios.
+      No hay una manera confiable de resincronizar entre la línea de tiempo virtual ideal y la línea de tiempo de reproducción real. El seguimiento del progreso de la reproducción del flujo para la administración de anuncios y Video Analytics debe utilizar el tiempo de reproducción real, por lo que el comportamiento de la interfaz de usuario y el sistema de informes puede no rastrear con precisión el contenido de los medios y los anuncios.
    * El agente de usuario entrante para todas las solicitudes HTTP de TVSDK en esta plataforma está determinado por el dispositivo y la versión de iOS que se ejecuta en el dispositivo.
 
       El valor de la cadena del agente de usuario es el valor predeterminado que asigna el sistema operativo.
@@ -40,11 +43,11 @@ Recuerde la siguiente información al utilizar TVSDK:
 
 Estas son las prácticas recomendadas para TVSDK:
 
-* Utilice HLS versión 3.0 o superior para el contenido del programa.
+* Utilice HLS versión 3.0 o superior para el contenido de programa.
 * Utilice la herramienta mediastreamvalidator de Apple para validar flujos VOD.
-* La `PTSDKConfig` clase proporciona métodos para aplicar SSL en las solicitudes realizadas a los servidores Primetime y de toma de decisiones, DRM y Video Analytics.
+* La clase `PTSDKConfig` proporciona métodos para aplicar SSL en las solicitudes realizadas a los servidores Primetime y DRM y Video Analytics.
 
-   Para obtener más información, consulte los `forceHTTPS` métodos y `isForcingHTTPS` en esta clase.
+   Para obtener más información, consulte los métodos `forceHTTPS` y `isForcingHTTPS` en esta clase.
 
    >[!IMPORTANT]
    >
