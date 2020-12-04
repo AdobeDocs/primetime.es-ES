@@ -31,7 +31,8 @@ Los siguientes elementos de API son útiles para personalizar la reproducción:
    <td colname="col1"><span class="codeph"> AdvertisingMetadata</span> </td> 
    <td colname="col2">Controle si un salto de publicidad debe marcarse como visto por un visor y, en caso afirmativo, cuándo debe marcarse. Configurar y obtener la directiva observada mediante 
     <pre>
-     la <span class="codeph"> propiedad adBreakAsWatched</span> .
+     el 
+     <span class="codeph"> propiedad adBreakAsWatched</span>.
     </pre> </td> 
   </tr> 
   <tr> 
