@@ -19,10 +19,11 @@ Puede personalizar o anular el comportamiento de la publicidad registrando la in
 
 Para personalizar los comportamientos de las publicidades, realice una de las siguientes acciones:
 
-* Implementar la `AdPolicySelector` interfaz y todos sus métodos.
+* Implementar la interfaz `AdPolicySelector` y todos sus métodos.
 Esta opción se recomienda si necesita anular todos los comportamientos de publicidad predeterminados.
 
-* Amplíe la `DefaultAdPolicySelector` clase y proporcione implementaciones solo para los comportamientos que requieren repetición.
+* Amplíe la clase `DefaultAdPolicySelector` y proporcione implementaciones solo para los comportamientos que requieren
+personalización.
 Esta opción se recomienda si necesita anular solo algunos de los comportamientos predeterminados.
 
 Para ambas opciones, complete las siguientes tareas:
