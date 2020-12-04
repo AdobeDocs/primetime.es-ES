@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Reglas del cortafuegos {#firewall-rules}
+# Reglas de cortafuegos {#firewall-rules}
 
 ## Direcciones URL entrantes {#section-F111526A9DB844CBBF21A3CAE5F50880}
 
@@ -99,7 +99,7 @@ Configure el servidor de seguridad externo de modo que exponga solo las direccio
 
 El servidor de licencias requiere acceso a través del servidor de seguridad para descargar las siguientes CRL desde Adobe:
 
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
-* <span></span>https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
-* <span></span>https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
+* h<span></span>ttps://crl2.adobe.com/Adobe/FlashAccessRootCA.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl
+* ht<span></span>tps://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl
+* ht<span></span>tps://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl
