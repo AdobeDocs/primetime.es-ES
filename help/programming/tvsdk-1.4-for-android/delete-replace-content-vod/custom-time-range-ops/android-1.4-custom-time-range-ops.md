@@ -6,6 +6,9 @@ title: Operaciones de intervalo de tiempo personalizado
 uuid: e04af786-8dac-41a6-8406-f2ca04f612a4
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '405'
+ht-degree: 0%
 
 ---
 
@@ -18,20 +21,26 @@ La función Eliminar y reemplazar amplía la función de marcadores de publicida
 
 La eliminación y sustitución de publicidades se implementan con `TimeRange` elementos que identifican diferentes tipos de intervalos de tiempo en un flujo de VOD: marcar, eliminar y reemplazar. Para cada uno de estos tipos de intervalo de tiempo personalizado, puede realizar las operaciones correspondientes, incluida la eliminación y sustitución del contenido de la publicidad.
 
-Para la eliminación y sustitución de publicidades, TVSDK utiliza los siguientes modos de operación *de intervalo de tiempo* personalizados:
+Para la eliminación y sustitución de publicidades, TVSDK utiliza los siguientes modos *de operación de intervalo de tiempo personalizado*:
 
-* **MARK**(Estos se denominaban marcadores de publicidad personalizados en versiones anteriores de TVSDK). Marcan las horas de inicio y finalización para las publicidades que ya se colocan en el flujo de VOD. Cuando hay marcadores de intervalo de tiempo de tipo MARK en el flujo, `Mode.MARK` se genera y se resuelve una colocación inicial del `CustomAdMarkersContentResolver`. No se insertan publicidades.
+* **MARK**
+(Estos se denominaban marcadores de publicidad personalizados en versiones anteriores de TVSDK). Marcan las horas de inicio y finalización para las publicidades que ya se colocan en el flujo de VOD. Cuando hay marcadores de intervalo de tiempo de tipo MARK en el flujo, se coloca una colocación inicial de 
+`Mode.MARK` es generado y resuelto por el  `CustomAdMarkersContentResolver`. No se insertan publicidades.
 
-* **ELIMINAR** Para ELIMINAR intervalos de tiempo, se crea una inicial `placementInformation` de tipo `Mode.DELETE` y se resuelve con la correspondiente `DeleteContentResolver`. `ContentRemoval` es un nuevo `timelineOperation` que define los intervalos que se eliminarán de la línea de tiempo. TVSDK utiliza `removeByLocalTime` la API de motor de vídeo de Adobe (AVE) para facilitar esa operación. Si hay intervalos ELIMINADOS y metadatos de decisiones de anuncios de Adobe Primetime (anteriormente conocidos como Auditude), los intervalos se eliminan primero y, a continuación, `AuditudeResolver` resuelven las publicidades utilizando el flujo de trabajo normal de decisiones de anuncios de Adobe Primetime.
+* ****
+DELETEFo intervalos de tiempo del DELETE, un 
+`placementInformation` del tipo  `Mode.DELETE` se crea y se resuelve mediante el  `DeleteContentResolver`. `ContentRemoval` es un nuevo  `timelineOperation` que define los intervalos que se eliminarán de la línea de tiempo. TVSDK utiliza `removeByLocalTime` de la API del motor de vídeo de Adobe (AVE) para facilitar esa operación. Si hay rangos de DELETE y metadatos de decisiones de anuncios de Adobe Primetime (anteriormente conocidos como Auditude), primero se eliminan los rangos y, a continuación, `AuditudeResolver` resuelve las publicidades mediante el flujo de trabajo normal de Adobe Primetime y de decisiones de anuncios.
 
-* **REEMPLAZAR** Para los intervalos de tiempo de REEMPLAZO, `placementInformations` se crean dos iniciales, uno `Mode.DELETE` y otro `Mode.REPLACE`. El `DeleteContentResolver` elimina primero los intervalos de tiempo y, a continuación, `AuditudeResolver` inserta anuncios de los especificados `replaceDuration` en la línea de tiempo. Si no `replaceDuration` se especifica ninguno, el servidor determina qué se va a insertar.
+* ****
+REEMPLAZARo REEMPLAZAR intervalos de tiempo, dos 
+`placementInformations` se crean, uno  `Mode.DELETE` y uno  `Mode.REPLACE`. El `DeleteContentResolver` elimina primero los intervalos de tiempo y luego el `AuditudeResolver` inserta publicidades del `replaceDuration` especificado en la línea de tiempo. Si no se especifica `replaceDuration`, el servidor determina qué insertar.
 
 Para admitir estas operaciones de intervalo de tiempo personalizado, TVSDK proporciona lo siguiente:
 
 * Resoluciones de varios contenidos
 
    Un flujo puede tener varios resueltores de contenido en función del modo de señalización de publicidad y los metadatos de anuncio. El comportamiento cambia con diferentes combinaciones de modos de señalización de publicidad y metadatos de publicidad.
-* Varias iniciales `PlacementInformations` El `DefaultMediaPlayer` crea una lista de las iniciales `PlacementInformations` en función del modo de señalización de publicidad y los metadatos de publicidad que el `MediaPlayerClient`resuelva.
+* Varios `PlacementInformations` iniciales El `DefaultMediaPlayer` crea una lista de `PlacementInformations` inicial basada en el modo de señalización de publicidad y los metadatos de publicidad que se resolverán con el `MediaPlayerClient`.
 
 * Nuevo modo de señalización de publicidad: Intervalos de tiempo personalizados
 
