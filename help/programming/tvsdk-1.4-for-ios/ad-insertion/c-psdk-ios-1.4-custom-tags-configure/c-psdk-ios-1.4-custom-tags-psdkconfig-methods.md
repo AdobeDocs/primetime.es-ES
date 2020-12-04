@@ -6,6 +6,9 @@ title: Métodos de clase Config para etiquetas
 uuid: 1d3651a0-3b70-4d3a-8ced-663a9dad7205
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 0%
 
 ---
 
@@ -20,11 +23,11 @@ TVSDK aplica la configuración global automáticamente a cualquier flujo de medi
 
 | **Suscripción a etiquetas personalizadas específicas** |
 |---|
-| `subscribedTags` | Recupera la lista actual de etiquetas suscritas. |
-| `setSubscribedTags` | Establece la lista de etiquetas suscritas que se expondrán a la aplicación. |
+| `subscribedTags` | Recupera la lista actual de las etiquetas suscritas. |
+| `setSubscribedTags` | Establece la lista de las etiquetas suscritas que se expondrán a la aplicación. |
 | **Personalización de las etiquetas de publicidad utilizadas por el detector de oportunidades predeterminado** |
-| `adTags` | Recupera la lista actual de etiquetas de publicidad. |
-| `setAdTags` | Establece la lista de etiquetas de publicidad que usará el generador de oportunidades predeterminado. |
+| `adTags` | Recupera la lista actual de las etiquetas de publicidad. |
+| `setAdTags` | Establece la lista de las etiquetas de publicidad que se utilizarán en el generador de oportunidades predeterminado. |
 
 Recuerde lo siguiente:
 
