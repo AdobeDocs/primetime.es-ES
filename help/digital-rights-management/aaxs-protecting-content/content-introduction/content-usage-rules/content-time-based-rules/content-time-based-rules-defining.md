@@ -11,14 +11,14 @@ ht-degree: 0%
 ---
 
 
-# Definición de reglas basadas en el tiempo {#defining-time-based-rules}
+# Definición de reglas basadas en tiempo {#defining-time-based-rules}
 
-Adobe Access utiliza la &quot;aplicación suave&quot; de las restricciones de licencia basadas en el tiempo. Si un derecho de tiempo caduca durante la reproducción de un vídeo, el comportamiento predeterminado de Adobe Access es no restringir la reproducción hasta la próxima vez que se vuelva a crear el flujo de vídeo (llamando `Netstream.stop()` y `Netstream.play()`).
+Adobe Access utiliza la &quot;aplicación suave&quot; de las restricciones de licencia basadas en el tiempo. Si un derecho de tiempo caduca durante la reproducción de un vídeo, el comportamiento predeterminado de Adobe Access es no restringir la reproducción hasta la próxima vez que se vuelva a crear el flujo de vídeo (llamando a `Netstream.stop()` y `Netstream.play()`).
 
 Aunque la aplicación en pantalla es el comportamiento predeterminado, también puede activar la aplicación en firme realizando una de las siguientes tareas:
 
-* Pida al reproductor de vídeo que sondee periódicamente la licencia para asegurarse de que ninguna de las restricciones de tiempo ha caducado. Esto se puede lograr llamando a `DRMManager.loadVoucher(LOCAL_ONLY).`un código de error que indica que la licencia almacenada localmente ya no es válida.
-* Siempre que el usuario haga clic en el botón Pausa, podrá grabar la marca de tiempo del vídeo actual y, a continuación, llamar `Netstream.stop().`Cuando el usuario haga clic en el botón Reproducir, podrá buscar la ubicación grabada y, a continuación, llamar `Netstream.play()`.
+* Pida al reproductor de vídeo que sondee periódicamente la licencia para asegurarse de que ninguna de las restricciones de tiempo ha caducado. Esto se puede lograr llamando a `DRMManager.loadVoucher(LOCAL_ONLY).`Un código de error indica que la licencia almacenada localmente ya no es válida.
+* Siempre que el usuario haga clic en el botón Pausa, podrá grabar la marca de tiempo del vídeo actual y, a continuación, llamar a `Netstream.stop().`Cuando el usuario haga clic en el botón Reproducir, podrá buscar la ubicación grabada y, a continuación, llamar a `Netstream.play()`.
 
 ## Fecha de inicio {#start-date}
 
@@ -26,7 +26,7 @@ Especifica la fecha después de la cual una licencia es válida.
 
 Ejemplo de caso de uso: Utilice una fecha absoluta para emitir licencias de contenido antes de la fecha de disponibilidad de un recurso o para aplicar un período de &quot;embargo&quot;.
 
-## Fecha final {#end-date}
+## Fecha de finalización {#end-date}
 
 Especifica la fecha después de la cual caduca una licencia.
 
@@ -64,4 +64,4 @@ El comportamiento de sincronización se define con los siguientes parámetros:
 
 >[!NOTE]
 >
->Esta regla de uso es compatible con los clientes de Adobe Access versión 3.0 y posterior. El comportamiento de los clientes más antiguos depende de la versión mínima del cliente admitida por el servidor de licencias. Consulte Versión [mínima del cliente](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
+>Esta regla de uso es compatible con los clientes de Adobe Access versión 3.0 y posterior. El comportamiento de los clientes más antiguos depende de la versión mínima del cliente admitida por el servidor de licencias. Consulte, [Versión mínima del cliente](../../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
