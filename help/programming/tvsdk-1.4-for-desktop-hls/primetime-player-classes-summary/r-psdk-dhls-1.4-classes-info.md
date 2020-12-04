@@ -6,6 +6,9 @@ title: Clases de información
 uuid: 491ea40b-5a8d-4b6a-b369-a8848c6bd9b6
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '233'
+ht-degree: 0%
 
 ---
 
