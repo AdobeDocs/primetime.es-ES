@@ -13,22 +13,22 @@ ht-degree: 0%
 ---
 
 
-# Control del estilo de los subtítulos opcionales {#control-closed-caption-styling}
+# Control del estilo de subtítulos optativos {#control-closed-caption-styling}
 
 Puede proporcionar información de estilo para las pistas de subtítulos opcionales mediante la clase TextFormat, que establece el estilo de los subtítulos cerrados que muestra el reproductor.
 
 Esta clase encapsula información de estilo de subtítulos opcionales, como el tipo de fuente, el tamaño, el color y la opacidad de fondo.
 
-## Definición de estilos de subtítulos opcionales {#section_C9B5E75C70DD42E59DC4DD0F308C8216}
+## Establecer estilos de subtítulos opcionales {#section_C9B5E75C70DD42E59DC4DD0F308C8216}
 
 Puede aplicar estilo al texto de subtítulos opcionales con métodos TVSDK.
 
-1. Espere a que el reproductor de medios tenga al menos el `PREPARED` estado.
-1. Cree una `TextFormatBuilder` instancia.
+1. Espere a que el reproductor de medios esté al menos en el estado `PREPARED`.
+1. Cree una instancia `TextFormatBuilder`.
 
    Puede proporcionar todos los parámetros de estilo de subtítulos opcionales ahora o establecerlos más tarde.
 
-   TVSDK encapsula información de estilo de subtítulos opcionales en la `TextFormat` interfaz. La `TextFormatBuilder` clase crea objetos que implementan esta interfaz.
+   TVSDK encapsula información de estilo de subtítulos opcionales en la interfaz `TextFormat`. La clase `TextFormatBuilder` crea objetos que implementan esta interfaz.
 
    ```java
    public TextFormatBuilder( 
@@ -46,16 +46,16 @@ Puede aplicar estilo al texto de subtítulos opcionales con métodos TVSDK.
       java.lang.String safeArea)
    ```
 
-1. Para obtener una referencia a un objeto que implementa la `TextFormat` interfaz, llame al método `TextFormatBuilder.toTextFormat` public.
+1. Para obtener una referencia a un objeto que implementa la interfaz `TextFormat`, llame al método público `TextFormatBuilder.toTextFormat`.
 
-   Esto devuelve un `TextFormat` objeto que se puede aplicar al reproductor de medios.
+   Esto devuelve un objeto `TextFormat` que se puede aplicar al reproductor de medios.
 
    `public TextFormat toTextFormat()`
 
 
 1. Opcionalmente, obtenga la configuración actual del estilo de subtítulos opcionales realizando una de las siguientes acciones:
 
-   * Obtener todos los ajustes de estilo con `MediaPlayer.getCCStyle` El valor devuelto es una instancia de la `TextFormat` interfaz.
+   * Obtenga todos los ajustes de estilo con `MediaPlayer.getCCStyle` El valor devuelto es una instancia de la interfaz `TextFormat`.
 
       ```java
       /** 
@@ -67,7 +67,7 @@ Puede aplicar estilo al texto de subtítulos opcionales con métodos TVSDK.
       public TextFormat getCCStyle() throws MediaPlayerException;
       ```
 
-   * Obtenga la configuración de uno en uno a través de los métodos de captador de `TextFormat` interfaz.
+   * Obtenga la configuración de uno en uno a través de los métodos de captador de la interfaz `TextFormat`.
 
       ```java
       public java.lang.String getFontColor(); 
@@ -85,7 +85,7 @@ Puede aplicar estilo al texto de subtítulos opcionales con métodos TVSDK.
 
 1. Para cambiar la configuración de estilo, realice una de las siguientes acciones:
 
-   * Utilice el método setter `MediaPlayer.setCCStyle`, pasando una instancia de la `TextFormat` interfaz:
+   * Utilice el método setter `MediaPlayer.setCCStyle`, pasando una instancia de la interfaz `TextFormat`:
 
       ```java
       /** 
@@ -101,9 +101,9 @@ Puede aplicar estilo al texto de subtítulos opcionales con métodos TVSDK.
       public void setCCStyle(TextFormat textFormat) throws MediaPlayerException;
       ```
 
-   * Utilice la `TextFormatBuilder` clase, que define métodos de establecedor individuales.
+   * Utilice la clase `TextFormatBuilder`, que define métodos de establecedor individuales.
 
-      La `TextFormat` interfaz define un objeto inmutable, por lo que solo hay métodos de captador y no hay definidores. Los parámetros de estilo de subtítulos opcionales solo se pueden definir con la `TextFormatBuilder` clase:
+      La interfaz `TextFormat` define un objeto inmutable, por lo que solo hay métodos de captador y no hay definidores. Los parámetros de estilo de subtítulos opcionales solo se pueden definir con la clase `TextFormatBuilder`:
 
       ```java
       // set font type 
@@ -128,7 +128,7 @@ Puede aplicar estilo al texto de subtítulos opcionales con métodos TVSDK.
 
       >[!IMPORTANT]
       >
-      >**Configuración de color:** En Android TVSDK 2.X, se ha mejorado el estilo de color de los subtítulos opcionales. La mejora permite definir colores de subtítulos cerrados mediante una cadena hexadecimal que representa valores de color RGB. La representación de color RGB hexadecimal es la cadena de 6 bytes que se utiliza en aplicaciones como Photoshop:
+      >**Configuración de color:** en Android TVSDK 2.X, se ha mejorado el estilo de color de los subtítulos opcionales. La mejora permite definir colores de subtítulos cerrados mediante una cadena hexadecimal que representa valores de color RGB. La representación de color RGB hexadecimal es la cadena de 6 bytes que se utiliza en aplicaciones como Photoshop:
       >
       >* FFFFFF = negro
       >* 000000 = Blanco
@@ -138,7 +138,7 @@ Puede aplicar estilo al texto de subtítulos opcionales con métodos TVSDK.
          >y así sucesivamente.
 
       >
-      >En la aplicación, cada vez que se pasa información de estilo de color a `TextFormatBuilder`, se sigue utilizando la `Color` lista desglosada como antes, pero ahora se debe agregar `getValue()` al color para obtener el valor como una cadena. Por ejemplo:
+      >En la aplicación, siempre que pase información de estilo de color a `TextFormatBuilder`, seguirá utilizando la lista desglosada `Color` como antes, pero ahora debe agregar `getValue()` al color para obtener el valor como una cadena. Por ejemplo:
       >
       >`tfb = tfb.setBackgroundColor(TextFormat.Color.RED      <b>.getValue()</b>);`
 
@@ -180,25 +180,25 @@ public TextFormatBuilder(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Fuente </td> 
-   <td colname="2"> <p>Tipo de fuente. </p> <p>Solo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Font </span> y que represente, por ejemplo, un solo espacio con o sin serifs. </p> <p>Sugerencia:  Las fuentes disponibles en un dispositivo pueden variar y se utilizan sustituciones cuando es necesario. Monospace con serifs se utiliza generalmente como sustituto, aunque esta sustitución puede ser específica del sistema. </p> </td> 
+   <td colname="2"> <p>Tipo de fuente. </p> <p>Sólo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Font </span> y que represente, por ejemplo, un solo espacio con o sin serifs. </p> <p>Sugerencia:  Las fuentes disponibles en un dispositivo pueden variar y se utilizan sustituciones cuando es necesario. Monospace con serifs se utiliza generalmente como sustituto, aunque esta sustitución puede ser específica del sistema. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Tamaño </td> 
-   <td colname="2"> <p>Tamaño del rótulo. </p> <p> Solo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Size </span> : 
+   <td colname="2"> <p>Tamaño del rótulo. </p> <p> Sólo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Size </span>: 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIO </span> - Tamaño estándar </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE </span> - Aproximadamente 30% mayor que medio </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PEQUEÑO </span> - Aproximadamente un 30% menor que medio </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PREDETERMINADO </span> : el tamaño predeterminado del rótulo; igual que medium </li> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIO  </span> - Tamaño estándar </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE  </span> - Aproximadamente 30% mayor que medio </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PEQUEÑO  </span> - Aproximadamente un 30% menor que medio </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PREDETERMINADO  </span> - El tamaño predeterminado del rótulo; igual que medium </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Borde de fuente </td> 
-   <td colname="2"> <p>Efecto utilizado para el borde de la fuente, como elevado o ninguno. </p> <p>Solo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.FontEdge </span> . </p> </td> 
+   <td colname="2"> <p>Efecto utilizado para el borde de la fuente, como elevado o ninguno. </p> <p>Solo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.FontEdge </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Color de fuente </td> 
-   <td colname="2"> <p>Color de fuente. </p> <p>Solo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Color </span> . </p> </td> 
+   <td colname="2"> <p>Color de fuente. </p> <p>Sólo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Color </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Color de borde </td> 
@@ -214,15 +214,15 @@ public TextFormatBuilder(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacidad de fuente </td> 
-   <td colname="2"> <p>La opacidad del texto. </p> <p>Expresado como porcentaje de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY </span> para la fuente es 100. </p> </td> 
+   <td colname="2"> <p>La opacidad del texto. </p> <p>Expresado como porcentaje de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> para la fuente es 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacidad del fondo </td> 
-   <td colname="2"> <p>La opacidad de la celda de caracteres de fondo. </p> <p>Expresado como porcentaje de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY </span> para el fondo es 100. </p> </td> 
+   <td colname="2"> <p>La opacidad de la celda de caracteres de fondo. </p> <p>Expresado como porcentaje de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> para el fondo es 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacidad de relleno </td> 
-   <td colname="2"> <p>La opacidad del fondo de la ventana de rótulo. </p> <p>Expresado como porcentaje de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY </span> para relleno es 0. </p> </td> 
+   <td colname="2"> <p>La opacidad del fondo de la ventana de rótulo. </p> <p>Expresado como porcentaje de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> para relleno es 0. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Margen inferior </td> 
@@ -235,7 +235,7 @@ public TextFormatBuilder(
  </tbody> 
 </table>
 
-## Ejemplos de formato de rótulos {#section_58E8E82494EC4683B010FFDE67485CF9}
+## Ejemplos de formato de rótulo {#section_58E8E82494EC4683B010FFDE67485CF9}
 
 Estos son algunos ejemplos que muestran cómo especificar el formato de los subtítulos opcionales.
 
