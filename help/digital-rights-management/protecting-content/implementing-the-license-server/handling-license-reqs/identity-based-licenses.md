@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Si se utiliza la licencia basada en la identidad, el servidor comprueba si hay un autentificador válido antes de emitir una licencia.
 
-Consulte Autenticación [de usuarios](../../../protecting-content/implementing-the-license-server/processing-drm-requests.md#user-authentication) para obtener más información sobre la administración de tokens de autenticación.
+Consulte [Autenticación de usuario](../../../protecting-content/implementing-the-license-server/processing-drm-requests.md#user-authentication) para obtener más información sobre la administración de tokens de autenticación.
 
 >[!NOTE]
 >
