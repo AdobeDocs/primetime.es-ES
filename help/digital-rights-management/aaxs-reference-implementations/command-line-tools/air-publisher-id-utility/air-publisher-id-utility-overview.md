@@ -17,4 +17,4 @@ Como parte del proceso de creación de un archivo de AIR, AIR Developer Tool (AD
 
 >[!NOTE]
 >
->El ID de editor, utilizado para la aplicación de listas de permitidos de AIR, no es el mismo que el ID de editor especificado por el editor de la aplicación en el [!DNL application.xml] archivo de la aplicación.
+>El ID de editor, utilizado para la aplicación de listas de permitidos de AIR, no es el mismo que el ID de editor especificado por el editor de la aplicación en el archivo [!DNL application.xml] de la aplicación.
