@@ -6,6 +6,9 @@ title: Trabajar con cookies
 uuid: 618bc59a-032d-445e-a867-ed2bf260570d
 translation-type: tm+mt
 source-git-commit: 5ada8632a7a5e3cb5d795dc42110844244656095
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
@@ -45,9 +48,9 @@ Para trabajar con cookies:
    >
    >Cuando se habilita la redirección 302, la solicitud de publicidad puede redirigirse a un dominio diferente del dominio al que pertenece la cookie.
 
-   TVSDK lo consulta `cookieManager` en tiempo de ejecución, comprueba si hay cookies asociadas con la dirección URL y las utiliza automáticamente.
+   TVSDK consulta esto `cookieManager` en tiempo de ejecución, comprueba si hay cookies asociadas con la dirección URL y las utiliza automáticamente.
 
-   Si es necesario actualizar las cookies en la aplicación durante la reproducción, no utilice `networkConfiguration.setCookieHeaders` la API, ya que la actualización se producirá en el almacén de cookies de JAVA.
+   Si es necesario actualizar las cookies en la aplicación durante la reproducción, no utilice la API `networkConfiguration.setCookieHeaders`, ya que la actualización se producirá en el almacén de cookies de JAVA.
 
    `networkConfiguration.setCookieHeaders` La API establece las cookies en C++ CookieStore de TVSDK.
 
@@ -60,7 +63,7 @@ Para trabajar con cookies:
    Si es necesario actualizar un valor de cookie más tarde durante la reproducción, llame al mismo método de adición de CookieStore con la misma clave y un nuevo campo de valor.
 
    También se configura
-   `networkConfiguration.setReadSetCookieHeader`(false)antes de llamar
+   `networkConfiguration.setReadSetCookieHeader`(false) antes de llamar
    `config.setNetworkConfiguration(networkConfiguration)`
 
    >[!NOTE]
