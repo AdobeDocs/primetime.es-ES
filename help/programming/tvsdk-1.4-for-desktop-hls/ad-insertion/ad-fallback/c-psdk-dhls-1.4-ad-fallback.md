@@ -6,6 +6,9 @@ title: Devolución de anuncios para anuncios VAST y VMAP
 uuid: 7b44abf9-50cf-4e39-b594-ceb52208a865
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '602'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +17,11 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
 
 Para las publicidades (o elementos creativos) de plantilla de servicio de publicidad de vídeo digital (VAST) que tienen habilitada la regla de reserva, TVSDK trata a una publicidad con un tipo de medio no válido como una publicidad vacía e intenta utilizar las publicidades de reserva en su lugar. Puede configurar algunos aspectos del comportamiento de reserva.
 
-La especificación VAST/Digital Video Multiple Ad Playlist (VMAP) establece que para las publicidades en las que está habilitada la opción de reserva VAST, las publicidades vacías activan automáticamente el uso de las publicidades de reserva. Cuando un anuncio VAST está vacío, TVSDK busca un reemplazo válido de tipo de medio HLS entre las publicidades de reserva. Cuando un anuncio VAST en un contenedor tiene un tipo de medio no válido, TVSDK lo considera vacío. Puede configurar si TVSDK debe hacer lo mismo con las publicidades en línea en un VMAP. Para obtener más información sobre la función VAST `fallbackOnNoAd` , consulte Plantilla de servicio de publicidad de vídeo [digital (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
+La especificación VAST/Digital Video Multiple Ad Playlist (VMAP) establece que para las publicidades en las que está habilitada la opción de reserva VAST, las publicidades vacías activan automáticamente el uso de las publicidades de reserva. Cuando un anuncio VAST está vacío, TVSDK busca un reemplazo válido de tipo de medio HLS entre las publicidades de reserva. Cuando un anuncio VAST en un contenedor tiene un tipo de medio no válido, TVSDK lo considera vacío. Puede configurar si TVSDK debe hacer lo mismo con las publicidades en línea en un VMAP. Para obtener más información sobre la función VAST `fallbackOnNoAd`, consulte [Plantilla de servicio de publicidad de vídeo digital (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
 
-El servidor Primetime y de inserción mantiene un conjunto de prioridades para permitirle elegir entre diferentes tipos de medios en la misma respuesta VAST/VMAP. Puede obtener más información sobre esta lista de prioridades y cómo cambiarla en [Información general de CRS](../../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
+El servidor Primetime y de inserción mantiene un conjunto de prioridades para permitirle elegir entre diferentes tipos de medios en la misma respuesta VAST/VMAP. Puede obtener más información sobre esta lista prioritaria y cómo cambiarla en [Información general de CRS](../../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
-## Definir el comportamiento de las publicidades de reserva para las publicidades en línea de VMAP {#define-fallback-ad-behavior-for-vmap-inline-ads}
+## Defina el comportamiento de las publicidades de reserva para las publicidades en línea de VMAP {#define-fallback-ad-behavior-for-vmap-inline-ads}
 
 Puede activar la opción de reserva cuando una publicidad en línea VMAP contenga un tipo de medio no válido.
 
