@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Funciones de dispositivo necesarias para reproducir contenido protegido {#device-capabilities-required-to-play-protected-content}
+# Capacidades del dispositivo requeridas para reproducir contenido protegido {#device-capabilities-required-to-play-protected-content}
 
 Especifica las capacidades de hardware necesarias para acceder al contenido. La información sobre las capacidades de hardware está disponible para dispositivos que utilizan el kit de portación.
 
@@ -42,5 +42,5 @@ Las capacidades del dispositivo pueden identificarse mediante los atributos espe
 
 >[!NOTE]
 >
->Esta regla de uso es compatible con los clientes de Adobe Access versión 2.0.2 y posterior. El comportamiento de los clientes más antiguos depende de la versión mínima del cliente admitida por el servidor de licencias. Consulte Versión [mínima del cliente](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md).
+>Esta regla de uso es compatible con los clientes de Adobe Access versión 2.0.2 y posterior. El comportamiento de los clientes más antiguos depende de la versión mínima del cliente admitida por el servidor de licencias. Consulte, [Versión mínima del cliente](../../../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md).
 
