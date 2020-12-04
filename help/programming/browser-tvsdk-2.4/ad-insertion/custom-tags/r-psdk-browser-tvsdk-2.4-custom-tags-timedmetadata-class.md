@@ -6,6 +6,9 @@ title: Clase de metadatos temporizados
 uuid: 3f276618-5f61-4b41-bd2d-78e7f32178d9
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Cuando el SDK del explorador detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta procesar automáticamente la etiqueta y exponerla como un objeto TimedMetadata.
 
-La `TimedMetadata` clase proporciona los siguientes elementos:
+La clase `TimedMetadata` proporciona los siguientes elementos:
 
 <table id="table_5827A0626EDC45F68DC3E7644F3EFF69"> 
  <thead> 
@@ -37,7 +40,7 @@ La `TimedMetadata` clase proporciona los siguientes elementos:
   <tr> 
    <td colname="col1"> <p>time </p> </td> 
    <td colname="col02"> <p>Número </p> </td> 
-   <td colname="col2"> <p>La posición de tiempo local (milisegundos) en relación con el inicio del contenido principal donde están presentes los metadatos temporizados en el flujo. </p> </td> 
+   <td colname="col2"> <p>La posición de tiempo local (milisegundos) en relación con el inicio del contenido principal en el que están presentes los metadatos temporizados en el flujo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>id </p> </td> 
@@ -52,7 +55,7 @@ La `TimedMetadata` clase proporciona los siguientes elementos:
   <tr> 
    <td colname="col1"> <p>content </p> </td> 
    <td colname="col02"> <p>Cadena </p> </td> 
-   <td colname="col2"> <p>El contenido sin procesar de los metadatos temporizados. </p> <p>Si el tipo es TAG, el valor representa la lista completa de atributos de la etiqueta/cue. Si el tipo id3, el valor es nulo. </p> </td> 
+   <td colname="col2"> <p>El contenido sin procesar de los metadatos temporizados. </p> <p>Si el tipo es TAG, el valor representa la lista completa del atributo de la etiqueta/cue. Si el tipo id3, el valor es nulo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>metadatos </p> </td> 
