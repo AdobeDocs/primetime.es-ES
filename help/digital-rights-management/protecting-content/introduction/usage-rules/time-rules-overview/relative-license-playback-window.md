@@ -4,6 +4,9 @@ title: Ventana de reproducción
 uuid: a06a1e28-8f14-4231-bb88-61aa7e33cace
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '138'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ La ventana de reproducción especifica la duración durante la que una licencia 
 
 Ejemplo de caso de uso: Algunos modelos empresariales permiten un período de alquiler de 30 días, pero, una vez que comienza la reproducción, la reproducción debe completarse en 48 horas. En este caso, la duración de 48 horas de la licencia es la ventana de reproducción.
 
-**A partir de la versión 5.3 hacia adelante** : la ventana de reproducción también admite la opción de activar o desactivar la opción Parada dura, que indica si el contexto de descifrado para la reproducción debe detenerse al finalizar la ventana de reproducción (activado) o continuar a pesar de la caducidad (deshabilitado).
+**A partir de la versión 5.3 hacia adelante** : la ventana de reproducción también admite la opción de activar o desactivar Parada dura, que indica si el contexto de descifrado para la reproducción debe detenerse al finalizar la ventana de reproducción (activado) o continuar a pesar de la caducidad (deshabilitado).
 
 >[!NOTE]
 >
