@@ -29,27 +29,27 @@ La clase proporciona los siguientes elementos:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> id </span> </td> 
+   <td colname="col1"> <span class="codeph"> id  </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> Identificador único de los metadatos temporizados. Normalmente, este valor se extrae del atributo cue/tag ID. De lo contrario, se proporciona un valor aleatorio único. Use <span class="codeph"> getId </span>. </td> 
+   <td colname="col2"> Identificador único de los metadatos temporizados. Normalmente, este valor se extrae del atributo cue/tag ID. De lo contrario, se proporciona un valor aleatorio único. Utilice <span class="codeph"> getId </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> metadatos </span> </td> 
+   <td colname="col1"> <span class="codeph"> metadatos  </span> </td> 
    <td colname="col02"> Metadatos </td> 
    <td colname="col2"> La información procesada/extraída de la etiqueta personalizada de lista de reproducción/manifiesto. Utilice <span class="codeph"> getMetadata </span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <span class="codeph"> name </span> </td> 
    <td colname="col02"> Cadena </td> 
-   <td colname="col2"> Nombre de los metadatos temporizados. Si el tipo es <span class="codeph"> TAG </span>, el valor representa el nombre del cue/etiqueta. Si el tipo es <span class="codeph"> ID3 </span>, es nulo. Use <span class="codeph"> getName </span>. </td> 
+   <td colname="col2"> Nombre de los metadatos temporizados. Si el tipo es <span class="codeph"> TAG </span>, el valor representa el nombre del cue/etiqueta. Si el tipo es <span class="codeph"> ID3 </span>, es nulo. Utilice <span class="codeph"> getName </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> time </span> </td> 
+   <td colname="col1"> <span class="codeph"> time  </span> </td> 
    <td colname="col02"> long </td> 
-   <td colname="col2"> La posición de tiempo, en milisegundos, en relación con el inicio del contenido principal en el que están presentes los metadatos temporizados en el flujo. Usa <span class="codeph"> getTime </span>. </td> 
+   <td colname="col2"> La posición de tiempo, en milisegundos, en relación con el inicio del contenido principal en el que están presentes los metadatos temporizados en el flujo. Utilice <span class="codeph"> getTime </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> type </span> </td> 
+   <td colname="col1"> <span class="codeph"> type  </span> </td> 
    <td colname="col02"> Tipo </td> 
    <td colname="col2"> Tipo de metadatos temporizados. Utilice <span class="codeph"> getType </span>. 
     <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
