@@ -6,11 +6,14 @@ title: Rastrear la publicidad del cliente
 uuid: 1c239ddf-3414-49b9-83ae-dcfcb0c4e283
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '61'
+ht-degree: 0%
 
 ---
 
 
-# Rastrear la publicidad del cliente {#track-client-ad}
+# Rastrear publicidad de cliente {#track-client-ad}
 
 TVSDK rastrea automáticamente las publicidades para VOD y flujo en directo/lineal.
 
