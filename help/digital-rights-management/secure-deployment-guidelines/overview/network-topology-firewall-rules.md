@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Reglas del cortafuegos {#firewall-rules}
+# Reglas de cortafuegos {#firewall-rules}
 
 Al determinar las reglas del cortafuegos, tenga en cuenta los siguientes tipos de direcciones URL:
 
