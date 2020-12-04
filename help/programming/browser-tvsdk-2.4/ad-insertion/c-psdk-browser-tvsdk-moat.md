@@ -6,17 +6,20 @@ title: Medición de anuncios de Moat
 uuid: a29c1e74-df15-47d2-9bd6-1d366c5cdf37
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '212'
+ht-degree: 0%
 
 ---
 
 
-# Medición de anuncios de Moat {#ad-measurement-from-moat}
+# Medición de publicidad de Moat {#ad-measurement-from-moat}
 
 TVSDK toma información de FreeWheel y otros servidores de publicidad que proporcionan respuestas VAST. FreeWheel proporciona, dentro de las respuestas VAST, información del servicio Moat. El servicio Moat cuenta e impresiones con una precisión que muestra mejor que los creativos captan o descuidan los intereses de una audiencia.
 
 Moat es un servicio que mide la visualización de anuncios en muchos usos, desde exploradores hasta aplicaciones. Moat genera datos de análisis de marketing en tiempo real en varias plataformas.
 
-El XML de respuesta VAST tiene una propiedad y un elemento que el código puede leer, la propiedad de identificación de publicidad más externa y el elemento de extensión más externo. De cualquier forma, el código puede utilizar TVSDK para guardar la información de identificación de publicidad y la información de extensión y organizar la información en una estructura de árbol. Con esta organización, el código puede recoger los datos de cualquier nivel y pasarlos a donde sea necesario. El valor de la propiedad de identificación de publicidad externa permite que el código coordine la información de la campaña asociada.
+El XML de respuesta VAST tiene una propiedad y un elemento que el código puede leer, la propiedad de identificación de publicidad más externa y el elemento de extensión más externo. De cualquier forma, el código puede utilizar TVSDK para guardar la información de identificación de publicidad y la información de extensión y organizar la información en una estructura de árbol. Con esta organización, el código puede recoger los datos de cualquier nivel y pasarlos a donde sea necesario. El valor de la propiedad de identificación de publicidad externa permite que el código coordine la información desde la campaña asociada.
 
 Por ejemplo, FreeWheel puede devolver datos en un elemento Extensions. A continuación se muestra un elemento de muestra.
 
