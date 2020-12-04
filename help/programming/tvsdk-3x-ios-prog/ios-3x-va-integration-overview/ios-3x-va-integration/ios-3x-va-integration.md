@@ -1,20 +1,23 @@
 ---
-description: Puede realizar el seguimiento del uso de vídeo mediante la integración de TVSDK con Adobe Analytics.
-seo-description: Puede realizar el seguimiento del uso de vídeo mediante la integración de TVSDK con Adobe Analytics.
+description: Puede realizar el seguimiento del uso del vídeo integrando TVSDK con Adobe Analytics.
+seo-description: Puede realizar el seguimiento del uso del vídeo integrando TVSDK con Adobe Analytics.
 seo-title: Integración de análisis de vídeo
 title: Integración de análisis de vídeo
 uuid: 275d2c88-a15c-4645-9234-f29d32fc4a63
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '142'
+ht-degree: 0%
 
 ---
 
 
 # Integración de análisis de vídeo {#video-analytics-integration}
 
-Puede realizar el seguimiento del uso de vídeo mediante la integración de TVSDK con Adobe Analytics.
+Puede realizar el seguimiento del uso del vídeo integrando TVSDK con Adobe Analytics.
 
-El seguimiento de vídeo en TVSDK utiliza el servicio Video Essentials **de** Adobe Analytics, que proporciona métricas de participación en vídeo, como vistas de vídeo, vídeos completos, impresiones de publicidad, tiempo invertido en vídeo, etc. Para obtener más información sobre este servicio, póngase en contacto con su representante de Adobe.
+El seguimiento de vídeo en TVSDK utiliza el servicio **Adobe Analytics Video Essentials**, que proporciona métricas de participación en vídeo, como vistas de vídeo, vídeos completos, impresiones de publicidad, tiempo invertido en vídeo, etc. Para obtener más información sobre este servicio, póngase en contacto con su representante de Adobe.
 
 El siguiente procedimiento resume los pasos para activar el seguimiento de videos en el reproductor:
 
@@ -27,4 +30,4 @@ El siguiente procedimiento resume los pasos para activar el seguimiento de video
    * Objeto de metadatos global
    * Objeto de rastreador de análisis de vídeo
 
-1. Configure informes de análisis de vídeo en el servidor mediante las herramientas de administración de Adobe Analytics.
+1. Configure el sistema de informes de análisis de vídeo en el servidor mediante las herramientas de administración de Adobe Analytics.
