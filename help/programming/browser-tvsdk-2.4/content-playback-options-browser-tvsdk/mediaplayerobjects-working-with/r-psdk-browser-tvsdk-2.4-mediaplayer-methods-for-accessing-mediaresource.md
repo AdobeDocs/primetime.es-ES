@@ -28,50 +28,51 @@ Los métodos de la clase MediaPlayerItem permiten obtener información sobre el 
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Flujo en vivo </td> 
-   <td colname="2"> <span class="codeph"> live </span> </td> 
+   <td colname="2"> <span class="codeph"> live  </span> </td> 
    <td colname="3"> True si el flujo está activo; false si es VOD. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Subtítulos opcionales </td> 
-   <td colname="2"> <span class="codeph"> hasClosedCaptions </span> </td> 
+   <td colname="2"> <span class="codeph"> hasClosedCaptions  </span> </td> 
    <td colname="3"> True si hay pistas de subtítulos opcionales disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> closedCaptionsTracks </span> </td> 
+   <td colname="2"> <span class="codeph"> closedCaptionsTracks  </span> </td> 
    <td colname="3"> Proporciona una lista de las pistas de subtítulos opcionales disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack </span> </td> 
-   <td colname="3"> Recupera el seguimiento de subtítulos opcionales seleccionado con <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
+   <td colname="2"> <span class="codeph"> selectedClosedCaptionsTrack  </span> </td> 
+   <td colname="3"> Recupera la pista de subtítulos cerrados seleccionada con <span class="codeph"> selectClosedCaptionsTrack </span>. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="2"> Audio alternativo </td> 
-   <td colname="2"> <span class="codeph"> hasAlternateAudio </span> </td> 
+   <td colname="2"> <span class="codeph"> hasAlternateAudio  </span> </td> 
    <td colname="3"> <p>True si el flujo tiene pistas de audio alternativas. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> audioTracks </span> </td> 
+   <td colname="2"> <span class="codeph"> audioTracks  </span> </td> 
    <td colname="3"> Proporciona una lista de las pistas de audio alternativas disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectedAudioTrack </span> </td> 
+   <td colname="2"> <span class="codeph"> selectedAudioTrack  </span> </td> 
    <td colname="3"> 
     <pre>
-      Recupera la pista de audio seleccionada actualmente con <span class="codeph"> selectAudioTrack </span>. 
+      Recupera la pista de audio seleccionada actualmente con 
+     <span class="codeph"> selectAudioTrack </span>. 
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Metadatos temporizados </td> 
-   <td colname="2"> <span class="codeph"> hasTimedMetadata </span> </td> 
+   <td colname="2"> <span class="codeph"> hasTimedMetadata  </span> </td> 
    <td colname="3"> True si el flujo tiene metadatos temporizados asociados. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> timedMetadata </span> </td> 
+   <td colname="2"> <span class="codeph"> timedMetadata  </span> </td> 
    <td colname="3"> Proporciona una lista de los objetos de metadatos temporizados asociados al flujo. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"> Varios perfiles (velocidades de bits) </td> 
-   <td colname="2" morerows="1"> <span class="codeph"> perfiles </span> </td> 
+   <td colname="2" morerows="1"> <span class="codeph"> perfiles  </span> </td> 
    <td colname="3"> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -79,7 +80,7 @@ Los métodos de la clase MediaPlayerItem permiten obtener información sobre el 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Recurso multimedia </td> 
-   <td colname="2"> <span class="codeph"> recurso </span> </td> 
+   <td colname="2"> <span class="codeph"> recurso  </span> </td> 
    <td colname="3"> Devuelve el recurso de medios asociado a este elemento. </td> 
   </tr> 
  </tbody> 
