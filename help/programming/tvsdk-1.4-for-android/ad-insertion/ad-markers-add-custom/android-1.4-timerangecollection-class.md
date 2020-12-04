@@ -6,6 +6,9 @@ title: Clase TimeRangeCollection
 uuid: 5705dc9d-4325-44b0-b5aa-196d09c3a67e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '124'
+ht-degree: 0%
 
 ---
 
@@ -32,4 +35,4 @@ public final class TimeRangeCollection {
 }
 ```
 
-El `type` parámetro, que es el primer parámetro posicional en la firma de los métodos constructores, es una instancia de la `TimeRangeCollection#Type` enumeración. Esto es parte de la `TimeRangeCollection` clase. Los valores definidos actualmente por esta enumeración son `MARK_RANGES`, `DELETE_RANGES`y `REPLACE_RANGES`. Puede crear `TimeRangeCollection` objetos utilizando estos tres tipos.
+El parámetro `type`, que es el primer parámetro posicional en la firma de los métodos constructores, es una instancia de la lista desglosada `TimeRangeCollection#Type`. Forma parte de la clase `TimeRangeCollection`. Los valores definidos actualmente por esta lista desglosada son `MARK_RANGES`, `DELETE_RANGES` y `REPLACE_RANGES`. Puede crear objetos `TimeRangeCollection` utilizando estos tres tipos.
