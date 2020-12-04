@@ -14,7 +14,7 @@ ht-degree: 0%
 
 El proceso para configurar Primetime Ad Insertion es el siguiente:
 
-1. Integre el servidor de publicidad en el Ad Insertion Primetime iniciando sesión en la consola del Ad Insertion Primetime y configurando las reglas de redirección. Para obtener más información, consulte [Integración del servidor](integrate-ad-server.md)de publicidad.
+1. Integre el servidor de publicidad en el Ad Insertion Primetime iniciando sesión en la consola del Ad Insertion Primetime y configurando las reglas de redirección. Para obtener más información, consulte [Integración del servidor de publicidad](integrate-ad-server.md).
 
 1. Configure canales o plataformas en la consola Ad Insertion Primetime para garantizar unas dimensiones de sistema de informes adecuadas.
 
@@ -22,7 +22,7 @@ El proceso para configurar Primetime Ad Insertion es el siguiente:
 
 1. Determinar si el reempaquetado de anuncios justo a tiempo es necesario para el flujo de trabajo de la publicidad. Póngase en contacto con el representante de asistencia técnica de Primetime para habilitar el servicio.
 
-1. Actualice la aplicación para que utilice la API [de](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) Bootstrap para realizar y recibir solicitudes para Primetime Ad Insertion, y configure la aplicación para que sea compatible. Para obtener más información, consulte Seguimiento [de publicidad](set-up-ad-tracking.md).
+1. Actualice la aplicación para utilizar la [API de Bootstrap](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) para realizar y recibir solicitudes para Primetime Ad Insertion y configure la aplicación para que sea compatible. Para obtener más información, consulte [Seguimiento de publicidad](set-up-ad-tracking.md).
 
 1. Pruebe la aplicación para garantizar una reproducción correcta de la publicidad. <!-- using the [Debugging tools](troubleshoot-and-debug.md).-->
 
