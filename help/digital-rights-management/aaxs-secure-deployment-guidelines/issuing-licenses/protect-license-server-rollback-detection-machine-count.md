@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Recuento de equipos al emitir licencias{#machine-count-when-issuing-licenses}
 
-Si las reglas comerciales requieren que se realice un seguimiento del número de equipos de un usuario, el servidor de licencias o el servidor de dominio deben almacenar los ID de equipo asociados al usuario. La forma más sólida de rastrear los ID de equipo es almacenar el valor devuelto por el `MachineId.getBytes()` método en una base de datos. Cuando se recibe una nueva solicitud, compare el ID de equipo de la solicitud con los ID de equipo conocidos que utilizan `MachineId.matches()`.
+Si las reglas comerciales requieren que se realice un seguimiento del número de equipos de un usuario, el servidor de licencias o el servidor de dominio deben almacenar los ID de equipo asociados al usuario. La manera más sólida de rastrear los ID de equipo es almacenar el valor devuelto por el método `MachineId.getBytes()` en una base de datos. Cuando se recibe una nueva solicitud, compare el ID de equipo de la solicitud con los ID de equipo conocidos mediante `MachineId.matches()`.
 
 `MachineId.matches()` realiza una comparación de ID para determinar si representan el mismo equipo. Esta comparación solo es práctica si hay un pequeño número de ID de máquina con los que comparar. Por ejemplo, si se permite a un usuario cinco equipos dentro de su dominio, puede buscar en la base de datos los ID de equipo asociados con el nombre de usuario del usuario y obtener un pequeño conjunto de datos para comparar.
 
@@ -21,4 +21,4 @@ Si las reglas comerciales requieren que se realice un seguimiento del número de
 >
 >Esta comparación no es práctica para implementaciones que permiten el acceso anónimo. En estos casos `MachineId.getUniqueID()` se puede utilizar, sin embargo, este ID no será el mismo si el usuario accede al contenido desde los tiempos de ejecución de Flash y Adobe AIR®, y no sobrevivirá si el usuario cambia el formato de su disco duro.
 
-Para obtener más información sobre `MachineToken.getMachineId()`y `MachineId.matches()`, consulte la Referencia *de API de acceso a* Adobe.
+Para obtener más información sobre `MachineToken.getMachineId()`y `MachineId.matches()`, consulte la *Referencia de API de acceso a Adobe*.
