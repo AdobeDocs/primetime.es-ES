@@ -6,6 +6,9 @@ title: Resolución e inserción de anuncios en directo/lineal
 uuid: 18c6733a-e827-4b1c-9cd5-796d57cbdb05
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '302'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ El SDK de TVSDK de explorador inserta publicidades de las siguientes formas:
 
 * **Anteponer**, que se encuentra al principio del contenido.
 
-El SDK del explorador acepta la pausa publicitaria aunque la duración sea mayor o menor que la duración de sustitución del punto de referencia. De forma predeterminada, el TVSDK del explorador admite el `#EXT-X-CUE` cue como un marcador de publicidad válido al resolver y colocar anuncios. Este marcador requiere el campo de metadatos `DURATION` en segundos y el identificador único de la señal. Por ejemplo:
+El SDK del explorador acepta la pausa publicitaria aunque la duración sea mayor o menor que la duración de sustitución del punto de referencia. De forma predeterminada, el SDK de TVSDK del explorador admite la señal `#EXT-X-CUE` como un marcador de publicidad válido al resolver y colocar publicidades. Este marcador requiere el campo de metadatos `DURATION` en segundos y el identificador único del cue. Por ejemplo:
 
 ```
 #EXT-X-CUE:DURATION=27,ID="..."
@@ -28,7 +31,7 @@ El SDK del explorador acepta la pausa publicitaria aunque la duración sea mayor
 
 Puede definir y suscribirse a indicaciones (etiquetas) adicionales.
 
-Una vez iniciada la reproducción, el motor de vídeo actualiza periódicamente el archivo de manifiesto. El SDK del explorador resuelve cualquier publicidad nueva e inserta la publicidad cuando se encuentra un punto de referencia en el flujo en directo o lineal definido en el manifiesto. Una vez que se han resuelto e insertado las publicidades, el SDK de TVSDK del explorador vuelve a calcular la línea de tiempo virtual y distribuye un `AdobePSDK.PSDKEventType.TIMELINE_UPDATED` evento.
+Después de los inicios de reproducción, el motor de vídeo actualiza periódicamente el archivo de manifiesto. El SDK del explorador resuelve cualquier publicidad nueva e inserta la publicidad cuando se encuentra un punto de referencia en el flujo en directo o lineal definido en el manifiesto. Una vez que se han resuelto e insertado las publicidades, el SDK de TVSDK del explorador vuelve a calcular la línea de tiempo virtual y distribuye un evento `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
 
 >[!TIP]
 >
