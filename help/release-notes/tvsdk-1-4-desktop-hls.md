@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Notas de la versión de TVSDK 1.4 for Desktop HLS {#tvsdk-for-desktop-hls-release-notes}
+# Notas de la versión de TVSDK 1.4 para HLS de escritorio {#tvsdk-for-desktop-hls-release-notes}
 
 Las notas de la versión de TVSDK for Desktop HLS describen las novedades o los cambios, los problemas resueltos y conocidos de TVSDK DHLS.
 
@@ -58,9 +58,9 @@ En esta versión, esta función no se admite en Apple Safari ni Mozilla Firefox 
 
 **1.4.10**
 
-* **Ad Fallback, Daisy encadenado en la lógica de selección de anuncios (Zendesk #3103)** En anuncios VAST (elementos creativos) con la regla de reserva activada, TVSDK trata una publicidad con un tipo MIME no válido como una publicidad vacía e intenta usar anuncios alternativos en su lugar. Puede configurar algunos aspectos del comportamiento de reserva.
+* **Ad Fallback, Daisy encadenado en la lógica de selección de anuncios (Zendesk #3103)** Para anuncios VAST (elementos creativos) con la regla de reserva activada, el TVSDK trata una publicidad con un tipo MIME no válido como una publicidad vacía e intenta usar anuncios alternativos en su lugar. Puede configurar algunos aspectos del comportamiento de reserva.
 
-Para obtener más información, consulte [Reproducción de anuncios para anuncios](../programming/tvsdk-1.4-for-android/ad-insertion/ad-fallback/android-1.4-ad-fallback.md)VAST y VMAP.
+Para obtener más información, consulte [Retorno de anuncios para anuncios VAST y VMAP](../programming/tvsdk-1.4-for-android/ad-insertion/ad-fallback/android-1.4-ad-fallback.md).
 
 **1.4.8**
 
@@ -91,9 +91,9 @@ Ahora se admite el cifrado AES basado en muestras.
 
 **1.4.0**
 
-* **Señalización de interrupción con sustitución** de contenido alternativo Como parte de la actualización 1.4 del TVSDK, el TVSDK ahora también admite entrar y salir de interrupciones regionales en contenido lineal. TVSDK ahora puede procesar dos archivos de manifiesto en paralelo, principal y alternativo, para supervisar las señales de interrupción incluso cuando se muestra una programación alternativa en lugar de la programación original.
+* **Señalización de interrupción con** sustitución de contenido alternativoComo parte de la actualización 1.4 del TVSDK, el TVSDK ahora también admite entrar y volver de los bloqueos regionales contra contenido lineal. TVSDK ahora puede procesar dos archivos de manifiesto en paralelo, principal y alternativo, para supervisar las señales de interrupción incluso cuando se muestra una programación alternativa en lugar de la programación original.
 
-* **Eliminar o reemplazar publicidades** C3 Ahora, no se necesita ningún trabajo previo adicional para insertar dinámicamente nuevas publicidades en recursos de vídeo a petición (VOD) que salgan de la ventana C3. TVSDK ahora proporciona una API para eliminar intervalos de contenido personalizados e insertar publicidades nuevas de forma dinámica. Esta nueva y potente funcionalidad también es útil en casos en los que el contenido en directo/lineal se transmite durante la retransmisión y se baja inmediatamente para utilizarlo como contenido a petición sin tiempo suficiente para &quot;limpiar&quot; el recurso.
+* **Eliminar o reemplazar** publicidades de C3 Ahora, no se necesita ningún trabajo previo adicional para insertar dinámicamente nuevas publicidades en recursos de vídeo a petición (VOD) que salen de la ventana de C3. TVSDK ahora proporciona una API para eliminar intervalos de contenido personalizados e insertar publicidades nuevas de forma dinámica. Esta nueva y potente funcionalidad también es útil en casos en los que el contenido en directo/lineal se transmite durante la retransmisión y se baja inmediatamente para utilizarlo como contenido a petición sin tiempo suficiente para &quot;limpiar&quot; el recurso.
 
 ## Problemas resueltos {#resolved-issues}
 
@@ -109,7 +109,7 @@ Ahora se admite el cifrado AES basado en muestras.
 
    Actualización del token de localhost para la demostración de PMP en DHLS.
 
-### Problemas resueltos en versiones anteriores {#resolved-issues-previous}
+### Problemas resueltos en las versiones anteriores {#resolved-issues-previous}
 
 **Versión 1.4.38** (891)
 
@@ -358,7 +358,7 @@ En esta versión, se ha agregado el tiempo de espera de solicitud de publicidad 
 
 **Versión 1.4.21** (782)
 
-* Zendesk #19580 TVSDK espera a que se complete la resolución de contenido antes de enviar `PTTimedMetadataChangedNotification` notificaciones
+* Zendesk #19580 TVSDK espera la finalización de la resolución de contenido antes de enviar notificaciones `PTTimedMetadataChangedNotification`
 
 **Nota**: Este problema requiere Flash Player 21.0.0.182 o posterior.
 
@@ -662,7 +662,7 @@ Se corrigió un bloqueo ocasional del Flash Player con Firefox en Mac cuando un 
 
 Se ha corregido un problema en Mac Chrome por el que el flujo daba inicios para parpadear y, finalmente, volverse negro. (requiere Flash Player 18.0.0.161)
 
-* No se rellena la macro de Zendesk #3304 - VAST 3.0 `[ERRORCODE]`
+* No se rellena la macro Zendesk #3304 - VAST 3.0 `[ERRORCODE]`
 
    * el código de error 400 se mostrará si la publicidad en línea tiene un elemento creativo incorrecto.
    * `[ERRORCODE]` la macro estará codificada para la dirección URL
@@ -722,8 +722,8 @@ los tipos de MIME para el formato HLS distinguían entre mayúsculas y minúscul
 * Zendesk #1303 - Desplazamiento vertical para subtítulos opcionales (requiere la versión 16.0.0.235 de Flash Player o la fecha buena de lanzamiento prevista: Diciembre de 2014)
 * Zendesk #1870 - Encendido y desactivación de subtítulos opcionales (requiere la versión 16.0.0.235 de Flash Player o la buena fecha prevista de lanzamiento: Diciembre de 2014)
 * Zendesk #2110 - La reproducción se queda atascada después de intentar entrar a pantalla completa durante un anuncio VPAID (requiere la versión de Flash Player 16.0.0.235 o la fecha buena de lanzamiento prevista: Diciembre de 2014)
-* Zendesk #2199 - `[VPAID]` El jugador no responde cuando busca una pausa publicitaria pasada
-* Zendesk #2358 - Re: `[Analytics]` Datos de capítulo incorrectos
+* Zendesk #2199 - `[VPAID]` Jugador no responde al buscar una pausa publicitaria pasada
+* Zendesk #2358 - Re: `[Analytics]` Datos incorrectos del capítulo
 
 **Versión 1.4.1**
 
@@ -753,13 +753,13 @@ _playbackManager.pause();
 
 * **Versión 1.4.13** PTPLAY-8501 - Cuando VMAP devuelve dos anuncios directos no transcodificados MP4, se reproduce dos veces la misma caída y segunda.
 
-* **Versión 1.4.2** En la versión 16 de Flash Player, se identificó un problema con la lógica ABR &quot;apagado&quot;, después de que el reproductor se coloca en un evento de almacenamiento en búfer vacío. El problema evita que la velocidad de bits se apague en entornos de ancho de banda incorrectos una vez que el reproductor se encuentre en estado de almacenamiento en búfer. Para solucionar el problema, haga que la aplicación establezca el `BufferControlParameters.initialBufferTime` mismo valor que `BufferControlParameters.playbackBufferTime` temporalmente durante el estado de almacenamiento en búfer (es decir, en un `BufferEvent.BUFFERING_BEGIN` evento) y, a continuación, restablezca los valores establecidos en el `BufferEvent.BUFFERING_END` evento. La corrección de este problema estará disponible en la próxima versión de parche de Flash Player versión 16.
+* **Versión 1.4.2** En la versión 16 de Flash Player, se identificó un problema con la lógica ABR &quot;apagado&quot;, después de que el reproductor se coloca en un evento de almacenamiento en búfer vacío. El problema evita que la velocidad de bits se apague en entornos de ancho de banda incorrectos una vez que el reproductor se encuentre en estado de almacenamiento en búfer. Para solucionar el problema, haga que la aplicación establezca el `BufferControlParameters.initialBufferTime` como `BufferControlParameters.playbackBufferTime` temporalmente durante el estado de almacenamiento en búfer (es decir, en un evento `BufferEvent.BUFFERING_BEGIN`) y luego restablezca los valores establecidos en el evento `BufferEvent.BUFFERING_END`. La corrección de este problema estará disponible en la próxima versión de parche de Flash Player versión 16.
 
 * **Versión 1.4.0**
 
    * PTPLAY-1634 - La misma etiqueta de suscripción tiene diferentes marcas de hora en diferentes ventanas activas. Cuando se mueven ventanas en vivo, la misma etiqueta de cada una de ellas debe tener las mismas marcas de hora. Sin embargo, a veces las mismas etiquetas tienen marcas de hora diferentes.
    * PTPLAY-28 - La línea de tiempo de MediaPlayer no incluye saltos vacíos.
-   * Se requiere un archivo de política entre dominios (cross-domain.xml) para obtener permiso para transmitir contenido desde un dominio diferente. [Configuración de un archivo cross-domain.xml para flujo](https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html)HTTP.
+   * Se requiere un archivo de política entre dominios (cross-domain.xml) para obtener permiso para transmitir contenido desde un dominio diferente. [Configuración de un archivo cross-domain.xml para flujo](https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html) HTTP.
    * Error #3694203 - En un flujo de DVR, la búsqueda desde dentro de un anuncio de reproducción a otro anuncio intermedio puede provocar el bloqueo del explorador
    * Error #3753725 - selectPolicyForSeekIntoAd no tiene en cuenta si se ha visto la pausa publicitaria
    * Error n.º 3754529: Los anuncios preliminares no se eliminan del flujo cuando se buscan de nuevo en un flujo de DVR en directo
@@ -769,4 +769,4 @@ _playbackManager.pause();
 
 ## Recursos útiles {#helpful-resources}
 
-* Consulte la documentación de ayuda completa en la página de información y asistencia [de](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consulte la documentación de ayuda completa en la página [Información y soporte de Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
