@@ -6,6 +6,9 @@ title: Clases de detectores de línea de tiempo
 uuid: 73452e8a-5f33-4004-b93a-e77a09a66add
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
