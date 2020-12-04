@@ -20,7 +20,7 @@ Utilice las siguientes sugerencias para ayudar a aumentar el rendimiento:
 
    >[!NOTE]
    >
-   >Si ejecuta varias aplicaciones web en la misma instancia de Tomcat y tiene `jsafe.dll` en la ruta, solo la primera aplicación web que se cargue podrá cargar la `jsafe.dll` biblioteca. Por lo tanto, solo la primera aplicación web obtiene el beneficio de la compatibilidad nativa. En esos casos, para mejorar el rendimiento de todas las aplicaciones web, coloque `cryptoj.jar`fuera del archivo de la GUERRA. Por ejemplo, en el `<tomcat_installation_folder>/lib` directorio.
+   >Si ejecuta varias aplicaciones web en la misma instancia de Tomcat y tiene `jsafe.dll` en la ruta, sólo la primera aplicación web que se cargue podrá cargar la biblioteca `jsafe.dll`. Por lo tanto, solo la primera aplicación web obtiene el beneficio de la compatibilidad nativa. En esos casos, para mejorar el rendimiento de todas las aplicaciones Web, coloque `cryptoj.jar`fuera del archivo WAR. Por ejemplo, en el directorio `<tomcat_installation_folder>/lib`.
 
 * Un sistema operativo de 64 bits, como la versión de 64 bits de Red Hat® o Windows, ofrece un rendimiento mucho mejor que un sistema operativo de 32 bits.
 
