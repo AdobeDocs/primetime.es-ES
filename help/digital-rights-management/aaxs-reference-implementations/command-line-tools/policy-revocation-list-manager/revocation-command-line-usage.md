@@ -4,13 +4,16 @@ title: Uso de la línea de comandos
 uuid: 273e9d3b-efeb-46fa-a4b1-f13247b4e498
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 0%
 
 ---
 
 
 # Uso de la línea de comandos {#command-line-usage}
 
-El Administrador de listas de revocación se encuentra en el directorio \Reference Implementation\Command Line Tools del DVD. Para ejecutar la herramienta, utilice una de las sintaxis siguientes:
+El Administrador de Listas de revocación se encuentra en el directorio \Reference Implementation\Command Line Tools del DVD. Para ejecutar la herramienta, utilice una de las sintaxis siguientes:
 
 ```
     java -jar AdobeRevocationListManager.jar 
@@ -44,7 +47,7 @@ La siguiente tabla contiene descripciones de las opciones de la línea de comand
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c archivo de configuración</span> </td> 
-   <td colname="2" class="- topic/entry ">Especifica la ubicación del archivo de configuración. Si no se utiliza esta opción, el Administrador de listas de revocación buscará <span class="filepath"> flashaccesstools.properties</span> en el directorio de trabajo. </td> 
+   <td colname="2" class="- topic/entry ">Especifica la ubicación del archivo de configuración. Si no se utiliza esta opción, el Administrador de Listas de revocación buscará <span class="filepath"> flashaccesstools.properties</span> en el directorio de trabajo. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-d nombre de archivo</span> </td> 
@@ -56,7 +59,7 @@ La siguiente tabla contiene descripciones de las opciones de la línea de comand
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-f filename[certfile]</span> </td> 
-   <td colname="2" class="- topic/entry ">Agrega todas las entradas de la lista de revocación existente. Sólo se puede especificar un archivo existente. <p class="- topic/p ">Si esta lista existente se firmó con una credencial diferente a la que se está utilizando para firmar la nueva lista, especifique su archivo de certificado siguiente para que se pueda comprobar su firma. </p> </td> 
+   <td colname="2" class="- topic/entry ">Añade todas las entradas de la lista de revocación existente. Sólo se puede especificar un archivo existente. <p class="- topic/p ">Si esta lista existente se firmó con una credencial diferente a la que se está utilizando para firmar la nueva lista, especifique su archivo de certificado a continuación para que se pueda comprobar su firma. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
@@ -68,7 +71,7 @@ La siguiente tabla contiene descripciones de las opciones de la línea de comand
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r issuerName serialNumber revocationDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Revoca el certificado identificado por <span class="codeph"> issuerName</span> y <span class="codeph"> serialNumber</span> en la fecha determinada. El <span class="codeph"> nombreemisor</span> debe seguir el formato de nombre 509 (por ejemplo, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>). Especifique los números de serie en formato hexadecimal. Especifique la fecha de revocación como <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-dd</span> o <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-dd-h24:min:sec</span>, por ejemplo 2008-12-1 o 2008-12-1-00:00:00 para la medianoche del 1 de diciembre de 2008. Si no se especifica la fecha de revocación, se utiliza la fecha actual. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Revela el certificado identificado por <span class="codeph"> issuerName</span> y <span class="codeph"> serialNumber</span> en la fecha dada. El <span class="codeph"> nombreDelEmisor</span> debe seguir el formato de nombre 509 (por ejemplo, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>). Especifique los números de serie en formato hexadecimal. Especifique la fecha de revocación como <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-dd</span> o <span class="+ topic/ph pr-d/codeph codeph">aaa-mm-dd-h24:min:sec</span>, por ejemplo 2008-12-1 o 2008-12-1-00:00:00 para la medianoche del 1 de diciembre, 008. Si no se especifica la fecha de revocación, se utiliza la fecha actual. </p> </td> 
   </tr> 
  </tbody> 
 </table>
