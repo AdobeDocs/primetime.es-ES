@@ -6,6 +6,9 @@ title: Resolución e inserción de anuncios de VOD
 uuid: 33280792-ad08-41c1-b180-cc2159e8137c
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Para el contenido de vídeo a petición (VOD), TVSDK inserta y divide las publicidades empalmándolas en el contenido principal para que la duración de la línea de tiempo aumente.
 
-Antes de la reproducción, TVSDK resuelve anuncios conocidos, inserta y rompe el contenido principal como se describe en una línea de tiempo que se devuelve de Adobe Primetime y toma decisiones, y vuelve a calcular la línea de tiempo virtual, si es necesario.
+Antes de la reproducción, TVSDK resuelve anuncios conocidos, inserta y rompe el contenido principal tal como se describe en una línea de tiempo devuelta por Adobe Primetime para la toma de decisiones de anuncios y, si es necesario, vuelve a calcular la línea de tiempo virtual.
 
 TVSDK inserta publicidades de las siguientes formas:
 
@@ -22,12 +25,12 @@ TVSDK inserta publicidades de las siguientes formas:
 * **Mid-roll**, que está en el contenido.
 * **Post-roll**, que se encuentra después del contenido.
 
-Una vez iniciada la reproducción, no se pueden producir cambios adicionales en el contenido. Las publicidades no pueden ser:
+Después de los inicios de reproducción, no se pueden producir cambios adicionales en el contenido. Las publicidades no pueden ser:
 
 * Insertado
 * Eliminado
 
-   Por ejemplo, no puede eliminar las publicidades integradas del contenido para ofrecer una experiencia sin publicidad.
+   Por ejemplo, no puede eliminar las publicidades integradas del contenido para crear ofertas de una experiencia sin publicidad.
 * Reemplazado
 
    Por ejemplo, no puede reemplazar las publicidades integradas con las publicidades de objetivo.
