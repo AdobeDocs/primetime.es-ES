@@ -6,6 +6,9 @@ title: Comportamiento de reserva de anuncios para VAST y VMAP
 uuid: 612416b9-d070-42e2-b68b-74ba52023345
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 0%
 
 ---
 
