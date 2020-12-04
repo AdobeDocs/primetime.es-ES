@@ -4,6 +4,9 @@ title: Seguridad de capa de red
 uuid: bd53bccf-1130-4189-97ec-4259bd25762f
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Esta tabla describe técnicas comunes que reducen las vulnerabilidades de seguri
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Direcciones IP privadas </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilice Traducción de direcciones de red (NAT) con direcciones IP privadas RFC 1918 en los servidores de aplicaciones de Adobe Access. Asigne direcciones IP privadas (10.0.0.0/8, 172.16.0.0/12 y 192.168.0.0/16) para que sea más difícil para un atacante enrutar el tráfico hacia y desde un host interno NAT a través de Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilice Traducción de direcciones de red (NAT) con direcciones IP privadas RFC 1918 en servidores de aplicaciones de Adobe Access. Asigne direcciones IP privadas (10.0.0.0/8, 172.16.0.0/12 y 192.168.0.0/16) para que sea más difícil para un atacante enrutar el tráfico hacia y desde un host interno NAT a través de Internet. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Servidores de seguridad </p> </td> 
