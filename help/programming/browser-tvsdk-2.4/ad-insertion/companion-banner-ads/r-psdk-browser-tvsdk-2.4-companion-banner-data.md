@@ -19,8 +19,8 @@ El contenido de un AdBannerAsset describe una pancarta adjunta.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-El `AdobePSDK.PSDKEventType.AD_STARTED` evento devuelve una `Ad` instancia que contiene una `companionAssets` propiedad ( `Array<AdBannerAsset>`).
-Cada uno `AdBannerAsset` proporciona información sobre cómo mostrar el recurso.
+El evento `AdobePSDK.PSDKEventType.AD_STARTED` devuelve una instancia `Ad` que contiene una propiedad `companionAssets` ( `Array<AdBannerAsset>`).
+Cada `AdBannerAsset` proporciona información sobre cómo mostrar el recurso.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -52,7 +52,7 @@ Cada uno `AdBannerAsset` proporciona información sobre cómo mostrar el recurso
     <pre>
       datos de pancarta
     </pre> </td> 
-   <td colname="col2"> Datos del tipo especificado por <span class="codeph"> resourceType</span> para este letrero complementario. </td> 
+   <td colname="col2"> Los datos del tipo especificado por <span class="codeph"> resourceType</span> para esta pancarta complementaria. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> dirección URL estática </td> 
