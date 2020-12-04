@@ -6,6 +6,9 @@ title: Clases de registro
 uuid: 947f3ec8-c5fe-4a55-b306-f338205ab4e6
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
