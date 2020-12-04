@@ -6,6 +6,9 @@ title: Implementar actualizaciones de tiempo personalizadas
 uuid: 7f5d46e5-eab6-4bdc-b015-ae27ddb609ce
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '181'
+ht-degree: 0%
 
 ---
 
