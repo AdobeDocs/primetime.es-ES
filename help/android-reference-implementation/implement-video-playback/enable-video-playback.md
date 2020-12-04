@@ -6,6 +6,9 @@ title: Habilitar la reproducción de vídeo
 uuid: ddc0defa-c40f-4ee6-a69f-d5eeca6c2fce
 translation-type: tm+mt
 source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 0%
 
 ---
 
@@ -30,14 +33,14 @@ Cree un PlaybackManager que gestione la configuración y la operación de reprod
    playbackManager = ManagerFactory.getPlaybackManager(config, mediaPlayer);
    ```
 
-1. Implemente el `PlaybackManagerEventListener` en el para `PlayerFragment` controlar los eventos de reproducción:
+1. Implemente el `PlaybackManagerEventListener` en el `PlayerFragment` para gestionar los eventos de reproducción:
 
    ```java
    private final PlaybackManagerEventListener playbackManagerEventListener =  
      new PlaybackManagerEventListener() 
    ```
 
-1. Registre el detector de eventos en el `PlayerFragment`:
+1. Registre el detector de evento en `PlayerFragment`:
 
    ```
    playbackManager.addEventListener(playbackManagerEventListener);
@@ -49,7 +52,7 @@ Cree un PlaybackManager que gestione la configuración y la operación de reprod
    playbackManager.setupVideo(url, adsManager); 
    ```
 
-1. Configure las operaciones de la barra de control en la `PlayerFragment`:
+1. Configure las operaciones de la barra de control en `PlayerFragment`:
 
    ```
    controlBar.pressPlay() { 
