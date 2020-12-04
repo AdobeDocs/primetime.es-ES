@@ -6,11 +6,14 @@ title: Inserción y colocación de anuncios
 uuid: 1d4d6364-1c49-402b-9b72-8c185b1c94e1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '290'
+ht-degree: 0%
 
 ---
 
 
-# Inserción y colocación de anuncios{#ad-insertion-and-placement}
+# Inserción y colocación de publicidad{#ad-insertion-and-placement}
 
 Existen varias formas de determinar la inserción y la colocación de las publicidades.
 
@@ -22,7 +25,7 @@ A continuación se muestra una descripción general del proceso utilizado para d
 1. **Resolución** de publicidad: El TVSDK se comunica con un servidor de publicidad para recuperar las publicidades que se van a dividir en el contenido.
 1. **Ubicación** de publicidad: El TVSDK carga las publicidades especificadas y las coloca en saltos de publicidad en la línea de tiempo de contenido en las ubicaciones especificadas y vuelve a calcular la línea de tiempo virtual, si es necesario.
 
-## Colocación de publicidad {#section_B9D63F7409A2447F9FF209289BE5D3D5}
+## Ubicación de publicidad {#section_B9D63F7409A2447F9FF209289BE5D3D5}
 
 El TVSDK puede obtener ubicaciones para la posible colocación de publicidad desde las siguientes fuentes:
 
@@ -40,5 +43,5 @@ El TVSDK puede obtener ubicaciones para la posible colocación de publicidad des
 
 >[!NOTE]
 >
->De forma predeterminada, TVSDK utiliza señales de manifiesto para flujos en directo/lineales y mapas de servidores de publicidad para flujos VOD. Sin embargo, para admitir la reproducción de eventos completos en eventos en directo, la aplicación debe realizar pasos adicionales.
+>De forma predeterminada, TVSDK utiliza señales de manifiesto para flujos en directo/lineales y mapas de servidores de publicidad para flujos VOD. Sin embargo, para admitir la reproducción en evento completo para eventos en directo, la aplicación debe realizar pasos adicionales.
 
