@@ -6,13 +6,16 @@ title: Marcar rangos
 uuid: d98efb92-701e-4ee2-b574-823c1e5d5149
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '26'
+ht-degree: 0%
 
 ---
 
 
 # Marcar rangos{#mark-ranges}
 
-Marque `TimeRanges` entre el `begin` y `end` en `localTime` como un `AdBreak` elemento de la línea de tiempo. Se omiten otras opciones de configuración de publicidad.
+Marque `TimeRanges` entre `begin` y `end` en `localTime` como `AdBreak` desde la línea de tiempo. Se omiten otras opciones de configuración de publicidad.
 
 1. Marcar intervalos de tiempo.
 
