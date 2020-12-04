@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Uso de la línea de comandos {#command-line-usage}
 
-Antes de utilizar Media Packager, asegúrese de que cumple los requisitos enumerados en Requisitos y de que el archivo de configuración contiene la información necesaria (consulte Archivo de configuración en *Uso de las implementaciones* de referencia de acceso a Adobe.
+Antes de usar Media Packager, asegúrese de cumplir los requisitos enumerados en Requisitos y de que el archivo de configuración contenga la información necesaria (consulte el archivo de configuración en *Uso de las implementaciones de referencia de acceso a Adobe*.
 
-Media Packager está en el [!DNL \Reference Implementation\Command Line tools] directorio del DVD. Para cifrar un solo archivo, utilice la sintaxis siguiente:
+Media Packager está en el directorio [!DNL \Reference Implementation\Command Line tools] del DVD. Para cifrar un solo archivo, utilice la sintaxis siguiente:
 
 ```
 java -jar AdobePackager.jar  
@@ -68,11 +68,11 @@ Para vista de información sobre un archivo de metadatos, utilice la sintaxis si
 java -jar AdobePackager.jar -dm <metadatafile> [-e]
 ```
 
-* `metadatafile` es un [!DNL .metadata] archivo que contiene los metadatos DRM.
+* `metadatafile` es un  [!DNL .metadata] archivo que contiene los metadatos DRM.
 
 >[!NOTE]
 >
->Durante el empaquetado, Media Packager ya no generará un archivo .header de forma predeterminada. Para generar este archivo, utilice la `-h` opción durante el empaquetado.
+>Durante el empaquetado, Media Packager ya no generará un archivo .header de forma predeterminada. Para generar este archivo, utilice la opción `-h` durante el empaquetado.
 
 La siguiente tabla contiene descripciones de las opciones de la línea de comandos que se muestran en la sintaxis anterior:
 
@@ -85,7 +85,7 @@ La siguiente tabla contiene descripciones de las opciones de la línea de comand
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-c <span class="+ topic/ph pr-d/codeph codeph"> configfile </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-c <span class="+ topic/ph pr-d/codeph codeph"> archivo de configuración </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica la ubicación del archivo de configuración. Si no se utiliza esta opción, Media Packager buscará <span class="filepath"> flashaccesstools.properties </span> en el directorio de trabajo. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
@@ -93,12 +93,12 @@ La siguiente tabla contiene descripciones de las opciones de la línea de comand
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Muestra información sobre un archivo que ya estaba empaquetado. Los archivos de origen y destino no son obligatorios. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> metadatafile </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-dm <span class="+ topic/ph pr-d/codeph codeph"> archivo de metadatos </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Muestra información sobre metadatos existentes. Los archivos de origen y destino no son obligatorios. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-e </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilice esta opción con <span class="codeph"> -d </span> para extraer directivas de un archivo empaquetado. Se creará un archivo en el mismo directorio que el archivo cifrado mediante el nombre de archivo y el identificador de política. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Utilice esta opción con <span class="codeph"> -d </span> para extraer políticas de un archivo empaquetado. Se creará un archivo en el mismo directorio que el archivo cifrado mediante el nombre de archivo y el identificador de política. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-h </p> </td> 
@@ -109,8 +109,8 @@ La siguiente tabla contiene descripciones de las opciones de la línea de comand
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica un identificador único para este fragmento de contenido. Si no se especifica ningún identificador, se utilizará el nombre del archivo de destino. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> key </span>= <span class="+ topic/ph pr-d/codeph codeph"> value </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica una clave o valor personalizado para agregar a los metadatos de contenido. Se pueden especificar varias opciones <span class="codeph"> -k </span> . </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-k <span class="+ topic/ph pr-d/codeph codeph"> clave </span>= <span class="+ topic/ph pr-d/codeph codeph"> valor </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica una clave o valor personalizado para agregar a los metadatos de contenido. Se pueden especificar varias opciones <span class="codeph"> -k </span>. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-m </p> </td> 
@@ -125,7 +125,7 @@ La siguiente tabla contiene descripciones de las opciones de la línea de comand
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Sobrescribe el archivo de destino sin preguntar, si ya existe. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-p <span class="+ topic/ph pr-d/codeph codeph"> nombre de archivo [dominio-transporte-certificado] </span> </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-p <span class="+ topic/ph pr-d/codeph codeph"> nombre de archivo [domain-Transport-cert] </span> </p> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica el nombre del archivo que contiene la política. Si la directiva requiere el registro de dominio con un servidor que utiliza un certificado de transporte diferente al especificado en el archivo de propiedades, también se debe proporcionar el certificado de transporte de dominio. </p> <p class="- topic/p ">Se pueden especificar varias opciones <span class="codeph"> -p </span> y el cliente utilizará la primera de forma predeterminada. Los valores especificados en la línea de comandos tienen prioridad sobre los especificados en el archivo de configuración. </p> </td> 
   </tr> 
  </tbody> 
