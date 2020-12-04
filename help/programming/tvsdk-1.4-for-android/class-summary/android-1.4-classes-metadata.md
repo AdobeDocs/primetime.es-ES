@@ -1,18 +1,21 @@
 ---
-description: Estas clases proporcionan metadatos para publicidad, espacios de nombres y seguimiento.
-seo-description: Estas clases proporcionan metadatos para publicidad, espacios de nombres y seguimiento.
+description: Estas clases proporcionan metadatos para publicidad, Áreas de nombres y seguimiento.
+seo-description: Estas clases proporcionan metadatos para publicidad, Áreas de nombres y seguimiento.
 seo-title: Clases de metadatos
 title: Clases de metadatos
 uuid: 6d5099c8-d562-4635-9ef0-068cc6fb9f82
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '237'
+ht-degree: 0%
 
 ---
 
 
 # Clases de metadatos{#metadata-classes}
 
-Estas clases proporcionan metadatos para publicidad, espacios de nombres y seguimiento.
+Estas clases proporcionan metadatos para publicidad, Áreas de nombres y seguimiento.
 
 Paquete: [com.adobe.mediacore.metadata](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/metadata/package-summary.html)
 
