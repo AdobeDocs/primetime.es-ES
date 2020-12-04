@@ -6,6 +6,9 @@ title: Mostrar una barra de búsqueda con la posición de reproducción actual
 uuid: a9f4dd6c-78cf-455c-8c31-b2f7b740d84a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '284'
+ht-degree: 0%
 
 ---
 
@@ -30,12 +33,12 @@ TVSDK admite la búsqueda en una posición (hora) específica en la que el flujo
 
    Los estados válidos están PREPARADOS, COMPLETADOS, PAUSADOS y REPRODUCIDOS.
 
-1. Utilice la SeekBar nativa para establecer `OnSeekBarChangeListener` cuándo el usuario está borrando.
-1. Escuche `QOSEventListener.onOperationFailed` y tome las medidas apropiadas.
+1. Utilice la SeekBar nativa para establecer `OnSeekBarChangeListener` para ver cuándo el usuario está borrando.
+1. Escuche `QOSEventListener.onOperationFailed` y realice las acciones correspondientes.
 
    Este evento pasa la advertencia adecuada. La aplicación determina cómo continuar, por ejemplo, probando la búsqueda de nuevo o continuando la reproducción desde la posición anterior.
 
-1. Espere a que TVSDK llame a la `QOSEventListener.onSeekComplete` llamada de retorno.
+1. Espere a que TVSDK llame a la llamada de retorno `QOSEventListener.onSeekComplete`.
 1. Recupere la posición de reproducción ajustada final utilizando el parámetro de posición de la llamada de retorno.
 
    Esto es importante porque la posición de inicio real después de la búsqueda puede ser diferente de la posición solicitada. El comportamiento de reproducción puede verse afectado si una búsqueda u otro cambio de posición termina en medio de una pausa publicitaria o omite los saltos publicitarios.
