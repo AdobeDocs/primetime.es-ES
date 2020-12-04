@@ -4,6 +4,9 @@ title: Uso de la línea de comandos
 uuid: 72117619-a723-49d3-9aa9-5eefcf5b0916
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '167'
+ht-degree: 0%
 
 ---
 
@@ -33,19 +36,19 @@ En la tabla siguiente se describen las opciones de la línea de comandos que se 
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l license-filename </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -l license-filename  </span> </td> 
    <td colname="2" class="- topic/entry "> Nombre del archivo que contiene la licencia para incrustar. Se pueden especificar varias opciones <span class="codeph"> -l </span> para incrustar varias licencias. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filename </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filename  </span> </td> 
    <td colname="2" class="- topic/entry "> Especifique los metadatos de contenido para los que desea generar una licencia. (Necesario para generar una licencia) </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt  </span> </td> 
    <td colname="2" class="- topic/entry "> No pregunte si se debe sobrescribir el archivo de destino. Si el archivo de destino ya existe y <span class="codeph"> -o </span> no está establecido, se mostrará un error. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -o  </span> </td> 
    <td colname="2" class="- topic/entry "> Si el archivo de destino ya existe, sobrescribirlo sin preguntar. </td> 
   </tr> 
  </tbody> 
