@@ -6,11 +6,14 @@ title: Funciones de Primetime TVSDK
 uuid: 0a7ebb05-7da5-49ff-928a-4d2124eaa115
 translation-type: tm+mt
 source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+workflow-type: tm+mt
+source-wordcount: '261'
+ht-degree: 0%
 
 ---
 
 
-# Funciones de Primetime TVSDK{#primetime-tvsdk-features}
+# Características de Primetime TVSDK{#primetime-tvsdk-features}
 
 TVSDK for Desktop HLS incluye una serie de funciones y ofrece las siguientes funciones principales:
 
@@ -47,8 +50,8 @@ TVSDK for Desktop HLS incluye una serie de funciones y ofrece las siguientes fun
 
 * Seguimiento de anuncios y videos
 
-   * Seguimiento de eventos de QoS
-   * Notificaciones que ayudan a TVSDK y a su aplicación a comunicarse asincrónicamente sobre el estado de los vídeos, los anuncios y otros elementos, así como sobre la actividad de registro.
+   * Seguimiento de eventos QoS
+   * Notificaciones que ayudan a TVSDK y a su aplicación a comunicarse asincrónicamente sobre el estado de los vídeos, los anuncios y otros elementos, así como sobre la actividad del registro.
    * Integración con Adobe Analytics y compatibilidad con Heartbeat
 
 * Registro
