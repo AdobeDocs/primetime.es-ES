@@ -4,6 +4,9 @@ title: Convertir archivos
 uuid: e17ee003-5ac2-4bb8-83b7-81ee8fa9ee46
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +47,7 @@ Mediante una utilidad como OpenSSL y la clave privada, el solicitante genera los
 
    >[!NOTE]
    >
-   >Aunque no es necesario, Adobe recomienda utilizar contraseñas diferentes para la clave privada (private_key_password) y el PFX (pfx_password).
+   >Aunque no es obligatorio, Adobe recomienda utilizar contraseñas diferentes para la clave privada (private_key_password) y el PFX (pfx_password).
 
    Este archivo PEM final solo contiene su certificado.
 
@@ -58,5 +61,5 @@ Mediante una utilidad como OpenSSL y la clave privada, el solicitante genera los
 
    >[!NOTE]
    >
-   >Los archivos DER solo son necesarios para el empaquetador de flujo dinámico HTTP.
+   >Los archivos DER solo son necesarios para el empaquetador HTTP Dynamic Streaming.
 
