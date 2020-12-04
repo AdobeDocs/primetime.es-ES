@@ -19,9 +19,9 @@ Puede elegir usar comportamientos de publicidad predeterminados.
 
 1. Para utilizar los comportamientos predeterminados, realice una de las siguientes tareas:
 
-   * Si implementa su propia `AdvertisingFactory` clase, devuelva null para `createAdPolicySelector`.
+   * Si implementa su propia clase `AdvertisingFactory`, devuelva null para `createAdPolicySelector`.
 
-   * Si no tiene una implementación personalizada para la `AdvertisingFactory` clase, TVSDK utiliza un selector de directivas de publicidad predeterminado.
+   * Si no tiene una implementación personalizada para la clase `AdvertisingFactory`, TVSDK utiliza un selector de directivas de publicidad predeterminado.
 
 ## Configurar la reproducción personalizada {#set-up-customized-playback}
 
@@ -30,17 +30,17 @@ Puede personalizar o anular los comportamientos de publicidad.
 Antes de poder personalizar o anular los comportamientos de publicidad, registre la instancia de directiva de publicidad con .
 Para personalizar los comportamientos de las publicidades, realice una de las siguientes acciones:
 
-* Implementar la `AdPolicySelector` interfaz y todos sus métodos.
+* Implementar la interfaz `AdPolicySelector` y todos sus métodos.
 
    Esta opción se recomienda si necesita anular **todos** los comportamientos de publicidad predeterminados.
 
-* Amplíe la `DefaultAdPolicySelector` clase y proporcione implementaciones solo para aquellos comportamientos que requieran personalización.
+* Amplíe la clase `DefaultAdPolicySelector` y proporcione implementaciones solo para los comportamientos que requieren personalización.
 
-   Esta opción se recomienda si necesita anular solo **algunos** de los comportamientos predeterminados.
+   Esta opción se recomienda si necesita anular sólo **algunos** de los comportamientos predeterminados.
 
 Para personalizar los comportamientos de publicidad:
 
-1. Implementar la `AdPolicySelector` interfaz y todos sus métodos.
+1. Implementar la interfaz `AdPolicySelector` y todos sus métodos.
 1. Asigne la instancia de directiva que usará TVSDK a través de la fábrica de publicidad.
 
    >[!NOTE]
