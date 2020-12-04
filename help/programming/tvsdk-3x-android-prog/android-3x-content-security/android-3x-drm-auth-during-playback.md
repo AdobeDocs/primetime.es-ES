@@ -6,6 +6,9 @@ title: Autenticación DRM durante la reproducción
 uuid: d44acfb2-796b-4c60-b622-db01e58042cc
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Cuando los metadatos DRM de un vídeo se incluyen en el flujo de medios, puede realizar la autenticación durante la reproducción.
 
-Con la rotación de licencias, un recurso se cifra con varias licencias de DRM. Cada vez que se descubren nuevos metadatos DRM, se utilizan los `DRMHelper` métodos para comprobar si los metadatos DRM requieren autenticación DRM.
+Con la rotación de licencias, un recurso se cifra con varias licencias de DRM. Cada vez que se descubren nuevos metadatos DRM, se utilizan los métodos `DRMHelper` para comprobar si los metadatos DRM requieren autenticación DRM.
 
 >[!TIP]
 >
@@ -35,7 +38,7 @@ Con la rotación de licencias, un recurso se cifra con varias licencias de DRM. 
    };
    ```
 
-1. Utilice el `DRMMetadata` para comprobar si es necesaria la autenticación.
+1. Use `DRMMetadata` para comprobar si se necesita autenticación.
 
    * Si no se requiere autenticación, no es necesario que haga nada y la reproducción continúa sin interrupciones.
    * Si se requiere autenticación, complete la autenticación DRM.
