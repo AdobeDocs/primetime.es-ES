@@ -46,7 +46,7 @@ Para trabajar con cookies:
 
    TVSDK consulta este cookieManager en tiempo de ejecución, comprueba si hay cookies asociadas con la dirección URL y las utiliza automáticamente.
 
-   Otra opción es usar `cookieHeaders` en `NetworkConfiguration` para establecer una cadena de encabezado de cookie arbitraria que se utilizará en las solicitudes. De forma predeterminada, este encabezado de cookie se envía solamente con solicitudes de clave. Para enviar el encabezado de la cookie con todas las solicitudes, utilice el `NetworkConfiguration` método `setUseCookieHeadersForAllRequests`:
+   Otra opción es utilizar `cookieHeaders` en `NetworkConfiguration` para configurar una cadena de encabezado de cookie arbitraria que se utilizará en las solicitudes. De forma predeterminada, este encabezado de cookie se envía solamente con solicitudes de clave. Para enviar el encabezado de la cookie con todas las solicitudes, utilice el método `NetworkConfiguration` `setUseCookieHeadersForAllRequests`:
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 
