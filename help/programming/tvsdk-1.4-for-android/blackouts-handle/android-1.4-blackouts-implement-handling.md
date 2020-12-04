@@ -6,11 +6,14 @@ title: Implementación de la gestión de interrupciones
 uuid: db7f831c-5069-4426-bfe3-5fc51fec7930
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '171'
+ht-degree: 0%
 
 ---
 
 
-# Implementación de la gestión de interrupciones{#implement-blackout-handling}
+# Implementar la gestión de bloqueo{#implement-blackout-handling}
 
 TVSDK proporciona API y código de muestra para controlar los períodos de interrupción.
 
@@ -27,7 +30,7 @@ Para implementar la gestión de interrupciones, incluido el suministro de conten
    }
    ```
 
-1. Cree oyentes de eventos para eventos de metadatos temporizados en flujos en primer y segundo plano.
+1. Cree oyentes de evento para eventos de metadatos temporizados en flujos en primer y segundo plano.
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -36,7 +39,7 @@ Para implementar la gestión de interrupciones, incluido el suministro de conten
    }
    ```
 
-1. Implemente controladores de eventos de metadatos temporizados para flujos en primer plano y en segundo plano.
+1. Implemente controladores de evento de metadatos temporizados para flujos de primer plano y de fondo.
 
    Primer plano:
 
@@ -75,7 +78,7 @@ Para implementar la gestión de interrupciones, incluido el suministro de conten
    }; 
    ```
 
-1. Gestionar `TimedMetadata` objetos cuando se ejecuta `MediaPlayer` el tiempo.
+1. Controle los objetos `TimedMetadata` cuando se ejecute `MediaPlayer` time.
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
@@ -98,7 +101,7 @@ Para implementar la gestión de interrupciones, incluido el suministro de conten
    };
    ```
 
-1. Cree métodos para cambiar el contenido al principio y al final del período de interrupción.
+1. Cree métodos para cambiar el contenido al inicio y al final del período de interrupción.
 
    ```java
    private void handleTimedMetadataList(long currentTime) { 
@@ -183,7 +186,7 @@ Para implementar la gestión de interrupciones, incluido el suministro de conten
 
    >[!NOTE]
    >
-   >Actualmente, para varios flujos en directo de velocidad de bits, en ocasiones los perfiles de velocidad de bits ajustable (ABR) pueden quedar fuera de sincronización. Esto provoca la duplicación de `timedMetadata` objetos para la misma etiqueta suscrita. Para evitar cálculos incorrectos que no se pueden buscar, se recomienda comprobar si hay intervalos superpuestos que no se pueden buscar después de los cálculos, como en el siguiente ejemplo:
+   >Actualmente, para varios flujos en directo de velocidad de bits, en ocasiones los perfiles de velocidad de bits ajustable (ABR) pueden quedar fuera de sincronización. Esto provoca objetos de duplicado `timedMetadata` para la misma etiqueta suscrita. Para evitar cálculos incorrectos que no se pueden buscar, se recomienda comprobar si hay intervalos superpuestos que no se pueden buscar después de los cálculos, como en el siguiente ejemplo:
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
