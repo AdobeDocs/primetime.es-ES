@@ -6,17 +6,20 @@ title: Orden de los eventos publicitarios
 uuid: 34a6a606-2f2e-42de-88fd-c91202cafddf
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 0%
 
 ---
 
 
-# Orden de los eventos publicitarios{#order-of-advertising-events}
+# Orden de los eventos de publicidad{#order-of-advertising-events}
 
 Cuando la reproducción incluye publicidad, TVSDK distribuye eventos/notificaciones en secuencias generalmente esperadas. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
 
 <!--<a id="section_69E3CCBC57BB48399799876E83908348"></a>-->
 
-Al reproducir publicidades, el orden de los eventos es:
+Al reproducir anuncios, el orden de los eventos es:
 
 * `AdBreakPlaybackEvent.AD_BREAK_STARTED`
 * Se envían los siguientes datos para cada publicidad en la pausa publicitaria:
