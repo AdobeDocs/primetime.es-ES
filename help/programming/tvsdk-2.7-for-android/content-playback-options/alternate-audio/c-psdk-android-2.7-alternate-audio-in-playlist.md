@@ -6,6 +6,9 @@ title: Pistas de audio alternativas en la lista de reproducción
 uuid: 47289392-ae4e-44b9-8d54-6ccee8fe1446
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '294'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +17,13 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 La lista de reproducción de un vídeo puede especificar un número ilimitado de pistas de audio alternativas para el contenido del vídeo principal. Por ejemplo, es posible que desee agregar idiomas diferentes al contenido del vídeo o permitir que el usuario cambie entre distintas pistas del dispositivo mientras se reproduce el contenido.
 
-Las pistas de audio alternativas permiten a los usuarios cambiar entre varias pistas de idioma para flujos de vídeo HTTP (en directo/lineal y VOD), y no es necesario modificar, duplicar ni volver a empaquetar el vídeo para cada pista de audio. Puede proporcionar varias pistas de idioma para un recurso de vídeo antes o después del empaquetado inicial del recurso.
+Las pistas de audio alternativas permiten a los usuarios cambiar entre varias pistas de idioma para flujos de vídeo HTTP (en directo/lineal y VOD), y no es necesario modificar, duplicado ni volver a empaquetar el vídeo para cada pista de audio. Puede proporcionar varias pistas de idioma para un recurso de vídeo antes o después del empaquetado inicial del recurso.
 
 >[!IMPORTANT]
 >
 >Para que el audio alternativo se mezcle con la pista de vídeo del medio principal, las marcas de hora de la pista alternativa deben coincidir con las marcas de hora del audio de la pista principal.
 
-La pista de audio principal se incluye en la colección de pistas de audio con la `default` etiqueta . Los metadatos de los flujos de audio alternativos se incluyen en la lista de reproducción de las `#EXT-X-MEDIA` etiquetas con `TYPE=AUDIO`.
+La pista de audio principal se incluye en la colección de pistas de audio con la etiqueta `default`. Los metadatos de los flujos de audio alternativos se incluyen en la lista de reproducción de las etiquetas `#EXT-X-MEDIA` con `TYPE=AUDIO`.
 
 Por ejemplo, un manifiesto M3U8 que especifica varios flujos de audio alternativos puede tener este aspecto:
 
