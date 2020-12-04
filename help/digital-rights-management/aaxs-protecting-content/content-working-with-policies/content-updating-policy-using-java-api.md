@@ -4,6 +4,9 @@ title: Actualización de una directiva mediante la API de Java
 uuid: 23c50f05-799e-4f5a-869b-4b5e29a36ce1
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 0%
 
 ---
 
@@ -12,14 +15,14 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Para actualizar una directiva mediante la API de Java, lleve a cabo los siguientes pasos:
 
-1. Configure su entorno de desarrollo e incluya todos los archivos JAR mencionados en [Configuración del entorno](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) de desarrollo dentro del proyecto.
-1. Cree una `Policy` instancia y lea la política desde un archivo o base de datos.
+1. Configure el entorno de desarrollo e incluya todos los archivos JAR mencionados en [Configuración del entorno de desarrollo](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) dentro del proyecto.
+1. Cree una instancia `Policy` y lea la política desde un archivo o base de datos.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Actualice el `Policy` objeto estableciendo sus propiedades, como su nombre y las reglas de uso.
+1. Actualice el objeto `Policy` estableciendo sus propiedades, como el nombre y las reglas de uso.
 
    ```java
      // Change the policy name.  
@@ -44,7 +47,7 @@ Para actualizar una directiva mediante la API de Java, lleve a cabo los siguient
      }
    ```
 
-1. Serialice el `Policy` objeto actualizado y guárdelo en un archivo o base de datos.
+1. Serialice el objeto `Policy` actualizado y guárdelo en un archivo o base de datos.
 
    ```java
       // Serialize the policy.  
