@@ -6,11 +6,14 @@ title: Establecer horas de almacenamiento en búfer
 uuid: 25142b01-5381-49c9-b89a-24c858faaf13
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
 
-# Establecer horas de almacenamiento en búfer{#set-buffering-times}
+# Definir tiempos de almacenamiento en búfer{#set-buffering-times}
 
 MediaPlayer proporciona métodos para establecer y obtener el tiempo de almacenamiento en búfer inicial y el tiempo de almacenamiento en búfer de reproducción.
 
@@ -18,7 +21,7 @@ MediaPlayer proporciona métodos para establecer y obtener el tiempo de almacena
 >
 >Si no establece los parámetros de control del búfer antes de iniciar la reproducción, el reproductor de medios toma el valor predeterminado de 2 segundos para el búfer inicial y 30 segundos para el tiempo de búfer de reproducción en curso.
 
-1. Configure el `BufferControlParameters` objeto, que encapsula el tiempo de búfer inicial y los parámetros de control de tiempo del búfer de reproducción:
+1. Configure el objeto `BufferControlParameters`, que encapsula el tiempo de búfer inicial y los parámetros de control de tiempo del búfer de reproducción:
 
        Esta clase proporciona los siguientes métodos de fábrica:
    
@@ -34,18 +37,18 @@ MediaPlayer proporciona métodos para establecer y obtener el tiempo de almacena
       createDual(initialBufferTime:uint, playbackBufferTime:uint):BufferControlParameters 
       ```
 
-      Estos métodos generan un error `IllegalArgumentException` si los parámetros no son válidos, como cuando:
+      Estos métodos generan un `IllegalArgumentException` si los parámetros no son válidos, como cuando:
 
    * El tiempo de búfer inicial es menor que cero.
    * El tiempo de búfer inicial es bueno al tiempo de búfer.
 
-1. Para establecer los valores de los parámetros de búfer, utilice este `MediaPlayer` método:
+1. Para establecer los valores de los parámetros del búfer, utilice este método `MediaPlayer`:
 
    ```
    public function set bufferControlParameters(value:BufferControlParameters):void
    ```
 
-1. Para obtener los valores de parámetro de búfer actuales, utilice este `MediaPlayer` método:
+1. Para obtener los valores de parámetro de búfer actuales, utilice este método `MediaPlayer`:
 
    ```
    public function get bufferControlParameters():BufferControlParameters
