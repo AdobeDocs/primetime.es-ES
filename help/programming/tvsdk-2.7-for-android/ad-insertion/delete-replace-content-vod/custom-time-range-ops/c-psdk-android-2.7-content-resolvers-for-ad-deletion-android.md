@@ -6,11 +6,14 @@ title: El contenido se resuelve para la eliminación o sustitución de publicida
 uuid: ed168c52-ab7b-4fe6-8775-eb18018dc249
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '51'
+ht-degree: 0%
 
 ---
 
 
-# El contenido se resuelve para la eliminación o sustitución de publicidades {#content-resolvers-for-ad-deletion-replacement}
+# El contenido se resuelve para la eliminación o reemplazo de publicidades {#content-resolvers-for-ad-deletion-replacement}
 
 Puede utilizar varios solucionadores de contenido para gestionar diferentes operaciones de línea de tiempo.
 
