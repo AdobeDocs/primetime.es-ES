@@ -3,6 +3,9 @@ title: Códigos de error de PSDK
 description: Información sobre varios códigos de error, advertencias y códigos de error nativos.
 translation-type: tm+mt
 source-git-commit: eddc327087411a6214cfd8dafef66b850a603f97
+workflow-type: tm+mt
+source-wordcount: '1897'
+ht-degree: 6%
 
 ---
 
@@ -28,7 +31,7 @@ La siguiente tabla proporciona información detallada sobre las notificaciones d
   </tr>
   <tr>
     <td>INVALID_ARGUMENT</td>
-    <td>1</td>
+    <td>3</td>
     <td>Los datos o el formato del argumento proporcionados a la API subyacente no son válidos.</td>
   </tr>
   <tr>
@@ -38,13 +41,13 @@ La siguiente tabla proporciona información detallada sobre las notificaciones d
   </tr>
   <tr>
     <td>ILLEGAL_STATE</td>
-    <td>3</td>
+    <td>1</td>
     <td>La operación no se admite en el estado del reproductor actual.</td>
   </tr>
   <tr>
     <td>INTERFACE_NOT_FOUND</td>
     <td>4</td>
-    <td>El método interfaceCast emite este error cuando esta interfaz solicitada no se implementa/hereda.</td>
+    <td>El método interfaceCast emite este error cuando esta interfaz solicitada no se implementa o hereda.</td>
   </tr>
   <tr>  
     <td>CREATION_FAILED</td>
@@ -129,7 +132,7 @@ La siguiente tabla proporciona información detallada sobre las notificaciones d
   <tr>
     <td>PLAYBACK_NOT_AUTHORIZED</td>
     <td>57</td>
-    <td>La reproducción de HLS no se ha activado en Flash Player. Consulte AuthorizedFeatures.enableMediaPlayerHLSPlayback().</td>
+    <td>La reproducción de HLS no se ha activado en el Flash Player. Consulte AuthorizedFeatures.enableMediaPlayerHLSPlayback().</td>
   </tr>
   <tr>
     <td>NETWORK_TIMEOUT</td>
@@ -185,9 +188,9 @@ La mayoría de las advertencias contienen metadatos relevantes; por ejemplo, la 
     <th><b>Descripción</b></th>
   </tr>
   <tr>
-    <td>REVENUE_OPTIMIZATION_REPORTING</td>
+    <td>REVENUE_OPTIMIZATION_SISTEMA DE INFORMES</td>
     <td>300</td>
-    <td>Notificaciones detalladas de TVSDK para informes y análisis posteriores.</td>
+    <td>Notificaciones detalladas de TVSDK para mayor sistema de informes y análisis.</td>
   </tr>
  </table>
 
@@ -352,7 +355,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
     <td>No se pudo crear el contexto de DRM.</td>
   </tr>
   <tr>
-    <td>CONTAINER_NOT_SUPPORTED</td>
+    <td>CONTENEDOR_NOT_SUPPORTED</td>
     <td>29</td>
     <td>No se admite el tipo de contenedor.</td>
   </tr>
@@ -382,7 +385,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
     <td>Desbordamiento.</td>
   </tr>
   <tr>  
-    <td>VIDEO_PROFILE_NOT_SUPPORTED</td>
+    <td>VIDEO_PERFIL_NOT_SUPPORTED</td>
     <td>35</td>
     <td>Perfil de vídeo no admitido.</td>
   </tr>
@@ -432,7 +435,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
     <td>La conexión de red del usuario no funciona. La reproducción puede detenerse en cualquier momento y se reanudará cuando la conexión esté disponible.</td>
   </tr>
   <tr>
-    <td>NO_USABLE_BITRATE_PROFILE</td>
+    <td>NO_USABLE_BITRATE_PERFIL</td>
     <td>45</td>
     <td>No se encontró ningún perfil de velocidad de bits utilizable en el flujo.</td>
   </tr>
@@ -452,9 +455,9 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
     <td>El reemplazo especificado en una API de inserción no se pudo realizar correctamente. Esto significa que la inserción se realizó correctamente, pero la sustitución no. La sustitución podría fallar si el manifiesto que se va a reemplazar se ha eliminado de la línea de tiempo.</td>
   </tr>
   <tr>
-    <td>SWITCH_TO_ASYMMETRIC_PROFILE</td>
+    <td>SWITCH_TO_ASYMMETRIC_PERFIL</td>
     <td>49</td>
-    <td>DRM está cambiando a un perfil asimétrico. Se espera que todos los perfiles estén alineados en la duración. De lo contrario, se emitirá esta advertencia y es posible que haya saltos en la reproducción.</td>
+    <td>DRM está cambiando a un perfil asimétrico. Se espera que todos los perfiles estén alineados en su duración. De lo contrario, se emitirá esta advertencia y es posible que haya saltos en la reproducción.</td>
   </tr>
   <tr>
     <td>LIVE_WINDOW_MOVED_BACKWARD</td>
@@ -494,7 +497,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   <tr>  
     <td>PLAYBACK_NOT_AUTHORIZED</td>
     <td>57</td>
-    <td>La reproducción de HLS no se ha activado en Flash Player. Consulte AuthorizedFeatures.enableHLSPlayback.</td>
+    <td>La reproducción de HLS no se ha activado en el Flash Player. Consulte AuthorizedFeatures.enableHLSPlayback.</td>
   </tr>
   <tr>
     <td>BAD_MEDIA_SAMPLE_FOUND</td>
@@ -513,7 +516,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr>
   <tr>
     <td>INTERNAL_ERROR</td>
-    <td>61</td>
+    <td>81</td>
     <td>Un tema muy raro que nunca debería ocurrir.</td>
   </tr>
   <tr>  
@@ -587,9 +590,9 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
     <td>No se encontró ningún detector en una estructura de datos interna.</td>
   </tr>
   <tr>
-    <td>AUDIO_START_ERROR</td>
+    <td>AUDIO_INICIO_ERROR</td>
     <td>76</td>
-    <td>No se puede iniciar el audio.</td>
+    <td>No se puede realizar el inicio del audio.</td>
   </tr>
   <tr>
     <td>NO_AUDIO_SINK</td>
@@ -598,7 +601,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr>
   <tr>  
     <td>FILE_OPEN_ERROR</td>
-    <td>78</td>
+    <td>58</td>
     <td>No se puede abrir el archivo.</td>
   </tr>
   <tr>
@@ -613,7 +616,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr>
   <tr>
     <td>ID3PARSE_ERROR</td>
-    <td>81</td>
+    <td>61</td>
     <td>Error al analizar los datos de ID3.</td>
   </tr>
   <tr>
@@ -627,7 +630,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
     <td>La duración de la línea de tiempo es demasiado corta. Si se trata de un flujo en directo, puede ocurrir un almacenamiento en búfer frecuente.</td>
   </tr>
   <tr>
-    <td>AUDIO_ONLY_STREAM_START</td>
+    <td>AUDIO_ONLY_STREAM_INICIO</td>
     <td>84</td>
     <td>El flujo se ha cambiado a un flujo de solo audio.</td>
   </tr>
