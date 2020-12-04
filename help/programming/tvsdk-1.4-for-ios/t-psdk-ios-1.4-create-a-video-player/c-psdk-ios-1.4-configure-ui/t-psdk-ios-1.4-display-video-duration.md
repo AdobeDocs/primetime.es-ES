@@ -6,11 +6,14 @@ title: Mostrar la duración del vídeo
 uuid: 02042070-9c55-4cbb-9dc1-49987451eb8f
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
 
-# Mostrar la duración del vídeo {#display-the-duration-of-the-video}
+# Mostrar la duración del video {#display-the-duration-of-the-video}
 
 Puede mostrar la duración del contenido activo en ese momento.
 
