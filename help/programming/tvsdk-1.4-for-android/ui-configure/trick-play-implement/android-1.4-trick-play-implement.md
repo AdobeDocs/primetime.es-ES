@@ -6,6 +6,9 @@ title: Implemente un avance rápido y rebobine
 uuid: 2e5d0fd0-0290-4f08-b9c6-c8ecde26abb8
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '242'
+ht-degree: 0%
 
 ---
 
@@ -16,10 +19,11 @@ Cuando los usuarios avanzan rápidamente o rebobinan rápidamente a través de l
 
 Para cambiar la velocidad, debe establecer un valor.
 
-1. Pasar del modo de reproducción normal (1x) al modo de reproducción de trucos estableciendo la velocidad en el `MediaPlayer` a un valor permitido.
+1. Pasar del modo de reproducción normal (1x) al modo de reproducción de trucos estableciendo la velocidad en `MediaPlayer` a un valor permitido.
 
-   * La `MediaPlayerItem` clase define las tasas de reproducción permitidas.
+   * La clase `MediaPlayerItem` define las tasas de reproducción permitidas.
    * TVSDK selecciona la velocidad permitida más cercana si no se permite la velocidad especificada.
+
    Este ejemplo establece la velocidad de reproducción interna del reproductor en la velocidad solicitada.
 
    ```java
@@ -46,11 +50,11 @@ Para cambiar la velocidad, debe establecer un valor.
    }
    ```
 
-1. De forma opcional, puede escuchar los eventos de cambio de tasa, que le informan cuándo solicitó un cambio de tasa y cuándo se produce realmente un cambio de tasa.
+1. De forma opcional, puede escuchar eventos de cambio de tasa, que le informarán cuando solicitó un cambio de tasa y cuando realmente se produce un cambio de tasa.
 
        TVSDK distribuye los siguientes eventos relacionados con la reproducción mediante trucos:
    
-   * `AdobePSDK.PSDKEventType.RATE_SELECTED` cuando el `rate` valor cambia a otro valor.
+   * `AdobePSDK.PSDKEventType.RATE_SELECTED` cuando el  `rate` valor cambia a otro valor.
 
    * `AdobePSDK.PSDKEventType.RATE_PLAYING` cuando la reproducción se reanuda a la velocidad seleccionada.
 
