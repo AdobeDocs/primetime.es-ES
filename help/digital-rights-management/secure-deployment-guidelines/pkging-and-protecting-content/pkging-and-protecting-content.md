@@ -21,15 +21,15 @@ La información sobre el empaquetado y la protección del contenido le permite p
 
 Debe proteger físicamente el equipo en el que se produce la administración de directivas y el empaquetado de contenido.
 
-Para obtener más información, consulte Seguridad [física y acceso](../../secure-deployment-guidelines/physical-sec-and-access.md).
+Para obtener más información, consulte [Seguridad física y acceso](../../secure-deployment-guidelines/physical-sec-and-access.md).
 
-Si la implementación de empaquetado de contenido requiere conectividad de red, debe endurecer el sistema operativo e implementar una solución de cortafuegos adecuada. Para obtener más información, consulte Topología [de red](../../secure-deployment-guidelines/overview/network-topology.md).
+Si la implementación de empaquetado de contenido requiere conectividad de red, debe endurecer el sistema operativo e implementar una solución de cortafuegos adecuada. Para obtener más información, consulte [Topología de red](../../secure-deployment-guidelines/overview/network-topology.md).
 
 ## Empaquetado seguro de contenido {#securely-packaging-content}
 
 El archivo de configuración de la herramienta de línea de comandos DRM Media Packager de Adobe Primetime requiere una credencial PKCS12 que se utiliza durante el empaquetado.
 
-En las herramientas de la serie de comandos Implementación de referencia, la contraseña del archivo de credenciales PKCS12 se almacena en el `flashaccess.properties` archivo en texto sin formato. Por este motivo, tenga especial cuidado cuando proteja el equipo que aloja este archivo y asegúrese de que el equipo esté en un entorno seguro. Para obtener más información, consulte Seguridad [física y acceso](../../secure-deployment-guidelines/physical-sec-and-access.md).
+En las herramientas de la serie de comandos Implementación de referencia, la contraseña del archivo de credenciales PKCS12 se almacena en el archivo `flashaccess.properties` en texto sin formato. Por este motivo, tenga especial cuidado cuando proteja el equipo que aloja este archivo y asegúrese de que el equipo esté en un entorno seguro. Para obtener más información, consulte [Seguridad física y acceso](../../secure-deployment-guidelines/physical-sec-and-access.md).
 
 El empaquetador también utiliza los certificados de servidor de licencias y transporte del servidor de licencias, y debe protegerse la integridad y confidencialidad de esta información. Sólo las entidades autorizadas podrán utilizar el empaquetador. Si las claves privadas están comprometidas, informe a Adobe Systems Incorporated inmediatamente para que se pueda revocar el certificado.
 
@@ -55,13 +55,13 @@ Al crear estas aplicaciones, puede permitir que algunos usuarios creen y modifiq
 
 Las políticas no se firman ni se protegen de modificaciones hasta que se utilizan en el empaquetado. Si le preocupa que los usuarios de herramientas de empaquetado puedan modificar políticas, firme las políticas para asegurarse de que no se puedan modificar.
 
-Para obtener más información sobre la creación de aplicaciones con el SDK, consulte Primetime DRM API en Referencias [API de](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References)API Primetime.
+Para obtener más información sobre la creación de aplicaciones con el SDK, consulte Primetime DRM API en [Referencias API de Primetime](https://help.adobe.com/en_US/primetime/api/index.html#api-Adobe_Primetime_API_References).
 
 ## Cifrado de claves asimétricas {#asymmetric-key-encryption}
 
 El cifrado asimétrico de claves, también llamado cifrado de claves públicas, utiliza pares de claves. Una clave es para cifrado y la otra es para descifrado.
 
-La clave de descifrado, o la *`private key`* clave, se mantiene en secreto; la clave de cifrado, o la *`public key`*, está disponible para cualquier persona autorizada para cifrar contenido. Cualquier persona que tenga acceso a la clave pública puede cifrar el contenido. Sin embargo, solo alguien con acceso a la clave privada puede descifrar el contenido. La clave privada no se puede reconstruir a partir de la clave pública.
+La clave de descifrado, o *`private key`*, se mantiene en secreto; la clave de cifrado, o *`public key`*, se pone a disposición de cualquier persona autorizada para cifrar contenido. Cualquier persona que tenga acceso a la clave pública puede cifrar el contenido. Sin embargo, solo alguien con acceso a la clave privada puede descifrar el contenido. La clave privada no se puede reconstruir a partir de la clave pública.
 
 Al empaquetar contenido, la clave pública del servidor de licencias se utiliza para cifrar la clave de codificación de contenido (CEK) en los metadatos DRM. Debe asegurarse de que sólo el servidor de licencias tiene acceso a la clave privada del servidor de licencias. Si otra persona tiene la clave, puede descifrar y vista del contenido.
 
@@ -69,4 +69,4 @@ Al empaquetar contenido, la clave pública del servidor de licencias se utiliza 
 >
 >Asegúrese de obtener el certificado del servidor de licencias que incluye la clave pública de un origen de confianza. De este modo, puede asegurarse de que es la clave del servidor de licencias y no una clave pública no fiable. Si los atacantes sustituyeran su clave pública por la clave del servidor de licencias, podrían descifrar su contenido.
 
-Para obtener más información sobre cómo empaquetar contenido, consulte [Uso del SDK de DRM de Adobe Primetime para la protección de contenido](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf).
+Para obtener más información sobre cómo empaquetar contenido, consulte [Uso del SDK de DRM de Adobe Primetime para proteger contenido](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_protecting_content.pdf).
