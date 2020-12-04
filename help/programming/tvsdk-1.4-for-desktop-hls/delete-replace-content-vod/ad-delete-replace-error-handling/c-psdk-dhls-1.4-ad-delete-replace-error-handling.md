@@ -6,38 +6,41 @@ title: Gestión de errores de reemplazo y eliminación de publicidad
 uuid: ab153591-0011-44b4-87f9-be0302c2295e
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '333'
+ht-degree: 0%
 
 ---
 
 
-# Gestión de errores de reemplazo y eliminación de publicidad {#ad-deletion-and-replacement-error-handling}
+# Administración de errores de reemplazo y eliminación de publicidad {#ad-deletion-and-replacement-error-handling}
 
 TVSDK gestiona los errores de intervalo de tiempo según el problema específico, combinando o reordenando los intervalos de tiempo incorrectamente definidos.
 
-TVSDK se ocupa de `timeRanges` los errores mediante la combinación y reordenación predeterminadas. En primer lugar, ordena los intervalos de tiempo definidos por el cliente según la *hora de inicio* . En función de este orden de clasificación, combina intervalos adyacentes y los une si hay subconjuntos e intersecciones entre los intervalos.
+TVSDK trata los errores `timeRanges` mediante la combinación y reordenación predeterminadas. En primer lugar, ordena los intervalos de tiempo definidos por el cliente por la hora *de inicio*. En función de este orden de clasificación, combina intervalos adyacentes y los une si hay subconjuntos e intersecciones entre los intervalos.
 
 TVSDK gestiona los errores de intervalo de tiempo de la siguiente manera:
 
 * Desordenado: TVSDK reordena los intervalos de tiempo.
 * Subconjunto: TVSDK combina los subconjuntos de intervalo de tiempo.
 * Intersección: TVSDK combina los intervalos de tiempo interrelacionados.
-* Conflicto de intervalos de reemplazo: TVSDK elige la duración de reemplazo desde el primer lugar que aparece `timeRange` en el grupo en conflicto.
+* Conflicto de intervalos de reemplazo: TVSDK elige la duración de reemplazo desde la primera vez que aparece `timeRange` en el grupo en conflicto.
 
 TVSDK gestiona los conflictos de modo de señalización de la siguiente manera:
 
 * Si se definen intervalos REPLACE, TVSDK cambia automáticamente el modo de señalización a CUSTOM_RANGE.
-* Si se definen intervalos DELETE o MARK y el modo de señalización es CUSTOM_RANGE, TVSDK elimina o marca estos rangos. En este caso no hay inserción de publicidad.
-* Si un intervalo DELETE o MARK define una duración de sustitución, TVSDK ignora esta duración.
+* Si los rangos de DELETE o MARK están definidos y el modo de señalización es CUSTOM_RANGE, TVSDK elimina o marca estos rangos. En este caso no hay inserción de publicidad.
+* Si un rango de DELETE o un rango MARK define una duración de sustitución, TVSDK ignora esta duración.
 
 Cuando el servidor no devuelve un valor válido `AdBreaks`:
 
-* TVSDK genera y procesa un `NOPTimelineOperation` para el vacío `AdBreak`. No se reproduce ningún anuncio.
+* TVSDK genera y procesa un `NOPTimelineOperation` para el `AdBreak` vacío. No se reproduce ningún anuncio.
 
-## Ejemplos de errores de intervalo de tiempo {#time-range-error-examples}
+## Ejemplos de error de intervalo de tiempo {#time-range-error-examples}
 
 TVSDK responde a especificaciones erróneas del intervalo de tiempo combinando o reemplazando los intervalos de tiempo según corresponda.
 
-En el ejemplo siguiente, se definen cuatro intervalos de tiempo de ELIMINACIÓN que se intersectan. TVSDK combina los cuatro intervalos de tiempo en uno, de modo que el intervalo de eliminación real es de 0 a 50.
+En el ejemplo siguiente, se definen cuatro intervalos de tiempo de DELETE que se intersectan. TVSDK combina los cuatro intervalos de tiempo en uno, de modo que el intervalo de eliminación real es de 0 a 50.
 
 ```
 "time-ranges": {
