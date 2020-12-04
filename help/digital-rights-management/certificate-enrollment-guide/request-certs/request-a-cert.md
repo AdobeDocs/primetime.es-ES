@@ -4,6 +4,9 @@ title: Solicitar un certificado (solicitante)
 uuid: f0d7f65d-681d-430f-b67b-3bdceb4b6d37
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '118'
+ht-degree: 0%
 
 ---
 
@@ -27,9 +30,9 @@ source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
 
       >[!NOTE]
       >
-      >Para copiar la información de CSR, seleccione el texto entre la etiqueta inicial `(-----BEGIN CERTIFICATE REQUEST-----)` y la etiqueta final, sin incluirla `(-----END CERTIFICATE REQUEST-----)`.
+      >Para copiar la información de CSR, seleccione el texto entre la etiqueta inicial `(-----BEGIN CERTIFICATE REQUEST-----)` y la etiqueta final `(-----END CERTIFICATE REQUEST-----)`, sin incluirla.
 
-1. Haga clic en el **[!UICONTROL Submit Request]** botón.
+1. Haga clic en el botón **[!UICONTROL Submit Request]**.
 
    Se envía un correo electrónico a la cuenta y a los administradores secundarios para que lo revisen. El solicitante es CC&#39;d.
 
