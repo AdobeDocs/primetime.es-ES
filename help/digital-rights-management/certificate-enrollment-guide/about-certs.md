@@ -4,13 +4,16 @@ title: Acerca de los certificados
 uuid: 0b7818b4-bd6a-4f2e-94c2-565e0d735bf8
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 0%
 
 ---
 
 
 # Acerca de los certificados {#about-certificates}
 
-El SDK de DRM de Adobe Primetime está disponible en las siguientes configuraciones:
+El SDK de Adobe Primetime DRM está disponible en las siguientes configuraciones:
 
 * SDK de producción de DRM Primetime
 * SDK de evaluación de DRM de Primetime
@@ -31,7 +34,7 @@ Para permitir la máxima flexibilidad y una seguridad mejorada en las opciones d
    El SDK utiliza este certificado para asegurar la comunicación entre los clientes y el servidor de licencias.
 * Certificado de CA de dominio
 
-   Los clientes que deseen implementar un servidor de dominio necesitan el certificado de CA de dominio. A diferencia de los demás certificados, Adobe no emite el certificado de CA de dominio.
+   Los clientes que deseen implementar un servidor de dominio necesitan el certificado de CA de dominio. A diferencia de los demás certificados, el certificado de CA de dominio no se emite por Adobe.
 
 >[!NOTE]
 >
