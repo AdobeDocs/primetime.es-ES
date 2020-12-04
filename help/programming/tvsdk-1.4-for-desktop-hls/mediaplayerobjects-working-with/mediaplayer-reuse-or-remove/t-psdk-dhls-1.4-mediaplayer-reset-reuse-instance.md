@@ -6,6 +6,9 @@ title: Restablecer o reutilizar una instancia de MediaPlayer
 uuid: b376096b-0aed-4ac2-96e5-e30a4eaf742e
 translation-type: tm+mt
 source-git-commit: c547002eb8946f8ccc5a79d0836f3f814e823b97
+workflow-type: tm+mt
+source-wordcount: '201'
+ht-degree: 0%
 
 ---
 
@@ -18,17 +21,17 @@ Cuando se restablece una instancia de MediaPlayer, se devuelve a su estado IDLE 
 
 Esta operación resulta útil en los siguientes casos:
 
-* Desea reutilizar una `MediaPlayer` instancia, pero debe cargar un nuevo `MediaResource` (contenido de vídeo) y reemplazar la instancia anterior.
+* Desea reutilizar una instancia `MediaPlayer` pero necesita cargar un nuevo `MediaResource` (contenido de vídeo) y reemplazar la instancia anterior.
 
-   Restablecer le permite reutilizar la `MediaPlayer` instancia sin la sobrecarga de liberar recursos, volver a crearlos `MediaPlayer`y reasignar recursos. Los métodos `replaceCurrentItem` y `replaceCurrentResource` realizan automáticamente estos pasos sin tener que llamar al método reset.
+   Restablecer le permite reutilizar la instancia `MediaPlayer` sin necesidad de aprovechar la sobrecarga de liberar recursos, volver a crear `MediaPlayer` y reasignar recursos. Los métodos `replaceCurrentItem` y `replaceCurrentResource` realizan automáticamente estos pasos sin tener que llamar al método reset.
 
-* Cuando el `MediaPlayer` tiene un estado ERROR y debe borrarse.
+* Cuando `MediaPlayer` tiene un estado ERROR y debe borrarse.
 
    >[!IMPORTANT]
    >
    >Esta es la única manera de recuperarse del estado ERROR.
 
-1. Llamada `reset` para devolver la `MediaPlayer` instancia a su estado no inicializado:
+1. Llame a `reset` para devolver la instancia `MediaPlayer` a su estado no inicializado:
 
    ```
    function reset():void; 
@@ -38,6 +41,6 @@ Esta operación resulta útil en los siguientes casos:
 
    >[!TIP]
    >
-   >Para borrar un error, cargue lo mismo `MediaResource`.
+   >Para borrar un error, cargue el mismo `MediaResource`.
 
-1. Cuando reciba el `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` con el `PREPARED` estado, inicie la reproducción.
+1. Cuando reciba el `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` con el estado `PREPARED`, inicio la reproducción.
