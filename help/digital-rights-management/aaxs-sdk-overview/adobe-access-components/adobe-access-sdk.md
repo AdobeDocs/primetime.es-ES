@@ -1,26 +1,29 @@
 ---
-description: Los componentes principales de Adobe Access consisten en un SDK de Java y los entornos de tiempo de ejecución de cliente de Flash Player y Adobe AIR.
-seo-description: Los componentes principales de Adobe Access consisten en un SDK de Java y los entornos de tiempo de ejecución de cliente de Flash Player y Adobe AIR.
-seo-title: SDK de Java, Flash Player y cliente de Adobe AIR
-title: SDK de Java, Flash Player y cliente de Adobe AIR
+description: Los componentes principales de Adobe Access consisten en un SDK de Java y los entornos de tiempo de ejecución del cliente de Flash Player y Adobe AIR.
+seo-description: Los componentes principales de Adobe Access consisten en un SDK de Java y los entornos de tiempo de ejecución del cliente de Flash Player y Adobe AIR.
+seo-title: Cliente Java SDK, Flash Player y Adobe AIR
+title: Cliente Java SDK, Flash Player y Adobe AIR
 uuid: 6b6c5aa2-56ee-4476-a05b-dcbbe3b9001e
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '953'
+ht-degree: 0%
 
 ---
 
 
 # Componentes de Adobe Access{#adobe-access-components}
 
-Los componentes principales de Adobe Access consisten en un SDK de Java y los entornos de tiempo de ejecución de cliente de Flash Player y Adobe AIR.
+Los componentes principales de Adobe Access consisten en un SDK de Java y los entornos de tiempo de ejecución del cliente de Flash Player y Adobe AIR.
 
-Para obtener más información sobre la configuración del SDK, consulte Configuración del SDK en *Uso del SDK de Adobe Access para la protección de contenido.*
+Para obtener más información sobre la configuración del SDK, consulte Setting up the SDK in *Using the Adobe Access SDK for Protecting Content.*
 
-El SDK de Adobe Access le permite desarrollar una solución de administración de derechos digitales que se integra con la infraestructura empresarial existente de su organización, como la administración de contenido, la facturación y los sistemas de control de acceso de usuarios. Flash Player y Adobe AIR le permiten crear e implementar fácilmente aplicaciones a través de las cuales los consumidores pueden acceder y ver grandes bibliotecas de contenido digital.
+El SDK de Adobe Access le permite desarrollar una solución de administración de derechos digitales que se integra con la infraestructura comercial existente de su organización, como los sistemas de gestor de contenido, facturación y control de acceso de usuarios. Flash Player y Adobe AIR le permiten crear e implementar fácilmente aplicaciones a través de las cuales los consumidores pueden acceder y vista a grandes bibliotecas de contenido digital.
 
 ## SDK de Adobe Access {#section_6AA3DC7BAE354472AE179BBC9AF6BD27}
 
-Adobe Access se entrega como un SDK de Java que proporciona los componentes básicos desde los que puede crear una implementación de servidor. Con el SDK puede crear una solución de Adobe Access que se adapte al modelo empresarial de su organización.
+Adobe Access se entrega como un SDK de Java que proporciona los componentes básicos a partir de los cuales puede crear una implementación de servidor. Con el SDK puede crear una solución de Adobe Access que se adapte al modelo empresarial de su organización.
 
 Las API de Java proporcionadas en el SDK se describen en las siguientes subsecciones.
 
@@ -36,7 +39,7 @@ Estas API se utilizan para definir derechos y preparar el contenido para la dist
 
 * Gestión de políticas
 
-   La API de administración de políticas se utiliza para crear y modificar políticas que se aplicarán al contenido. Las políticas se pueden crear o actualizar, incluida la obtención o configuración de todas las reglas de uso y la posibilidad de usar parámetros adicionales en un espacio de nombres personalizado.
+   La API de administración de políticas se utiliza para crear y modificar políticas que se aplicarán al contenido. Las políticas se pueden crear o actualizar, incluida la obtención/configuración de todas las reglas de uso y la posibilidad de usar parámetros adicionales en una Área de nombres personalizada.
 
 * Empaquetado de contenido
 
@@ -60,21 +63,21 @@ Estas API se utilizan cuando un cliente solicita una licencia del servidor. El S
 
 ## Implementación de referencia {#reference-implementation}
 
-El SDK incluye una implementación de referencia, una implementación sencilla de Adobe Access que muestra cómo utilizar las API de Java. La implementación de referencia proporciona un servidor de licencias, un empaquetador de carpetas vigiladas, una aplicación de AIR de Adobe Access Manager y herramientas de línea de comandos para empaquetar contenido y administrar políticas en función de las API de Java. Para obtener más información sobre la implementación de referencia de Adobe Access, consulte *Protección de contenido*.
+El SDK incluye una implementación de referencia, una implementación sencilla de Adobe Access que muestra cómo utilizar las API de Java. La implementación de referencia proporciona un servidor de licencias, un empaquetador de carpetas vigiladas, una aplicación de AIR de Adobe Access Manager y herramientas de línea de comandos para empaquetar contenido y administrar políticas basadas en las API de Java. Para obtener más información sobre la implementación de referencia de Adobe Access, consulte *Protección de contenido*.
 
-## Adobe Access Server para flujo continuo protegido {#adobe-access-server-for-protected-streaming}
+## Adobe Access Server para flujo protegido {#adobe-access-server-for-protected-streaming}
 
-En los casos de uso de flujo continuo en los que el contenido está protegido con Adobe Access, como en el caso del flujo dinámico HTTP de Adobe, el software también incluye Adobe Access Server para el flujo protegido. Esta solución se puede implementar fácilmente en un contenedor servlet como Tomcat y puede lograr un alto nivel de escalabilidad y rendimiento para satisfacer las mayores necesidades de distribución de contenido.
+En los casos de uso de flujo continuo en los que el contenido está protegido con Acceso a Adobe, como en el caso del HTTP Dynamic Streaming de Adobe, el software también incluye Adobe Access Server para transmisión protegida. Esta solución se puede implementar fácilmente en un contenedor servlet como Tomcat y puede lograr un alto nivel de escalabilidad y rendimiento para satisfacer las mayores necesidades de distribución de contenido.
 
-## Adobe Flash Player {#adobe-flash-player}
+## Flash Player de Adobe {#adobe-flash-player}
 
-Flash Player es un complemento y un tiempo de ejecución de navegador ligero que ofrece una experiencia de usuario coherente y atractiva, una reproducción de audio y vídeo impresionante y un alcance generalizado. Flash Player ofrece una reproducción de alta calidad del contenido de vídeo descargado o transmitido por flujo continuo. Para los editores de contenido, Flash Player proporciona los medios para personalizar las pantallas de reproducción que rodean el contenido, lo que permite una mayor monetización y experiencias de marca mediante la publicidad mediante pancartas y superposiciones. Para los consumidores, Flash Player presenta una manera intuitiva y atractiva de ver el contenido de vídeo.
+Flash Player es un complemento y un tiempo de ejecución de navegador ligero que ofrece una experiencia de usuario coherente y atractiva, una reproducción de audio y vídeo impresionante y un alcance generalizado. Flash Player ofrece una reproducción de alta calidad del contenido de vídeo descargado o transmitido en flujo continuo. Para los editores de contenido, Flash Player proporciona los medios para personalizar las pantallas de reproducción que rodean el contenido, lo que permite una mayor monetización y experiencias de marca mediante la publicidad mediante pancartas y superposiciones. Para los consumidores, Flash Player presenta una forma intuitiva y visualmente atractiva de vista del contenido de vídeo.
 
-Para obtener más información sobre Flash Player, visite: [www.adobe.com/go/flashplayer](https://www.adobe.com/go/flashplayer)
+Para obtener más información sobre el Flash Player, visite: [www.adobe.com/go/flashplayer](https://www.adobe.com/go/flashplayer)
 
 ## Adobe AIR {#adobe-air}
 
-Adobe AIR es un motor de ejecución de varios sistemas operativos que permite a los productores de contenido ampliar sus inversiones existentes en la web al escritorio mediante el diseño de aplicaciones multimedia personalizadas. Basado en tecnologías de eficacia probada y abierta, ofrece a las empresas una forma fiable y simplificada de desarrollar e implementar aplicaciones personalizadas en las que se puede confiar para ofrecer una experiencia de usuario más segura y agradable. Adobe AIR permite a las empresas integrar fácilmente medios enriquecidos para crear una experiencia de usuario más envolvente e interactiva. Permite a los desarrolladores utilizar herramientas conocidas como el software HTML, JavaScript, Flash o Adobe® Flex® para implementar su combinación única de aplicaciones de Internet enriquecidas en Windows, Macintosh o Linux.
+Adobe AIR es un motor de ejecución de varios sistemas operativos que permite a los productores de contenido ampliar sus inversiones existentes en la Web al escritorio mediante el diseño de aplicaciones multimedia personalizadas. Basado en tecnologías de eficacia probada y abierta, ofrece a las empresas una forma fiable y simplificada de desarrollar e implementar aplicaciones personalizadas en las que se puede confiar para ofrecer una experiencia de usuario más segura y agradable. Adobe AIR permite a las empresas integrar fácilmente medios enriquecidos para crear una experiencia de usuario más envolvente e interactiva. Permite a los desarrolladores utilizar herramientas conocidas como el software de Flex® HTML, JavaScript, Flash o Adobe® para implementar su combinación única de aplicaciones de Internet enriquecidas en Windows, Macintosh o Linux.
 
 Las empresas tienen un control total de la interfaz de usuario y pueden diseñar una experiencia de usuario para reflejar y reforzar su marca. Gracias a la compatibilidad integrada con la reproducción de contenido protegido con el SDK de Adobe Access, Adobe AIR ayuda a crear cadenas de distribución de contenido personalizadas y completas.
 
@@ -82,6 +85,6 @@ Para obtener más información sobre Adobe AIR, visite: [www.adobe.com/go/air](h
 
 ## Aplicaciones nativas de iOS y Android {#native-ios-and-android-applications}
 
-Aplicaciones nativas de iOS y Android Disponibles solo para clientes de Adobe Primetime, Adobe Access DRM 4.0 y versiones posteriores se pueden usar para proteger vídeos que se consumen en aplicaciones nativas (no Flash) en dispositivos móviles. Para que una aplicación consuma este contenido protegido, debe implementarse mediante las bibliotecas del cliente Adobe Primetime.
+Aplicaciones nativas de iOS y Android Disponible solo para clientes de Adobe Primetime, se puede usar DRM 4.0 de acceso a Adobe y superior para proteger vídeos que se consumen en aplicaciones nativas (que no son de Flash) en dispositivos móviles. Para que una aplicación consuma este contenido protegido, debe implementarse mediante las bibliotecas del cliente de Adobe Primetime.
 
 Para obtener más información sobre Adobe Primetime, visite: [https://www.adobe.com/solutions/primetime.html](https://www.adobe.com/solutions/primetime.html)
