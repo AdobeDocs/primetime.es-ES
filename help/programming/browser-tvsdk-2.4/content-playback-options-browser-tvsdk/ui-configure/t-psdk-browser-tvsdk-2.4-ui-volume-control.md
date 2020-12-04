@@ -6,6 +6,9 @@ title: Proporcionar control de volumen
 uuid: 5f2f69cc-3969-4ca2-8ab9-5713fdf5cdb8
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '101'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ Puede configurar un control de interfaz de usuario para el volumen de sonido.
 1. Espere a que la instancia `MediaPlayer` esté en un estado válido para este comando.
 
    Cualquier estado, excepto RELEASED o ERROR, es válido.
-1. Establezca el atributo de volumen en la `MediaPlayer` instancia para establecer el volumen de audio.
+1. Establezca el atributo de volumen en la instancia `MediaPlayer` para establecer el volumen de audio.
 
    ```js
    player.volume = ...
