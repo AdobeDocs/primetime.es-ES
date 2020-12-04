@@ -1,23 +1,26 @@
 ---
-description: El SDK del explorador puede detectar información de reproducción modificada en los manifiestos m3u8 maestros para flujo continuo en directo y actualizar la información de reproducción mientras se reproduce el flujo. El SDK TVSDK del explorador admite un conjunto dinámico de perfiles de velocidad de bits a medida que los perfiles aparecen o desaparecen del manifiesto maestro, incluidas las velocidades de bits de perfil no superpuestas entre actualizaciones.
-seo-description: El SDK del explorador puede detectar información de reproducción modificada en los manifiestos m3u8 maestros para flujo continuo en directo y actualizar la información de reproducción mientras se reproduce el flujo. El SDK TVSDK del explorador admite un conjunto dinámico de perfiles de velocidad de bits a medida que los perfiles aparecen o desaparecen del manifiesto maestro, incluidas las velocidades de bits de perfil no superpuestas entre actualizaciones.
+description: El SDK del explorador puede detectar información de reproducción modificada en los manifiestos m3u8 maestros para flujo continuo en directo y actualizar la información de reproducción mientras se reproduce el flujo. El SDK TVSDK del explorador admite un conjunto dinámico de perfiles de velocidad de bits a medida que los perfiles aparecen o desaparecen del manifiesto maestro, incluidas las velocidades de bits de perfil no superpuestas entre las actualizaciones.
+seo-description: El SDK del explorador puede detectar información de reproducción modificada en los manifiestos m3u8 maestros para flujo continuo en directo y actualizar la información de reproducción mientras se reproduce el flujo. El SDK TVSDK del explorador admite un conjunto dinámico de perfiles de velocidad de bits a medida que los perfiles aparecen o desaparecen del manifiesto maestro, incluidas las velocidades de bits de perfil no superpuestas entre las actualizaciones.
 seo-title: Actualización de manifiesto maestro activo
 title: Actualización de manifiesto maestro activo
 uuid: 4b918a73-dacf-465a-82d6-404c6bdb01f2
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
 
 # Actualización de manifiesto maestro activo{#live-master-manifest-update}
 
-El SDK del explorador puede detectar información de reproducción modificada en los manifiestos m3u8 maestros para flujo continuo en directo y actualizar la información de reproducción mientras se reproduce el flujo. El SDK TVSDK del explorador admite un conjunto dinámico de perfiles de velocidad de bits a medida que los perfiles aparecen o desaparecen del manifiesto maestro, incluidas las velocidades de bits de perfil no superpuestas entre actualizaciones.
+El SDK del explorador puede detectar información de reproducción modificada en los manifiestos m3u8 maestros para flujo continuo en directo y actualizar la información de reproducción mientras se reproduce el flujo. El SDK TVSDK del explorador admite un conjunto dinámico de perfiles de velocidad de bits a medida que los perfiles aparecen o desaparecen del manifiesto maestro, incluidas las velocidades de bits de perfil no superpuestas entre las actualizaciones.
 
 Se admiten las siguientes funciones:
 
 * Recuento de perfiles (aumento o disminución)
-* Frecuencias de bits de perfil (superposición o no superposición)
+* velocidades de bits de perfil (superposición o no superposición)
 * Perfiles con direcciones URL en los mismos servidores (o en diferentes)
 * Cualquier estructura de conmutación por error
 
