@@ -6,6 +6,9 @@ title: Seleccionar una pista de rótulo actual entre las pistas disponibles
 uuid: 637a70c9-9bef-4b13-8b1f-62f22f983e80
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
@@ -23,6 +26,6 @@ TVSDK admite la representación de estos formatos:
 
 Puede:
 
-* Seleccione una pista de subtítulos disponible para que sea la pista actual y escuche los eventos que indican pistas adicionales disponibles.
-* Activa o desactiva los subtítulos cerrados (visibles o no visibles) mediante la `MediaPlayer` interfaz.
-* Seleccione las opciones de estilo que dictan cómo el motor de vídeo subyacente procesa los subtítulos opcionales. Utilice la `MediaPlayerItem` interfaz para seleccionar formatos como la fuente o el color de fuente.
+* Seleccione una pista de subtítulos disponible para que sea la pista actual y escuche eventos que indiquen pistas adicionales disponibles.
+* Activa o desactiva los subtítulos cerrados (visibles o no visibles) mediante la interfaz `MediaPlayer`.
+* Seleccione las opciones de estilo que dictan cómo el motor de vídeo subyacente procesa los subtítulos opcionales. Utilice la interfaz `MediaPlayerItem` para seleccionar formatos como la fuente o el color de fuente.
