@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# encadenamiento de licencias mejorado {#enhanced-license-chaining}
+# encadenado de licencias mejorado {#enhanced-license-chaining}
 
 Puede utilizar la encadenación de licencias mejorada para actualizar una licencia mediante una licencia raíz principal para la actualización por lotes de licencias.
 
