@@ -6,6 +6,9 @@ title: Operaciones de intervalo de tiempo personalizado
 uuid: eadd4d8d-0e03-40ca-ae3b-eede82bf2df8
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '362'
+ht-degree: 0%
 
 ---
 
@@ -16,13 +19,13 @@ La clase CustomRangeMetadata identifica diferentes tipos de intervalos de tiempo
 
 <!--<a id="section_1323C0BAC259424C85A6ACFB48FE77EC"></a>-->
 
-Para la eliminación y sustitución de publicidades, TVSDK utiliza los siguientes modos de operación *de intervalo de tiempo* personalizados:
+Para la eliminación y sustitución de publicidades, TVSDK utiliza los siguientes modos *de operación de intervalo de tiempo personalizado*:
 
-* **MARCA** Este modo se denominaba marcadores de publicidad personalizados en versiones anteriores de TVSDK. El modo marca las horas de inicio y finalización de las publicidades que ya se han colocado en el flujo de VOD. Cuando hay marcadores de intervalo de tiempo de tipo `MARK` en el flujo, `Mode.MARK` se genera una colocación inicial de `CustomMarkerOpportunityGenerator` y se resuelve mediante `CustomRangeResolver`. No se insertan publicidades.
+* **** MARKTeste modo se denominaba marcadores de publicidad personalizados en versiones anteriores de TVSDK. El modo marca las horas de inicio y finalización de las publicidades que ya se han colocado en el flujo de VOD. Cuando hay marcadores de intervalo de tiempo de tipo `MARK` en el flujo, `CustomMarkerOpportunityGenerator` genera una ubicación inicial de `Mode.MARK` y se resuelve mediante `CustomRangeResolver`. No se insertan publicidades.
 
-* **ELIMINAR** Para `DELETE` intervalos de tiempo, se crea una inicial `placementInformation` de tipo `Mode.DELETE` y se resuelve mediante `CustomRangeResolver`. `DeleteRangeTimelineOperation` define los intervalos que se deben eliminar de la línea de tiempo y TVSDK utiliza `removeByLocalTime` la API de motor de vídeo de Adobe (AVE) para completar esta operación. Si hay intervalos ELIMINADOS y metadatos de toma de decisiones de anuncios de Adobe Primetime, primero se eliminan los intervalos y, a continuación, `AuditudeResolver` se resuelven las publicidades utilizando el flujo de trabajo típico de toma de decisiones y de Adobe Primetime.
+* **** DELETEFo intervalos de  `DELETE` tiempo,  `placementInformation` se crea y se resuelve un tipo inicial  `Mode.DELETE` de  `CustomRangeResolver`. `DeleteRangeTimelineOperation` define los intervalos que se deben eliminar de la línea de tiempo y TVSDK utiliza  `removeByLocalTime` de la API del motor de vídeo de Adobe (AVE) para completar esta operación. Si hay rangos de DELETE y metadatos de decisiones de anuncios de Adobe Primetime, primero se eliminan los rangos y, a continuación, `AuditudeResolver` resuelve las publicidades utilizando el flujo de trabajo típico de Adobe Primetime de decisiones de anuncios.
 
-* **REEMPLAZAR** Para `REPLACE` intervalos de tiempo, se crean dos `placementInformations` iniciales, uno `Mode.DELETE` y otro `Mode.REPLACE`. `CustomRangeResolver` elimina primero los intervalos de tiempo y, a continuación, `AuditudeResolver` inserta las publicidades de la `replaceDuration` línea de tiempo especificada. Si no `replaceDuration` se especifica ninguno, el servidor determina qué se va a insertar.
+* **** REEMPLAZOo intervalos de  `REPLACE` tiempo,  `placementInformations` se crean dos intervalos iniciales, uno  `Mode.DELETE` y uno  `Mode.REPLACE`. `CustomRangeResolver` elimina primero los intervalos de tiempo y, a continuación,  `AuditudeResolver` inserta las publicidades del valor especificado  `replaceDuration` en la línea de tiempo. Si no se especifica `replaceDuration`, el servidor determina qué insertar.
 
 Para admitir estas operaciones de intervalo de tiempo personalizado, TVSDK proporciona lo siguiente:
 
