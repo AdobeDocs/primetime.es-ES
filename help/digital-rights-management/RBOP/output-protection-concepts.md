@@ -6,6 +6,9 @@ title: Conceptos de RBOP
 uuid: fc19c3c9-39a1-4b62-b763-101e5454a01f
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
