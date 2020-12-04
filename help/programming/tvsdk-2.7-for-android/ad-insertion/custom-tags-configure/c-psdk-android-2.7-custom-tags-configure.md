@@ -23,7 +23,7 @@ Los flujos de medios pueden incluir metadatos adicionales en forma de etiquetas 
 >
 >Esta función no está disponible para Safari en equipos Apple, ya que TVSDK utiliza la etiqueta de vídeo, en lugar de Flash o MSE, para reproducir contenido HLS.
 
-TVSDK proporciona compatibilidad lista para usar con etiquetas `#EXT` publicitarias específicas. La aplicación puede utilizar etiquetas personalizadas para mejorar el flujo de trabajo de la publicidad o para admitir situaciones de bloqueo. Para admitir flujos de trabajo avanzados, TVSDK permite especificar y suscribirse a etiquetas adicionales en el manifiesto. Puede recibir una notificación cuando estas etiquetas aparezcan en el archivo de manifiesto.
+TVSDK proporciona compatibilidad lista para usar con etiquetas de publicidad específicas `#EXT`. La aplicación puede utilizar etiquetas personalizadas para mejorar el flujo de trabajo de la publicidad o para admitir situaciones de bloqueo. Para admitir flujos de trabajo avanzados, TVSDK permite especificar y suscribirse a etiquetas adicionales en el manifiesto. Puede recibir una notificación cuando estas etiquetas aparezcan en el archivo de manifiesto.
 
 >[!TIP]
 >
@@ -65,8 +65,8 @@ seg5.ts
 
 La aplicación puede configurar los siguientes escenarios:
 
-* Una notificación cuando `#EXT-X-ASSET` las etiquetas, o cualquier otro conjunto de nombres de etiquetas personalizados al que se haya suscrito, existan en el archivo.
-* Inserte publicidades cuando se encuentre una `#EXT-X-AD` etiqueta o cualquier otro nombre de etiqueta personalizado en el flujo.
+* Una notificación cuando `#EXT-X-ASSET` etiquetas, o cualquier otro conjunto de nombres de etiquetas personalizados al que se haya suscrito, existan en el archivo.
+* Inserte publicidades cuando se encuentre una etiqueta `#EXT-X-AD` o cualquier otro nombre de etiqueta personalizado en el flujo.
 
 Puede suscribirse a cualquiera de las etiquetas siguientes como etiquetas personalizadas:
 
@@ -76,6 +76,6 @@ Puede suscribirse a cualquiera de las etiquetas siguientes como etiquetas person
 * `EXT-X-CUE`
 * `EXT-X-ENDLIST`
 
-Se le notificará con un `TimedMetadata` evento durante el análisis de los archivos de manifiesto.
+Se le notificará con un evento `TimedMetadata` durante el análisis de los archivos de manifiesto.
 
-Hay algunas etiquetas de publicidad, como `EXT-X-CUE`la que ya está suscrito. Estas etiquetas de publicidad también se utilizan en el generador de oportunidades predeterminado. Puede especificar qué etiquetas de publicidad utiliza el generador de oportunidades predeterminado si establece la `adTags` propiedad.
+Hay algunas etiquetas de publicidad, como `EXT-X-CUE`, a las que ya está suscrito. Estas etiquetas de publicidad también se utilizan en el generador de oportunidades predeterminado. Puede especificar qué etiquetas de publicidad utiliza el generador de oportunidades predeterminado si establece la propiedad `adTags`.
