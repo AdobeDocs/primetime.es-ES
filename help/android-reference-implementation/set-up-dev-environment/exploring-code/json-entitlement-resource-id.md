@@ -6,11 +6,14 @@ description: El siguiente bloque de código proporciona un ejemplo de un objeto 
 seo-description: El siguiente bloque de código proporciona un ejemplo de un objeto JSON cuando el ID del recurso de asignación de derechos es una cadena de texto simple.
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
 
-# Objeto JSON para el ID de recurso de asignación de derechos {#json-object-for-entitlement-resource-id}
+# Objeto JSON para el identificador de recurso de asignación de derechos {#json-object-for-entitlement-resource-id}
 
 El siguiente bloque de código proporciona un ejemplo de un objeto JSON cuando el ID del recurso de asignación de derechos es una cadena de texto simple. En este caso, el ID de recurso es la cadena &quot;resource&quot;.
 
