@@ -6,6 +6,9 @@ title: Modo de señalización e intervalo de tiempo
 uuid: a4d2b0f3-49ce-4a07-a460-9e63bb91b5d3
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '91'
+ht-degree: 0%
 
 ---
 
@@ -17,13 +20,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
   <tr> 
    <th class="entry"> </th> 
    <th class="entry"> MARCAR </th> 
-   <th class="entry"> ELIMINAR </th> 
+   <th class="entry"> DELETE </th> 
    <th class="entry"> REEMPLAZAR </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> Generador de oportunidades de intervalo personalizado </span> </td> 
+   <td> <span class="codeph"> Generador de oportunidades de intervalo personalizado  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -42,7 +45,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modo de señalización de ServerMap </span> </td> 
+   <td> <span class="codeph"> Modo de  </span> señalización de ServerMap </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -65,7 +68,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
    <td> N/D (modo de señalización CustomRange automático) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modo de señalización ManifestCue </span> </td> 
+   <td> <span class="codeph"> Modo de  </span> señalización ManifestCue </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -89,7 +92,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
    <td> N/D (modo de señalización CustomRange automático) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modo de señalización CustomRange </span> </td> 
+   <td> <span class="codeph"> Modo de  </span> señalización CustomRange </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -136,13 +139,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
   <tr> 
    <th class="entry"> </th> 
    <th class="entry"> MARCAR </th> 
-   <th class="entry"> ELIMINAR </th> 
+   <th class="entry"> DELETE </th> 
    <th class="entry"> REEMPLAZAR </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator </span> </td> 
+   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -161,7 +164,7 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
     </code> </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modo de señalización de SeverMap </span> </td> 
+   <td> <span class="codeph"> Modo de  </span> señalización de SeverMap </td> 
    <td> No está presente (la publicidad está deshabilitada). </td> 
    <td> 
     <code>
@@ -172,10 +175,10 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> N/D (modo de señalización <span class="codeph"> de rango personalizado </span> automático) </td> 
+   <td> N/D (modo de señalización automático <span class="codeph"> CustomRange </span>) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modo de señalización ManifestCue </span> </td> 
+   <td> <span class="codeph"> Modo de  </span> señalización ManifestCue </td> 
    <td> No está presente (la publicidad está deshabilitada). </td> 
    <td> 
     <code>
@@ -186,13 +189,13 @@ source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> N/D (modo de señalización <span class="codeph"> de rango personalizado </span> automático) </td> 
+   <td> N/D (modo de señalización automático <span class="codeph"> CustomRange </span>) </td> 
   </tr> 
   <tr> 
-   <td> <span class="codeph"> Modo de señalización CustomRange </span> </td> 
+   <td> <span class="codeph"> Modo de  </span> señalización CustomRange </td> 
    <td> No está presente (la publicidad está deshabilitada). </td> 
    <td> Ninguno </td> 
-   <td> Ninguno (se realiza en <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
+   <td> Ninguno (se ha cuidado en <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
   </tr> 
  </tbody> 
 </table>
