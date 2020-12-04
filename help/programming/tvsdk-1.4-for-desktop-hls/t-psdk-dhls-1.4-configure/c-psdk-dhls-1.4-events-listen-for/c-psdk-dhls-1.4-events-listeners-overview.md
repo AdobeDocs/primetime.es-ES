@@ -6,19 +6,22 @@ title: Escuchar eventos de Primetime Player
 uuid: e72782bf-9d26-4285-85e4-fd4d803c1bbe
 translation-type: tm+mt
 source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 0%
 
 ---
 
 
 # Información general {#implement-event-listeners-and-callbacks-overview}
 
-Los controladores de eventos permiten que TVSDK responda a los eventos. Cuando se produce un evento, el mecanismo de eventos de TVSDK llama al controlador de eventos registrado y pasa la información del evento al controlador.
+Los controladores de evento permiten que TVSDK responda a eventos. Cuando se produce un evento, el mecanismo de evento de TVSDK llama al controlador de evento registrado y pasa la información de evento al controlador.
 
-Flash Runtime proporciona un mecanismo de eventos genérico, que el TVSDK también utiliza y define una serie de eventos personalizados. La aplicación debe implementar detectores de eventos para los eventos TVSDK que afecten a la aplicación.
+Flash Runtime proporciona un mecanismo de eventos genérico, que el TVSDK también utiliza y define una serie de eventos personalizados. La aplicación debe implementar detectores de evento para eventos TVSDK que afecten a la aplicación.
 
-Para obtener una lista completa de los eventos de análisis de vídeo, consulte [Seguimiento de la reproducción](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/c_vhl_track-core-vid-playback.html)de vídeo principal.
+Para obtener una lista completa de los eventos para el análisis de vídeo, consulte [Reproducción de vídeo principal de seguimiento](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/hbvideo/c_vhl_track-core-vid-playback.html).
 
-1. Determinar los eventos que debe escuchar la aplicación.
+1. Determine los eventos que debe escuchar la aplicación.
 
    * **Eventos** requeridos: Escuche todos los eventos de reproducción.
 
@@ -28,13 +31,13 @@ Para obtener una lista completa de los eventos de análisis de vídeo, consulte 
 
    * **Otros eventos**: Opcional, según la aplicación.
 
-      Por ejemplo, si incorpora publicidad en la reproducción, escuche todos los `AdBreakPlaybackEvent` eventos y `AdPlaybackEvent` los eventos.
+      Por ejemplo, si incorpora publicidad en la reproducción, escuche todos los eventos `AdBreakPlaybackEvent` y `AdPlaybackEvent`.
 
-1. Implementar detectores de eventos para cada evento.
+1. Implementar escuchas de evento para cada evento.
 
-   TVSDK devuelve valores de parámetro a las llamadas de retorno de event-listener. Estos valores proporcionan información relevante sobre el evento que puede utilizar en los oyentes para realizar las acciones adecuadas.
+   TVSDK devuelve valores de parámetro a las llamadas de retorno de oyente de evento. Estos valores proporcionan información relevante sobre el evento que puede utilizar en los oyentes para realizar las acciones adecuadas.
 
-   La `Event` clase enumera todas las interfaces de llamada de retorno. Cada interfaz muestra los parámetros que se devuelven para esa interfaz.
+   La clase `Event` lista todas las interfaces de llamada de retorno. Cada interfaz muestra los parámetros que se devuelven para esa interfaz.
 
    Por ejemplo:
 
@@ -46,9 +49,9 @@ Para obtener una lista completa de los eventos de análisis de vídeo, consulte 
                    error:MediaError = null) 
    ```
 
-1. Registre los oyentes de llamada de retorno con el `MediaPlayer` objeto mediante `MediaPlayer.addEventListener`.
+1. Registre los oyentes de llamada de retorno con el objeto `MediaPlayer` mediante `MediaPlayer.addEventListener`.
 
-   `MediaPlayer` prolonga `flash.events.IEventDispatcher`, que forma parte de los archivos principales de Flash Player e incluye las funciones `addEventListener` y `removeEventListener`.
+   `MediaPlayer` prolonga  `flash.events.IEventDispatcher`, que forma parte de los archivos principales de Flash Player e incluye las funciones  `addEventListener` y  `removeEventListener`.
 
    ```
    mediaPlayer.addEventListener( 
