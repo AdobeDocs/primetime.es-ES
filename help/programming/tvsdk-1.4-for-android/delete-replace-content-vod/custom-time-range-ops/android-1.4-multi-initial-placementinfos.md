@@ -6,11 +6,14 @@ title: Múltiples informaciones iniciales de ubicación
 uuid: e0f549d7-3092-45e9-bd67-ee41d01075b5
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '30'
+ht-degree: 0%
 
 ---
 
 
-# Múltiples informaciones iniciales de ubicación{#multiple-initial-placementinformations}
+# Varias informaciones iniciales de ubicación{#multiple-initial-placementinformations}
 
 TVSDK puede configurar varias informaciones iniciales de ubicación.
 
