@@ -15,7 +15,7 @@ ht-degree: 0%
 
 El archivo de configuración de la herramienta de línea de comandos de Adobe Access Media Packager requiere una credencial PKCS12 que se utiliza durante el empaquetado.
 
-En las herramientas de la línea de comandos de implementación de referencia, la contraseña del archivo de credenciales PKCS12 se almacena en el archivo flashaccess.properties en texto sin formato. Por este motivo, tenga especial cuidado al proteger el equipo que aloja este archivo y asegúrese de que se encuentra en un entorno seguro. (Consulte Seguridad [física y acceso](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md)).
+En las herramientas de la línea de comandos de implementación de referencia, la contraseña del archivo de credenciales PKCS12 se almacena en el archivo flashaccess.properties en texto sin formato. Por este motivo, tenga especial cuidado al proteger el equipo que aloja este archivo y asegúrese de que se encuentra en un entorno seguro. (Consulte [Seguridad física y acceso](../../aaxs-secure-deployment-guidelines/physical-sec-and-access.md)).
 
 El empaquetador también utiliza los certificados de servidor de licencias y transporte del servidor de licencias. Debe protegerse tanto la integridad como la confidencialidad de esta información. Sólo las entidades autorizadas podrán utilizar el empaquetador. Si alguna de las claves privadas está en peligro, informe inmediatamente a Adobe Systems Incorporated para que se pueda revocar el certificado.
 
