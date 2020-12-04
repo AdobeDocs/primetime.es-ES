@@ -23,5 +23,5 @@ El comportamiento de sincronización se define con los siguientes parámetros:
 
 >[!NOTE]
 >
->Esta regla de uso es compatible con los clientes de Adobe Access versión 3.0 y posterior. El comportamiento de los clientes más antiguos depende de la versión mínima del cliente admitida por el servidor de licencias. Consulte Versión [mínima del cliente](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
+>Esta regla de uso es compatible con los clientes de Adobe Access versión 3.0 y posterior. El comportamiento de los clientes más antiguos depende de la versión mínima del cliente admitida por el servidor de licencias. Consulte, [Versión mínima del cliente](../../../aaxs-protecting-content/content-implementing-the-license-server/content-handling-license-reqs/content-minimum-client-version.md).
 
