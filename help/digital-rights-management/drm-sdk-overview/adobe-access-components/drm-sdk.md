@@ -1,16 +1,19 @@
 ---
-description: Los componentes principales de Primetime DRM consisten en un SDK de Java y los entornos de tiempo de ejecución de cliente de Flash Player y Adobe AIR.
-seo-description: Los componentes principales de Primetime DRM consisten en un SDK de Java y los entornos de tiempo de ejecución de cliente de Flash Player y Adobe AIR.
-seo-title: SDK de Java, Flash Player y cliente de Adobe AIR
-title: SDK de Java, Flash Player y cliente de Adobe AIR
+description: Los componentes principales de Primetime DRM consisten en un SDK de Java y los entornos de tiempo de ejecución del cliente de Flash Player y Adobe AIR.
+seo-description: Los componentes principales de Primetime DRM consisten en un SDK de Java y los entornos de tiempo de ejecución del cliente de Flash Player y Adobe AIR.
+seo-title: Cliente Java SDK, Flash Player y Adobe AIR
+title: Cliente Java SDK, Flash Player y Adobe AIR
 uuid: e6daed27-3803-4ef7-ba25-4a180af7502f
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '462'
+ht-degree: 0%
 
 ---
 
 
-# Adobe Primetime DRM SDK {#section_522E57DFEEFF4794978FF2D366B83690}
+# SDK de Adobe Primetime DRM {#section_522E57DFEEFF4794978FF2D366B83690}
 
 Primetime DRM se entrega como un SDK de Java que proporciona los componentes básicos a partir de los cuales puede crear una implementación de servidor. Con el SDK puede crear una solución de DRM Primetime que se adapte al modelo de negocio de su organización.
 
@@ -28,7 +31,7 @@ Estas API se utilizan para definir derechos y preparar el contenido para la dist
 
 * Gestión de políticas
 
-   La API de administración de políticas se utiliza para crear y modificar políticas que se aplicarán al contenido. Las políticas se pueden crear o actualizar, incluida la obtención o configuración de todas las reglas de uso y la posibilidad de usar parámetros adicionales en un espacio de nombres personalizado.
+   La API de administración de políticas se utiliza para crear y modificar políticas que se aplicarán al contenido. Las políticas se pueden crear o actualizar, incluida la obtención/configuración de todas las reglas de uso y la posibilidad de usar parámetros adicionales en una Área de nombres personalizada.
 
 * Empaquetado de contenido
 
