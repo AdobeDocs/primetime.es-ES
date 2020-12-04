@@ -4,6 +4,9 @@ title: Licencias fuera de banda
 uuid: 43397ce5-6c52-429d-b7fa-fa8c91cf9742
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '96'
+ht-degree: 0%
 
 ---
 
