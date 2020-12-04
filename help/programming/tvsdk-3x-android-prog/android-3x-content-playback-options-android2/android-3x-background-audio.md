@@ -4,6 +4,9 @@ title: Habilitar audio de fondo
 uuid: aa6dc934-e85c-4db1-901b-9777f47106e6
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '63'
+ht-degree: 0%
 
 ---
 
