@@ -6,6 +6,9 @@ title: Requisitos de contenido y manifiesto
 uuid: 22ee7d02-b06d-4162-a8a4-a2391658fdb3
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '207'
+ht-degree: 0%
 
 ---
 
@@ -18,11 +21,11 @@ Compruebe las restricciones y los requisitos de los flujos y listas de reproducc
  <tbody> 
   <tr> 
    <td colname="col1"> Duración del segmento de contenido </td> 
-   <td colname="col2"> La duración de un segmento no debe superar la duración de destino especificada en el archivo de manifiesto. </td> 
+   <td colname="col2"> La duración de un segmento no debe superar la duración del destinatario especificada en el archivo de manifiesto. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Requisito de contenido </td> 
-   <td colname="col2"> Cada segmento de TS debe comenzar con un marco clave. </td> 
+   <td colname="col2"> Cada segmento de TS debe tener un inicio con un marco clave. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Contenido de HLS </td> 
