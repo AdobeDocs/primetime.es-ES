@@ -17,9 +17,9 @@ ht-degree: 0%
 
 Puede configurar el reproductor para que lea las estadísticas de reproducción y dispositivo desde QoSProvider con la frecuencia necesaria.
 
-La `QoSProvider` clase proporciona varias estadísticas, incluida la velocidad de fotogramas, la velocidad de bits de perfil, el tiempo total empleado en el almacenamiento en búfer, el número de intentos de almacenamiento en búfer, el tiempo que tardó en obtenerse el primer byte del primer fragmento de vídeo, el tiempo que tardó en procesarse el primer fotograma, la duración del almacenamiento en búfer en ese momento y el tiempo de búfer.
+La clase `QoSProvider` proporciona varias estadísticas, incluida la velocidad de fotogramas, la velocidad de bits de perfil, el tiempo total empleado en el almacenamiento en búfer, el número de intentos de almacenamiento en búfer, el tiempo que tardó en obtenerse el primer byte del primer fragmento de vídeo, el tiempo que tardó en procesarse el primer fotograma, la longitud almacenada en el búfer actualmente y el tiempo de búfer.
 
-La implementación de referencia proporciona una `QoSManager` clase en la que puede habilitar la visualización de la superposición de QoS. También puede activar la visibilidad de QoS en la interfaz de usuario Configuración:
+La implementación de referencia proporciona una clase `QoSManager` donde puede habilitar la visualización de la superposición de QoS. También puede activar la visibilidad de QoS en la interfaz de usuario Configuración:
 
 ![](assets/qos-configuration.jpg)
 
@@ -41,7 +41,7 @@ El `QoSManager` rastrea las estadísticas de QoS obteniendo información del dis
 
    >[!NOTE]
    >
-   >Cambiar el valor booleano a `false` deshabilita el sistema de informes de QoS.
+   >Si se cambia el valor booleano a `false`, se deshabilita el sistema de informes de QoS.
 
 2. Añadir oyentes de evento:
 
@@ -53,7 +53,7 @@ El `QoSManager` rastrea las estadísticas de QoS obteniendo información del dis
 
    >[!NOTE]
    >
-   >Cuando se vaya a destruir la actividad del reproductor, asegúrese de llamar a [qosManager.destroyQOSProvider](https://help.adobe.com/en_US/primetime/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html#destroyQOSProvider()) para limpiar el proveedor de QOS desconectándolo del reproductor de medios.
+   >Cuando la actividad del reproductor vaya a destruirse, asegúrese de llamar a [qosManager.destroyQOSProvider](https://help.adobe.com/en_US/primetime/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/QosManager.html#destroyQOSProvider()) para limpiar el proveedor de QOS desconectándolo del reproductor de medios.
 
 **Documentación de API relacionada**
 
