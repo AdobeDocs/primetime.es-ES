@@ -6,6 +6,9 @@ title: Gramática RBOP
 uuid: d9064e39-593a-4767-b835-287640b4c94a
 translation-type: tm+mt
 source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+workflow-type: tm+mt
+source-wordcount: '486'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ AnotherRule ::=
     DifferentForm 
 ```
 
-## Aplicación de las reglas gramaticales {#section_A7216BD585FF4EB88737B643B36C2781}
+## Aplicación de las reglas de gramática {#section_A7216BD585FF4EB88737B643B36C2781}
 
 >[!NOTE]
 >
@@ -66,7 +69,7 @@ AnotherRule ::=
    }
    ```
 
-   la siguiente instancia no sería válida, ya que hay dos `foo` pares dentro del mismo objeto:
+   la siguiente instancia no sería válida, ya que hay dos pares `foo` dentro del mismo objeto:
 
    ```
    { 
@@ -98,13 +101,13 @@ AnotherRule ::=
 
    es válido, ya que son instancias independientes del mismo objeto.
 
-1. Para las definiciones en las que se puede elegir una o varias secuencias de cadenas, trate las cadenas como un conjunto, en el que las entradas duplicadas se tratan como una sola entrada. Por ejemplo, `["foo", "bar", "foo", "baz"]` es equivalente a `["foo", "bar", "baz"]`
+1. Para las definiciones en las que se puede elegir una o varias secuencias de cadenas, trate las cadenas como un conjunto, en el que las entradas de duplicado se tratan como una sola entrada. Por ejemplo: `["foo", "bar", "foo", "baz"]` es equivalente a `["foo", "bar", "baz"]`
 
 1. Para definir números, se utiliza un espacio entre las reglas (por ejemplo, `Digit Digits`), pero no se debe utilizar dicho espacio al aplicar la regla.
 
-   Por ejemplo, si expresamos el número *ciento veintitrés* por la regla NonZeroInteger, debería expresarse como `123` en lugar de `1 2 3`, aunque la regla contenga un espacio entre NonZeroDigit y Digits.
+   Por ejemplo, si expresamos el número *ciento veintitrés* por la regla NonZeroInteger, debería expresarse como `123` en lugar de como `1 2 3`, aunque la regla contenga un espacio entre NonZeroDigit y Digits.
 
-1. Algunas de las reglas permiten varios formularios. En estos casos, los diferentes formularios se separan por el `'|'` carácter.
+1. Algunas de las reglas permiten varios formularios. En estos casos, los diferentes formularios se separan con el carácter `'|'`.
 
    Por ejemplo, esta regla:
 
@@ -235,7 +238,7 @@ NonZeroDigit ::=
 
 ## Semánticos: Configuraciones legales pero no válidas {#section_709BE240FF0041D4A1B0A0A7544E4966}
 
-El tema Configuración *de protección de salida de* muestra presentaba una configuración válida junto con su significado semántico. La sección anterior de *este* tema presentaba las reglas gramaticales para las configuraciones. Aunque la gramática ayuda a garantizar la corrección sintáctica, hay configuraciones sintácticamente legales que no son semánticamente correctas (es decir, no son lógicas). Esta sección presenta configuraciones que son *sintácticamente* legales, pero *semánticamente* incorrectas. Tenga en cuenta que los ejemplos de esta sección se han reducido a la estructura mínima necesaria para ilustrar el escenario que se está discutiendo.
+El tema *Configuración de protección de salida de muestra* presentaba una configuración válida junto con su significado semántico. La sección anterior del tema *this* presentaba las reglas gramaticales para las configuraciones. Aunque la gramática ayuda a garantizar la corrección sintáctica, hay configuraciones sintácticamente legales que no son semánticamente correctas (es decir, no son lógicas). Esta sección presenta configuraciones que son *sintácticamente* legales, pero *semánticamente* incorrectas. Tenga en cuenta que los ejemplos de esta sección se han reducido a la estructura mínima necesaria para ilustrar el escenario que se está discutiendo.
 
 * No es válido definir varias restricciones de píxeles con el mismo recuento de píxeles.
 
