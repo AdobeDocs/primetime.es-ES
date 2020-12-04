@@ -6,19 +6,22 @@ title: Trabajo con objetos de MediaPlayer
 uuid: eba26ad7-8c9a-4703-af32-1dfb928f6b67
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '469'
+ht-degree: 0%
 
 ---
 
 
-# Trabajo con objetos de MediaPlayer{#work-with-mediaplayer-objects}
+# Trabajar con objetos de MediaPlayer{#work-with-mediaplayer-objects}
 
 El objeto PTMediaPlayer representa el reproductor multimedia. Un PTMediaPlayerItem representa audio o vídeo en el reproductor.
 
 ## Acerca de la clase MediaPlayerItem {#section_B6F36C0462644F5C932C8AA2F6827071}
 
-Después de cargar correctamente un recurso multimedia, TVSDKcrea una instancia de la `PTMediaPlayerItem` clase para proporcionar acceso a dicho recurso.
+Después de cargar correctamente un recurso multimedia, TVSDK crea una instancia de la clase `PTMediaPlayerItem` para proporcionar acceso a ese recurso.
 
-El `PTMediaPlayer` resuelve el recurso de medios, carga el archivo de manifiesto asociado y analiza el manifiesto. Es la parte asincrónica del proceso de carga de recursos. La `PTMediaPlayerItem` instancia se produce después de que el recurso se haya resuelto y esta instancia es una versión resuelta de un recurso de medios. TVSDK proporciona acceso a la `PTMediaPlayerItem` instancia recién creada a través de `PTMediaPlayer.currentItem`.
+El `PTMediaPlayer` resuelve el recurso de medios, carga el archivo de manifiesto asociado y analiza el manifiesto. Es la parte asincrónica del proceso de carga de recursos. La instancia `PTMediaPlayerItem` se produce una vez resuelto el recurso y esta instancia es una versión resuelta de un recurso de medios. TVSDK proporciona acceso a la instancia `PTMediaPlayerItem` recién creada mediante `PTMediaPlayer.currentItem`.
 
 >[!TIP]
 >
@@ -26,16 +29,16 @@ El `PTMediaPlayer` resuelve el recurso de medios, carga el archivo de manifiesto
 
 ## Ciclo de vida del objeto MediaPlayer {#section_D87EF7FBC7B442BDBE825156DC2C1CCF}
 
-Desde el momento en que se crea la `PTMediaPlayer` instancia hasta el momento en que se finaliza (se reutiliza o se elimina), esta instancia completa una serie de transiciones de un estado a otro.
+Desde el momento en que se crea la instancia `PTMediaPlayer` hasta el momento en que se termina (se vuelve a utilizar o se elimina), esta instancia completa una serie de transiciones de un estado a otro.
 
-Algunas operaciones solo se permiten cuando el reproductor se encuentra en un estado concreto. Por ejemplo, no se permite llamar `play` en `PTMediaPlayerStatusCreated` . Puede llamar a este estado sólo después de que el reproductor alcance el `PTMediaPlayerStatusReady` estado.
+Algunas operaciones solo se permiten cuando el reproductor se encuentra en un estado concreto. Por ejemplo, no se permite llamar a `play` en `PTMediaPlayerStatusCreated`. Sólo puede llamar a este estado después de que el reproductor alcance el estado `PTMediaPlayerStatusReady`.
 
 Para trabajar con estados:
 
 * Puede recuperar el estado actual del objeto MediaPlayer con `PTMediaPlayer.status`.
-* La lista de estados se define en `PTMediaPlayerStatus`.
+* La lista de los estados se define en `PTMediaPlayerStatus`.
 
-Diagrama de transición de estado para el ciclo vital de una instancia de MediaPlayer:
+Diagrama de estado-transición para el ciclo vital de una instancia de MediaPlayer:
 <!--<a id="fig_1C55DE3F186F4B36AFFDCDE90379534C"></a>-->
 
 ![](assets/player-state-transitions-diagram-ios2_web.png)
@@ -56,7 +59,7 @@ En la tabla siguiente se proporcionan detalles adicionales:
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> PTMediaPlayerStatusInitializing</span> </p> </td> 
-   <td colname="col2"> <p>La aplicación llama a <span class="codeph"> PTMediaPlayer.replaceCurrentItemWithPlayerItem</span>y se está cargando el reproductor multimedia. </p> </td> 
+   <td colname="col2"> <p>La aplicación llama a <span class="codeph"> PTMediaPlayer.replaceCurrentItemWithPlayerItem</span> y se está cargando el reproductor multimedia. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusInitialized</span> </p> </td> 
@@ -72,7 +75,7 @@ En la tabla siguiente se proporcionan detalles adicionales:
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusPaused</span> </p> </td> 
-   <td colname="col2"> <p>A medida que la aplicación se reproduce y pone en pausa el medio, el reproductor de medios se mueve entre este estado y <span class="codeph"> PTMediaPlayerStatusPlaying</span>. </p> </td> 
+   <td colname="col2"> <p>A medida que la aplicación reproduce y pausa el medio, el reproductor de medios se mueve entre este estado y <span class="codeph"> PTMediaPlayerStatusPlaying</span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><span class="codeph"> PTMediaPlayerStatusCompleted</span> </p> </td> 
