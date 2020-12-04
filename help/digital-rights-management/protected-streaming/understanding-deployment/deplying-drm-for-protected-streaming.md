@@ -17,16 +17,16 @@ Para poder implementar el servidor DRM de Adobe Primetime para flujo protegido, 
 
 El paquete Primetime DRM Server for Protected Streaming incluye [!DNL flashaccesserver.war]. Si:
 
-* Desea implementar este archivo WAR, debe copiarlo en el directorio de Tomcat [!DNL webapps] .
-* Si ya ha implementado el archivo WAR, es posible que deba eliminar el directorio WAR desempaquetado ( [!DNL flashaccessserver] en el directorio [!DNL webapps] de Tomcat).
+* Si desea implementar este archivo WAR, debe copiarlo en el directorio [!DNL webapps] de Tomcat.
+* Ya implementó el archivo WAR, es posible que deba eliminar el directorio WAR desempaquetado ( [!DNL flashaccessserver] en el directorio [!DNL webapps] de Tomcat).
 
-* Quiere evitar que Tomcat descomprima archivos WAR, edite el [!DNL server.xml] archivo en el directorio [!DNL conf] de Tomcat y configure el `unpackWARs` atributo configurándolo en `false`.
+* Desea evitar que Tomcat descomprima archivos WAR, edite el archivo [!DNL server.xml] en el directorio [!DNL conf] de Tomcat y configure el atributo `unpackWARs` configurándolo en `false`.
 
 >[!NOTE]
 >
 >Si ha configurado Tomcat para que incluya [!DNL commons-logging.jar] en la ruta de clases del sistema (no es necesario para Primetime DRM Server para flujo protegido), debe configurar el registro común para utilizar Log4J.
 
-Opcionalmente, el servidor utiliza una biblioteca específica de la plataforma ( [!DNL jsafe.dll] en Microsoft Windows o [!DNL libjsafe.so] en Linux para un rendimiento óptimo. Puede copiar la biblioteca adecuada para su plataforma desde la [!DNL thirdparty/cryptoj/]*plataforma *a una ubicación especificada por la variable de`PATH`entorno o`LD_LIBRARY_PATH`en Linux.
+El servidor opcionalmente utiliza una biblioteca específica de la plataforma ( [!DNL jsafe.dll] en Microsoft Windows o [!DNL libjsafe.so] en Linux para un rendimiento óptimo. Puede copiar la biblioteca adecuada para su plataforma desde [!DNL thirdparty/cryptoj/]*platform* a una ubicación especificada por la variable de entorno `PATH` o `LD_LIBRARY_PATH` en Linux.
 
 >[!NOTE]
 >
