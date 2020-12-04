@@ -14,8 +14,8 @@ ht-degree: 0%
 # Implementar la implementación de referencia de BEES {#deploy-the-bees-reference-implementation}
 
 1. Configure el servidor de aplicaciones de Tomcat. (Consulte la documentación de Tomcat.)
-1. Copie el `[!DNL bees.war]` archivo en la [!DNL webapps/] carpeta de Tomcat.
-1. Enviar una solicitud a `https://localhost:8080/bees`.
+1. Copie el archivo `[!DNL bees.war]` en la carpeta [!DNL webapps/] de Tomcat.
+1. Envíe una solicitud a `https://localhost:8080/bees`.
 
    Si aparece el mensaje &quot;BEES está operativo&quot;, la implementación se completa correctamente.
 1. Habilite SSL en el servidor.
