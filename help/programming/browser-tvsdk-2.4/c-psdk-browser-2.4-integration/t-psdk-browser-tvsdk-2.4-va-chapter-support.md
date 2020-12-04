@@ -6,6 +6,9 @@ title: Implementar compatibilidad con capítulos
 uuid: 70f10621-febe-4443-84e7-ce95bec53377
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 0%
 
 ---
 
