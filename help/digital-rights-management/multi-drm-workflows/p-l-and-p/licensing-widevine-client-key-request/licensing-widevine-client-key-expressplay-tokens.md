@@ -6,6 +6,9 @@ title: Tokens de Expressplay
 uuid: 6103e1b2-127d-4758-a589-15f0f3c73db1
 translation-type: tm+mt
 source-git-commit: d0ba1f98b16f6350ae842ca2ce1261bf49dd8a66
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +28,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-El ID de almacenamiento de la clave de cifrado de contenido o CEKSID otorgado al `kid` parámetro y la clave de cifrado de contenido o CEK otorgada al `contentKey` parámetro deben coincidir con el ID de almacenamiento de la clave de cifrado de contenido y la clave de cifrado de contenido utilizada para el empaquetado. El siguiente texto es un ejemplo de la respuesta del servidor de tokens:
+El ID de almacenamiento de clave de cifrado de contenido o CEKSID otorgado al parámetro `kid` y la clave de cifrado de contenido o CEK otorgado al parámetro `contentKey` deben coincidir con el ID de almacenamiento de clave de cifrado de contenido y la clave de cifrado de contenido utilizado para el empaquetado. El siguiente texto es un ejemplo de la respuesta del servidor de tokens:
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
@@ -36,5 +39,5 @@ https://wv.service.expressplay.com/hms/wv/rights/
 
 A continuación, puede
 
-* utilice la dirección URL y la consulta devueltas como dirección URL del servidor de licencias, o
-* saque la consulta de la dirección URL y pase el ExpressPlayToken por separado como encabezado HTTP POST
+* utilice la URL y la consulta devueltas como URL del servidor de licencias, o
+* extraer la consulta de la dirección URL y pasar ExpressPlayToken por separado como encabezado de POST HTTP
