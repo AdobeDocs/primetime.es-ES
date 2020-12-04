@@ -6,11 +6,14 @@ title: Clases de escala de tiempo
 uuid: dd4af4b4-215e-45cb-8bac-574a461ac1ce
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '244'
+ht-degree: 0%
 
 ---
 
 
-# Clases de escala de tiempo{#timeline-classes}
+# Clases de línea de tiempo{#timeline-classes}
 
 Estas clases proporcionan información sobre la cronología de los medios en particular, incluida la colocación de los anuncios.
 
@@ -33,11 +36,11 @@ Paquete: [com.adobe.mediacore.timeline](https://help.adobe.com/en_US/primetime/a
    <td colname="2"> Interfaz que proporciona un iterador para procesar marcadores de línea de tiempo. Representa la línea de tiempo del contenido, incluidos los saltos de publicidad. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> TimelineItem</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineItem.html" format="html" scope="external"> TimelineItem</a> </span> </td> 
    <td colname="2"> Clase. Representación inmutable genérica de un elemento de línea de tiempo. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineMarker.html" format="html" scope="external"> Marcador</a> de línea de tiempo </span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/timeline/TimelineMarker.html" format="html" scope="external"> Marcador de línea de tiempo</a> </span> </td> 
    <td colname="2"> Interfaz que representa un marcador en la línea de tiempo. Esto marca una región de interés en la línea de tiempo real. Actualmente, las regiones de interés son las publicidades, que puede que desee marcar, por ejemplo, con un color diferente en la IU de la barra de desplazamiento. Cada marcador se define mediante una posición y una duración (cada una expresada en milisegundos). </td> 
   </tr> 
   <tr rowsep="0"> 
