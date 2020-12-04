@@ -1,18 +1,21 @@
 ---
-description: Un detector de oportunidades es un componente TVADK que detecta etiquetas personalizadas en un flujo e identifica las oportunidades de colocación. Estas oportunidades se envían a la resolución de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y los metadatos de la oportunidad de colocación.
-seo-description: Un detector de oportunidades es un componente TVADK que detecta etiquetas personalizadas en un flujo e identifica las oportunidades de colocación. Estas oportunidades se envían a la resolución de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y los metadatos de la oportunidad de colocación.
+description: Un detector de oportunidades es un componente TVADK que detecta etiquetas personalizadas en un flujo e identifica las oportunidades de colocación. Estas oportunidades se envían a la resolución de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y metadatos de la oportunidad de colocación.
+seo-description: Un detector de oportunidades es un componente TVADK que detecta etiquetas personalizadas en un flujo e identifica las oportunidades de colocación. Estas oportunidades se envían a la resolución de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y metadatos de la oportunidad de colocación.
 seo-title: Personalización de detectores de oportunidades y resolución de contenido
 title: Personalización de detectores de oportunidades y resolución de contenido
 uuid: 7bd04c8f-6f04-4321-88e8-9bb93251d940
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '254'
+ht-degree: 0%
 
 ---
 
 
 # Información general {#customize-opportunity-detectors-and-content-resolvers-overiew}
 
-Un detector de oportunidades es un componente TVADK que detecta etiquetas personalizadas en un flujo e identifica las oportunidades de colocación. Estas oportunidades se envían a la resolución de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y los metadatos de la oportunidad de colocación.
+Un detector de oportunidades es un componente TVADK que detecta etiquetas personalizadas en un flujo e identifica las oportunidades de colocación. Estas oportunidades se envían a la resolución de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y metadatos de la oportunidad de colocación.
 
 TVSDK incluye detectores de oportunidades predeterminados:
 
@@ -22,11 +25,11 @@ TVSDK incluye detectores de oportunidades predeterminados:
 
 TVSDK también incluye una resolución de contenido predeterminada que proporciona el contenido que se va a insertar en función de la clave de metadatos del elemento del reproductor:
 
-* `AuditudeResolver`, capaz de comunicarse con los servidores de toma de decisiones de anuncios (anteriormente conocidos como Auditude) de Adobe Primetime y devolver pausas publicitarias para colocar.
+* `AuditudeResolver`, capaz de comunicarse con los servidores de decisiones de publicidad de Adobe Primetime (anteriormente conocidos como Auditude) y devolver saltos de publicidad para colocar.
 
 Puede anular los detectores de oportunidades y los solucionadores de contenido predeterminados para personalizar el flujo de trabajo de la publicidad de las siguientes formas:
 
-* Agregar compatibilidad con la detección de etiquetas personalizada
+* Añadir compatibilidad con la detección de etiquetas personalizada
 * Reconocer etiquetas personalizadas para la inserción de publicidades
 * Crear un proveedor de publicidad personalizado
 * Contenido de negro
