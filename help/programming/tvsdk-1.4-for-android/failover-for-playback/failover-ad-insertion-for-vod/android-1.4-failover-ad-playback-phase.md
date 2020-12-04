@@ -6,6 +6,9 @@ title: Fase de reproducción de publicidad
 uuid: 1bbcea08-3475-4a64-9f89-c455d5dd828e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '198'
+ht-degree: 0%
 
 ---
 
@@ -30,4 +33,4 @@ Para las tres clases de error, TVSDK reenvía eventos activados a la aplicación
 
    La aplicación debe realizar la acción adecuada.
 
-Independientemente de si se producen errores o no, TVSDK llama a onAdBreakComplete para cada `onAdBreakStart` y `onAdComplete` para cada `onAdStart`. Sin embargo, si no se pudieron descargar los segmentos, es posible que haya espacios en la línea de tiempo. Cuando los huecos son lo suficientemente grandes, los valores en la posición del cursor de reproducción y el progreso del anuncio informado pueden mostrar discontinuidades.
+Independientemente de si se producen errores o no, TVSDK llama a onAdBreakComplete por cada `onAdBreakStart` y `onAdComplete` por cada `onAdStart`. Sin embargo, si no se pudieron descargar los segmentos, es posible que haya espacios en la línea de tiempo. Cuando los huecos son lo suficientemente grandes, los valores en la posición del cursor de reproducción y el progreso del anuncio informado pueden mostrar discontinuidades.
