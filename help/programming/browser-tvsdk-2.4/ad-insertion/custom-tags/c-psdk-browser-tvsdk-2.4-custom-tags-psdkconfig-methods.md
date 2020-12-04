@@ -6,6 +6,9 @@ title: Métodos de clase Config para etiquetas
 uuid: 222a0349-58d5-4bf3-9d03-e5920610faf5
 translation-type: tm+mt
 source-git-commit: b9e98ef2b4246fdfd79ebcd91db344c97367d661
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +17,13 @@ source-git-commit: b9e98ef2b4246fdfd79ebcd91db344c97367d661
 
 Puede configurar nombres de etiquetas personalizados en un flujo con la clase MediaPlayerItemConfig.
 
-To create a new `MediaPlayerItemConfig`:
+Para crear un nuevo `MediaPlayerItemConfig`:
 
 ```js
 var mediaPlayerItemConfig = new AdobePSDK.MediPlayerItemConfig();
 ```
 
-A continuación se proporciona información sobre cómo se utilizan los `MediaPlayerItemConfig` métodos para administrar las etiquetas personalizadas:
+A continuación se muestra información sobre cómo se utilizan los métodos `MediaPlayerItemConfig` para administrar etiquetas personalizadas:
 
 <table id="table_0AC0973497144DDAB05726E3F031ACD1"> 
  <tbody> 
@@ -33,17 +36,17 @@ A continuación se proporciona información sobre cómo se utilizan los `MediaPl
     <code class="syntax javascript">
       var&amp;nbsp;subscribeTagsObtained&amp;nbsp;=&amp;nbsp;mediaPlayerItemConfig.subscribeTags;
     </code> </td> 
-   <td colname="col2"> <p>Recupera la lista actual de etiquetas suscritas. </p> </td> 
+   <td colname="col2"> <p>Recupera la lista actual de las etiquetas suscritas. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 
     <code class="syntax javascript">
       var&nbsp;subscribeTags&nbsp;=&nbsp;["#EXT-X-PROGRAM-DATE-TIME"];mediaPlayerItemConfig.subscribeTags&nbsp;=&nbsp;subscribeTags;
     </code> </td> 
-   <td colname="col2"> <p>Establece la lista de etiquetas suscritas expuestas a la aplicación. </p> <p>La aplicación también se suscribe automáticamente a todas las etiquetas que se transmiten a través de <span class="codeph"> las etiquetas de publicidad </span>. </p> </td> 
+   <td colname="col2"> <p>Define la lista de las etiquetas suscritas expuestas a la aplicación. </p> <p>La aplicación también se suscribe automáticamente a todas las etiquetas que se transmiten a través de <span class="codeph"> adTags </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <b>Personalización de las etiquetas de publicidad utilizadas por el detector de oportunidades predeterminado </b> </td> 
+   <td colname="col1"> <b>Personalización de las etiquetas de publicidad utilizadas por el detector de oportunidades predeterminado  </b> </td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
@@ -51,21 +54,21 @@ A continuación se proporciona información sobre cómo se utilizan los `MediaPl
     <code class="syntax javascript">
       var&amp;nbsp;adTagsObtained&amp;nbsp;=&amp;nbsp;mediaPlayerItemConfig.adTags; 
     </code> </td> 
-   <td colname="col2"> <p>Recupera la lista actual de etiquetas de publicidad. </p> </td> 
+   <td colname="col2"> <p>Recupera la lista actual de las etiquetas de publicidad. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 
     <code class="syntax javascript">
       var&nbsp;adTags&nbsp;=&nbsp;["#EXT-X-CUE"];mediaPlayerItemConfig.adTags&nbsp;=&nbsp;adTags;
     </code> </td> 
-   <td colname="col2"> <p>Establece la lista de etiquetas de publicidad que usará el generador de oportunidades predeterminado. </p> </td> 
+   <td colname="col2"> <p>Establece la lista de las etiquetas de publicidad que usará el generador de oportunidades predeterminado. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 Recuerde lo siguiente:
 
-* El nombre de la etiqueta personalizada debe contener el `#` prefijo.
+* El nombre de etiqueta personalizado debe contener el prefijo `#`.
 
    Por ejemplo, `#EXT-X-ASSET` es un nombre de etiqueta personalizado correcto, pero `EXT-X-ASSET` es incorrecto.
 
