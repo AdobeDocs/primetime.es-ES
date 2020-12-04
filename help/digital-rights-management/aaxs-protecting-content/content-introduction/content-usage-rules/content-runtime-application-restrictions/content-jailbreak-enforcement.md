@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Aplicación de fuga de prisión (requiere Adobe Primetime) {#jailbreak-enforcement-requires-adobe-primetime}
 
-En las plataformas que admiten la detección de saltos de cárcel (como dispositivos móviles Android e iOS), si se habilita la aplicación de saltos de cárcel, la reproducción del contenido no se permite si se [!DNL jailbreak/root] detecta en el dispositivo.
+En plataformas que admiten la detección de saltos de cárcel (como dispositivos móviles Android e iOS), si se habilita la aplicación de saltos de cárcel, se deshabilita la reproducción de contenido si se detecta [!DNL jailbreak/root] en el dispositivo.
 
 >[!NOTE]
 >
