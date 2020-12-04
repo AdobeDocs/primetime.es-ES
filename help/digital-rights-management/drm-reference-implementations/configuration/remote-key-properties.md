@@ -1,18 +1,21 @@
 ---
 description: 'null'
 seo-description: 'null'
-seo-title: Propiedades de entrega de claves remotas (iOS)
-title: Propiedades de entrega de claves remotas (iOS)
+seo-title: Propiedades del envío de clave remota (iOS)
+title: Propiedades del envío de clave remota (iOS)
 uuid: 17e1b756-d106-47a7-99ae-641190693870
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '115'
+ht-degree: 0%
 
 ---
 
 
-# Propiedades de entrega de claves remotas (iOS){#remote-key-delivery-properties-ios}
+# Propiedades del envío de clave remota (iOS){#remote-key-delivery-properties-ios}
 
-Para admitir la generación de licencias para la entrega de claves remotas a un cliente iOS en Adobe Primetime DRM, debe especificar el certificado del servidor de claves en el `flashaccess-refimpl.properties` archivo.
+Para admitir la generación de licencias para el envío de claves remotas a un cliente iOS en Adobe Primetime DRM, debe especificar el certificado del servidor de claves en el archivo `flashaccess-refimpl.properties`.
 
 Se han agregado las siguientes propiedades en Primetime DRM:
 
@@ -30,7 +33,7 @@ Se han agregado las siguientes propiedades en Primetime DRM:
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> RefImpl.HSM.HandlerConfiguration.\ KeyServerCertificate.Alias</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Alias del certificado de servidor de licencias emitido por Adobe de Key Server que se almacena en HSM. </p> <p>Al habilitar HSM, puede aplicar esta propiedad en lugar de la propiedad <span class="codeph"> HandlerConfiguration.KeyServerCertificate</span> . </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Alias del certificado de servidor de licencias emitido por Adobe de Key Server que se almacena en HSM. </p> <p>Al habilitar HSM, puede aplicar esta propiedad en lugar de la propiedad <span class="codeph"> HandlerConfiguration.KeyServerCertificate</span>. </p> </td> 
   </tr> 
  </tbody> 
 </table>
