@@ -6,6 +6,9 @@ title: Inicializar y configurar el análisis de vídeo
 uuid: ece5ddc1-3f7b-4878-b1bc-1fec0a459add
 translation-type: tm+mt
 source-git-commit: 6cb3463be8986d8a1dc718655bd929a0f07ac00d
+workflow-type: tm+mt
+source-wordcount: '712'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +20,7 @@ Puede configurar el reproductor para rastrear y analizar el uso del vídeo.
 Antes de activar el seguimiento de vídeo (Video Heartbeat), asegúrese de que dispone de lo siguiente:
 
 * TVSDK para HLS de escritorio
-* Información de configuración e inicialización: póngase en contacto con su representante de Adobe para obtener información específica sobre su cuenta de seguimiento de vídeo:
+* Información de configuración e inicialización: póngase en contacto con el representante de Adobe para obtener información específica sobre su cuenta de seguimiento de vídeo:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
@@ -27,7 +30,7 @@ Antes de activar el seguimiento de vídeo (Video Heartbeat), asegúrese de que d
   </tr> 
   <tr> 
    <td colname="col1"> Extremo del servidor de seguimiento de análisis de vídeo </td> 
-   <td colname="col2"> Dirección URL del extremo de la colección back-end de análisis de vídeo. Aquí es donde se envían todas las llamadas de seguimiento de Video Heartbeat. <p>Sugerencia:  La dirección URL del servidor de seguimiento de visitantes es la misma que la del servidor de seguimiento de Analytics. Para obtener información sobre la implementación del servicio de ID de visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementación del servicio de ID </a>. </p> </td> 
+   <td colname="col2"> Dirección URL del extremo de la colección back-end de análisis de vídeo. Aquí es donde se envían todas las llamadas de seguimiento de Video Heartbeat. <p>Sugerencia:  La dirección URL del servidor de seguimiento de visitante es la misma que la del servidor de seguimiento de Analytics. Para obtener información sobre la implementación del servicio de ID de Visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementación del servicio de ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nombre de la cuenta </td> 
@@ -38,12 +41,12 @@ Antes de activar el seguimiento de vídeo (Video Heartbeat), asegúrese de que d
    <td colname="col2"> Un valor de cadena necesario para crear instancias del componente Visitante. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> Extremo del servidor de seguimiento de visitantes </td> 
+   <td colname="col1"> Extremo del servidor de seguimiento de visitante </td> 
    <td colname="col2"> Dirección URL del extremo back-end que proporciona un identificador único para el visor de vídeo actual. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Editor </td> 
-   <td colname="col2"> Este es el ID de editor que su representante de Adobe proporciona a los clientes. <p>Sugerencia:  Este ID no es sólo una cadena con el nombre de la marca o la televisión. </p> </td> 
+   <td colname="col2"> Este es el ID del publicador, que su representante de Adobe proporciona a los clientes. <p>Sugerencia:  Este ID no es sólo una cadena con el nombre de la marca o la televisión. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -58,9 +61,9 @@ Para configurar el seguimiento de videos en su reproductor:
 
       Es un valor de cadena.
    * La única opción de configuración para la biblioteca VisitorAPI es la dirección URL del extremo back-end que proporciona el identificador único para el usuario actual.
-   * La dirección URL del servidor de seguimiento de visitantes es la misma que la del servidor de seguimiento de Analytics.
+   * La dirección URL del servidor de seguimiento de visitante es la misma que la del servidor de seguimiento de Analytics.
 
-      Para obtener información sobre la implementación del servicio de ID de visitante, consulte Implementación del servicio de ID de visitante.
+      Para obtener información sobre la implementación del servicio de ID de Visitante, consulte Implementación del servicio de ID de Visitante.
 
    ```
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID"); 
@@ -69,11 +72,11 @@ Para configurar el seguimiento de videos en su reproductor:
 
 1. Cree una instancia del componente AppMeasurement y configúrela.
 
-   La instancia de AppMeasurement tiene muchas opciones de configuración. Para obtener más información, consulte la documentación para desarrolladores [de](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) Adobe Analytics. Se requieren las opciones del siguiente código de muestra ( `account`, `visitorNamespace`, y `trackingServer`) y Adobe proporciona los valores.
+   La instancia de AppMeasurement tiene muchas opciones de configuración. Para obtener más información, consulte la documentación de [Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer). Se requieren las opciones del siguiente código de muestra ( `account`, `visitorNamespace` y `trackingServer`) y los valores se proporcionan mediante Adobe.
 
    >[!IMPORTANT]
    >
-   >Debe asegurarse de que la cadena de dependencias está correctamente configurada. La instancia de AppMeasurement agrega (depende de) el componente de la API de visitante.
+   >Debe asegurarse de que la cadena de dependencias está correctamente configurada. La instancia de AppMeasurement agrega (depende de) el componente API de Visitante.
 
    ```
    // Instantiate and configure AppMeasurement 
@@ -100,7 +103,7 @@ Para configurar el seguimiento de videos en su reproductor:
 
    >[!IMPORTANT]
    >
-   >En la aplicación, asegúrese de que `appMeasurementObject.visitor` se rellena antes de iniciar el flujo de análisis de vídeo, o bien puede que no obtenga ningún resultado de seguimiento. Estos resultados se indican mediante los mensajes del registro. Puede agregar una llamada de seguimiento vacía ( `appMeasurementObject.track`), sondear la `visitor` propiedad hasta que se rellene e iniciar el análisis de vídeo.
+   >En la aplicación, asegúrese de que `appMeasurementObject.visitor` se rellena antes de iniciar el flujo de análisis de vídeo o de que no obtenga ningún resultado de seguimiento. Estos resultados se indican mediante los mensajes del registro. Puede agregar una llamada de seguimiento vacía ( `appMeasurementObject.track`), sondear la propiedad `visitor` hasta que se rellene e iniciar el análisis de vídeo.
 
 1. Inicialice y configure metadatos de seguimiento de Video Heartbeat.
 
@@ -141,7 +144,7 @@ Para configurar el seguimiento de videos en su reproductor:
       } 
       ```
 
-   1. Agregue los metadatos de Video Analytics a la instancia de metadatos global.
+   1. Añada los metadatos de Video Analytics a la instancia de metadatos global.
 
       Cuando esté listo, establezca la instancia de metadatos global en el recurso de medios o en el elemento del reproductor de medios:
 
@@ -166,7 +169,7 @@ Para configurar el seguimiento de videos en su reproductor:
 
    1. Destruya el rastreador de Video Analytics.
 
-      Antes de iniciar una nueva sesión de reproducción de contenido, elimine la instancia anterior del rastreador de vídeo. Después de recibir el evento de finalización de contenido (o notificación), espere unos minutos antes de destruir la instancia del rastreador de vídeo. Destruir la instancia inmediatamente podría interferir con la capacidad del rastreador de Video Analytics para enviar un ping de finalización de vídeo.
+      Antes de comenzar una nueva sesión de reproducción de contenido, elimine la instancia anterior del rastreador de vídeo. Después de recibir el evento de finalización de contenido (o notificación), espere unos minutos antes de destruir la instancia del rastreador de vídeo. Destruir la instancia inmediatamente podría interferir con la capacidad del rastreador de Video Analytics para enviar un ping de finalización de vídeo.
 
       ```
       if (videoAnalyticsTracker) { 
@@ -177,7 +180,7 @@ Para configurar el seguimiento de videos en su reproductor:
 
    1. Marque manualmente el flujo en directo/lineal como completo.
 
-      Si tiene varios episodios en un flujo en directo, puede marcar manualmente un episodio como completado mediante la API completa. Esto finaliza la sesión de seguimiento de vídeo del episodio de vídeo actual y puede iniciar una nueva sesión de seguimiento del siguiente episodio.
+      Si tiene varios episodios en un flujo en directo, puede marcar manualmente un episodio como completado mediante la API completa. Esto finaliza la sesión de seguimiento de vídeo para el episodio de vídeo actual y puede crear un inicio de una nueva sesión de seguimiento para el siguiente episodio.
 
       >[!TIP]
       >
