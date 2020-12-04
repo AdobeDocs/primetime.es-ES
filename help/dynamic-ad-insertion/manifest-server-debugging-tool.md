@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## Información general sobre la herramienta de depuración {#overview-of-debugging-tool}
 
-La herramienta de depuración permite a los editores investigar problemas de inserción de anuncios potencialmente costosos examinando la información de depuración devuelta en tiempo real por el servidor de manifiesto en los encabezados HTTP o, cuando se necesita información más detallada, examinando los registros de sesiones después de los hechos. Los socios de Adobe como Akamai pueden utilizar la herramienta para depurar sus integraciones con Primetime y la toma de decisiones.
+La herramienta de depuración permite a los editores investigar problemas de inserción de anuncios potencialmente costosos examinando la información de depuración devuelta en tiempo real por el servidor de manifiesto en los encabezados HTTP o, cuando se necesita información más detallada, examinando los registros de sesión después de los hechos. Los socios de Adobe como Akamai pueden utilizar la herramienta para depurar sus integraciones con Primetime y la toma de decisiones.
 
 La herramienta admite problemas de depuración e inserción en cualquiera de las configuraciones principales del servidor de manifiesto y del seguimiento de anuncios:
 
@@ -48,12 +48,12 @@ Al invocar la herramienta de depuración, tiene varias opciones para la informac
 Al iniciar el registro de depuración para una sesión de servidor de manifiesto, puede agregar el parámetro ptdebug a la dirección URL de la solicitud para especificar las siguientes opciones para la información que devuelve el servidor de manifiesto en los encabezados HTTP:
 
 * ptdebug=true Todos los registros excepto `TRACE_HTTP_HEADER` y la mayoría `call/response data` de `TRACE_AD_CALL` registros.
-* ptdebug=AdCall Sólo registros TRACE_AD_*type* (por ejemplo, TRACE_AD_CALL).
+* ptdebug=AdCall Sólo registros TRACE_AD_*tipo* (por ejemplo, TRACE_AD_CALL).
 * ptdebug=Sólo encabezado Registros TRACE_HTTP_HEADER.
 
 Las opciones no afectan a lo que el servidor de manifiesto coloca en los archivos de registro. Usted no tiene control de eso, pero los archivos de registro son archivos de texto, por lo que puede aplicar una amplia variedad de herramientas para extraer y cambiar el formato de la información que le interesa.
 
-Este es un ejemplo del encabezado HTTP que se devuelve cuando se devuelve `ptdebug=Header`. Algunas cadenas largas de dígitos hexadecimales se reemplazan por `. . .` para mayor claridad.
+Este es un ejemplo del encabezado HTTP que se devuelve cuando `ptdebug=Header`. Algunas cadenas largas de dígitos hexadecimales se reemplazan por `. . .` para mayor claridad.
 
 ```
 X-ADBE-AI-DBG-1 TRACE_MISC    HTTP request received
@@ -99,7 +99,7 @@ La estructura de un registro de registro es la siguiente:
 | record_type | string | Tipo de evento que se registra |
 | otros campos | *** | Depende del tipo de evento |
 
-### Registros TRACE_REQUEST_INFO {#trace-request-info-records}
+### Registros de TRACE_REQUEST_INFO {#trace-request-info-records}
 
 Los registros de este tipo registran los resultados de las solicitudes HTTP. Los campos más allá de TRACE_REQUEST_INFO aparecen en el orden mostrado en la tabla, separados por tabuladores.
 
@@ -256,7 +256,7 @@ Un ejemplo:
     sid:3086f5cd . . .;pts:0    200
 ```
 
-### Registros de TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE {#trace-transcoding-no-media-to-transcode-records}
+### TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE registra {#trace-transcoding-no-media-to-transcode-records}
 
 Los registros de este tipo registran un elemento creativo de publicidad que falta. El único campo más allá de TRACE_TRANSCODING_NO_MEDIA_TO_TRANSCODE aparece en la tabla.
 
@@ -286,7 +286,7 @@ Los registros de este tipo indican una solicitud para realizar el seguimiento de
 | inicio | float | Tiempo de inicio del fragmento PTS (segundos con precisión milisegundos) |
 | end | float | Tiempo de finalización del fragmento PTS (segundos con precisión milisegundos) |
 
-### Registros de TRACE_TRACKING_REQUEST_URL {#trace-tracking-request-url-records}
+### TRACE_TRACKING_REQUEST_URL registra {#trace-tracking-request-url-records}
 
 Los registros de este tipo proporcionan una dirección URL de seguimiento para el seguimiento del lado del servidor. Los campos más allá de TRACE_TRACKING_REQUEST_URL aparecen en el orden mostrado en la tabla, separados por tabuladores.
 
@@ -296,7 +296,7 @@ Los registros de este tipo proporcionan una dirección URL de seguimiento para e
 | ad_system | string | Sistema de publicidad (por ejemplo, auditude) |
 | url | string | Dirección URL de ping |
 
-### Registros TRACE_WEBVTT_REQUEST {#trace-webvtt-request-records}
+### TRACE_WEBVTT_REQUEST registra {#trace-webvtt-request-records}
 
 Registros de este tipo de solicitudes de registro que el servidor de manifiesto realiza para los rótulos WEBVTT. Los campos más allá de TRACE_WEBVTT_REQUEST aparecen en el orden mostrado en la tabla, separados por tabuladores.
 
@@ -309,7 +309,7 @@ Registros de este tipo de solicitudes de registro que el servidor de manifiesto 
 
 ### Registros TRACE_WEBVTT_RESPONSE {#trace-webvtt-response-records}
 
-Registra ``of ``este ``type ``registro ``responses ``del ``manifest ``servidor ``sends ``para ``clients ``entrar `` `answer` ``en ``requests `` los `for` ``WEBVTT ``rótulos. Los campos más allá de TRACE_WEBVTT_RESPONSE &quot;aparecen en el orden mostrado en la tabla, `by`fichas separadas.
+Registra ``of ``este ``type ``registro ``responses ``del ``manifest ``servidor ``sends ``a ``clients ``en `` `answer` ``a ``requests `` `for` ``WEBVTT ``subtítulos. Los campos más allá de TRACE_WEBVTT_RESPONSE &quot;aparecen en el orden mostrado en la tabla, separadas por `by`fichas.
 
 | Campo | Tipo | Descripción |
 |--- |--- |--- |
@@ -326,74 +326,74 @@ Registros de este tipo de respuestas de registro a solicitudes que el servidor d
 | source | string | Contenido de VTT original codificado en base64 |
 
 
-### Registros TRACE_MISC {#trace-misc-records}
+### Registros de TRACE_MISC {#trace-misc-records}
 
 Los registros de este tipo permiten que el servidor de manifiesto registre eventos e información que no se haya planificado de otro modo cuando ingesta publicidades. El campo más allá de TRACE_MISC consiste en una cadena de mensaje. Los mensajes que podrían aparecer incluyen lo siguiente:
 
 * Anuncio omitido:AdPlacement `[adManifestURL=https://cdn2.auditude.com/assets/3p/v2/8c/2b/8c2bb. . . .m3u8, durationSeconds=15.0, ignore=false, redirectAd=false, priority=1]`
-* AdPlacement adManifestURL=*adManifestURL*, durationSeconds=*seconds*, ignore=*ignore*, redirectAd=*redirectAd*, priority=*priority*
+* AdPlacement adManifestURL=*adManifestURL*, durationSeconds=*segundos*, ignore=*ignore*, redirectAd=*redirectAd*, priority=*prioridad*
 * La colocación de la publicidad devolvió un valor nulo.
 * La publicidad se ha vinculado correctamente.
-* Error en la llamada de publicidad: *mensaje* de error.
+* Error en la llamada de publicidad: *mensaje de error*.
 * Añadiendo User-Agent para recuperar el manifiesto sin procesar: *user-agent*.
 * Añadiendo cookie para recuperar el manifiesto sin procesar: [cookie]
-* Mensaje *de error de URL* solicitada incorrecta. (No se pudo analizar la URL de variante)
-* Dirección URL llamada: La dirección URL *obtuvo retorno: código* de respuesta. (URL en directo)
-* Dirección URL llamada: Código de *devolución de URL: código* de respuesta. (URL de VOD)
+* Mensaje de error de URL *solicitada* incorrecta. (No se pudo analizar la URL de variante)
+* Dirección URL llamada: La dirección URL *obtuvo retorno: código de respuesta*. (URL en directo)
+* Dirección URL llamada: URL *código de retorno: código de respuesta*. (URL de VOD)
 * Conflicto encontrado al resolver anuncios: uno de los inicios de rodadura media o uno de los extremos de rodadura media se encuentra dentro de la prerodadura o de la prerodadura incluida en el rollo medio (VOD).
-* Excepción no controlada detectada lanzada por el controlador para URI: *dirección URL* de solicitud.
+* Excepción no controlada detectada lanzada por el controlador para URI: *URL de solicitud*.
 * Finalizó la generación del manifiesto de variante. (Variante)
 * Finalizó la generación del manifiesto de variante.
-* Excepción en la gestión de redireccionamiento VAST *redireccionamiento de URL *error: *mensaje* de error.
-* No se pudo recuperar la lista de reproducción de la publicidad para la dirección URL *del manifiesto de* publicidad.
+* Excepción en la gestión de redireccionamiento VAST *redireccionamiento de URL *error: *mensaje de error*.
+* No se pudo recuperar la lista de reproducción de la publicidad para *URL de manifiesto de publicidad*.
 * No se pudo generar el manifiesto de objetivo. (HLSManifestResolver)
-* No se pudo analizar la respuesta de la primera llamada de publicidad: *mensaje* de error.
-* No se pudo procesar *GET|POST *solicitud de ruta: *dirección URL* de solicitud. (Activo/VOD)
-* No se pudo procesar la solicitud de manifiesto activo: *dirección URL* de solicitud. (Activo)
-* Error al devolver un manifiesto de variante: *mensaje* de error.
-* No se pudo validar el ID de grupo: *ID* del grupo.
-* Obteniendo manifiesto sin procesar: *dirección URL* de contenido. (Activo)
-* Redirección VAST siguiente: *dirección URL* de redireccionamiento.
+* No se pudo analizar la respuesta de la primera llamada de publicidad: *mensaje de error*.
+* No se pudo procesar *GET|POST *solicitud de ruta: *URL de solicitud*. (Activo/VOD)
+* No se pudo procesar la solicitud de manifiesto activo: *URL de solicitud*. (Activo)
+* Error al devolver un manifiesto de variante: *mensaje de error*.
+* No se pudo validar la ID del grupo: *id. de grupo*.
+* Obteniendo manifiesto sin procesar: *dirección URL de contenido*. (Activo)
+* Redirección VAST siguiente: *dirección URL de redireccionamiento*.
 * Se han encontrado recursos vacíos. (VOD)
 * Se encontró *número *anuncios. (VOD)
 * Solicitud HTTP recibida. (Muy primer mensaje)
 * Se ignora el anuncio porque la diferencia entre la duración de la respuesta del anuncio (*duración de la respuesta del anuncio *s) y la duración real del anuncio (*duración real *s) es mayor que el límite. (HLSManifestResolver)
 * Omitiendo el valor de avail que no proporcionó ningún valor de ID. (GroupAdResolver.java)
-* Omitiendo el valor de tiempo promedio que proporcionó un valor de tiempo no válido: *time *for availId = *avail ID*.
-* Omitiendo el valor de duración promedio que proporcionó un valor de duración no válido: *duration *for availId = *avail ID*.
+* Omitiendo el valor de tiempo promedio que proporcionó un valor de tiempo no válido: *time *for availId = *ID de avail*.
+* Omitiendo el valor de duración promedio que proporcionó un valor de duración no válido: *duration *para availId = *ID de avail*.
 * Inicialice una nueva sesión. (Variante)
 * Método HTTP no válido. Debe ser un GET. (VOD)
 * Método HTTP no válido. La solicitud de seguimiento debe ser una GET. (Activo)
-* Mensaje *de error de URL* solicitada no válida. (Variante)
+* Dirección URL *solicitada no válida. Mensaje de error de dirección URL*. (Variante)
 * Grupo no válido. (HLSManifestResolver)
 * Solicitud no válida. El rótulo no es una solicitud de seguimiento válida. (VOD)
 * Solicitud no válida. La solicitud de subtítulos debe realizarse después de que se establezca la sesión. (VOD)
 * Solicitud no válida. La solicitud de seguimiento debe realizarse después de que se establezca la sesión. (VOD)
-* Instancia de servidor no válida para el identificador de grupo de sobrecarga: *ID* del grupo. (Activo)
+* Instancia de servidor no válida para el identificador de grupo de sobrecarga: *id. de grupo*. (Activo)
 * Se ha alcanzado el límite de redirecciones VAST: *número*.
-* Realizar llamada de publicidad: *dirección URL* de llamada de publicidad.
-* No se encontró ningún manifiesto para: *dirección URL* de contenido. (Activo)
-* No se encontró ningún valor coincidente para el ID de avail: *ID* de avail. (HLSManifestResolver)
+* Realizar llamada de publicidad: *dirección URL de llamada de publicidad*.
+* No se encontró ningún manifiesto para: *dirección URL de contenido*. (Activo)
+* No se encontró ningún valor coincidente para el ID de avail: *ID de avail*. (HLSManifestResolver)
 * No se encontró ninguna sesión de reproducción. (HLSManifestResolver)
-* Procesamiento de la solicitud de VOD para la URL *de* contenido de manifiesto.
+* Procesando solicitud de VOD para la dirección URL de contenido *de manifiesto*.
 * Procesando variante.
-* Procesamiento de la solicitud de rótulo para la URL *de* contenido de manifiesto.
+* Procesando solicitud de rótulo para la dirección URL de contenido *de manifiesto*.
 * Procesando solicitud de seguimiento. (VOD)
 * La respuesta de anuncio de redireccionamiento está vacía. (VASTStAX)
-* Solicitando: *URL*.
+* Solicitud: *URL*.
 * Devolviendo la respuesta de error para la solicitud de GET porque no se encontró ninguna sesión de reproducción. (VOD)
 * Devolviendo la respuesta de error para la solicitud de GET debido a un error interno del servidor.
-* Devolviendo la respuesta de error para la solicitud de GET que especifica un recurso no válido: *ID* de solicitud de publicidad. (VOD)
-* Devolviendo la respuesta de error para la solicitud de GET que especifica un ID de grupo no válido o vacío: *ID* del grupo. (VOD)
+* Devolviendo la respuesta de error para la solicitud de GET que especifica un recurso no válido: *ID de solicitud de publicidad*. (VOD)
+* Devolviendo la respuesta de error para la solicitud de GET que especifica un ID de grupo no válido o vacío: *id. de grupo*. (VOD)
 * Devolviendo la respuesta de error para la solicitud de GET que especifica un valor de posición de seguimiento no válido. (VOD)
-* Devolviendo respuesta de error para solicitud de GET con sintaxis no válida: dirección URL *de* solicitud. (Activo/VOD)
+* Devolviendo la respuesta de error para la solicitud de GET con sintaxis no válida: *URL de solicitud*. (Activo/VOD)
 * Devolviendo respuesta de error para la solicitud con método HTTP no admitido: *GET|POST*. (Activo/VOD)
 * Devolviendo el manifiesto desde la caché. (VOD)
 * El servidor está sobrecargado. Continúe sin la solicitud de punteado de publicidad. (Variante)
 * Inicio que genera el manifiesto objetivo. (HLSManifestResolver)
-* Manifiesto de variante que genera inicios de: *dirección URL* de contenido. (Variante)
+* Manifiesto de variante que genera inicios de: *dirección URL de contenido*. (Variante)
 * Inicio de poner los anuncios en manifiesto. (VODHLSResolver)
-* Tratando de sujetar un anuncio en *HH:MM:SS*: AdPlacement adManifestURL=*ad Manifest URL*, durationSeconds=*seconds*, ignore=*ignore*, redirectAd=*redirect ad*, priority=*priority*. (HLSManifestResolver)
+* Intentando unir un anuncio a *HH:MM:SS*: AdPlacement adManifestURL=*dirección URL del manifiesto de publicidad*, durationSeconds=*segundos*, ignore=*ignorar*, redirectAd=*anuncio de redirección*, priority=*prioridad*. (HLSManifestResolver)
 * No se pueden obtener publicidades debido a una cronología de tiempo no válida; se devolvió el contenido sin publicidades. (VOD)
 * No se pueden obtener publicidades: se devolvió el contenido sin publicidades. (VOD)
 * No se pudo obtener la consulta de la publicidad y no se proporcionó ninguna dirección URL de contenido. (VOD)
@@ -411,7 +411,7 @@ El servidor de manifiesto genera registros de este tipo después de llamar a una
 | url | string | Ping de URL |
 | state | string | Código de estado HTTP |
 
-### Registros TRACE_PLAYBACK_PROGRESS {#trace-playback-progress-records}
+### TRACE_PLAYBACK_PROGRESS registra {#trace-playback-progress-records}
 
 El servidor de manifiesto genera registros de este tipo cuando recibe una señal sobre el progreso de la reproducción durante el flujo de trabajo de seguimiento del lado del servidor. Los campos más allá de TRACE_PLAYBACK_PROGRESS aparecen en el orden mostrado en la tabla, separados por tabuladores.
 
@@ -433,4 +433,4 @@ El servidor de manifiesto genera registros de este tipo cuando recibe una señal
 
 ## Recursos útiles {#helpful-resources}
 
-* Consulte la documentación de ayuda completa en la página de información y asistencia [de](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consulte la documentación de ayuda completa en la página [Información y soporte de Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
