@@ -7,7 +7,7 @@ uuid: 9ae86c04-7bbe-43fb-9f57-1d9fa2fa73d0
 translation-type: tm+mt
 source-git-commit: bdeab54aeb083f1fc8d27db1fd94bf89d74429da
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource c
 
 La clase MediaResource representa el contenido que debe cargar la instancia de MediaPlayer.
 
-1. Cree un `MediaResource` elemento pasando información sobre el medio al `MediaResource` constructor.
+1. Cree un `MediaResource` pasando información sobre el medio al constructor `MediaResource`.
 
-   El constructor `MediaResource` requiere los parámetros siguientes:
+   El constructor `MediaResource` requiere los siguientes parámetros:
 
    <table id="table_22886D6770FB45E99D35D0B90E6CC302"> 
    <thead> 
@@ -32,21 +32,21 @@ La clase MediaResource representa el contenido que debe cargar la instancia de M
    </thead>
    <tbody> 
    <tr> 
-      <td colname="col1"> <span class="codeph"> url </span> </td> 
+      <td colname="col1"> <span class="codeph"> url  </span> </td> 
       <td colname="col2"> Una cadena que representa la URL del manifiesto/lista de reproducción del medio. </td> 
    </tr> 
    <tr> 
-      <td colname="col1"> <span class="codeph"> type </span> </td> 
-      <td colname="col2"> Uno de los siguientes miembros de la enumeración <span class="codeph"> MediaResource.Type </span> , correspondiente al tipo de archivo indicado: 
+      <td colname="col1"> <span class="codeph"> type  </span> </td> 
+      <td colname="col2"> Uno de los siguientes miembros de la enumeración <span class="codeph"> MediaResource.Type </span>, correspondiente al tipo de archivo indicado: 
       <ul id="ul_C286ED3C31364B858A1C9AF3356E9282"> 
-      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS </span> - M3U8 </li> 
-      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF </span> : formato de archivo de medios base ISO (MP4) </li> 
-      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH </span> - Descripción de la presentación de medios MPEG-DASH (MPD) </li> 
+      <li id="li_25B24EF76D8849DE8764539F25E435FA"> <span class="codeph"> HLS  </span> - M3U8 </li> 
+      <li id="li_1344A41B434D49229E392F1AAF9ECA81"> <span class="codeph"> ISOBMFF  </span> - Formato de archivo de medios base ISO (MP4) </li> 
+      <li id="li_92392073B7334916B06B16570C51AC91"> <span class="codeph"> DASH  </span> - Descripción de la presentación de medios MPEG-DASH (MPD) </li> 
       </ul> </td> 
    </tr> 
    <tr> 
-      <td colname="col1"> <span class="codeph"> metadatos </span> </td> 
-      <td colname="col2"> Una instancia de la <span class="codeph"> clase Metadata </span> (una estructura parecida a un diccionario), que puede contener información adicional sobre el contenido que se va a cargar, como contenido alternativo o de anuncio para colocar dentro del contenido principal. Si utiliza publicidad, configure <span class="codeph"> AuditudeSettings </span> antes de utilizar este constructor <a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md"> Metadatos de inserción de publicidad </a>. </td> 
+      <td colname="col1"> <span class="codeph"> metadatos  </span> </td> 
+      <td colname="col2"> Una instancia de la clase <span class="codeph"> Metadata </span> (una estructura parecida a un diccionario), que puede contener información adicional sobre el contenido que se va a cargar, como contenido alternativo o de publicidad para colocar dentro del contenido principal. Si utiliza publicidad, configure <span class="codeph"> AuditudeSettings </span> antes de utilizar este constructor <a href="/help/programming/tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/ad-insertion-metadata/android-3x-ad-insertion-metadata.md"> Metadatos de inserción de publicidad </a>. </td> 
    </tr> 
    </tbody> 
    </table>
@@ -57,7 +57,7 @@ La clase MediaResource representa el contenido que debe cargar la instancia de M
    >
    >Para el contenido de vídeo a petición MP4 (VOD), TVSDK no admite reproducción mediante trucos, flujo de velocidad de bits adaptable (ABR), inserción de anuncios, subtítulos cerrados o DRM.
 
-   El código siguiente crea una `MediaResource` instancia:        >
+   El siguiente código crea una instancia `MediaResource`:        >
 
    ```java
    // To do: Create metadata here 
@@ -72,7 +72,7 @@ La clase MediaResource representa el contenido que debe cargar la instancia de M
 1. Cargue el recurso de medios con una de las siguientes opciones:
 
    * La instancia de MediaPlayer.
-   * `MediaPlayerItemLoader` Para obtener más información, consulte [Carga de un recurso multimedia mediante MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md).
+   * `MediaPlayerItemLoader` Para obtener más información, consulte  [Carga de un recurso multimedia mediante MediaPlayerItemLoader](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/mediaplayer-initialize-for-video/android-3x-media-resource-mediaplayeritemloader.md).
 
    >[!IMPORTANT]
    >
