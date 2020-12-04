@@ -6,6 +6,9 @@ title: Pistas de audio alternativas en la lista de reproducción
 uuid: 6241d3e4-6e07-44fb-bc0e-5d49d1a76824
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '306'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 La lista de reproducción de un vídeo puede especificar un número ilimitado de pistas de audio alternativas para el contenido del vídeo principal. Por ejemplo, es posible que desee agregar idiomas diferentes al contenido del vídeo o permitir que el usuario cambie entre distintas pistas del dispositivo mientras se reproduce el contenido.
 
-Las pistas de audio alternativas, o el audio de enlace tardío, permiten a los usuarios cambiar entre varias pistas de idioma para flujos de vídeo HTTP (en directo/lineal y VOD) y no es necesario modificar, duplicar ni volver a empaquetar el vídeo para cada pista de audio. Puede proporcionar varias pistas de idioma para un recurso de vídeo antes o después del empaquetado inicial del recurso.
+Las pistas de audio alternativas, o el audio de enlace tardío, permiten a los usuarios cambiar entre varias pistas de idioma para flujos de vídeo HTTP (en directo/lineal y VOD) y no es necesario modificar, duplicado ni volver a empaquetar el vídeo para cada pista de audio. Puede proporcionar varias pistas de idioma para un recurso de vídeo antes o después del empaquetado inicial del recurso.
 
 >[!TIP]
 >
@@ -25,7 +28,7 @@ Los siguientes requisitos se aplican si utiliza pistas de audio alternativas e i
 * Si el contenido principal tiene pistas de audio alternativas, las publicidades deben tener al menos un flujo de solo audio.
 * Cada duración de segmento del flujo de solo audio de un anuncio debe ser igual a la duración del segmento del flujo de vídeo de un anuncio.
 
-La pista de audio principal se incluye en la colección de pistas de audio con la `default` etiqueta . Los metadatos de los flujos de audio alternativos se incluyen en la lista de reproducción de las `#EXT-X-MEDIA` etiquetas con `TYPE=AUDIO`.
+La pista de audio principal se incluye en la colección de pistas de audio con la etiqueta `default`. Los metadatos de los flujos de audio alternativos se incluyen en la lista de reproducción de las etiquetas `#EXT-X-MEDIA` con `TYPE=AUDIO`.
 
 Por ejemplo, un manifiesto M3U8 que especifica varios flujos de audio alternativos puede tener este aspecto:
 
