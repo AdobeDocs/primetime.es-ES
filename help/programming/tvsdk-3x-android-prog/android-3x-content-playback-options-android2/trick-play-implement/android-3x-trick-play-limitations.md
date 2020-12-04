@@ -6,11 +6,14 @@ title: Limitaciones y comportamiento del juego de trucos
 uuid: c28cc8db-3f45-488e-ab72-b102b3a1fab2
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
 
-# Limitaciones y comportamiento del juego de trucos {#limitations-and-behavior-for-trick-play}
+# Limitaciones y comportamiento para el juego de trucos {#limitations-and-behavior-for-trick-play}
 
 <!--<a id="section_2BC43539C5C142E085D06A7E35C76726"></a>-->
 
@@ -25,12 +28,12 @@ Limitaciones del modo de reproducción mediante trucos:
 * Cuando se incorporan publicidades en el flujo:
 
    * Puede ir a jugar con trucos solo mientras reproduce el contenido principal. Se envía un error si intenta cambiar a la reproducción incorrecta durante una pausa publicitaria.
-   * Después de iniciar el modo de reproducción de trucos, se omiten los saltos de publicidad y no se activa ningún evento de publicidad.
+   * Después de iniciar el modo de reproducción de trucos, se omiten los saltos de publicidad y no se activan eventos de publicidad.
    * La línea de tiempo expuesta por TVSDK al reproductor no se modifica aunque se omitan los saltos de publicidad.
    * El valor de tiempo actual salta hacia adelante (hacia delante rápidamente) o hacia atrás (en rebobinado rápido) con la duración de la pausa publicitaria omitida.
 
       Este comportamiento de salto para el tiempo actual permite que la duración del flujo permanezca sin modificar durante la reproducción mediante trucos. El reproductor puede rastrear el tiempo en relación únicamente con el contenido principal. No se realizan saltos de tiempo en los valores devueltos para la hora local al omitir una publicidad.
-   * El `MediaPlayerEvent.AD_BREAK_SKIPPED` evento se envía inmediatamente antes de que se omita una pausa publicitaria.
+   * El evento `MediaPlayerEvent.AD_BREAK_SKIPPED` se envía inmediatamente antes de que se omita una pausa publicitaria.
 
       El reproductor puede utilizar este evento para implementar la lógica personalizada relacionada con los saltos de publicidad omitidos.
 
