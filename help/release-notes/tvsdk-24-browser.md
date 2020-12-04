@@ -1,6 +1,6 @@
 ---
-title: Notas de la versión del explorador TVSDK 2.4
-seo-title: Notas de la versión del explorador TVSDK 2.4
+title: Notas de la versión de TVSDK 2.4 del explorador
+seo-title: Notas de la versión de TVSDK 2.4 del explorador
 description: Las notas de la versión del explorador TVSDK 2.4 describen las nuevas funciones admitidas y no admitidas, así como los problemas conocidos en el explorador TVSDK 2.4.
 seo-description: Las notas de la versión del explorador TVSDK 2.4 describen las nuevas funciones admitidas y no admitidas, así como los problemas conocidos en el explorador TVSDK 2.4.
 uuid: 3a1eb1a5-0e72-4658-beeb-bca8816570e7
@@ -10,6 +10,9 @@ products: SG_PRIMETIME
 discoiquuid: d71886cb-f34b-47b2-9df7-168686478106
 translation-type: tm+mt
 source-git-commit: e644e8497e118e2d03e72bef727c4ce1455d68d6
+workflow-type: tm+mt
+source-wordcount: '6834'
+ht-degree: 0%
 
 ---
 
@@ -30,11 +33,11 @@ El explorador TVSDK 2.4 proporciona API de JavaScript para crear aplicaciones de
 
 Esta versión incluye la siguiente información:
 
-・ Documentación [de la API TVSDK del explorador](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
+・ [Documentación de la API de TVSDK del explorador](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
-・ Guía [de programación TVSDK del explorador](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_browser-tvsdk.pdf).
+・ [Guía de programación del TVSDK del explorador](https://helpx.adobe.com/content/dam/help/en/primetime/programming-guides/psdk_browser-tvsdk.pdf).
 
-・ Guía [de migración de](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html)TVSDK para 1.4 DHLS a Browser TVSDK 2.4.
+・ [Guía de migración TVSDK para 1.4 DHLS al explorador TVSDK 2.4](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
 
 ・ [Conversión de Browser TVSDK 2.4.6 a la versión 2.4.7](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-246-to-247-for-javascript.html).
 
@@ -44,7 +47,7 @@ Esta versión incluye la siguiente información:
 >
 >*Para obtener una lista completa de las consideraciones de seguridad de esta versión, consulte Consideraciones de seguridad.
 
-## Novedades y funciones compatibles {#what-s-new-and-supported-features}
+## Características nuevas y admitidas {#what-s-new-and-supported-features}
 
 Esta versión de TVSDK de explorador proporciona nuevas funciones que puede utilizar para mejorar las aplicaciones de vídeo.
 
@@ -54,23 +57,23 @@ La siguiente adición está disponible como parte de la actualización TVSDK 2.4
 
 * Se ha cambiado la implementación de la API de volumen de AdobePSDK.MediaPlayer para permitir la reproducción automática en iOS cuando la reproducción está silenciada.
 
-・ Se agrega una nueva API `auditudeSettings.ignoreVPAIDAds`para permitir ignorar las publicidades VPAID recibidas del servidor de Auditude. La API no funciona para Flash Fallback.
+・ Se agrega una nueva API, `auditudeSettings.ignoreVPAIDAds`, para permitir ignorar las publicidades VPAID recibidas del servidor de Auditude. La API no funciona para Flash Fallback.
 
 **Versión 2.4.11**
 
 Las siguientes mejoras y adiciones están disponibles como parte de la versión 2.4.11 del TVSDK del explorador:
 
-・ El failover de segmentos HLS Live es compatible con los modos de reserva MSE y Flash.
+・ La conmutación por error de segmentos HLS Live es compatible con los modos MSE y Flash de reserva.
 
-・ Ya está disponible la compatibilidad con `AuditudeSettings.creativeRepackagingDomain` API para MSE. Anteriormente solo se admitía con el modo de reserva Flash.
+・ La compatibilidad con la API `AuditudeSettings.creativeRepackagingDomain` también está disponible para MSE. Anteriormente solo se admitía con el modo de reserva de Flash.
 
-・ La versión contiene correcciones para problemas críticos con los clientes. Consulte *Problemas solucionados* en una lista.
+・ La versión contiene correcciones para problemas críticos con los clientes. Consulte *Problemas solucionados* una lista.
 
 **Versión 2.4.10**
 
 Las siguientes mejoras y adiciones están disponibles como parte de la versión 2.4.10 del TVSDK del explorador:
 
-・ TVSDK proporciona enableLogging() para habilitar o deshabilitar el registro. Consulte la documentación de la [API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)para obtener información sobre su uso.
+・ TVSDK proporciona enableLogging() para habilitar o deshabilitar el registro. Consulte la [documentación de API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)para obtener información sobre su uso.
 
 ・ TVSDK ya no admite los capítulos predeterminados al usar Adobe Analytics. Defina y administre capítulos con su aplicación.
 
@@ -96,7 +99,7 @@ Clase AdobePSDK.ForceHttpsAdConfiguration.
 
 **Novedades de la actualización 2.4.8 (compilación 6002)**
 
-Esta actualización contiene correcciones para problemas críticos con los clientes. Consulte Problemas ** fijos para obtener la lista.
+Esta actualización contiene correcciones para problemas críticos con los clientes. Consulte *Problemas fijos* para obtener información sobre la lista.
 
 **Versión 2.4.8**
 
@@ -104,9 +107,9 @@ Las siguientes mejoras y adiciones están disponibles como parte de la versión 
 
 ・ El SDK ahora es compatible con Chrome EME y los cambios de prácticas recomendadas disponibles a partir de Chrome v58. Para obtener más información, consulte [https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf](https://storage.googleapis.com/wvdocs/Chrome_EME_Changes_and_Best_Practices.pdf)**
 
-・ El marco de interfaz de usuario ahora admite DRM de acceso HLS en Flash, solo publicidad y flujo de trabajo de información de objetivo.
+・ El módulo de interfaz de usuario ahora admite DRM de acceso HLS en el flujo de trabajo de Flash, solo publicidad e información de objetivo.
 
-・ La API setDRMAuthenticateData se agrega al marco de interfaz de usuario. Para reproducir flujos protegidos con DRM de Adobe Access, invoque esta API. También se puede especificar el atributo drmAuthenticateData en el reproductor. Consulte [AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)para obtener más información.
+・ La API setDRMAuthenticateData se agrega al marco de interfaz de usuario. Para reproducir flujos protegidos con DRM de acceso a Adobe, invoque esta API. También se puede especificar el atributo drmAuthenticateData en el reproductor. Consulte [AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)para obtener más información.
 
 **Versión 2.4.7**
 
@@ -126,7 +129,7 @@ En esta herramienta, puede seleccionar varios ajustes, hacer clic en **Probar co
 
 ・ Adición de la API MediaPlayerItemConfig al marco de interfaz de usuario
 
-Diversas funciones, incluyendo publicidadMetadata, publicidadFactory, adSignalingMode, networkConfiguration, customRangeMetadata, useHardwareDecoder, subscripTags, adTags, thumbnailScrubber, facturaciónMetricsConfiguration, se pueden configurar mediante MediaPlayerItemConfig. Para obtener más información, consulte la documentación de AdobePSDK.MediaPlayerItemConfig en la [documentación de la API](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)* * de TVSDK del explorador [](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
+Diversas funciones, incluyendo publicidadMetadata, publicidadFactory, adSignalingMode, networkConfiguration, customRangeMetadata, useHardwareDecoder, subscripTags, adTags, thumbnailScrubber, facturaciónMetricsConfiguration, se pueden configurar mediante MediaPlayerItemConfig. Para obtener más información, consulte la documentación de AdobePSDK.MediaPlayerItemConfig en la [API de TVSDK de explorador](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html)* * [documentación](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
 En la interfaz de usuario, se ha modificado la forma de pasar configuraciones de red a través de la configuración del reproductor.
 
@@ -158,15 +161,15 @@ En la interfaz de usuario, se ha modificado la forma de pasar configuraciones de
 
 `};`
 
-* Compatibilidad con flujos de trabajo de DRM y Analytics en el marco de interfaz de usuario
+* Compatibilidad con flujos de trabajo de DRM y Analytics en la interfaz de usuario
 
 Las configuraciones de DRM y el seguimiento de Analytics se pueden habilitar a través de la interfaz de usuario.
 
-* Adición de la `AdobePSDK.embedSWFinFullScreenDiv` API
+* Adición de la API `AdobePSDK.embedSWFinFullScreenDiv`
 
 Esta nueva API proporciona flexibilidad a la aplicación del reproductor para seleccionar el div en el que puede incrustar el archivo FlashFallback.swf.
 
-* Se ha sustituido `getVersion`la API de la `AdobePSDK.MediaPlayer` clase por `AdobePSDK.Version` la clase para la información relacionada con la versión de TVSDK. Para obtener más información, consulte `AdobePSDK.Version` API [aquí](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.Version.html).
+* Se ha sustituido la `getVersion`API de la clase `AdobePSDK.MediaPlayer` por la clase `AdobePSDK.Version` para la información relacionada con la versión de TVSDK. Para obtener más información, consulte `AdobePSDK.Version` API [aquí](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/AdobePSDK.Version.html).
 
 **Versión 2.4.6**
 
@@ -182,15 +185,15 @@ Con la ayuda de la facturación, el SDK de TVSDK del explorador puede recopilar 
 
 >[!NOTE]
 >
->La enumeración desaprobada MediaPlayer.Events y las constantes desaprobadas en Enum PSDKErrorCode se han eliminado en la versión 2.4.6. Para obtener más información, consulte [Conversión de Browser TVSDK 2.4.5 a la versión 2.4.6](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-245-to-246-for-javascript.html).
+>La enumeración desaprobada MediaPlayer.Eventos y las constantes desaprobadas en Enum PSDKErrorCode se han eliminado en la versión 2.4.6. Para obtener más información, consulte [Conversión de Browser TVSDK 2.4.5 a la versión 2.4.6](https://helpx.adobe.com/primetime/conversion-guides/browser-tvsdk-245-to-246-for-javascript.html).
 
 **Versión 2.4.5**
 
 Las siguientes funciones son nuevas en la versión 2.4.5:
 
-* **Revistas completas de eventos y publicidades**
+* **Reproducciones y publicidades de Evento completo**
 
-   Los flujos de reproducción de eventos completos (FER) de HLS ahora admiten la resolución de anuncios y los comportamientos publicitarios. Para habilitar esta compatibilidad, establezca el modo de señalización de publicidad en `MANIFEST_CUES` al crear el `MediaPlayerItemConfig` objeto.
+   Los flujos de reproducción de Evento completo (FER) de HLS ahora admiten la resolución de anuncios y los comportamientos publicitarios. Para habilitar esta compatibilidad, establezca el modo de señalización de publicidad en `MANIFEST_CUES` al crear el objeto `MediaPlayerItemConfig`.
 
 * **Compatibilidad con la directiva de escala de MediaPlayerView**
 
@@ -198,11 +201,11 @@ Las siguientes funciones son nuevas en la versión 2.4.5:
 
 * **Compatibilidad con contenido anamórfico**
 
-   Ahora se admite la reproducción de contenido anamórfico al utilizar la reproducción de MSE y Flash.
+   Ahora se admite la reproducción de contenido anamórfico al utilizar MSE y la reproducción de Flash.
 
 * **Aplicación selectiva de`withCredentials`**
 
-Cuando `withCredentials` se establece en true, el `Access-Control-Allow-Origin` encabezado no se puede establecer en comodines. Según la respuesta del servidor, el TVSDK del explorador establecerá el `withCredentials` atributo de forma selectiva. Para obtener más información sobre esta compatibilidad, consulte Documentos [de API de TVSDK de explorador](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
+Cuando `withCredentials` se establece en true, el encabezado `Access-Control-Allow-Origin` no se puede establecer en comodines. Según la respuesta del servidor, el SDK de TVSDK del explorador establecerá de forma selectiva el atributo `withCredentials`. Para obtener más información sobre esta compatibilidad, consulte [Documentos de API de TVSDK de explorador](https://help.adobe.com/en_US/primetime/api/psdk/browser_tvsdk/index.html).
 
 **Versión 2.4.4**
 
@@ -222,7 +225,7 @@ Las siguientes funciones fueron nuevas en la versión 2.4.3:
 
 * **Etiquetas personalizadas para DASH VOD**
 
-   Las etiquetas personalizadas en línea (eventos) se pueden suscribir y recibir como objeto TimedMetadata.
+   Las etiquetas personalizadas en línea (Eventos) se pueden suscribir y recibir como objeto TimedMetadata.
 
 * **Reproducción de flujos sin extensiones**
 
@@ -234,11 +237,11 @@ Las siguientes funciones fueron nuevas en la versión 2.4.2:
 
 * **Paridad de API**
 
-Para obtener una lista completa de la paridad de API, consulte la Guía [](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html)de migración TVSDK para 1.4 DHLS al explorador TVSDK 2.4.
+Para obtener una lista completa de la paridad API, consulte la [Guía de migración de TVSDK para 1.4 DHLS al explorador TVSDK 2.4](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-dhls-browser-tvsdk-24.html).
 
 * **Compatibilidad con AES de muestra**
 
-   Esta versión incorpora compatibilidad con la reproducción de contenido cifrado Sample-AES en MSE y Flash fallback. Se ha eliminado el requisito de alojar contenido AES sobre el origen seguro en Google Chrome.
+   Esta versión incorpora compatibilidad con la reproducción de contenido cifrado Sample-AES en MSE y Flash de reserva. Se ha eliminado el requisito de alojar contenido de AES en un origen seguro en Google Chrome.
 
 * **Compatibilidad con contenedores AAC**
 
@@ -250,7 +253,7 @@ Para obtener una lista completa de la paridad de API, consulte la Guía [](https
 
 * **Reproducción de flujo con token**
 
-Los flujos HLS que se envían a través de una red de entrega de contenido (CDN) pueden utilizar a veces tokens de autenticación en las solicitudes de manifiesto y segmento para la verificación, y estos tokens pueden proporcionarse como parámetros de URL o como encabezados de cookie. Ahora se admite la reproducción de estos flujos.
+Los flujos HLS que se envían a través de una red de Envío de contenido (CDN) pueden utilizar a veces tokens de autenticación en las solicitudes de manifiesto y segmento para la verificación, y estos tokens pueden proporcionarse como parámetros de URL o como encabezados de cookies. Ahora se admite la reproducción de estos flujos.
 
 **Versión 2.4.1**
 
@@ -262,11 +265,11 @@ Este marco de trabajo, diseñado para acelerar el desarrollo de la interfaz de u
 
 * **Mejoras de reproducción HLS para flujos en directo**
 
-Esta versión admite las interrupciones causadas por la inserción de anuncios. Utiliza la etiqueta EXT-PROGRAM-DATE-TIME seguida de la etiqueta EXT-MEDIA-SEQUENCE para sincronizar entre perfiles de velocidad de bits adaptables para una reproducción suave.
+Esta versión admite las interrupciones causadas por la inserción de anuncios. Utiliza la etiqueta EXT-PROGRAMA-DATE-TIME seguida de la etiqueta EXT-MEDIA-SEQUENCE para sincronizar los perfiles de velocidad de bits adaptable y lograr una reproducción fluida.
 
 * **Compatibilidad con VPAID 2.0**
 
-La versión 2.0 de la definición de interfaz de servicio de publicidad (VPAID) del reproductor de vídeo proporciona una experiencia multimedia rica para los usuarios y permite a los editores dirigir mejor los anuncios, rastrear las impresiones de publicidad y monetizar el contenido de vídeo. Esta versión admite anuncios VPAID de JavaScript lineales para contenido de vídeo a petición (VOD).
+La definición de interfaz de servicio de publicidad (VPAID) del reproductor de vídeo, versión 2.0, ofrece una experiencia multimedia rica para los usuarios y permite a los editores mejorar los destinatarios de anuncios, rastrear impresiones de publicidad y monetizar el contenido de vídeo. Esta versión admite anuncios VPAID de JavaScript lineales para contenido de vídeo a petición (VOD).
 
 * **Etiquetas HLS personalizadas**
 
@@ -321,7 +324,7 @@ El TVSDK del explorador tiene requisitos específicos para los niveles de plataf
    * Chrome 33+
    * Firefox 38+
 
-### Configuraciones web móviles {#mobile-web-configurations}
+### Configuraciones Web móviles {#mobile-web-configurations}
 
 * Android 4.4
 
@@ -353,7 +356,7 @@ El TVSDK del explorador tiene requisitos específicos para los niveles de plataf
  <tbody> 
   <tr> 
    <td><p><strong>Tecnología</strong> </p> </td> 
-   <td><p><strong>Etiqueta</strong><sup>de vídeo TVSDK del explorador 1</sup></p> </td> 
+   <td><p><strong>Etiqueta</strong><sup> de vídeo TVSDK del explorador 1</sup></p> </td> 
    <td><p><strong>Explorador TVSDK MSE</strong></p> </td> 
    <td><p><strong>Flash</strong></p> </td> 
    <td><p><strong>Tecnología predeterminada</strong></p> </td> 
@@ -416,7 +419,7 @@ Esta es una lista de las funciones compatibles y no compatibles de esta versión
 
 * *Características de audio MP3: Reproducción principal*
 * *Características de vídeo MP4: Reproducción principal*
-* *Características de vídeo MP4: Inserción de anuncios principales*
+* *Características de vídeo MP4: Ad Insertion principal*
 
 >[!NOTE]
 >
@@ -432,9 +435,9 @@ Esta es una lista de las funciones compatibles y no compatibles de esta versión
 
 1 La etiqueta de vídeo TVSDK del explorador no admite flujo continuo ni DRM. La compatibilidad con el códec y el contenedor no es la misma en todos los exploradores.
 
-2 Firefox utiliza Flash Player de forma predeterminada para la versión 41 o anterior.
+2 Firefox tiene el valor predeterminado de Flash Player para la versión 41 o anterior.
 
-### Funciones de audio MP4 {#mp-audio-features-1}
+### Características de audio MP4 {#mp-audio-features-1}
 
 **Tabla 2: Reproducción principal**
 
@@ -442,16 +445,16 @@ Esta es una lista de las funciones compatibles y no compatibles de esta versión
 |--- |--- |--- |--- |--- |--- |
 | Reproducción | VOD MP4 | Reproducción general (Reproducir, Pausa, Buscar) | No admitido | Y | Y |
 
-**Tabla 4: Inserción de anuncios principales**
+**Tabla 3: Ad Insertion principal**
 
 | Categoría | Tipo de contenido | Función | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Inserción de publicidad | VOD MP4 | Anteposición (MP4) | No admitido | Y | Y |
-| Inserción de publicidad | VOD MP4 | Post-roll (MP4) | No admitido | Y | Y |
+| Ad Insertion | VOD MP4 | Anteposición (MP4) | No admitido | Y | Y |
+| Ad Insertion | VOD MP4 | Post-roll (MP4) | No admitido | Y | Y |
 
 Para obtener más información sobre la compatibilidad con funciones HLS o DASH, consulte a continuación.
 
-## Matriz de funciones HLS {#hls-feature-matrix}
+## Matriz de características HLS {#hls-feature-matrix}
 
 Esta es la matriz de características de las funciones HLS en el SDK de TVSDK de explorador.
 
@@ -466,7 +469,7 @@ Esta es la matriz de características de las funciones HLS en el SDK de TVSDK de
 >
 >*En las tablas de matriz de funciones que se muestran a continuación, una &#39;Y&#39; significa que la función es compatible con la versión actual.*
 
-### Funciones de HLS {#hls-features}
+### Características de HLS {#hls-features}
 
 Se admiten las siguientes funciones:
 
@@ -708,7 +711,7 @@ Se admiten las siguientes funciones:
    <td><p>Protección del contenido</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>DRM</p> </td> 
-   <td><p>Adobe Access</p> </td> 
+   <td><p>Acceso a Adobe</p> </td> 
    <td><p>No admitido</p> </td> 
    <td><p>FairPlay</p> </td> 
   </tr> 
@@ -728,7 +731,7 @@ Se admiten las siguientes funciones:
    <td><p><strong>HTML5: Safari, iOS Safari</strong></p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>Anteponer (MP4/HLS)</p> </td> 
    <td><p>Y</p> </td> 
@@ -736,7 +739,7 @@ Se admiten las siguientes funciones:
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>Mid-roll (HLS)</p> </td> 
    <td><p>Y</p> </td> 
@@ -744,7 +747,7 @@ Se admiten las siguientes funciones:
    <td><p>Limitación de plataforma</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Post-roll (MP4/HLS)</p> </td> 
    <td><p>Y</p> </td> 
@@ -752,7 +755,7 @@ Se admiten las siguientes funciones:
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>FER VOD</p> </td> 
    <td><p>Resolución y comportamientos de publicidad</p> </td> 
    <td><p>Y</p> </td> 
@@ -760,7 +763,7 @@ Se admiten las siguientes funciones:
    <td><p>Limitación de plataforma</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>Directiva de publicidad predeterminada</p> </td> 
    <td><p>Y</p> </td> 
@@ -768,7 +771,7 @@ Se admiten las siguientes funciones:
    <td><p>Limitación de plataforma</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>VAST 2.0/3.0</p> </td> 
    <td><p>Y</p> </td> 
@@ -776,7 +779,7 @@ Se admiten las siguientes funciones:
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>VMAP 1.0</p> </td> 
    <td><p>Y</p> </td> 
@@ -784,7 +787,7 @@ Se admiten las siguientes funciones:
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>Reempaquetado creativo (MP4 a HLS)</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
@@ -807,7 +810,7 @@ Se admiten las siguientes funciones:
    <td><p><strong>HTML5: Safari, iOS Safari</strong></p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Solo publicidad</p> </td> 
    <td><p>No admitido</p> </td> 
@@ -815,7 +818,7 @@ Se admiten las siguientes funciones:
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>Parámetros de objetivo</p> </td> 
    <td><p>Y</p> </td> 
@@ -823,7 +826,7 @@ Se admiten las siguientes funciones:
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>Parámetros personalizados</p> </td> 
    <td><p>Y</p> </td> 
@@ -831,7 +834,7 @@ Se admiten las siguientes funciones:
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>Directiva de publicidad personalizada</p> </td> 
    <td><p>Y</p> </td> 
@@ -839,7 +842,7 @@ Se admiten las siguientes funciones:
    <td><p>Limitación de plataforma</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>Carga de anuncios diferida</p> </td> 
    <td><p>Y</p> </td> 
@@ -847,7 +850,7 @@ Se admiten las siguientes funciones:
    <td><p>Limitación de plataforma</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Publicidades complementarias, publicidades tipo titular, publicidades en las que se puede hacer clic</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
@@ -855,7 +858,7 @@ Se admiten las siguientes funciones:
    <td><p><strong> </strong></p> <p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>VPAID 2.0</p> </td> 
    <td><p>SWF</p> </td> 
@@ -880,7 +883,7 @@ Se admiten las siguientes funciones:
   <tr> 
    <td><p>Integraciones</p> </td> 
    <td><p>VOD + Activo</p> </td> 
-   <td><p>Integración VHL de Adobe Analytics</p> </td> 
+   <td><p>Integración con Adobe Analytics VHL</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
@@ -888,27 +891,27 @@ Se admiten las siguientes funciones:
  </tbody> 
 </table>
 
-## Tabla de características de DASH {#dash-feature-matrix}
+## Matriz de características de DASH {#dash-feature-matrix}
 
 Esta es la matriz de características de las funciones de DASH en el SDK de TVSDK de explorador.
 
-・ Funciones de reproducción *DASH Core*
+・ *Funciones de reproducción de DASH Core*
 
 ・ *Funciones de reproducción avanzadas de DASH*
 
 ・ *Funciones de protección de contenido de DASH*
 
-・ Funciones de inserción de anuncios *de DASH Core*
+・ *Características de inserción de anuncios principales de DASH*
 
-・ *DASH Funciones avanzadas de inserción de anuncios*
+・ *Funciones avanzadas de inserción de anuncios de DASH*
 
-・ Integraciones *DASH*
+・ *Integraciones de DASH*
 
 >[!NOTE]
 >
 >En las tablas de matriz de funciones que se muestran a continuación, una Y significa que la función es compatible con la versión actual.
 
-### Características del DASH {#dash-features}
+### Características de DASH {#dash-features}
 
 Se admiten las siguientes funciones:
 
@@ -1106,49 +1109,49 @@ Se admiten las siguientes funciones:
    <td><p><strong>HTML5 FF, IE, Chrome, Android Chrome</strong></p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>Anteposición (MP4/DASH)</p> </td> 
    <td><p>Solo VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>Mid-roll (DASH)</p> </td> 
    <td><p>Solo VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Post-roll (MP4/DASH)</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>FER VOD</p> </td> 
    <td><p>Resolución y comportamientos de publicidad</p> </td> 
    <td><p>No admitido</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>Directiva de publicidad predeterminada</p> </td> 
    <td><p>Solo VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>VAST 2.0/3.0</p> </td> 
    <td><p>Solo VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>VMAP 1.0</p> </td> 
    <td><p>Solo VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>Reempaquetado creativo (MP4 a DASH)</p> </td> 
    <td><p>No admitido</p> </td> 
@@ -1167,43 +1170,43 @@ Se admiten las siguientes funciones:
    <td><p><strong>HTML5</strong> FF, IE, Chrome, Android Chrome</strong></p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Solo publicidad</p> </td> 
    <td><p>Y</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Parámetros de objetivo</p> </td> 
    <td><p>Solo VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Parámetros personalizados</p> </td> 
    <td><p>Solo VOD</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>Directiva de publicidad personalizada</p> </td> 
    <td><p>No admitido</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD + Activo</p> </td> 
    <td><p>Carga de anuncios diferida</p> </td> 
    <td><p>No admitido</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>Publicidades complementarias, publicidades tipo titular, publicidades en las que se puede hacer clic</p> </td> 
    <td><p>No admitido</p> </td> 
   </tr> 
   <tr> 
-   <td><p>Inserción de publicidad</p> </td> 
+   <td><p>Ad Insertion</p> </td> 
    <td><p>VOD</p> </td> 
    <td><p>VPAID 2.0</p> </td> 
    <td><p>No admitido</p> </td> 
@@ -1224,7 +1227,7 @@ Se admiten las siguientes funciones:
   <tr> 
    <td><p>Integraciones</p> </td> 
    <td><p>VOD + Activo</p> </td> 
-   <td><p>Integración VHL de Adobe Analytics</p> </td> 
+   <td><p>Integración con Adobe Analytics VHL</p> </td> 
    <td><p><strong> </strong></p> <p>Y</p> </td> 
   </tr> 
  </tbody> 
@@ -1236,13 +1239,13 @@ Se admiten las siguientes funciones:
 
 Los siguientes problemas se han corregido en la actualización de la versión 2.4.12 del TVSDK del explorador (compilación 204):
 
-・ **21647**- TVSDK debe permitir la reproducción automática de vídeo en dispositivos iOS cuando el audio está silenciado.
+・ **21647**- El SDK TVSDK debe permitir la reproducción automática de vídeo en dispositivos iOS cuando el audio está silenciado.
 
-・ **21465**- Se recibe el acceso denegado al sistema de claves de error al reproducir un flujo DASH protegido por DRM después de reproducir un flujo en directo DASH.
+・ **21465**- Acceso al sistema de claves de error denegado se recibe al reproducir un flujo DASH protegido por DRM después de reproducir un flujo en directo DASH.
 
-・ **21442**: habilite la reproducción automática del contenido en la Web de iOS después de que la publicidad previa se reproduzca con un gesto del usuario.
+・ **21442**- Habilite la reproducción automática del contenido en la Web de iOS, después de que la publicidad previa se reproduzca con un gesto del usuario.
 
-・ **21240**: API proporcionada para filtrar anuncios VPAID analizados desde Auditude/VMAP.
+・ **21240**- API proporcionada para filtrar anuncios VPAID analizados desde Auditude/VMAP.
 
 **Problemas solucionados en la versión 2.4.11**
 
@@ -1256,7 +1259,7 @@ Los siguientes problemas se han solucionado en la versión 2.4.11 del SDK de TVS
 
 ・ **21141**: La búsqueda hacia atrás se rechaza debido a una condición de carrera durante la adición de segmentos.
 
-・ **21142**: Disponibilidad de rangos de reproducción que se pueden buscar cuando el reproductor está en estado INITIALIZADO. Debido a estos cambios, la sesión de inicio en la posición ahora es compatible.
+・ **21142**: Disponibilidad de rangos de reproducción que se pueden buscar cuando el reproductor está en estado INITIALIZADO. Debido a estos cambios, ahora se admite la sesión de inicio en posición.
 
 ・ **21363**: Los subtítulos opcionales 608/708 se están desincronizando después de insertarlos en los flujos DASH.
 
@@ -1266,11 +1269,11 @@ Los siguientes problemas se han solucionado en la versión 2.4.11 del SDK de TVS
 
 ・ **21257**: El archivo MP4 con la velocidad de bits más alta se selecciona para la transcodificación si MP4 no es un tipo de MIME válido y la función de reempaquetado creativo está activada.
 
-・ **21361**: TVSDK ahora pasa el sistema de publicidad y el ID creativo de la respuesta VAST como parámetros de consulta en la solicitud de paquete creativo para admitir reglas de normalización adicionales.
+・ **21361**: TVSDK ahora pasa el sistema de publicidad y el ID creativo de la respuesta VAST como parámetros de consulta en la solicitud de empaquetado creativo para admitir reglas de normalización adicionales.
 
 **Problemas solucionados en la versión 2.4.10**
 
-Los siguientes problemas se han solucionado en la versión 2.4.11 del SDK de TVSDK de explorador:
+Los siguientes problemas se han corregido en la versión 2.4.10 del SDK de TVSDK de explorador:
 
 **Funciones principales de reproducción:**
 
@@ -1282,7 +1285,7 @@ Los siguientes problemas se han solucionado en la versión 2.4.11 del SDK de TVS
 
 ・ **20823**: Se ha producido un error de códec no admitido en los segmentos que no tienen datos.
 
-・ **20769**: El SDK ahora comienza con la velocidad de bits actual en la búsqueda en lugar de cambiar inmediatamente según la directiva ABR.
+・ **20769**: El SDK ahora inicio con la velocidad de bits actual en la búsqueda en lugar de cambiar inmediatamente según la directiva ABR.
 
 ・ **20031**: Cuando se encuentra en modo vertical en IE11 (Windows 8.1), la pantalla de vídeo es pequeña. Función de protección de contenido:
 
@@ -1296,21 +1299,21 @@ Los siguientes problemas se han corregido en la versión 2.4.9 de TVSDK de explo
 
 ・ **13407**: Los flujos DASH pueden paralizarse si Firefox deja de enviar el evento &quot;ontimeupdate&quot; durante la reproducción.
 
-・ **16380**: Durante la reproducción de contenido de vídeo de audio mixto de segmentos que tienen tiempos de inicio no coincidentes mediante MSE, el error de sincronización de audio entre representaciones se acumula en los conmutadores ABR, lo que resulta en un error (problema de cromo nº 663686).
+・ **16380**: Durante la reproducción de contenido de vídeo de audio mixto de segmentos que tienen tiempos de inicio no coincidentes mediante MSE, el error de sincronización de audio entre las representaciones se acumula en los conmutadores ABR, lo que resulta en un error (problema de cromo nº 663686).
 
 ・ **17985**: Al reproducir un flujo ISO-BMFF concreto en el navegador Firefox, la reproducción se bloquea (número de Firefox 1342913). Esto se ha solucionado desde Firefox v53.
 
 ・ **19141**: ReferenceError (en promesa) no capturado: la anchura no está definida.
 
-・ **1897, 1929**: Problema de parpadeo de vídeo en el límite del segmento. Esto ocurría porque el SDK no calculaba correctamente el desplazamiento de tiempo de composición de la última muestra.
+・ **18997, 19299**: Problema de parpadeo de vídeo en el límite del segmento. Esto ocurría porque el SDK no calculaba correctamente el desplazamiento de tiempo de composición de la última muestra.
 
-・ **19780**: La reproducción no se inicia para el contenido HLS y el anuncio HLS en Firefox v53 (número de Firefox 354653).
+・ **19780**: La reproducción no es inicio para contenido HLS ni para publicidad HLS en Firefox v53 (número de Firefox 354653).
 
-・ **20046**: La fecha y hora del programa se recibe como clave en lugar de valor cuando se recibe como objeto de metadatos temporizados.
+・ **20046**: La fecha y hora de programa se recibe como clave en lugar de valor cuando se recibe como objeto de metadatos temporizados.
 
-・ **20047**: useDefaultResizeHandler genera un error con Flash fallback.
+・ **20047**: useDefaultResizeHandler genera un error con la reserva de Flash.
 
-・ **20179**: Flash fallback no funciona con Flash Player v25.0.0.171.
+・ **20179**: Flash Las visitas en el orden previsto no funcionan con Flash Player v25.0.0.171.
 
 ・ **20293**: Firefox deja de almacenar datos en búfer para determinados flujos HLS que llevan a la paralización.
 
@@ -1324,7 +1327,7 @@ Los siguientes problemas se han corregido en la versión 2.4.9 de TVSDK de explo
 
 ・ **20613**: Los cuadros de subtítulos cerrados se superponen entre sí, lo que los hace ilegibles.
 
-**Funciones de inserción de anuncios principales (CSAI):**
+**Características del Ad Insertion principal (CSAI):**
 
 ・ **20043**: Falta la impresión de publicidad y las llamadas de seguimiento de publicidad con varias publicidades y redirecciones de terceros.
 
@@ -1336,29 +1339,29 @@ Los siguientes problemas se han corregido en la versión 2.4.9 de TVSDK de explo
 
 Los siguientes problemas se han corregido en la actualización de la versión 2.4.8 de TVSDK del explorador (compilación 6002):
 
-・ **14126:** La reproducción puede bloquearse en Firefox (problema nº 1316024) debido a un espacio interno en el búfer de origen de MSE. Intente buscar para reanudar la reproducción
+・ **14126:** La reproducción puede estancarse en Firefox (número 1316024) debido a un espacio interno en el búfer de origen de MSE. Intente buscar para reanudar la reproducción
 
-・ **19608:** Corrección para respetar el valor de desplazamiento de tiempo de la respuesta VMAP de Auditude.
+・ **19608:** Corrección para honrar el valor de desplazamiento de tiempo de la respuesta VMAP de Auditude.
 
-・ **19635:** Corrige la detención de vídeo en Internet Explorer 11 en Windows 10.
+・ **19635:** corrige el estancamiento de video en Internet Explorer 11 en Windows 10.
 
-・ **19761:** Correcciones de problemas de ABR con HLS.
+・ **19761:** correcciones para problemas de ABR con HLS.
 
-・ **19780:** Corrige la reproducción del anuncio con contenido HLS dañado en Mozilla Firefox v53.
+・ **19780:** Corrige la reproducción del anuncio con contenido HLS que se dañó en Mozilla Firefox v53.
 
-・ **1987 y 1974:** Los problemas corrigen la incoherencia al seleccionar la velocidad de bits después de una operación de búsqueda. Ahora, la selección de velocidad de bits en la búsqueda es el valor inferior de la velocidad de bits actual y la velocidad de bits en el inicio.
+・ **19877 y 19744:** Los problemas corrigen la inconsistencia al seleccionar la velocidad de bits después de una operación de búsqueda. Ahora, la selección de velocidad de bits en la búsqueda es el valor inferior de la velocidad de bits actual y la velocidad de bits en el inicio ascendente.
 
-・ **1981:** La reproducción atascada y la superposición de almacenamiento en búfer aparece durante un tiempo infinito después de realizar la búsqueda durante 3 o 4 veces.
+・ **19881:** La reproducción atascada y la superposición de almacenamiento en búfer aparece durante un tiempo infinito después de realizar la búsqueda durante 3 o 4 veces.
 
-・ **1984:** Confirme la compatibilidad con los requisitos de Chrome 59 Beta Verified Media Path (VMP). bTVSDK pudo reproducir contenido de DRM Widevine con Chrome 59 Beta.
+・ **19884:** Confirmar la conformidad con los requisitos de Chrome 59 Beta Verified Media Path (VMP). bTVSDK pudo reproducir contenido de DRM Widevine con Chrome 59 Beta.
 
-・ **19916:** Se ha interrumpido la reproducción de DRM en la interfaz de usuario y el módulo. Ahora invoca a acquisitionLicense incluso si no hay ninguna política en los metadatos.
+・ **19916:** se interrumpió la reproducción de DRM en UI-Framework. Ahora invoca a acquisitionLicense incluso si no hay ninguna política en los metadatos.
 
 **Problemas solucionados en la versión 2.4.8**
 
 Los siguientes problemas se han corregido en la versión 2.4.8 del TVSDK del explorador:
 
-・ **10075**: Al buscar antes de la línea de tiempo, el evento play complete no se recibía en Firefox y Chrome y el evento search no se recibía en Firefox.
+・ **10075**: Al buscar antes de la línea de tiempo, el evento completo de reproducción no se recibía en Firefox y Chrome y el evento de búsqueda no se recibía en Firefox.
 
 ・ **15775**: Reproducir evento completo no recibido en Windows 8.1 Internet Explorer.
 
@@ -1370,11 +1373,11 @@ Los siguientes problemas se han corregido en la versión 2.4.8 del TVSDK del exp
 
 ・ **19219**: La reproducción solo de anuncios no funciona a través del marco de la interfaz de usuario.
 
-・ **1922**: La clave AES-128 se solicita una vez para una lista de reproducción y las solicitudes posteriores se envían desde la caché. Anteriormente se solicitaba para cada segmento.
+・ **19222**: La clave AES-128 se solicita una vez para una lista de reproducción y las solicitudes posteriores se envían desde la caché. Anteriormente se solicitaba para cada segmento.
 
 ・ **19597**: &quot;Error TypeError no capturado: No se puede leer la propiedad &quot;log&quot; de &quot;undefined&quot; con las compilaciones canarias de Chrome.
 
-・ **19605**: adRequestDomain no estaba disponible en el modo Flash de reserva.
+・ **19605**: adRequestDomain no estaba disponible en el modo de reserva de Flash.
 
 ・ **19608**: Las publicidades VMAP no se insertaban en los flujos HLS Live. Ahora, el SDK tiene en cuenta los marcadores de señal y no depende de los valores de desplazamiento de tiempo en las respuestas de VMAP.
 
@@ -1388,7 +1391,7 @@ Los siguientes problemas se han corregido en la versión 2.4.8 del TVSDK del exp
 
 En la versión 2.4.7 se corrigieron los siguientes problemas:
 
-・ **8397**: Es posible que los flujos HLS Live generados a través de Adobe Media Server no se reproduzcan si los segmentos no comienzan con un fotograma clave.
+・ **8397**: Es posible que los flujos HLS Live generados a través de Adobe Media Server no se reproduzcan si los segmentos no entran en inicio con un fotograma clave.
 
 ・ **13606**: Se han corregido varios problemas relacionados con la búsqueda para el flujo HLS en el navegador Chrome.
 
@@ -1441,10 +1444,10 @@ A continuación se mencionan las limitaciones y los problemas conocidos del SDK 
   <tr> 
    <td>VOD + Activo</td> 
    <td>Reproducción general (Reproducir, Pausa, Buscar)</td> 
-   <td><p>・ Los formatos de medios que no sean HLS no son compatibles.</p> <p>8799: La alternativa Flash no se ocupa de los contenidos mixtos y, por lo tanto, es necesario asegurarse de que Contenido, Publicidad y otras direcciones URL no conduzcan a contenidos mixtos (contenido seguro y no seguro juntos).</p> <p>・ 19271: La reproducción de varias visualizaciones mediante el marco de interfaz de usuario no se admite en el modo de reserva de Flash.</p> <p>・ Flash fallback no funciona en Microsoft Internet Explorer 8 y 9 en Windows 7 porque estas versiones no son compatibles con el SDK.</p> <p>・ 20262: Flash fallback agrega parámetros personalizados a la lista de información de objetivos. También el orden de prioridad de los parámetros personalizados es diferente en el caso de Flash y MSE.</p> <p>・ 20653:La reserva Flash TVSDK del explorador no funciona en Win10 con la actualización de creadores.</p> <p>・ Flash Fallback funciona con Flash Player versión 23 y posterior.</p> <p>・ 20087 - Chrome 59 Beta con</p> <p>Flash 25.0.0.171</p> <p>Beta (predeterminado), la reproducción de HLS no funciona en el modo Flash Fallback. Está funcionando bien en Canary.</p> </td> 
-   <td><p>・ 12563: Los flujos de Dash con códec de audio mp4a.40.02 no se reproducen en Firefox debido a una cadena de códec de audio no compatible en MPD. Se admite el códec de audio mp4a.40.2.</p> <p>15029: Cuando se cambia entre vídeos en multiView en la interfaz de usuario-marco, el botón de reproducción/pausa no se actualiza de forma acorde.</p> <p>・ 16034:En Windows 8.1 IE, llamar a reset() produce un error de tipo MIME desconocido. Vuelva a cargar el medio para reanudar la reproducción.</p> <p>・ 18235: Algunos problemas de búsqueda se observan con los flujos de vod DASH con los anuncios.</p> <p>・ 18727: No se admite la API de error para MSE</p> <p>18750: Los eventos de cambio de estado podrían estar desordenados en algunos casos tanto para el SDK como para el marco de interfaz de usuario, y en el marco de interfaz de usuario, los eventos IDLE e Initializing StatusChange podrían faltar para los oyentes de eventos agregados después de cargar el recurso.</p> <p>・ 18889: Si MediaPlayer está en estado ERROR, no se devuelve el objeto view.</p> <p>・ 19039: Si AdobePSDK. MediaPlayer. searchToLocal() se utiliza con un valor bueno que EOF y, a continuación, la reproducción comienza desde el principio en el caso de MSE.</p> <p>・ 19049: No se notifica ningún estado de error para Flash Player en Chrome, IE o Firefox cuando el vídeo está bloqueado durante la reproducción.</p> <p>・ 17.205: La reproducción de vídeo se detiene durante algunas horas durante la reproducción de un flujo sin muestrear mientras el audio sigue reproduciéndose (problema de cromo nº 664033).</p> <p>・ 12308: Los flujos DASH con composición_time_offset especificada pueden tener una variable timeStampOffset aplicada en el navegador Chrome que da lugar a un tiempo de descodificación negativo y, por lo tanto, un error MEDIA_ERR_ SRC_NOT_ SUPPORTED (problema de cromo #398141).</p> <p>・ 14126: La reproducción puede bloquearse en Firefox (número 1316024) debido a un espacio interno en el búfer de origen de MSE. Intente buscar para reanudar la reproducción.</p> <p>・ 1915: MS Edge e IE 11 (Win 8.1 y 10) no establece Origin en null en la redirección CORS y, sin embargo, falla porque el encabezado no es nulo y provoca un error de reproducción.</p> <p>・ 19861: Problema con el comportamiento de adición en el búfer de origen para medios ya reproducidos. Chrome rechaza el fragmento anexado, incluido moov, lo que provoca un error de descodificación posterior. (Problema de cromo #735335)</p> <p>19921: La reproducción se detiene para cierto contenido HLS aunque su almacenamiento en búfer se haya realizado correctamente (problema de cromo #713540)</p> <p>・ 20444: Si se busca el final del rango en búfer en IE y Edge, la reproducción puede paralizarse.</p> <p>・ 20511: A veces, se puede observar el rechazo de búsqueda para flujos HLS con o sin anuncios.</p> <p>・ 20743: En Windows 10 Chrome, el flujo en directo de HLS se reproduce durante unos segundos antes de la reproducción previa de MP4.</p> <p>・ 21043: Es posible que la dimensión de vídeo no sea correcta durante la carga inicial debido a la falta de metadatos.</p> <p>・ 21115: El gesto del usuario de Android es necesario para iniciar la reproducción si el anuncio previo está disponible para los vídeos en una lista de reproducción.</p> <p>・ HLS Live no admite el rollover de marca de hora.</p> <p>・ No se admite audio AAC-SSR.</p> <p>Los códecs de audio AC3 y AC3 mejorado no son compatibles.</p> <p>・ Para flujos con discontinuidad de marca de hora pero sin marcadores de discontinuidad</p> <p>・ La reproducción puede tener problemas y la búsqueda incorrecta debido a los saltos.</p> <p>・ Es posible que la duración del contenido y de la reproducción no coincidan.</p> <p>・ Las discontinuidades entre representaciones y representaciones deben coincidir con otras, lo que puede provocar problemas de sincronización y parada.</p> <p>・ Es posible que los subtítulos y WebVTT no aparezcan cerca del final del flujo.</p> <p>・ Los cambios en el códec de audio no se admiten en los saltos de marca de tiempo.</p> <p>・ No se admite la inserción de anuncios.</p> <p>・ El modo de truco de avance rápido puede llevar a un bucle de reproducción en Win 8.1 IE 11 (número de MS 12446268).</p> <p>DASH:</p> <p>・ Para flujos en directo: se admite el perfil en directo con tipo dinámico.</p> <p>・ Para flujos VoD: se admite el perfil en directo con tipo estático.</p> <p>Para flujos de VoD: el perfil bajo demanda no está certificado para flujos de trabajo de publicidad.</p> </td> 
+   <td><p>・ Los formatos de medios que no sean HLS no son compatibles.</p> <p>8799: La opción de reserva de Flash no se ocupa de los contenidos mixtos y, por lo tanto, es necesario asegurarse de que Contenido, Publicidad y otras direcciones URL no conduzcan a contenidos mixtos (contenido seguro y no seguro juntos).</p> <p>・ 19271: La reproducción de varias visualizaciones mediante la interfaz de usuario no se admite en el modo de reserva de Flash.</p> <p>・ La opción de reserva de Flash no funciona en Microsoft Internet Explorer 8 y 9 en Windows 7, ya que estas versiones no son compatibles con el SDK.</p> <p>・ 20262: Flash fallback agrega parámetros personalizados a la lista de información de segmentación. También el orden de prioridad de los parámetros personalizados es diferente en el caso de Flash y MSE.</p> <p>・ 20653: La opción de reserva de Flash TVSDK del explorador no funciona en Win10 con la actualización de creadores.</p> <p>・ Flash Fallback funciona con Flash Player versión 23 y posterior.</p> <p>・ 20087 - Chrome 59 Beta con</p> <p>Flash 25.0.0.171</p> <p>Beta (predeterminado), la reproducción de HLS no funciona en el modo de reserva de Flash. Está funcionando bien en Canary.</p> </td> 
+   <td><p>・ 12563: Los flujos de Dash con códec de audio mp4a.40.02 no se reproducen en Firefox debido a una cadena de códec de audio no compatible en MPD. Se admite el códec de audio mp4a.40.2.</p> <p>15029: Cuando se cambia entre vídeos en multiView en la interfaz de usuario-marco, el botón de reproducción/pausa no se actualiza de forma acorde.</p> <p>・ 16034:En Windows 8.1 IE, llamar a reset() produce un error de tipo MIME desconocido. Vuelva a cargar el medio para reanudar la reproducción.</p> <p>・ 18235: Algunos problemas de búsqueda se observan con los flujos de vod DASH con los anuncios.</p> <p>・ 18727: No se admite la API de error para MSE</p> <p>18750: Los eventos de cambio de estado podrían estar desordenados en algunos casos para el SDK y la interfaz de usuario, y en la interfaz de usuario Framework, los eventos IDLE e Initializing StatusChange podrían faltar para los oyentes de evento agregados después de cargar el recurso.</p> <p>・ 18889: Si MediaPlayer está en estado ERROR, no se devuelve el objeto de vista.</p> <p>・ 19039: Si AdobePSDK. MediaPlayer. searchToLocal() se utiliza con un valor bueno que EOF y, a continuación, inicios de reproducción desde el principio en el caso de MSE.</p> <p>・ 19049: No se ha informado de ningún estado de error en el Flash Player de Chrome, IE y Firefox cuando el vídeo está bloqueado durante la reproducción.</p> <p>・ 17.205: La reproducción de vídeo se detiene durante algunas horas durante la reproducción de un flujo sin muestrear mientras el audio sigue reproduciéndose (problema de cromo nº 664033).</p> <p>・ 12308: Los flujos DASH con composición_time_offset especificada pueden tener una variable timeStampOffset aplicada en el navegador Chrome que da lugar a un tiempo de descodificación negativo y, por lo tanto, un error MEDIA_ERR_ SRC_NOT_ SUPPORTED (problema de cromo #398141).</p> <p>・ 14126: La reproducción puede bloquearse en Firefox (número 1316024) debido a un espacio interno en el búfer de origen de MSE. Intente buscar para reanudar la reproducción.</p> <p>・ 1915: MS Edge e IE 11 (Win 8.1 y 10) no establece Origen en nulo en la redirección CORS y, sin embargo, falla porque el encabezado no es nulo y provoca un error de reproducción.</p> <p>・ 19861: Problema con el comportamiento de adición en el búfer de origen para medios ya reproducidos. Chrome rechaza el fragmento anexado, incluido moov, lo que provoca un error de descodificación posterior. (Problema de cromo #735335)</p> <p>19921: La reproducción se detiene para cierto contenido HLS aunque su almacenamiento en búfer se haya realizado correctamente (problema de cromo #713540)</p> <p>・ 20444: Si se busca el final del rango en búfer en IE y Edge, la reproducción puede paralizarse.</p> <p>・ 20511: A veces, se puede observar el rechazo de búsqueda para flujos HLS con o sin anuncios.</p> <p>・ 20743: En Windows 10 Chrome, el flujo en directo de HLS se reproduce durante unos segundos antes de la reproducción previa de MP4.</p> <p>・ 21043: Es posible que la dimensión de vídeo no sea correcta durante la carga inicial debido a la falta de metadatos.</p> <p>・ 21115: El gesto del usuario de Android es necesario para inicio de la reproducción si el anuncio previo está disponible para los vídeos en una lista de reproducción.</p> <p>・ HLS Live no admite el rollover de marca de hora.</p> <p>・ No se admite audio AAC-SSR.</p> <p>Los códecs de audio AC3 y AC3 mejorado no son compatibles.</p> <p>・ Para flujos con discontinuidad de marca de hora pero sin marcadores de discontinuidad</p> <p>・ La reproducción puede tener problemas y la búsqueda incorrecta debido a los saltos.</p> <p>・ Es posible que la duración del contenido y de la reproducción no coincidan.</p> <p>・ Las discontinuidades entre representaciones y representaciones deben coincidir con otras, lo que puede provocar problemas de sincronización y parada.</p> <p>・ Es posible que los subtítulos y WebVTT no aparezcan cerca del final del flujo.</p> <p>・ Los cambios en el códec de audio no se admiten en los saltos de marca de tiempo.</p> <p>・ No se admite la inserción de publicidad.</p> <p>・ El modo de truco de avance rápido puede llevar a un bucle de reproducción en Win 8.1 IE 11 (número de MS 12446268).</p> <p>DASH:</p> <p>・ Para flujos en directo: se admite el perfil en directo con tipo dinámico.</p> <p>・ Para flujos VoD: se admite el perfil en directo con tipo estático.</p> <p>Para flujos de VoD: el perfil a petición no está certificado para flujos de trabajo de publicidad.</p> </td> 
    <td><p>・ No se admiten los flujos de DASH Live y DASH Video on Demand.</p> <p>・ La reproducción de vídeo PIP (Picture in Picture) no es compatible con iOS en modo de pantalla completa.</p> <p>En la extensión Safari (etiqueta de vídeo), no funciona menos el manifiesto sin tener un encabezado de tipo de contenido correcto.</p> </td> 
-   <td><p>・ El ID de la aplicación en la aplicación del remitente debe ser el mismo que se genera al registrar la URL del receptor como una aplicación del receptor personalizado.</p> <p>・ El reproductor de referencia está certificado para los flujos de trabajo de DASH. El marco de la interfaz de usuario no está certificado.</p> <p>Para obtener una lista de los códecs de medios admitidos, consulte <a href="https://developers.google.com/cast/docs/media"><em>aquí</em></a>.</p> </td> 
+   <td><p>・ El ID de la aplicación en la aplicación del remitente debe ser el mismo que se genera al registrar la URL del receptor como una aplicación del receptor personalizado.</p> <p>・ El reproductor de referencia está certificado para flujos de trabajo DASH. El marco de la interfaz de usuario no está certificado.</p> <p>Para obtener lista de los códecs de medios admitidos, consulte <a href="https://developers.google.com/cast/docs/media"><em>aquí</em></a>.</p> </td> 
   </tr> 
   <tr> 
    <td>FER VOD</td> 
@@ -1457,7 +1460,7 @@ A continuación se mencionan las limitaciones y los problemas conocidos del SDK 
   <tr> 
    <td>VOD + Activo</td> 
    <td>Velocidad de bits adaptable</td> 
-   <td><p>・ 20079: Reescritura del búfer en la búsqueda dentro del rango de almacenamiento en búfer.</p> <p>20080: El comportamiento de Flash ABR es coherente con MSE.</p> </td> 
+   <td><p>・ 20079: Reescritura del búfer en la búsqueda dentro del rango de almacenamiento en búfer.</p> <p>20080: El comportamiento de ABR de Flash es coherente con MSE.</p> </td> 
    <td><p>・ La variante de reserva de solo audio en un flujo ABR se ignora debido a limitaciones relacionadas con el búfer.</p> <p>・ 12289: Los params de control ABR no se aplican para audio en caso de flujos HLS/DASH sin muestrear.</p> </td> 
    <td> </td> 
    <td> </td> 
@@ -1466,7 +1469,7 @@ A continuación se mencionan las limitaciones y los problemas conocidos del SDK 
    <td>VOD + Activo</td> 
    <td>Subtítulos 608/708</td> 
    <td> </td> 
-   <td><p>・ 7810: En Android 4.4.4, Chrome no parece ser compatible con las familias de fuentes CSS básicas utilizadas por el reproductor y, por lo tanto, la función de cambio de estilo de fuente no funciona.</p> <p>・ Los canales CC no se pueden cambiar en el caso de 608 subtítulos.</p> <p>・ Las características de estilo avanzadas no son compatibles con los 608 rótulos.</p> <p>Se admiten los rótulos incrustados (608/708), marcados mediante la etiqueta Accesibilidad.</p> </td> 
+   <td><p>・ 7810: En Android 4.4.4, Chrome no parece ser compatible con las familias de fuentes CSS básicas utilizadas por el reproductor y, por lo tanto, la función de cambio de estilo de fuente no funciona.</p> <p>・ Los canales CC no se pueden cambiar en el caso de 608 subtítulos.</p> <p>・ Las funciones de estilo avanzadas no son compatibles con los 608 rótulos.</p> <p>Se admiten los rótulos incrustados (608/708), marcados mediante la etiqueta Accesibilidad.</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1497,8 +1500,8 @@ A continuación se mencionan las limitaciones y los problemas conocidos del SDK 
   <tr> 
    <td>VOD + Activo</td> 
    <td>Notificaciones de QoS y reproductor</td> 
-   <td>21129: La velocidad de fotogramas no está disponible en caso de Flash Fallback.</td> 
-   <td><p>• 11170:</p> <p>Timed_Event no está disponible para Browser TVSDK con MSE, al contrario que para Browser TVSDK con Flash Fallback.</p> <p>21129: La velocidad de fotogramas no se calcula para los flujos interactivos.</p> </td> 
+   <td>21129: La velocidad de fotogramas no está disponible en caso de Flash de reserva.</td> 
+   <td><p>・ 11170:</p> <p>Timed_Evento no está disponible para Browser TVSDK con MSE, a diferencia de para Browser TVSDK con Flash Fallback.</p> <p>21129: La velocidad de fotogramas no se calcula para los flujos interactivos.</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1513,7 +1516,7 @@ A continuación se mencionan las limitaciones y los problemas conocidos del SDK 
   <tr> 
    <td>VOD + Activo</td> 
    <td>Etiquetas personalizadas</td> 
-   <td>14763: No se deben admitir las etiquetas personalizadas que no sean las que empiecen por #. En este momento, se crea el objeto TimedMetadata y se genera un informe para dichas etiquetas durante Flash Fallback.</td> 
+   <td>14763: No se deben admitir las etiquetas personalizadas que no sean las que empiecen por #. En este momento, se crea el objeto TimedMetadata y se genera un informe para dichas etiquetas durante las visitas en el Flash.</td> 
    <td>Los flujos con etiquetas personalizadas dentro de banda no están certificados.</td> 
    <td> </td> 
    <td> </td> 
@@ -1569,8 +1572,8 @@ A continuación se mencionan las limitaciones y los problemas conocidos del SDK 
    <td>VOD + Activo</td> 
    <td>Análisis de ID3</td> 
    <td>20346: SDK también debe devolver el byte de codificación de texto de los marcos ID3.</td> 
-   <td><p>El SDK ignora las etiquetas ID3 disponibles en flujos de transporte de datos de audio (ADTS).</p> <p>・ 12378: Los metadatos temporizados de ID3 se analizan en diferentes momentos en Flash y navegador con compatibilidad con MSE y, por lo tanto, el comportamiento de visualización en la línea de tiempo del reproductor de referencia también es diferente.</p> <p>・ 19247: El análisis de ID3 no es compatible con el marco de trabajo de la interfaz de usuario.</p> </td> 
-   <td><p>・ 20323: La etiqueta PRIV ID3 utilizada para indicar la marca de tiempo de la primera muestra de un segmento ac no se analiza en Safari (problema de Safari #32422733)</p> <p>・ 20350: En determinados dispositivos (incluido MAC OS X 10.1, iPad 10) Safari no proporciona un evento de cambio de señal cuando se encuentra en modo de truco y, por lo tanto, no se reciben fotogramas de ID3. (Problema de Safari #32450526)</p> </td> 
+   <td><p>El SDK ignora las etiquetas ID3 disponibles en flujos de transporte de datos de audio (ADTS).</p> <p>・ 12378: Los metadatos temporizados de ID3 se analizan en diferentes momentos en Flashes y navegadores compatibles con MSE, por lo que el comportamiento de visualización en la línea de tiempo del reproductor de referencia también es diferente.</p> <p>・ 19247: El análisis de ID3 no es compatible con el marco de trabajo de la interfaz de usuario.</p> </td> 
+   <td><p>・ 20323: La etiqueta PRIV ID3 utilizada para indicar la marca de tiempo de la primera muestra de un segmento ac no se analiza en Safari (problema de Safari #32422733)</p> <p>・ 20350: En determinados dispositivos (incluido MAC OS X 10.1, iPad 10) Safari no proporciona evento de cambio de señal cuando se encuentra en modo de truco y, por lo tanto, no se reciben fotogramas de ID3. (Problema de Safari #32450526)</p> </td> 
    <td> </td> 
   </tr> 
   <tr> 
@@ -1615,7 +1618,7 @@ A continuación se mencionan las limitaciones y los problemas conocidos del SDK 
  </tbody> 
 </table>
 
-**Cuadro 19: Funciones principales de inserción de publicidad (CSAI)**
+**Cuadro 19: Características principales del Ad Insertion (CSAI)**
 
 <table> 
  <tbody> 
@@ -1673,7 +1676,7 @@ A continuación se mencionan las limitaciones y los problemas conocidos del SDK 
  </tbody> 
 </table>
 
-**Cuadro 20: Funciones avanzadas de inserción de publicidad (CSAI)**
+**Cuadro 20: Funciones avanzadas de Ad Insertion (CSAI)**
 
 <table> 
  <tbody> 
@@ -1697,7 +1700,7 @@ A continuación se mencionan las limitaciones y los problemas conocidos del SDK 
    <td>VOD + Activo</td> 
    <td>Directiva de publicidad personalizada</td> 
    <td> </td> 
-   <td><p>・ Los comportamientos de publicidad no son compatibles con los anuncios en MP4 y el contenido en MP4.</p> <p>・ 13973: Comportamientos de publicidad personalizados: la directiva SKIP no genera un evento completo cuando se utiliza con MSE.</p> <p>・ 14939: Las directivas de comportamiento de publicidad personalizadas que se omiten y se omiten no funcionan para el contenido de DASH.</p> <p>・ 17131: El primer fotograma de la publicidad es visible y, a continuación, el contenido se reanuda en caso de que se OMITA la directiva de pausa publicitaria.</p> </td> 
+   <td><p>・ Los comportamientos de publicidad no son compatibles con los anuncios en MP4 y el contenido en MP4.</p> <p>・ 13973: Comportamientos de publicidad personalizados: la directiva SKIP no emite eventos completos cuando se utiliza con MSE.</p> <p>・ 14939: Las directivas de comportamiento de publicidad personalizadas que se omiten y se omiten no funcionan para el contenido de DASH.</p> <p>・ 17131: El primer fotograma de la publicidad es visible y, a continuación, el contenido se reanuda en caso de que se OMITA la directiva de pausa publicitaria.</p> </td> 
    <td> </td> 
    <td> </td> 
   </tr> 
@@ -1713,7 +1716,7 @@ A continuación se mencionan las limitaciones y los problemas conocidos del SDK 
    <td> </td> 
    <td>VPAID 2.0</td> 
    <td> </td> 
-   <td><p>・ Los comportamientos de publicidad no son compatibles con los anuncios VPAID.</p> <p>・ 15032: Las publicidades VPAID en combinación con anuncios MP4 o HLS en una pausa publicitaria no son compatibles.</p> <p>・ 19001: En Android e iOS cuando la publicidad VPAID se reproduce con MP4 como contenido principal, se pueden oír dos pistas de audio, una de contenido principal y otra de publicidad.</p> <p>・ 20762: Las publicidades VPAID no son compatibles con Picture in Picture (PIP).</p> <p>・ 21172: El evento de reproducción completa no se recibe para el contenido de HLS VOD con anuncios VPAID.</p> <p>・ 21173: No se recibe onAdBreakCompleteEvent para el contenido VOD de HLS ni para las publicidades VPAID de anuncio.</p> </td> 
+   <td><p>・ Los comportamientos de publicidad no son compatibles con los anuncios VPAID.</p> <p>・ 15032: Las publicidades VPAID en combinación con anuncios MP4 o HLS en una pausa publicitaria no son compatibles.</p> <p>・ 19001: En Android e iOS cuando la publicidad VPAID se reproduce con MP4 como contenido principal, las pistas de audio de doble son audibles, una de contenido principal y otra de publicidad.</p> <p>・ 20762: Las publicidades VPAID no son compatibles con Picture in Picture (PIP).</p> <p>・ 21172: No se recibe el evento completo de reproducción para el contenido de VOD de HLS con anuncios VPAID.</p> <p>・ 21173: No se recibe onAdBreakCompleteEvent para el contenido VOD de HLS ni para las publicidades VPAID de anuncio.</p> </td> 
    <td>El reproductor cambia entre el modo normal y el modo de pantalla completa al cambiar entre el contenido principal y el de VPAID.</td> 
    <td> </td> 
    <td> </td> 
@@ -1725,8 +1728,8 @@ A continuación se mencionan las limitaciones y los problemas conocidos del SDK 
 
 | **Tipo de contenido** | **Función** | **Flash** | **HTML5 en Firefox, IE, Chrome, Android Chrome** | **HTML5 en Safari, iOS Safari** | **Chromecast (solo reproducción de DASH)** |
 |---|---|---|---|---|---|
-| VOD + Activo | Integración VHL de Adobe Analytics |  | 19004: El seguimiento de Video Analytics no está disponible mediante la herramienta de configuración de interfaz de usuario. |  |  |
+| VOD + Activo | Integración con Adobe Analytics VHL |  | 19004: El seguimiento de Video Analytics no está disponible mediante la herramienta de configuración de interfaz de usuario. |  |  |
 
 ## Recursos útiles {#helpful-resources}
 
-* Consulte la documentación de ayuda completa en la página de información y asistencia [de](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consulte la documentación de ayuda completa en la página [Información y soporte de Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
