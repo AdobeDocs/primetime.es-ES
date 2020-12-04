@@ -7,6 +7,9 @@ title: Reglas de prioridad
 uuid: 20dd0ded-06dd-427d-8dd3-79f9f8a3390c
 translation-type: tm+mt
 source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 1%
 
 ---
 
@@ -35,7 +38,7 @@ La regla de prioridad define el orden de prioridad de los elementos creativos de
    <td><span class="codeph"> item</span></td> 
    <td><span class="codeph"> Cadena</span></td> 
    <td><span class="codeph"> host</span></td> 
-   <td>Actualmente solo se admite <span class="codeph"> host</span> . Este atributo debe estar presente cuando se definen <span class="codeph"> coincidencias</span> y <span class="codeph"> valores</span> .</td> 
+   <td>Actualmente solo se admite <span class="codeph"> host</span>. Este atributo debe estar presente cuando se definan atributos <span class="codeph"> coincidencias</span> y <span class="codeph"> valores</span>.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> matches</span></td> 
@@ -46,8 +49,8 @@ La regla de prioridad define el orden de prioridad de los elementos creativos de
      <li><span class="codeph"> eq</span> - es igual a</li> 
      <li><span class="codeph"> ne</span> - no es igual a</li> 
      <li><span class="codeph"> co</span> - contiene</li> 
-     <li><span class="codeph"> nc</span> : no contiene</li> 
-     <li><span class="codeph"> sw</span> - comienza con</li> 
+     <li><span class="codeph"> nc</span> - no contiene</li> 
+     <li><span class="codeph"> sw</span> : inicios con</li> 
      <li><span class="codeph"> Nuevo</span> : termina con</li> 
     </ul></td> 
   </tr> 
@@ -58,10 +61,10 @@ La regla de prioridad define el orden de prioridad de los elementos creativos de
    <td>El valor siempre debe ser <span class="codeph"> priority</span></td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> values</span></td> 
+   <td><span class="codeph"> valores</span></td> 
    <td><span class="codeph"> Matriz</span></td> 
    <td></td> 
-   <td> <p>TVSDK utilizará el atributo <span class="codeph"> matches</span> en el <span class="codeph"> elemento</span> del elemento creativo de origen y coincidirá con los valores definidos en esta matriz</p> </td> 
+   <td> <p>TVSDK utilizará el atributo <span class="codeph"> matches</span> en el elemento <span class="codeph"></span> del elemento creativo de origen y coincidirá con los valores definidos en esta matriz</p> </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> stream</span></td> 
