@@ -4,6 +4,9 @@ title: Introducción a los certificados de solicitud
 uuid: 3a4e79d7-1832-49d8-bcf2-a029b3729e6d
 translation-type: tm+mt
 source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
