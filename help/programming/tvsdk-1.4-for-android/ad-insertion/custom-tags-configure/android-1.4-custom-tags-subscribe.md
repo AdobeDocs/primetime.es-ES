@@ -6,6 +6,9 @@ title: Suscripción a etiquetas personalizadas
 uuid: fe8ba34d-66fc-43bb-b98e-659c1702d1e0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '112'
+ht-degree: 1%
 
 ---
 
@@ -14,14 +17,14 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 TVSDK prepara objetos TimedMetadata para etiquetas suscritas cada vez que estos objetos se encuentran en el manifiesto de contenido.
 
-Antes de iniciar la reproducción, debe suscribirse a las etiquetas.
+Antes de los inicios de reproducción, debe suscribirse a las etiquetas.
 Para recibir notificaciones sobre las etiquetas personalizadas en los manifiestos HLS:
 
-Configure los nombres de las etiquetas de publicidad personalizadas de forma global pasando una matriz que contenga las etiquetas personalizadas a `setSubscribedTags` en `MediaPlayerItemConfig`.
+Configure los nombres de etiquetas de publicidad personalizados de forma global pasando una matriz que contenga las etiquetas personalizadas a `setSubscribedTags` en `MediaPlayerItemConfig`.
 
 >[!IMPORTANT]
 >
->Debe incluir el `#` prefijo al trabajar con flujos HLS.
+>Debe incluir el prefijo `#` al trabajar con flujos HLS.
 
 Por ejemplo:
 
