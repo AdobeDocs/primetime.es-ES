@@ -6,6 +6,9 @@ title: Modo de señalización de publicidad
 uuid: 6e6e72cf-4de4-4ac1-9726-7521e47ccd83
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '137'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 El modo de señalización de publicidad especifica dónde debe obtener la información de publicidad el flujo de vídeo.
 
-Los valores válidos son `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues`y `PTAdSignalingModeServerMap`.
+Los valores válidos son `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues` y `PTAdSignalingModeServerMap`.
 
-En la tabla siguiente se describe el efecto de `AdSignalingMode` los valores para varios tipos de flujo HLS:
+La siguiente tabla describe el efecto de los valores `AdSignalingMode` para varios tipos de flujo HLS:
 
 <table frame="all" colsep="1" rowsep="1" id="table_AdSignalingMode"> 
  <thead> 
