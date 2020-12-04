@@ -6,6 +6,9 @@ title: Leer las estadísticas de reproducción, almacenamiento en búfer y dispo
 uuid: 5ee631fc-cd6f-4f35-8621-2ffdc51a57c7
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 1%
 
 ---
 
@@ -14,12 +17,12 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Puede leer estadísticas de reproducción, almacenamiento en búfer y dispositivos desde la clase QOSProvider.
 
-La `QOSProvider` clase proporciona varias estadísticas, incluida información sobre almacenamiento en búfer, velocidades de bits, velocidades de fotogramas, datos de tiempo, etc.
+La clase `QOSProvider` proporciona varias estadísticas, incluida información sobre almacenamiento en búfer, velocidades de bits, velocidades de fotogramas, datos de tiempo, etc.
 
 También proporciona información sobre el dispositivo, como el fabricante, el modelo, el sistema operativo, la versión del SDK y el tamaño y la densidad de la pantalla.
 
 1. Cree una instancia de un reproductor multimedia.
-1. Cree un `QOSProvider` objeto y adjúntelo al reproductor de medios.
+1. Cree un objeto `QOSProvider` y adjúntelo al reproductor de medios.
 
    ```
    // Create Media Player. 
@@ -29,7 +32,7 @@ También proporciona información sobre el dispositivo, como el fabricante, el m
 
 1. (Opcional) Lea las estadísticas de reproducción.
 
-   Una solución para leer las estadísticas de reproducción es tener un temporizador que recopile periódicamente los nuevos valores de QoS del `QOSProvider`. Por ejemplo:
+   Una solución para leer las estadísticas de reproducción es tener un temporizador que recopila periódicamente los nuevos valores de QoS de `QOSProvider`. Por ejemplo:
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  
