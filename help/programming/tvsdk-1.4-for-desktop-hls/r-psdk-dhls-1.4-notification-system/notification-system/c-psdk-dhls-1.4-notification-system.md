@@ -6,6 +6,9 @@ title: Notificaciones de estado, actividad, errores y registro del reproductor
 uuid: 7ce5bed0-f312-437e-a82f-b1d4a8e1926c
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '147'
+ht-degree: 0%
 
 ---
 
@@ -16,4 +19,4 @@ Los objetos MediaPlayerNotification proporcionan información sobre los cambios 
 
 La aplicación puede recuperar la notificación y la información de estado. También puede crear un sistema de registro para diagnósticos y validación mediante la información de notificación.
 
-Los oyentes de eventos se implementan para capturar y responder a los eventos. Muchos eventos proporcionan notificaciones `MediaPlayerNotification` de estado.
+Los oyentes de evento se implementan para capturar y responder a eventos. Muchos eventos proporcionan `MediaPlayerNotification` notificaciones de estado.
