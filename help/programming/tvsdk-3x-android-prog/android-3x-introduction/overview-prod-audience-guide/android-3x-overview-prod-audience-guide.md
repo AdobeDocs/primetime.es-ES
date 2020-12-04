@@ -6,6 +6,9 @@ title: Descripción general del producto, audiencia y esta guía
 uuid: dd281a3e-a85f-4470-a730-2c5e87d0e490
 translation-type: tm+mt
 source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ Esta guía proporciona información sobre cómo desarrollar aplicaciones de repr
 
 <!--<a id="section_FC24E86A2E6442B8A3769160769BBDFA"></a>-->
 
-* Para obtener una lista de las funciones compatibles con TVSDK, consulte [Funciones](../../../tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-of-the-player.md)de Primetime TVSDK.
+* Para obtener una lista de las funciones admitidas por TVSDK, consulte [Funciones de Primetime TVSDK](../../../tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-of-the-player.md).
 * Para conocer los requisitos específicos de hardware y software para utilizar TVSDK, consulte [Requisitos](../../../tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md).
 * Para obtener una lista de las API disponibles, consulte [TVSDK Android API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html).
 
-## Descripción general del producto {#section_9664959F25C948878F2F7EF3D360CA95}
+## Información general del producto {#section_9664959F25C948878F2F7EF3D360CA95}
 
 TVSDK incluye descripciones de API y ejemplos de código para ayudarle a integrar funciones avanzadas de vídeo, protección de contenido y funciones de publicidad en su reproductor. Java se utiliza para crear una interfaz de usuario de reproductor de vídeo. TVSDK le ayuda a conectar esa interfaz de usuario a su reproductor multimedia. Esto le permite reproducir vídeos y publicidades basados en manifiestos de medios. También puede utilizar TVSDK para recuperar información sobre el vídeo, gestionar la seguridad y controlar y supervisar la reproducción.
 
@@ -32,10 +35,10 @@ En esta guía se asume que se comprende cómo desarrollar aplicaciones y reprodu
 
 Esta guía proporciona información que le permite incorporar funciones de TVSDK en un reproductor de vídeo mediante Java en dispositivos Android.
 
-## Notación de espacio de nombres en esta guía {#section_8B866054E9ED4B5F99DCA7A681404632}
+## Notación de Área de nombres en esta guía {#section_8B866054E9ED4B5F99DCA7A681404632}
 
 >[!TIP]
 >
->El prefijo del espacio de nombres de la API de TVSDK [!DNL com.adobe.mediacore] se suele omitir para la abreviatura.
+>El prefijo de Área de nombres de la API de TVSDK [!DNL com.adobe.mediacore] se suele omitir para la abreviatura.
 >
 >Se hace referencia a muchos elementos de API sin el indicador de clase principal si el contexto es claro.
