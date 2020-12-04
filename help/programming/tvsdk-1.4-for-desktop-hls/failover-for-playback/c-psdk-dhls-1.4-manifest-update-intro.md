@@ -1,23 +1,26 @@
 ---
-description: TVSDK puede detectar información de reproducción modificada en los manifiestos m3u8 maestros para flujo continuo en directo y actualizar la información de reproducción mientras se reproduce el flujo. TVSDK admite un conjunto dinámico de perfiles de velocidad de bits a medida que los perfiles aparecen o desaparecen del manifiesto maestro, incluidas las velocidades de bits de perfil no superpuestas entre actualizaciones.
-seo-description: TVSDK puede detectar información de reproducción modificada en los manifiestos m3u8 maestros para flujo continuo en directo y actualizar la información de reproducción mientras se reproduce el flujo. TVSDK admite un conjunto dinámico de perfiles de velocidad de bits a medida que los perfiles aparecen o desaparecen del manifiesto maestro, incluidas las velocidades de bits de perfil no superpuestas entre actualizaciones.
+description: TVSDK puede detectar información de reproducción modificada en los manifiestos m3u8 maestros para flujo continuo en directo y actualizar la información de reproducción mientras se reproduce el flujo. TVSDK admite un conjunto dinámico de perfiles de velocidad de bits a medida que los perfiles aparecen o desaparecen del manifiesto maestro, incluidas velocidades de bits de perfil no superpuestas entre actualizaciones.
+seo-description: TVSDK puede detectar información de reproducción modificada en los manifiestos m3u8 maestros para flujo continuo en directo y actualizar la información de reproducción mientras se reproduce el flujo. TVSDK admite un conjunto dinámico de perfiles de velocidad de bits a medida que los perfiles aparecen o desaparecen del manifiesto maestro, incluidas velocidades de bits de perfil no superpuestas entre actualizaciones.
 seo-title: Actualización de manifiesto maestro activo
 title: Actualización de manifiesto maestro activo
 uuid: 44f8adc2-0538-4c5d-8e39-55f661d8540b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '793'
+ht-degree: 0%
 
 ---
 
 
 # Actualización de manifiesto maestro activo{#live-master-manifest-update}
 
-TVSDK puede detectar información de reproducción modificada en los manifiestos m3u8 maestros para flujo continuo en directo y actualizar la información de reproducción mientras se reproduce el flujo. TVSDK admite un conjunto dinámico de perfiles de velocidad de bits a medida que los perfiles aparecen o desaparecen del manifiesto maestro, incluidas las velocidades de bits de perfil no superpuestas entre actualizaciones.
+TVSDK puede detectar información de reproducción modificada en los manifiestos m3u8 maestros para flujo continuo en directo y actualizar la información de reproducción mientras se reproduce el flujo. TVSDK admite un conjunto dinámico de perfiles de velocidad de bits a medida que los perfiles aparecen o desaparecen del manifiesto maestro, incluidas velocidades de bits de perfil no superpuestas entre actualizaciones.
 
 Se admiten las siguientes funciones:
 
 * Recuento de perfiles (aumento o disminución)
-* Frecuencias de bits de perfil (superposición o no superposición)
+* velocidades de bits de perfil (superposición o no superposición)
 * Perfiles con direcciones URL en los mismos servidores (o en diferentes)
 * Cualquier estructura de conmutación por error
 
@@ -41,21 +44,21 @@ De forma predeterminada, esta función está desactivada. Si la aplicación la a
 1. El TVSDK analiza y analiza el nuevo manifiesto y adopta las medidas adecuadas en función de la naturaleza de la actualización.
 1. Si la velocidad de bits de reproducción actual coincide con la velocidad de bits del manifiesto modificado, el TVSDK cambia al nuevo perfil.
 
-   El nuevo perfil puede ser de un servidor diferente o del mismo servidor, a la misma velocidad de bits. En este caso, la transición es fluida.
+   El nuevo perfil puede proceder de un servidor diferente o del mismo servidor, a la misma velocidad de bits. En este caso, la transición es suave.
 1. Si la velocidad de bits de reproducción actual ya no está presente en el nuevo manifiesto, el TVSDK intenta encontrar una velocidad de bits en el perfil actual que también existe en el nuevo manifiesto.
 
-   * Si se encuentra una coincidencia, el reproductor primero cambia al perfil de velocidad de bits coincidente en el manifiesto existente y pasa al perfil de velocidad de bits coincidente en el manifiesto actualizado. Esto garantiza que la transición sea fluida.
+   * Si se encuentra una coincidencia, el reproductor primero cambia al perfil de velocidad de bits coincidente en el manifiesto existente y cambia al perfil de velocidad de bits coincidente en el manifiesto actualizado. Esto garantiza que la transición sea suave.
    * Si no hay una velocidad de bits común entre el manifiesto anterior y el nuevo, o si el TVSDK no puede cambiar a la velocidad de bits que coincide, el TVSDK cambia directamente al perfil de velocidad de bits más bajo del nuevo manifiesto y utiliza ABR para cambiar a cualquier velocidad de bits permitida en función del ancho de banda. Esto puede provocar un ligero fallo en la reproducción, pero debe tener un impacto mínimo.
 
-1. Si la actualización se realiza correctamente, el TVSDK distribuye un `MediaPlayerItemEvent.MASTER_UPDATED` evento.
+1. Si la actualización es correcta, el TVSDK distribuye un evento `MediaPlayerItemEvent.MASTER_UPDATED`.
 1. Si la actualización no se realiza correctamente, la reproducción continúa con la configuración desde antes de esta actualización.
 
 ### Ejemplo 1 {#example_DB55F2B9D98741628C9B973E47A0B6A0}
 
 Las siguientes velocidades de bits se están retransmitiendo en directo:
 
-* 500k
-* 900k
+* 500 k
+* 900 k
 * 2100k
 
 El flujo de 2100k tiene algunos problemas, por lo que debe reiniciarse. El manifiesto maestro se actualiza para contener solo 500k y 900k. Poco después, los usuarios que ven este programa a 2100k experimentarán un cambio de velocidad de bits a 900k. Los usuarios que miran a 900k siguen viendo a 900k. Más adelante, se reanuda el flujo de 2100.000 y se vuelve a agregar al manifiesto maestro. Poco después, los usuarios que miran a 900k, y tienen el ancho de banda, se cambian a 2100k.
@@ -64,8 +67,8 @@ El flujo de 2100k tiene algunos problemas, por lo que debe reiniciarse. El manif
 
 Las siguientes velocidades de bits se están retransmitiendo en directo:
 
-* 500k
-* 900k
+* 500 k
+* 900 k
 * 2100k
 
 Es necesario reiniciar todas estas velocidades de bits. Hay dos corrientes temporales configuradas para esto, a 400k y 1500k. Los usuarios se cambian a 400k, que es la velocidad de bits más baja de la nueva configuración. Algunos usuarios pasan a 1500.000 cuando su ancho de banda es suficiente. Más adelante, las tres velocidades de bits vuelven a aparecer y se actualiza el manifiesto maestro. Los usuarios regresan automáticamente para mirar a 500 k, que es el ancho de banda más bajo en el manifiesto (original) revisado. Un tiempo después, los usuarios se cambian al ancho de banda más alto (900k o 1200k) que su red permite.
@@ -74,6 +77,6 @@ Es necesario reiniciar todas estas velocidades de bits. Hay dos corrientes tempo
 
 Puede activar esta función y comprobar si hay eventos relacionados.
 
-1. Para activar las actualizaciones de manifiesto maestro en vivo, establezca la frecuencia de actualización (en minutos) estableciendo la `NetworkConfiguration.masterUpdateInterval` propiedad.
-1. De forma opcional, rastree las actualizaciones de manifiesto correctas escuchando el `MediaPlayerItemEvent.MASTER_UPDATED` evento.
+1. Para activar las actualizaciones de master-manifest activas, establezca la frecuencia de actualización (en minutos) estableciendo la propiedad `NetworkConfiguration.masterUpdateInterval`.
+1. Opcionalmente, rastree las actualizaciones de manifiesto correctas escuchando el evento `MediaPlayerItemEvent.MASTER_UPDATED`.
 
