@@ -6,6 +6,9 @@ title: Clases de error
 uuid: 0c77e20d-edaf-495c-9b33-02edc0a4432c
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
