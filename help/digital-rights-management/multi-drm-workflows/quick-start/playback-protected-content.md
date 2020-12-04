@@ -49,10 +49,10 @@ Para probar la solución DRM, necesita una aplicación de vídeo que pueda proce
    https://drmtest2.adobe.com/TVSDK_HTML5/samples/reference/reference_player.html
    ```
 
-   **Comprobación de la reproducción al probar la configuración de FairPlay:** FairPlay requiere algunos pasos adicionales para reproducir contenido cuando se utilizan los servidores de licencias ExpressPlay. Si utiliza [!DNL curl] para probar sus conexiones (como se describe en [Licencias](../../multi-drm-workflows/quick-start/handle-the-licensing.md)), debe *editar el manifiesto* M3U8 (su contenido empaquetado) de la siguiente manera:
+   **Comprobar la reproducción al probar la configuración de FairPlay:** FairPlay requiere algunos pasos adicionales para reproducir el contenido cuando se utilizan los servidores de licencias ExpressPlay. Si utiliza [!DNL curl] para probar sus conexiones (como se describe en [Licencias](../../multi-drm-workflows/quick-start/handle-the-licensing.md)), debe *editar el manifiesto M3U8* (su contenido empaquetado) de la siguiente manera:
 
-1. Añada la respuesta que obtuvo de su solicitud de token de licencia a la `#EXT-X-KEY:` etiqueta del manifiesto; y
-1. Cambie el protocolo de esa URL de la respuesta (ahora en el manifiesto) de `https://` a `skd://`.
+1. Añada la respuesta que obtuvo de la solicitud de token de licencia a la etiqueta `#EXT-X-KEY:` del manifiesto; y
+1. Cambie el protocolo de esa dirección URL de la respuesta (ahora en el manifiesto) de `https://` a `skd://`.
 
    A continuación se muestra un ejemplo completo para probar la reproducción con FairPlay, incluido el paso de la licencia:
 
@@ -74,7 +74,7 @@ Para probar la solución DRM, necesita una aplicación de vídeo que pueda proce
    SSwcDq1ZnRtXunFLueTw6LAL52aZllMLasCSzYRMaAVHw 
    ```
 
-1. Coloque la respuesta de URL del token de licencia devuelta en el manifiesto M3U8 y *cambie el esquema de URL del token de licencia a* desde `sdk://` `https://`. A continuación se muestra un ejemplo de la etiqueta #EXT-X-KEY en el manifiesto M3U8:
+1. Coloque la respuesta de URL del token de licencia devuelta en el manifiesto M3U8 y *cambie el esquema de URL del token de licencia a* `sdk://` de `https://`. A continuación se muestra un ejemplo de la etiqueta #EXT-X-KEY en el manifiesto M3U8:
 
    ```
    #EXT-X-KEY:METHOD=SAMPLE-AES, 
@@ -87,7 +87,7 @@ Para probar la solución DRM, necesita una aplicación de vídeo que pueda proce
 
    >[!NOTE]
    >
-   >La información anterior se aplica solamente a la prueba de la configuración de FairPlay. Puede que no se aplique a la configuración de producción, según cómo configure el controlador FairPlay. Consulte [Habilitar Apple FairPlay en aplicaciones](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md) iOS para obtener más información.
+   >La información anterior se aplica solamente a la prueba de la configuración de FairPlay. Puede que no se aplique a la configuración de producción, según cómo configure el controlador FairPlay. Consulte [Habilitar Apple FairPlay en aplicaciones iOS](../../../programming/tvsdk-3x-ios-prog/ios-3x-drm-content-security/ios-3x-apple-fairplay-tvsdk.md) para obtener más información.
 
 Si se reproduce el vídeo, se empaquetó y obtuvo la licencia del contenido correctamente. Si el vídeo no se reproduce, consulte la página de solución de problemas para encontrar soluciones posibles a los problemas.
 
