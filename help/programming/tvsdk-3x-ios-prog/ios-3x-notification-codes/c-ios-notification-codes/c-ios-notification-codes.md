@@ -6,6 +6,9 @@ title: Sistema de notificación TVSDK
 uuid: cace3b4d-ac2b-4fb2-854e-ce6db17544f5
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '243'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 El sistema de notificaciones TVSDK genera varios avisos de error, advertencia y de información que proporcionan metadatos de diagnóstico.
 
-Los objetos de notificación proporcionan información relacionada con el estado del reproductor. TVSDK proporciona una lista ordenada cronológicamente de objetos de notificación y cada notificación contiene los metadatos siguientes:
+Los objetos de notificación proporcionan información relacionada con el estado del reproductor. TVSDK proporciona una lista ordenada cronológicamente de los objetos de notificación y cada notificación contiene los metadatos siguientes:
 
 <table frame="all" colsep="1" rowsep="1" id="table_DBA8CACF02DB4AF2B053E560850B49CE"> 
  <thead> 
@@ -43,11 +46,11 @@ Los objetos de notificación proporcionan información relacionada con el estado
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> metadatos</span> </td> 
-   <td colname="2">Par clave/valor que contienen información relevante adicional sobre la notificación. Por ejemplo, una clave llamada <span class="codeph"> URL</span> se emparejaría con un valor que es una dirección URL relacionada con la notificación, como una dirección URL no válida que generara un error. </td> 
+   <td colname="2">Par clave/valor que contienen información relevante adicional sobre la notificación. Por ejemplo, una clave llamada <span class="codeph"> URL</span> se emparejaría con un valor que es una dirección URL relacionada con la notificación, como una dirección URL no válida que causó un error. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span> </td> 
-   <td colname="2">Referencia a otro <span class="codeph"> objeto PTNotification</span> que afectó directamente a esta notificación. Un ejemplo puede ser una notificación sobre un error de inserción de publicidad que corresponde directamente a un conflicto de inserción de línea temporal. No todas las notificaciones proporcionan una notificación interna. </td> 
+   <td colname="2">Una referencia a otro objeto <span class="codeph"> PTNotification</span> que afectó directamente a esta notificación. Un ejemplo puede ser una notificación sobre un error de inserción de publicidad que corresponde directamente a un conflicto de inserción de línea temporal. No todas las notificaciones proporcionan una notificación interna. </td> 
   </tr> 
  </tbody> 
 </table>
