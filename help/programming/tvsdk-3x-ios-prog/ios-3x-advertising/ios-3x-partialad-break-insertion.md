@@ -6,6 +6,9 @@ title: Inserción parcial de pausa publicitaria
 uuid: 799acdd8-fbb9-43b4-955a-3f56825d1e87
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +17,11 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 TVSDK ofrece una experiencia de tipo TV de poder unirse en medio de un anuncio, en transmisiones en directo.
 
-La función de inserción parcial de pausa publicitaria le permite imitar una experiencia parecida a un televisor en la que, si el cliente inicia un flujo en directo dentro de un ciclo intermedio, comienza a reproducirse dentro de ese ciclo intermedio. Es similar a cambiar a un canal de televisión y los comerciales funcionan sin problemas.
+La función de inserción parcial de pausa publicitaria le permite imitar una experiencia parecida a un televisor en la que, si el cliente inicio un flujo en directo dentro de un ciclo intermedio, inicio la reproducción dentro de ese ciclo intermedio. Es similar a cambiar a un canal de TV y los comerciales funcionan perfectamente.
 
 Por ejemplo: si un usuario se une en medio de una pausa publicitaria de 90 segundos (tres anuncios de 30 segundos), 10 segundos después de la segunda publicidad (es decir, a los 40 segundos de la pausa publicitaria), el segundo anuncio se reproduce durante el resto de la duración (20 segundos) seguido del tercer anuncio.
 
-## Seguimiento de publicidad {#section_03AFAEAA8DA44399952DC51C5E12951E}
+## Rastrear publicidad {#section_03AFAEAA8DA44399952DC51C5E12951E}
 
 Los rastreadores de anuncios para el anuncio reproducido parcialmente (el segundo anuncio) no se activan. En el ejemplo anterior, solo se activa el rastreador para la tercera publicidad.
 
