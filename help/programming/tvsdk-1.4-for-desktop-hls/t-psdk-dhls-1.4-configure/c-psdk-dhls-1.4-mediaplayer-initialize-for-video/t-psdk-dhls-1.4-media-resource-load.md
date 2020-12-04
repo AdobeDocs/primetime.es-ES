@@ -6,17 +6,20 @@ title: Cargar un recurso de medios en MediaPlayer
 uuid: 8af3e8d1-359d-483c-b394-b95054f7265a
 translation-type: tm+mt
 source-git-commit: 84924d84bfa436a8807c2e8d74d1dc268d457051
+workflow-type: tm+mt
+source-wordcount: '276'
+ht-degree: 0%
 
 ---
 
 
-# Cargar un recurso de medios en MediaPlayer{#load-a-media-resource-in-the-mediaplayer}
+# Cargue un recurso de medios en MediaPlayer{#load-a-media-resource-in-the-mediaplayer}
 
 Cargue un recurso creando una instancia directa de MediaResource y cargando el contenido del vídeo que se va a reproducir. Esta es una forma de cargar un recurso de medios.
 
-1. Configure el elemento que se puede reproducir del `MediaPlayer` objeto con el nuevo recurso que se va a reproducir.
+1. Configure el elemento que se puede reproducir del objeto `MediaPlayer` con el nuevo recurso que se va a reproducir.
 
-   Reemplace el elemento que se puede reproducir en este momento en MediaPlayer llamando `MediaPlayer.replaceCurrentResource` y pasando una `MediaResource` instancia existente.
+   Reemplace el elemento que se puede reproducir en este momento en MediaPlayer llamando a `MediaPlayer.replaceCurrentResource` y pasando una instancia `MediaResource` existente.
 
 1. Compruebe al menos los cambios siguientes:
 
@@ -24,20 +27,20 @@ Cargue un recurso creando una instancia directa de MediaResource y cargando el c
    * PREPARADO
    * ERROR
 
-      Mediante estos eventos, el `MediaPlayer` objeto puede notificar a la aplicación cuando el recurso de medios se cargue correctamente.
+      A través de estos eventos, el objeto `MediaPlayer` puede notificar a la aplicación cuando el recurso de medios se cargue correctamente.
 
-1. Cuando el estado del reproductor de medios cambia a INICIALIZADO, puede llamar a `MediaPlayer.prepareToPlay`
+1. Cuando el estado del reproductor de medios cambia a INITIALIZADO, puede llamar a `MediaPlayer.prepareToPlay`
 
-   El estado INITIALIZED indica que el medio se ha cargado correctamente. La llamada `prepareToPlay` inicio el proceso de resolución y colocación de la publicidad, si existe.
+   El estado INITIALIZED indica que el medio se ha cargado correctamente. La llamada `prepareToPlay` inicio la resolución de publicidad y el proceso de colocación, si existe.
 
 1. Cuando el estado del reproductor de medios cambia a PREPARADO, el flujo de medios se ha cargado correctamente y está preparado para la reproducción.
 
-   Cuando se carga el flujo de medios, `MediaPlayerItem` se crea un.
+   Cuando se carga el flujo de medios, se crea un `MediaPlayerItem`.
 
-Si se produce un error, MediaPlayer cambia al estado ERROR. También notifica a la aplicación enviando el `STATUS_CHANGED` evento a la `MediaPlayerStatusChangeEvent` llamada de retorno.
+Si se produce un error, MediaPlayer cambia al estado ERROR. También notifica a la aplicación mediante el envío del evento `STATUS_CHANGED` a su llamada de retorno `MediaPlayerStatusChangeEvent`.
 
 Esto pasa varios parámetros:
-* Un `type` parámetro de tipo cadena con el valor `ERROR`.
+* Un parámetro `type` de tipo cadena con el valor `ERROR`.
 
 * Parámetro `MediaError` que puede utilizar para obtener una notificación que contenga información de diagnóstico sobre el evento de error.
 
