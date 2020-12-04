@@ -29,11 +29,11 @@ java -jar AdobePublisherIDUtility.jar
 ```
 
 * 
-   * `signaturefile`* especifica la ruta al archivo signature.xml de la aplicación de AIR, ubicado en el directorio de aplicaciones [!DNL META-INF]
+   * `signaturefile`* especifica la ruta al archivo signature.xml de la aplicación de AIR, ubicado en el  [!DNL META-INF] directorio de aplicaciones
 
 * `signingcert` especifica el certificado utilizado para firmar la aplicación de AIR
 
 >[!NOTE]
 >
->Para determinar el ID de editor de una aplicación de iOS, utilice la `-s` opción y especifique el certificado utilizado para firmar la aplicación de iOS. ***Se requiere Adobe Primetime para crear aplicaciones de iOS que puedan reproducir contenido*** protegido con Access.
+>Para determinar el ID de editor de una aplicación de iOS, utilice la opción `-s` y especifique el certificado utilizado para firmar la aplicación de iOS. ***Se requiere Adobe Primetime para crear aplicaciones de iOS que puedan reproducir contenido*** protegido con Access.
 
