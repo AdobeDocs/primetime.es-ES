@@ -4,13 +4,16 @@ title: Protocolos de red utilizados por Adobe Access
 uuid: 4f2ee3f5-6758-4fbe-b5cd-cead1e5ccde8
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '106'
+ht-degree: 0%
 
 ---
 
 
 # Protocolos de red utilizados por Adobe Access {#network-protocols-used-by-adobe-access}
 
-Al configurar una arquitectura de red segura, los protocolos de red de la siguiente tabla son necesarios para la interacción entre Adobe Access y otros sistemas de la red empresarial.
+Al configurar una arquitectura de red segura, los protocolos de red de la siguiente tabla son necesarios para interactuar entre Adobe Access y otros sistemas de la red empresarial.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table-itc-33z-n4"> 
  <thead class="- topic/thead "> 
@@ -26,7 +29,7 @@ Al configurar una arquitectura de red segura, los protocolos de red de la siguie
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">HTTPS (opcional) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Los clientes de Flash Player, Adobe AIR y Adobe Primetime pueden utilizar HTTPS para la comunicación con Adobe Access; sin embargo, HTTPS (SSL) no es necesario a menos que necesite asistencia para los clientes de FMRMS 1.x. Consulte las notas en la tabla <a href="network-topology-firewall-rules.md" format="dita" scope="local"> Direcciones URL</a> entrantes y <a href="network-topology-nw-protocols.md"> Configuración de SSL</a>. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Los clientes de Flash Player, Adobe AIR y Adobe Primetime pueden utilizar HTTPS para la comunicación con el acceso de Adobe. Sin embargo, HTTPS (SSL) no es necesario a menos que necesite compatibilidad con los clientes de FMRMS 1.x. Consulte las notas de la tabla <a href="network-topology-firewall-rules.md" format="dita" scope="local"> Direcciones URL entrantes</a> y <a href="network-topology-nw-protocols.md"> Configuración de SSL</a>. </p> </td> 
   </tr> 
  </tbody> 
 </table>
