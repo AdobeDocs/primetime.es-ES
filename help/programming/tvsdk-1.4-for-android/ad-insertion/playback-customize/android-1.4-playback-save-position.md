@@ -6,15 +6,18 @@ title: Guardar la posición del vídeo y reanudarlo más tarde
 uuid: 322f780d-09ba-44b0-b2e5-46288bf58fda
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '419'
+ht-degree: 0%
 
 ---
 
 
-# Guardar la posición del vídeo y reanudarlo más tarde {#save-the-video-position-and-resume-later}
+# Guarde la posición del vídeo y reanude más tarde {#save-the-video-position-and-resume-later}
 
 Puede guardar la posición de reproducción actual en un vídeo y reanudar la reproducción en la misma posición en una sesión futura.
 
-Las publicidades insertadas dinámicamente difieren entre las sesiones de usuario, por lo que guardar la posición **con** publicidades duplicadas se refiere a una posición diferente en una sesión futura. TVSDK proporciona métodos para recuperar la posición de reproducción e ignorar las publicidades duplicadas.
+Las publicidades insertadas dinámicamente difieren entre las sesiones de usuario, por lo que al guardar la posición **con** publicidades duplicadas se hace referencia a una posición diferente en una sesión futura. TVSDK proporciona métodos para recuperar la posición de reproducción e ignorar las publicidades duplicadas.
 
 1. Cuando el usuario cierra un vídeo, la aplicación recupera y guarda la posición en el vídeo.
 
@@ -28,7 +31,7 @@ Las publicidades insertadas dinámicamente difieren entre las sesiones de usuari
 
    >[!IMPORTANT]
    >
-   >La hora local y la hora actual son las mismas para flujos en directo/lineales. En este caso, `convertToLocalTime` no tiene efecto. Para VOD, el tiempo local permanece sin cambios mientras se reproducen los anuncios.
+   >La hora local y la hora actual son las mismas para flujos en directo/lineales. En este caso, `convertToLocalTime` no tiene ningún efecto. Para VOD, el tiempo local permanece sin cambios mientras se reproducen los anuncios.
 
    ```java
    // Save the user session when player activity stops 
@@ -79,7 +82,7 @@ Las publicidades insertadas dinámicamente difieren entre las sesiones de usuari
 
    * Para buscar la hora actual, utilice `seek`.
 
-1. Cuando la aplicación recibe el evento de cambio de `onStatusChanged` estado, busque la hora local guardada.
+1. Cuando la aplicación reciba el evento de cambio de estado `onStatusChanged`, busque la hora local guardada.
 
    ```java
    private final MediaPlayer.PlaybackEventListener _playbackEventListener =  
@@ -100,6 +103,6 @@ Las publicidades insertadas dinámicamente difieren entre las sesiones de usuari
 
 1. Proporcione los saltos de publicidad como se especifica en la interfaz de directivas de publicidad.
 1. Implemente un selector de directivas de publicidad personalizado ampliando el selector de directivas de publicidad predeterminado.
-1. Proporcione los saltos de publicidad que se deben presentar al usuario mediante la implementación `selectAdBreaksToPlay`.
+1. Proporcione los pausas publicitarias que deben presentarse al usuario implementando `selectAdBreaksToPlay`.
 
    Este método incluye una pausa publicitaria previa y las pausas publicitarias intermedias antes de la posición horaria local. La aplicación puede decidir reproducir una pausa publicitaria previa y reanudar a la hora local especificada, reproducir una pausa publicitaria media y reanudar a la hora local especificada o no reproducir ninguna pausa publicitaria.
