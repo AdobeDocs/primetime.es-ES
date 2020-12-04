@@ -6,6 +6,9 @@ title: Preparación del contenido
 uuid: edb633f0-b623-41ea-a52a-19017d45fb18
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '440'
+ht-degree: 0%
 
 ---
 
@@ -14,14 +17,14 @@ source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
 
 Cualquier uso de Adobe Primetime DRM consiste en dos pasos clave en diferentes puntos del flujo de trabajo. La preparación del contenido debe realizarse una vez por recurso y resulta en la creación de contenido protegido. La adquisición de contenido se realiza varias veces, una por cada consumidor que desee ver ese recurso protegido.
 
-Antes de que el contenido esté disponible para su distribución, primero debe codificar el contenido en el formato de vídeo, crear una o varias políticas que especifiquen las reglas de uso del contenido y empaquetar el contenido con el SDK de DRM de Adobe Primetime.
+Antes de que el contenido esté disponible para su distribución, primero debe codificar el contenido en el formato de vídeo, crear una o varias políticas que especifiquen las reglas de uso del contenido y empaquetar el contenido mediante el SDK de Adobe Primetime DRM.
 
 Los pasos para codificar, empaquetar y distribuir contenido son los siguientes:
 
-1. Codifique el contenido en el formato de vídeo deseado mediante las herramientas de codificación disponibles de Adobe o de terceros.
-1. Cree directivas que especifiquen las reglas de uso en las que los consumidores pueden ver el contenido.
+1. Codifique el contenido en el formato de vídeo deseado mediante las herramientas de codificación disponibles en Adobe o de terceros.
+1. Cree políticas que especifiquen las reglas de uso en las que los consumidores pueden vista del contenido.
 
-   Una política es el contenedor de reglas y restricciones que determinan cómo, cuándo y dónde los consumidores pueden ver el contenido protegido.
+   Una política es el contenedor de las reglas y restricciones que determinan cómo, cuándo y dónde los consumidores pueden ver el contenido protegido.
 
    El empaquetador requiere al menos una directiva con al menos una regla de uso. Puede anular la regla de uso y agregar reglas de uso adicionales cuando el servidor de licencias genere la licencia.
 
@@ -33,5 +36,5 @@ Los pasos para codificar, empaquetar y distribuir contenido son los siguientes:
 
 1. Ponga el contenido protegido a disposición de los consumidores para su distribución.
 
-   El contenido protegido se distribuye generalmente mediante una red de distribución de contenido (CDN). La CDN puede utilizar cualquier mecanismo admitido por el tiempo de ejecución del cliente, como Flash Media Server, el flujo dinámico HTTP de Adobe para el flujo de varias velocidades de bits o un servidor web HTTP para la descarga progresiva.
+   El contenido protegido se distribuye generalmente mediante una red de distribución de contenido (CDN). La CDN puede utilizar cualquier mecanismo admitido por el tiempo de ejecución del cliente, como Flash Media Server, HTTP Dynamic Streaming de Adobe para el flujo de varias velocidades de bits o un servidor web HTTP para la descarga progresiva.
 
