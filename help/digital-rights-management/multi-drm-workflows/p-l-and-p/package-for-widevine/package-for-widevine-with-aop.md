@@ -6,6 +6,9 @@ title: Empaquete su contenido con Adobe Offline Packager
 uuid: d0676147-c20f-49ea-93a6-9c8dbbbba992
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '217'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Una invocación típica de adobe offline Packager tendría el aspecto de la llam
     -playready_keyid c595f214d84dc7ecf31a8ebf1b7dda5
     -content_id c595f214f d84dc7ecf31a8ebf1b7ddda5
 
-En este caso concreto, el empaquetador sin conexión está agregando los datos de inicialización de protección de contenido Widevine y de protección de contenido PlayReady al contenido DASH de salida. El valor de `-key_file_path` es para una clave codificada en base64. El valor de `-playready_LA_URL` es para la adquisición de licencias PlayReady.
+En este caso concreto, el empaquetador sin conexión está agregando los datos de inicialización de protección de contenido Widevine y de protección de contenido PlayReady al contenido DASH de salida. El valor de `-key_file_path` es para una clave con codificación base64. El valor de `-playready_LA_URL` es para la adquisición de licencias PlayReady.
 
 El argumento conf_path apunta al archivo de configuración que contendría lo siguiente:
 
@@ -38,4 +41,4 @@ El argumento conf_path apunta al archivo de configuración que contendría lo si
     &lt;encrypt_audio>false&lt;/encrypt_audio>
     &lt;/config>
 
-Porque ciertos dispositivos Android — principalmente Amazon Fire TV — no admite el descifrado de audio, el cifrado de audio es opcional.
+Porque ciertos dispositivos Android — principalmente Amazon Fire TV: no admite el descifrado de audio, el cifrado de audio es opcional.
