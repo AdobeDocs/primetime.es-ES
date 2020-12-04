@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Introducción a la implementación de los modelos de uso {#implementing-the-usage-models-overview}
+# Implementación de la descripción general de los modelos de uso {#implementing-the-usage-models-overview}
 
 La implementación de referencia incluye lógica empresarial para demostrar cómo habilitar los cuatro modelos de uso siguientes para un fragmento de contenido empaquetado:
 
@@ -32,21 +32,21 @@ Para habilitar la demostración del modelo de uso, especifique la propiedad pers
 
 En la demostración, la lógica empresarial del servidor controla los atributos reales de las licencias generadas. En el momento del empaquetado, solo se debe incluir en el contenido una información mínima sobre las políticas. Específicamente, la política solo necesita indicar si se requiere autenticación para acceder al contenido. Para habilitar los cuatro modelos de uso, incluya una directiva que permita el acceso anónimo (para el modelo financiado con publicidad) y una directiva que requiera autenticación de nombre de usuario/contraseña (para los otros 3 modelos de uso). Al solicitar una licencia, una aplicación cliente puede determinar si se solicita al usuario la autenticación en función de la información de autenticación de las directivas.
 
-Para controlar el modelo de uso en el que se emitirá una licencia a un usuario determinado, se pueden agregar entradas a la base de datos de implementación de referencia. La `Customer` tabla contiene nombres de usuario y contraseñas para autenticar usuarios. También indica si el usuario tiene una suscripción. A los usuarios con suscripciones se les expedirán licencias con arreglo al modelo de uso de la *Suscripción* . Para conceder acceso a un usuario en los modelos de uso de *Descargar a su propiedad* o *Vídeo a petición* , se puede agregar una entrada a la `CustomerAuthorization` tabla, que especifica cada parte del contenido al que se permite acceder el usuario y el modelo de uso. Consulte la [!DNL PopulateSampleDB.sql] secuencia de comandos para obtener más información sobre cómo rellenar cada tabla.
+Para controlar el modelo de uso en el que se emitirá una licencia a un usuario determinado, se pueden agregar entradas a la base de datos de implementación de referencia. La tabla `Customer` contiene nombres de usuario y contraseñas para autenticar usuarios. También indica si el usuario tiene una suscripción. Los usuarios con suscripciones recibirán licencias bajo el modelo de uso *Suscripción*. Para otorgar a un usuario acceso bajo los modelos de uso de *Descargar a propio* o *Video a pedido*, se puede agregar una entrada a la tabla `CustomerAuthorization`, que especifica cada parte del contenido al que el usuario tiene permiso para acceder y el modelo de uso. Consulte la secuencia de comandos [!DNL PopulateSampleDB.sql] para obtener más información sobre cómo rellenar cada tabla.
 
-Cuando un usuario solicita una licencia, el servidor de implementación de referencia comprueba los metadatos enviados por el cliente para determinar si el contenido se empaquetó con la `RI_UsageModelDemo` propiedad . Si es así, se utilizan las siguientes reglas comerciales:
+Cuando un usuario solicita una licencia, el servidor de implementación de referencia comprueba los metadatos enviados por el cliente para determinar si el contenido se empaquetó con la propiedad `RI_UsageModelDemo`. Si es así, se utilizan las siguientes reglas comerciales:
 
 * Si una de las directivas requiere autenticación:
 
    * Si la solicitud contiene un token de autenticación válido, busque al usuario en la tabla Base de datos de clientes. Si se encontró al usuario:
 
-      * Si la `Customer.IsSubscriber` propiedad es `true`, genere una licencia para el modelo de uso de la *Suscripción* y envíela al usuario.
+      * Si la propiedad `Customer.IsSubscriber` es `true`, genere una licencia para el modelo de uso *Suscripción* y envíela al usuario.
 
-      * Busque un registro en la tabla de la `CustomerAuthorization` base de datos para este usuario y el ID de contenido. Si se encontró un registro:
+      * Busque un registro en la tabla de la base de datos `CustomerAuthorization` para este usuario y el ID de contenido. Si se encontró un registro:
 
-         * Si `CustomerAuthorization.UsageType` es así, `DTO`genere una licencia para el modelo de uso de *Descargar a su propiedad* y envíela al usuario.
+         * Si `CustomerAuthorization.UsageType` es `DTO`, genere una licencia para el modelo de uso *Descargar para propiedad* y envíela al usuario.
 
-         * Si `CustomerAuthorization.UsageType` es así, `VOD`genere una licencia para el modelo de uso de *Video On Demand* y envíela al usuario.
+         * Si `CustomerAuthorization.UsageType` es `VOD`, genere una licencia para el modelo de uso de *Video On Demand* y envíela al usuario.
    * Si ninguna de las políticas permite el acceso anónimo:
 
       * Si no hay un token de autenticación válido en la solicitud, devuelva un error de &quot;autenticación requerida&quot;.
@@ -55,7 +55,7 @@ Cuando un usuario solicita una licencia, el servidor de implementación de refer
 
 * Si una de las políticas permite el acceso anónimo, genere una licencia para el modelo de uso financiado con publicidad y envíela al usuario.
 
-Antes de que el servidor de implementación de referencia pueda emitir licencias para la demostración del modelo de uso, el servidor debe configurarse para especificar cómo se generan las licencias para cada uno de los cuatro modelos de uso. Esto se realiza especificando una directiva para cada modelo de uso. La implementación de referencia incluye cuatro directivas de muestra ( [!DNL dto-policy.pol], [!DNL vod-policy.pol], [!DNL sub-policy.pol], [!DNL ad-policy.pol]) o puede sustituir sus propias políticas. En [!DNL flashaccess-refimpl.properties], defina las siguientes propiedades para especificar la directiva que se va a utilizar en cada modelo de uso y coloque los archivos de política en el directorio especificado por la `config.resourcesDirectory` propiedad:
+Antes de que el servidor de implementación de referencia pueda emitir licencias para la demostración del modelo de uso, el servidor debe configurarse para especificar cómo se generan las licencias para cada uno de los cuatro modelos de uso. Esto se realiza especificando una directiva para cada modelo de uso. La Implementación de referencia incluye cuatro políticas de muestra ( [!DNL dto-policy.pol], [!DNL vod-policy.pol], [!DNL sub-policy.pol], [!DNL ad-policy.pol]) o puede sustituir sus propias políticas. En [!DNL flashaccess-refimpl.properties], establezca las siguientes propiedades para especificar la directiva que se usará para cada modelo de uso y coloque los archivos de política en el directorio especificado por la propiedad `config.resourcesDirectory`:
 
 ```
 # Policy file name for Download To Own usage  
