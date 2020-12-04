@@ -4,6 +4,9 @@ title: Autenticación personalizada/información general de asignación de derec
 uuid: 8b5e38a5-562c-4781-ac40-4b3d6cdd97fe
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '105'
+ht-degree: 0%
 
 ---
 
