@@ -6,11 +6,14 @@ title: Control de la visibilidad de los subtítulos opcionales
 uuid: b161a729-73f3-4019-a95e-013b42779842
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
 
-# Control de la visibilidad de los subtítulos opcionales{#control-closed-caption-visibility}
+# Controlar la visibilidad de los subtítulos opcionales{#control-closed-caption-visibility}
 
 Puede controlar la visibilidad de los subtítulos opcionales. Cuando la visibilidad está activada, se muestra la pista seleccionada actualmente.
 
@@ -24,5 +27,5 @@ Si se muestra texto de subtítulos opcionales cuando el reproductor entra en el 
 >
 >Los valores de visibilidad de los subtítulos cerrados se controlan con `MediaPlayer.VISIBLE` y `MediaPlayer.INVISIBLE`.
 
-1. Utilice la propiedad `MediaPlayer.ccVisibility` para acceder a la configuración de visibilidad actual de los subtítulos cerrados.
+1. Utilice la propiedad `MediaPlayer.ccVisibility` para acceder a la configuración de visibilidad actual de los subtítulos opcionales.
 
