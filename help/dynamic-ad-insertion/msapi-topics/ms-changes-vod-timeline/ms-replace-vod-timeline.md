@@ -6,6 +6,9 @@ title: Cambios en VOD
 uuid: e734aacd-b42e-4c8e-a16a-c7a0739a0492
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
@@ -21,4 +24,4 @@ Entre las situaciones en las que podría desear reemplazar una línea de tiempo 
 * Reemplace dinámicamente anuncios antiguos de C3 con anuncios nuevos de buena duración.
 * Inserte menos publicidades o ninguna.
 
-Puede reemplazar la línea de tiempo de la publicidad enviando una nueva solicitud de inserción de publicidad con el archivo M3U8 original y un valor diferente del parámetro de `pttimeline` consulta.
+Puede reemplazar la línea de tiempo de la publicidad enviando una nueva solicitud de inserción de publicidad con el archivo M3U8 original y un valor diferente del parámetro de consulta `pttimeline`.
