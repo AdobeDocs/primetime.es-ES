@@ -4,11 +4,14 @@ title: Autenticación de usuarios
 uuid: 0b93eb36-fec9-46ee-81e1-28770b978542
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
 
-# Autenticación de usuarios {#user-authentication}
+# Autenticación de usuario {#user-authentication}
 
 Especifica si se requiere una credencial, como nombre de usuario y contraseña, para adquirir una licencia. Si se especifica una licencia autenticada (basada en la identidad), el servidor autentica al usuario antes de emitir una licencia.
 
