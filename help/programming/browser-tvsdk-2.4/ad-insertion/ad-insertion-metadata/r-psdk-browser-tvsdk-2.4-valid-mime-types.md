@@ -6,11 +6,14 @@ title: Tipos de mime válidos
 uuid: ab2baac9-a9ef-44f1-83a1-2e6e471e3231
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '156'
+ht-degree: 0%
 
 ---
 
 
-# Tipos de mime válidos{#valid-mime-types}
+# Tipos de MIME válidos{#valid-mime-types}
 
 Una publicidad puede tener varios elementos creativos, de los cuales uno se selecciona para reproducirse.
 
@@ -26,4 +29,4 @@ auditudeSettings.validMimeTypes = mimeTypes;
 
 donde `mimeTypes` es una matriz de cadenas y cada cadena representa un tipo de MIME.
 
-En caso de que se devuelvan varios archivos de medios para una publicidad, la selección depende del orden en que los archivos de medios aparezcan en la `validMimeTypes` matriz. A los tipos MIME que tienen un índice más bajo se les da una preferencia sobre los que tienen un índice más alto.
+En caso de que se devuelvan varios archivos de medios para una publicidad, la selección depende del orden en que los archivos de medios aparezcan en la matriz `validMimeTypes`. A los tipos MIME que tienen un índice más bajo se les da una preferencia sobre los que tienen un índice más alto.
