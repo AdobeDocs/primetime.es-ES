@@ -30,6 +30,6 @@ Póngase en contacto con su representante de soporte técnico de Primetime para 
 
 Las pausas de publicidad parciales se pueden utilizar en situaciones en las que un visor entra en un flujo en directo o lineal después de iniciarse una pausa publicitaria.  Por ejemplo: si un visor introduce una pausa publicitaria de 2:00 en la marca 1:00, la inserción de una pausa publicitaria parcial garantiza que los anuncios se mostrarán en el tiempo restante. Sin la inserción de pausa publicitaria parcial, no se enviarían anuncios a este visor durante la pausa. El Ad Insertion Primetime habilita la inserción de pausa publicitaria parcial de forma predeterminada si las etiquetas correspondientes están presentes en los flujos multimedia.
 
-## Retorno temprano (salida de publicidad anticipada) {#early-return-early-ad-exit}
+## Retorno anticipado (salida anticipada de publicidad) {#early-return-early-ad-exit}
 
 Hay casos en los que puede ser necesario volver antes de una pausa publicitaria en un flujo en directo o lineal, como cuando un evento deportivo vuelve repentinamente a la acción. Cada formato de decisión de publicidad contiene una etiqueta para &quot;cue-out&quot; (anuncios) o &quot;cue-in&quot; (contenido). Si se encuentra una etiqueta de &quot;cue-in&quot; antes del final de una pausa publicitaria, el Ad Insertion de Adobe Primetime respetará el cue-in. Póngase en contacto con el empaquetador de contenido para activar el retorno anticipado.
