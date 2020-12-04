@@ -6,6 +6,9 @@ title: Actualizar implementaciones existentes
 uuid: 1a40aae9-f639-41fa-b42d-cf8cdfcde694
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '213'
+ht-degree: 0%
 
 ---
 
@@ -26,14 +29,14 @@ Para conservar registros de base de datos y agregar nuevas tablas:
    * `UserDomainMembership`
    * `UserDomainRefCount`
 
-1. Agregue las siguientes propiedades para [!DNL flashaccess-refimpl.properties] usar la compatibilidad con dominios:
+1. Añada las siguientes propiedades a [!DNL flashaccess-refimpl.properties] para utilizar la compatibilidad con el dominio:
 
-   * `HandlerConfiguration.DomainCAs.n` o `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
+   * `HandlerConfiguration.DomainCAs.n` o  `RefImpl.HSM.HandlerConfiguration.DomainCAs.Alias.n`
 
-   * `Domain RegistrationHandler.ServerCredential` y `DomainRegistrationHandler.ServerCredential.password` o `RefImpl.HSM.DomainRegistrationHandler.ServerCredential.Alias`
+   * `Domain RegistrationHandler.ServerCredential` y  `DomainRegistrationHandler.ServerCredential.password` o  `RefImpl.HSM.DomainRegistrationHandler.ServerCredential.Alias`
 
    * `DomainRegistrationHandler.DomainServerUrl`
 
-1. Agregue las siguientes propiedades para [!DNL flashaccess-refimpl.properties] admitir la entrega remota de claves a los clientes de iOS:
+1. Añada las siguientes propiedades a [!DNL flashaccess-refimpl.properties] para admitir el envío de claves remotas para clientes de iOS:
 
-   * `HandlerConfiguration.KeyServerCertificate` o `RefImpl.HSM.HandlerConfiguration.KeyServerCertificate.Alias`
+   * `HandlerConfiguration.KeyServerCertificate` o  `RefImpl.HSM.HandlerConfiguration.KeyServerCertificate.Alias`
