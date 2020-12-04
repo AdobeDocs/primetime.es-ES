@@ -8,12 +8,12 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
 
-# Primetime Ad Insertion Help {#ad-insertion}
+# Ayuda de Primetime Ad Insertion  {#ad-insertion}
 
 + [Información general del Ad Insertion de Primetime](home.md)
 + Introducción a Primetime Ad Insertion{#get-started}
@@ -44,9 +44,9 @@ ht-degree: 9%
       + [Cambios en VOD](msapi-topics/ms-changes-vod-timeline/ms-replace-vod-timeline.md)
       + [Formato de línea de tiempo VOD](msapi-topics/ms-changes-vod-timeline/ms-api-timeline-format.md)
       + [Reemplazar una línea de tiempo de VOD](msapi-topics/ms-changes-vod-timeline/t-ms-replace-vod-timeline.md)
-   + Seguimiento de la eficacia de la publicidad {#ad}
+   + Seguimiento de la efectividad de la publicidad {#ad}
       + [Seguimiento de publicidades](msapi-topics/ms-at-effectiveness/ms-at-overview.md)
-      + [Habilitar el seguimiento de publicidades de cliente](msapi-topics/ms-at-effectiveness/ms-enable-client-side-ad-tracking.md)
+      + [Habilitar el seguimiento de publicidades del lado del cliente](msapi-topics/ms-at-effectiveness/ms-enable-client-side-ad-tracking.md)
       + [Información general sobre el seguimiento del cliente que no es TVSDK](msapi-topics/ms-at-effectiveness/notvsdk-csat-overview.md)
       + [API para que los reproductores interactúen con el servidor de manifiesto](msapi-topics/ms-at-effectiveness/notvsdk-csat-ms-interface.md)
       + [Directiva EXT-X-MARKER](msapi-topics/ms-at-effectiveness/ms-api-playlists.md)
