@@ -6,6 +6,9 @@ title: Información general sobre el seguimiento del cliente que no es TVSDK
 uuid: fb23be01-3327-443d-82c4-fb0993e7fec1
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '762'
+ht-degree: 0%
 
 ---
 
@@ -14,21 +17,21 @@ source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
 
 Los editores pueden crear reproductores de vídeo compatibles con HLS que trabajen con los flujos de trabajo de seguimiento de anuncios del lado del cliente del manifiesto Primetime. Las interfaces al servidor de manifiesto para los casos de flujo en directo y vídeo a petición (VOD) son ligeramente diferentes.
 
-El servidor de manifiesto proporciona una API para permitir que los reproductores personalizados soliciten las siguientes direcciones URL, que pueden utilizar para informar sobre los eventos de seguimiento de anuncios:
+El servidor de manifiesto proporciona una API para permitir que los reproductores personalizados soliciten las siguientes direcciones URL, que pueden utilizar para informar sobre eventos de seguimiento de anuncios:
 
 * Impresión de publicidad
 * Cuartilo publicitario
 * Progreso del pod de publicidad
 * Progreso del pod de contenido
 
-La API de servidor de manifiesto supone que cualquier reproductor de vídeo que lo utilice cumple los requisitos mínimos. Consulte Requisitos [del reproductor](../../msapi-topics/ms-player-req.md) de vídeo para obtener más información.
+La API de servidor de manifiesto supone que cualquier reproductor de vídeo que lo utilice cumple los requisitos mínimos. Consulte [Requisitos del reproductor de vídeo](../../msapi-topics/ms-player-req.md) para obtener más información.
 
 ## Flujo de trabajo de seguimiento del lado del cliente {#section_cst_flow}
 
 ![](assets/pt_ssai_notvsdk_csat_ai-workflow.png)
 
 1. Player obtiene una URL de servidor de manifiesto del editor.
-1. Player anexa parámetros de consulta específicos a sus requisitos de inserción de publicidad y envía una solicitud HTTP GET a la URL de Bootstrap resultante. La URL de Bootstrap tiene la siguiente sintaxis:
+1. Player anexa parámetros de consulta específicos a sus requisitos de inserción de publicidad y envía una solicitud de GET HTTP a la URL del Bootstrap resultante. La dirección URL del Bootstrap tiene la siguiente sintaxis:
 
    ```
    http{s}://{manifest-server:port}/auditude/variant/{PublisherAssetID}/{urlSafeBase64({Content URL})}.m3u8?{query parameters}
@@ -39,7 +42,7 @@ La API de servidor de manifiesto supone que cualquier reproductor de vídeo que 
    u=9a2893fd893cab27da24059ff034b78d&z=173475&pttrackingmode=simple&pttrackingversion=v2&__sid__=docExample02
    ```
 
-   La URL incluye los elementos descritos en [Enviar un comando al servidor](../../msapi-topics/ms-getting-started/ms-sending-cmd.md)de manifiestos.
+   La dirección URL incluye los elementos descritos en [Enviar un comando al servidor de manifiesto](../../msapi-topics/ms-getting-started/ms-sending-cmd.md).
 
 1. El servidor de manifiesto establece una sesión para ese reproductor y genera un ID de sesión único. Crea una nueva URL de lista de reproducción M3U8 de variante, que vuelve al reproductor como una respuesta JSON. El JSON tiene la siguiente sintaxis:
 
@@ -114,7 +117,7 @@ La API de servidor de manifiesto supone que cualquier reproductor de vídeo que 
 
    >[!NOTE]
    >
-   >El reproductor selecciona la URL de la lista de reproducción de nivel de flujo para obtener el flujo de contenido. El servidor de manifiesto recupera la lista de reproducción original de la CDN. Algunos codificadores pueden introducir detalles adicionales en el atributo `#EXTINF` title, por ejemplo:
+   >El reproductor selecciona la URL de la lista de reproducción de nivel de flujo para obtener el flujo de contenido. El servidor de manifiesto recupera la lista de reproducción original de la CDN. Algunos codificadores pueden introducir detalles adicionales en el atributo de título `#EXTINF`, por ejemplo:
    >
    >
    ```
@@ -131,7 +134,7 @@ La API de servidor de manifiesto supone que cualquier reproductor de vídeo que 
    &z=173475&pttrackingmode=simple&pttrackingversion=v2&pttrackingposition=1
    ```
 
-1. El servidor de manifiesto devuelve el archivo de lista de reproducción rellenado con un objeto [JSON](../../msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md) o [VMAP](../../msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md) que contiene los datos de seguimiento de publicidad para el archivo m3u8 de nivel de flujo actualmente solicitado.
+1. El servidor de manifiesto devuelve el archivo de lista de reproducción rellenado con un objeto [JSON](../../msapi-topics/ms-list-file-formats/notvsdk-csat-sidecar.md) o [VMAP](../../msapi-topics/ms-list-file-formats/notvsdk-csat-vmap.md) que contiene los datos de seguimiento de publicidad para el archivo m3u8 de nivel de flujo solicitado actualmente.
 
    >[!NOTE]
    >
@@ -139,7 +142,7 @@ La API de servidor de manifiesto supone que cualquier reproductor de vídeo que 
 
    >[!NOTE]
    >
-   >El servidor de manifiesto genera el objeto de seguimiento de publicidad en función del `pttrackingversion` valor en la URL de Bootstrap. Si `pttrackingversion` se omite o tiene un valor no válido, el servidor de manifiesto rellenará automáticamente la información de seguimiento de publicidad en las `#EXT-X-MARKER` etiquetas de cada lista de reproducción de nivel de flujo solicitada. Consulte [para obtener más detalles](../../msapi-topics/ms-at-effectiveness/ms-api-playlists.md).
+   >El servidor de manifiesto genera el objeto de seguimiento de publicidad basado en el valor `pttrackingversion` en la dirección URL del Bootstrap. Si el `pttrackingversion` se omite o tiene un valor no válido, el servidor de manifiesto rellenará automáticamente la información de seguimiento de publicidad en las etiquetas `#EXT-X-MARKER` de cada lista de reproducción de nivel de flujo solicitada. Consulte [para obtener más información](../../msapi-topics/ms-at-effectiveness/ms-api-playlists.md).
 
 1. El reproductor solicita cada dirección URL de seguimiento de publicidad para cada evento de seguimiento de publicidad en el momento adecuado.
 
