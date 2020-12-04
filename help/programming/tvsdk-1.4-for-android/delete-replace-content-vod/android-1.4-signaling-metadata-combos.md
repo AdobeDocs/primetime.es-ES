@@ -6,11 +6,14 @@ title: Efecto en la inserción y eliminación de publicidades en el modo de señ
 uuid: c2ae8148-889d-46ae-848a-5f45d993a0e2
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '472'
+ht-degree: 0%
 
 ---
 
 
-# Efecto en la inserción y eliminación de publicidades en el modo de señalización de anuncios y en las combinaciones de metadatos de anuncios{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
+# Efecto en la inserción y eliminación de anuncios del modo de señalización de publicidad y en combinaciones de metadatos de publicidad{#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
 Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD mediante diferentes modos de señalización de publicidad y combinaciones de metadatos de anuncio. Diferentes combinaciones de modo de señalización y metadatos dan como resultado comportamientos diferentes.
 
@@ -26,7 +29,7 @@ Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD median
    <th class="entry"> Modo de señalización de publicidad </th> 
    <th class="entry"> Metadatos de anuncio </th> 
    <th class="entry"> Resoluciones creadas </th> 
-   <th class="entry"><span class="codeph"> ColocaciónInformación</span> creada </th> 
+   <th class="entry"><span class="codeph"> </span> PlacementInformationscreados </th> 
    <th class="entry"> Comportamiento resultante </th> 
   </tr> 
  </thead>
@@ -51,7 +54,7 @@ Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD median
    <td> Eliminar, Auditude </td> 
    <td> 
     <ul> 
-     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
+     <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
      <li><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </li> 
     </ul> </td> 
    <td> Rangos eliminados, publicidades insertadas </td> 
