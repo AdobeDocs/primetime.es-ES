@@ -6,6 +6,9 @@ title: Resolución e inserción de anuncios de VOD
 uuid: c1017483-5b4f-4d71-9589-fb2327b4572b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '222'
+ht-degree: 0%
 
 ---
 
@@ -24,14 +27,14 @@ TVSDK inserta publicidades de las siguientes formas:
 
 >[!IMPORTANT]
 >
->Al implementar una personalización `AdPolicySelector`, se puede dar una directiva diferente a cada tipo de `AdBreakTimelineItem` (previo, intermedio o posterior) en `AdPolicyInfo`, según el tipo de `AdBreakTimelineItem`. Por ejemplo, puede mantener el contenido de lanzamiento intermedio después de reproducirse pero eliminar el contenido previo después de reproducirse.
+>Al implementar un `AdPolicySelector` personalizado, se puede dar una directiva diferente a cada tipo de `AdBreakTimelineItem` (previo, mediano rollo o posterior) en `AdPolicyInfo`, según el tipo de `AdBreakTimelineItem`. Por ejemplo, puede mantener el contenido de lanzamiento intermedio después de reproducirse pero eliminar el contenido previo después de reproducirse.
 
-Una vez iniciada la reproducción, no se pueden producir cambios adicionales en el contenido. Las publicidades no pueden ser:
+Después de los inicios de reproducción, no se pueden producir cambios adicionales en el contenido. Las publicidades no pueden ser:
 
 * Insertado
 * Eliminado
 
-   Por ejemplo, no puede eliminar las publicidades integradas del contenido para ofrecer una experiencia sin publicidad.
+   Por ejemplo, no puede eliminar las publicidades integradas del contenido para crear ofertas de una experiencia sin publicidad.
 * Reemplazado
 
    Por ejemplo, no puede reemplazar las publicidades integradas con las publicidades de objetivo.
