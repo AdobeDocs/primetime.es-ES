@@ -6,6 +6,9 @@ title: Implementar un detector de oportunidades personalizado
 uuid: 18fb431b-4585-4293-92a7-b77ab7f9b7db
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Puede implementar sus propios detectores de oportunidades.
 
-* Si el generador de oportunidades se basa en `TimedMetadata` objetos asociados con el flujo de medios actual, debe extender el `SpliceOutOpportunityGenerator` valor o `TimedMetadataOpportunityGenerator`.
+* Si el generador de oportunidades está basado en `TimedMetadata` objetos asociados con el flujo de medios actual, debe extender el `SpliceOutOpportunityGenerator` o `TimedMetadataOpportunityGenerator`.
 
 * Si el generador de oportunidades se basa en datos fuera de banda proporcionados por un servicio externo (como un CIS), entonces debe extender el `OpportunityGenerator`.
 
@@ -23,7 +26,7 @@ Puede implementar sus propios detectores de oportunidades.
        Si el generador de oportunidades personalizado se basa en objetos &quot;TimedMetadata&quot;, extienda el parámetro &quot;TimedMetadataOpportunityGenerator&quot; y anule estos métodos:
    
    * `doConfigure` - Este método se llama después de que se haya creado el elemento del reproductor de medios y proporciona al generador de oportunidades la posibilidad de crear un conjunto inicial de oportunidades si es necesario
-   * `doProcess` - Este método se llama cada vez que `TimedMetadata` se detecta un nuevo objeto (por ejemplo, para flujos en vivo/lineales cada vez que se actualiza la lista de reproducción/manifiesto)
+   * `doProcess` - Este método se llama cada vez que  `TimedMetadata` se detecta un nuevo objeto (por ejemplo, para flujos en vivo/lineales cada vez que se actualiza la lista de reproducción/manifiesto)
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 
