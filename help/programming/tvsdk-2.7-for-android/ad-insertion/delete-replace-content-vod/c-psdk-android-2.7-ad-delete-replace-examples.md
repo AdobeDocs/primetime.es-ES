@@ -6,6 +6,9 @@ title: Ejemplos para eliminar y reemplazar publicidades
 uuid: 31ceb39a-aa30-472e-908a-3ba57559045f
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '68'
+ht-degree: 0%
 
 ---
 
