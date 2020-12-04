@@ -6,6 +6,9 @@ title: Personalización de la reproducción con anuncios
 uuid: e0d3dfb2-b2d2-4590-aa19-26bea916a252
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Cuando la reproducción llega a una pausa publicitaria, pasa una pausa publicita
 
 >[!TIP]
 >
->Puede anular el comportamiento predeterminado mediante la `AdBreakPolicySelector` clase.
+>Puede anular el comportamiento predeterminado mediante la clase `AdBreakPolicySelector`.
 
 El comportamiento predeterminado varía en función de si el usuario pasa la pausa publicitaria durante la reproducción normal o si busca en un vídeo o lo cambia de posición con un avance o rebobinado rápido (reproducción ficticia).
 
