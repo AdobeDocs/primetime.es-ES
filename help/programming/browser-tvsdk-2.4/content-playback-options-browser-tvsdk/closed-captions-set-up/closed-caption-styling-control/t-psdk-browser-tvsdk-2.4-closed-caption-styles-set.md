@@ -6,18 +6,21 @@ title: Definición de estilos de subtítulos opcionales
 uuid: 906ed22c-e673-4211-a14b-d95d176aad21
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 0%
 
 ---
 
 
-# Definición de estilos de subtítulos opcionales{#set-closed-caption-styles}
+# Establecer estilos de subtítulos opcionales{#set-closed-caption-styles}
 
 Puede definir el formato, como la fuente, el tamaño, el color, el borde y la opacidad del texto de subtítulos opcionales.
 
-1. Espere a que el `MediaPlayer` estado esté al menos en el estado PREPARADO.
+1. Espere a que `MediaPlayer` esté al menos en el estado PREPARADO.
 
-   Para obtener más información sobre los estados, consulte [Esperar un estado](../../../content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-state-prepared-wait-for.md)válido.
-1. Cree una `TextFormat` instancia.
+   Para obtener más información acerca de los estados, consulte [Esperar un estado válido](../../../content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-state-prepared-wait-for.md).
+1. Cree una instancia `TextFormat`.
 
    Puede proporcionar todos los parámetros de estilo de subtítulos opcionales ahora o establecerlos más tarde.
 
@@ -37,9 +40,9 @@ Puede definir el formato, como la fuente, el tamaño, el color, el borde y la op
        safeArea) → {AdobePSDK.TextFormat}
    ```
 
-1. (Opcional) Obtenga la configuración actual del estilo de subtítulos opcionales con `MediaPlayer.ccStyle`.
+1. (Opcional) Obtenga la configuración de estilo de subtítulos opcionales actual con `MediaPlayer.ccStyle`.
 
-   El valor devuelto es una instancia de la `TextFormat` interfaz.
+   El valor devuelto es una instancia de la interfaz `TextFormat`.
 
    Si no se estableció ningún estilo anteriormente, devuelve un objeto TextFormat con valores predeterminados para cada atributo:
 
@@ -47,7 +50,7 @@ Puede definir el formato, como la fuente, el tamaño, el color, el borde y la op
    ccStyle :AdobePSDK.TextFormat
    ```
 
-1. Para cambiar la configuración de estilo, utilice `MediaPlayer.ccStyle`, pasando una instancia de la `TextFormat` interfaz.
+1. Para cambiar la configuración de estilo, utilice `MediaPlayer.ccStyle` y pase una instancia de la interfaz `TextFormat`.
 
    Puede utilizar este método aunque el flujo de medios actual no tenga subtítulos opcionales.
 
