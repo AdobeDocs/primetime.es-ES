@@ -6,6 +6,9 @@ title: Trabajo con subtítulos opcionales
 uuid: d7860de4-2881-4817-a4cc-5e7ab557a1db
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 0%
 
 ---
 
@@ -25,8 +28,8 @@ TVSDK admite la representación de estos formatos:
 
 Puede hacer lo siguiente:
 
-* Seleccione una pista de subtítulos disponible para que sea la pista actual y escuche los eventos que indican pistas adicionales disponibles.
-* Activa (visible) o desactiva (no visible) los subtítulos opcionales mediante la `MediaPlayer` interfaz.
+* Seleccione una pista de subtítulos disponible para que sea la pista actual y escuche eventos que indiquen pistas adicionales disponibles.
+* Activar (visible) o desactivar (no visible) los subtítulos opcionales mediante la interfaz `MediaPlayer`.
 * Seleccione las opciones de estilo que dictan cómo el motor de vídeo subyacente procesa los subtítulos opcionales.
 
-   Utilice la `MediaPlayerItem` interfaz para seleccionar formatos como la fuente o el color de fuente.
+   Utilice la interfaz `MediaPlayerItem` para seleccionar formatos como la fuente o el color de fuente.
