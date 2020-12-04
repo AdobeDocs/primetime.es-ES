@@ -4,26 +4,29 @@ title: Reglas basadas en el tiempo
 uuid: 19a6ee7e-9580-48bb-a3a6-ff2cedcc796a
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '523'
+ht-degree: 0%
 
 ---
 
 
 # Reglas basadas en el tiempo {#time-based-rules}
 
-Primetime DRM utiliza &quot;cumplimiento suave&quot; de las restricciones de licencia basadas en el tiempo. Si un derecho de tiempo caduca durante la reproducción de un vídeo, el comportamiento predeterminado de Primetime DRM es no restringir la reproducción hasta la próxima vez que se vuelva a crear el flujo de vídeo (llamando `Netstream.stop()` y `Netstream.play()`).
+Primetime DRM utiliza &quot;cumplimiento suave&quot; de las restricciones de licencia basadas en el tiempo. Si un derecho de tiempo caduca durante la reproducción de un vídeo, el comportamiento predeterminado de Primetime DRM es no restringir la reproducción hasta la próxima vez que se vuelva a crear el flujo de vídeo (llamando a `Netstream.stop()` y `Netstream.play()`).
 
-Aunque la aplicación en pantalla es el comportamiento predeterminado, también puede activar la aplicación en estado estricto realizando una de las siguientes tareas:
+Aunque la aplicación en pantalla es el comportamiento predeterminado, también puede activar la aplicación en firme realizando una de las siguientes tareas:
 
 * Pida al reproductor de vídeo que sondee periódicamente la licencia para asegurarse de que ninguna de las restricciones de tiempo ha caducado. Esto se puede lograr llamando a `DRMManager.loadVoucher(LOCAL_ONLY).` Un código de error indica que la licencia almacenada localmente ya no es válida.
-* Siempre que el usuario haga clic **[!UICONTROL Pause]**, podrá grabar la marca de tiempo del vídeo actual y, a continuación, llamar `Netstream.stop()`. Cuando el usuario hace clic en el botón Reproducir, puede buscar la ubicación grabada y, a continuación, llamar `Netstream.play()`.
+* Siempre que el usuario haga clic en **[!UICONTROL Pause]**, podrá grabar la marca de tiempo del vídeo actual y, a continuación, llamar a `Netstream.stop()`. Cuando el usuario hace clic en el botón Reproducir, puede buscar la ubicación grabada y luego llamar a `Netstream.play()`.
 
 ## Fecha de inicio {#start-date}
 
-La fecha de inicio especifica la fecha después de la cual una licencia es válida.
+La fecha de inicio especifica la fecha después de la cual es válida una licencia.
 
 Ejemplo de caso de uso: Utilice una fecha absoluta para emitir licencias de contenido antes de la fecha de disponibilidad de un recurso o para aplicar un período de &quot;embargo&quot;.
 
-## Fecha final {#end-date}
+## Fecha de finalización {#end-date}
 
 La fecha de finalización especifica la fecha después de la cual caduca una licencia.
 
@@ -49,7 +52,7 @@ La ventana de reproducción especifica la duración durante la que una licencia 
 
 Ejemplo de caso de uso: Algunos modelos empresariales permiten un período de alquiler de 30 días, pero, una vez que comienza la reproducción, la reproducción debe completarse en 48 horas. En este caso, la duración de 48 horas de la licencia es la ventana de reproducción.
 
-**A partir de la versión 5.3 hacia adelante** : la ventana de reproducción también admite la opción de activar o desactivar la opción Parada dura, que indica si el contexto de descifrado para la reproducción debe detenerse al finalizar la ventana de reproducción (activado) o continuar a pesar de la caducidad (deshabilitado).
+**A partir de la versión 5.3 hacia adelante** : la ventana de reproducción también admite la opción de activar o desactivar Parada dura, que indica si el contexto de descifrado para la reproducción debe detenerse al finalizar la ventana de reproducción (activado) o continuar a pesar de la caducidad (deshabilitado).
 
 >[!NOTE]
 >
