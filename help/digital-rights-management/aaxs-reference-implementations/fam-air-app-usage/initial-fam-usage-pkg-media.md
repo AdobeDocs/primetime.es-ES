@@ -11,13 +11,13 @@ ht-degree: 0%
 ---
 
 
-# Empaquetado de medios {#package-media}
+# Empaquetar medios {#package-media}
 
 Utilice la ficha Empaquetar medios para empaquetar contenido. La sección Propiedades de Packager muestra la configuración de Packager que se introdujo en la ficha Preferencias. Para modificar esta configuración, vaya a la ficha Preferencias, cambie la configuración y guarde.
 
-Si desea empaquetar un solo archivo FLV o F4V, elija la **[!UICONTROL Select Single File]** opción e introduzca la ruta completa al archivo de origen y la ruta completa donde se debe guardar el archivo codificado.
+Si desea empaquetar un solo archivo FLV o F4V, elija la opción **[!UICONTROL Select Single File]** e introduzca la ruta completa al archivo de origen y la ruta completa donde se debe guardar el archivo cifrado.
 
-Si desea empaquetar todos los archivos de una carpeta, elija la **[!UICONTROL Select Single Folder]** opción. Especifique la carpeta que contiene los archivos de origen. Solo se empaquetarán los archivos de la carpeta de entrada que coincidan con los **[!UICONTROL Input Media File Selection]** criterios (los archivos de las subcarpetas no se empaquetan). Elija cifrar [!DNL .flv] archivos, [!DNL .f4v] archivos o introducir una expresión normal personalizada (por ejemplo, &quot;.*&quot; cifra todos los archivos de la carpeta). Los archivos cifrados se guardarán en la carpeta de salida especificada, utilizando el mismo nombre de archivo que el archivo original.
+Si desea empaquetar todos los archivos de una carpeta, elija la opción **[!UICONTROL Select Single Folder]**. Especifique la carpeta que contiene los archivos de origen. Solo se empaquetarán los archivos de la carpeta de entrada que coincidan con los criterios **[!UICONTROL Input Media File Selection]** (los archivos de las subcarpetas no se empaquetan). Elija cifrar [!DNL .flv] archivos, [!DNL .f4v] archivos o introducir una expresión regular personalizada (por ejemplo, &quot;.*&quot; cifra todos los archivos de la carpeta). Los archivos cifrados se guardarán en la carpeta de salida especificada, utilizando el mismo nombre de archivo que el archivo original.
 
 >[!NOTE]
 >
@@ -35,4 +35,4 @@ En la tabla siguiente se describen las preferencias de Package Media:
 | Codificar script | Seleccione esta casilla de verificación para cifrar datos de secuencias de comandos (solo FLV) |
 | Propiedades personalizadas | Especifique las propiedades personalizadas que se incluirán en el contenido empaquetado. Estas propiedades estarán disponibles para el servidor de licencias al emitir una licencia. (Opcional) |
 
-Una vez seleccionadas las opciones de empaquetado, haga clic en el **[!UICONTROL Package Media]** botón para empezar a empaquetar los archivos.
+Una vez seleccionadas las opciones de empaquetado, haga clic en el botón **[!UICONTROL Package Media]** para empezar a empaquetar los archivos.
