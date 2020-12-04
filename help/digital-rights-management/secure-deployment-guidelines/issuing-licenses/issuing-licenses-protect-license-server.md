@@ -19,11 +19,11 @@ Debe asegurarse de que está emitiendo licencias de forma segura. Tenga en cuent
 
 ## Consumo de CRL generadas localmente {#consuming-locally-generated-crls}
 
-Para consumir listas de revocación de certificados (CRL) generadas localmente y listas de actualización de políticas, utilice las API de DRM de Adobe Primetime para comprobar la firma.
+Para consumir listas de revocación de certificados (CRL) generadas localmente y listas de actualización de políticas, utilice las API de Adobe Primetime DRM para comprobar la firma.
 
 Las siguientes API comprueban que las listas no se han manipulado y que el servidor de licencias correcto ha firmado las listas:
 
-* Llame a [RevocationList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html#verifySignature(java.security.cert.X509Certificate)) para comprobar la firma antes de proporcionar [RevocationList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html) a cualquier API.
+* Llame a [RevocationList.verifySignature](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html#verifySignature(java.security.cert.X509Certificate)) para comprobar la firma antes de proporcionar el [RevocationList](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationList.html) a cualquier API.
 
    Para obtener más información, consulte [RevocationListFactory](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationListFactory.html).
 
@@ -35,7 +35,7 @@ Las siguientes API comprueban que las listas no se han manipulado y que el servi
 
 El SDK descarga periódicamente las CRL publicadas por Adobe. Debe asegurarse de que no se bloquee el acceso a estos archivos o de que no se impida la aplicación de estas CRL.
 
-El SDK tiene una opción de configuración para ignorar los errores al recuperar las CRL de Adobe y solo puede aplicar esta opción en entornos de desarrollo. En los entornos de producción, el servidor de licencias debe recuperar las CRL de Adobe. Si el servidor de licencias no puede obtener una CRL válida, se ha producido un error.
+El SDK tiene una opción de configuración para ignorar los errores al recuperar listas CRL de Adobe y solo puede aplicar esta opción en entornos de desarrollo. En los entornos de producción, el servidor de licencias debe recuperar las CRL de Adobe. Si el servidor de licencias no puede obtener una CRL válida, se ha producido un error.
 
 ## Generación de CRL para complementar las publicadas por Adobe{#generating-crls-to-supplement-those-published-by-adobe}
 
@@ -45,13 +45,13 @@ El SDK de DRM de Primetime comprueba y aplica las CRL de Adobe. Sin embargo, pue
 
 Para generar CRL, consulte [RevocationListFactory](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/revocation/RevocationListFactory.html).
 
-## Detección de retroceso {#rollback-detection}
+## Detección de rollback {#rollback-detection}
 
 Si la implementación de Adobe Primetime DRM utiliza reglas comerciales que requieren que el cliente mantenga el estado (por ejemplo, el intervalo de la ventana de reproducción), Adobe recomienda que el servidor realice un seguimiento del contador de reversión y utilice la lista de permitidas de AIR o SWF.
 
 El contador de reversión se envía al servidor en la mayoría de las solicitudes del cliente. Si la implementación de DRM de Primetime no requiere el contador de reversión, se puede ignorar. De lo contrario, Adobe recomienda que el servidor almacene el ID de equipo aleatorio, que se obtiene mediante [MachineToken.getUniqueId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId()), y el valor de contador actual en una base de datos.
 
-Para obtener más información sobre cómo incrementar y realizar el seguimiento del contador de rollback, consulte Detección de [ClientState](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/ClientState.html) y Rollback.
+Para obtener más información sobre cómo incrementar y rastrear el contador de rollback, consulte [ClientState](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/ClientState.html) y Detección de rollback.
 
 ## Recuento de equipos al emitir licencias {#machine-count-when-issuing-licenses}
 
@@ -61,19 +61,19 @@ La forma más sólida de rastrear los ID de equipo es almacenar el valor devuelt
 
 [MachineId.matches()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#matches(com.adobe.flashaccess.sdk.cert.MachineId)) realiza una comparación de ID para determinar si los ID representan el mismo equipo. Esta comparación solo es práctica si hay un pequeño número de ID de máquina. Por ejemplo, si se permite a los usuarios cinco equipos en su dominio, puede buscar en la base de datos los ID de equipo asociados al nombre de usuario del usuario y obtener un pequeño conjunto de datos para la comparación.
 
-Esta comparación no es práctica para implementaciones que permiten el acceso anónimo. En este caso, se puede usar [MachineId.getUniqueID()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId()) . Sin embargo, este ID no puede ser el mismo si el usuario accede al contenido desde los tiempos de ejecución de Flash y Adobe AIR®.
+Esta comparación no es práctica para implementaciones que permiten el acceso anónimo. En este caso, se puede utilizar [MachineId.getUniqueID()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/cert/MachineId.html#getUniqueId()). Sin embargo, este ID no puede ser el mismo si el usuario accede al contenido desde los tiempos de ejecución de Flash y Adobe AIR®.
 
 >[!NOTE]
 >
 >El ID no sobrevive si el usuario cambia el formato del disco duro.
 
-## Protección contra repetición {#replay-protection}
+## Protección de reproducción {#replay-protection}
 
 La protección de reproducción evita que un atacante vuelva a reproducir un mensaje de solicitud de licencia y pueda causar un ataque de denegación de servicio (DoS) contra el cliente.
 
 Un ataque DoS es un intento de los atacantes de evitar que los usuarios legítimos de un servicio usen ese servicio. Por ejemplo, un ataque de reproducción que utilice el contador de reversión podría utilizarse para &quot;engañar&quot; al servidor de licencias para que piense que el cliente de DRM ha revertido su estado, lo que provoca una suspensión de la cuenta.
 
-Para obtener más información sobre la protección contra la reproducción, consulte [ AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId()).
+Para obtener más información acerca de la protección contra la reproducción, consulte [ AbstractRequestMessage.getMessageId()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/AbstractRequestMessage.html#getMessageId()).
 
 ## Mantener una lista de permitidos de empaquetadores de contenido de confianza {#maintain-a-allowlist-of-trusted-content-packagers}
 
@@ -83,15 +83,15 @@ Para los empaquetadores de contenido, las entidades son organizaciones en las qu
 
 Para obtener información sobre la entidad que empaquetó el contenido, consulte [V2ContentMetaData.getPackagerInfo()](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/media/drm/keys/v2/V2ContentMetaData.html#getPackagerInfo()).
 
-## Tiempo de espera para los tokens de autenticación{#timeout-for-authentication-tokens}
+## Tiempo de espera para autentificadores{#timeout-for-authentication-tokens}
 
-Todos los tokens de autenticación generados por el SDK de DRM de Adobe Primetime tienen un intervalo de tiempo de espera para proteger la seguridad de la aplicación.
+Todos los tokens de autenticación generados por el SDK de Adobe Primetime DRM tienen un intervalo de tiempo de espera para proteger la seguridad de la aplicación.
 
 La caducidad del autentificador se especifica mediante el uso del SDK de Primetime DRM al gestionar una solicitud de autenticación. Una vez caducado, el token ya no es válido y el usuario debe volver a autenticarse con el servidor de licencias.
 
 Para obtener más información sobre las solicitudes de autenticación, consulte [AuthenticationHandler](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/com/adobe/flashaccess/sdk/protocol/authentication/AuthenticationHandler.html).
 
-## Anular opciones de directiva {#overriding-policy-options}
+## Omisión de las opciones de directiva {#overriding-policy-options}
 
 Al emitir una licencia, el servidor de licencias puede anular las reglas de uso especificadas en la directiva.
 
