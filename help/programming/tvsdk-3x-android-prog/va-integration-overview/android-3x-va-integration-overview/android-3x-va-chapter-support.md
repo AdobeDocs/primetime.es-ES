@@ -6,13 +6,16 @@ title: Implementar compatibilidad con capítulos
 uuid: 6e2c3994-d28b-489f-ae60-9b876125a871
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '62'
+ht-degree: 0%
 
 ---
 
 
 # Implementar compatibilidad con capítulos {#implement-chapter-support}
 
-Puede definir y rastrear capítulos *personalizados* para el seguimiento de vídeo en aplicaciones basadas en TVSDK.
+Puede definir y rastrear *capítulos personalizados* para el seguimiento de vídeo en aplicaciones basadas en TVSDK.
 
 Los capítulos personalizados son administrados por la aplicación y se basan en datos CMS o de otra manera que la aplicación utiliza para definir capítulos.
 
