@@ -6,6 +6,9 @@ title: Almacenamiento en búfer
 uuid: da9498ee-c736-4093-97a2-250d3ad56d49
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Puede configurar imágenes para notificar al usuario que el contenido se está almacenando en búfer.
 
-Escucha `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` y `AdobePSDK.PSDKEventType.BUFFERING_END` eventos. Por ejemplo:
+Escuche los eventos `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` y `AdobePSDK.PSDKEventType.BUFFERING_END`. Por ejemplo:
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_BEGIN,  
