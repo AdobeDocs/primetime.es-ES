@@ -6,6 +6,9 @@ title: Habilitar FairPlay para Safari HLS
 uuid: 6a250a31-cc4b-4c4b-b1e9-893ee3ca5d78
 translation-type: tm+mt
 source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+workflow-type: tm+mt
+source-wordcount: '438'
+ht-degree: 0%
 
 ---
 
@@ -21,10 +24,10 @@ Asegúrese de que dispone de lo siguiente:
    La aplicación de ejemplo debe poder reproducir contenido protegido con FairPlay con las licencias gestionadas mediante Primetime DRM con ExpressPlay.
 * Contenido HLS de muestra (manifiesto M3U8) empaquetado con protección FairPlay.
 
-Para aprovechar al máximo la información aquí, obtenga información sobre los flujos de trabajo de varios DRM a partir del servidor de [referencia de subsección: Ejemplo de ExpressPlay Entitlement Server (SEES)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf) en la guía Flujos de trabajo de varios DRM. Lea primero la documentación sobre cómo configurar la asignación de derechos y el servidor clave, y la información siguiente será mucho más útil.
+Para aprovechar al máximo la información aquí, conozca los Flujos de trabajo de Multi-DRM comenzando con la subsección [Servidor de referencia: Ejemplo de ExpressPlay Entitlement Server (SEES)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf) en la guía de Flujos de trabajo de varios DRM. Lea primero la documentación sobre cómo configurar la asignación de derechos y el servidor clave, y la información siguiente será mucho más útil.
 Necesita los siguientes elementos:
 
-* Autentificador *del cliente de producción* de ExpressPlay
+* Su *producción* autenticador del cliente de ExpressPlay
 * La misma clave de contenido y `iv` con la que se empaquetó el contenido.
 * Ubicación del certificado de clave pública de FairPlay.
 
@@ -38,12 +41,12 @@ Para modificar la aplicación FairPlay/Safari:
    var myServerCertificatePath = './my_fairplay.cer';
    ```
 
-1. Realice una solicitud manual de *token* de licencia de FairPlay a ExpressPlay para obtener una URL de token de licencia.
+1. Realice una solicitud manual de licencia de FairPlay *token* a ExpressPlay para obtener una URL de token de licencia.
 
        Puede completar este paso de una de las siguientes maneras:
    
    * Utilice su propio autenticador de cliente de producción ExpressPlay.
-   * Utilice la misma clave de contenido y, en esta solicitud, `iv` que se utilizó para empaquetar el contenido que desee reproducir.
+   * Utilice la misma clave de contenido y `iv` en esta solicitud que se utilizó para empaquetar el contenido que desee reproducir.
 
       Ejecute el siguiente comando desde el shell y sustituya el autenticador del cliente de ExpressPlay para obtener la URL del token de licencia para el contenido de muestra:
 
@@ -71,11 +74,11 @@ Para modificar la aplicación FairPlay/Safari:
         ExpressPlayToken=<base64-encoded ExpressPlay token>';
    ```
 
-1. Para que la aplicación pueda reproducir contenido protegido, cambie el esquema de URL del contenido de `skd://` a `https://`.
+1. Antes de que la aplicación pueda reproducir contenido protegido, cambie el esquema de URL del contenido de `skd://` a `https://`.
 
    Debe agregar este cambio de esquema de URL en la aplicación antes de la llamada al servidor de licencias que permite la reproducción.
 
-   Es necesario cambiar los protocolos porque el ID de contenido, que proporciona acceso a la clave de contenido en el sistema de administración de claves, se empaqueta en el manifiesto M3U8 con el `skd://` protocolo. Cuando el reproductor está listo para obtener la licencia para reproducir el contenido protegido, primero debe cambiar de protocolo para comunicarse con el servidor de licencias ExpressPlay. En el ejemplo siguiente, el `myServerProcessSPCPath` se modifica para que contenga el esquema de URL correcto para la solicitud del servidor de licencias:
+   Es necesario cambiar los protocolos porque el ID de contenido, que proporciona acceso a la clave de contenido en el sistema de administración de claves, está empaquetado en el manifiesto M3U8 con el protocolo `skd://`. Cuando el reproductor está listo para obtener la licencia para reproducir el contenido protegido, primero debe cambiar de protocolo para comunicarse con el servidor de licencias ExpressPlay. En el ejemplo siguiente, se modifica `myServerProcessSPCPath` para que contenga el esquema de URL correcto para la solicitud del servidor de licencias:
 
    ```js
    extractContentId(initData) {  
