@@ -26,8 +26,8 @@ Antes de activar el seguimiento de vídeo (Video Heartbeat), asegúrese de que d
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>Importante:  Este nombre de archivo de configuración JSON debe ser <span class="filepath"> ADBMobileConfig.json </span>. No se puede cambiar el nombre y la ruta de este archivo de configuración. La ruta de acceso a este archivo debe ser <span class="filepath"> &lt;raíz de origen&gt;/assets </span>. </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
+   <td colname="col2"> <p>Importante:  Este nombre de archivo de configuración JSON debe permanecer <span class="filepath"> ADBMobileConfig.json </span>. No se puede cambiar el nombre y la ruta de este archivo de configuración. La ruta a este archivo debe ser <span class="filepath"> &lt;raíz de origen&gt;/assets </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Extremo del servidor de seguimiento de AppMeasurement </td> 
@@ -50,7 +50,7 @@ Antes de activar el seguimiento de vídeo (Video Heartbeat), asegúrese de que d
 
 Para configurar el seguimiento de videos en su reproductor:
 
-1. Confirme que las opciones de tiempo de carga del archivo de `ADBMobileConfig.json` recursos son correctas.
+1. Confirme que las opciones de tiempo de carga en el archivo de recursos `ADBMobileConfig.json` son correctas.
 
    ```
    { 
@@ -84,8 +84,8 @@ Para configurar el seguimiento de videos en su reproductor:
    Para configurar las opciones de tiempo de carga:
 
 
-   1. Confirme que el `ADBMobileConfig.json` archivo contiene los valores adecuados (proporcionados por Adobe).
-   1. Confirme que este archivo se encuentra en la `assets/` carpeta.
+   1. Confirme que el archivo `ADBMobileConfig.json` contiene los valores adecuados (proporcionados por Adobe).
+   1. Confirme que este archivo se encuentra en la carpeta `assets/`.
 
       Esta carpeta debe estar ubicada en la raíz del árbol de origen de la aplicación.
 
@@ -135,13 +135,13 @@ Para configurar el seguimiento de videos en su reproductor:
       VideoAnalyticsProvider videoAnalyticsProvider = new VideoAnalyticsProvider(appContext); 
       ```
 
-   1. Defina los metadatos de Video Analytics en la `videoAnalyticsProvider` instancia.
+   1. Defina los metadatos de Video Analytics en la instancia `videoAnalyticsProvider`.
 
       ```java
       videoAnalyticsProvider.setVideoAnalyticsMetadata(vaMetadata);
       ```
 
-   1. Adjunte la instancia del reproductor multimedia a la `videoAnalyticsProvider` instancia:
+   1. Adjunte la instancia del reproductor multimedia a la instancia `videoAnalyticsProvider`:
 
       ```java
       videoAnalyticsProvider.attachMediaPlayer(mediaPlayer); 
