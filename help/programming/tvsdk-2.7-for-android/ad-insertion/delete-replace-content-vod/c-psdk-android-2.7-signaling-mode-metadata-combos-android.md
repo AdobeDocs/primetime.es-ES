@@ -6,11 +6,14 @@ title: Efecto en la inserción y eliminación de publicidades en el modo de señ
 uuid: 7b2a5588-110d-4ce5-aa9c-706d357f211d
 translation-type: tm+mt
 source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+workflow-type: tm+mt
+source-wordcount: '480'
+ht-degree: 0%
 
 ---
 
 
-# Efecto en la inserción y eliminación de publicidades en el modo de señalización de anuncios y en las combinaciones de metadatos de anuncios {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
+# Efecto en la inserción y eliminación de publicidades del modo de señalización de anuncios y en combinaciones de metadatos de anuncios {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
 Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD mediante diferentes modos de señalización de publicidad y combinaciones de metadatos de anuncio. Diferentes combinaciones de modo de señalización y metadatos dan como resultado comportamientos diferentes.
 
@@ -26,7 +29,7 @@ La tabla siguiente proporciona los detalles sobre el modo de señalización y lo
    <th class="entry"> Modo de señalización de publicidad </th> 
    <th class="entry"> Metadatos de anuncio </th> 
    <th class="entry"> Resoluciones creadas </th> 
-   <th class="entry"><span class="codeph"> ColocaciónInformación</span> creada </th> 
+   <th class="entry"><span class="codeph"> </span> PlacementInformationscreados </th> 
    <th class="entry"> Comportamiento resultante </th> 
   </tr> 
  </thead>
@@ -51,7 +54,7 @@ La tabla siguiente proporciona los detalles sobre el modo de señalización y lo
    <td> Eliminar, Auditude </td> 
    <td> 
     <ul id="ul_E0A2F885E93B4D23A486C37B305E17D8"> 
-     <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
+     <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),  </span> </li> 
      <li id="li_439886CB38AA46239C2E40352443888A"><span class="codeph"> PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </li> 
     </ul> </td> 
    <td> Rangos eliminados, publicidades insertadas </td> 
