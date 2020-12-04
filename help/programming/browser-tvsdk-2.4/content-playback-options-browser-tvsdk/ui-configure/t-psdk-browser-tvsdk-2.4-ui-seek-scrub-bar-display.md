@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Administrar la búsqueda al utilizar la barra de búsqueda{#handle-seek-when-using-the-seek-bar}
+# Administrar la búsqueda al usar la barra de búsqueda{#handle-seek-when-using-the-seek-bar}
 
 En el TVSDK del explorador, puede buscar una posición específica (tiempo) en un flujo. Un flujo puede ser una lista de reproducción de ventana deslizante o contenido de vídeo a petición (VOD).
 
@@ -23,11 +23,11 @@ En el TVSDK del explorador, puede buscar una posición específica (tiempo) en u
 
 1. Espere a que el TVSDK del explorador esté en un estado válido para la búsqueda.
 
-   Los estados válidos están PREPARADOS, COMPLETADOS, PAUSADOS y REPRODUCIDOS. Estar en un estado válido garantiza que el recurso de medios se haya cargado correctamente. Si el reproductor no está en un estado de búsqueda válido, al intentar llamar a los siguientes métodos se genera un error `IllegalStateException`.
+   Los estados válidos están PREPARADOS, COMPLETADOS, PAUSADOS y REPRODUCIDOS. Estar en un estado válido garantiza que el recurso de medios se haya cargado correctamente. Si el reproductor no está en un estado de búsqueda válido, al intentar llamar a los siguientes métodos se genera un `IllegalStateException`.
 
-   Por ejemplo, puede esperar a que el SDK de TVSDK del explorador se active `AdobePSDK.MediaPlayerStatusChangeEvent` con un `event.status` de `AdobePSDK.MediaPlayerStatus.PREPARED`.
+   Por ejemplo, puede esperar a que el TVSDK del explorador active `AdobePSDK.MediaPlayerStatusChangeEvent` con un `event.status` de `AdobePSDK.MediaPlayerStatus.PREPARED`.
 
-1. Pase la posición de búsqueda solicitada al `MediaPlayer.seek` método como parámetro en milisegundos.
+1. Pase la posición de búsqueda solicitada al método `MediaPlayer.seek` como parámetro en milisegundos.
 
    Esto mueve el cursor de reproducción a una posición diferente en el flujo.
 
@@ -39,7 +39,7 @@ En el TVSDK del explorador, puede buscar una posición específica (tiempo) en u
    void seek(long position) throws IllegalStateException;
    ```
 
-1. Espere a que TVSDK del explorador active el `AdobePSDK.PSDKEventType.SEEK_END` evento, que devuelve la posición ajustada en el atributo `actualPosition` del evento:
+1. Espere a que TVSDK del explorador active el evento `AdobePSDK.PSDKEventType.SEEK_END`, que devuelve la posición ajustada en el atributo `actualPosition` del evento:
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.SEEK_END, onSeekComplete); 
