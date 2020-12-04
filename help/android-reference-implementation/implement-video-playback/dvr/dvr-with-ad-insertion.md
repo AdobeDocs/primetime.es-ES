@@ -6,6 +6,9 @@ title: DVR con inserción de anuncios
 uuid: ed6cd8fe-ceb2-45c8-a76d-bc0532babd99
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
 
