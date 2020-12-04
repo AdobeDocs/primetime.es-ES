@@ -6,6 +6,9 @@ title: Implementar una resolución de contenido personalizada
 uuid: 1714fcd9-45e0-48be-97f3-f702265128a4
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '186'
+ht-degree: 2%
 
 ---
 
@@ -14,10 +17,10 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Puede implementar sus propios resueltores de contenido en función de los resueltores predeterminados.
 
-Cuando TVSDK detecta una nueva oportunidad, se repite a través de los resueltores de contenido registrado buscando una que sea capaz de resolver esa oportunidad usando el `canResolve` método . El primero que devuelve true se selecciona para resolver la oportunidad. Si no se puede resolver ningún contenido, se omitirá esa oportunidad. Dado que el proceso de resolución de contenido suele ser asíncrono, la resolución de contenido es responsable de notificar a TVSDK cuando se ha completado el proceso.
+Cuando TVSDK detecta una nueva oportunidad, se repite a través de los resueltores de contenido registrados que buscan una que sea capaz de resolver esa oportunidad usando el método `canResolve` . El primero que devuelve true se selecciona para resolver la oportunidad. Si no se puede resolver ningún contenido, se omitirá esa oportunidad. Dado que el proceso de resolución de contenido suele ser asíncrono, la resolución de contenido es responsable de notificar a TVSDK cuando se ha completado el proceso.
 
-* La resolución de contenido llama `client.place` para especificar la operación de línea de tiempo que TVSDK necesita ejecutar (generalmente, una colocación de pausa publicitaria).
-* La resolución de contenido llama `client.notifyCompleted` si el proceso de resolución es correcto o `client.notifyFailed` si el proceso falla.
+* La resolución de contenido llama a `client.place` para especificar la operación de línea de tiempo que TVSDK debe ejecutar (generalmente, una colocación de pausa publicitaria).
+* La resolución de contenido llama a `client.notifyCompleted` si el proceso de resolución es exitoso o `client.notifyFailed` si el proceso falla.
 
 1. Cree una resolución de oportunidad personalizada.
 
@@ -119,7 +122,7 @@ Cuando TVSDK detecta una nueva oportunidad, se repite a través de los resueltor
    }
    ```
 
-1. Registre la fábrica de contenido personalizado para que se reproduzca el flujo de medios.
+1. Registre la fábrica de contenido personalizado para la reproducción del flujo de medios.
 
    Por ejemplo:
 
