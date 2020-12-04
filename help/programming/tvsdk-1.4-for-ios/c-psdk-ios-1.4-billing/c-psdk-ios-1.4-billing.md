@@ -1,20 +1,23 @@
 ---
-description: Para dar cabida a los clientes que solo desean pagar por lo que utilizan, en lugar de una tasa fija independientemente del uso real, Adobe recopila métricas de uso y utiliza estas métricas para determinar cuánto facturar a los clientes.
-seo-description: Para dar cabida a los clientes que solo desean pagar por lo que utilizan, en lugar de una tasa fija independientemente del uso real, Adobe recopila métricas de uso y utiliza estas métricas para determinar cuánto facturar a los clientes.
+description: Para dar cabida a los clientes que desean pagar solamente por lo que utilizan, en lugar de una tasa fija independientemente del uso real, Adobe recopila métricas de uso y utiliza estas métricas para determinar cuánto facturar a los clientes.
+seo-description: Para dar cabida a los clientes que desean pagar solamente por lo que utilizan, en lugar de una tasa fija independientemente del uso real, Adobe recopila métricas de uso y utiliza estas métricas para determinar cuánto facturar a los clientes.
 seo-title: Métricas de facturación
 title: Métricas de facturación
 uuid: 658ffbcd-dedc-464c-8ec7-aa3bdfcb1512
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '393'
+ht-degree: 0%
 
 ---
 
 
 # Métricas de facturación {#billing-metrics}
 
-Para dar cabida a los clientes que solo desean pagar por lo que utilizan, en lugar de una tasa fija independientemente del uso real, Adobe recopila métricas de uso y utiliza estas métricas para determinar cuánto facturar a los clientes.
+Para dar cabida a los clientes que desean pagar solamente por lo que utilizan, en lugar de una tasa fija independientemente del uso real, Adobe recopila métricas de uso y utiliza estas métricas para determinar cuánto facturar a los clientes.
 
-Cada vez que el reproductor genera un evento de inicio de flujo, TVSDK comienza a enviar mensajes HTTP periódicamente al sistema de facturación de Adobe. El período, conocido como duración facturable, puede ser diferente para VOD estándar, VOD pro (anuncios intermedios habilitados) y contenido activo. La duración predeterminada para cada tipo de contenido es de 30 minutos, pero el contrato con Adobe determina los valores reales.
+Cada vez que el reproductor genera un evento de inicio de flujo, TVSDK inicio enviar mensajes HTTP periódicamente al sistema de facturación del Adobe. El período, conocido como duración facturable, puede ser diferente para VOD estándar, VOD pro (anuncios intermedios habilitados) y contenido activo. La duración predeterminada para cada tipo de contenido es de 30 minutos, pero el contrato con Adobe determina los valores reales.
 
 Los mensajes contienen la siguiente información:
 
@@ -31,7 +34,7 @@ Para supervisar las estadísticas que TVSDK envía a Adobe, obtenga la URL de su
 
 ## Configurar métricas de facturación {#configure-billing-metrics}
 
-Si utiliza la configuración predeterminada, no tiene que hacer nada más para habilitar o configurar la facturación. Si ha obtenido parámetros de configuración diferentes de su representante de habilitación de Adobe, utilice la clase PTBillingMetricsConfiguration para configurar estos parámetros antes de inicializar el reproductor multimedia.
+Si utiliza la configuración predeterminada, no tiene que hacer nada más para habilitar o configurar la facturación. Si ha obtenido parámetros de configuración diferentes del representante de habilitación de Adobe, utilice la clase PTBillingMetricsConfiguration para configurar estos parámetros antes de inicializar el reproductor de medios.
 
 La mayoría de los clientes debe utilizar la configuración predeterminada.
 
@@ -56,7 +59,7 @@ Para configurar las métricas de facturación:
 
 ## Transmitir métricas de facturación {#transmit-billing-metrics}
 
-TVSDK envía métricas de facturación a Adobe en formato XML.
+TVSDK envía métricas de facturación al Adobe en formato XML.
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
@@ -86,4 +89,4 @@ Si utiliza una herramienta de captura de red para supervisar las estadísticas q
 </request>
 ```
 
-Las propiedades booleanas `drmProtected`, `adsEnabled`y `midrollEnabled` solo aparecen si son verdaderas.
+Las propiedades booleanas `drmProtected`, `adsEnabled` y `midrollEnabled` sólo aparecen si son verdaderas.
