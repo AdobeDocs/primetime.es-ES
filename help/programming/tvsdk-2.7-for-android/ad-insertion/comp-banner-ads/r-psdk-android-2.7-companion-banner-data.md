@@ -6,6 +6,9 @@ title: Datos de pancarta complementarios
 uuid: 4a5d78e1-5abe-45a8-b50f-14f73fdcc879
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ El contenido de un AdAsset describe una pancarta adjunta.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-Cada uno `AdAsset` proporciona información sobre cómo mostrar el recurso.
+Cada `AdAsset` proporciona información sobre cómo mostrar el recurso.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -44,7 +47,7 @@ Cada uno `AdAsset` proporciona información sobre cómo mostrar el recurso.
   </tr> 
   <tr> 
    <td colname="col1"> dirección URL estática </td> 
-   <td colname="col2"> <p>A veces, el letrero acompañante también tiene una <span class="codeph"> dirección URL</span> estática que es una dirección URL directa a la imagen o a un <span class="codeph"> .swf</span> (letrero flash). </p> <p>Si no desea utilizar html o iframe, puede utilizar una URL directa a una imagen o swf para mostrar el letrero en el escenario Flash. En este caso, puede utilizar la <span class="codeph"> dirección URL</span> estática para mostrar la pancarta. </p> <p>Importante:  Debe comprobar si la dirección URL estática es una cadena válida, ya que es posible que esta propiedad no siempre esté disponible. </p> </td> 
+   <td colname="col2"> <p>A veces, el titular acompañante también tiene una <span class="codeph"> dirección URL estática</span> que es una dirección URL directa a la imagen o a un <span class="codeph"> .swf</span> (titular Flash). </p> <p>Si no desea utilizar html o iframe, puede utilizar una URL directa a una imagen o swf para mostrar la pancarta en la etapa de Flash. En este caso, puede utilizar la <span class="codeph"> dirección URL estática</span> para mostrar la pancarta. </p> <p>Importante:  Debe comprobar si la dirección URL estática es una cadena válida, ya que es posible que esta propiedad no siempre esté disponible. </p> </td> 
   </tr> 
  </tbody> 
 </table>
