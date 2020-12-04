@@ -6,11 +6,14 @@ title: Implementación de la integración con VPAID 2.0
 uuid: d512fb5b-001c-4a7a-a553-d5962002bb30
 translation-type: tm+mt
 source-git-commit: 83df68905f74931355264661aed6cff43b802d3f
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 2%
 
 ---
 
 
-# Implementación de la integración con VPAID 2.0 {#implement-vpaid-integration}
+# Implementar la integración de VPAID 2.0 {#implement-vpaid-integration}
 
 Para agregar compatibilidad con VPAID 2.0, agregue una vista de publicidad personalizada y los oyentes adecuados.
 
@@ -35,7 +38,7 @@ Para agregar compatibilidad con VPAID 2.0, agregue una vista de publicidad perso
 
    >[!IMPORTANT]
    >
-   >En un flujo de trabajo de VPAID 2.0, para las vistas de publicidad personalizadas es muy importante mantener la `CustomAdView` instancia entre `AdBreak` inicios (evento `AD_BREAK_START`) y `AdBreak` finalizaciones (evento `AD_BREAK_COMPLETE`), desde el momento en que crea la vista de publicidad personalizada hasta el momento en que la elimina. Es decir, no cree una vista de publicidad personalizada en cada inicio de pausa publicitaria y elimínelo en cada pausa publicitaria completada.
+   >En un flujo de trabajo de VPAID 2.0, para las vistas de publicidad personalizadas es muy importante mantener la instancia `CustomAdView` entre `AdBreak` inicios (evento `AD_BREAK_START`) y `AdBreak` finalizaciones (evento `AD_BREAK_COMPLETE`), desde el momento en que se crea la vista de publicidad personalizada hasta el momento en que se elimina. Es decir, no cree una vista de publicidad personalizada en cada inicio de pausa publicitaria y elimínelo en cada pausa publicitaria completada.
    >
    >
    >Además, solo debe crear la vista de publicidad personalizada cuando el reproductor esté en el estado PREPARADO,
@@ -53,7 +56,7 @@ Para agregar compatibilidad con VPAID 2.0, agregue una vista de publicidad perso
    >
    >```
    >
-   >Por último, antes de eliminar la vista de publicidad personalizada, debe eliminarla del `FrameLayout`. Por ejemplo:
+   >Finalmente, antes de eliminar la vista de publicidad personalizada, debe eliminarla de `FrameLayout`. Por ejemplo:
    >
    >
    ```
