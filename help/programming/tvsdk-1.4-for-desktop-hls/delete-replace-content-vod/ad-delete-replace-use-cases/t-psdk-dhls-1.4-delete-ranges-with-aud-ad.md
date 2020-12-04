@@ -6,11 +6,14 @@ title: Eliminar intervalos con la publicidad de decisiones y Primetime
 uuid: efd36a2f-db61-434a-bc2a-50a866f44b33
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '60'
+ht-degree: 0%
 
 ---
 
 
-# Eliminar intervalos con la publicidad de decisiones y Primetime{#delete-ranges-with-primetime-ad-decisioning-ad}
+# Eliminar intervalos con publicidad de Primetime y decisiones{#delete-ranges-with-primetime-ad-decisioning-ad}
 
 Elimine TimeRanges entre el inicio y el final en localTime de la línea de tiempo.
 
