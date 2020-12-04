@@ -6,6 +6,9 @@ title: Formato AC-3 5.1
 uuid: d5e77bb5-ed51-4f9f-b34f-e9082f5ee4de
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '558'
+ht-degree: 0%
 
 ---
 
@@ -27,8 +30,8 @@ Para obtener más información, consulte [Dolby Digital 5.1](https://www.dolby.c
 TVSDK admite las siguientes funciones AC-3 5.1:
 
 * Audio envolvente AC-3
-* Flujos mixtos/sin mezclar para el tipo de audio envolvente
-* Posibilidad de consultar el dispositivo para ver si el códec de audio envolvente está disponible en el dispositivo.
+* Flujos mixtos/no mezclados para el tipo de audio envolvente
+* Posibilidad de consulta del dispositivo para ver si el códec de audio envolvente está disponible en el dispositivo.
 
    Los resultados determinan qué tipo de códec de audio preferido se selecciona. Se descarta el manifiesto con el tipo de códec de audio que el dispositivo no va a usar. Por ejemplo, si se ha seleccionado el formato AC-3, no se tendrán en cuenta los perfiles con el formato de codificación de audio avanzada (AAC).
 * Modo de paso
@@ -46,7 +49,7 @@ No se admiten las siguientes funciones de AC-3 5.1:
 
 Este es el flujo de trabajo típico que se produce cuando TVSDK encuentra un manifiesto con medios AC-3 y AAC:
 
-1. TVSDK consulta qué códec puede admitir el dispositivo.
+1. Consultas TVSDK que admiten el códec del dispositivo.
 1. Se selecciona el códec con mayor calidad.
 
    El orden de calidad es AC-3 > AAC.
