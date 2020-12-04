@@ -6,6 +6,9 @@ title: Formato VMAP para rastrear direcciones URL
 uuid: e3173fad-caa2-49cb-9a65-631573812e52
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '170'
+ht-degree: 0%
 
 ---
 
