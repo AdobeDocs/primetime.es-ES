@@ -6,6 +6,9 @@ title: Funciones HLS admitidas
 uuid: 033d81f8-cea4-4687-b2fb-1524d9164d39
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '758'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ El SDK TVSDK del explorador admite una serie de funciones HLS que se pueden impl
 
 >[!TIP]
 >
->En las tablas de matriz de funciones que se muestran a continuación, el icono ![](assets/supported15.png) admitido significa que la función se admite en la versión actual.
+>En las tablas de la matriz de características que se muestran a continuación, ![icono admitido](assets/supported15.png) significa que la función se admite en la versión actual.
 
 >[!TIP]
 >
@@ -85,31 +88,31 @@ Removed Nielsen row
 
 | Categoría | Tipo de contenido | Función | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Integraciones | VOD + Activo | Integración VHL de Adobe Analytics | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
+| Integraciones | VOD + Activo | Integración con Adobe Analytics VHL | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
 
 ## Funciones avanzadas de inserción de anuncios HLS (CSAI) {#hls-advanced-ad-insertion}
 
 | Categoría | Tipo de contenido | Función | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Inserción de publicidad | VOD | Solo publicidad | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
-| Inserción de publicidad | VOD + Activo | Parámetros de objetivo | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
-| Inserción de publicidad | VOD + Activo | Directiva de publicidad personalizada | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | Limitación de plataforma |
-| Inserción de publicidad | VOD + Activo | Carga de anuncios diferida | ![icono admitido](assets/supported15.png) | No admitido | Limitación de plataforma |
-| Inserción de publicidad | VOD | Publicidades complementarias, publicidades tipo titular y publicidades en las que se puede hacer clic | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
-| Inserción de publicidad | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
+| Ad Insertion | VOD | Solo publicidad | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
+| Ad Insertion | VOD + Activo | Parámetros de objetivo | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
+| Ad Insertion | VOD + Activo | Directiva de publicidad personalizada | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | Limitación de plataforma |
+| Ad Insertion | VOD + Activo | Carga de anuncios diferida | ![icono admitido](assets/supported15.png) | No admitido | Limitación de plataforma |
+| Ad Insertion | VOD | Publicidades complementarias, publicidades tipo titular y publicidades en las que se puede hacer clic | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
+| Ad Insertion | VOD | VPAID 2.0 | SWF | JavaScript | JavaScript |
 
 ## Funciones de inserción de anuncios principales de HLS (CSAI) {#hls-core-ad-insertion}
 
 | Categoría | Tipo de contenido | Función | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Inserción de publicidad | VOD + Activo | Anteponer | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
-| Inserción de publicidad | VOD + Activo | Mid-roll | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | Limitación de plataforma |
-| Inserción de publicidad | VOD + Activo | Post-roll | Solo VOD | Solo VOD | Solo VOD |
-| Inserción de publicidad | FER VOD | Resolución y comportamientos de publicidad | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | Limitación de plataforma |
-| Inserción de publicidad | VOD + Activo | Directiva de publicidad predeterminada | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | Limitación de plataforma |
-| Inserción de publicidad | VOD + Activo | VAST 2.0/3.0 | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
-| Inserción de publicidad | VOD + Activo | VMAP 1.0 | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
-| Inserción de publicidad | VOD + Activo | CRS v3.1 | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
+| Ad Insertion | VOD + Activo | Anteponer | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
+| Ad Insertion | VOD + Activo | Mid-roll | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | Limitación de plataforma |
+| Ad Insertion | VOD + Activo | Post-roll | Solo VOD | Solo VOD | Solo VOD |
+| Ad Insertion | FER VOD | Resolución y comportamientos de publicidad | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | Limitación de plataforma |
+| Ad Insertion | VOD + Activo | Directiva de publicidad predeterminada | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | Limitación de plataforma |
+| Ad Insertion | VOD + Activo | VAST 2.0/3.0 | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
+| Ad Insertion | VOD + Activo | VMAP 1.0 | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
+| Ad Insertion | VOD + Activo | CRS v3.1 | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
 
 ## Funciones de protección de contenido HLS {#hls-content-protection}
 
@@ -117,9 +120,9 @@ Removed Nielsen row
 |--- |--- |--- |--- |--- |--- |
 | Protección del contenido | VOD + Activo | AES-128 | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
 | Protección del contenido | VOD + Activo | Sample-AES | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
-| Protección del contenido | VOD | DRM | Adobe Access | No admitido | FairPlay |
+| Protección del contenido | VOD | DRM | Acceso a Adobe | No admitido | FairPlay |
 
-## Funciones de reproducción avanzadas de HLS {#hls-advanced-playback}
+## Funciones de reproducción avanzada de HLS {#hls-advanced-playback}
 
 | Categoría | Tipo de contenido | Función | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
@@ -133,7 +136,7 @@ Removed Nielsen row
 | Reproducción | VOD + Activo | Facturación | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
 | Reproducción | VOD + Activo | Explorar | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
 
-## Reproducción principal de HLS {#hls-core-playback}
+## Reproducción principal HLS {#hls-core-playback}
 
 | Categoría | Tipo de contenido | Función | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
