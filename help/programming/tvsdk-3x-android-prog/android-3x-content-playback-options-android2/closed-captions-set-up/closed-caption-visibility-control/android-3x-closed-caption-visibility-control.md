@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Control de la visibilidad de los subtítulos opcionales {#control-closed-caption-visibility}
+# Controlar la visibilidad de los subtítulos opcionales {#control-closed-caption-visibility}
 
 Puede controlar la visibilidad de los subtítulos opcionales. Cuando se ha habilitado la visibilidad, se muestra la pista seleccionada actualmente. Si cambia la pista que está actualizada, la configuración de visibilidad permanece igual.
 
@@ -31,7 +31,7 @@ Puede controlar la visibilidad de los subtítulos opcionales. Cuando se ha habil
 >}
 >```
 
-1. Espere a que el `MediaPlayer` estado esté al menos en el estado PREPARADO. Para obtener más información, consulte [Esperar un estado](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md)válido.
+1. Espere a que `MediaPlayer` esté en al menos el estado PREPARADO. Para obtener más información, consulte [Espera un estado válido](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md).
 
 1. Para obtener la configuración de visibilidad actual de los subtítulos cerrados, utilice el método getter en `MediaPlayer`, que devuelve un valor de visibilidad.
 
