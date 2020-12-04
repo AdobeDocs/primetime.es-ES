@@ -6,6 +6,9 @@ seo-description: Flujo de trabajo de DRM AAXS estándar
 uuid: b996eb2c-8e37-4a29-a972-e09c69d2461d
 translation-type: tm+mt
 source-git-commit: 17a492d30c65b1b5e12419f04afa0116654b99fc
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
