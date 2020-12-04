@@ -6,6 +6,9 @@ title: Inserción de publicidad y conmutación por error para VOD
 uuid: b7fbc3f9-9c38-4026-a54a-45ebc528c5f5
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
