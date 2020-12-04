@@ -6,6 +6,9 @@ title: Proporcionar control de volumen
 uuid: f1e959e0-1817-4ccb-8adc-3eba09c91887
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +23,7 @@ Puede configurar un control de interfaz de usuario para ajustar el volumen del v
    >
    >Cualquier estado, excepto RELEASED, es válido.
 
-1. Llame `setVolume` para establecer el volumen del audio.
+1. Llame a `setVolume` para configurar el volumen de audio.
 
    Por ejemplo:
 
