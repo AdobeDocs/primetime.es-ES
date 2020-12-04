@@ -1,36 +1,39 @@
 ---
-description: TVSDK distribuye eventos/notificaciones en secuencias generalmente esperadas. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
-seo-description: TVSDK distribuye eventos/notificaciones en secuencias generalmente esperadas. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
+description: TVSDK distribuye eventos/notificaciones en secuencias esperadas en general. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
+seo-description: TVSDK distribuye eventos/notificaciones en secuencias esperadas en general. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
 seo-title: Orden de los eventos de reproducción
 title: Orden de los eventos de reproducción
 uuid: 4a9ea66b-a383-46ff-9ab8-983b1dd7f935
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '153'
+ht-degree: 0%
 
 ---
 
 
 # Orden de los eventos de reproducción{#order-of-playback-events}
 
-TVSDK distribuye eventos/notificaciones en secuencias generalmente esperadas. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
+TVSDK distribuye eventos/notificaciones en secuencias esperadas en general. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
 
 <!--<a id="section_6E34A6C7936245D88DEB3315DA64598B"></a>-->
 
 Los siguientes ejemplos muestran el orden de algunos eventos que incluyen eventos de reproducción.
 
-* Cuando se carga correctamente un recurso de medios a través de `MediaPlayer.replaceCurrentResource`, el orden de los eventos es:
+* Cuando se carga correctamente un recurso de medios mediante `MediaPlayer.replaceCurrentResource`, el orden de los eventos es:
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con estado `MediaPlayerStatus.INITIALIZING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con estado  `MediaPlayerStatus.INITIALIZING`
 
    * `MediaPlayerItemEvent.ITEM_CREATED`
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con estado `MediaPlayerStatus.INITIALIZED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con estado  `MediaPlayerStatus.INITIALIZED`
 
-* Al prepararse para la reproducción a través de `MediaPlayer.prepareToPlay`, el orden de los eventos es:
+* Al preparar la reproducción mediante `MediaPlayer.prepareToPlay`, el orden de los eventos es:
 
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con estado `MediaPlayerStatus.PREPARING`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con estado  `MediaPlayerStatus.PREPARING`
 
    * `TimelineEvent.TIMELINE_UPDATED` si se insertaron publicidades
-   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con estado `MediaPlayerStatus.PREPARED`
+   * `MediaPlayerStatusChangeEvent.STATUS_CHANGED` con estado  `MediaPlayerStatus.PREPARED`
 
 * Para flujos en directo/lineal, durante la reproducción a medida que avanza la ventana de reproducción y se resuelven oportunidades adicionales, el orden de los eventos es:
 
@@ -39,7 +42,7 @@ Los siguientes ejemplos muestran el orden de algunos eventos que incluyen evento
 
 <!--<a id="section_76C13548AF934868B70757CA5489E516"></a>-->
 
-El siguiente ejemplo muestra una progresión típica de los eventos:
+El siguiente ejemplo muestra una progresión típica de eventos:
 
 ```
 mediaPlayer.addEventListener(MediaPlayerItemEvent.ITEM_CREATED, onItemCreated); 
