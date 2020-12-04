@@ -6,17 +6,20 @@ title: Creación de un reproductor básico con TVSDK
 uuid: ec15cf53-197f-4190-a6b2-600a57815390
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
 
-# Creación de un reproductor básico con TVSDK{#create-a-basic-player-using-tvsdk}
+# Crear un reproductor básico con TVSDK{#create-a-basic-player-using-tvsdk}
 
 Complete los siguientes pasos para crear un reproductor básico con el SDK TVSDK del explorador.
 
 1. Cree un nuevo directorio en el que podrá descargar los archivos comprimidos para el SDK del explorador.
 1. Descargue TVSDK del explorador de Zendesk, descomprima los archivos y coloque la carpeta de marcos en el nuevo directorio.
-1. Cree una plantilla HTML sencilla para el código con un `div` elemento.
+1. Cree una plantilla HTML simple para el código con un `div` en ella.
 1. Coloque esta plantilla en un archivo HTML en el directorio creado en el paso 1.
 
    ```
@@ -33,7 +36,7 @@ Complete los siguientes pasos para crear un reproductor básico con el SDK TVSDK
    </html>
    ```
 
-1. Agregue las bibliotecas TVSDK del explorador en la sección head.
+1. Añada las bibliotecas TVSDK del explorador en la sección head.
 
    ```js
    <script src= "frameworks/player/dash.min.js"></script> 
@@ -42,14 +45,14 @@ Complete los siguientes pasos para crear un reproductor básico con el SDK TVSDK
    <script src= "frameworks/player/primetimeei.min.js"></script>
    ```
 
-1. Para la etiqueta body, agregue la `onLoad` sección.
+1. Para la etiqueta body, agregue la sección `onLoad`.
 
    ```
    <body onload="startVideo()">
    ```
 
-1. Empiece a implementar la `startVideo` función.
-1. Agregue una etiqueta de script y cree la `startVideo` función en la etiqueta .
+1. Inicio implementando la función `startVideo`.
+1. Añada una etiqueta de script y cree la función `startVideo` en la etiqueta .
 
    Se supone que esto está en la sección del encabezado de la página.
 
@@ -78,13 +81,13 @@ Complete los siguientes pasos para crear un reproductor básico con el SDK TVSDK
    player.view = view;
    ```
 
-1. Agregue el detector de eventos del reproductor.
+1. Añada el oyente de evento del reproductor.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
    ```
 
-1. Implemente el controlador de eventos y colóquelo antes del detector de eventos add.
+1. Implemente el controlador de evento y colóquelo antes del oyente de agregar evento.
 
    ```js
    var onStatusChange = function (event) { 
@@ -157,7 +160,7 @@ Complete los siguientes pasos para crear un reproductor básico con el SDK TVSDK
    player.replaceCurrentResource(mediaResource, config);
    ```
 
-1. Cuando el reproductor esté en el estado INICIALIZADO, llame `prepareToPlay`.
+1. Cuando el reproductor esté en el estado INITIALIZADO, llame a `prepareToPlay`.
 
    ```js
    case INITIALIZED: 
@@ -165,7 +168,7 @@ Complete los siguientes pasos para crear un reproductor básico con el SDK TVSDK
     break;
    ```
 
-1. Una vez que el reproductor esté en el estado PREPARADO, llame `play`.
+1. Una vez que el reproductor esté en el estado PREPARADO, llame a `play`.
 
    ```js
    case PREPARED: 
