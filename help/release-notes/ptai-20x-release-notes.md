@@ -16,7 +16,7 @@ Las notas de la versión de Primetime Ad Insertion 20.10.1 describen las novedad
 
 ## Novedades de PTAI 20.10.1
 
-**Cuando:** Martes 13 de octubre de 2020, de las 3:00 a las 7:00 AM hora del Este
+**Cuándo:** Martes, 13 de octubre de 2020, de las 3:00 a las 7:00 a.m., hora del Este
 
 **Cambios**
 
@@ -26,7 +26,7 @@ Las notas de la versión de Primetime Ad Insertion 20.10.1 describen las novedad
 
 #### Versión 20.9.3
 
-**Cuando:** Miércoles 30 de septiembre de 2020 a las 3:30 AM a las 6:30 AM hora del Este
+**Cuándo:** miércoles 30 de septiembre de 2020 a las 3:30 AM a las 6:30 AM hora del Este
 
 **Cambios**
 
@@ -34,14 +34,14 @@ Las notas de la versión de Primetime Ad Insertion 20.10.1 describen las novedad
 
 #### Versión 20.9.2
 
-**Cuando:** Martes 15 de septiembre de 2020, de las 3:30 a.m. a las 6:30 a.m. hora del Este
+**Cuándo:** Martes, 15 de septiembre de 2020, de las 3:30 AM a las 6:30 AM, hora del Este
 
 **Mejoras**
 
-* Se proporcionó compatibilidad para la inclusión de tipos de publicidad no lineales mediante `EXT-X-MARKER` etiquetas.
+* Se proporcionó compatibilidad para la inclusión de tipos de publicidad no lineales mediante etiquetas `EXT-X-MARKER`.
 Para obtener más información o activar esta función, póngase en contacto con su representante de asistencia técnica.
 
-* Se proporciona compatibilidad para limitar el tiempo total de resolución de publicidad, si los proveedores tardan demasiado en responder. Para habilitar la limitación, establezca el parámetro de API de arranque en un valor en milisegundos `ptadtimeout` .
+* Se proporciona compatibilidad para limitar el tiempo total de resolución de publicidad, si los proveedores tardan demasiado en responder. Para habilitar la limitación, establezca el parámetro de API de arranque `ptadtimeout` en un valor en milisegundos.
 
    >[!NOTE]
    >
@@ -49,7 +49,7 @@ Para obtener más información o activar esta función, póngase en contacto con
 
 #### Versión 20.9.1
 
-**Cuando:** Martes 1 de septiembre de 2020, de las 3:30 a.m. a las 7:30 a.m. hora del Este
+**Cuándo:** Martes, 1 de septiembre de 2020, de las 3:30 AM a las 7:30 AM, hora del Este
 
 **Cambios**
 
@@ -57,7 +57,7 @@ Para obtener más información o activar esta función, póngase en contacto con
 
 #### Versión 20.8.4
 
-**Cuando:** Miércoles 19 de agosto de 2020 de las 3:30 a las 7:30 AM hora del Este
+**Cuándo:** Miércoles, 19 de agosto de 2020 de las 3:30 a las 7:30 AM hora del Este
 
 **Mejoras y correcciones**
 
@@ -65,7 +65,7 @@ Actualizaciones de mantenimiento.
 
 #### Versión 20.8.1
 
-**Cuando:** Martes 4 de agosto de 2020, de las 3:00 AM a las 6:00 AM, hora del Este
+**Cuándo:** Martes, 4 de agosto de 2020 de las 3:00 AM a las 6:00 AM Hora del Este
 
 **Mejoras y correcciones**
 
@@ -73,7 +73,7 @@ Actualizaciones de mantenimiento.
 
 #### Versión 20.7.1
 
-**Cuando:** Jueves 9 de julio de 2020, de las 3:00 AM a las 5:00 AM Hora del Este
+**Cuándo:** Jueves, 9 de julio de 2020, de 03:00 AM a 05:00 AM Hora del Este
 
 **Nuevas funciones y mejoras**
 
@@ -87,7 +87,7 @@ Actualizaciones de mantenimiento.
 
 #### Versión 20.6.2
 
-**Cuando:** Jueves 18 de junio de 2020 de las 3:00 a las 4:00 AM Hora del Este
+**Cuándo:** Jueves 18 de junio de 2020, de 03:00 AM a 04:00 AM Hora del Este
 
 **Mejoras**
 
@@ -95,7 +95,7 @@ Se ha mejorado la sincronización de flujo para los clientes de vídeo que requi
 
 #### Versión 20.6.1
 
-**Cuando:** Martes 2 de junio de 2020, de las 3:00 a las 5:00 AM hora del Este
+**Cuándo:** Martes, 2 de junio de 2020, de 03:00 a.m. a 05:00 am, hora del Este
 
 **Nuevas funciones**
 
@@ -113,7 +113,7 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 #### Versión 20.5.1
 
-**Cuando:** Martes 5 de mayo de 2020, de las 4:00 a las 5:00 AM hora del Este
+**Cuándo:** Martes, 5 de mayo de 2020, de 04:00 AM a 05:00 AM Hora del Este
 
 * Se ha corregido un problema para garantizar que se proporcionen encabezados CORS correctos al enviar encabezados If-Modified-Since.
 
@@ -123,7 +123,7 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 #### Versión 20.3.4
 
-**Cuando:** Miércoles 1 de abril de 2020, de 03:00 AM a 04:00 AM Hora del Este
+**Cuándo:** Miércoles, 1 de abril de 2020, de 03:00 AM a 04:00 AM Hora del Este
 
 * Se ha corregido un problema que provocaba que los subtítulos no estuvieran sincronizados tras la inserción de anuncios en VOD/ WebVTT.
 
@@ -131,7 +131,7 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 #### Versión 20.3.3
 
-**Cuando:** Jueves 26 de marzo de 2020 de las 3:00 a las 4:00 AM Hora del Este
+**Cuándo:** Jueves, 26 de marzo de 2020, de 03:00 AM a 04:00 AM Hora del Este
 
 * Las respuestas de SSAI 4XX y 5XX ahora proporcionan correctamente encabezados relacionados con CORS, lo que permite a los clientes de vistas web de javascript entre dominios leer correctamente las respuestas de error.
 
@@ -141,7 +141,7 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 #### Versión 20.3.2
 
-**Cuando:** Miércoles 11 de marzo de 2020 de las 5:30 a las 7:00 AM hora del Este
+**Cuándo:** Miércoles, 11 de marzo de 2020 de las 5:30 AM a las 7:00 AM Hora del Este
 
 * Mejoras en la gestión de señales SCTE35.
 
@@ -149,7 +149,7 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 #### Versión 20.3.1
 
-**Cuando:** Jueves 5 de marzo de 2020 de las 02:30 a las 04:30 AM hora del Este
+**Cuándo:** Jueves, 05 de marzo de 2020 de las 02:30 a las 04:30 AM Hora del Este
 
 * Mejoras de rendimiento:
 
@@ -161,18 +161,18 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 #### Versión 20.2.1
 
-**Cuando:** Jueves 13 de febrero de 2020 de las 4:30 a las 5:30 AM hora del Este
+**Cuándo:** Jueves 13 de febrero de 2020 de las 4:30 a las 5:30 AM hora del Este
 
 * Se ha añadido la compatibilidad con la vinculación de recursos de publicidad que contienen varios flujos de solo audio en función del idioma, el códec o la velocidad de bits.
 * Pequeñas mejoras de rendimiento y actualizaciones de mantenimiento.
 
 #### Versión 20.1.3
 
-**Cuando:** Martes 28 de enero de 2020 de las 2:00 a las 03:00 AM hora del Este
+**Cuándo:** Martes, 28 de enero de 2020, de las 2:00 a.m. a las 03:00 a.m., hora del Este
 
 * **VMAP con compatibilidad FER para nbc CueFormat**
 
-   Convertir señales del flujo FER en parámetros de anulación de línea de tiempo FW, cuando `ptcueformat=nbc` se utiliza y el flujo es un flujo VOD con señales en manifiesto y anuncios integrados.
+   Convertir señales del flujo FER en parámetros de anulación de línea de tiempo FW, cuando se utiliza `ptcueformat=nbc` y el flujo es un flujo VOD con señales en manifiesto y anuncios integrados.
 
 * Sanice el campo user-agent en el encabezado HTTP antes de reenviarlo a proveedores de publicidad de terceros/CDN.
 
@@ -182,13 +182,13 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 #### Versión 20.1.2 (revisión)
 
-**Cuando:** Lunes 20 de enero de 2020 de las 02:00 a las 03:00 AM hora del Este
+**Cuándo:** Lunes, 20 de enero de 2020, de 02:00 a.m. a 03:00 AM Hora del Este
 
 * Actualizaciones de mantenimiento.
 
 #### Versión 20.1.1
 
-**Cuando:** Miércoles 15 de enero de 2020 de las 4:00 a las 5:00 AM Hora del Este
+**Cuándo:** Miércoles, 15 de enero de 2020 de las 4:00 a las 5:00 AM Hora del Este
 
 * El servicio de reempaquetado creativo ahora ofrece una inserción de anuncios más rápida mediante el bloqueo automático de los elementos creativos malformados.
 
