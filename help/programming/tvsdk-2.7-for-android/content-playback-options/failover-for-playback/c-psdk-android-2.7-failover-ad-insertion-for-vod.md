@@ -6,6 +6,9 @@ title: Inserción de publicidad y conmutación por error para VOD
 uuid: 1f813065-9310-4495-9fbb-d90eda8ac8bd
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '736'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ El proceso de inserción de anuncios de vídeo a petición (VOD) consta de las f
 
 ## Fase de resolución de publicidad {#section_5DD3A7DA79E946298BFF829A60202E1C}
 
-TVSDK se pone en contacto con un servicio de entrega de publicidad, como Adobe Primetime y decisiones, e intenta obtener el archivo de lista de reproducción principal que corresponde al flujo de vídeo del anuncio. Durante la fase de resolución de anuncios, TVSDK realiza una llamada HTTP al servidor remoto de entrega de anuncios y analiza la respuesta del servidor.
+TVSDK se pone en contacto con un servicio de envío de anuncios, como Adobe Primetime y toma decisiones de anuncios, e intenta obtener el archivo de lista de reproducción principal que corresponde al flujo de vídeo del anuncio. Durante la fase de resolución de anuncios, TVSDK realiza una llamada HTTP al servidor remoto de envío de anuncios y analiza la respuesta del servidor.
 
 TVSDK admite los siguientes tipos de proveedores de publicidad:
 
@@ -25,7 +28,7 @@ TVSDK admite los siguientes tipos de proveedores de publicidad:
    Los datos de la publicidad se codifican en archivos JSON de texto sin formato.
 * Proveedor de anuncios de primetime y decisiones
 
-   TVSDK envía una solicitud, incluido un conjunto de parámetros de objetivo y un número de identificación de recursos, al servidor de back-end Primetime y decisioningback-end. Primetime y decisioningresponde con un documento SMIL (Lenguaje de integración multimedia sincronizada) que contiene la información de publicidad requerida.
+   TVSDK envía una solicitud, incluido un conjunto de parámetros de objetivo y un número de identificación de recursos, al servidor de back-end Primetime y decisioningback-end. Primetime y decisioningresponde con un documento de lenguaje de integración multimedia (SMIL) sincronizado que contiene la información de publicidad requerida.
 * Proveedor de marcadores de publicidad personalizados
 
    Gestiona la situación en la que los anuncios se queman en el flujo, desde el servidor. TVSDK no realiza la inserción de publicidad real, pero debe realizar un seguimiento de las publicidades insertadas en el servidor. Este proveedor establece los marcadores de publicidad que utiliza TVSDK para realizar el seguimiento de publicidad.
@@ -43,9 +46,9 @@ TVSDK emite una notificación de advertencia sobre el error y continúa el proce
 
 TVSDK inserta el contenido alternativo (publicidades) en la línea de tiempo que corresponde al contenido principal.
 
-Cuando se completa la fase de resolución de publicidad, TVSDK tiene una lista ordenada de recursos publicitarios que se agrupan en saltos de publicidad. Cada pausa publicitaria se coloca en la línea de tiempo del contenido principal mediante un valor de tiempo de inicio expresado en milisegundos (ms). Cada publicidad de una pausa publicitaria tiene una propiedad duration que también se expresa en ms. Las publicidades de una pausa publicitaria están encadenadas y, como resultado, la duración de una pausa publicitaria es igual a la suma de las duraciones de las publicidades compuestas individuales.
+Cuando se completa la fase de resolución de publicidad, TVSDK tiene una lista ordenada de los recursos publicitarios que se agrupan en saltos de publicidad. Cada pausa publicitaria se coloca en la línea de tiempo del contenido principal mediante un valor de tiempo de inicio expresado en milisegundos (ms). Cada publicidad de una pausa publicitaria tiene una propiedad duration que también se expresa en ms. Las publicidades de una pausa publicitaria están encadenadas y, como resultado, la duración de una pausa publicitaria es igual a la suma de las duraciones de las publicidades compuestas individuales.
 
-La conmutación por error puede ocurrir en esta fase con conflictos que pueden producirse en la línea de tiempo durante la inserción de anuncios. Para combinaciones específicas de valores de tiempo de inicio/duración de desglose de publicidad, los segmentos de publicidad podrían superponerse. Esta superposición se produce cuando la última parte de una pausa publicitaria se cruza con el principio del primer anuncio en la siguiente pausa publicitaria. En estas situaciones, TVSDK descarta la pausa publicitaria posterior y continúa el proceso de inserción con el siguiente elemento de la lista hasta que se insertan o descarten todos los saltos de publicidad.
+La conmutación por error puede ocurrir en esta fase con conflictos que pueden producirse en la línea de tiempo durante la inserción de anuncios. Para combinaciones específicas de valores de duración/tiempo del inicio de desglose de publicidad, los segmentos de publicidad podrían superponerse. Esta superposición se produce cuando la última parte de una pausa publicitaria se cruza con el principio del primer anuncio en la siguiente pausa publicitaria. En estas situaciones, TVSDK descarta la pausa publicitaria posterior y continúa el proceso de inserción con el siguiente elemento de la lista hasta que se insertan o descarten todos los saltos de publicidad.
 
 TVSDK emite una notificación de advertencia sobre el error y continúa el procesamiento.
 
