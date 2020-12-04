@@ -6,6 +6,9 @@ title: Publicidades tipo titular complementarias
 uuid: 388a1683-342c-4f3b-97c8-cfcb6c5cfee1
 translation-type: tm+mt
 source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+workflow-type: tm+mt
+source-wordcount: '650'
+ht-degree: 0%
 
 ---
 
@@ -35,8 +38,8 @@ El contenido de un AdBannerAsset describe una pancarta adjunta.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-El `AdPlaybackEvent.AD_STARTED` evento devuelve una `Ad` instancia que contiene una `companionAssets` propiedad ( `Vector.<AdAsset>`).
-Cada uno `AdAsset` proporciona información sobre cómo mostrar el recurso.
+El evento `AdPlaybackEvent.AD_STARTED` devuelve una instancia `Ad` que contiene una propiedad `companionAssets` ( `Vector.<AdAsset>`).
+Cada `AdAsset` proporciona información sobre cómo mostrar el recurso.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -64,11 +67,11 @@ Cada uno `AdAsset` proporciona información sobre cómo mostrar el recurso.
   </tr> 
   <tr> 
    <td colname="col1"> datos de pancarta </td> 
-   <td colname="col2"> Datos del tipo especificado por <span class="codeph"> resourceType</span> para este letrero complementario. </td> 
+   <td colname="col2"> Los datos del tipo especificado por <span class="codeph"> resourceType</span> para esta pancarta complementaria. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> dirección URL estática </td> 
-   <td colname="col2"> <p>A veces, el letrero acompañante también tiene una dirección URL estática que es una dirección URL directa a la imagen o a un <span class="filepath"> .swf</span> (letrero flash). </p> <p>Si no desea utilizar html o iframe, puede utilizar una URL directa a una imagen o swf para mostrar el letrero en el escenario Flash. En este caso, puede utilizar staticURL para mostrar la pancarta. </p> <p>Importante:  Debe comprobar si la dirección URL estática es una cadena válida, ya que es posible que esta propiedad no siempre esté disponible. </p> </td> 
+   <td colname="col2"> <p>A veces, el letrero acompañante también tiene una dirección URL estática que es una dirección URL directa a la imagen o a un <span class="filepath"> .swf</span> (letrero flash). </p> <p>Si no desea utilizar html o iframe, puede utilizar una URL directa a una imagen o swf para mostrar la pancarta en la etapa de Flash. En este caso, puede utilizar staticURL para mostrar la pancarta. </p> <p>Importante:  Debe comprobar si la dirección URL estática es una cadena válida, ya que es posible que esta propiedad no siempre esté disponible. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -77,35 +80,35 @@ Cada uno `AdAsset` proporciona información sobre cómo mostrar el recurso.
 
 Para mostrar anuncios en letreros, debe crear instancias de letreros y permitir que TVSDK escuche eventos relacionados con anuncios.
 
-TVSDK proporciona una lista de publicidades tipo titular complementarias que están asociadas con una publicidad lineal a través del evento de `AdPlaybackEvent.AD_STARTED` evento.
+TVSDK proporciona una lista de publicidades tipo titular complementarias que están asociadas con una publicidad lineal a través del evento de evento `AdPlaybackEvent.AD_STARTED`.
 
 Los manifiestos pueden especificar publicidades de titular complementarias mediante:
 
 * Un fragmento de código HTML
 * Dirección URL de una página de iFrame
-* La dirección URL de una imagen estática o un archivo SWF de Adobe Flash
+* La URL de una imagen estática o un archivo SWF de Adobe Flash
 
 Para cada anuncio complementario, TVSDK indica los tipos disponibles para la aplicación.
 
-Agregue un detector para el `AdPlaybackEvent.AD_STARTED` evento que haga lo siguiente:
+Añada un detector para el evento `AdPlaybackEvent.AD_STARTED` que haga lo siguiente:
 
 1. Borra las publicidades existentes en la instancia del letrero.
 
 1. Obtiene la lista de publicidades complementarias de `Ad.companionAssets`.
 
-1. Si la lista de anuncios complementarios no está vacía, repita la lista para las instancias de letrero.
+1. Si la lista de anuncios complementarios no está vacía, repita la lista para las instancias de letreros.
 
-   Cada instancia de pancarta ( una `AdBannerAsset`) contiene información, como ancho, alto, tipo de recurso (html, iframe o static) y datos necesarios para mostrar la pancarta adjunta.
+   Cada instancia de pancarta ( `AdBannerAsset`) contiene información como, por ejemplo, ancho, alto, tipo de recurso (html, iframe o static) y datos necesarios para mostrar la pancarta adjunta.
 
 1. Si una publicidad de vídeo no tiene anuncios complementarios reservados con ella, la lista de recursos complementarios no contiene datos para esa publicidad de vídeo.
 
    Para mostrar una publicidad en pantalla independiente, agregue la lógica a la secuencia de comandos para ejecutar una etiqueta de visualización de publicidad en DFP normal (DoubleClick para editores) en la instancia de letrero adecuada.
 
-1. Envía la información de la pancarta a una función de la página, generalmente JavaScript, mediante `ExternalInterface`la cual se muestran los letreros en una ubicación adecuada.
+1. Envía la información del letrero a una función de la página, generalmente JavaScript, mediante `ExternalInterface`, que muestra los letreros en una ubicación adecuada.
 
-   Generalmente es un `div`usuario y su función utiliza el `div ID` para mostrar el letrero. Por ejemplo:
+   Generalmente es `div` y su función utiliza `div ID` para mostrar la pancarta. Por ejemplo:
 
-   Agregue el detector de eventos:
+   Añada el detector de evento:
 
    ```js
    _player.addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted);
