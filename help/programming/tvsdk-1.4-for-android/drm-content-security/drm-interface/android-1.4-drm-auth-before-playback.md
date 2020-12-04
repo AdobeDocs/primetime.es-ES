@@ -6,6 +6,9 @@ title: Autenticación DRM antes de la reproducción
 uuid: 326ef93d-53b0-4e3a-b16d-f3b886837cc0
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 1%
 
 ---
 
@@ -16,12 +19,12 @@ Cuando los metadatos DRM de un vídeo están separados del flujo multimedia, rea
 
 Un recurso de vídeo puede tener un archivo de metadatos DRM asociado. Por ejemplo:
 
-* &quot;url&quot;: &quot;<span></span>https://www.domain.com/asset.m3u8&quot;
-* &quot;drmMetadata&quot;: &quot;<span></span>https://www.domain.com/asset.metadata&quot;
+* &quot;url&quot;: &quot;ht<span></span>tps://www.domain.com/asset.m3u8&quot;
+* &quot;drmMetadata&quot;: &quot;ht<span></span>tps://www.domain.com/asset.metadata&quot;
 
-En este caso, utilice `DRMHelper` métodos para descargar el contenido del archivo de metadatos DRM, analizarlo y compruebe si es necesaria la autenticación DRM.
+En este caso, utilice `DRMHelper` métodos para descargar el contenido del archivo de metadatos DRM, analizarlo y comprobar si es necesaria la autenticación DRM.
 
-1. Se utiliza `loadDRMMetadata` para cargar el contenido de la URL de metadatos y analizar los bytes descargados en un `DRMMetadata`.
+1. Utilice `loadDRMMetadata` para cargar el contenido de la URL de metadatos y analizar los bytes descargados en `DRMMetadata`.
 
    Como cualquier otra operación de red, este método es asincrónico, creando su propio subproceso.
 
@@ -39,7 +42,7 @@ En este caso, utilice `DRMHelper` métodos para descargar el contenido del archi
    ```
 
 1. Dado que la operación es asincrónica, es recomendable que el usuario esté al tanto de ello. De lo contrario, se preguntará por qué su reproducción no está empezando. Por ejemplo, muestre una rueda giratoria mientras se descargan y analizan los metadatos DRM.
-1. Implemente las rellamadas en la `DRMLoadMetadataListener`. El `loadDRMMetadata` llama a estos controladores de eventos (distribuye estos eventos).
+1. Implemente las rellamadas en `DRMLoadMetadataListener`. El `loadDRMMetadata` llama a estos controladores de evento (distribuye estos eventos).
 
    ```java
    public interface  
@@ -62,7 +65,7 @@ En este caso, utilice `DRMHelper` métodos para descargar el contenido del archi
    * `onLoadMetadataUrlComplete` detecta cuándo ha terminado de cargarse la URL de metadatos.
    * `onLoadMetadataUrlError` indica que los metadatos no se han podido cargar.
 
-1. Cuando finalice la carga, inspeccione el `DRMMetadata` objeto para ver si es necesaria la autenticación DRM.
+1. Cuando finalice la carga, inspeccione el objeto `DRMMetadata` para ver si se necesita autenticación DRM.
 
    ```java
    public static boolean <b>isAuthNeeded</b>(DRMMetadata drmMetadata);
@@ -132,7 +135,7 @@ En este caso, utilice `DRMHelper` métodos para descargar el contenido del archi
    }); 
    ```
 
-1. Esto también implica una comunicación de red, por lo que también es una operación asincrónica. Use un detector de eventos para comprobar el estado de autenticación.
+1. Esto también implica una comunicación de red, por lo que también es una operación asincrónica. Use un detector de evento para comprobar el estado de la autenticación.
 
    ```java
    public interface DRMAuthenticationListener { 
@@ -166,8 +169,8 @@ En este caso, utilice `DRMHelper` métodos para descargar el contenido del archi
    } 
    ```
 
-1. Si la autenticación se realiza correctamente, inicie la reproducción.
-1. Si la autenticación no se realiza correctamente, notifíquelo al usuario y no inicie la reproducción.
+1. Si la autenticación se realiza correctamente, reproduzca el inicio.
+1. Si la autenticación no se realiza correctamente, notifíquelo al usuario y no dé inicio a la reproducción.
 
 La aplicación debe gestionar cualquier error de autenticación. Al no autenticarse correctamente antes de reproducir, TVSDK se coloca en un estado de error. Es decir, cambia su estado a ERROR, se genera un error que contiene el código de error de la biblioteca DRM y la reproducción se detiene. La aplicación debe resolver el problema, restablecer el reproductor y volver a cargar el recurso.
 
