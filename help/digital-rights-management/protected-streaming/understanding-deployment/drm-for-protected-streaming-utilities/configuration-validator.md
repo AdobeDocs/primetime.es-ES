@@ -1,18 +1,21 @@
 ---
-description: Adobe recomienda que, si realiza cambios en el archivo de configuración, ejecute la utilidad Validador de configuración antes de iniciar el servidor. Esta utilidad puede detectar la mayoría de los errores de configuración antes de que se produzcan errores durante el procesamiento de la solicitud.
-seo-description: Adobe recomienda que, si realiza cambios en el archivo de configuración, ejecute la utilidad Validador de configuración antes de iniciar el servidor. Esta utilidad puede detectar la mayoría de los errores de configuración antes de que se produzcan errores durante el procesamiento de la solicitud.
+description: Adobe recomienda que, si realiza cambios en el archivo de configuración, ejecute la utilidad Validador de configuración antes de realizar el inicio del servidor. Esta utilidad puede detectar la mayoría de los errores de configuración antes de que se produzcan errores durante el procesamiento de la solicitud.
+seo-description: Adobe recomienda que, si realiza cambios en el archivo de configuración, ejecute la utilidad Validador de configuración antes de realizar el inicio del servidor. Esta utilidad puede detectar la mayoría de los errores de configuración antes de que se produzcan errores durante el procesamiento de la solicitud.
 seo-title: Validador de configuración
 title: Validador de configuración
 uuid: 7b44919a-0319-4675-95e2-ad1ad72ec0cb
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Validador de configuración{#configuration-validator}
 
-Adobe recomienda que, si realiza cambios en el archivo de configuración, ejecute la utilidad Validador de configuración antes de iniciar el servidor. Esta utilidad puede detectar la mayoría de los errores de configuración antes de que se produzcan errores durante el procesamiento de la solicitud.
+Adobe recomienda que, si realiza cambios en el archivo de configuración, ejecute la utilidad Validador de configuración antes de realizar el inicio del servidor. Esta utilidad puede detectar la mayoría de los errores de configuración antes de que se produzcan errores durante el procesamiento de la solicitud.
 
 Para ejecutar el validador, escriba:
 
