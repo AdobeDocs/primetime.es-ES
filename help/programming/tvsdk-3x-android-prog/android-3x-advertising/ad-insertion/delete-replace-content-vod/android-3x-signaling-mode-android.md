@@ -6,11 +6,14 @@ title: Efecto en la inserción y eliminación de publicidades en el modo de señ
 uuid: 49abab49-4e52-477d-b7ed-688ee63e7473
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 0%
 
 ---
 
 
-# Efecto en la inserción y eliminación de publicidades en el modo de señalización de anuncios y en las combinaciones de metadatos de anuncios {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
+# Efecto en la inserción y eliminación de publicidades del modo de señalización de anuncios y en combinaciones de metadatos de anuncios {#effect-on-ad-insertion-and-deletion-from-ad-signaling-mode-and-ad-metadata-combinations}
 
 Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD mediante diferentes modos de señalización de publicidad y combinaciones de metadatos de anuncio. Diferentes combinaciones de modo de señalización y metadatos dan como resultado comportamientos diferentes.
 
@@ -22,7 +25,7 @@ La tabla siguiente proporciona los detalles sobre el modo de señalización y lo
 
 **Mapa del servidor**
 
-| **Metadatos de anuncio** | **Resoluciones creadas** | **`PlacementInformations`creado ** | **Comportamiento resultante** |
+| **Metadatos de anuncio** | **Resoluciones creadas** | **`PlacementInformations`creado** | **Comportamiento resultante** |
 |--- |--- |--- |--- |
 |  | Eliminar | Eliminar | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)` | Rangos eliminados |
 | Eliminar, Auditude | Eliminar, Auditude | `PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE),` <br>`PlacementInfo (Type.SERVER_MAP, Mode.INSERT)` | Rangos eliminados, publicidades insertadas |
