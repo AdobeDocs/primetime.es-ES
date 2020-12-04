@@ -31,7 +31,7 @@ Puede controlar la visibilidad de los subtítulos opcionales. Cuando se ha habil
 >}
 >```
 
-1. Espere a que el `MediaPlayer` estado esté al menos en el estado PREPARADO.
+1. Espere a que `MediaPlayer` esté en al menos el estado PREPARADO.
 
    Para obtener más información, consulte ui-state-ready-wait-for .
 1. Para obtener la configuración de visibilidad actual de los subtítulos cerrados, utilice el método getter en `MediaPlayer`, que devuelve un valor de visibilidad.
