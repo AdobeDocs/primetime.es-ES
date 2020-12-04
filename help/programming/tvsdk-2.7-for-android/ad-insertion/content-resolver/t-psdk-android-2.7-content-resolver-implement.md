@@ -6,6 +6,9 @@ title: Implementar una resolución de contenido personalizada
 uuid: bc0eda17-9b5d-4733-8e93-790758e68df5
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 2%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Puede implementar sus propios resueltores de contenido en función de los resueltores predeterminados.
 
-Cuando TVSDK genera una nueva oportunidad, se repite a través de los resueltores de contenido registrados que buscan una que sea capaz de resolver esa oportunidad. El primero que vuelve `true` se selecciona para resolver la oportunidad. Si no se puede resolver ningún contenido, se omitirá esa oportunidad. Dado que el proceso de resolución de contenido suele ser asíncrono, la resolución de contenido es responsable de notificar a TVSDK cuando se ha completado el proceso.
+Cuando TVSDK genera una nueva oportunidad, se repite a través de los resueltores de contenido registrados que buscan una que sea capaz de resolver esa oportunidad. El primero que devuelve `true` está seleccionado para resolver la oportunidad. Si no se puede resolver ningún contenido, se omitirá esa oportunidad. Dado que el proceso de resolución de contenido suele ser asíncrono, la resolución de contenido es responsable de notificar a TVSDK cuando se ha completado el proceso.
 
-1. Implemente su propia personalización `ContentFactory`, ampliando la `ContentFactory` interfaz y anulando `retrieveResolvers`.
+1. Implemente su propia `ContentFactory` interfaz personalizada, extendiendo la `ContentFactory` interfaz y anulando `retrieveResolvers`.
 
    Por ejemplo:
 
@@ -68,9 +71,9 @@ Cuando TVSDK genera una nueva oportunidad, se repite a través de los resueltore
    itemLoader.load(resource, id, config);
    ```
 
-1. Pase un `AdvertisingMetadata` objeto a TVSDK de la siguiente manera:
-   1. Cree un `AdvertisingMetadata` objeto.
-   1. Guarde el `AdvertisingMetadata` objeto en `MediaPlayerItemConfig`.
+1. Pase un objeto `AdvertisingMetadata` a TVSDK de la siguiente manera:
+   1. Cree un objeto `AdvertisingMetadata`.
+   1. Guarde el objeto `AdvertisingMetadata` en `MediaPlayerItemConfig`.
 
       ```java
       AdvertisingMetadata advertisingMetadata = new AdvertisingMetadata(); 
@@ -81,8 +84,8 @@ Cuando TVSDK genera una nueva oportunidad, se repite a través de los resueltore
       mediaPlayerItemConfig.setAdvertisingMetadata(advertisingMetadata); 
       ```
 
-1. Cree una clase de resolución de publicidad personalizada que amplíe la `ContentResolver` clase.
-   1. En la resolución de publicidad personalizada, sobrescriba `doConfigure`, `doCanResolve``doResolve`, `doCleanup`:
+1. Cree una clase de resolución de publicidad personalizada que extienda la clase `ContentResolver`.
+   1. En la resolución de publicidad personalizada, omita `doConfigure`, `doCanResolve`, `doResolve`, `doCleanup`:
 
       ```java
       void doConfigure(MediaPlayerItem item); 
@@ -91,7 +94,7 @@ Cuando TVSDK genera una nueva oportunidad, se repite a través de los resueltore
       void doCleanup();
       ```
 
-      Obtendrá su `advertisingMetadata` parte del elemento pasado `doConfigure`:
+      Usted obtiene su `advertisingMetadata` del elemento pasado en `doConfigure`:
 
       ```java
       MediaPlayerItemConfig itemConfig = item.getConfig(); 
@@ -115,14 +118,14 @@ Cuando TVSDK genera una nueva oportunidad, se repite a través de los resueltore
 
    1. Una vez resueltas las publicidades, llame a una de las siguientes funciones:
 
-      * Si la publicidad se resuelve correctamente, llame `process(List<TimelineOperation> proposals)` y `notifyCompleted(Opportunity opportunity)` haga clic en `ContentResolverClient`
+      * Si la resolución de publicidad se realiza correctamente, llame a `process(List<TimelineOperation> proposals)` y `notifyCompleted(Opportunity opportunity)` en la `ContentResolverClient`
 
          ```java
          _client.process(timelineOperations); 
          _client.notifyCompleted(opportunity); 
          ```
 
-      * Si la resolución de la publicidad falla, llame `notifyResolveError` al `ContentResolverClient`
+      * Si la resolución de publicidad falla, llame a `notifyResolveError` en el `ContentResolverClient`
 
          ```java
          _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
