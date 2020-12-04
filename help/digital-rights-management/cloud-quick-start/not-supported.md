@@ -4,11 +4,14 @@ title: ¿Qué NO es compatible con Primetime Cloud DRM?
 uuid: 5168d916-8dc7-4b75-9536-89a74c2b04fd
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '120'
+ht-degree: 0%
 
 ---
 
 
-# ¿Qué NO es compatible con Primetime Cloud DRM?{#what-is-not-supported-by-primetime-cloud-drm}
+# ¿Qué NO es compatible con Primetime Cloud DRM{#what-is-not-supported-by-primetime-cloud-drm}?
 
 Primetime Cloud DRM admite casi todas las funciones disponibles actualmente con Primetime DRM. Sin embargo, debido a algunas de las funciones de DRM que requieren la comunicación con el subsistema de reglas comerciales back-end de un cliente, algunas funciones no están disponibles con Primetime Cloud DRM.
 
