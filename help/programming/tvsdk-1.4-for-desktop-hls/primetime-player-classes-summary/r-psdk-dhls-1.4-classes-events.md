@@ -1,20 +1,23 @@
 ---
-description: Estas clases describen eventos que el TVSDK distribuye al reproductor de medios en respuesta a diversas actividades.
-seo-description: Estas clases describen eventos que el TVSDK distribuye al reproductor de medios en respuesta a diversas actividades.
-seo-title: Clases de eventos
-title: Clases de eventos
+description: Estas clases describen eventos que el TVSDK distribuye al reproductor de medios en respuesta a varias actividades.
+seo-description: Estas clases describen eventos que el TVSDK distribuye al reproductor de medios en respuesta a varias actividades.
+seo-title: Eventos, clases
+title: Eventos, clases
 uuid: 5e63d43c-6112-4958-b8cd-ccf123affd08
 translation-type: tm+mt
 source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+workflow-type: tm+mt
+source-wordcount: '493'
+ht-degree: 0%
 
 ---
 
 
 # Clases de eventos {#events-classes}
 
-Estas clases describen eventos que el TVSDK distribuye al reproductor de medios en respuesta a diversas actividades.
+Estas clases describen eventos que el TVSDK distribuye al reproductor de medios en respuesta a varias actividades.
 
-Paquete: [com.adobe.mediacore.events](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/package-detail.html)
+Paquete: [com.adobe.mediacore.eventos](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/package-detail.html)
 
 | Nombre | Significado |
 |---|---|
@@ -28,9 +31,9 @@ Paquete: [com.adobe.mediacore.events](https://help.adobe.com/en_US/primetime/api
 | [MediaPlayerItemEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemEvent.html) | Clase. Se ha creado un elemento de reproductor de medios. |
 | [MediaPlayerItemLoaderEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerItemLoaderEvent.html) | Clase. Se completó una operación de carga. Enviado por `MediaPlayerItemLoader` para notificar a sus clientes. |
 | [MediaPlayerStatusChangeEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerStatusChangeEvent.html) | Clase. Se cambió el estado del reproductor multimedia. |
-| [MediaPlayerViewEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerViewEvent.html) | Clase. Se `MediaPlayerView` hizo clic en el. |
+| [MediaPlayerViewEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/MediaPlayerViewEvent.html) | Clase. Se hizo clic en `MediaPlayerView`. |
 | [PlaybackRateEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/PlaybackRateEvent.html) | Clase. La velocidad de reproducción del reproductor multimedia cambia. |
-| [ProfileEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html) | Clase. El algoritmo de conmutación de velocidad de bits adaptable del reproductor de medios ha cambiado a otro perfil debido a las condiciones de red o máquina. |
+| [ProfileEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/ProfileEvent.html) | Clase. El algoritmo de conmutación de velocidad de bits adaptable del reproductor de medios ha cambiado a otro perfil debido a las condiciones de red o de equipo. |
 | [SeekEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SeekEvent.html) | Clase. El reproductor comenzó a buscar o la operación de búsqueda se completó. |
 | [SizeAvailableEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/SizeAvailableEvent.html) | Clase. El tamaño del vídeo está disponible. |
 | [TimeChangeEvent](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/events/TimeChangeEvent.html) | Clase. Se cambió el estado del reproductor de medios. |
