@@ -4,11 +4,14 @@ title: Derechos de reproducción múltiple
 uuid: 90f898bf-ffa2-44f0-a01a-0af8868500ee
 translation-type: tm+mt
 source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
 
-# Derechos de reproducción múltiple {#multiple-play-rights}
+# Varios derechos de reproducción {#multiple-play-rights}
 
 Puede especificar el parámetro de varios derechos de reproducción para distintas reglas de uso que aplique a diferentes plataformas o aplicaciones.
 
