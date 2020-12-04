@@ -40,7 +40,8 @@ Los objetos de notificación proporcionan información relacionada con el estado
      <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Eventos de notificación de información, de 300000 a 399999 </li> 
     </ul> <p>Cada rango de nivel superior, como errores, se divide en subintervalos, como 101000 a 101999, que representan errores de reproducción. </p>
     <pre>
-     La lista desglosada <span class="codeph"> mediacore.PSDKErrorCode</span> lista los valores posibles.
+     La lista desglosada 
+     <span class="codeph"> mediacore.PSDKErrorCode</span> lista los valores posibles.
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
@@ -49,11 +50,11 @@ Los objetos de notificación proporcionan información relacionada con el estado
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> metadatos </td> 
-   <td colname="2">Par clave/valor que contienen información relevante adicional sobre la notificación. Por ejemplo, una clave llamada <span class="codeph"> URL</span> se emparejaría con un valor que es una dirección URL relacionada con la notificación, como una dirección URL no válida que generara un error. </td> 
+   <td colname="2">Par clave/valor que contienen información relevante adicional sobre la notificación. Por ejemplo, una clave llamada <span class="codeph"> URL</span> se emparejaría con un valor que es una dirección URL relacionada con la notificación, como una dirección URL no válida que causó un error. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"> innerNotification </td> 
-   <td colname="2">Referencia a otro objeto <span class="codeph"> MediaPlayerNotification</span> que afectó directamente a esta notificación. Un ejemplo puede ser una notificación sobre un error de inserción de publicidad que corresponde directamente a un conflicto de inserción de línea temporal. No todas las notificaciones proporcionan una notificación interna. </td> 
+   <td colname="2">Una referencia a otro objeto <span class="codeph"> MediaPlayerNotification</span> que afectó directamente a esta notificación. Un ejemplo puede ser una notificación sobre un error de inserción de publicidad que corresponde directamente a un conflicto de inserción de línea temporal. No todas las notificaciones proporcionan una notificación interna. </td> 
   </tr> 
  </tbody> 
 </table>
