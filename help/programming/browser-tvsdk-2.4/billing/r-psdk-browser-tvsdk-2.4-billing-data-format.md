@@ -1,18 +1,21 @@
 ---
-description: El SDK de explorador envía métricas de facturación a Adobe en formato XML.
-seo-description: El SDK de explorador envía métricas de facturación a Adobe en formato XML.
+description: El SDK del explorador envía métricas de facturación al Adobe en formato XML.
+seo-description: El SDK del explorador envía métricas de facturación al Adobe en formato XML.
 seo-title: Transmitir métricas de facturación
 title: Transmitir métricas de facturación
 uuid: ed2638d2-7894-4840-b31a-51e48e0a3f49
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '75'
+ht-degree: 0%
 
 ---
 
 
 # Transmitir métricas de facturación{#transmit-billing-metrics}
 
-El SDK de explorador envía métricas de facturación a Adobe en formato XML.
+El SDK del explorador envía métricas de facturación al Adobe en formato XML.
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
@@ -40,4 +43,4 @@ Si utiliza una herramienta de captura de red para supervisar las estadísticas q
 </request>
 ```
 
-Las propiedades booleanas `drmProtected`, `adsEnabled`y `midrollEnabled` solo aparecen si son verdaderas.
+Las propiedades booleanas `drmProtected`, `adsEnabled` y `midrollEnabled` sólo aparecen si son verdaderas.
