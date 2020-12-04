@@ -6,16 +6,19 @@ title: Mostrar la duración, el tiempo actual y el tiempo restante del vídeo
 uuid: 58341c5f-1d53-4f65-92c8-5bde22f61519
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
 
-# Mostrar la duración, el tiempo actual y el tiempo restante del vídeo{#display-the-duration-current-time-and-remaining-time-of-the-video}
+# Muestre la duración, la hora actual y el tiempo restante del vídeo{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
 Puede utilizar el TVSDK del explorador para recuperar información sobre los medios que puede mostrar en la barra de búsqueda.
 
 1. Espere a que el reproductor esté en al menos el estado PREPARADO.
-1. Recupere el tiempo actual del cursor de reproducción mediante el `MediaPlayer.currentTime` atributo .
+1. Recupere el tiempo actual del cursor de reproducción mediante el atributo `MediaPlayer.currentTime`.
 
    Este atributo devuelve la posición actual del cursor de reproducción en la línea de tiempo virtual en milisegundos. El tiempo se calcula en relación con el flujo resuelto que puede contener varias instancias de contenido alternativo, como anuncios múltiples o pausas publicitarias que se dividen en el flujo principal. Para flujos en directo/lineal, el tiempo devuelto siempre está en el rango de la ventana de reproducción.
 
@@ -24,7 +27,7 @@ Puede utilizar el TVSDK del explorador para recuperar información sobre los med
    ```
 
 1. Recupere el rango de reproducción del flujo y determine la duración.
-   1. Utilice la `mediaPlayer.playbackRange` propiedad para obtener el intervalo de tiempo de la línea de tiempo virtual.
+   1. Utilice la propiedad `mediaPlayer.playbackRange` para obtener el intervalo de tiempo de la línea de tiempo virtual.
 
    1. Para determinar la duración, reste el inicio desde el final del rango.
 
