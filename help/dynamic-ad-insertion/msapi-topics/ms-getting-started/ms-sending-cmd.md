@@ -1,20 +1,23 @@
 ---
-description: Utilice el comando HTTP GET para interactuar con el servidor de manifiesto.
-seo-description: Utilice el comando HTTP GET para interactuar con el servidor de manifiesto.
+description: Utilice el comando GET HTTP para interactuar con el servidor de manifiesto.
+seo-description: Utilice el comando GET HTTP para interactuar con el servidor de manifiesto.
 seo-title: Envío de un comando al servidor de manifiesto
 title: Envío de un comando al servidor de manifiesto
 uuid: e9680563-d268-406d-87ce-1521a677e9ec
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
 
-# Envío de un comando al servidor de manifiesto {#send-a-command-to-the-manifest-server}
+# Enviar un comando al servidor de manifiesto {#send-a-command-to-the-manifest-server}
 
-Utilice el comando HTTP GET para interactuar con el servidor de manifiesto.
+Utilice el comando GET HTTP para interactuar con el servidor de manifiesto.
 
-1. Envíe una `HTTP GET` solicitud de una URL de arranque creada con el siguiente patrón:
+1. Envíe una solicitud `HTTP GET` para una URL de arranque construida con el siguiente patrón:
 
    ```
    https://{manifest-server:port}/auditude/variant/
@@ -22,11 +25,11 @@ Utilice el comando HTTP GET para interactuar con el servidor de manifiesto.
     ?{query parameters}
    ```
 
-* **PublisherAssetID** requerido. ID única del editor para el contenido específico.
+* **** PublisherAssetIDRrequerido. ID única del editor para el contenido específico.
 
-* **Se requiere la dirección URL** del contenido. URL del archivo M3U8 de contenido, codificado en Base64 para ser seguro dentro de la URL del servidor de manifiesto. La dirección URL de contenido debe apuntar a un archivo M3U8 de variante, aunque solo haya un flujo de velocidad de bits.
+* **Content** URLRequired. URL del archivo M3U8 de contenido, codificado en Base64 para ser seguro dentro de la URL del servidor de manifiesto. La dirección URL de contenido debe apuntar a un archivo M3U8 de variante, aunque solo haya un flujo de velocidad de bits.
 
-* **Parámetros** de consulta Algunos son obligatorios, otros opcionales. Éstas constituyen la parte más variada de la solicitud. Indican al servidor de manifiesto qué tipo de cliente realiza la solicitud y qué desea que haga el servidor de manifiesto.
+* **Parámetros** de consultaAlgunos son obligatorios, otros opcionales. Éstas constituyen la parte más variada de la solicitud. Indican al servidor de manifiesto qué tipo de cliente realiza la solicitud y qué desea que haga el servidor de manifiesto.
 
    Por ejemplo:
 
