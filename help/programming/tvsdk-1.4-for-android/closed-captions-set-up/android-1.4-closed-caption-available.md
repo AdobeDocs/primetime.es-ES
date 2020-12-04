@@ -13,13 +13,13 @@ ht-degree: 1%
 ---
 
 
-# Seleccionar una pista de rótulo actual entre las pistas disponibles{#select-a-current-caption-track-from-among-available-tracks}
+# Seleccione una pista de rótulo actual entre las pistas disponibles{#select-a-current-caption-track-from-among-available-tracks}
 
 Puede seleccionar una pista de una lista de pistas de subtítulos opcionales disponibles actualmente. Se convierte en la pista actual, que se muestra cuando la visibilidad está activada. Es posible que algunas pistas no estén disponibles en un principio, por lo que debe tener en cuenta el evento que indica que hay más disponibles.
 
 >[!TIP]
 >
->Los subtítulos cerrados siempre están activados. Se considera que están presentes todas las pistas de subtítulos opcionales predeterminadas. Las pistas predeterminadas (como CC1-CC4, CS1-CS6) se enumeran en `ClosedCaptionsTrack.DefaultCCTypes`. Cuando comienza la reproducción, TVSDK busca la actividad en cualquiera de estos canales. Si encuentra actividad, establece el `isActive` método para esa pista y distribuye el `MediaPlayer.PlaybackEventListener.onUpdated` evento.
+>Los subtítulos cerrados siempre están activados. Se considera que están presentes todas las pistas de subtítulos opcionales predeterminadas. Las pistas predeterminadas (como CC1-CC4, CS1-CS6) se enumeran en `ClosedCaptionsTrack.DefaultCCTypes`. Cuando comienza la reproducción, TVSDK busca la actividad en cualquiera de estos canales. Si encuentra actividad, establece el método `isActive` para esa pista y distribuye el evento `MediaPlayer.PlaybackEventListener.onUpdated`.
 
 1. Espere a que el reproductor de medios esté al menos en el estado PREPARADO.
 1. Escuchen estos eventos:
