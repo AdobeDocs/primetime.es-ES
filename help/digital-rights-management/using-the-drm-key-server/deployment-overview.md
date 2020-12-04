@@ -11,17 +11,17 @@ ht-degree: 0%
 ---
 
 
-# Implementar el servidor de claves DRM Primetime {#deploy-the-primetime-drm-key-server}
+# Implementar el servidor de claves DRM de Primetime {#deploy-the-primetime-drm-key-server}
 
-Antes de implementar Primetime DRM Key Server, asegúrese de haber instalado las versiones necesarias de Java y Tomcat. Consulte Requisitos [del servidor clave](../../digital-rights-management/using-the-drm-key-server/requirements.md)DRM.
+Antes de implementar Primetime DRM Key Server, asegúrese de haber instalado las versiones necesarias de Java y Tomcat. Consulte [Requisitos de servidor clave de DRM](../../digital-rights-management/using-the-drm-key-server/requirements.md).
 
-La descarga de Primetime DRM Key Server incluye [!DNL faxsks.war]. Para implementar este archivo WAR, copie el archivo en el directorio de Tomcat [!DNL webapps] . Si ya ha implementado el archivo WAR, es posible que tenga que borrar manualmente el directorio WAR desempacado, [!DNL faxsks] en el [!DNL webapps] directorio de Tomcat). Para evitar que Tomcat descomprima archivos WAR, edite el [!DNL server.xml] archivo en el directorio [!DNL conf] de Tomcat y defina el `unpackWARs` atributo en `false`.
+La descarga del servidor de claves de DRM de Primetime incluye [!DNL faxsks.war]. Para implementar este archivo WAR, copie el archivo en el directorio [!DNL webapps] de Tomcat. Si ya ha implementado el archivo WAR, es posible que tenga que eliminar manualmente el directorio WAR sin empaquetar, [!DNL faxsks] en el directorio [!DNL webapps] de Tomcat). Para evitar que Tomcat descomprima archivos WAR, edite el archivo [!DNL server.xml] en el directorio [!DNL conf] de Tomcat y establezca el atributo `unpackWARs` en `false`.
 
-El servidor de claves Primetime DRM utiliza opcionalmente una biblioteca específica de la plataforma (`jsafe.dll` en Windows o `libjsafe.so` en Linux) para mejorar el rendimiento. Copie la biblioteca adecuada para su plataforma de `thirdparty/cryptoj/platform` a una ubicación especificada por la variable `PATH` entorno (o `LD_LIBRARY_PATH` en Linux).
+El servidor de claves DRM Primetime utiliza opcionalmente una biblioteca específica de la plataforma (`jsafe.dll` en Windows o `libjsafe.so` en Linux) para mejorar el rendimiento. Copie la biblioteca adecuada para su plataforma de `thirdparty/cryptoj/platform` a una ubicación especificada por la variable de entorno `PATH` (o `LD_LIBRARY_PATH` en Linux).
 
 >[!NOTE]
 >
->La versión de 64 bits de la [!DNL jsafe] biblioteca solo debe utilizarse si tanto el sistema operativo como JDK admiten 64 bits; de lo contrario, utilice la versión de 32 bits.
+>La versión de 64 bits de la biblioteca [!DNL jsafe] solo debe usarse si tanto el sistema operativo como JDK admiten 64 bits; de lo contrario, utilice la versión de 32 bits.
 
 ## Configuración SSL {#ssl-configuration}
 
@@ -55,7 +55,7 @@ Generate Certificate:
 
 Cuando se le pida el nombre común, utilice el nombre de dominio completo (FQDN) del servidor.
 
-Copie [!DNL server.cer]y [!DNL server.key] en el directorio Tomcat. Especifique el siguiente conector en [!DNL conf/server.xml]:
+Copie [!DNL server.cer] y [!DNL server.key] en el directorio Tomcat. Especifique el siguiente conector en [!DNL conf/server.xml]:
 
 ```
 <Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true" 
@@ -71,13 +71,13 @@ Copie [!DNL server.cer]y [!DNL server.key] en el directorio Tomcat. Especifique 
 
 Tiene la opción de establecer las dos siguientes propiedades del sistema Java para modificar la ubicación de los archivos de configuración y registro para el servidor de claves DRM Primetime:
 
-* `KeyServer.ConfigRoot` - Este directorio contiene todos los archivos de configuración para el servidor de claves de Primetime DRM. Para obtener más información sobre el contenido de estos archivos, consulte Archivos [de configuración de](#key-server-configuration-files)Key Server. Si no se establece, el valor predeterminado es [!DNL CATALINA_BASE/keyserver].
+* `KeyServer.ConfigRoot` - Este directorio contiene todos los archivos de configuración para el servidor de claves de Primetime DRM. Para obtener más información sobre el contenido de estos archivos, consulte [Archivos de configuración de Key Server](#key-server-configuration-files). Si no se establece, el valor predeterminado es [!DNL CATALINA_BASE/keyserver].
 
 * `KeyServer.LogRoot` - Es un directorio de registro que contiene los registros de la aplicación iOS Key Server. Si no se establece, el valor predeterminado es el mismo que `KeyServer.ConfigRoot`
 
 * `XboxKeyServer.LogRoot` - Este es un directorio de registro que contiene los registros de la aplicación Xbox Key Server. Si no se establece, el valor predeterminado es el mismo que `KeyServer.ConfigRoot`.
 
-Si utiliza [!DNL catalina.bat] o [!DNL catalina.sh] para inicio Tomcat, estas propiedades del sistema se pueden establecer fácilmente mediante la variable `JAVA_OPTS` entorno. Cualquier opción de Java configurada aquí se utilizará cuando se inicie Tomcat. Por ejemplo, set:
+Si utiliza [!DNL catalina.bat] o [!DNL catalina.sh] para inicio Tomcat, estas propiedades del sistema se pueden configurar fácilmente mediante la variable de entorno `JAVA_OPTS`. Cualquier opción de Java configurada aquí se utilizará cuando se inicie Tomcat. Por ejemplo, set:
 
 ```
 JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder” 
@@ -88,13 +88,13 @@ JAVA_OPTS=-DKeyServer.ConfigRoot=”absolute-path-to-config-folder”
 
 Para procesar solicitudes clave de clientes Primetime DRM iOS y Xbox 360, el servidor de claves Primetime DRM debe configurarse con un conjunto de credenciales emitidas por Adobe. Estas credenciales se pueden almacenar en archivos PKCS#12 ( [!DNL .pfx]) o en un HSM.
 
-Los [!DNL .pfx] archivos pueden ubicarse en cualquier lugar, pero para facilitar la configuración, Adobe recomienda colocar los [!DNL .pfx] archivos en el directorio de configuración del inquilino. Para obtener más información, consulte Archivos [de configuración de](#key-server-configuration-files)Key Server.
+Los archivos [!DNL .pfx] pueden ubicarse en cualquier lugar, pero para facilitar la configuración, Adobe recomienda colocar los archivos [!DNL .pfx] en el directorio de configuración del inquilino. Para obtener más información, consulte [Archivos de configuración de Key Server](#key-server-configuration-files).
 
 ### Configuración de HSM {#section_13A19E3E32934C5FA00AEF621F369877}
 
-Si decide utilizar un HSM para almacenar sus credenciales de servidor, debe cargar las claves privadas y los certificados en el HSM y crear un archivo de configuración *pkcs11.cfg* . Este archivo debe encontrarse en el directorio *KeyServer.ConfigRoot* . Consulte el `<Primetime DRM Key Server>/configs` directorio para ver un archivo de configuración PKCS 11 de ejemplo. Para obtener información sobre el formato de [!DNL pkcs11.cfg], consulte la documentación del proveedor PKCS11 de Sun.
+Si decide utilizar un HSM para almacenar sus credenciales de servidor, debe cargar las claves privadas y los certificados en el HSM y crear un archivo de configuración *pkcs11.cfg*. Este archivo debe estar ubicado en el directorio *KeyServer.ConfigRoot*. Consulte el directorio `<Primetime DRM Key Server>/configs` para ver un archivo de configuración PKCS 11 de ejemplo. Para obtener información sobre el formato de [!DNL pkcs11.cfg], consulte la documentación del proveedor PKCS11 de Sun.
 
-Para comprobar que los archivos de configuración de HSM y Sun PKCS11 están correctamente configurados, puede utilizar el siguiente comando desde el directorio donde se encuentra el [!DNL pkcs11.cfg] archivo ( [!DNL keytool] se instala con Java JRE y JDK):
+Para verificar que los archivos de configuración de HSM y Sun PKCS11 están correctamente configurados, puede utilizar el siguiente comando desde el directorio donde se encuentra el archivo [!DNL pkcs11.cfg] ( [!DNL keytool] está instalado con Java JRE y JDK):
 
 ```
 keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunPKCS11 
@@ -103,7 +103,7 @@ keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunP
 
 Si ve sus credenciales en la lista, el HSM está configurado correctamente y el servidor clave podrá acceder a las credenciales.
 
-## Archivos de configuración de Key Server {#key-server-configuration-files}
+## Archivos de configuración del servidor clave {#key-server-configuration-files}
 
 Primetime DRM Key Server requiere dos tipos de archivos de configuración:
 
@@ -112,7 +112,7 @@ Primetime DRM Key Server requiere dos tipos de archivos de configuración:
 
 Si se realizan cambios en los archivos de configuración, se debe reiniciar el servidor para que los cambios surtan efecto.
 
-Para evitar que las contraseñas estén disponibles en texto sin formato en los archivos de configuración, todas las contraseñas especificadas en los archivos de configuración global e inquilino deben estar cifradas. Para obtener más información sobre la codificación de contraseñas, consulte [*Password Scrambler* en *Uso del servidor Primetime DRM para flujo*](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md) protegido.
+Para evitar que las contraseñas estén disponibles en texto sin formato en los archivos de configuración, todas las contraseñas especificadas en los archivos de configuración global e inquilino deben estar cifradas. Para obtener más información sobre la codificación de contraseñas, consulte [*Password Scrambler* en *Using the Primetime DRM Server for Protected Streaming*](../protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md) (Uso del servidor Primetime DRM para flujo protegido).
 
 ## Estructura del directorio de configuración {#configuration-directory-structure}
 
@@ -131,28 +131,28 @@ KeyServer.ConfigRoot/
 
 ## Archivo de configuración global {#global-configuration-file}
 
-El archivo de configuración [!DNL flashaccess-keyserver-global.xml] contiene opciones que se aplican a todos los inquilinos del servidor de claves. Este archivo debe estar ubicado en `KeyServer.ConfigRoot`. Consulte el [!DNL configs] directorio para ver un archivo de configuración global de ejemplo. El archivo de configuración global incluye lo siguiente:
+El archivo de configuración [!DNL flashaccess-keyserver-global.xml] contiene opciones que se aplican a todos los inquilinos del servidor de claves. Este archivo debe estar ubicado en `KeyServer.ConfigRoot`. Consulte el directorio [!DNL configs] para ver un archivo de configuración global de ejemplo. El archivo de configuración global incluye lo siguiente:
 
 * Registro: especifica el nivel de registro y la frecuencia con la que se desplazan los archivos de registro.
 * Contraseña de HSM: solo se requiere si se utiliza un HSM para almacenar las credenciales del servidor.
 
-Consulte los comentarios en el archivo de configuración global de ejemplo ubicado en `<Primetime DRM Key Server>/configs` para obtener más información.
+Consulte los comentarios en el archivo de configuración global de ejemplo ubicado en `<Primetime DRM Key Server>/configs` para obtener más detalles.
 
 ## Archivos de configuración del inquilino {#tenant-configuration-files}
 
-Los archivos [!DNL flashaccess-ioskeyserver-tenant.xml] [!DNL flashaccess-xboxkeyserver-tenant.xml] y de configuración contienen opciones que se aplican a un inquilino específico del servidor de claves DRM Primetime. Cada inquilino tiene su propia instancia de estos archivos de configuración ubicados en [!DNL <KeyServer.ConfigRoot>/faxsks/tenants/tenantname]. Consulte el [!DNL configs/faxsks/tenants/sampletenant] directorio para ver un archivo de configuración de inquilino de ejemplo.
+Los archivos de configuración [!DNL flashaccess-ioskeyserver-tenant.xml] y [!DNL flashaccess-xboxkeyserver-tenant.xml] contienen configuraciones que se aplican a un inquilino específico del servidor de claves de DRM Primetime. Cada inquilino tiene su propia instancia de estos archivos de configuración ubicados en [!DNL <KeyServer.ConfigRoot>/faxsks/tenants/tenantname]. Consulte el directorio [!DNL configs/faxsks/tenants/sampletenant] para ver un archivo de configuración de inquilino de ejemplo.
 
 Puede especificar todas las rutas de archivo del archivo de configuración del inquilino como rutas absolutas o rutas relativas al directorio de configuración del inquilino ( [!DNL <KeyServer.ConfigRoot>/faxsks/tenants/tenantname]).
 
 Todos los archivos de configuración de inquilinos incluyen:
 
-* Credenciales de servidor clave: especifica una o varias credenciales de servidor clave (certificado y clave privada) emitidas por Adobe. Se puede especificar como una ruta a un [!DNL .pfx] archivo y una contraseña, o como un alias para una credencial almacenada en un HSM. Aquí se pueden especificar varias credenciales de este tipo, ya sea como rutas de archivos, alias de claves o ambas.
+* Credenciales de servidor clave: especifica una o varias credenciales de servidor clave (certificado y clave privada) emitidas por Adobe. Se puede especificar como una ruta a un archivo [!DNL .pfx] y una contraseña, o un alias para una credencial almacenada en un HSM. Aquí se pueden especificar varias credenciales de este tipo, ya sea como rutas de archivos, alias de claves o ambas.
 
-El archivo de configuración del inquilino de **iOS** incluye:
+El archivo de configuración del inquilino **iOS** incluye:
 
 * Ventana Envío de clave: (opcional) especifica la ventana de validez de la marca de tiempo de solicitud de envío clave (en segundos). El valor predeterminado es 500 segundos.
 
-El archivo de configuración del inquilino de **Xbox 360** incluye:
+El archivo de configuración del inquilino **Xbox 360** incluye:
 
 * Credencial XSTS: especifica la credencial del desarrollador de la aplicación utilizada para descifrar tokens XSTS
 * Certificado de firma XSTS: especifica el certificado utilizado para verificar la firma en los tokens XSTS.
@@ -164,8 +164,8 @@ Los archivos de registro generados por la aplicación Primetime DRM Key Server (
 
 Los archivos de registro se distinguen por tipo de cliente. Hay dos registros por tipo de cliente:
 
-* Registro *de* acceso: solo supervisa las solicitudes y las respuestas.
-* Registro *de* contexto: contiene mensajes de error detallados y trazos de pila.
+* Un *registro de acceso* - Monitorea solamente las solicitudes y respuestas.
+* Un *registro de contexto* - Contiene mensajes de error detallados y trazos de pila.
 
 ## Inicio del servidor de claves {#starting-the-key-server}
 
