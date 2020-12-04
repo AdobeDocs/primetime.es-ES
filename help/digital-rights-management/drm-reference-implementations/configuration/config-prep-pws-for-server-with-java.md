@@ -13,11 +13,11 @@ ht-degree: 0%
 ---
 
 
-# Preparación de contraseñas mediante Java{#prepare-passwords-using-java}
+# Preparación de contraseñas con Java{#prepare-passwords-using-java}
 
 Ejecute `ScrambleUtil.class` con Java:
 
-1. Navegue hasta `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`
+1. Vaya a `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`
 1. Desde la línea de comandos, escriba:
 
    ```
