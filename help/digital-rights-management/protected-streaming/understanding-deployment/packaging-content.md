@@ -31,4 +31,4 @@ https://mylicenseserver.com:8080/flashaccessserver/tenant1
 
 Si cada inquilino utiliza un servidor de licencias y una credencial de transporte diferentes, asegúrese de especificar el certificado del inquilino correcto en el empaquetador.
 
-Si desea asegurarse de que el servidor emite licencias solo para el contenido de los empaquetadores conocidos, debe incluir el certificado del empaquetador en la lista de permisos del empaquetador del archivo de configuración del inquilino.
+Si desea asegurarse de que el servidor emite licencias solo para el contenido de los empaquetadores conocidos, debe incluir el certificado del empaquetador en la lista de permitidos del empaquetador del archivo de configuración del inquilino.
