@@ -17,9 +17,9 @@ Los requisitos para la sincronización especifican la frecuencia con la que el c
 
 El comportamiento de sincronización se define con los siguientes parámetros:
 
-* **Intervalo** de inicio: especifica cuánto tiempo se espera después de la última sincronización correcta para realizar el inicio de otra solicitud de sincronización.
-* **Intervalo** de detención dura (opcional). No permitir la reproducción si no se ha producido una sincronización correcta en el tiempo especificado.
-* **Forzar la probabilidad** de sincronización: (opcional). Probabilidad con la que el cliente debe enviar un mensaje de sincronización antes del siguiente intervalo de inicio.
+* **Intervalo**  de inicio: especifica cuánto tiempo se espera después de la última sincronización correcta para realizar el inicio de otra solicitud de sincronización.
+* **Intervalo**  de detención dura (opcional). No permitir la reproducción si no se ha producido una sincronización correcta en el tiempo especificado.
+* **Forzar la probabilidad**  de sincronización: (opcional). Probabilidad con la que el cliente debe enviar un mensaje de sincronización antes del siguiente intervalo de inicio.
 
 >[!NOTE]
 >
