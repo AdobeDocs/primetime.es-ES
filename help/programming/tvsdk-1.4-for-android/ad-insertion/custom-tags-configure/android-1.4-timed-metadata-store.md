@@ -6,6 +6,9 @@ title: Almacenar objetos de metadatos temporizados a medida que se distribuyen
 uuid: 0e6d2a42-37a8-477e-b925-66bbc23445c1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,14 +17,14 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 La aplicación debe utilizar los objetos TimedMetadata adecuados en los momentos adecuados.
 
-Durante el análisis de contenido, que se realiza antes de la reproducción, TVSDK identifica las etiquetas suscritas y notifica a la aplicación sobre estas etiquetas. El tiempo que se asocia a cada uno `TimedMetadata` es la hora local en la línea de tiempo de reproducción.
+Durante el análisis de contenido, que se realiza antes de la reproducción, TVSDK identifica las etiquetas suscritas y notifica a la aplicación sobre estas etiquetas. El tiempo asociado a cada `TimedMetadata` es la hora local en la línea de tiempo de reproducción.
 
 La aplicación debe completar las siguientes tareas:
 
 1. Realice un seguimiento del tiempo de reproducción actual.
 1. Haga coincidir el tiempo de reproducción actual con los objetos `TimedMetadata` enviados.
 
-1. Utilice el `TimedMetadata` punto en el que la hora de inicio es igual al tiempo de reproducción local actual.
+1. Utilice el `TimedMetadata` donde el tiempo de inicio es igual al tiempo de reproducción local actual.
 
    El siguiente ejemplo muestra cómo guardar `TimedMetadata` objetos en un `ArrayList`.
 
