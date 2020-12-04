@@ -4,13 +4,16 @@ title: Propiedades del archivo de configuración
 uuid: f0d36240-e5fa-4bf9-9a82-7e963d03cdd0
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '630'
+ht-degree: 0%
 
 ---
 
 
 # Propiedades del archivo de configuración {#configuration-file-properties}
 
-Antes de ejecutar Media Packager, especifique los valores de las propiedades de Media Packager. El archivo de configuración especifica las siguientes propiedades. Para los nombres de propiedad que incluyen* n*, *n* representa un entero que comienza por 1 y aumenta para cada instancia de la propiedad.
+Antes de ejecutar Media Packager, especifique los valores de las propiedades de Media Packager. El archivo de configuración especifica las siguientes propiedades. Para los nombres de propiedad que incluyen* n*, *n* representa un entero que comienza con 1 y aumenta para cada instancia de la propiedad.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_dx4_mpy_n4"> 
  <thead class="- topic/thead "> 
@@ -30,11 +33,11 @@ Antes de ejecutar Media Packager, especifique los valores de las propiedades de 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.script</span> </td> 
-   <td colname="2" class="- topic/entry ">Indica si se deben cifrar datos de secuencias de comandos en archivos FLV. <i class="+ topic/ph hi-d/i ">Las etiquetas de datos de secuencias de comandos onMetaData</i> y <i class="+ topic/ph hi-d/i ">onXMP</i> nunca se cifran, aunque esta opción esté habilitada. </td> 
+   <td colname="2" class="- topic/entry ">Indica si se deben cifrar datos de secuencias de comandos en archivos FLV. <i class="+ topic/ph hi-d/i ">Las etiquetas de datos </i> onMetaData y  <i class="+ topic/ph hi-d/i "></i> onXMPscript nunca se cifran, aunque esta opción esté habilitada. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.video.level</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indica el nivel de codificación de vídeo. Se utiliza un valor alto para cifrar todo el contenido de vídeo, mientras que los valores medio y bajo se utilizan para cifrar partes del contenido de vídeo para archivos F4V que contengan contenido H.264. </p> <p class="- topic/p ">value = <span class="codeph"> high| medium| low</span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Indica el nivel de codificación de vídeo. Se utiliza un valor alto para cifrar todo el contenido de vídeo, mientras que los valores medio y bajo se utilizan para cifrar partes del contenido de vídeo para archivos F4V que contengan contenido H.264. </p> <p class="- topic/p ">value = <span class="codeph"> high | medium | low</span> </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.contents.secondsUnencrypt</span> </td> 
@@ -42,11 +45,11 @@ Antes de ejecutar Media Packager, especifique los valores de las propiedades de 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.asymmetric.certfile</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Archivo de certificado del servidor de licencias utilizado para cifrar la clave. La <span class="codeph"> propiedad encrypt.keys.asymmetric.certfile</span> especifica un archivo que contiene únicamente el certificado (se acepta el formato PEM o DER). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Archivo de certificado del servidor de licencias utilizado para cifrar la clave. La propiedad <span class="codeph"> encrypt.keys.asiymmetric.certfile</span> especifica un archivo que contiene solamente el certificado (se acepta el formato PEM o DER). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">encrypt.keys.policyFile.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Esta propiedad se utiliza repetidamente para crear una lista de políticas que se aplican al contenido. <span class="codeph"> n</span> es un entero cuyo valor es 1 o bueno. El cliente utilizará la primera instancia de forma predeterminada. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Esta propiedad se utiliza repetidamente para crear una lista de políticas que se aplican al contenido. <span class="codeph"> </span> es un entero cuyo valor es 1 o bueno. El cliente utilizará la primera instancia de forma predeterminada. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.serverurl</span> </td> 
@@ -70,7 +73,7 @@ Antes de ejecutar Media Packager, especifique los valores de las propiedades de 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.policyFile.n.domain.transportcert</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Si una directiva <span class="+ topic/ph pr-d/codeph codeph"> encrypt.keys.policyFile.n</span> requiere el registro de dominio con un servidor que utiliza un certificado de transporte diferente al especificado en <span class="+ topic/ph pr-d/codeph codeph"> encrypt.license.servercert</span>, debe proporcionarse el certificado de transporte de dominio. </p> <p class="- topic/p ">Esta propiedad especifica un archivo que contiene únicamente el certificado (se acepta el formato PEM o DER). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Si una directiva <span class="+ topic/ph pr-d/codeph codeph"> encrypt.keys.policyFile.n</span> requiere el registro de dominio con un servidor que utiliza un certificado de transporte diferente al especificado en <span class="+ topic/ph pr-d/codeph codeph"> encrypt.license.servercert</span>, se debe proporcionar el certificado de transporte de dominio. </p> <p class="- topic/p ">Esta propiedad especifica un archivo que contiene únicamente el certificado (se acepta el formato PEM o DER). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.licenseKey</span> </td> 
@@ -82,7 +85,7 @@ Antes de ejecutar Media Packager, especifique los valores de las propiedades de 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">encrypt.keys.rot.key.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Secuencia de claves giradas utilizadas para cifrar contenido cuando la rotación de claves está habilitada. Si no se especifica ninguna clave, las claves se generarán aleatoriamente. Las claves deben tener una longitud de 16 bytes y especificarse como valores hexadecimales. </p> <p class="- topic/p ">El espacio en blanco entre los valores hexadecimales es opcional. <i class="+ topic/ph hi-d/i ">n</i> debe aumentar monotónicamente, comenzando desde 1. Cuando se especifican varias claves, las claves se procesarán en el orden indicado. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Secuencia de claves giradas utilizadas para cifrar contenido cuando la rotación de claves está habilitada. Si no se especifica ninguna clave, las claves se generarán aleatoriamente. Las claves deben tener una longitud de 16 bytes y especificarse como valores hexadecimales. </p> <p class="- topic/p ">El espacio en blanco entre los valores hexadecimales es opcional. <i class="+ topic/ph hi-d/i "></i> debe aumentar monotónicamente, comenzando desde 1. Cuando se especifican varias claves, las claves se procesarán en el orden indicado. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.rot.range</span> </td> 
