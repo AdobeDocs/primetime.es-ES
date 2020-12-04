@@ -1,22 +1,25 @@
 ---
-description: Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con la hora de inicio.
-seo-description: Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con la hora de inicio.
+description: Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con el tiempo de inicio.
+seo-description: Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con el tiempo de inicio.
 seo-title: Uso de metadatos temporizados
 title: Uso de metadatos temporizados
 uuid: 1531780f-2502-4235-818c-6c0a6bf3d348
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '116'
+ht-degree: 1%
 
 ---
 
 
-# Uso de metadatos temporizados {#use-timed-metadata}
+# Usar metadatos temporizados {#use-timed-metadata}
 
-Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con la hora de inicio.
+Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con el tiempo de inicio.
 
-Para utilizar estos objetos guardados `PTTimedMetadata` durante la reproducción, utilice el diccionario guardado de los objetos de metadatos de tiempo de [almacenamiento a medida que se distribuyen](../../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md).
+Para utilizar estos objetos guardados `PTTimedMetadata` durante la reproducción, utilice el diccionario guardado de [Almacenar objetos de metadatos temporizados a medida que se distribuyen](../../../tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-custom-tags-configure/ios-3x-timed-metadata-store.md).
 
-1. Extraiga y actualice el tiempo de reproducción actual desde esta notificación y busque todos los `PTTimedMetadata` objetos con tiempos de inicio que coincidan con el tiempo de reproducción actual.
+1. Extraiga y actualice el tiempo de reproducción actual desde esta notificación y busque todos los objetos `PTTimedMetadata` con tiempos de inicio que coincidan con el tiempo de reproducción actual.
 
    Puede utilizar estos objetos para completar varias acciones.
 
@@ -57,4 +60,4 @@ Para utilizar estos objetos guardados `PTTimedMetadata` durante la reproducción
    }
    ```
 
-1. Borre periódicamente `PTTimedMetadata` instancias antiguas de la lista para evitar que la memoria crezca continuamente.
+1. Extraiga periódicamente instancias antiguas `PTTimedMetadata` de la lista para evitar que la memoria crezca continuamente.
