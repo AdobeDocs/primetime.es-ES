@@ -7,6 +7,9 @@ title: Actualización de las reglas de selección creativa de publicidad
 uuid: b7d316ef-323e-4769-83d9-036422ae1707
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
@@ -15,17 +18,18 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 Puede utilizar el archivo de configuración TVSDK (AdobeTVSDKConfig.json) para actualizar las prioridades de la selección creativa de anuncios en las respuestas VAST/VMAP. También puede utilizar este archivo de configuración para definir las reglas de transformación de URL de origen para los elementos creativos de publicidad.
 
-Cuando el reproductor de vídeo realiza una solicitud a un servidor de publicidad, la respuesta VAST/VMAP suele incluir varios elementos creativos de publicidad ( `MediaFile` elementos), cada uno de los cuales proporciona una dirección URL a una versión diferente del códec de contenedor. En algunos casos, los creativos de anuncios de la respuesta VAST/VMAP proporcionan una velocidad de bits diferente para el anuncio. Si desea especificar su propia prioridad y reglas de transformación para estos elementos creativos de publicidad, puede hacerlo en el archivo de configuración [!DNL AdobeTVSDKConfig.json] .
+Cuando el reproductor de vídeo realiza una solicitud a un servidor de publicidad, la respuesta VAST/VMAP suele incluir varios elementos creativos de publicidad ( `MediaFile` elementos), cada uno de los cuales proporciona una dirección URL a una versión diferente del códec de contenedor. En algunos casos, los creativos de anuncios de la respuesta VAST/VMAP proporcionan una velocidad de bits diferente para el anuncio. Si desea especificar sus propias reglas de prioridad y transformación para estos elementos creativos de publicidad, puede hacerlo en el archivo de configuración [!DNL AdobeTVSDKConfig.json].
 
 >[!IMPORTANT]
 >
 >* No cambie el nombre del archivo de configuración TVSDK. El nombre debe permanecer [!DNL AdobeTVSDKConfig.json].
 >* Puede colocar este archivo en cualquier lugar al que pueda acceder el paquete.
+
 >
 
 
 
-Puede especificar dos tipos de reglas en [!DNL AdobeTVSDKConfig.json]: Reglas de *prioridad* y reglas de *normalización* .
+Puede especificar dos tipos de reglas en [!DNL AdobeTVSDKConfig.json]: *Prioridad* y *Normalizar* reglas.
 
 **[!UICONTROL Disabling Pre-Roll]**
 
