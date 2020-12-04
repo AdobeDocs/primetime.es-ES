@@ -4,11 +4,14 @@ title: Administrar solicitudes de Obtención de versión del servidor
 uuid: 6e287f58-2ad2-428a-a76a-6847d06b0fd8
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# Administrar solicitudes de Obtención de versión del servidor {#handle-get-server-version-requests}
+# Administrar las solicitudes Get Server Version {#handle-get-server-version-requests}
 
 El cliente DRM de Adobe Primetime 3.0 o posterior envía una solicitud Get Server Version para determinar las capacidades del servidor. Todos los servidores que utilizan Primetime DRM SDK 3.0 o posterior deben implementar la compatibilidad con las solicitudes Get Server Version.
 
