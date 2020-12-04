@@ -6,6 +6,9 @@ title: Personalización de los generadores de oportunidades y los solucionadores
 uuid: 97738b80-5cf8-494f-8811-449bceded220
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '249'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Un generador de oportunidades identifica las oportunidades de colocación median
 
 TVSDK incluye los siguientes generadores de oportunidades predeterminados:
 
-* `ManifestCuesOpportunityGenerator` genera oportunidades a partir de las señales de publicidad predeterminadas ( `#EXT-X-CUE`).
+* `ManifestCuesOpportunityGenerator` genera oportunidades a partir de las señales de publicidad predeterminadas (  `#EXT-X-CUE`).
 
 * `AdSignalingModeOpportunityGenerator` genera una oportunidad inicial para el modo de señalización de publicidad especificado. Esto ignora cualquier señal o información de metadatos temporizados.
 * `CustomMarkerOpportunityGenerator` genera oportunidades para reemplazar las publicidades C3 incorporadas.
