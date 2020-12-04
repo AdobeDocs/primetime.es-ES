@@ -6,6 +6,9 @@ title: Reemplazar intervalos de tiempo con una publicidad
 uuid: 8f09560c-bca3-4662-bc58-6c9cd0892476
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 0%
 
 ---
 
@@ -14,11 +17,11 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Puede insertar publicidades en el contenido de VOD.
 
-Los `TimeRanges` valores entre el `begin` y `end` en `localTime` se eliminan de la línea de tiempo. Estos intervalos se reemplazan por un `AdBreak` de `begin` a `begin+replaceDuration`. Si `replacement-duration` no existe como parámetro, el servidor realiza la determinación en el valor devuelto `Adbreak`.
+El `TimeRanges` entre `begin` y `end` en `localTime` se elimina de la línea de tiempo. Estos intervalos se reemplazan por un `AdBreak` de `begin` a `begin+replaceDuration`. Si el `replacement-duration` no existe como parámetro, el servidor realiza la determinación en el `Adbreak` devuelto.
 
 >[!TIP]
 >
->Siempre debe proporcionar un valor `replacement-duration` para los rangos personalizados. Si no hay anuncios que vayan a reemplazar este intervalo personalizado, proporcione un `replacement-duration` 0.
+>Siempre debe proporcionar un `replacement-duration` para los intervalos personalizados. Si no hay anuncios que pretendan reemplazar este intervalo personalizado, proporcione un `replacement-duration` de 0.
 
 1. Para reemplazar los rangos por anuncios de decisiones y Primetime:
 
