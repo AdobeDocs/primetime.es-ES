@@ -6,11 +6,14 @@ title: Implementación de la gestión de interrupciones
 uuid: 3b4e3f53-0e27-4369-85f2-940380ed16ac
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 0%
 
 ---
 
 
-# Implementación de la gestión de interrupciones{#implement-blackout-handling}
+# Implementar la gestión de bloqueo{#implement-blackout-handling}
 
 TVSDK proporciona API y código de muestra para controlar los períodos de interrupción.
 
@@ -30,7 +33,7 @@ Para implementar la gestión de interrupciones, incluido el suministro de conten
    }
    ```
 
-1. Cree oyentes de eventos para eventos de metadatos temporizados en flujos en primer y segundo plano.
+1. Cree oyentes de evento para eventos de metadatos temporizados en flujos en primer y segundo plano.
 
    ```
    private function createMediaPlayer(context:MediaPlayerContext):void { 
@@ -42,7 +45,7 @@ Para implementar la gestión de interrupciones, incluido el suministro de conten
    }
    ```
 
-1. Implemente controladores de eventos de metadatos temporizados para flujos en primer plano y en segundo plano.
+1. Implemente controladores de evento de metadatos temporizados para flujos de primer plano y de fondo.
 
    Primer plano:
 
@@ -157,7 +160,7 @@ Para implementar la gestión de interrupciones, incluido el suministro de conten
    }
    ```
 
-1. Cree métodos para cambiar el contenido al principio y al final del período de interrupción.
+1. Cree métodos para cambiar el contenido al inicio y al final del período de interrupción.
 
    ```
    public function initiate(event:TimerEvent=null):void { 
