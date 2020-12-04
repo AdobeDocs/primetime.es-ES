@@ -17,15 +17,15 @@ ht-degree: 0%
 
 El archivo de configuración flashaccess-global.xml incluye opciones que se aplican a todos los inquilinos del servidor de licencias.
 
-Debe colocar el archivo de configuración en el [!DNL LicenseServer.ConfigRoot] directorio.
+Debe colocar el archivo de configuración en el directorio [!DNL LicenseServer.ConfigRoot].
 
-Consulte el [!DNL configs] directorio para ver un ejemplo de un archivo de configuración global.
+Consulte el directorio [!DNL configs] para ver un ejemplo de un archivo de configuración global.
 
 El archivo de configuración global incluye:
 
 * Almacenamiento en caché — Controla el almacenamiento en caché de los archivos de configuración en la memoria.
 
-   Consulte *Actualización de archivos* de configuración para obtener información sobre la configuración de almacenamiento en caché.
+   Consulte *Actualización de archivos de configuración* para obtener información sobre la configuración de almacenamiento en caché.
 * Registro — Especifica el nivel de registro y la frecuencia con la que se desplazan los archivos de registro.
 * Contraseña de HSM — Solo es necesario si se utiliza un HSM para almacenar las credenciales del servidor.
 
