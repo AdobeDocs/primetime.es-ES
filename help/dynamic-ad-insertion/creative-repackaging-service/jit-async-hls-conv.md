@@ -1,26 +1,29 @@
 ---
-description: CRS proporciona reempaquetado justo a tiempo (JIT) y asincrónico y conversión de HLS a HLS. El resultado del reempaquetado es una versión con formato HLS del elemento creativo de publicidad original. CRS coloca la versión con formato HLS en el servidor de red de entrega de contenido (CDN) para su uso cuando sea necesario.
-seo-description: CRS proporciona reempaquetado justo a tiempo (JIT) y asincrónico y conversión de HLS a HLS. El resultado del reempaquetado es una versión con formato HLS del elemento creativo de publicidad original. CRS coloca la versión con formato HLS en el servidor de red de entrega de contenido (CDN) para su uso cuando sea necesario.
+description: CRS proporciona reempaquetado justo a tiempo (JIT) y asincrónico y conversión de HLS a HLS. El resultado del reempaquetado es una versión con formato HLS del elemento creativo de publicidad original. CRS coloca la versión con formato HLS en el servidor de red de envío de contenido (CDN) para su uso cuando sea necesario.
+seo-description: CRS proporciona reempaquetado justo a tiempo (JIT) y asincrónico y conversión de HLS a HLS. El resultado del reempaquetado es una versión con formato HLS del elemento creativo de publicidad original. CRS coloca la versión con formato HLS en el servidor de red de envío de contenido (CDN) para su uso cuando sea necesario.
 seo-title: Principales usos del SIR
 title: Principales usos del SIR
 uuid: df2caa67-bc94-4146-9b93-14edc060c3d5
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '396'
+ht-degree: 0%
 
 ---
 
 
-# Principales usos del SIR {#main-uses-of-crs}
+# Usos principales de CRS {#main-uses-of-crs}
 
-CRS proporciona reempaquetado justo a tiempo (JIT) y asincrónico y conversión de HLS a HLS. El resultado del reempaquetado es una versión con formato HLS del elemento creativo de publicidad original. CRS coloca la versión con formato HLS en el servidor de red de entrega de contenido (CDN) para su uso cuando sea necesario.
+CRS proporciona reempaquetado justo a tiempo (JIT) y asincrónico y conversión de HLS a HLS. El resultado del reempaquetado es una versión con formato HLS del elemento creativo de publicidad original. CRS coloca la versión con formato HLS en el servidor de red de envío de contenido (CDN) para su uso cuando sea necesario.
 
-En JIT, el reempaquetado de Adobe Primetime y la inserción comienza el proceso de reempaquetado cuando se encuentra por primera vez con un elemento creativo que no es de HLS. Esto suele implicar la pérdida de oportunidades para ejecutar la publicidad durante el proceso de reempaquetado.
+En JIT, la inserción de anuncios de Adobe Primetime comienza el proceso de reempaquetado cuando se encuentra por primera vez con un elemento creativo que no es de HLS. Esto suele implicar la pérdida de oportunidades para ejecutar la publicidad durante el proceso de reempaquetado.
 
 En el reempaquetado asincrónico, el elemento creativo de la publicidad se transcodifica y almacena antes de que sea necesario, lo que puede eliminar las oportunidades perdidas.
 
 En la conversión de HLS a HLS, CRS reformatea un elemento creativo de anuncios HLS en fragmentos de tamaño adecuado para garantizar una reproducción coherente.
 
-## Reempaquetado justo a tiempo {#section_1BA344F2300B49F291865A7461EDFEAE}
+## Reempaquetado Just-in-Time {#section_1BA344F2300B49F291865A7461EDFEAE}
 
 La secuencia para el reempaquetado JIT es la siguiente:
 
@@ -32,7 +35,7 @@ La secuencia para el reempaquetado JIT es la siguiente:
 
 ## Reempaquetado asincrónico {#section_ACDFB43FDA4B445CB9F2A107FEB4F2F7}
 
-Puede utilizar la API descrita en la API de [reempaquetado](../creative-repackaging-service/api-repackage.md) para pretranscodificar un elemento creativo que no sea HLS a fin de minimizar la pérdida de impresiones y maximizar la monetización.
+Puede utilizar la API descrita en [Reempaquetar API](../creative-repackaging-service/api-repackage.md) para pretranscodificar un elemento creativo que no sea HLS a fin de minimizar la pérdida de impresiones y maximizar la monetización.
 
 ## Conversión de HLS a HLS {#section_877A0E7E8FAF4C2DB086A31C24D53435}
 
