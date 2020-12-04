@@ -30,7 +30,7 @@ La resolución y carga de anuncios puede provocar un retraso inaceptable para un
 
    1. TVSDK descarga una lista de reproducción y *resuelve* todas las publicidades.
    1. TVSDK *carga* anuncios preliminares, mueve el reproductor al estado PREPARADO y comienza la reproducción del contenido.
-   1. TVSDK *carga* el resto de las publicidades y las coloca en la línea de tiempo a medida que se produce la reproducción.
+   1. TVSDK *carga* las publicidades restantes y las coloca en la línea de tiempo a medida que se produce la reproducción.
 
    Esta función mejora el proceso básico al colocar el reproductor en el estado PREPARADO antes de que se carguen todas las publicidades.
 
@@ -51,12 +51,12 @@ La resolución y carga de anuncios puede provocar un retraso inaceptable para un
 
    >
    >    
-   * El jugador debe esperar el `kEventAdResolutionComplete` evento antes de permitir la búsqueda o el juego truco.
-   >    * Si el usuario intenta realizar operaciones de búsqueda o reproducción mediante trucos mientras los anuncios aún se están resolviendo, TVSDK emite el `kECLazyAdResolutionInProgress` error.
-   >    * Si es necesario, el reproductor debe actualizar la barra de borrado *después* de recibir el `kEventAdResolutionComplete` evento.
+   * El reproductor debe esperar el evento `kEventAdResolutionComplete` antes de permitir la búsqueda o el juego de trucos.
+   >    * Si el usuario intenta realizar operaciones de búsqueda o reproducción mediante trucos mientras se resuelven los anuncios, TVSDK emite el error `kECLazyAdResolutionInProgress`.
+   >    * Si es necesario, el reproductor debe actualizar la barra de desplazamiento, *después de* recibir el evento `kEventAdResolutionComplete`.
 >
 >* La resolución diferida de publicidad es solo para VOD. No funcionará con los flujos LIVE.
->* La resolución diferida de publicidad no es compatible con la función Activado *instantáneo* .
+>* La resolución diferida de publicidad no es compatible con la función *Activación instantánea*.
 
 >
 >  
