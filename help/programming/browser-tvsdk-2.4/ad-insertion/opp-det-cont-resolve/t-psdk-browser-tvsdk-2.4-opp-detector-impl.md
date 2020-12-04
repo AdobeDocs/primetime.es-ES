@@ -6,6 +6,9 @@ title: Implementar un generador de oportunidades personalizado
 uuid: b80da2da-32d5-41f7-86ca-936d6f25b015
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '95'
+ht-degree: 4%
 
 ---
 
@@ -66,7 +69,7 @@ Puede implementar su propio generador de oportunidades ampliando la interfaz de 
    }; 
    ```
 
-1. Registre la fábrica de contenido personalizado para que se reproduzca el flujo de medios.
+1. Registre la fábrica de contenido personalizado para la reproducción del flujo de medios.
 
    En el reproductor de interfaz de usuario de Framework, puede especificar la fábrica de contenido personalizado de la siguiente manera:
 
