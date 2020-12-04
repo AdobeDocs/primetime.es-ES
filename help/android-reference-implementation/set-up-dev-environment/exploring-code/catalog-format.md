@@ -6,11 +6,14 @@ title: Formato del catálogo
 uuid: 6e1a526f-c0bb-403d-a792-666caf5479a5
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '644'
+ht-degree: 0%
 
 ---
 
 
-# Formato del catálogo {#catalog-format}
+# Formato de catálogo {#catalog-format}
 
 La implementación de referencia Primetime utiliza un formato de fuente basado en JSON para las respuestas. Este formato se analiza mediante la implementación de la interfaz IFeedItemAdapter.
 
@@ -68,14 +71,14 @@ Cada entrada de fuente es un objeto JSON con un conjunto determinado de atributo
 | `id` | Un identificador/guía único para el contenido según lo establecido por el sistema de publicación de fuentes. |
 | `title` | Un título para el contenido. |
 | `description` | Descripción del contenido. |
-| `categories` | Una lista de categorías etiquetadas para el contenido que puede utilizar la aplicación para mejorar la experiencia del usuario. Lea las propiedades del contenido. |
+| `categories` | Lista de categorías etiquetadas para el contenido que puede utilizar la aplicación para mejorar la experiencia del usuario. Lea las propiedades del contenido. |
 | `keywords` | La aplicación puede utilizar una lista de palabras clave separadas por coma para mejorar la experiencia del usuario. Lea las propiedades del contenido. |
-| `isLive` | true o false, lo que indica si es un flujo en directo o VOD. |
+| `isLive` | verdadero o falso, indicando si es un flujo en directo o VOD. |
 | `content` | Matriz de objetos JSON con formatos alternativos para el contenido junto con las URL correspondientes. Por ejemplo, podría haber direcciones URL para los formatos f4m y m3u8. Los atributos del objeto JSON se describen a continuación. |
 | `thumbnails` | Matriz de objetos JSON con direcciones URL para diferentes tamaños de miniaturas. Los atributos del objeto JSON se definen a continuación. |
 | `metadata` | Objeto JSON que define metadatos para el contenido; actualmente, estos metadatos se limitan a los metadatos relacionados con la publicidad. El objeto metadata se define a continuación. |
 
-El siguiente bloque de código define los objetos JSON que forman la matriz de objetos **de** contenido:
+El siguiente bloque de código define los objetos JSON que forman la matriz de **objetos de contenido**:
 
 ```
 "content":  [
@@ -94,7 +97,7 @@ El siguiente bloque de código define los objetos JSON que forman la matriz de o
 | format | Debe tener el formato m3u8 para Android. |
 | url | La dirección URL del flujo de vídeo para el formato determinado. |
 
-El siguiente bloque de código define los objetos JSON que forman la matriz de objetos **de** miniatura:
+El siguiente bloque de código define los objetos JSON que forman la matriz de **objetos en miniatura**:
 
 ```
 "thumbnails": [
@@ -120,7 +123,7 @@ El siguiente bloque de código define los objetos JSON que forman la matriz de o
 | width | Ancho de la miniatura. En la aplicación de referencia, la miniatura con la mayor altura y anchura se devuelve como miniatura pequeña y la que tiene la mayor anchura y altura se devuelve como miniatura grande. |
 | url | La dirección URL del archivo de miniaturas. |
 
-El siguiente bloque de código define el objeto **de** metadatos:
+El siguiente bloque de código define el **objeto de metadatos**:
 
 ```
 "metadata" : {
