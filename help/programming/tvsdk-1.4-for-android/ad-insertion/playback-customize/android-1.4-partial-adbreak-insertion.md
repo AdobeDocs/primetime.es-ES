@@ -6,6 +6,9 @@ title: Inserción parcial de pausa publicitaria
 uuid: 296a9b6a-9e9f-4ca7-ab8a-c8cbc98fb9af
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '349'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 
 Puede activar una experiencia de tipo TV para poder unirse en medio de un anuncio, en transmisiones en directo.
 
-La función Salto de publicidad parcial le permite imitar una experiencia parecida a la de un televisor en la que, si el cliente inicia un flujo en directo dentro de un midroll, comenzará dentro de ese midroll. Es similar a cambiar a un canal de televisión y los comerciales funcionan sin problemas.
+La función Salto de anuncio parcial le permite imitar una experiencia parecida a la de un televisor en la que, si el cliente inicio un flujo en directo dentro de un midroll, el inicio se producirá dentro de ese midroll. Es similar a cambiar a un canal de TV y los comerciales funcionan perfectamente.
 
 Por ejemplo, si un usuario se une en medio de una pausa publicitaria de 90 segundos (tres anuncios de 30 segundos), 10 segundos después de la segunda publicidad (es decir, a los 40 segundos de la pausa publicitaria), sucederá lo siguiente:
 
@@ -29,7 +32,7 @@ Este comportamiento no está habilitado de forma predeterminada. Para habilitar 
    advertisingMetadata.setEnableLivePreroll(String.valueOf(false))
    ```
 
-1. Active la preferencia para la inserción de pausa publicitaria parcial. Utilice el nuevo método setParalAdBreakPref en la interfaz de MediaPlayer para activar esta función. Utilice el método getPartialAdBreakPref para buscar el estado actual de esta preferencia.
+1. Active la preferencia para la inserción parcial de pausa publicitaria. Utilice el nuevo método setParalAdBreakPref en la interfaz de MediaPlayer para activar esta función. Utilice el método getPartialAdBreakPref para buscar el estado actual de esta preferencia.
 
    ```
    MediaPlayer mediaPlayer = DefaultMediaPlayer.create(getActivity().getApplicationContext()); 
