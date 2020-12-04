@@ -6,6 +6,9 @@ title: Cargar un recurso de medios en MediaPlayer
 uuid: 6ee8032f-0728-423f-a1d2-5030aa7db14f
 translation-type: tm+mt
 source-git-commit: 4ef05be045334a2e723da4c7c6a7ee22fb0f776c
+workflow-type: tm+mt
+source-wordcount: '252'
+ht-degree: 0%
 
 ---
 
@@ -16,28 +19,28 @@ Cargue un recurso creando una instancia directa de MediaResource y cargando el c
 
 1. Configure el elemento que se puede reproducir de MediaPlayer con el nuevo recurso que se va a reproducir.
 
-   Reemplace el elemento que se puede reproducir en este momento en MediaPlayer llamando `MediaPlayer.replaceCurrentItem` y pasando una `MediaResource` instancia existente.
+   Reemplace el elemento que se puede reproducir en este momento en MediaPlayer llamando a `MediaPlayer.replaceCurrentItem` y pasando una instancia `MediaResource` existente.
 
-1. Registre una implementación de la `MediaPlayer.PlaybackEventListener` interfaz con la `MediaPlayer` instancia.
+1. Registre una implementación de la interfaz `MediaPlayer.PlaybackEventListener` con la instancia `MediaPlayer`.
 
    * `onPrepared`
    * `onStateChanged`y compruebe si hay INICIALIZADO y ERROR.
 
-1. Cuando el estado del reproductor de medios cambia a INICIALIZADO, puede llamar a `MediaPlayer.prepareToPlay`
+1. Cuando el estado del reproductor de medios cambia a INITIALIZADO, puede llamar a `MediaPlayer.prepareToPlay`
 
-   El estado INITIALIZED indica que el medio se ha cargado correctamente. La llamada `prepareToPlay` inicio el proceso de resolución y colocación de la publicidad, si existe.
+   El estado INITIALIZED indica que el medio se ha cargado correctamente. La llamada `prepareToPlay` inicio la resolución de publicidad y el proceso de colocación, si existe.
 
-1. Cuando TVSDK llama a la llamada de retorno, el flujo de medios se ha cargado correctamente y está preparado para la reproducción. `onPrepared`
+1. Cuando TVSDK llama a la rellamada `onPrepared`, el flujo de medios se ha cargado correctamente y está preparado para la reproducción.
 
-   Cuando se carga el flujo de medios, `MediaPlayerItem` se crea un.
+   Cuando se carga el flujo de medios, se crea un `MediaPlayerItem`.
 
->Si se produce un error, el `MediaPlayer` cambia al estado ERROR. También notifica a la aplicación llamando a la `PlaybackEventListener.onStateChanged`llamada de retorno.
+>Si se produce un error, `MediaPlayer` cambia al estado ERROR. También notifica a la aplicación llamando a la llamada de retorno `PlaybackEventListener.onStateChanged`.
 >
 >Esto pasa varios parámetros:
->* Un `state` parámetro de tipo `MediaPlayer.PlayerState` con el valor de `MediaPlayer.PlayerState.ERROR`.
+>* Un parámetro `state` de tipo `MediaPlayer.PlayerState` con el valor `MediaPlayer.PlayerState.ERROR`.
    >
    >
-* Un `notification` parámetro de tipo `MediaPlayerNotification` que contiene información de diagnóstico sobre el evento de error.
+* Un parámetro `notification` de tipo `MediaPlayerNotification` que contiene información de diagnóstico sobre el evento de error.
 
 
 El siguiente código de muestra simplificado ilustra el proceso de carga de un recurso de medios:
