@@ -6,6 +6,9 @@ title: Administrar publicidades en las que se puede hacer clic
 uuid: 5d3c9d36-60d7-4272-a523-7d1fe0e1615f
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
 
 MediaPlayer proporciona una función notificationClick() que distribuye eventos relacionados con la publicidad cuando se reproduce una publicidad en la que se puede hacer clic. Estos eventos proporcionan información sobre los anuncios y las pausas publicitarias que su aplicación puede utilizar para proporcionar funcionalidad de pulsaciones.
 
-MediaPlayer desencadena los siguientes eventos cuando se reproduce una publicidad en la que se puede hacer clic:
+MediaPlayer activa los siguientes eventos cuando se reproduce una publicidad en la que se puede hacer clic:
 
 * `AdobePSDK.PSDKEventType.AD_STARTED`
 * `AdobePSDK.PSDKEventType.AD_CLICKED`
@@ -25,7 +28,7 @@ El `AdClickedEvent` contiene la información necesaria para procesar la función
 1. Proporcione un control en el reproductor para que los usuarios hagan clic en los anuncios en los que se puede hacer clic.
 
    Podría ser un botón o cualquier otro elemento para capturar el clic del usuario.
-1. Agregue un detector de eventos para el evento de clic de publicidad del usuario.
+1. Añada un detector de eventos para el evento de clics en publicidad del usuario.
 
    Por ejemplo:
 
@@ -34,9 +37,9 @@ El `AdClickedEvent` contiene la información necesaria para procesar la función
    <i>your_click_control_id</i>]).addEventListener("click", onAdClick);
    ```
 
-1. Agregue un controlador para el evento click del usuario.
+1. Añada un controlador para el evento de clics del usuario.
 
-   Este controlador debe solicitar a MediaPlayer que active el `AdClicked` evento.
+   Este controlador debe solicitar a MediaPlayer que active el evento `AdClicked`.
 
    ```
    onAdClick = function (event) { 
@@ -50,7 +53,7 @@ El `AdClickedEvent` contiene la información necesaria para procesar la función
    } 
    ```
 
-1. Agregue oyentes de eventos para el inicio de publicidad de MediaPlayer, haga clic en ellos y anuncie las notificaciones completadas.
+1. Añada los oyentes de evento para MediaPlayer y inicio, haga clic en ellos y anuncie las notificaciones completadas.
 
    ```
     <i>your_player</i>().addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted); 
@@ -60,8 +63,8 @@ El `AdClickedEvent` contiene la información necesaria para procesar la función
     <i>your_player</i>().addEventListener(AdobePSDK.PSDKEventType.AD_CLICKED, onAdClickedEvent);
    ```
 
-1. Agregue controladores de eventos.
-a. Administrar el evento de inicio de publicidad.
+1. Añada controladores de evento.
+a. Gestionar el evento del inicio de publicidad.
 Esto podría hacer cualquier cosa, como configurar la interfaz de usuario para el usuario.
 
    ```
@@ -77,7 +80,7 @@ Esto podría hacer cualquier cosa, como configurar la interfaz de usuario para e
    }
    ```
 
-   b. Administrar el evento de publicidad en la que se hizo clic.
+   b. Administrar el evento en el que se hizo clic en la publicidad.
 En este ejemplo, obtenemos información de publicidad del evento y abrimos una nueva ventana del explorador con esa información:
 
    ```
@@ -96,7 +99,7 @@ En este ejemplo, obtenemos información de publicidad del evento y abrimos una n
    }
    ```
 
-   c. Gestionar el evento de publicidad completada.
+   c. Administrar el evento de publicidad completada.
 
    ```
    onAdCompleted = function (event) { 
