@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Archivos de registro{#log-files}
 
-Los archivos de registro generados por la aplicación Adobe Access Server for Protected Streaming se encontrarán en el directorio especificado por *LicenseServer.LogRoot*.
+Los archivos de registro generados por la aplicación Adobe Access Server para flujo protegido se encontrarán en el directorio especificado por *LicenseServer.LogRoot*.
 
 >[!NOTE]
 >
->Si los archivos de registro actuales se eliminan o mueven mientras el servidor se está ejecutando, es posible que el archivo de registro no se vuelva a crear y que se pierda parte de la información de registro.
+>Si los archivos de registro actuales se eliminan o mueven mientras el servidor se está ejecutando, es posible que el archivo de registro no se vuelva a crear y se pierda parte de la información de registro.
 
