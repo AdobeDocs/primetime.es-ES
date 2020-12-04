@@ -6,6 +6,9 @@ title: Trabajar con cookies
 uuid: a3b966fd-1263-458d-8303-b4e898372ee1
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '258'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookies par
 
 Esta es una solicitud de muestra al servidor de claves con cierta autenticación:
 
-1. El cliente inicia sesión en el sitio web en un navegador y su inicio de sesión muestra que este cliente puede ver el contenido.
+1. El cliente inicia sesión en el sitio web en un navegador y su inicio de sesión muestra que este cliente puede realizar vistas del contenido.
 1. Según lo que espera el servidor de licencias, la aplicación genera un autentificador.
 
    Este valor se pasa a TVSDK.
@@ -45,9 +48,9 @@ cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
 >
 >Cuando se habilita la redirección 302, la solicitud de publicidad puede redirigirse a un dominio diferente del dominio al que pertenece la cookie.
 
-TVSDK realiza esta consulta en tiempo de ejecución, comprueba si hay cookies asociadas con la dirección URL y las utiliza automáticamente. `cookieManager`
+TVSDK consulta esto `cookieManager` en tiempo de ejecución, comprueba si hay cookies asociadas con la dirección URL y las utiliza automáticamente.
 
-Se llama al evento MediaPlayerEvent.COOKIES_UPDATED cuando se actualizan las cookies de C++. Este cookieUpdatedEvent tiene un método getCookieString() que devuelve un valor de cadena para la cookie.
+Se llama a evento MediaPlayerEvent.COOKIES_UPDATED cuando se actualizan las cookies de C++. Este cookieUpdatedEvent tiene un método getCookieString() que devuelve un valor de cadena para la cookie.
 
 A continuación se muestra un fragmento de código de muestra:
 
