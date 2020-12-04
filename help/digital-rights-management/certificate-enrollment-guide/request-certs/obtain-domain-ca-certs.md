@@ -4,13 +4,16 @@ title: Obtención de certificados de CA de dominio
 uuid: 41bbe02b-363a-47f4-9cc0-350730b6c787
 translation-type: tm+mt
 source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+workflow-type: tm+mt
+source-wordcount: '115'
+ht-degree: 0%
 
 ---
 
 
-# Obtención de certificados de CA de dominio{#obtain-domain-ca-certificates}
+# Obtener certificados CA de dominio{#obtain-domain-ca-certificates}
 
-A diferencia del certificado de servidor de licencias, Packager o Transport, Adobe no emite el certificado de CA de dominio. Puede obtener este certificado de una entidad emisora de certificados o puede generar un certificado autofirmado para utilizarlo con este fin.
+A diferencia del certificado de servidor de licencias, Packager o Transport, el certificado de CA de dominio no se emite por Adobe. Puede obtener este certificado de una entidad emisora de certificados o puede generar un certificado autofirmado para utilizarlo con este fin.
 
 El certificado de CA de dominio debe utilizar una clave de 1024 bits y contener los atributos estándar requeridos en un certificado de CA:
 
