@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '274'
-ht-degree: 38%
+ht-degree: 39%
 
 ---
 
@@ -41,7 +41,7 @@ Consulte para obtener más información sobre la versión actual publicada para 
 | [Implementación de referencia](/help/android-reference-implementation/home.md) | Ayuda a comprender el SDK de TVSDK y a modificar los administradores de funciones para personalizar su reproductor personal. |
 | [Referencias de la API de Primetime](/help/reference/api-references.md) | Proporciona información detallada sobre las funciones de TVSDK, las estructuras de datos y otras construcciones de programación. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Ayuda a conocer mejor los distintos casos de usuario en Digital Rights Management (DRM) |
-| [Ayuda de Ad Insertion de Primetime](/help/dynamic-ad-insertion/home.md) | Explica cómo monetizar el contenido mediante la inserción de publicidad dinámica dirigida por el usuario en el servidor y captar la atención de la audiencia con anuncios personalizados. |
+| [Ayuda de Primetime Ad Insertion](/help/dynamic-ad-insertion/home.md) | Explica cómo monetizar el contenido mediante la inserción de publicidad dinámica dirigida por el usuario en el servidor y captar la atención de la audiencia con anuncios personalizados. |
 | [Archivos](https://helpx.adobe.com/primetime/archives.html) | Descargue archivos PDF de la documentación archivada. |
 
 ## Recursos útiles
