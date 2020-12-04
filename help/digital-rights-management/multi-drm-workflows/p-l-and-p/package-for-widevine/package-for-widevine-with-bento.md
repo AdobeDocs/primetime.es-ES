@@ -66,11 +66,11 @@ El ejemplo siguiente combina esquemas PlayReady y Widevine. En este caso concret
 
 donde
 
-El valor del `--encryption-key` indicador está en el formulario `<base16 encoded key id>:<base16 encoded encryption key>`.
+El valor del indicador `--encryption-key` tiene el formato `<base16 encoded key id>:<base16 encoded encryption key>`.
 
-El `--widevine-header=provider:intertrust#content_id:2a` indicador indica al empaquetador que incluya el cuadro pssh en el manifiesto, que TVSDK requiere actualmente para la reproducción.
+El indicador `--widevine-header=provider:intertrust#content_id:2a` indica al empaquetador que incluya el cuadro pssh en el manifiesto, que TVSDK requiere actualmente para la reproducción.
 
-El valor para `-playready-header` es para la adquisición de licencias PlayReady.
+El valor de `-playready-header` es para la adquisición de licencias PlayReady.
 
 ## Empaquete su contenido con Adobe Offline Packager {#package-your-content-with-adobe-offline-packager}
 
@@ -92,7 +92,7 @@ http://pr.test.expressplay.com/playready/RightsManager.asmx
 -content_id c595f214d84dc7ecf31a8ebf1b7ddda5
 ```
 
-En este caso concreto, el empaquetador sin conexión está agregando los datos de inicialización de protección de contenido Widevine y de protección de contenido PlayReady al contenido DASH de salida. El valor de `-key_file_path` es para una clave codificada en base64. El valor de `-playready_LA_URL` es para la adquisición de licencias PlayReady.
+En este caso concreto, el empaquetador sin conexión está agregando los datos de inicialización de protección de contenido Widevine y de protección de contenido PlayReady al contenido DASH de salida. El valor de `-key_file_path` es para una clave con codificación base64. El valor de `-playready_LA_URL` es para la adquisición de licencias PlayReady.
 
 El argumento conf_path apunta al archivo de configuración que contendría lo siguiente:
 
