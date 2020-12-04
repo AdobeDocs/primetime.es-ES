@@ -4,6 +4,9 @@ title: Preferencias de Packager
 uuid: 3e9c971d-3a5f-4f3e-97e7-baab63b1f67f
 translation-type: tm+mt
 source-git-commit: ed1430bdcb590a53fa69b324ef340ad636b2fa7c
+workflow-type: tm+mt
+source-wordcount: '385'
+ht-degree: 0%
 
 ---
 
