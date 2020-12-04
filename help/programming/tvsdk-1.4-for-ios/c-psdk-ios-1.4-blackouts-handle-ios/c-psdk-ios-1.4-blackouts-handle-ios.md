@@ -6,11 +6,14 @@ title: Gestión de interrupciones en flujos activos
 uuid: 1f70a272-bc77-4d41-a999-b076cb42ac5e
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '356'
+ht-degree: 0%
 
 ---
 
 
-# Gestión de interrupciones en flujos activos{#handle-blackouts-in-live-streams}
+# Controlar los bloqueos en flujos activos{#handle-blackouts-in-live-streams}
 
 TVSDK gestiona bloqueos en flujos de vídeo en directo y proporciona contenido alternativo durante una interrupción.
 
@@ -21,19 +24,19 @@ Para implementar la solución para este caso de uso:
 1. Configure la aplicación para suscribirse a etiquetas de bloqueo en un manifiesto de flujo en directo.
 
    TVSDK no conoce directamente las etiquetas de bloqueo, pero permite que la aplicación se suscriba a notificaciones cuando se encuentran etiquetas específicas durante el análisis de archivos de manifiesto.
-1. Agregue un detector de notificaciones para `PTTimedMetadataChangedNotification`.
+1. Añada un detector de notificaciones para `PTTimedMetadataChangedNotification`.
 
-   Esta notificación se envía cada vez que se analiza una etiqueta suscrita en el manifiesto y se `PTTimedMetadata` prepara una nueva.
+   Esta notificación se envía cada vez que se analiza una etiqueta suscrita en el manifiesto y se prepara un nuevo `PTTimedMetadata` a partir de él.
 
-1. Implemente un método de escucha, como `onMediaPlayerSubscribedTagIdentified`, para `PTTimedMetadata` objetos en primer plano.
+1. Implemente un método de escucha, como `onMediaPlayerSubscribedTagIdentified`, para objetos `PTTimedMetadata` en primer plano.
 
-1. Cada vez que haya una actualización durante la reproducción, utilice el `PTMediaPlayerTimeChangeNotification` detector para controlar `PTTimedMetadata` los objetos.
+1. Cada vez que se produzca una actualización durante la reproducción, utilice el detector `PTMediaPlayerTimeChangeNotification` para controlar los objetos `PTTimedMetadata`.
 
-1. Agregue el `PTTimedMetadata` controlador.
+1. Añada el controlador `PTTimedMetadata`.
 
-   Este controlador le permite cambiar al contenido alternativo y volver al contenido principal como indica el `PTTimedMetadata` objeto y su tiempo de reproducción.
+   Este controlador le permite cambiar al contenido alternativo y volver al contenido principal como lo indica el objeto `PTTimedMetadata` y su tiempo de reproducción.
 
-1. Se utiliza `onSubscribedTagInBackground` para implementar el método de escucha para `PTTimedMetadata` objetos en segundo plano.
+1. Utilice `onSubscribedTagInBackground` para implementar el método de escucha para objetos `PTTimedMetadata` en segundo plano.
 
    Este método supervisa la temporización en el flujo de fondo, lo que le ayuda a determinar cuándo puede cambiar de contenido alternativo al contenido principal.
 
