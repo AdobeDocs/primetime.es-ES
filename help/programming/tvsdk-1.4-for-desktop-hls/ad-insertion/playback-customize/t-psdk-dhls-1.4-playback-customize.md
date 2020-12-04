@@ -6,6 +6,9 @@ title: Configurar la reproducción personalizada
 uuid: 479ca1b0-6b3f-42fa-85e1-31d707da8730
 translation-type: tm+mt
 source-git-commit: a21a5fcc819a7bec58ad36e118d04f462ec3fd92
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
@@ -17,13 +20,13 @@ Puede personalizar o anular los comportamientos de publicidad.
 Antes de poder personalizar o anular los comportamientos de publicidad, registre la instancia de directiva de publicidad con .
 Para personalizar los comportamientos de las publicidades, realice una de las siguientes acciones:
 
-* Implementar la `AdPolicySelector` interfaz y todos sus métodos.
+* Implementar la interfaz `AdPolicySelector` y todos sus métodos.
 
    Esta opción se recomienda si necesita anular **todos** los comportamientos de publicidad predeterminados.
 
-* Amplíe la `DefaultAdPolicySelector` clase y proporcione implementaciones solo para aquellos comportamientos que requieran personalización.
+* Amplíe la clase `DefaultAdPolicySelector` y proporcione implementaciones solo para los comportamientos que requieren personalización.
 
-   Esta opción se recomienda si necesita anular solo **algunos** de los comportamientos predeterminados.
+   Esta opción se recomienda si necesita anular sólo **algunos** de los comportamientos predeterminados.
 
 Para ambas opciones, complete las siguientes tareas:
 
@@ -63,4 +66,4 @@ Para ambas opciones, complete las siguientes tareas:
 
    >[!TIP]
    >
-   >Si la fábrica de contenido personalizado se registró para un flujo específico a través de la `MediaPlayerItemConfig` clase, se borrará cuando se desasigne la `MediaPlayer` instancia. La aplicación debe registrarla cada vez que se cree una nueva sesión de reproducción.
+   >Si la fábrica de contenido personalizado se registró para un flujo específico a través de la clase `MediaPlayerItemConfig`, se borrará cuando se desasigne la instancia `MediaPlayer`. La aplicación debe registrarla cada vez que se cree una nueva sesión de reproducción.
