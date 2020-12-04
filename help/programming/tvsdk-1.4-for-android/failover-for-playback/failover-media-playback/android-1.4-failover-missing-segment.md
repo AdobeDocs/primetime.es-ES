@@ -6,6 +6,9 @@ title: Falta la conmutación por error de segmentos
 uuid: 17ee1221-e1eb-4f64-a406-4d7eff1d7555
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '321'
+ht-degree: 0%
 
 ---
 
@@ -21,13 +24,13 @@ Si falta un segmento en el servidor porque, por ejemplo, el archivo de manifiest
 1. Recorra cada velocidad de bits disponible en cada variante disponible.
 1. Omita el segmento y emite una advertencia.
 
-Cuando TVSDK no puede obtener un segmento alternativo, activa una notificación de `CONTENT_ERROR` error. Esta notificación contiene una notificación interna con el `DOWNLOAD_ERROR` código. Si el flujo con el problema es una pista de audio alternativa, genera la notificación de `AUDIO_TRACK_ERROR` error.
+Cuando TVSDK no puede obtener un segmento alternativo, activa una notificación de error `CONTENT_ERROR`. Esta notificación contiene una notificación interna con el código `DOWNLOAD_ERROR`. Si el flujo con el problema es una pista de audio alternativa, genera la notificación de error `AUDIO_TRACK_ERROR`.
 
-Si el motor de vídeo no puede obtener segmentos de forma continua, limita los saltos de segmento continuos a 5, tras los cuales se detiene la reproducción y se emite un error `NATIVE_ERROR` con el código 5.
+Si el motor de vídeo no puede obtener segmentos de forma continua, limita los saltos de segmento continuos a 5, tras los cuales se detiene la reproducción y emite un `NATIVE_ERROR` con el código 5.
 
 >[!NOTE]
 >
->Los parámetros de control de velocidad de bits adaptable (ABR) no se tienen en cuenta cuando se produce una conmutación por error. Esto se debe a que el mecanismo de conmutación por error está diseñado para utilizar como flujos de backup cualquiera de las listas de reproducción disponibles actualmente, independientemente de su perfil de velocidad de bits.
+>Los parámetros de control de velocidad de bits adaptable (ABR) no se tienen en cuenta cuando se produce una conmutación por error. Esto se debe a que el mecanismo de conmutación por error está diseñado para utilizar como flujos de backup cualquiera de las listas de reproducción disponibles actualmente, independientemente del perfil de velocidad de bits.
 >
 >Durante una operación de conmutación por error, puede haber un conmutador de perfil. Si se produce un error durante la descarga de uno de los segmentos de la lista de reproducción, se omiten los parámetros de control de ABR, como la velocidad de bits mínima/máxima permitida.
 
