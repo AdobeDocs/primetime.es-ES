@@ -6,6 +6,9 @@ title: Publicidades en las que se puede hacer clic
 uuid: edefbc66-2d30-441d-9c30-256588504463
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '397'
+ht-degree: 0%
 
 ---
 
@@ -35,7 +38,7 @@ Este ejemplo muestra una forma posible de administrar los clics en publicidad.
    </s:VGroup>
    ```
 
-1. Incluya esta superposición en nuestra muestra del reproductor de medios, [!DNL psdkdemo.xml].
+1. Incluya esta superposición en nuestro ejemplo de reproductor de medios, [!DNL psdkdemo.xml].
 
    ```xml
       <psdk:ClickableAdsOverlay id="clickableAdsOverlay"  
@@ -45,7 +48,7 @@ Este ejemplo muestra una forma posible de administrar los clics en publicidad.
    </psdk:ClickableAdsOverlay
    ```
 
-1. Para que la vista solo esté visible cuando se esté reproduciendo un anuncio, escuche los eventos `onAdStart` y `onAdComplete` enviados por .
+1. Para hacer que la vista solo esté visible cuando se esté reproduciendo un anuncio, escuche los eventos `onAdStart` y `onAdComplete` enviados por .
 
    ```
    _player.addEventListener(AdPlaybackEvent.AD_STARTED, onAdStarted); 
@@ -64,7 +67,7 @@ Este ejemplo muestra una forma posible de administrar los clics en publicidad.
    }
    ```
 
-1. Monitoree las interacciones del usuario en las publicidades en las que se puede hacer clic. Cuando el usuario toque o haga clic en el anuncio o en el botón, notifíquelo a TVSDK con `notifyClick`.
+1. Monitoree las interacciones del usuario en las publicidades en las que se puede hacer clic. Cuando el usuario toque o haga clic en el anuncio o botón, notifique a TVSDK con `notifyClick`.
 
    ```
    private function onAdsOverlayClicked():void {     
@@ -72,9 +75,9 @@ Este ejemplo muestra una forma posible de administrar los clics en publicidad.
    }
    ```
 
-1. Escucha el `AdclickEvent.AD_CLICK` evento.
+1. Escuche el evento `AdclickEvent.AD_CLICK`.
 
-   Si se está reproduciendo una publicidad, TVSDK distribuye el `AdClickEvent.AD_CLICK` evento, desde el cual puede recuperar la URL de pulsación y la información relacionada.
+   Si se está reproduciendo un anuncio, TVSDK distribuye el evento `AdClickEvent.AD_CLICK`, desde el cual puede recuperar la dirección URL de pulsación y la información relacionada.
 
    ```
       _player.addEventListener(AdClickEvent.AD_CLICK, onAdClick);
@@ -100,6 +103,6 @@ Este ejemplo muestra una forma posible de administrar los clics en publicidad.
       En las plataformas de escritorio, el área de reproducción de anuncios de vídeo generalmente se utiliza para invocar direcciones URL de pulsaciones al hacer clic el usuario.
    * Redirija al usuario al navegador web móvil externo.
 
-      En dispositivos móviles, el área de reproducción de anuncios de vídeo se utiliza para otras funciones, como ocultar y mostrar controles, pausar la reproducción, expandirse a pantalla completa, etc. Por lo tanto, en los dispositivos móviles, se suele presentar al usuario una vista independiente, como un botón de patrocinador, como medio para iniciar la dirección URL de pulsación.
+      En dispositivos móviles, el área de reproducción de anuncios de vídeo se utiliza para otras funciones, como ocultar y mostrar controles, pausar la reproducción, expandirse a pantalla completa, etc. Por lo tanto, en dispositivos móviles, una vista separada, como un botón de patrocinador, se presenta generalmente al usuario como un medio para iniciar la dirección URL de pulsación.
 
 1. Cierre la ventana del explorador en la que se muestra la información de pulsaciones y reanude la reproducción del vídeo.
