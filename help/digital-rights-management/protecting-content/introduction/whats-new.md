@@ -1,22 +1,25 @@
 ---
-description: Adobe Primetime DRM es una solución avanzada de gestión de derechos digitales (DRM) y protección de contenido para contenido audiovisual de gran valor. En las aplicaciones que admiten la creación de API de Java, puede utilizar el SDK de DRM de Primetime para especificar políticas de DRM, aplicar dichas políticas al contenido y cifrar dicho contenido.
-seo-description: Adobe Primetime DRM es una solución avanzada de gestión de derechos digitales (DRM) y protección de contenido para contenido audiovisual de gran valor. En las aplicaciones que admiten la creación de API de Java, puede utilizar el SDK de DRM de Primetime para especificar políticas de DRM, aplicar dichas políticas al contenido y cifrar dicho contenido.
+description: Adobe Primetime DRM es una solución avanzada de Digital Rights Management (DRM) y protección de contenidos para contenidos audiovisuales de alto valor. En las aplicaciones que admiten la creación de API de Java, puede utilizar el SDK de DRM de Primetime para especificar políticas de DRM, aplicar dichas políticas al contenido y cifrar dicho contenido.
+seo-description: Adobe Primetime DRM es una solución avanzada de Digital Rights Management (DRM) y protección de contenidos para contenidos audiovisuales de alto valor. En las aplicaciones que admiten la creación de API de Java, puede utilizar el SDK de DRM de Primetime para especificar políticas de DRM, aplicar dichas políticas al contenido y cifrar dicho contenido.
 seo-title: Novedades de Adobe Primetime DRM
 title: Novedades de Adobe Primetime DRM
 uuid: 3c8da594-a231-4496-bffc-130775ecae50
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '402'
+ht-degree: 0%
 
 ---
 
 
 # Novedades de Adobe Primetime DRM{#what-is-new-in-adobe-primetime-drm}
 
-Adobe Primetime DRM es una solución avanzada de gestión de derechos digitales (DRM) y protección de contenido para contenido audiovisual de gran valor. En las aplicaciones que admiten la creación de API de Java, puede utilizar el SDK de DRM de Primetime para especificar políticas de DRM, aplicar dichas políticas al contenido y cifrar dicho contenido.
+Adobe Primetime DRM es una solución avanzada de Digital Rights Management (DRM) y protección de contenidos para contenidos audiovisuales de alto valor. En las aplicaciones que admiten la creación de API de Java, puede utilizar el SDK de DRM de Primetime para especificar políticas de DRM, aplicar dichas políticas al contenido y cifrar dicho contenido.
 
 >[!NOTE]
 >
->Primetime DRM se llamaba anteriormente Adobe Access y antes de eso, Flash Access.
+>Primetime DRM anteriormente se llamaba Adobe Access y antes de eso, Flash Access.
 
 A continuación se muestra una descripción detallada del proceso de protección de contenido:
 
