@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Cifrado de datos de secuencias de comandos {#encrypting-script-data}
+# Cifrando datos de secuencias de comandos {#encrypting-script-data}
 
 Esta opción de empaquetado especifica si los datos de secuencia de comandos incrustados en el contenido están cifrados.
 
