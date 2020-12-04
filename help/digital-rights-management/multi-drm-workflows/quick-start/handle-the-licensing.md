@@ -17,7 +17,7 @@ ht-degree: 0%
 
 La licencia es el mecanismo principal mediante el cual se permite o se deniega a los usuarios la capacidad de reproducir un fragmento de contenido de vídeo protegido. A un usuario legítimo (autorizado) se le puede otorgar una licencia (una clave) para descifrar y reproducir un fragmento específico del contenido cifrado de su proveedor de contenido.
 
-Antes de que la aplicación o la página web de un usuario final pueda reproducir contenido protegido con DRM, debe adquirir un token de un servidor de asignación de derechos o de tienda que usted, el cliente, utilice. Adobe proporciona un servidor de referencia de muestra para este fin: [Servidor de referencia: Ejemplo de ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
+Antes de que la aplicación o la página web de un usuario final pueda reproducir contenido protegido con DRM, debe adquirir un token de un servidor de asignación de derechos o de tienda que usted, el cliente, utilice. Adobe proporciona un servidor de referencia de muestra para este fin: [Servidor de referencia: Muestra de ExpressPlay Entitlement Server (SEES)](../../multi-drm-workflows/feature-topics/sees-reference-server.md).
 
 El servidor de asignación de derechos o de tienda solicitará un token de licencia del servidor ExpressPlay correspondiente, solo después de comprobar con sus propios sistemas back-end si el usuario específico tiene derecho a ver el contenido solicitado. La respuesta devuelta por la solicitud de token de licencia es una URL lista para usar para el servidor de licencias o bien la respuesta contiene la URL en una estructura JSON, según la solución DRM con la que esté trabajando.
 
@@ -30,7 +30,7 @@ El servidor de asignación de derechos o de tienda solicitará un token de licen
 
 1. Realice la solicitud del token de licencia.
 
-   En un caso de inicio rápido, en el que solo desea asegurarse de que los distintos componentes implicados funcionan en conjunto, puede que desee utilizar algo como [!DNL curl] hacer su solicitud de token de licencia (en lugar de obtener inicialmente una aplicación y ejecutarla y probar las llamadas desde allí). Por ejemplo:
+   En un escenario de inicio rápido, en el que solo desea asegurarse de que los distintos componentes implicados están funcionando juntos, puede que desee utilizar algo como [!DNL curl] para realizar la solicitud de token de licencia (en lugar de obtener inicialmente una aplicación y ejecutar y probar llamadas desde allí). Por ejemplo:
 
    * Amplia:
 
