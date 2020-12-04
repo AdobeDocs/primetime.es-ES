@@ -6,6 +6,9 @@ title: Comportamiento de reproducción predeterminado y personalizado con anunci
 uuid: f008eea1-f30f-4a7a-ad8b-9cde4bac121e
 translation-type: tm+mt
 source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+workflow-type: tm+mt
+source-wordcount: '679'
+ht-degree: 0%
 
 ---
 
@@ -27,7 +30,7 @@ Este es el comportamiento de reproducción del contenido en directo o lineal:
    Si la posición de reanudación sigue en el rango de reproducción, la reproducción debe ser continua. De lo contrario, TVSDK salta al nuevo punto de lanzamiento. También puede realizar una operación de búsqueda y seleccionar otro punto de reproducción.
 * TVSDK resuelve las publicidades entre señales después de la posición en la que la aplicación entra en la reproducción en directo.
 
-   La reproducción comienza después de que se resuelva la primera señal. El valor predeterminado para introducir la reproducción en directo es el punto activo del cliente, pero puede elegir una posición diferente. Todas las señales anteriores a la posición inicial se resuelven después de que la aplicación realiza una búsqueda en la ventana DVR.
+   La reproducción comienza después de que se resuelva la primera señal. El valor predeterminado para la reproducción en directo es el punto activo del cliente, pero puede elegir una posición diferente. Todas las señales anteriores a la posición inicial se resuelven después de que la aplicación realiza una búsqueda en la ventana DVR.
 
 En la tabla siguiente se describe cómo TVSDK gestiona anuncios y saltos de publicidad durante la reproducción:
 
@@ -36,7 +39,7 @@ En la tabla siguiente se describe cómo TVSDK gestiona anuncios y saltos de publ
   <tr> 
    <th colname="col1" class="entry"> <b>Actividad de vídeo</b> </th> 
    <th colname="col2" class="entry"> <b>Directiva de comportamiento predeterminada de TVSDK</b> </th> 
-   <th colname="col3" class="entry"><b>Personalización disponible mediante <span class="codeph"> AdBreakPolicySelector</b></span> </th> 
+   <th colname="col3" class="entry"><b>Personalización disponible mediante  <span class="codeph"> AdBreakPolicySelector</b></span> </th> 
   </tr>
  </thead>
  <tbody> 
@@ -47,17 +50,17 @@ En la tabla siguiente se describe cómo TVSDK gestiona anuncios y saltos de publ
      <li id="li_D5CC30F063934C738971E2E8AF00C137"> En directo/lineal, reproduce la pausa publicitaria, incluso si la pausa publicitaria ya se ha visto. </li> 
      <li id="li_D962C0938DA74186AE99D117E5A74E38">En el caso de VOD, reproduce la pausa publicitaria y marca la pausa publicitaria como se vio. </li> 
     </ul> </td> 
-   <td colname="col3">Especifique una directiva diferente para el desglose de publicidad mediante <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
+   <td colname="col3">Especifique una directiva diferente para la pausa publicitaria mediante <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> La aplicación busca hacia adelante más allá de las interrupciones publicitarias en el contenido principal. </td> 
    <td colname="col2"> Reproduce la última pausa publicitaria no observada que se omitió y reanuda la reproducción en la posición de búsqueda deseada cuando se termina la reproducción de los saltos. </td> 
-   <td colname="col3">Seleccione qué salto omitido se reproducirá mediante <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
+   <td colname="col3">Seleccione qué salto omitido se debe reproducir mediante <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> La aplicación busca hacia atrás en los saltos de publicidad en el contenido principal. </td> 
    <td colname="col2"> Salta a la posición de búsqueda deseada sin reproducir saltos de publicidad. </td> 
-   <td colname="col3">Seleccione qué salto omitido se reproducirá mediante <span class="codeph"> selectAdBreaksToPlay</span>.                      </td> 
+   <td colname="col3">Seleccione qué salto omitido se debe reproducir mediante <span class="codeph"> selectAdBreaksToPlay</span>.                      </td> 
   </tr> 
   <tr> 
    <td colname="col1"> La aplicación busca hacia delante en una pausa publicitaria. </td> 
@@ -72,7 +75,7 @@ En la tabla siguiente se describe cómo TVSDK gestiona anuncios y saltos de publ
   <tr> 
    <td colname="col1"> La aplicación busca avanzar o retroceder en los saltos de publicidad vistos en el contenido principal. </td> 
    <td colname="col2"> Si la última pausa publicitaria omitida ya se ha visto, se salta a la posición de búsqueda seleccionada por el usuario. </td> 
-   <td colname="col3">Seleccione cuál de los saltos omitidos se reproducirá con <span class="codeph"> selectAdBreaksToPlay</span> y determine qué saltos ya se han visto con <span class="codeph"> AdBreak.isWatched</span> . <p>Importante:  De forma predeterminada, TVSDK marca una pausa publicitaria como se observa inmediatamente después de introducir el primer anuncio en la pausa publicitaria. </p> </td> 
+   <td colname="col3">Seleccione cuál de los saltos omitidos se debe reproducir con <span class="codeph"> selectAdBreaksToPlay</span> y determine qué saltos ya se han visto con <span class="codeph"> AdBreak.isWatched</span>. <p>Importante:  De forma predeterminada, TVSDK marca una pausa publicitaria como se observa inmediatamente después de introducir el primer anuncio en la pausa publicitaria. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> La aplicación busca avanzar o retroceder en uno o más saltos de publicidad y cae en una pausa publicitaria observada. </td> 
@@ -82,12 +85,12 @@ En la tabla siguiente se describe cómo TVSDK gestiona anuncios y saltos de publ
   <tr> 
    <td colname="col1"> Su aplicación entra en juego con trucos (modo DVR). La velocidad de reproducción puede ser negativa (rebobinado) o buena de 1 (avance rápido). </td> 
    <td colname="col2"> Omite todos los anuncios durante el avance rápido o el rebobinado, reproduce el último salto omitido después de que finalice la reproducción con trucos y omite la posición de reproducción con trucos seleccionada por el usuario cuando dicho salto termina la reproducción. </td> 
-   <td colname="col3">Seleccione cuál de los saltos omitidos se reproducirá una vez finalizada la reproducción mediante <span class="codeph"> seleccionar AdBreaksToPlay</span>. </td> 
+   <td colname="col3">Seleccione cuál de los saltos omitidos se reproducirá después de que termine la reproducción mediante <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> La aplicación busca hacia delante publicidades insertadas mediante marcadores de publicidad personalizados. </td> 
    <td colname="col2"> Pasa a la posición de búsqueda seleccionada por el usuario. </td> 
-   <td colname="col3">Para obtener más información, consulte <a href="../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md" format="dita" scope="local"> Visualización de una barra de búsqueda con la posición</a>de reproducción actual. </td> 
+   <td colname="col3">Para obtener más información, consulte <a href="../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md" format="dita" scope="local"> Mostrar una barra de búsqueda con la posición de reproducción actual</a>. </td> 
   </tr> 
  </tbody> 
 </table>
