@@ -6,11 +6,14 @@ title: Omitir pausas publicitarias durante un período de tiempo
 uuid: f07d838b-3c1d-4cea-a3aa-dba33964ac81
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '223'
+ht-degree: 0%
 
 ---
 
 
-# Omitir pausas publicitarias durante un período de tiempo {#skip-ad-breaks-for-a-period-of-time}
+# Omitir pausas publicitarias para un período de tiempo {#skip-ad-breaks-for-a-period-of-time}
 
 De forma predeterminada, TVSDK fuerza la reproducción de una pausa publicitaria cuando el usuario busca durante una pausa publicitaria. Puede personalizar el comportamiento para omitir una pausa publicitaria si el tiempo transcurrido desde la finalización de una pausa anterior es de un número determinado de minutos.
 
