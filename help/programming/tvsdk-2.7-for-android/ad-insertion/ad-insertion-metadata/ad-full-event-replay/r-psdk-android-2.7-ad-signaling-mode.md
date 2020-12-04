@@ -6,6 +6,9 @@ title: Modo de señalización de publicidad
 uuid: 111b7e43-e97c-4069-a273-4f9f6280453e
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '139'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
 
 El modo de señalización de publicidad especifica dónde debe obtener la información de publicidad el flujo de vídeo.
 
-Los valores válidos son `DEFAULT`, `SERVER_MAP`y `MANIFEST_CUES`.
+Los valores válidos son `DEFAULT`, `SERVER_MAP` y `MANIFEST_CUES`.
 
-En la tabla siguiente se describe el efecto de los `AdSignalingMode` valores para los distintos tipos de flujos HLS:
+La siguiente tabla describe el efecto de los valores `AdSignalingMode` para los distintos tipos de flujos HLS:
 
 <table frame="all" colsep="1" rowsep="1" id="table_AdSignalingMode"> 
  <thead> 
