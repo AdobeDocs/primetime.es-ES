@@ -6,15 +6,18 @@ title: Creación de un reproductor básico mediante la interfaz de usuario Frame
 uuid: d1a82dbb-1c05-4d0c-b6bc-e07cbede93cb
 translation-type: tm+mt
 source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 1%
 
 ---
 
 
-# Creación de un reproductor básico mediante la interfaz de usuario Framework{#create-a-basic-player-using-the-ui-framework}
+# Crear un reproductor básico con la interfaz de usuario Framework{#create-a-basic-player-using-the-ui-framework}
 
 Para crear un reproductor básico con la interfaz de usuario Framework:
 
-1. Cree un `<div>` para la instancia de reproductor.
+1. Cree un `<div>` para su instancia de reproductor.
 
    Por ejemplo:
 
@@ -33,7 +36,7 @@ Para crear un reproductor básico con la interfaz de usuario Framework:
    </script>
    ```
 
-   Cuando se crea el reproductor, el `<div>` elemento especificado recibe una clase CSS de `ptp-main-video-div-style`. El DOM resultante aparece algo así:
+   Cuando se crea el reproductor, el elemento `<div>` especificado recibe una clase CSS de `ptp-main-video-div-style`. El DOM resultante aparece algo así:
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
@@ -41,7 +44,7 @@ Para crear un reproductor básico con la interfaz de usuario Framework:
    </div>
    ```
 
-1. Agregue un control de interfaz de usuario.
+1. Añada un control de interfaz de usuario.
 
    Por ejemplo, agregue una barra de control que aparezca cuando el ratón pase sobre el reproductor:
 
@@ -70,7 +73,7 @@ Para crear un reproductor básico con la interfaz de usuario Framework:
    </div>
    ```
 
-El objeto devuelto por la llamada `ptp.videoPlayer()` proporciona un comportamiento que ajusta la API del reproductor de medios TVSDK y permite el control programático de la reproducción. Al realizar llamadas en la instancia del reproductor de medios, la interfaz de usuario se actualiza en función de los eventos activados por el reproductor de medios:
+El objeto que se devuelve al llamar a `ptp.videoPlayer()` proporciona un comportamiento que ajusta la API del reproductor de medios TVSDK y permite el control programático de la reproducción. Al realizar llamadas en la instancia del reproductor de medios, la interfaz de usuario se actualiza a sí misma según los eventos activados por el reproductor de medios:
 
 ```js
 <script> 
