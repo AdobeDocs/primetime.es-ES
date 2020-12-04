@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Lista de permitidos de la aplicación iOS {#allowlist-your-ios-application}
+# Lista de permitidos de la aplicación de iOS {#allowlist-your-ios-application}
 
 Puede realizar la lista de permitidos de sus aplicaciones de iOS mediante la herramienta de herramientas de MacOS de Adobe.
 
@@ -33,9 +33,9 @@ Antes de enviar una aplicación de iOS, debe firmarla y publicarla en Apple.
 
 Debido a la nueva firma, no se puede utilizar la información de la lista permitida que generó antes de enviarla a Apple App Store.
 
-Para trabajar con esta directiva de envío, Adobe ha creado una `machotools` herramienta que imprimirá con el dedo la aplicación iOS para crear un valor de compendio, firmar este valor e inyectarlo en la aplicación iOS. Después de imprimir el dedo de la aplicación de iOS, puede enviarla a Apple App Store. Cuando un usuario ejecuta la aplicación desde la App Store, Primetime DRM realiza un cálculo en tiempo de ejecución de la huella digital de la aplicación y lo confirma con el valor de compendio que se insertó anteriormente en la aplicación. Si la huella digital coincide, se confirma que la aplicación está permitida en la lista y se permite reproducir contenido protegido.
+Para trabajar con esta directiva de envío, Adobe ha creado una herramienta `machotools` que imprimirá el dedo de la aplicación iOS para crear un valor de compendio, firmar este valor e inyectar este valor en la aplicación iOS. Después de imprimir el dedo de la aplicación de iOS, puede enviarla a Apple App Store. Cuando un usuario ejecuta la aplicación desde la App Store, Primetime DRM realiza un cálculo en tiempo de ejecución de la huella digital de la aplicación y lo confirma con el valor de compendio que se insertó anteriormente en la aplicación. Si la huella digital coincide, se confirma que la aplicación está permitida en la lista y se permite reproducir contenido protegido.
 
-La herramienta de Adobe `machotools` se incluye en el SDK de iOS TVSDK, en el [!DNL [...]/tools/DRM].
+La herramienta Adobe `machotools` se incluye en el SDK para iOS TVSDK, en el [!DNL [...]/tools/DRM].
 
 Para usar `machotools`:
 
@@ -93,14 +93,14 @@ Para usar `machotools`:
      -pass PASSWORD
    ```
 
-1. Ejecutar [!DNL machotools] para generar el valor hash del ID de editor de la aplicación.
+1. Ejecute [!DNL machotools] para generar el valor hash del ID de editor de la aplicación.
 
    ```shell
    ./machotools dumpMachoSignature -in ${PROJECT_DIR}/generatedRes/AAXSAppDigest.digest
    ```
 
 1. Cree una nueva directiva DRM o actualice la directiva existente para incluir el valor hash de ID de editor devuelto.
-1. Con el [!DNL AdobePolicyManager.jar], cree una nueva directiva DRM (actualice la directiva existente) para incluir el valor hash de ID de editor devuelto, un ID de aplicación opcional y los atributos de versión mínimo y máximo en el archivo incluido [!DNL flashaccess-tools.properties] .
+1. Mediante el uso de [!DNL AdobePolicyManager.jar], cree una nueva directiva DRM (actualice la directiva existente) para incluir el valor hash de ID de editor devuelto, un ID de aplicación opcional y los atributos de versión mínimo y máximo en el archivo incluido [!DNL flashaccess-tools.properties].
 
    ```shell
    java -jar libs/AdobePolicyManager.jar new app_allowlist.pol
