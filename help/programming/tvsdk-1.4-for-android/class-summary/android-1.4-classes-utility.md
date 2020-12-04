@@ -6,6 +6,9 @@ title: Clases de utilidades
 uuid: 060d5587-c1ef-4b58-9cad-49826201a79f
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '131'
+ht-degree: 0%
 
 ---
 
