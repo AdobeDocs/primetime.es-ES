@@ -1,20 +1,23 @@
 ---
-description: Para mostrar anuncios en letreros, debe crear instancias de letreros y permitir que el SDK del explorador escuche eventos relacionados con anuncios.
-seo-description: Para mostrar anuncios en letreros, debe crear instancias de letreros y permitir que el SDK del explorador escuche eventos relacionados con anuncios.
+description: Para mostrar anuncios en letreros, debe crear instancias de letreros y permitir que el SDK de TVSDK del explorador escuche eventos relacionados con la publicidad.
+seo-description: Para mostrar anuncios en letreros, debe crear instancias de letreros y permitir que el SDK de TVSDK del explorador escuche eventos relacionados con la publicidad.
 seo-title: Mostrar publicidades tipo titular
 title: Mostrar publicidades tipo titular
 uuid: aabc126e-b3aa-42dd-ab50-a7db8e324c50
 translation-type: tm+mt
 source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+workflow-type: tm+mt
+source-wordcount: '264'
+ht-degree: 0%
 
 ---
 
 
 # Mostrar publicidades tipo titular {#display-banner-ads}
 
-Para mostrar anuncios en letreros, debe crear instancias de letreros y permitir que el SDK del explorador escuche eventos relacionados con anuncios.
+Para mostrar anuncios en letreros, debe crear instancias de letreros y permitir que el SDK de TVSDK del explorador escuche eventos relacionados con la publicidad.
 
-El SDK de explorador proporciona una lista de publicidades de titular complementarias que están asociadas con una publicidad lineal a través del `AdobePSDK.PSDKEventType.AD_STARTED` evento.
+El explorador TVSDK proporciona una lista de publicidades tipo titular complementarias que están asociadas con una publicidad lineal a través del evento `AdobePSDK.PSDKEventType.AD_STARTED`.
 
 Los manifiestos pueden especificar publicidades de titular complementarias mediante:
 
@@ -24,18 +27,18 @@ Los manifiestos pueden especificar publicidades de titular complementarias media
 
 Para cada publicidad complementaria, el SDK del explorador indica qué tipos están disponibles para la aplicación.
 
-Agregue un detector para el evento `AdobePSDK.PSDKEventType.AD_STARTED` que haga lo siguiente:
+Añada un detector para el evento `AdobePSDK.PSDKEventType.AD_STARTED` que haga lo siguiente:
 1. Borra las publicidades existentes en la instancia del letrero.
 1. Obtiene la lista de publicidades complementarias de `Ad.getCompanionAssets`.
-1. Si la lista de anuncios complementarios no está vacía, repita la lista para las instancias de letrero.
+1. Si la lista de anuncios complementarios no está vacía, repita la lista para las instancias de letreros.
 
-   Cada instancia de pancarta (una `AdBannerAsset`) contiene información, como ancho, alto, tipo de recurso (html, iframe o static) y datos necesarios para mostrar la pancarta adjunta.
+   Cada instancia de pancarta (una `AdBannerAsset`) contiene información como, por ejemplo, ancho, alto, tipo de recurso (html, iframe o static) y datos necesarios para mostrar la pancarta adjunta.
 1. Si una publicidad de vídeo no tiene anuncios complementarios reservados con ella, la lista de recursos complementarios no contiene datos para esa publicidad de vídeo.
 1. Envía la información del letrero a una función de la página que muestra los letreros en una ubicación adecuada.
 
-   Generalmente es un `div`usuario y su función utiliza el `div ID` para mostrar el letrero. Por ejemplo:
+   Generalmente es `div` y su función utiliza `div ID` para mostrar la pancarta. Por ejemplo:
 
-   Agregue el detector de eventos:
+   Añada el detector de evento:
 
    ```js
    _player.addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted);
