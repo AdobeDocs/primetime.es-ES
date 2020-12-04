@@ -6,11 +6,14 @@ title: Implementación de la gestión de interrupciones
 uuid: a447ff24-8386-4cae-878e-0859fb191de2
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '143'
+ht-degree: 1%
 
 ---
 
 
-# Implementación de la gestión de interrupciones {#implement-blackout-handling}
+# Implementar la administración de bloqueos {#implement-blackout-handling}
 
 El TVSDK proporciona API y código de muestra para controlar los períodos de interrupción.
 
@@ -27,7 +30,7 @@ Para implementar la gestión de apagones y proporcionar contenido alternativo du
    }
    ```
 
-1. Agregue un detector de notificaciones para `PTTimedMetadataChangedNotification`.
+1. Añada un detector de notificaciones para `PTTimedMetadataChangedNotification`.
 
    ```
    - (void)addobservers 
@@ -37,7 +40,7 @@ Para implementar la gestión de apagones y proporcionar contenido alternativo du
    }
    ```
 
-1. Implemente un método de escucha para `PTTimedMetadata` objetos en primer plano.
+1. Implemente un método de escucha para objetos `PTTimedMetadata` en primer plano.
 
    Por ejemplo:
 
@@ -61,7 +64,7 @@ Para implementar la gestión de apagones y proporcionar contenido alternativo du
    }
    ```
 
-1. Gestionar `TimedMetadata` objetos con actualizaciones constantes durante la reproducción.
+1. Gestionar objetos `TimedMetadata` con actualizaciones constantes durante la reproducción.
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -82,7 +85,7 @@ Para implementar la gestión de apagones y proporcionar contenido alternativo du
    }
    ```
 
-1. Agregue el `PTTimedMetadata` controlador para cambiar al contenido alternativo y volver al contenido principal como indica el `PTTimedMetadata` objeto y su tiempo de reproducción.
+1. Añada el controlador `PTTimedMetadata` para cambiar al contenido alternativo y volver al contenido principal como lo indica el objeto `PTTimedMetadata` y su tiempo de reproducción.
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -197,7 +200,7 @@ Para implementar la gestión de apagones y proporcionar contenido alternativo du
    }
    ```
 
-1. Implemente un método de escucha para `PTTimedMetadata` objetos en segundo plano.
+1. Implemente un método de escucha para objetos `PTTimedMetadata` en segundo plano.
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
