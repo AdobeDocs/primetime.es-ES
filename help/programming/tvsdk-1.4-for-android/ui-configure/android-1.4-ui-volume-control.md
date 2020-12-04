@@ -6,6 +6,9 @@ title: Proporcionar control de volumen
 uuid: 63e96424-54d0-4c16-bd94-2366722f752a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '97'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
 Puede configurar un control de interfaz de usuario para el volumen de sonido.
 
 1. Espere a que la instancia de MediaPlayer esté en un estado válido para este comando, que es cualquiera excepto RELEASED o ERROR.
-1. Llame `setVolume` a la `MediaPlayer` instancia para configurar el volumen de audio.
+1. Llame a `setVolume` en la instancia `MediaPlayer` para configurar el volumen de audio.
 
    ```java
    void setVolume(int volume) throws IllegalStateException;
