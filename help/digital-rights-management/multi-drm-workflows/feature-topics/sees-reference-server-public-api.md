@@ -6,15 +6,18 @@ title: SEIS Public API
 uuid: f3a17d61-04ee-4bdb-9d64-a98066c6d1c8
 translation-type: tm+mt
 source-git-commit: 15403abbd53486e1faa2146cda83f41bd8116632
+workflow-type: tm+mt
+source-wordcount: '179'
+ht-degree: 0%
 
 ---
 
 
-# SEIS Public API {#sees-public-api}
+# SEES Public API {#sees-public-api}
 
 La solicitud de asignación de derechos y la respuesta se pasan a través de una conexión SSL mutuamente autenticada entre el servidor de licencias y el servicio de asignación de derechos del cliente.
 
-El esquema de URI HTTPS ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) se utiliza para definir el extremo de asignación de derechos y el método de solicitud HTTP POST ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) se utiliza para la solicitud. El extremo de asignación de derechos, así como un indicador que indica la asignación de derechos en el back-end, son obligatorios y deben incluirse en la directiva en el momento del empaquetado.
+El esquema de URI HTTPS ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) se utiliza para definir el extremo de asignación de derechos y el método de solicitud de POST HTTP ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) se utiliza para la solicitud. El extremo de asignación de derechos, así como un indicador que indica la asignación de derechos en el back-end, son obligatorios y deben incluirse en la directiva en el momento del empaquetado.
 
 ## Solicitud de asignación de derechos {#section_BFBFEF0795CA46D6842C479256B95F95}
 
