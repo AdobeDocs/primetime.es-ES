@@ -6,6 +6,9 @@ title: Pausar y reanudar la reproducción
 uuid: 87ba9f05-912d-4b85-8add-feb26a796a3a
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Cuando un usuario hace clic en una publicidad, la aplicación debe pausar la reproducción del contenido del vídeo principal.
 
-1. Anule la actividad `onPause` y `onResume` de Android.
+1. Anule las Actividades `onPause` y `onResume` de Android.
 
    ```java
    @Override 
