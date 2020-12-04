@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# Lista de bloqueados de los tiempos de ejecución de la aplicación restringidos para acceder al contenido protegido {#blocklist-of-application-runtimes-restricted-from-accessing-protected-content}
+# Lista de bloqueados de los tiempos de ejecución de la aplicación restringidos para acceder a contenido protegido {#blocklist-of-application-runtimes-restricted-from-accessing-protected-content}
 
 Especifica la versión de Primetime o Flash Runtime que no puede acceder al contenido. Especifique el tiempo de ejecución restringido (Flash Player, AIR o iOS), la plataforma y la versión.
 
