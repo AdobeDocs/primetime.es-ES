@@ -6,6 +6,9 @@ title: Construir una barra de control mejorada para DVR
 uuid: 988dcaf5-896d-4da1-8b78-5acf5a317aa3
 translation-type: tm+mt
 source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 0%
 
 ---
 
@@ -15,13 +18,13 @@ source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
 Puede implementar una barra de control con compatibilidad con DVR para VOD y transmisión en directo. La compatibilidad con DVR incluye el concepto de una ventana que se puede buscar y el punto activo del cliente.
 
 * Para VOD, la longitud de la ventana que se puede buscar es la duración de todo el recurso.
-* Para el flujo en directo, la duración de la ventana DVR (buskable) se define como el intervalo de tiempo que comienza en la ventana de reproducción en directo y termina en el punto de activación del cliente.
+* Para la transmisión en directo, la duración de la ventana DVR (buskable) se define como el intervalo de tiempo que inicio en la ventana de reproducción en directo y termina en el punto de activación del cliente.
 
    Recuerde la siguiente información:
 
    * El punto activo del cliente se calcula restando la longitud almacenada en el búfer del extremo de la ventana activa.
 
-      La duración de destino es un valor mayor o igual que la duración máxima de un fragmento en el manifiesto.
+      La duración del destinatario es un valor mayor o igual que la duración máxima de un fragmento en el manifiesto.
    * El valor predeterminado es 10000 ms.
    * La barra de control para la reproducción en directo admite DVR colocando primero el pulgar en el punto activo del cliente al iniciar la reproducción y mostrando una región que marca el área en la que no se permite la búsqueda.
 
@@ -29,7 +32,7 @@ Puede implementar una barra de control con compatibilidad con DVR para VOD y tra
 
 ![](assets/dvr-window.PNG){width=&quot;684&quot;}
 
-1. Para implementar una barra de control con compatibilidad con DVR, siga los pasos de [Mostrar una barra de búsqueda con la posición de reproducción actual.](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md) con las siguientes diferencias:
+1. Para implementar una barra de control con compatibilidad con DVR, siga los pasos en [Mostrar una barra de búsqueda con la posición de reproducción actual.](../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-seek-scrub-bar-display.md) con las siguientes diferencias:
 
    * Puede implementar una barra de control que esté asignada solamente para el rango buscable en lugar de para el rango de reproducción.
 
@@ -37,8 +40,8 @@ Puede implementar una barra de control con compatibilidad con DVR para VOD y tra
    * Puede implementar una barra de control que esté asignada para el rango de reproducción pero que también muestre el rango que se puede buscar.
 
       Para una barra de control:
-   1. Agregue una superposición a la barra de control que represente el rango de reproducción.
-   1. Cuando el usuario comienza a buscar, compruebe si la posición deseada de la búsqueda se encuentra dentro del intervalo de búsqueda mediante `MediaPlayer.getSeekableRange`.
+   1. Añada una superposición en la barra de control que representa el rango de reproducción.
+   1. Cuando el usuario inicio buscar, compruebe si la posición de búsqueda deseada se encuentra dentro del rango buscable mediante `MediaPlayer.getSeekableRange`.
 
       Por ejemplo:
 
@@ -49,7 +52,7 @@ Puede implementar una barra de control con compatibilidad con DVR para VOD y tra
       }
       ```
 
-      También puede optar por buscar en el punto activo del cliente mediante la `MediaPlayer.LIVE_POINT` constante.
+      También puede optar por buscar en el punto activo del cliente mediante la constante `MediaPlayer.LIVE_POINT`.
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);
