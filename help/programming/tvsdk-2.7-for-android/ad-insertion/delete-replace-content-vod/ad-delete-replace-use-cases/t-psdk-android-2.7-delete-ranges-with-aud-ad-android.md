@@ -6,21 +6,24 @@ title: Eliminar intervalos
 uuid: 637829a7-efa8-4b83-9a04-ef01c043621f
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '90'
+ht-degree: 0%
 
 ---
 
 
-# Eliminar intervalos{#delete-ranges}
+# Eliminar rangos{#delete-ranges}
 
 Puede quitar TimeRanges entre el inicio y el final en localTime de la línea de tiempo.
 
 >[!TIP]
 >
->Para eliminar únicamente determinados rangos del contenido, cree una `CustomRangeMetadata` instancia y especifique el tipo como una `DELETE` operación con los rangos personalizados definidos.
+>Para eliminar únicamente determinados rangos del contenido, cree una instancia `CustomRangeMetadata` y especifique el tipo como una operación `DELETE` con los rangos personalizados definidos.
 
 La asignación de publicidad debe utilizarse tal como la define el servidor de publicidad.
 
-1. Para eliminar intervalos con una publicidad de decisiones de anuncios de Adobe Primetime:
+1. Para eliminar intervalos con una publicidad para la toma de decisiones de publicidad de Adobe Primetime:
 
    ```
    {   
