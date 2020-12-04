@@ -1,18 +1,21 @@
 ---
-description: Hay algunas API que pueden ayudarle a utilizar Adobe Flash Player.
-seo-description: Hay algunas API que pueden ayudarle a utilizar Adobe Flash Player.
-seo-title: API útiles para Adobe Flash Player
-title: API útiles para Adobe Flash Player
+description: Hay algunas API que pueden ayudarle a utilizar el Flash Player de Adobe.
+seo-description: Hay algunas API que pueden ayudarle a utilizar el Flash Player de Adobe.
+seo-title: API útiles para el Flash Player de Adobe
+title: API útiles para el Flash Player de Adobe
 uuid: eae314c0-fd9e-480f-ae1c-9b5f3eb4db4b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '84'
+ht-degree: 0%
 
 ---
 
 
-# API útiles para Adobe Flash Player{#helpful-apis-for-the-adobe-flash-player}
+# API útiles para el Flash Player de Adobe{#helpful-apis-for-the-adobe-flash-player}
 
-Hay algunas API que pueden ayudarle a utilizar Adobe Flash Player.
+Hay algunas API que pueden ayudarle a utilizar el Flash Player de Adobe.
 
 ## AdobePSDK.MediaResource {#section_8C339FA1386D4B1A926A1459B2619E5E}
 
@@ -20,7 +23,7 @@ Hay algunas API que pueden ayudarle a utilizar Adobe Flash Player.
 new MediaResource(url, type, metadata, forceFlash)
 ```
 
-Si es compatible, puede utilizar el `forceFlash` parámetro para anular la secuencia de determinación de la tecnología de reproducción y forzar la implementación a utilizar Flash Player.
+Si se admite, puede utilizar el parámetro `forceFlash` para anular la secuencia de determinación de la tecnología de reproducción y forzar la implementación a utilizar el Flash Player.
 
 <!--<a id="section_FEE3205B532446498771F7DD55B5E79F"></a>-->
 
