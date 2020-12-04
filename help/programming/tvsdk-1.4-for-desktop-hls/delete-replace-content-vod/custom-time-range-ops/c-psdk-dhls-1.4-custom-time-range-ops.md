@@ -6,6 +6,9 @@ title: Operaciones de intervalo de tiempo personalizado
 uuid: fb27f343-718d-444e-8fc1-5ae0be02557b
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '265'
+ht-degree: 0%
 
 ---
 
@@ -20,14 +23,14 @@ La función Eliminar y reemplazar amplía la función de marcadores de publicida
 
 La eliminación y sustitución de publicidades se implementan con marcadores personalizados que identifican distintos tipos de intervalos de tiempo en un flujo VOD: marcar, eliminar y reemplazar. Para cada intervalo de tiempo personalizado, puede realizar operaciones asociadas, incluida la eliminación o sustitución del contenido de la publicidad.
 
-Para la eliminación y sustitución de publicidades, TVSDK incluye los siguientes modos de operación *de intervalo de tiempo* personalizados:
+Para la eliminación y sustitución de publicidades, TVSDK incluye los siguientes modos *de operación de intervalo de tiempo personalizado*:
 
 * MARK: distribuye `AdBreak` eventos para las regiones marcadas. (Esto se llamaba `customAdMarker` en versiones anteriores de TVSDK). No se permite la inserción de anuncios en este modo.
 
-* ELIMINAR: para este modo, la aplicación utiliza la `TimeRangeCollection` clase para definir las regiones horarias para la eliminación de anuncios en C3. Se permite la inserción de anuncios en este modo.
-* REEMPLAZAR: En este modo, la aplicación reemplaza un anuncio `timeRange` por una toma de decisiones de anuncios de Adobe Primetime `AdBreak`. La operación de reemplazo comienza donde se produce la eliminación de la publicidad C3 y termina en el tiempo indicado (más corto o más que el intervalo de tiempo original).
+* DELETE: para este modo, la aplicación utiliza la clase `TimeRangeCollection` para definir las regiones horarias para la eliminación de publicidad en C3. Se permite la inserción de anuncios en este modo.
+* REEMPLAZAR: En este modo, la aplicación reemplaza un `timeRange` por una decisión de publicidad para Adobe Primetime `AdBreak`. La operación de reemplazo inicio dónde se produce la eliminación de publicidad C3 y termina en el tiempo indicado (más corto o más que el intervalo de tiempo original).
 
-TVSDK proporciona una `CustomRangesOpportunityGenerator` clase para generar oportunidades de colocación para los rangos MARK y DELETE. Para el modo REPLACE, TVSDK genera dos oportunidades de colocación para cada intervalo de tiempo:
+TVSDK proporciona una clase `CustomRangesOpportunityGenerator` para generar oportunidades de colocación para los rangos MARK y DELETE. Para el modo REPLACE, TVSDK genera dos oportunidades de colocación para cada intervalo de tiempo:
 
-* Genera `CustomRangeResolver` oportunidades de colocación para ELIMINAR
+* El `CustomRangeResolver` genera oportunidades de colocación para el DELETE
 * El `AuditudeAdResolver` genera oportunidades de colocación para INSERT.
