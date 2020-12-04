@@ -6,6 +6,9 @@ title: Separe el proceso de publicidad en el que se puede hacer clic
 uuid: c37f5916-eb25-41ec-b5f4-efb82ec56371
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '173'
+ht-degree: 0%
 
 ---
 
@@ -14,9 +17,9 @@ source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
 
 Debe separar la lógica de IU del reproductor del proceso que administra los clics en publicidad. Una forma de hacerlo es implementar varios fragmentos para una actividad.
 
-1. Implemente un fragmento para contener el `MediaPlayer`.
+1. Implemente un fragmento para contener `MediaPlayer`.
 
-   Este fragmento debe llamar `notifyClick()` y será responsable de la reproducción de vídeo.
+   Este fragmento debe llamar a `notifyClick()` y será responsable de la reproducción de vídeo.
 
    ```java
    public class PlayerFragment extends SherlockFragment { 
@@ -28,9 +31,9 @@ Debe separar la lógica de IU del reproductor del proceso que administra los cli
    } 
    ```
 
-1. Implemente un fragmento diferente para mostrar un elemento de la interfaz de usuario que indique que se puede hacer clic en una publicidad, supervise ese elemento de la interfaz de usuario y comunique los clics del usuario al fragmento que contiene la `MediaPlayer`.
+1. Implemente un fragmento diferente para mostrar un elemento de la interfaz de usuario que indique que se puede hacer clic en una publicidad, supervise ese elemento de la interfaz de usuario y comunique los clics del usuario al fragmento que contiene el `MediaPlayer`.
 
-   Este fragmento debe declarar una interfaz para la comunicación de fragmentos. El fragmento captura la implementación de la interfaz durante su método `onAttach()` de ciclo vital y puede llamar a los métodos de interfaz para comunicarse con la actividad.
+   Este fragmento debe declarar una interfaz para la comunicación de fragmentos. El fragmento captura la implementación de la interfaz durante su método de ciclo de vida `onAttach()` y puede llamar a los métodos de interfaz para comunicarse con la actividad.
 
    ```java
    public class PlayerClickableAdFragment extends SherlockFragment { 
