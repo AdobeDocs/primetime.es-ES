@@ -1,18 +1,21 @@
 ---
-description: Los sistemas operativos y los servidores de aplicaciones se incluyen en la solución DRM de Adobe Primetime.
-seo-description: Los sistemas operativos y los servidores de aplicaciones se incluyen en la solución DRM de Adobe Primetime.
+description: Los sistemas operativos y los servidores de aplicaciones se incluyen en la solución Adobe Primetime DRM.
+seo-description: Los sistemas operativos y los servidores de aplicaciones se incluyen en la solución Adobe Primetime DRM.
 seo-title: Información de seguridad específica del proveedor
 title: Información de seguridad específica del proveedor
 uuid: 331baa42-5e19-40a5-bc74-0b1a2cb9370e
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '387'
+ht-degree: 0%
 
 ---
 
 
 # Información de seguridad específica del proveedor{#vendor-specific-security-information}
 
-Los sistemas operativos y los servidores de aplicaciones se incluyen en la solución DRM de Adobe Primetime.
+Los sistemas operativos y los servidores de aplicaciones se incluyen en la solución Adobe Primetime DRM.
 
 Para buscar información de seguridad específica del proveedor para el sistema operativo y el servidor de aplicaciones, consulte Uso del servidor de claves DRM de Adobe Primetime.
 
@@ -68,7 +71,7 @@ A continuación se proporciona información sobre los métodos para minimizar la
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Protocolo de tiempo de red (NTP) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para un correcto funcionamiento y análisis forense, mantenga un tiempo preciso en los servidores y empaquetadores Primetime DRM. Utilice una versión segura de NTP para sincronizar la hora de Primetime DRM en todos los sistemas conectados a Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para una operación y análisis forenses adecuadas, mantenga un tiempo preciso en los servidores y empaquetadores Primetime DRM. Utilice una versión segura de NTP para sincronizar la hora de Primetime DRM en todos los sistemas conectados a Internet. </p> </td> 
   </tr> 
  </tbody> 
 </table>
