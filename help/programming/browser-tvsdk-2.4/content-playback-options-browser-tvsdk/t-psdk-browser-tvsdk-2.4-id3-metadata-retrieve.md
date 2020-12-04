@@ -1,22 +1,25 @@
 ---
-description: Las etiquetas ID3 proporcionan información sobre un archivo de audio o vídeo, como el título del archivo o el nombre del artista. El SDK del explorador detecta etiquetas ID3 en el nivel de segmento de flujo de transporte (TS) en flujos HLS y distribuye un evento. La aplicación puede extraer datos de la etiqueta .
-seo-description: Las etiquetas ID3 proporcionan información sobre un archivo de audio o vídeo, como el título del archivo o el nombre del artista. El SDK del explorador detecta etiquetas ID3 en el nivel de segmento de flujo de transporte (TS) en flujos HLS y distribuye un evento. La aplicación puede extraer datos de la etiqueta .
+description: Las etiquetas ID3 proporcionan información sobre un archivo de audio o vídeo, como el título del archivo o el nombre del artista. El SDK de explorador detecta las etiquetas ID3 en el nivel de segmento de flujo de transporte (TS) en los flujos HLS y distribuye un evento. La aplicación puede extraer datos de la etiqueta .
+seo-description: Las etiquetas ID3 proporcionan información sobre un archivo de audio o vídeo, como el título del archivo o el nombre del artista. El SDK de explorador detecta las etiquetas ID3 en el nivel de segmento de flujo de transporte (TS) en los flujos HLS y distribuye un evento. La aplicación puede extraer datos de la etiqueta .
 seo-title: Etiquetas ID3
 title: Etiquetas ID3
 uuid: a47cd0cc-b11d-47df-b1fb-56918896ef4c
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '326'
+ht-degree: 0%
 
 ---
 
 
 # Etiquetas ID3{#id-tags}
 
-Las etiquetas ID3 proporcionan información sobre un archivo de audio o vídeo, como el título del archivo o el nombre del artista. El SDK del explorador detecta etiquetas ID3 en el nivel de segmento de flujo de transporte (TS) en flujos HLS y distribuye un evento. La aplicación puede extraer datos de la etiqueta .
+Las etiquetas ID3 proporcionan información sobre un archivo de audio o vídeo, como el título del archivo o el nombre del artista. El SDK de explorador detecta las etiquetas ID3 en el nivel de segmento de flujo de transporte (TS) en los flujos HLS y distribuye un evento. La aplicación puede extraer datos de la etiqueta .
 
-Cuando se encuentran metadatos ID3 nuevos en el flujo HLS subyacente, el SDK TVSDK del explorador activa un `AdobePSDK.TimedMetadataEvent` evento.
+Cuando se encuentran metadatos ID3 nuevos en el flujo HLS subyacente, el SDK TVSDK del explorador activa un evento `AdobePSDK.TimedMetadataEvent`.
 
-El `TimedMetadata` objeto para ID3 tiene las siguientes propiedades:
+El objeto `TimedMetadata` para ID3 tiene las siguientes propiedades:
 
 <table id="table_6C61886187FB44B4B9821E4B00200018"> 
  <thead> 
@@ -27,37 +30,37 @@ El `TimedMetadata` objeto para ID3 tiene las siguientes propiedades:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> type </span> </p> </td> 
-   <td colname="col2"> <p>Tipo de <span class="codeph"> objeto TimedMetadata </span> . </p> <p>Para los metadatos ID3, el valor es <span class="codeph"> AdobePSDK.TimedMetadataType.ID3 </span>. </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> type  </span> </p> </td> 
+   <td colname="col2"> <p>Un tipo de objeto <span class="codeph"> TimedMetadata </span>. </p> <p>Para los metadatos ID3, el valor es <span class="codeph"> AdobePSDK.TimedMetadataType.ID3 </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> time </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> time  </span> </p> </td> 
    <td colname="col2"> <p> Hora del reproductor en la que se detectaron estos metadatos temporizados. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> id </span> </p> </td> 
-   <td colname="col2"> <p>ID del <span class="codeph"> objeto TimedMetadata </span> . </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> id  </span> </p> </td> 
+   <td colname="col2"> <p>ID del objeto <span class="codeph"> TimedMetadata </span>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p> <span class="codeph"> name </span> </p> </td> 
-   <td colname="col2"> <p>Nombre del <span class="codeph"> objeto TimedMetadata </span> . Para los metadatos ID3, el valor es "ID3". </p> </td> 
+   <td colname="col2"> <p>Nombre del objeto <span class="codeph"> TimedMetadata </span>. Para los metadatos ID3, el valor es "ID3". </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> content </span> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> content  </span> </p> </td> 
    <td colname="col2"> <p>El contenido de metadatos temporizados. Para las etiquetas ID3, este valor representa la matriz de bytes serializados. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p> <span class="codeph"> metadatos </span> </p> </td> 
-   <td colname="col2"> <p> <span class="codeph"> TimedMetadata </span> procesó información, que es una instancia de <span class="codeph"> AdobePSDK.Metadata </span> donde se almacenan los fotogramas ID3. </p> <p> <p>Nota:  Para la etiqueta de vídeo Safari <span class="codeph"> , los datos de marco concretos de la etiqueta ID3 se exponen en forma de objeto a través de un objeto </span> AdobePSDK.Metadata <span class="codeph"> , mientras que para otros exploradores, los datos de marco de la etiqueta ID3 se exponen en forma de matriz de bytes a través del objeto </span> AdobePSDK.Metadata <span class="codeph"> </span> . </p> </p> </td> 
+   <td colname="col1"> <p> <span class="codeph"> metadatos  </span> </p> </td> 
+   <td colname="col2"> <p> <span class="codeph"> Información  </span> procesada de TimedMetadata, que es una instancia de  <span class="codeph"> AdobePSDK.Metadata  </span> donde se almacenan los fotogramas ID3. </p> <p> <p>Nota:  Para la etiqueta de vídeo <span class="codeph"> Safari, los datos de marco concretos de la etiqueta ID3 se exponen en forma de objeto a través de un objeto <span class="codeph"> AdobePSDK.Metadata </span> mientras que para otros exploradores, los datos de marco de la etiqueta ID3 se exponen en forma de matriz de bytes a través de un objeto <span class="codeph"> AdobePSDK.Metadata </span>.</span> </p> </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 &#x200B;
 
-La aplicación `TimedMetadata` puede recuperar las distintas etiquetas ID3 almacenadas de las dos formas siguientes:
+La aplicación puede recuperar las distintas etiquetas ID3 almacenadas en `TimedMetadata` de las dos formas siguientes:
 
-* En el detector de eventos AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLE.
+* En el detector de evento AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLE.
 
    ```
    var isSafari = function () { 
@@ -114,7 +117,7 @@ La aplicación `TimedMetadata` puede recuperar las distintas etiquetas ID3 almac
    }); 
    ```
 
-* Usando la `MediaPlayerItem`propiedad `timedMetadata` s.
+* Uso de la propiedad `MediaPlayerItem` `timedMetadata`.
 
    ```
    var isSafari = function () { 
