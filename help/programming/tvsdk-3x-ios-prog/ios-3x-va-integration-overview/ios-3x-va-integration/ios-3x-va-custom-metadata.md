@@ -6,6 +6,9 @@ title: Implementar compatibilidad con metadatos personalizados
 uuid: 229681f5-ff77-4321-8022-b8ccf2928fb3
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '94'
+ht-degree: 0%
 
 ---
 
