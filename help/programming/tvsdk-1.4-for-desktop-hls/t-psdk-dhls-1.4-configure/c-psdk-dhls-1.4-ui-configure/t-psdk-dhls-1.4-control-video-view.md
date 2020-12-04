@@ -19,9 +19,9 @@ Puede controlar la posición y el tamaño de la vista de vídeo mediante el obje
 
 De forma predeterminada, TVSDK intenta mantener la proporción de aspecto de la vista de vídeo cada vez que cambia el tamaño o la posición del vídeo (debido a un cambio realizado por la aplicación, un cambio de perfil, un cambio de contenido, etc.).
 
-Puede anular el comportamiento predeterminado de la relación de aspecto especificando una directiva *de* escala diferente. Especifique la directiva de escala mediante la `MediaPlayerView` propiedad del `scalePolicy` objeto. La directiva `MediaPlayerView`de escala predeterminada se establece con una instancia de la `MaintainAspectRatioScalePolicy` clase. Para restablecer la directiva de escala, reemplace la instancia predeterminada de `MaintainAspectRatioScalePolicy` on `MediaPlayerView.scalePolicy` por su propia directiva. (No se puede establecer la `scalePolicy` propiedad en un valor nulo).
+Puede anular el comportamiento predeterminado de la relación de aspecto especificando una directiva *de escala* diferente. Especifique la directiva de escala mediante la propiedad `MediaPlayerView` del objeto `scalePolicy`. La directiva de escala predeterminada de `MediaPlayerView` se establece con una instancia de la clase `MaintainAspectRatioScalePolicy`. Para restablecer la directiva de escala, reemplace la instancia predeterminada de `MaintainAspectRatioScalePolicy` en `MediaPlayerView.scalePolicy` por su propia directiva. (No se puede establecer la propiedad `scalePolicy` en un valor nulo).
 
-1. Implemente la `MediaPlayerViewScalePolicy` interfaz para crear su propia directiva de escala.
+1. Implemente la interfaz `MediaPlayerViewScalePolicy` para crear su propia directiva de escala.
 
    El `MediaPlayerViewScalePolicy` tiene un método:
 
@@ -32,12 +32,13 @@ Puede anular el comportamiento predeterminado de la relación de aspecto especif
 
    >[!NOTE]
    >
-   >TVSDK utiliza un `StageVideo` objeto para mostrar el vídeo y, como `StageVideo` los objetos no están en la lista de visualización, el `viewPort` parámetro contiene las coordenadas absolutas del vídeo.
+   >TVSDK utiliza un objeto `StageVideo` para mostrar el vídeo y, como los objetos `StageVideo` no están en la lista de visualización, el parámetro `viewPort` contiene las coordenadas absolutas del vídeo.
    >
    >
    >Por ejemplo:
    >
-   >```
+   >
+   ```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
@@ -60,7 +61,7 @@ Puede anular el comportamiento predeterminado de la relación de aspecto especif
    >}
    >```
 
-1. Asigne la implementación a la `MediaPlayerView` propiedad.
+1. Asigne la implementación a la propiedad `MediaPlayerView`.
 
    ```
    var view:MediaPlayerView = MediaPlayerView.create(stage.stageVideos[0]); 
