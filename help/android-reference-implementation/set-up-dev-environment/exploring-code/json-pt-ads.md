@@ -6,11 +6,14 @@ description: El bloque de código siguiente define los detalles del objeto JSON 
 seo-description: El bloque de código siguiente define los detalles del objeto JSON cuando el valor de tipo es Primetime ads.
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
 
-# Objeto JSON para anuncios Primetime {#json-object-for-primetime-ads}
+# Objeto JSON para publicidades Primetime {#json-object-for-primetime-ads}
 
 El bloque de código siguiente define los detalles del objeto JSON cuando el valor de tipo es Primetime ads.
 
