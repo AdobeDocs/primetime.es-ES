@@ -4,13 +4,16 @@ title: Validador de configuración
 uuid: 60ebd35c-290a-4f08-9bd0-178903857149
 translation-type: tm+mt
 source-git-commit: 47b2ed65ff0ea4f54a210cf7627ed535782296b9
+workflow-type: tm+mt
+source-wordcount: '185'
+ht-degree: 0%
 
 ---
 
 
 # Validador de configuración {#configuration-validator}
 
-Adobe recomienda ejecutar la utilidad Configuration Validator antes de iniciar el servidor cuando se realicen cambios en el archivo de configuración. Esta utilidad puede detectar la mayoría de los errores de configuración antes de que se produzcan errores durante el procesamiento de la solicitud.
+Adobe recomienda que se ejecute la utilidad Configuration Validator antes de iniciar el servidor cuando se realicen cambios en el archivo de configuración. Esta utilidad puede detectar la mayoría de los errores de configuración antes de que se produzcan errores durante el procesamiento de la solicitud.
 
 Para ejecutar el validador, utilice el comando:
 
