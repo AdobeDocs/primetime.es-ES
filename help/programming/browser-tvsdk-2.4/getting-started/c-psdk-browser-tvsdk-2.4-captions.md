@@ -13,11 +13,11 @@ ht-degree: 3%
 ---
 
 
-# Rótulos{#captions}
+# Subtítulos{#captions}
 
 Puede mostrar subtítulos al reproducir contenido de vídeo.
 
-Para gestionar rótulos, debe agregar el detector de `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` eventos:
+Para gestionar rótulos, debe agregar el detector de eventos `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED`:
 
 ```js
 ... 
