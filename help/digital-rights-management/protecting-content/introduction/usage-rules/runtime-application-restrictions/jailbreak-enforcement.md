@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Aplicación de Jailbreak (requiere Adobe Primetime DRM){#jailbreak-enforcement-requires-adobe-primetime-drm}
 
-En plataformas que admiten la detección de saltos de cárcel, como dispositivos móviles Android e iOS, puede activar la aplicación de saltos de cárcel para impedir la reproducción de contenido si [!DNL jailbreak/root] se ha detectado en el dispositivo.
+En plataformas que admiten la detección de saltos de cárcel, como dispositivos móviles Android e iOS, puede habilitar la aplicación de saltos de cárcel para impedir la reproducción de contenido si se ha detectado [!DNL jailbreak/root] en el dispositivo.
 
 >[!NOTE]
 >
