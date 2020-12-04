@@ -6,6 +6,9 @@ title: Introducción a la solicitud de token de licencia de ExpressPlay/referenc
 uuid: 50d67b55-4683-4dac-9928-b8ec165ad6d8
 translation-type: tm+mt
 source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 0%
 
 ---
 
