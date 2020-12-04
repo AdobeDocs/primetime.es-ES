@@ -4,6 +4,9 @@ title: Propiedades del archivo de configuración
 uuid: 13e158a6-c447-4e5e-884d-03fb4835c120
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '314'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ Antes de ejecutar el Generador de licencias, especifique los valores de las prop
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licencisegen.keyServerCert</span> </td> 
-   <td colname="2" class="- topic/entry "> Certificado de servidor de claves (certificado de servidor de licencias emitido por Adobe que utiliza el servidor de claves). Este certificado solo se utiliza si los metadatos o la directiva indican que se requiere un servidor clave para la entrega de claves a dispositivos iOS. </td> 
+   <td colname="2" class="- topic/entry "> Certificado de servidor de claves (un certificado de servidor de licencias emitido por Adobes que utiliza el servidor de claves). Este certificado solo se utiliza si los metadatos o la directiva indican que se requiere un servidor de claves para el envío de claves en dispositivos iOS. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licencisegen.sign.certfile</span> </td> 
@@ -34,11 +37,11 @@ Antes de ejecutar el Generador de licencias, especifique los valores de las prop
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph"> licencisegen.sign.certpass</span> </td> 
-   <td colname="2" class="- topic/entry ">La contraseña utilizada para proteger el archivo especificado por <span class="+ topic/ph pr-d/codeph codeph"> licencisegen.sign.certfile.</span> </td> 
+   <td colname="2" class="- topic/entry ">La contraseña usada para proteger el archivo especificado por <span class="+ topic/ph pr-d/codeph codeph"> licencisegen.sign.certfile.</span> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licencisegen.domainca.n</span> </td> 
-   <td colname="2" class="- topic/entry "> Si se generan licencias enlazadas a dominios, se debe especificar uno o más certificados de CA de dominio para indicar las autoridades de dominio en las que confía este emisor de licencias. Si el destinatario de la licencia es un certificado de dominio, que no ha sido emitido por una de las CA de dominio especificadas, no se puede generar una licencia. Esta propiedad especifica un archivo .cer que contiene únicamente el certificado (se acepta el formato PEM o DER). n debe aumentar monotónicamente, comenzando desde 1. </td> 
+   <td colname="2" class="- topic/entry "> Si se generan licencias enlazadas a dominios, se debe especificar uno o más certificados de CA de dominio para indicar las autoridades de dominio en las que confía este emisor de licencias. Si el destinatario de licencia es un certificado de dominio, que no ha sido emitido por una de las CA de dominio especificadas, no se puede generar una licencia. Esta propiedad especifica un archivo .cer que contiene únicamente el certificado (se acepta el formato PEM o DER). n debe aumentar monotónicamente, comenzando desde 1. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">licencisegen.keys.asymmetric.licenseServerCredential.n</span> </td> 
