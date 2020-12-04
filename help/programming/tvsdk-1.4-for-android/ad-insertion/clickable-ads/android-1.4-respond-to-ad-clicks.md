@@ -6,21 +6,24 @@ title: Responder a los clics en publicidades
 uuid: 31852f01-c900-48e3-ae23-7fb131c22594
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '319'
+ht-degree: 0%
 
 ---
 
 
-# Responder a los clics en publicidades{#respond-to-clicks-on-ads}
+# Responder a clics en publicidades{#respond-to-clicks-on-ads}
 
 Cuando un usuario hace clic en una publicidad o en un botón relacionado, la aplicación debe responder. TVSDK proporciona información sobre la dirección URL de destino del clic.
 
-1. Para configurar un detector de eventos para TVSDK y proporcionar la información de pulsaciones, registre un `AdClickedEventListener.onAdClicked`.
+1. Para configurar un detector de evento para TVSDK y proporcionar la información de pulsaciones, registre un `AdClickedEventListener.onAdClicked`.
 
    Cuando un usuario hace clic en un anuncio o en un botón relacionado, TVSDK distribuye esta notificación, incluida la información sobre el destino del clic.
 1. Monitoree las interacciones del usuario en las publicidades en las que se puede hacer clic.
-1. Cuando el usuario toque o haga clic en el anuncio o botón, para notificar a TVSDK, llame `notifyClick` al `MediaPlayerView`.
-1. Escuche el `onAdClick(AdClickEvent event)` evento desde TVSDK.
-1. Para recuperar la dirección URL de pulsación y la información relacionada, utilice los métodos de captador para la `AdClickEvent` instancia.
+1. Cuando el usuario toque o haga clic en el anuncio o botón, para notificar a TVSDK, llame a `notifyClick` en el `MediaPlayerView`.
+1. Escuche el evento `onAdClick(AdClickEvent event)` de TVSDK.
+1. Para recuperar la dirección URL de pulsación y la información relacionada, utilice los métodos de captador para la instancia `AdClickEvent`.
 1. Pause el vídeo.
 
    Para obtener más información sobre la pausa del vídeo, consulte [Pausa y reanudación de la reproducción.](../../ad-insertion/clickable-ads/android-1.4-pausing-resuming-playback.md).
