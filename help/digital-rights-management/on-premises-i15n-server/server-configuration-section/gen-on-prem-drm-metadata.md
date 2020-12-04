@@ -4,13 +4,16 @@ title: Generar los metadatos DRM locales
 uuid: 89d53924-1a8d-42d4-a716-ce4f4566b6bf
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '172'
+ht-degree: 1%
 
 ---
 
 
 # Generar los metadatos DRM locales{#generate-the-on-premises-drm-metadata}
 
-Se incluye una [!DNL CreateMetadata.jar] utilidad en la [!DNL create_metadata] carpeta. El objetivo de esta utilidad es crear un archivo de metadatos DRM en las instalaciones que iniciará al cliente para realizar el proceso de individualización con el servidor de individualización en las instalaciones especificado.
+Se incluye una utilidad [!DNL CreateMetadata.jar] en la carpeta [!DNL create_metadata]. El objetivo de esta utilidad es crear un archivo de metadatos DRM en las instalaciones que iniciará al cliente para realizar el proceso de individualización con el servidor de individualización en las instalaciones especificado.
 
 1. Actualice la implementación de referencia de DRM de Primetime - Herramientas de línea de comandos con los siguientes archivos:
 
@@ -18,11 +21,11 @@ Se incluye una [!DNL CreateMetadata.jar] utilidad en la [!DNL create_metadata] c
    * [!DNL commons-cli-1.2.jar]
    * [!DNL createMetadata.properties]
 
-      Los dos archivos JAR pueden residir en la [!DNL Command Line Tools/libs] carpeta. El [!DNL createMetadata.properties] archivo puede residir junto al [!DNL flashaccesstools.properties] archivo.
+      Los dos archivos JAR pueden residir en la carpeta [!DNL Command Line Tools/libs]. El archivo [!DNL createMetadata.properties] puede residir junto al archivo [!DNL flashaccesstools.properties].
 
 <!--<a id="example_2116349CA33642CD9293EAD94A532ED8"></a>-->
 
-Se incluye una [!DNL examplecreate.sh] secuencia de comandos que muestra una creación de metadatos de muestra. Asegúrese de configurar la URL del servidor de licencias y la URL del servidor de individualización tanto en los archivos de secuencias de comandos como en los archivos de propiedades antes de intentar generar metadatos.
+Se incluye una secuencia de comandos [!DNL examplecreate.sh] que muestra una creación de metadatos de muestra. Asegúrese de configurar la URL del servidor de licencias y la URL del servidor de individualización tanto en los archivos de secuencias de comandos como en los archivos de propiedades antes de intentar generar metadatos.
 
 Las entradas para la utilidad son las siguientes:
 
