@@ -1,20 +1,23 @@
 ---
-description: Puede utilizar las superposiciones HTML con StageVideo para mostrar los elementos de la interfaz de usuario en el plano de vídeo de la lista de visualización Flash. Este plano está por encima del plano de StageVideo, por lo que StageVideo siempre se muestra detrás de cualquier elemento de la lista de visualización Flash.
-seo-description: Puede utilizar las superposiciones HTML con StageVideo para mostrar los elementos de la interfaz de usuario en el plano de vídeo de la lista de visualización Flash. Este plano está por encima del plano de StageVideo, por lo que StageVideo siempre se muestra detrás de cualquier elemento de la lista de visualización Flash.
+description: Puede utilizar las superposiciones HTML con StageVideo para mostrar los elementos de la interfaz de usuario en el plano de vídeo de la lista de visualización de Flash. Este plano está por encima del plano de StageVideo, por lo que StageVideo siempre se muestra detrás de cualquier elemento de lista de visualización de Flash.
+seo-description: Puede utilizar las superposiciones HTML con StageVideo para mostrar los elementos de la interfaz de usuario en el plano de vídeo de la lista de visualización de Flash. Este plano está por encima del plano de StageVideo, por lo que StageVideo siempre se muestra detrás de cualquier elemento de lista de visualización de Flash.
 seo-title: Superposiciones de StageVideo y HTML
 title: Superposiciones de StageVideo y HTML
 uuid: 84e862ab-4c35-47a2-9c4e-f792d3ef5363
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '299'
+ht-degree: 0%
 
 ---
 
 
 # Superposiciones de StageVideo y HTML{#stagevideo-and-html-overlays}
 
-Puede utilizar las superposiciones HTML con StageVideo para mostrar los elementos de la interfaz de usuario en el plano de vídeo de la lista de visualización Flash. Este plano está por encima del plano de StageVideo, por lo que StageVideo siempre se muestra detrás de cualquier elemento de la lista de visualización Flash.
+Puede utilizar las superposiciones HTML con StageVideo para mostrar los elementos de la interfaz de usuario en el plano de vídeo de la lista de visualización de Flash. Este plano está por encima del plano de StageVideo, por lo que StageVideo siempre se muestra detrás de cualquier elemento de lista de visualización de Flash.
 
-Las superposiciones HTML son elementos de la interfaz de usuario que se pueden mostrar en el plano de visualización Flash en un vídeo que se procesa `StageVideo` en su propio plano. Antes de Flash 15, no se podían usar superposiciones HTML cuando no estaba disponible la aceleración de hardware. A partir de Flash 15, las superposiciones HTML se muestran cuando `StageVideo` regresan al procesamiento por software.
+Las superposiciones HTML son elementos de la interfaz de usuario que se pueden mostrar en el plano de visualización de Flash en un vídeo representado por `StageVideo` en su propio plano. Antes de Flash 15, no se podían usar superposiciones HTML cuando no estaba disponible la aceleración de hardware. A partir de Flash 15, las superposiciones HTML se muestran cuando `StageVideo` regresa al procesamiento por software.
 
 >[!IMPORTANT]
 >
@@ -22,17 +25,17 @@ Las superposiciones HTML son elementos de la interfaz de usuario que se pueden m
 
 Considere la siguiente información:
 
-* En Flash Player 15:
+* En el Flash Player 15:
 
    * Puede utilizar las superposiciones HTML si está disponible la aceleración de hardware.
-   * Para utilizar superposiciones HTML, defina `wmode` en `opaque`.
+   * Para utilizar superposiciones HTML, establezca `wmode` en `opaque`.
 
-* En Flash Player 14:
+* En el Flash Player 14:
 
-   * Cuando la aceleración de hardware está disponible, `StageVideo` reside debajo de la lista de visualización de Flash, para que pueda utilizar las superposiciones HTML.
+   * Cuando la aceleración de hardware está disponible, `StageVideo` reside debajo de la lista de visualización de Flash, por lo que puede utilizar las superposiciones HTML.
    * Cuando la aceleración de hardware no está disponible, el vídeo se procesa sobre todos los demás elementos del navegador, lo que impide el uso de superposiciones HTML.
 
-Estos son los requisitos mínimos del explorador para utilizar superposiciones HTML con `StageVideo`:
+Estos son los requisitos mínimos del explorador para utilizar las superposiciones HTML con `StageVideo`:
 
 * Firefox versión 4 y posterior
 * Safari versión 4 y posterior
