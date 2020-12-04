@@ -6,6 +6,9 @@ title: Publicidades en las que se puede hacer clic
 uuid: 8b257483-8b90-47cf-be2a-095b6d5b8883
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '361'
+ht-degree: 0%
 
 ---
 
@@ -20,16 +23,16 @@ En TVSDK para iOS, solo se puede hacer clic en las publicidades lineales.
 
 Cuando un usuario hace clic en una publicidad, en una publicidad tipo titular complementaria o en un botón relacionado, la aplicación debe responder. TVSDK proporciona información sobre la dirección URL de destino del clic.
 
-1. Para configurar un detector de eventos para TVSDK y proporcionar la información de pulsaciones, agregue un observador para `PTMediaPlayerAdClickNotification`.
+1. Para configurar un detector de evento para TVSDK y proporcionar la información de pulsaciones, agregue un observador para `PTMediaPlayerAdClickNotification`.
 
    >[!NOTE]
    >
    >Cuando un usuario hace clic en un anuncio, en un anuncio de titular complementario o en un botón relacionado, TVSDK envía esta notificación, incluida la información sobre el destino del clic.
 
 1. Monitoree las interacciones del usuario en las publicidades en las que se puede hacer clic.
-1. Cuando el usuario toque o haga clic en el anuncio o en el botón, para notificar a TVSDK, utilice `[_player notifyClick:_currentAd.primaryAsset];`.
-1. Escuche el `PTMediaPlayerAdClickNotification` evento desde TVSDK.
-1. Para recuperar la dirección URL de pulsación y la información relacionada, utilice el `PTMediaPlayerAdClickURLKey` objeto.
+1. Cuando el usuario toque o haga clic en el anuncio o botón, para notificar a TVSDK, utilice `[_player notifyClick:_currentAd.primaryAsset];`.
+1. Escuche el evento `PTMediaPlayerAdClickNotification` de TVSDK.
+1. Para recuperar la dirección URL de pulsación y la información relacionada, utilice el objeto `PTMediaPlayerAdClickURLKey`.
 1. Pause el vídeo.
 1. Utilice la información de pulsaciones para mostrar la dirección URL de pulsaciones de publicidad y la información relacionada.
 
