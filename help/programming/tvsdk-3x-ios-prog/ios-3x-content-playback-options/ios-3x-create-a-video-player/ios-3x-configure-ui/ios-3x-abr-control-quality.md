@@ -6,6 +6,9 @@ title: Velocidad de bits adaptable (ABR) para la calidad de vídeo
 uuid: a9b9a6a8-4098-4952-90e7-684e64800b3f
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '580'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +25,7 @@ Puede establecer la directiva de conmutación de velocidad de bits adaptable (AB
  <tbody> 
   <tr> 
    <td colname="col01"> Velocidad de bits inicial </td> 
-   <td colname="col2"> <p>Velocidad de bits de reproducción deseada (en bits por segundo) para el primer segmento. Cuando se inicia la reproducción, se utiliza el perfil más cercano, que es igual o bueno a la velocidad de bits inicial, para el primer segmento. </p> <p> Si se define una velocidad de bits mínima y la velocidad de bits inicial es inferior a la velocidad mínima, TVSDK selecciona el perfil con la velocidad de bits más baja por encima de la velocidad de bits mínima. Si la velocidad inicial es superior a la velocidad máxima, TVSDK selecciona la velocidad más alta por debajo de la velocidad máxima. </p> <p>Si la velocidad de bits inicial es cero o indefinida, la velocidad de bits inicial viene determinada por la directiva ABR. </p> </td> 
+   <td colname="col2"> <p>Velocidad de bits de reproducción deseada (en bits por segundo) para el primer segmento. Cuando se reproducen inicios, se utiliza el perfil más cercano, que es igual o bueno a la velocidad de bits inicial, para el primer segmento. </p> <p> Si se define una velocidad de bits mínima y la velocidad de bits inicial es inferior a la velocidad mínima, TVSDK selecciona el perfil con la velocidad de bits más baja por encima de la velocidad de bits mínima. Si la velocidad inicial es superior a la velocidad máxima, TVSDK selecciona la velocidad más alta por debajo de la velocidad máxima. </p> <p>Si la velocidad de bits inicial es cero o indefinida, la velocidad de bits inicial viene determinada por la directiva ABR. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Velocidad de bits mínima </td> 
@@ -72,7 +75,7 @@ Para configurar los parámetros de velocidad de bits adaptables de TVSDK:
    abrMetaData.maxBitRate = INT_MAX;
    ```
 
-1. Actualice su `PTMediaPlayer` instancia con la `PTABRControlParameters` instancia configurada.
+1. Actualice la instancia `PTMediaPlayer` con la instancia `PTABRControlParameters` configurada.
 
    ```
    // assuming self.player is the PTMediaPlayer instance 
@@ -81,9 +84,9 @@ Para configurar los parámetros de velocidad de bits adaptables de TVSDK:
 
 Recuerde lo siguiente:
 
-* La aplicación debe establecer la `abrControlParameters` propiedad en `PTMediaPlayer` antes de configurar una `PTMediaPlayerItem` instancia para que la configuración de velocidad de bits inicial y mínima tenga efecto.
+* La aplicación debe establecer la propiedad `abrControlParameters` en `PTMediaPlayer` antes de configurar una instancia `PTMediaPlayerItem` para que la configuración de velocidad de bits inicial y mínima surta efecto.
 
-   Una vez que se inicia la reproducción de contenido, la configuración de una nueva instancia solo afecta al ajuste de velocidad de bits máxima.
+   Tras los inicios de reproducción de contenido, la configuración de una nueva instancia solo afecta al ajuste de velocidad de bits máxima.
 
-* Para actualizar la configuración de velocidad de bits máxima durante la reproducción, cree una nueva `PTABRControlParameters` instancia y configúrela en la instancia del reproductor.
-* Puede actualizar la configuración de velocidad de bits máxima durante la reproducción solo en iOS 8.0 y posterior. En versiones anteriores, se utiliza el valor `maxBitrate` que se estableció antes de iniciar la reproducción del contenido.
+* Para actualizar la configuración de velocidad de bits máxima durante la reproducción, cree una nueva instancia `PTABRControlParameters` y configúrela en la instancia del reproductor.
+* Puede actualizar la configuración de velocidad de bits máxima durante la reproducción solo en iOS 8.0 y posterior. Para versiones anteriores, se utiliza el valor `maxBitrate` que se estableció antes de iniciar la reproducción del contenido.
