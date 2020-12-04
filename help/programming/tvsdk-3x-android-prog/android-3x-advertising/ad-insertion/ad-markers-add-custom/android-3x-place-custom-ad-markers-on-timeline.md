@@ -6,35 +6,38 @@ title: Colocar marcadores de publicidad personalizados en la línea de tiempo
 uuid: 47e31a97-e5da-46f3-bdcc-327c159c4355
 translation-type: tm+mt
 source-git-commit: 2a6ea34968ee7085931f99a24dfb23d097721b89
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 0%
 
 ---
 
 
-# Colocar marcadores de publicidad personalizados en la línea de tiempo {#place-custom-ad-markers-on-the-timeline}
+# Coloque marcadores de publicidad personalizados en la línea de tiempo {#place-custom-ad-markers-on-the-timeline}
 
 Este ejemplo muestra la manera recomendada de incluir marcadores de publicidad personalizados en la línea de tiempo de reproducción.
 
-1. Traduzca la información de posicionamiento de anuncios fuera de banda en una lista o matriz de `RepaceTimeRange` clase.
-1. Cree una instancia de `CustomRangeMetadata` clase y utilice su `setTimeRangeList` método con la lista/matriz como argumento para establecer su lista de intervalo de tiempo.
-1. Utilice su `setType` método para establecer el tipo en `MARK_RANGE`.
-1. Utilice el `MediaPlayerItemConfig.setCustomRangeMetadata` método con la `CustomRangeMetadata` instancia como argumento para establecer los metadatos del rango personalizado.
-1. Utilice el `MediaPlayer.replaceCurrentResource` método con la `MediaPlayerItemConfig` instancia como argumento para establecer que el nuevo recurso sea el recurso actual.
-1. Espere un `STATE_CHANGED` evento, que informa de que el reproductor está en el `PREPARED` estado.
-1. Reproducción de vídeo Inicio llamando `MediaPlayer.play`.
+1. Traduzca la información de posicionamiento de anuncios fuera de banda en una lista/matriz de clase `RepaceTimeRange`.
+1. Cree una instancia de la clase `CustomRangeMetadata` y utilice su método `setTimeRangeList` con la lista/matriz como argumento para establecer su lista de intervalo de tiempo.
+1. Utilice su método `setType` para establecer el tipo en `MARK_RANGE`.
+1. Utilice el método `MediaPlayerItemConfig.setCustomRangeMetadata` con la instancia `CustomRangeMetadata` como argumento para establecer los metadatos del rango personalizado.
+1. Utilice el método `MediaPlayer.replaceCurrentResource` con la instancia `MediaPlayerItemConfig` como argumento para establecer que el nuevo recurso sea el recurso actual.
+1. Espere un evento `STATE_CHANGED`, que informa de que el reproductor está en el estado `PREPARED`.
+1. Reproducción de vídeo inicio llamando a `MediaPlayer.play`.
 
 Este es el resultado de completar las tareas en este ejemplo:
 
-* Si un `ReplaceTimeRange` se superpone a otro en la línea de tiempo de reproducción, por ejemplo, la posición de inicio de un `ReplaceTimeRange` es anterior a una posición final ya colocada, TVSDK ajusta silenciosamente el inicio de la infracción `ReplaceTimeRange` para evitar el conflicto.
+* Si un `ReplaceTimeRange` se superpone a otro en la línea de tiempo de reproducción, por ejemplo, la posición de inicio de un `ReplaceTimeRange` es anterior a una posición final ya colocada, TVSDK ajusta en silencio el inicio del `ReplaceTimeRange` infractor para evitar el conflicto.
 
-   Esto hace que el ajuste sea `ReplaceTimeRange` más corto que el especificado originalmente. Si el ajuste da como resultado una duración de cero, TVSDK suprime de forma silenciosa la infracción `ReplaceTimeRange`.
+   Esto hace que el `ReplaceTimeRange` ajustado sea más corto que el especificado originalmente. Si el ajuste da como resultado una duración de cero, TVSDK suprime de forma silenciosa la infracción `ReplaceTimeRange`.
 
 * TVSDK busca intervalos de tiempo adyacentes para los saltos de publicidad personalizados y los agrupa en pausas de publicidad independientes.
 
 Los intervalos de tiempo no adyacentes a ningún otro intervalo de tiempo se traducen en pausas publicitarias que contienen un solo anuncio.
 
-* Si la aplicación intenta cargar un recurso de medios cuya configuración contiene `CustomRangeMetadata` que solo se puede usar en los marcadores de anuncios personalizados de contexto, TVSDK emite una excepción si el recurso subyacente no es de tipo VOD.
+* Si la aplicación intenta cargar un recurso de medios cuya configuración contiene `CustomRangeMetadata` que solo se puede usar en los marcadores de publicidad personalizados de contexto, TVSDK emite una excepción si el recurso subyacente no es de tipo VOD.
 
-* Cuando se trata de marcadores de publicidad personalizados, TVSDK desactiva otros mecanismos de resolución de publicidad (por ejemplo, Adobe Primetime y decisiones).
+* Cuando se trata de marcadores de publicidad personalizados, TVSDK desactiva otros mecanismos de resolución de publicidad (por ejemplo, Adobe Primetime y decisiones de publicidad).
 
    Puede utilizar cualquier módulo TVSDK de resolución de anuncios o el mecanismo de marcadores de anuncios personalizados. Cuando se utilizan marcadores de publicidad personalizados, el contenido de la publicidad se considera resuelto y se coloca en la línea de tiempo.
 
