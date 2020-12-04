@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Control de la visibilidad de los subtítulos opcionales{#control-closed-caption-visibility}
+# Controlar la visibilidad de los subtítulos opcionales{#control-closed-caption-visibility}
 
 Puede controlar la visibilidad de los subtítulos opcionales. Cuando la visibilidad está activada, se muestra la pista seleccionada actualmente. Si cambia la pista que está actualizada, la configuración de visibilidad permanece igual.
 
@@ -31,7 +31,7 @@ Puede controlar la visibilidad de los subtítulos opcionales. Cuando la visibili
 >public static const VISIBLE:String = visible;
 >```
 
-1. Espere a que el `MediaPlayer` estado PREPARADO (consulte [Esperar un estado](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)válido).
+1. Espere a que `MediaPlayer` tenga al menos el estado PREPARADO (consulte [Espere a que se muestre un estado válido](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
 1. Para obtener la configuración de visibilidad actual de los subtítulos cerrados, utilice el método getter en `MediaPlayer`, que devuelve un valor de visibilidad.
 
    ```
