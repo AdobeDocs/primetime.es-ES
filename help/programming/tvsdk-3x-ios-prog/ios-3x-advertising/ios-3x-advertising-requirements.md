@@ -1,18 +1,21 @@
 ---
-description: Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de toma de decisiones de anuncios de Adobe Primetime.
-seo-description: Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de toma de decisiones de anuncios de Adobe Primetime.
+description: Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de Adobe Primetime para la toma de decisiones de publicidad.
+seo-description: Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de Adobe Primetime para la toma de decisiones de publicidad.
 seo-title: Requisitos de publicidad
 title: Requisitos de publicidad
 uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 0%
 
 ---
 
 
 # Requisitos de publicidad {#advertising-requirements}
 
-Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de toma de decisiones de anuncios de Adobe Primetime.
+Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de Adobe Primetime para la toma de decisiones de publicidad.
 
 <!--<a id="section_A2966DC850E140FE9400A1D9E412F819"></a>-->
 
@@ -23,7 +26,7 @@ Para incorporar publicidades en el contenido de vídeo, asegúrese de que la pub
 * La versión HLS del contenido de publicidad no puede ser superior a la versión HLS del contenido principal.
 * Las publicidades deben ser multiplexadas y contener una representación solo de audio, independientemente de si el contenido principal está multiplexado.
 * Las listas de reproducción de anuncios deben tener las mismas representaciones de velocidad de bits que las representaciones de la lista de reproducción de contenido principal.
-* La duración objetivo y la duración del fragmento individual de una publicidad no pueden superar la duración objetivo del contenido principal.
+* La duración del destinatario y la duración del fragmento individual de un anuncio no pueden superar la duración del destinatario del contenido principal.
 * Si el contenido principal contiene un flujo de solo audio, el contenido de la publicidad también debe contener un flujo de solo audio.
 * Si el contenido principal contiene flujos de subtítulos, el contenido de la publicidad debe estar sin cifrar.
 * Si el contenido principal es una velocidad de bits múltiple (MBR), el contenido de la publicidad también debe ser MBR.
