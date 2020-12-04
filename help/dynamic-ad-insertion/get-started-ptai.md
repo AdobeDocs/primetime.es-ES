@@ -18,7 +18,7 @@ El Ad Insertion Primetime interactúa con las aplicaciones cliente de envío de 
 
 Una vez configurado correctamente el sistema, un flujo de trabajo típico podría tener el siguiente aspecto:
 
-1. La aplicación cliente genera una URL [de](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) Bootstrap con información sobre el flujo de vídeo y envía una solicitud de GET a Primetime Ad Insertion.
+1. La aplicación cliente genera una [URL de Bootstrap](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md) con información sobre el flujo de vídeo y envía una solicitud de GET a Primetime Ad Insertion.
 
 1. Primetime Ad Insertion responde enviando el manifiesto de contenido desde la CDN del editor a la aplicación cliente.
 
@@ -32,6 +32,6 @@ Una vez configurado correctamente el sistema, un flujo de trabajo típico podrí
 
 1. Primetime Ad Insertion entrega los manifiestos finales, incluidos los anuncios, a la aplicación cliente para su reproducción.
 
-1. El envío y la visibilidad de la publicidad se pueden medir mediante el seguimiento de la publicidad del lado del cliente o del servidor; consulte [Configuración del seguimiento](set-up-ad-tracking.md)de la publicidad.
+1. El envío y la visibilidad de la publicidad se pueden medir mediante el seguimiento de publicidad del cliente o del servidor; consulte [Configuración del seguimiento de publicidad](set-up-ad-tracking.md).
 
 Primetime Ad Insertion admite la mayoría de las configuraciones de cliente para HLS/DASH.
