@@ -6,6 +6,9 @@ title: Ejemplo Permitir que los usuarios cambien el seguimiento de rótulos
 uuid: 4b69d569-0d6e-4388-9fe3-488e2a4d762d
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Este es un ejemplo de cómo crear un botón que permite al usuario seleccionar u
      android:text="CC" /> 
    ```
 
-1. Convierta la lista de pistas de subtítulos opcionales disponibles en una matriz de cadenas. Las pistas de subtítulos opcionales que tienen actividad (es decir, los canales para los que TVSDK ha descubierto datos) se marcan de forma correspondiente:
+1. Convierta la lista de pistas de subtítulos opcionales disponibles en una matriz de cadenas. Las pistas de subtítulos opcionales que tienen actividad (es decir, canales para los que TVSDK ha descubierto datos) se marcan de manera acorde:
 
    ```java
    /** 
@@ -54,7 +57,7 @@ Este es un ejemplo de cómo crear un botón que permite al usuario seleccionar u
    } 
    ```
 
-1. Cuando el usuario hace clic en el botón, muestra un cuadro de diálogo que enumera todas las pistas de CC predeterminadas.
+1. Cuando el usuario hace clic en el botón, muestra un cuadro de diálogo que lista todas las pistas de CC predeterminadas.
 
    ```java
       public void selectClosedCaptioningClick(View view) { 
