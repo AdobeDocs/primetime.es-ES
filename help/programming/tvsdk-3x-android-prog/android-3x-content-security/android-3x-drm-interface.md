@@ -6,13 +6,16 @@ title: Información general sobre la interfaz de DRM de Primetime
 uuid: 9e6f6ae6-7193-40fe-bc9d-d8de33705f5d
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '300'
+ht-degree: 0%
 
 ---
 
 
-# Información general sobre la interfaz de DRM de Primetime {#primetime-drm-interface-overview}
+# Información general de la interfaz DRM de Primetime {#primetime-drm-interface-overview}
 
-El elemento clave del lado del cliente de la solución Primetime DRM es el Administrador de DRM. La aplicación de ejemplo que se incluye con el SDK para Android también incluye una `DRMHelper` clase que puede utilizarse para facilitar la implementación de determinadas operaciones de DRM.
+El elemento clave del lado del cliente de la solución Primetime DRM es el Administrador de DRM. La aplicación de ejemplo que se incluye con el SDK para Android también incluye una clase `DRMHelper` que puede utilizarse para facilitar la implementación de determinadas operaciones de DRM.
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
@@ -30,10 +33,10 @@ Estos son los elementos de API más importantes para trabajar con DRM:
 
    >[!TIP]
    >
-   >Esta API devolverá un `DRMManager` objeto válido solo después de que se `MediaPlayerEvent.DRM_METADATA` active la opción. Si llama `getDRMManager()` antes de que se active este evento, puede que devuelva NULL.
+   >Esta API devolverá un objeto `DRMManager` válido sólo después de activar `MediaPlayerEvent.DRM_METADATA`. Si llama a `getDRMManager()` antes de que se active este evento, podría devolver NULL.
 
-* Clase `DRMHelper` auxiliar, que resulta útil al implementar flujos de trabajo de DRM.
-* Método `DRMHelper` de cargador de metadatos que carga los metadatos DRM cuando se encuentran en una URL independiente del medio.
+* La clase auxiliar `DRMHelper`, que resulta útil al implementar flujos de trabajo DRM.
+* Método de carga de metadatos `DRMHelper`, que carga metadatos DRM cuando se encuentra en una dirección URL independiente del medio.
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -41,7 +44,7 @@ Estos son los elementos de API más importantes para trabajar con DRM:
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* Un `DRMHelper` método para comprobar los metadatos DRM y determinar si se requiere autenticación.
+* Un método `DRMHelper` para comprobar los metadatos de DRM y determinar si se requiere autenticación.
 
    ```java
    /** 
@@ -82,4 +85,4 @@ Estos son los elementos de API más importantes para trabajar con DRM:
 
 * Eventos que notifican a la aplicación sobre diversas actividades y estados de DRM.
 
-Para obtener más información sobre DRM, consulte la documentación [de](https://helpx.adobe.com/primetime/user-guide.html)DRM.
+Para obtener más información sobre DRM, consulte la [documentación de DRM](https://helpx.adobe.com/primetime/user-guide.html).
