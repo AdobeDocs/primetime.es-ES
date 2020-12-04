@@ -6,6 +6,9 @@ title: Configurar la interfaz de usuario del reproductor
 uuid: 868b4cf7-e750-4a53-87d9-b8878c5ee33a
 translation-type: tm+mt
 source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+workflow-type: tm+mt
+source-wordcount: '140'
+ht-degree: 0%
 
 ---
 
