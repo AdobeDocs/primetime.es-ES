@@ -6,6 +6,9 @@ title: Responder a los clics en publicidades
 uuid: abc5de2f-3ab0-4e00-908c-ea8b31387d4f
 translation-type: tm+mt
 source-git-commit: 3fdae2b6babb578d2cacff970fd9c7b53ad2c5dc
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 0%
 
 ---
 
@@ -17,13 +20,13 @@ TVSDK le proporciona información para que pueda actuar en las publicidades de p
 Para TVSDK para Android, solo se puede hacer clic en las publicidades lineales.
 Cuando un usuario hace clic en una publicidad o en un botón relacionado, la aplicación debe responder. TVSDK proporciona información sobre la dirección URL de destino del clic.
 
-1. Para configurar un detector de eventos para TVSDK y proporcionar la información de pulsaciones, regístrese `AdClickedEventListener.onAdClicked`.
+1. Para configurar un detector de evento para TVSDK y proporcionar la información de pulsaciones, registre `AdClickedEventListener.onAdClicked`.
 
    Cuando un usuario hace clic en un anuncio o en un botón relacionado, TVSDK distribuye esta notificación, incluida la información sobre el destino del clic.
 1. Monitoree las interacciones del usuario en las publicidades en las que se puede hacer clic.
-1. Cuando el usuario toque o haga clic en el anuncio o botón, para notificar a TVSDK, llame `notifyClick` al `MediaPlayerView`.
-1. Escuche el `onAdClick(AdClickEvent event)` evento desde TVSDK.
-1. Para recuperar la dirección URL de pulsación y la información relacionada, utilice los métodos de captador para la `AdClickEvent` instancia.
+1. Cuando el usuario toque o haga clic en el anuncio o botón, para notificar a TVSDK, llame a `notifyClick` en el `MediaPlayerView`.
+1. Escuche el evento `onAdClick(AdClickEvent event)` de TVSDK.
+1. Para recuperar la dirección URL de pulsación y la información relacionada, utilice los métodos de captador para la instancia `AdClickEvent`.
 1. Pause el vídeo.
 
    Para obtener más información sobre la pausa del vídeo, consulte [Pausa y reanudación de la reproducción](../../ad-insertion/clickable-ads/android-3x-pausing-resuming-playback.md).
