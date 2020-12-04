@@ -1,14 +1,17 @@
 ---
-seo-title: Envío de código/Contenido del paquete
-title: Envío de código/Contenido del paquete
+seo-title: Envío de código / Contenido del paquete
+title: Envío de código / Contenido del paquete
 uuid: 13de2fd4-9079-496c-a087-25176c118864
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '98'
+ht-degree: 0%
 
 ---
 
 
-# Envío de código/Contenido del paquete{#code-delivery-package-contents}
+# Envío de código / Contenido del paquete{#code-delivery-package-contents}
 
 El paquete del servidor de individualización local de Adobe Primetime DRM contiene lo siguiente:
 
@@ -25,7 +28,7 @@ El paquete del servidor de individualización local de Adobe Primetime DRM conti
    * [!DNL jsafe.dll] (Windows)
 
 * [!DNL adobe-flashaccess-i15n-setup.jar] - Utilidad para cifrar contraseñas de credenciales de servidor
-* [!DNL ROOT] - contiene un [!DNL crossdomain.xml] archivo
+* [!DNL ROOT] - contiene un  [!DNL crossdomain.xml] archivo
 
 * Archivos de caché de ECI: descargados previamente
 * [!DNL addIndivCert.py] - Una secuencia de comandos para actualizar la raíz de confianza de un servidor de licencias para admitir las personalizaciones de OnPremises
