@@ -70,11 +70,11 @@ Integrar y certificar VHL 2.0 en iOS TVSDK : Reduzca la barrera en la implementa
 
 * Información de publicidad de red
 
-   Las API de TVSDK ahora proporcionan información adicional sobre las respuestas de VAST de terceros. La ID de publicidad, el sistema de publicidad y las extensiones de publicidad VAST se proporcionan en `PTNetworkAdInfo` clase a la que se puede acceder mediante `networkAdInfo` la propiedad en un recurso de publicidad. Esta información se puede utilizar para la integración con otras plataformas de análisis de publicidad, como **Moat Analytics**.
+   Las API de TVSDK ahora proporcionan información adicional sobre las respuestas de VAST de terceros. El ID de publicidad, el sistema de publicidad y las extensiones de publicidad VAST se proporcionan en la clase `PTNetworkAdInfo` a la que se puede acceder mediante la propiedad `networkAdInfo` de un recurso de publicidad. Esta información se puede utilizar para la integración con otras plataformas de Ad Analytics, como **Análisis de moat**.
 
 **Versión 1.4.31**
 
-* **Métricas** de facturación Para dar cabida a los clientes que solo desean pagar por lo que utilizan, en lugar de una tasa fija independientemente del uso real, Adobe recopila métricas de uso y utiliza estas métricas para determinar cuánto facturar a los clientes.
+* **Métricas** de facturación Para dar cabida a los clientes que desean pagar solo por lo que utilizan, en lugar de una tasa fija independientemente del uso real, Adobe recopila métricas de uso y utiliza estas métricas para determinar cuánto facturar a los clientes.
 
 Cada vez que TVSDK genera un evento de inicio de flujo, el reproductor inicio enviar mensajes HTTP periódicamente al sistema de facturación del Adobe. El período, conocido como duración facturable, puede ser diferente para VOD estándar, VOD pro (anuncios intermedios habilitados) y contenido activo. La duración predeterminada para cada tipo de contenido es de 30 minutos, pero el contrato con Adobe determina los valores reales.
 
@@ -84,7 +84,7 @@ Cada vez que TVSDK genera un evento de inicio de flujo, el reproductor inicio en
 
 En la clase PTSDKConfig, se ha añadido la API forceHTTPS.
 
-La clase PTSDKConfig proporciona métodos para aplicar SSL en las solicitudes realizadas a los servidores de Adobe Primetime de toma de decisiones de publicidad, DRM y Video Analytics. Para obtener más información, consulte los `forceHTTPS` métodos y `isForcingHTTPS` en esta clase. Si un manifiesto se carga a través de HTTPS, TVSDK conserva el uso de contenido de HTTPS y respeta este uso al cargar cualquier URL relativa de ese manifiesto.
+La clase PTSDKConfig proporciona métodos para aplicar SSL en las solicitudes realizadas a los servidores de Adobe Primetime de toma de decisiones de publicidad, DRM y Video Analytics. Para obtener más información, consulte los métodos `forceHTTPS` y `isForcingHTTPS` en esta clase. Si un manifiesto se carga a través de HTTPS, TVSDK conserva el uso de contenido de HTTPS y respeta este uso al cargar cualquier URL relativa de ese manifiesto.
 
 **Nota**: Las solicitudes a dominios de terceros, como píxeles de seguimiento de publicidad, URL de publicidad y contenido, y solicitudes similares, no se modifican, y es responsabilidad de los proveedores de contenido y los servidores de publicidad proporcionar direcciones URL compatibles con HTTPS.
 
@@ -92,7 +92,7 @@ La clase PTSDKConfig proporciona métodos para aplicar SSL en las solicitudes re
 
 Primetime iOS TVSDK ahora es compatible con los elementos creativos de Javascript VPAID 2.0 para permitir una experiencia publicitaria interactiva y enriquecida.
 
-Para obtener más información sobre VPAID 2.0, consulte Compatibilidad con [anuncios](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-vpaid-2.0-ads.md)VPAID.
+Para obtener más información sobre VPAID 2.0, consulte [Compatibilidad con anuncios VPAID](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-vpaid-2.0-ads.md).
 
 **Versión 1.4.17**
 
@@ -128,7 +128,7 @@ Para obtener más información sobre VPAID 2.0, consulte Compatibilidad con [anu
 
 En el caso de anuncios VAST (creativos) con la regla de reserva activada, el TVSDK trata una publicidad con un tipo MIME no válido como una publicidad vacía e intenta utilizar las publicidades de reserva en su lugar. Puede configurar algunos aspectos del comportamiento de reserva.
 
-Para obtener más información, consulte [Reproducción de anuncios para anuncios](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md)VAST y VMAP.
+Para obtener más información, consulte [Retorno de anuncios para anuncios VAST y VMAP](../programming/tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-ad-fallback.md).
 
 **Versión 1.4.9**
 
@@ -180,7 +180,7 @@ Las directivas DRM ahora pueden especificar la resolución más alta permitida, 
 
 >[!NOTE]
 >
->TVSDK **no admite** las siguientes funciones:
+>Las siguientes funciones no son **compatibles con el SDK de TVSDK:**
 >
 >* Movimiento lento, en cualquier plataforma o versión.
 >* Juego de trucos en vivo.
@@ -240,7 +240,7 @@ Comment Type: draft
    * Se han corregido los problemas de compilación con TVSDK en XCode 10. Debido a los requisitos de XCode 10, las aplicaciones compiladas en TVSDK para iOS 1.4.45 y posteriores requieren un destinatario de implementación mínimo como iOS 7.0
 
 * ticket #36321 - Discrepancia observada en el rango buscable entre la instancia de PTMediaPlayer y AVPlayer en el estado &quot;Reproduciendo&quot;.
-* Billete n.º 36493 - `libstdc++` compatibilidad con iOS 12
+* Billete n.º 36493: `libstdc++` compatibilidad con iOS 12
 
    * Se han corregido los problemas de compilación con TVSDK en iOS 12. Las aplicaciones creadas a partir de TVSDK para iOS 1.4.45 requieren un destinatario de implementación mínimo como iOS 7.0
 
@@ -430,7 +430,7 @@ Se corrigieron varios bloqueos relacionados con la sincronización.
 
 * (ZD# 28481) - Interrupción de las tarifas debido a que la clave incorrecta se anexa al final de una pausa publicitaria para esos flujos FER
 
-Para un flujo FER, la clave antes de la pausa publicitaria se inserta después del final de la pausa publicitaria. Este problema se resolvió agregando la *última clave* vista al final de la pausa publicitaria.
+Para un flujo FER, la clave antes de la pausa publicitaria se inserta después del final de la pausa publicitaria. Este problema se resolvió agregando la *última clave vista* al final de la pausa publicitaria.
 
 **Versión 1.4.33** (1.4.33.803 para iOS 6.0+)
 
@@ -442,9 +442,9 @@ Habilitado mediante el envío de la dirección URL creativa original para la sol
 
 Este problema se resolvió actualizando la carga de recursos para que se vieran desde todos los paquetes disponibles.
 
-* (ZD# 27460) Primera llamada de Anuncio de Midroll - POST a cdn.auditude<span></span>.com que devuelve 403.
+* (ZD# 27460) Primera llamada de anuncio de Midroll - POST a cdn.auditude<span></span>.com que devuelve 403.
 
-La nueva cuenta de CDN no puede gestionar una solicitud de CDN POST. Este problema se resolvió actualizando el código para que la solicitud de `cdn.auditude.com` publicidad sea GET en lugar de POST.
+La nueva cuenta de CDN no puede gestionar una solicitud de CDN POST. Este problema se resolvió actualizando el código para que la solicitud de publicidad `cdn.auditude.com` sea GET en lugar de POST.
 
 **Versión 1.4.32** (1.4.32.792 para iOS 6.0+)
 
@@ -460,7 +460,7 @@ El problema se resolvió colocando la etiqueta al principio de la lista de repro
 
 * (ZD# 24528) Implementar métricas de uso de TVSDK para la facturación
 
-Para obtener más información, consulte Métricas [de facturación](../programming/tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md).
+Para obtener más información, consulte [Métricas de facturación](../programming/tvsdk-1.4-for-ios/c-psdk-ios-1.4-billing/c-psdk-ios-1.4-billing.md).
 
 * (ZD# 24642) Compatibilidad con imágenes en imágenes para TVSDK
 
@@ -796,7 +796,7 @@ Este problema se resolvió actualizando la implementación de la API de PTMediaP
 
 Este problema se resolvió permitiendo que las aplicaciones establecieran su propio valor de cursor de reproducción.
 
-* Zendesk #18518 - Si no se especifica el nombre del vídeo, el nombre del TVSDK se establece de forma predeterminada en el reproductor basado en *PSDK.*
+* Zendesk #18518 - Si no se especifica el nombre del vídeo, el nombre del TVSDK es el predeterminado *reproductor basado en PSDK.*
 
 Este problema se resolvió eliminando el valor predeterminado del nombre del reproductor.
 
@@ -810,7 +810,7 @@ En lugar de enviar un error cuando el contenido no es M3U8, DRM Framework devuel
 
 La misma resolución que Zendesk #2228
 
-* No se rellena la macro de Zendesk #3304 - VAST 3.0 `[ERRORCODE]`
+* No se rellena la macro Zendesk #3304 - VAST 3.0 `[ERRORCODE]`
 
 Se ha solucionado el problema por el que el SDK de Auditude no podía enviar un ping cuando la URL de seguimiento tenía espacios al principio.
 
@@ -880,7 +880,7 @@ Se corrigió un bloqueo intermitente debido a problemas de concurrencia.
 
 * (ZD #3304): no se rellena la macro VAST 3.0 `[ERRORCODE]`
 
-   * El código de error 400 se mostrará si la publicidad en línea tiene un elemento creativo incorrecto.
+   * El código de error 400 se mostrará si está en línea   la publicidad tiene un elemento creativo negativo.
    * `[ERRORCODE]` la macro estará codificada en la dirección URL.
 
 * (ZD #3865) Integración de Heartbeat con anuncios de IMA
@@ -984,7 +984,7 @@ Compatibilidad con el ping de direcciones URL de seguimiento de errores de publi
 * Es posible que el vídeo de rotación de licencia no se reproduzca en iOS 11 y que se reproduzca correctamente en iOS 9.x e iOS 10.x.
 * En la compatibilidad con VPAID 2.0, si la reproducción está activa en AirPlay, se omiten las publicidades VPAID.
 * drmNativeInterface.framework no se vincula correctamente cuando el destinatario mínimo se establece en iOS7 (o posterior).\
-   Solución: Especifique explícitamente el `libstdc++6`.  biblioteca dylib de la siguiente manera: Vaya a Destinatario->Generar fases->Vincular binario con bibliotecas y agregar `libstdc++.6.dylib`.
+   Solución: Especifique explícitamente el `libstdc++6`.  biblioteca dylib de la siguiente manera: Vaya a Destinatario->Fases de compilación->Vincular binario con bibliotecas y agregue `libstdc++.6.dylib`.
 
 * No se insertó la publicidad posterior para reemplazar la API.
 * Al buscar en una pausa publicitaria (sin salir de ella) se emite una notificación de inicio de anuncios de duplicado y pausa publicitaria
@@ -994,4 +994,4 @@ Compatibilidad con el ping de direcciones URL de seguimiento de errores de publi
 
 ## Recursos útiles {#helpful-resources}
 
-* Consulte la documentación de ayuda completa en la página de información y asistencia [de](https://helpx.adobe.com/support/primetime.html) Adobe Primetime.
+* Consulte la documentación de ayuda completa en la página [Información y soporte de Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
