@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Funciones compatibles de DASH{#supported-dash-features}
+# Funciones admitidas de DASH{#supported-dash-features}
 
 El SDK TVSDK del explorador admite una serie de funciones DASH que se pueden implementar para agregar funcionalidad a las aplicaciones de vídeo.
 
@@ -26,7 +26,7 @@ El SDK TVSDK del explorador admite una serie de funciones DASH que se pueden imp
 
 >[!TIP]
 >
->En las tablas de características siguientes,  ![](assets/supported15.png)
+>En las tablas de la matriz de características siguientes, ![](assets/supported15.png)
 >significa que la función es compatible con la versión actual.
 
 Se admiten las siguientes funciones:
@@ -90,7 +90,7 @@ Se admiten las siguientes funciones:
 | Integraciones | VOD + Activo | Facturación | ![](assets/supported15.png) |
 | Integraciones | VOD + Activo | Explorar | ![](assets/supported15.png) |
 
-## Funciones avanzadas de inserción de anuncios DASH (CSAI) {#dash-advanced-insertion-features}
+## Funciones avanzadas de inserción de anuncios (CSAI) de DASH {#dash-advanced-insertion-features}
 
 | Categoría | Tipo de contenido | Función | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
@@ -102,7 +102,7 @@ Se admiten las siguientes funciones:
 | Ad Insertion | VOD | Publicidades complementarias, publicidades tipo titular y publicidades en las que se puede hacer clic | No admitido |
 | Ad Insertion | VOD | VPAID 2.0 | No admitido |
 
-## Funciones de inserción de anuncios principales de DASH (CSAI) {#dash-core-ad-insertion}
+## Características de inserción de anuncios principales de DASH (CSAI) {#dash-core-ad-insertion}
 
 | Categoría | Tipo de contenido | Función | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
@@ -115,7 +115,7 @@ Se admiten las siguientes funciones:
 | Ad Insertion | VOD + Activo | VMAP 1.0 | Solo VOD |
 | Ad Insertion | VOD + Activo | CRS v3.1 | Solo VOD |
 
-## Funciones de protección de contenido DASH {#dash-content-protection}
+## Características de protección de contenido de DASH {#dash-content-protection}
 
 <table id="table_hrb_p2g_xx">  
  <thead> 
@@ -172,7 +172,7 @@ Se admiten las siguientes funciones:
 | Reproducción | VOD + Activo | Facturación | ![](assets/supported15.png) |
 | Reproducción | VOD + Activo | Explorar | ![](assets/supported15.png) |
 
-## Funciones de reproducción principales de DASH {#dash-core-playback}
+## Características de reproducción del núcleo DASH {#dash-core-playback}
 
 | Categoría | Tipo de contenido | Función | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
