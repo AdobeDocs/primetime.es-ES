@@ -1,54 +1,57 @@
 ---
-description: Desde el momento en que se crea la instancia de MediaPlayer hasta el momento en que finaliza, esta instancia pasa de un estado a otro.
-seo-description: Desde el momento en que se crea la instancia de MediaPlayer hasta el momento en que finaliza, esta instancia pasa de un estado a otro.
+description: Desde el momento en que se crea la instancia de MediaPlayer hasta el momento en que finaliza, esta instancia transición de un estado a otro.
+seo-description: Desde el momento en que se crea la instancia de MediaPlayer hasta el momento en que finaliza, esta instancia transición de un estado a otro.
 seo-title: Ciclo de vida y estados del objeto MediaPlayer
 title: Ciclo de vida y estados del objeto MediaPlayer
 uuid: fe76ea80-aaa8-43bc-9b81-85e0551f70dd
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '403'
+ht-degree: 0%
 
 ---
 
 
 # Ciclo de vida y estados del objeto MediaPlayer{#life-cycle-and-states-of-the-mediaplayer-object}
 
-Desde el momento en que se crea la instancia de MediaPlayer hasta el momento en que finaliza, esta instancia pasa de un estado a otro.
+Desde el momento en que se crea la instancia de MediaPlayer hasta el momento en que finaliza, esta instancia transición de un estado a otro.
 
 Estos son los posibles estados:
 
-* **IDLE**: `MediaPlayerStatus.IDLE`
+* **IDLE**:  `MediaPlayerStatus.IDLE`
 
-* **INICIALIZACIÓN**: `MediaPlayerStatus.INITIALIZING`
+* **INICIALIZACIÓN**:  `MediaPlayerStatus.INITIALIZING`
 
-* **INICIALIZADO**: `MediaPlayerStatus.INITIALIZED`
+* **INICIALIZADO**:  `MediaPlayerStatus.INITIALIZED`
 
-* **PREPARACIÓN**: `MediaPlayerStatus.PREPARING`
+* **PREPARACIÓN**:  `MediaPlayerStatus.PREPARING`
 
-* **PREPARADO**: `MediaPlayerStatus.PREPARED`
+* **PREPARADO**:  `MediaPlayerStatus.PREPARED`
 
-* **REPRODUCCIÓN**: `MediaPlayerStatus.PLAYING`
+* **REPRODUCCIÓN**:  `MediaPlayerStatus.PLAYING`
 
-* **EN PAUSA**: `MediaPlayerStatus.PAUSED`
+* **EN PAUSA**:  `MediaPlayerStatus.PAUSED`
 
-* **BUSCANDO**: `MediaPlayerStatus.SEEKING`
+* **BUSCANDO**:  `MediaPlayerStatus.SEEKING`
 
-* **COMPLETAR**: `MediaPlayerStatus.COMPLETE`
+* **COMPLETAR**:  `MediaPlayerStatus.COMPLETE`
 
-* **ERROR**: `MediaPlayerStatus.ERROR`
+* **ERROR**:  `MediaPlayerStatus.ERROR`
 
-* **LANZADO**: `MediaPlayerStatus.RELEASED`
+* **LANZADO**:  `MediaPlayerStatus.RELEASED`
 
-La lista completa de estados se define en `MediaPlayerStatus`.
+La lista completa de los estados se define en `MediaPlayerStatus`.
 
-Conocer el estado del reproductor es útil porque algunas operaciones solo se permiten mientras el reproductor se encuentra en un estado concreto. Por ejemplo, `play` no se puede llamar mientras esté en el estado IDLE. Debe llamarse después de alcanzar el estado PREPARADO. El estado ERROR también cambia lo que puede suceder a continuación.
+Conocer el estado del reproductor es útil porque algunas operaciones solo se permiten mientras el reproductor se encuentra en un estado concreto. Por ejemplo, no se puede llamar a `play` mientras se encuentra en el estado IDLE. Debe llamarse después de alcanzar el estado PREPARADO. El estado ERROR también cambia lo que puede suceder a continuación.
 
-A medida que se carga y reproduce un recurso multimedia, el reproductor realiza la siguiente transición:
+A medida que se carga y reproduce un recurso de medios, el reproductor transición de la siguiente manera:
 
 1. El estado inicial es IDLE.
-1. La aplicación llama `MediaPlayer.replaceCurrentResource`, que mueve el reproductor al estado INICIALIZANDO.
+1. La aplicación llama a `MediaPlayer.replaceCurrentResource`, que mueve el reproductor al estado INITIALIZANDO.
 1. Si TVSDK del explorador carga correctamente el recurso, el estado cambia a INITIALIZED.
-1. La aplicación llama `MediaPlayer.prepareToPlay`y el estado cambia a PREPARING.
-1. El SDK del explorador prepara el flujo de medios e inicia la resolución de publicidad y la inserción de anuncios (si está activada).
+1. La aplicación llama a `MediaPlayer.prepareToPlay` y el estado cambia a PREPARING.
+1. El SDK del explorador prepara el flujo de medios y inicio la resolución de la publicidad y la inserción de la publicidad (si está habilitada).
 
    Cuando se completa este paso, las publicidades se insertan en la línea de tiempo o el procedimiento de publicidad ha fallado y el estado del reproductor cambia a PREPARADO.
 1. A medida que la aplicación se reproduce y pausa los medios, el estado se mueve entre REPRODUCIR y PAUSAR.
