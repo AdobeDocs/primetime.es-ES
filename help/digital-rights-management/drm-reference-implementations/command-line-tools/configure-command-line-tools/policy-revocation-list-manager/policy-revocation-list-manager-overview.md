@@ -1,24 +1,27 @@
 ---
-seo-title: Administrador de listas de revocación de DRM
-title: Administrador de listas de revocación de DRM
+seo-title: Administrador de Listas de revocación de DRM
+title: Administrador de Listas de revocación de DRM
 uuid: 30ab5f54-4aac-4535-b30c-b4e5dbfbc475
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '446'
+ht-degree: 0%
 
 ---
 
 
-# Administrador de listas de revocación de DRM {#policy-revocation-list-manager}
+# Administrador de Listas de revocación de DRM {#policy-revocation-list-manager}
 
-Utilice la herramienta de línea de comandos del Administrador de listas de revocación de DRM de Primetime ( [!DNL AdobeRevocationListManager.jar]) para crear y administrar listas de revocación y para comprobar si las políticas se han revocado.
+Utilice la herramienta de línea de comandos del Administrador de Listas de revocación de DRM de Primetime ( [!DNL AdobeRevocationListManager.jar]) para crear y administrar listas de revocación y para comprobar si las políticas se han revocado.
 
-Antes de ejecutar [!DNL AdobeRevocationListManager.jar], debe establecer las propiedades en la sección Propiedades *del Administrador de listas de actualizaciones de* directivas y del Administrador de listas de revocación del archivo de configuración.
+Antes de ejecutar [!DNL AdobeRevocationListManager.jar], debe establecer las propiedades en la sección *Propiedades del Administrador de Listas de actualización de directivas y del Administrador de Listas de revocación* del archivo de configuración.
 
 >[!NOTE]
 >
->También puede especificar todas las propiedades del Administrador de listas de revocación desde la línea de comandos.
+>También puede especificar todas las propiedades del Administrador de Listas de revocación desde la línea de comandos.
 
-## Uso de la línea de comandos del Administrador de listas de revocación {#revocation-list-manager-command-line-usage}
+## Uso de la línea de comandos del Administrador de Listas de revocación {#revocation-list-manager-command-line-usage}
 
 ```
 java -jar AdobeRevocationListManager.jar 
@@ -52,7 +55,7 @@ java -jar AdobeRevocationListManager.jar
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c archivo de configuración</span> </td> 
-   <td colname="2" class="- topic/entry "><p class="- topic/p ">Especifica el nombre y la ubicación del archivo de configuración. </p><p class="- topic/p ">Si no especifica un nombre ni una ubicación, el Administrador de listas de revocación de DRM busca <span class="filepath"> flashaccesstools.properties</span> en el directorio de trabajo actual. </p><p>Nota:  Las opciones que especifique en la línea de comandos tendrán prioridad sobre las opciones que especifique en el archivo de configuración. </p>Especifica la ubicación del archivo de configuración. Si no aplica esta opción, el Administrador de listas de revocación busca <span class="filepath"> flashaccesstools.properties</span> en el directorio de trabajo. </td> 
+   <td colname="2" class="- topic/entry "><p class="- topic/p ">Especifica el nombre y la ubicación del archivo de configuración. </p><p class="- topic/p ">Si no especifica un nombre ni una ubicación, el Administrador de Listas de revocación de DRM busca <span class="filepath"> flashaccesstools.properties</span> en el directorio de trabajo actual. </p><p>Nota:  Las opciones que especifique en la línea de comandos tendrán prioridad sobre las opciones que especifique en el archivo de configuración. </p>Especifica la ubicación del archivo de configuración. Si no aplica esta opción, el Administrador de Listas de reubicación busca <span class="filepath"> flashaccesstools.properties</span> en el directorio de trabajo. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-d nombre de archivo</span> </td> 
@@ -68,7 +71,7 @@ java -jar AdobeRevocationListManager.jar
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-f filename[certfile]</span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Agrega todas las entradas de la lista de revocación existente. Sólo puede especificar un archivo existente. </p> <p class="- topic/p ">Si la lista existente se firmó con una credencial distinta a la que utilizó para firmar la nueva lista, debe especificar su archivo de certificado junto a para verificar su firma. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Añade todas las entradas de la lista de revocación existente. Sólo puede especificar un archivo existente. </p> <p class="- topic/p ">Si la lista existente se firmó con una credencial distinta a la que utilizó para firmar la nueva lista, debe especificar su archivo de certificado junto a para comprobar su firma. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
@@ -80,7 +83,7 @@ java -jar AdobeRevocationListManager.jar
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph">-r issuerName serialNumber revocationDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Revela el certificado identificado por <span class="codeph"> issuerName</span> y <span class="codeph"> serialNumber</span> en la fecha especificada. El <span class="codeph"> issuerName</span> debe utilizar el formato de nombre 509. Por ejemplo, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>. </p> <p>Debe especificar los números de serie en formato hexadecimal. También debe especificar la fecha de revocación en uno de los siguientes formatos: 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Revela el certificado identificado por <span class="codeph"> issuerName</span> y <span class="codeph"> serialNumber</span> en la fecha especificada. El <span class="codeph"> nombreDelEmisor</span> debe utilizar el formato de nombre 509. Por ejemplo, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>. </p> <p>Debe especificar los números de serie en formato hexadecimal. También debe especificar la fecha de revocación en uno de los siguientes formatos: 
      <ul id="ul_1524FBC6818248F3A2B271243E649400"> 
       <li id="li_BC618EA2332D42A59B1B5434CAFFD2AF"><span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-dd</span> </li> 
       <li id="li_97F77810D20C4CF2944EFCFF5DFAE467"><span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-dd-h24:min:seg</span> </li> 
@@ -91,7 +94,7 @@ java -jar AdobeRevocationListManager.jar
 
 ## Propiedades de configuración {#configuration-properties}
 
-Debe aplicar las credenciales para firmar listas de revocación. Las siguientes propiedades del Administrador de listas de revocación especifican un archivo PKCS12 que incluye credenciales para firmar listas de revocación (certificado del servidor de licencias), junto con la contraseña del certificado:
+Debe aplicar las credenciales para firmar listas de revocación. Las siguientes propiedades del Administrador de Listas de revocación especifican un archivo PKCS12 que incluye las credenciales para firmar listas de revocación (certificado del servidor de licencias), junto con la contraseña del certificado:
 
 * `revocation.sign.certfile=license-server-credentials.pfx`
 * `revocation.sign.certpass=password`
