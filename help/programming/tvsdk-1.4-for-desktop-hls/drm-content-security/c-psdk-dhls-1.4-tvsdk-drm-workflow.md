@@ -6,11 +6,14 @@ title: Implementación de DRM Primetime en una aplicación TSVDK
 uuid: 57f9d7ac-1148-4f69-9c9e-aa218d869f3e
 translation-type: tm+mt
 source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+workflow-type: tm+mt
+source-wordcount: '101'
+ht-degree: 0%
 
 ---
 
 
-# Implementación de DRM Primetime en una aplicación TSVDK {#implementing-primetime-drm-in-a-tsvdk-application}
+# Implementación de DRM de Primetime en una aplicación TSVDK {#implementing-primetime-drm-in-a-tsvdk-application}
 
 Primetime DRM está integrado en TVSDK, que simplifica la implementación de la protección de contenido en una aplicación TVSDK.
 
