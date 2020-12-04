@@ -1,14 +1,17 @@
 ---
-seo-title: Credenciales de Adobe Access
-title: Credenciales de Adobe Access
+seo-title: Credenciales de acceso a Adobe
+title: Credenciales de acceso a Adobe
 uuid: 22264bd0-f7df-43ff-a6e1-ad060cbc02ff
 translation-type: tm+mt
 source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+workflow-type: tm+mt
+source-wordcount: '80'
+ht-degree: 0%
 
 ---
 
 
-# Credenciales de Adobe Access{#adobe-access-credentials}
+# Credenciales de acceso a Adobe{#adobe-access-credentials}
 
 Se requieren 4 tipos de credenciales para utilizar Adobe Access:
 
