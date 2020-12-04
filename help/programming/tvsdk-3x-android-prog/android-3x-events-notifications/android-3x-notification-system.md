@@ -25,7 +25,7 @@ La aplicación puede recuperar información de notificación y estado. Con esta 
 
 `MediaPlayerNotification` proporciona información relacionada con el estado del reproductor.
 
-TVSDK proporciona una lista cronológica de `MediaPlayerNotification` las notificaciones y cada notificación contiene la siguiente información:
+TVSDK proporciona una lista cronológica de las notificaciones `MediaPlayerNotification` y cada notificación contiene la siguiente información:
 
 * Marca de hora
 * Metadatos de diagnóstico que constan de los siguientes elementos:
@@ -33,26 +33,26 @@ TVSDK proporciona una lista cronológica de `MediaPlayerNotification` las notifi
    * `type`:: INFORMACIÓN, ADVERTENCIA o ERROR.
    * `code`:: Una representación numérica de la notificación.
    * `name`:: Descripción legible en lenguaje natural de la notificación, como SEEK_ERROR
-   * `metadata`:: Pares clave/valor que contienen información relevante sobre la notificación. Por ejemplo, una clave llamada `URL` proporciona un valor que es una dirección URL relacionada con la notificación.
+   * `metadata`:: Pares clave/valor que contienen información relevante sobre la notificación. Por ejemplo, una clave denominada `URL` proporciona un valor que es una dirección URL relacionada con la notificación.
 
-   * `innerNotification`:: Referencia a otro `MediaPlayerNotification` objeto que afecta directamente a esta notificación.
+   * `innerNotification`:: Referencia a otro  `MediaPlayerNotification` objeto que afecta directamente a esta notificación.
 
 Puede almacenar esta información localmente para su posterior análisis o enviarla a un servidor remoto para que la registre y la represente en forma gráfica.
 
-## Configurar el sistema de notificaciones {#section_9E37C09ECFA54B3DA8D3AA9ED1BAFC17}
+## Configure el sistema de notificaciones {#section_9E37C09ECFA54B3DA8D3AA9ED1BAFC17}
 
 Puede escuchar notificaciones.
 
-El núcleo del sistema de notificaciones de Primetime Player es la `Notification` clase, que representa una notificación independiente.
+El núcleo del sistema de notificaciones de Primetime Player es la clase `Notification`, que representa una notificación independiente.
 
 Para recibir notificaciones, escuche las notificaciones de la siguiente manera:
 
-1. Implemente la `NotificationEventListener.onNotification()` llamada de retorno.
-1. TVSDK pasa un `NotificationEvent` objeto a la llamada de retorno.
+1. Implemente la devolución de llamada `NotificationEventListener.onNotification()`.
+1. TVSDK pasa un objeto `NotificationEvent` a la rellamada.
 
    >[!NOTE]
    >
-   >Los tipos de notificaciones se enumeran en la enumeración `Notification.Type` :
+   >Los tipos de notificaciones se enumeran en la enumeración `Notification.Type`:
 
    * `ERROR`
    * `INFO`
