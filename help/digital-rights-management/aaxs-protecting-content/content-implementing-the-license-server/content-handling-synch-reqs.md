@@ -4,6 +4,9 @@ title: Gestión de solicitudes de sincronización
 uuid: 37b2db09-4c09-4216-874b-b570a84569b6
 translation-type: tm+mt
 source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
+workflow-type: tm+mt
+source-wordcount: '162'
+ht-degree: 0%
 
 ---
 
@@ -18,4 +21,4 @@ source-git-commit: 53654b740b03c6a79394d30704a41186d4655237
 
 Los mensajes de sincronización se utilizan para sincronizar la hora del cliente con la hora del servidor. Si las licencias están incrustadas en el contenido y no es necesario recuperarlas de un servidor de licencias, es importante sincronizar el tiempo del cliente para evitar que este modifique su reloj a fin de evitar la caducidad de la licencia.
 
-Los mensajes de sincronización también se pueden utilizar para comunicar la información del estado del cliente al servidor ( `getClientState()`) para la detección de reversión. Consulte [Protección](../../aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-rollback-detection.md)de retroceso.
+Los mensajes de sincronización también se pueden utilizar para comunicar la información del estado del cliente al servidor ( `getClientState()`) para la detección de rollback. Consulte [Protección contra retroceso](../../aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-rollback-detection.md).
