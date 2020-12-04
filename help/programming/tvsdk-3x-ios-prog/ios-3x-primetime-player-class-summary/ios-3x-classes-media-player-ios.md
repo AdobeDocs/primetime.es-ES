@@ -6,11 +6,14 @@ title: Clases de reproductor multimedia
 uuid: 705c71b6-4e5e-46b5-a59d-13df977b04f2
 translation-type: tm+mt
 source-git-commit: b13f2d3f083a6ca333a4edba1c8d7261f7d448ad
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 0%
 
 ---
 
 
-# Clases de reproductor multimedia {#media-player-classes}
+# Clases de reproductor de medios {#media-player-classes}
 
 Puede utilizar la API Objective-C de Primetime Player para personalizar el comportamiento del reproductor.
 
@@ -23,10 +26,10 @@ Estas clases describen el reproductor de medios y sus recursos.
 | PTMediaPlayer | Define el componente raíz para la estructura de Primetime Player. Las aplicaciones crean una instancia de esta clase para reproducir un medio. Este componente envía notificaciones para que la aplicación sepa el estado del reproductor en cualquier momento. |
 | PTMediaPlayerClientFactory | Protocolo que describe los métodos que debe implementar una fábrica de cliente de reproductor de medios personalizada para proporcionar las instancias PTOpportunityResolver, PTContentResolver y PTAdPolicySelector disponibles. |
 | PTMediaPlayerItem | Representa un medio de audio y vídeo específico. |
-| PTMediaPlayerView | Gestiona el componente de vista del marco de trabajo de Primetime Player. |
+| PTMediaPlayerView | Gestiona el componente de vista del módulo de Primetime Player. |
 | PTMediaProfile | Representa el perfil de un único flujo en la lista de reproducción de variante. |
 | PTMediaSelectionOption | Representa un recurso de medios audiovisuales para dar cabida a diferentes preferencias de idioma, requisitos de accesibilidad o configuraciones de aplicación personalizadas. Tipos de opciones válidos:<ul><li>Subtítulos (PTMediaSelectionOptionTypeSubtitle)</li><li>Audio alternativo (PTMediaSelectionOptionTypeAudio)</li><li>Subtítulos cerrados (PTMediaSelectionOptionTypeCC)</li><li>No definido (PTMediaSelectionOptionTypeUndefined)</li></ul> |
-| PTOpportunityResolver, clase,protocolo PTOpportunityResolver | Clase utilizada para procesar indicaciones en el manifiesto que se utilizarán como colocaciones para el proceso de toma de decisiones y anuncios de Adobe Primetime. |
+| PTOpportunityResolver, clase,protocolo PTOpportunityResolver | Clase utilizada para procesar indicaciones en manifiesto que se utilizarán como colocaciones para el proceso de toma de decisiones de publicidad de Adobe Primetime. |
 | PTOpportunityResolverDelegate | Protocolo que describe los métodos que la resolución de oportunidades personalizada ( PTOpportunityResolver ) debe utilizar para comunicar al delegado el estado de la resolución de la oportunidad. |
 | PTSDK | Describe la versión del TVSDK y sus capacidades. |
 | PTSDKConfig | Expone la configuración global de TVSDK y permite que una aplicación se suscriba a etiquetas HLS personalizadas. |
