@@ -6,6 +6,9 @@ title: Cambios en la API de reemplazo y eliminación de publicidad
 uuid: 3689d31f-4feb-4ea5-ac49-ef2e71472f4b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '390'
+ht-degree: 0%
 
 ---
 
@@ -33,23 +36,23 @@ Los siguientes cambios en TVSDK admiten la eliminación y sustitución.
       >
       >Todos los objetos de la matriz deben ser del mismo tipo.
 
-   * `PTTimeRangeCollectionType` es una enumeración que define el comportamiento de los rangos definidos en la `PTTimeRangeCollection`:
+   * `PTTimeRangeCollectionType` es una enumeración que define el comportamiento de los rangos definidos en la  `PTTimeRangeCollection`:
 
-      * `PTTimeRangeCollectionTypeMarkRanges`:: El tipo de intervalos es *Marcar*. Los intervalos se utilizan para marcar los intervalos en el contenido como Publicidades.
+      * `PTTimeRangeCollectionTypeMarkRanges`:: El tipo de intervalos es  *Marcar*. Los intervalos se utilizan para marcar los intervalos en el contenido como Publicidades.
 
       * `PTTimeRangeCollectionTypeDeleteRanges`:: El tipo de rango es Eliminar. Los intervalos definidos se eliminan del contenido principal antes de la inserción de la publicidad.
-      * `PTTimeRangeCollectionTypeReplaceRanges`:: El tipo de los rangos es Reemplazar. Los rangos definidos se reemplazan del principal por Publicidades (el modo de señalización de publicidad está establecido en `PTAdSignalingModeCustomTimeRanges`).
+      * `PTTimeRangeCollectionTypeReplaceRanges`:: El tipo de los rangos es Reemplazar. Los intervalos definidos se reemplazan del principal por Publicidades (el modo de señalización de publicidad se establece en `PTAdSignalingModeCustomTimeRanges`).
 
-* `PTReplacementTimeRange` - Nueva clase pública que define un único rango de `PTTimeRangeCollection`:
+* `PTReplacementTimeRange` - Nueva clase pública que define un único rango de  `PTTimeRangeCollection`:
 
-   * `property CMTimeRange range` - Define el inicio y la duración del intervalo.
-   * `property long replacementDuration` - Si el tipo de `TimeRangeCollection` es `PTTimeRangeCollectionTypeReplaceRanges`, `replacementDuration` se utiliza para crear una oportunidad de colocación (inserción de publicidad) con una duración de `replacementDuration`. Si no `replacementDuration` se configura, el servidor de publicidad determinará la duración y el número de publicidades para esa oportunidad de colocación.
+   * `property CMTimeRange range` - Define el inicio y la duración del rango.
+   * `property long replacementDuration` - Si el tipo de  `TimeRangeCollection` es  `PTTimeRangeCollectionTypeReplaceRanges`,  `replacementDuration` se utiliza para crear una oportunidad de colocación (inserción de publicidad) con una duración de  `replacementDuration`. Si el `replacementDuration` no está configurado, el servidor de publicidad determinará la duración y el número de publicidades para esa oportunidad de colocación.
 
-* `PTAdSignalingMode`:
+* `PTAdSignalingMode`::
 
-   * `PTAdSignalingModeCustomTimeRanges` - Se ha agregado un nuevo tipo de `PTAdSignalingMode`. Este modo se utiliza junto con el `PTTimeRangeCollection` con el tipo `PTTimeRangeCollectionReplace` para la inserción de anuncios en función de los intervalos de reemplazo.
+   * `PTAdSignalingModeCustomTimeRanges` - Añadió un nuevo tipo de  `PTAdSignalingMode`. Este modo se utiliza junto con `PTTimeRangeCollection` con el tipo `PTTimeRangeCollectionReplace` para la inserción de publicidades en función de los intervalos de reemplazo.
 
-* `PTAdMetadata`:
+* `PTAdMetadata`::
 
    * `property PTTimeRangeCollection* timeRangeCollection` - Para configurar los intervalos de tiempo utilizados en los rangos mark/delete/replace del contenido de reproducción.
 
@@ -67,6 +70,6 @@ Los siguientes cambios en TVSDK admiten la eliminación y sustitución.
 
 **API obsoletas**
 
-* `PTAdMetadata`:
+* `PTAdMetadata`::
 
    * `property NSArray* externalAdRanges` - Esta propiedad se utilizó anteriormente para definir rangos C3 para marcar. Ahora está en desuso, ya que estos intervalos se establecen mediante `PTTimeRangeCollection`.
