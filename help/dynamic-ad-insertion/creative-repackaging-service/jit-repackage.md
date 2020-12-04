@@ -6,6 +6,9 @@ title: Flujos de trabajo detallados para el reempaquetado JIT
 uuid: 11b6eb3c-f6aa-4018-9b20-ab6f5910508b
 translation-type: tm+mt
 source-git-commit: 358c5b02d47f23a6adbc98e457e56c8220cae6e9
+workflow-type: tm+mt
+source-wordcount: '553'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +29,7 @@ El flujo de trabajo para el reempaquetado JIT en el servidor de manifiesto es el
 
    >[!NOTE]
    >
-   >En una configuración multiCDN, el servidor de manifiesto utiliza el `ptcdn` parámetro en la URL de arranque para identificar el servidor CDN.
+   >En una configuración multiCDN, el servidor de manifiesto utiliza el parámetro `ptcdn` en la URL de arranque para identificar el servidor CDN.
 
 1. El servidor de manifiesto comprueba la respuesta:
 
@@ -54,7 +57,7 @@ Un cliente basado en TVSDK o con capacidades similares puede interactuar con CRS
 
       >[!NOTE]
       >
-      >En una configuración multiCDN, el servidor de manifiesto utiliza el `ptcdn` parámetro en la URL de arranque para identificar el servidor CDN.
+      >En una configuración multiCDN, el servidor de manifiesto utiliza el parámetro `ptcdn` en la URL de arranque para identificar el servidor CDN.
 
 1. El cliente comprueba la respuesta desde el servidor CDN.
 
@@ -64,7 +67,7 @@ Un cliente basado en TVSDK o con capacidades similares puede interactuar con CRS
 1. El servidor de publicidad solicita que se transcodifique el no HLS a HLS.
 1. CRS crea una versión HLS y la carga en el servidor CDN para su uso futuro.
 
-## Prioridades y cronología del formato de publicidad {#section_A74DE37A57BF45D7B6D09E3DE40F8E61}
+## Prioridades de formato de publicidad y cronología {#section_A74DE37A57BF45D7B6D09E3DE40F8E61}
 
 El servidor de manifiesto y el cliente utilizan la misma lógica de selección para determinar las prioridades para reproducir publicidades disponibles. Los anuncios con formato HLS son de primera prioridad, seguidos de MP4, FLV y finalmente WebM.
 
