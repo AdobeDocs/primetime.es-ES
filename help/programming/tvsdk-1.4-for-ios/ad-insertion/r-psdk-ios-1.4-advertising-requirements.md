@@ -6,13 +6,16 @@ title: Requisitos de publicidad
 uuid: 60e299df-4f42-455a-8983-8964f7a197e1
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
 
 # Requisitos de publicidad {#advertising-requirements}
 
-Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de toma de decisiones de anuncios de Adobe Primetime.
+Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de Adobe Primetime para la toma de decisiones de publicidad.
 
 Primetime y la toma de decisiones funciona con TVSDK para identificar oportunidades de publicidad, resolver publicidades e insertar publicidades resueltas en sus flujos de vídeo.
 
@@ -21,7 +24,7 @@ Para incorporar publicidades en el contenido de vídeo, asegúrese de que la pub
 * La versión HLS del contenido de publicidad no puede ser superior a la versión HLS del contenido principal.
 * Las publicidades deben ser multiplexadas y contener una representación solo de audio, independientemente de si el contenido principal está multiplexado.
 * Las listas de reproducción de anuncios deben tener las mismas representaciones de velocidad de bits que las representaciones de la lista de reproducción de contenido principal.
-* La duración objetivo y la duración del fragmento individual de una publicidad no pueden superar la duración objetivo del contenido principal.
+* La duración del destinatario y la duración del fragmento individual de un anuncio no pueden superar la duración del destinatario del contenido principal.
 * Si el contenido principal contiene un flujo de solo audio, el contenido de la publicidad también debe contener un flujo de solo audio.
 * Si el contenido principal contiene flujos de subtítulos, el contenido de la publicidad debe estar sin cifrar.
 * Si el contenido principal es una velocidad de bits múltiple (MBR), el contenido de la publicidad también debe ser MBR.
