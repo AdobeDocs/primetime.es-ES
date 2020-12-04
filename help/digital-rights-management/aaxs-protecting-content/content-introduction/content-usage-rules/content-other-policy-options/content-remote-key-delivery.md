@@ -24,4 +24,4 @@ El envío de clave remota se habilita a través de la directiva utilizada para e
 >
 >La selección de envíos clave solo afecta a los clientes de iOS. Todos los demás dispositivos que consuman contenido HLS siempre utilizarán el envío de claves &quot;Local&quot;, incluso si se ha especificado &quot;Remoto&quot;.
 
-Para obtener más información, consulte *Uso del servidor* de claves de acceso a Adobe.
+Para obtener más información, consulte *Uso del servidor de claves de acceso a Adobe*.
