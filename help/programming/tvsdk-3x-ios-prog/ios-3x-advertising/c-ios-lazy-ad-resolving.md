@@ -1,23 +1,26 @@
 ---
-description: La resolución y carga de anuncios puede provocar un retraso inaceptable para un usuario que espera que se inicie la reproducción. La función de resolución de carga de publicidad diferida puede reducir este retraso de inicio. Las publicidades ahora se pueden resolver en un intervalo especificado antes de la posición de la pausa publicitaria. Esto se logra utilizando un enfoque de doble reproductor.
-seo-description: La resolución y carga de anuncios puede provocar un retraso inaceptable para un usuario que espera que se inicie la reproducción. La función de resolución de carga de publicidad diferida puede reducir este retraso de inicio. Las publicidades ahora se pueden resolver en un intervalo especificado antes de la posición de la pausa publicitaria. Esto se logra utilizando un enfoque de doble reproductor.
+description: La resolución y carga de anuncios puede provocar un retraso inaceptable para un usuario que espera la reproducción en el inicio. La función de resolución de carga de publicidad diferida puede reducir este retraso de inicio. Las publicidades ahora se pueden resolver en un intervalo especificado antes de la posición de la pausa publicitaria. Esto se logra utilizando un enfoque de doble reproductor.
+seo-description: La resolución y carga de anuncios puede provocar un retraso inaceptable para un usuario que espera la reproducción en el inicio. La función de resolución de carga de publicidad diferida puede reducir este retraso de inicio. Las publicidades ahora se pueden resolver en un intervalo especificado antes de la posición de la pausa publicitaria. Esto se logra utilizando un enfoque de doble reproductor.
 seo-title: Resolución de anuncios justo a tiempo
 title: Resolución de anuncios justo a tiempo
 uuid: f7b20439-3604-4d69-bdfe-2e0ad26f495b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '497'
+ht-degree: 0%
 
 ---
 
 
-# Resolución de anuncios justo a tiempo {#just-in-time-ad-resolving}
+# Resolución de anuncios en el momento justo {#just-in-time-ad-resolving}
 
-La resolución y carga de anuncios puede provocar un retraso inaceptable para un usuario que espera que se inicie la reproducción. La función de resolución de carga de publicidad diferida puede reducir este retraso de inicio. Las publicidades ahora se pueden resolver en un intervalo especificado antes de la posición de la pausa publicitaria. Esto se logra utilizando un enfoque de doble reproductor.
+La resolución y carga de anuncios puede provocar un retraso inaceptable para un usuario que espera la reproducción en el inicio. La función de resolución de carga de publicidad diferida puede reducir este retraso de inicio. Las publicidades ahora se pueden resolver en un intervalo especificado antes de la posición de la pausa publicitaria. Esto se logra utilizando un enfoque de doble reproductor.
 
 **Proceso básico de resolución y carga de anuncios:**
 
 1. TVSDK descarga un manifiesto (lista de reproducción) y *resuelve* todas las publicidades.
-1. TVSDK *carga* todas las publicidades y vincula los segmentos de publicidad a los manifiestos.
+1. TVSDK *carga* todas las publicidades y coloca los segmentos de publicidad en los manifiestos.
 1. TVSDK mueve el reproductor al estado PREPARADO y comienza la reproducción del contenido.
 
 El reproductor utiliza las direcciones URL del manifiesto para obtener el contenido de la publicidad (elementos creativos), garantiza que el contenido de la publicidad tenga un formato que TVSDK pueda reproducir y TVSDK coloca las publicidades en la línea de tiempo. Este proceso básico de resolución y carga de publicidades puede provocar un retraso inaceptablemente prolongado para un usuario que espera reproducir su contenido, especialmente si el manifiesto contiene varias direcciones URL de publicidad.
@@ -26,7 +29,7 @@ El reproductor utiliza las direcciones URL del manifiesto para obtener el conten
 
 1. TVSDK descarga la lista de reproducción.
 1. TVSDK *resuelve y carga* cualquier anuncio previo, mueve el reproductor al estado PREPARADO y comienza la reproducción del contenido.
-1. TVSDK *resuelve* cada pausa publicitaria antes de su posición en función del valor definido en `PTAdMetadata::delayAdLoadingTolerance`.
+1. TVSDK *resuelve* cada pausa publicitaria antes de su posición de &#39; en función del valor definido en `PTAdMetadata::delayAdLoadingTolerance`.
 
 Por ejemplo, de forma predeterminada `delayAdLoadingTolerance` se establece en 5 segundos. Si un AdBreak está configurado para reproducirse a las 3:00, se resolverá a las 2:55:00. Es posible que desee aumentar este valor si cree que la resolución de la publicidad tardará más de 5 segundos.
 
@@ -35,9 +38,10 @@ Por ejemplo, de forma predeterminada `delayAdLoadingTolerance` se establece en 5
 >**Factores a tener en cuenta con la resolución de publicidad diferida:**
 >* La resolución diferida de publicidad solo se admite para flujos VOD con modos SERVER_MAP y modo de señalización.
 >* La resolución de publicidad diferida no está habilitada de forma predeterminada. Debe establecer `PTAdMetadata::delayAdLoading` = YES para habilitarlo.
->* La resolución diferida de publicidad no es compatible con la función Activar instantáneamente. Para obtener más información sobre la activación instantánea, consulte Activado [instantáneo](../../tvsdk-3x-ios-prog/ios-3x-instant-on-ios.md).
+>* La resolución diferida de publicidad no es compatible con la función Activar instantáneamente. Para obtener más información sobre Instant On, consulte [Instant On](../../tvsdk-3x-ios-prog/ios-3x-instant-on-ios.md).
 >* El modo Imagen en imagen no es compatible con la resolución de publicidad diferida. Desactive los modos de imagen en imagen si activa la resolución de publicidad diferida.
 >* La resolución diferida de los anuncios no afecta a los anuncios anteriores.
+
 >
 
 
