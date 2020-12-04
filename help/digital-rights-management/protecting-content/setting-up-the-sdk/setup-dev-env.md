@@ -1,18 +1,21 @@
 ---
-description: Si desea configurar Primetime DRM, copie los archivos del DVD. Estos archivos incluyen archivos JAR que incluyen código, certificados y clases de terceros. Además, debe solicitar un certificado de Adobe Systems, Incorporated. A continuación, Adobe le emite varias credenciales que utiliza para proteger la integridad del contenido, las licencias y la comunicación entre el cliente y el servidor.
-seo-description: Si desea configurar Primetime DRM, copie los archivos del DVD. Estos archivos incluyen archivos JAR que incluyen código, certificados y clases de terceros. Además, debe solicitar un certificado de Adobe Systems, Incorporated. A continuación, Adobe le emite varias credenciales que utiliza para proteger la integridad del contenido, las licencias y la comunicación entre el cliente y el servidor.
+description: Si desea configurar Primetime DRM, copie los archivos del DVD. Estos archivos incluyen archivos JAR que incluyen código, certificados y clases de terceros. Además, debe solicitar un certificado de Adobe Systems, Incorporated. A continuación, Adobe emite varias credenciales que se utilizan para proteger la integridad del contenido empaquetado, las licencias y la comunicación entre el cliente y el servidor.
+seo-description: Si desea configurar Primetime DRM, copie los archivos del DVD. Estos archivos incluyen archivos JAR que incluyen código, certificados y clases de terceros. Además, debe solicitar un certificado de Adobe Systems, Incorporated. A continuación, Adobe emite varias credenciales que se utilizan para proteger la integridad del contenido empaquetado, las licencias y la comunicación entre el cliente y el servidor.
 seo-title: Configure el entorno de desarrollo
 title: Configure el entorno de desarrollo
 uuid: 68afefe8-7ec6-466e-89a8-bc0da8afb4c8
 translation-type: tm+mt
 source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+workflow-type: tm+mt
+source-wordcount: '387'
+ht-degree: 0%
 
 ---
 
 
 # Configure el entorno de desarrollo {#set-up-your-development-environment}
 
-Si desea configurar Primetime DRM, copie los archivos del DVD. Estos archivos incluyen archivos JAR que incluyen código, certificados y clases de terceros. Además, debe solicitar un certificado de Adobe Systems, Incorporated. A continuación, Adobe le emite varias credenciales que utiliza para proteger la integridad del contenido, las licencias y la comunicación entre el cliente y el servidor.
+Si desea configurar Primetime DRM, copie los archivos del DVD. Estos archivos incluyen archivos JAR que incluyen código, certificados y clases de terceros. Además, debe solicitar un certificado de Adobe Systems, Incorporated. A continuación, Adobe emite varias credenciales que se utilizan para proteger la integridad del contenido empaquetado, las licencias y la comunicación entre el cliente y el servidor.
 
 Adobe proporciona el SDK de DRM Primetime en DVD:
 
