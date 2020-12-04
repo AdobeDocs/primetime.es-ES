@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Con NotificationEvent, puede rastrear las advertencias que se pasan desde el motor de vídeo de Adobe (AVE).
 
-La aplicación de reproductor puede realizar un seguimiento de las advertencias y los errores de reproducción generados por el AVE, como la conmutación por error o los eventos de apagado de red que no detienen la reproducción y no requieren necesariamente ninguna acción por parte de la aplicación. Aunque algunos errores de AVE son tratados por el TVSDK, `NotificationEvent` sirve como mecanismo general de paso a la capa de aplicación para advertencias de AVE. Después de recibir advertencias de AVE, puede elegir realizar alguna acción, como detener la reproducción de forma proactiva, activar un plan de contingencia, registrar mensajes, etc.
+La aplicación de reproductor puede realizar un seguimiento de las advertencias y los errores de reproducción generados por el AVE, como la conmutación por error o los eventos de apagado de red que no detienen la reproducción y no requieren necesariamente ninguna acción por parte de la aplicación. Aunque algunos errores de AVE son tratados por el TVSDK, `NotificationEvent` sirve como mecanismo general de paso a la capa de la aplicación para advertencias de AVE. Después de recibir advertencias de AVE, puede elegir realizar alguna acción, como detener la reproducción de forma proactiva, activar un plan de contingencia, registrar mensajes, etc.
 
 Utilice los siguientes elementos de API para rastrear las advertencias de AVE en el reproductor:
 
