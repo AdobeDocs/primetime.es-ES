@@ -6,6 +6,9 @@ title: Inserción de publicidad y conmutación por error para VOD
 uuid: 98505f63-ac43-4ff5-9f7b-895b6135df47
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '694'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ El proceso de inserción de anuncios de vídeo a petición (VOD) consta de las f
 
 ## Fase de resolución de publicidad {#section_0D45C6094D724B55868B48F9A3557A8B}
 
-TVSDK se pone en contacto con un servicio de entrega de publicidad, como Adobe Primetime y decisiones, e intenta obtener el archivo de lista de reproducción principal que corresponde al flujo de vídeo del anuncio. Durante la fase de resolución de anuncios, TVSDK realiza una llamada HTTP al servidor remoto de entrega de anuncios y analiza la respuesta del servidor.
+TVSDK se pone en contacto con un servicio de envío de anuncios, como Adobe Primetime y toma decisiones de anuncios, e intenta obtener el archivo de lista de reproducción principal que corresponde al flujo de vídeo del anuncio. Durante la fase de resolución de anuncios, TVSDK realiza una llamada HTTP al servidor remoto de envío de anuncios y analiza la respuesta del servidor.
 
 TVSDK admite los siguientes tipos de proveedores de publicidad:
 
@@ -40,9 +43,9 @@ TVSDK emite una notificación de advertencia sobre el error y continúa el proce
 
 TVSDK inserta el contenido alternativo (publicidades) en la línea de tiempo que corresponde al contenido principal.
 
-Cuando se completa la fase de resolución de publicidad, TVSDK tiene una lista ordenada de recursos publicitarios que se agrupan en saltos de publicidad. Cada pausa publicitaria se coloca en la línea de tiempo del contenido principal utilizando un valor de tiempo de inicio expresado en milisegundos (ms). Cada publicidad de una pausa publicitaria tiene una propiedad duration que también se expresa en ms. Las publicidades de una pausa publicitaria se encadenan una tras otra. Como resultado, la duración de una pausa publicitaria es igual a la suma de las duraciones de las publicidades compuestas individuales.
+Cuando se completa la fase de resolución de publicidad, TVSDK tiene una lista ordenada de los recursos publicitarios que se agrupan en saltos de publicidad. Cada pausa publicitaria se coloca en la línea de tiempo del contenido principal utilizando un valor de tiempo de inicio expresado en milisegundos (ms). Cada publicidad de una pausa publicitaria tiene una propiedad duration que también se expresa en ms. Las publicidades de una pausa publicitaria se encadenan una tras otra. Como resultado, la duración de una pausa publicitaria es igual a la suma de las duraciones de las publicidades compuestas individuales.
 
-La conmutación por error puede ocurrir en esta fase con conflictos que pueden producirse en la línea de tiempo durante la inserción de anuncios. Para combinaciones específicas de valores de tiempo de inicio/duración de desglose de publicidad, los segmentos de publicidad podrían superponerse. La superposición se produce cuando la última parte de una pausa publicitaria se cruza con el principio del primer anuncio en la siguiente pausa publicitaria. En estas situaciones, descarta la pausa publicitaria posterior y continúa el proceso de inserción con el siguiente elemento de la lista hasta que se insertan o descarten todos los saltos de publicidad.
+La conmutación por error puede ocurrir en esta fase con conflictos que pueden producirse en la línea de tiempo durante la inserción de anuncios. Para combinaciones específicas de valores de duración/tiempo del inicio de desglose de publicidad, los segmentos de publicidad podrían superponerse. La superposición se produce cuando la última parte de una pausa publicitaria se cruza con el principio del primer anuncio en la siguiente pausa publicitaria. En estas situaciones, descarta la pausa publicitaria posterior y continúa el proceso de inserción con el siguiente elemento de la lista hasta que se inserten o descarten todos los saltos de publicidad.
 
 TVSDK emite una notificación de advertencia sobre el error y continúa el procesamiento.
 
@@ -66,4 +69,4 @@ Para las tres clases de error, TVSDK reenvía eventos activados a la aplicación
 
    La aplicación debe realizar la acción adecuada.
 
-Independientemente de si se producen errores o no, TVSDK llama `AdBreakPlaybackEvent.AD_BREAK_COMPLETE` para cada `AdBreakPlaybackEvent.AD_BREAK_STARTED` y `AdPlaybackEvent.AD_COMPLETED` para cada `AdPLaybackEvent.AD_STARTED`. Sin embargo, si no se pudieron descargar los segmentos, es posible que haya espacios en la línea de tiempo. Cuando los huecos son lo suficientemente grandes, los valores en la posición del cursor de reproducción y el progreso del anuncio informado pueden mostrar discontinuidades.
+Independientemente de si se producen errores o no, TVSDK llama a `AdBreakPlaybackEvent.AD_BREAK_COMPLETE` por cada `AdBreakPlaybackEvent.AD_BREAK_STARTED` y `AdPlaybackEvent.AD_COMPLETED` por cada `AdPLaybackEvent.AD_STARTED`. Sin embargo, si no se pudieron descargar los segmentos, es posible que haya espacios en la línea de tiempo. Cuando los huecos son lo suficientemente grandes, los valores en la posición del cursor de reproducción y el progreso del anuncio informado pueden mostrar discontinuidades.
