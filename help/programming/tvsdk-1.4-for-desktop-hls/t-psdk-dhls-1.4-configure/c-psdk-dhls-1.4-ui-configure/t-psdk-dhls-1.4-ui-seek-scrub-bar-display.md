@@ -6,6 +6,9 @@ title: Mostrar una barra de búsqueda con la posición de reproducción actual
 uuid: f940b305-4893-4531-9a79-53670f5fd23f
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '313'
+ht-degree: 0%
 
 ---
 
@@ -30,8 +33,8 @@ TVSDK admite la búsqueda en una posición (hora) específica en la que el flujo
 
    Los estados válidos están PREPARADOS, COMPLETADOS, PAUSADOS y REPRODUCIDOS.
 
-1. Escuche el evento apropiado para ver cuándo el usuario está borrando.
-1. Pase la posición de búsqueda solicitada (milisegundos) al `MediaPlayer.seek` método.
+1. Escuche el evento adecuado para ver cuándo el usuario está borrando.
+1. Pase la posición de búsqueda solicitada (milisegundos) al método `MediaPlayer.seek`.
 
    ```
    function seek(position:Number):void;
@@ -43,8 +46,8 @@ TVSDK admite la búsqueda en una posición (hora) específica en la que el flujo
    >
    >Esto mueve el cursor de reproducción a una nueva posición en el flujo, pero la posición calculada final puede diferir de la posición de búsqueda especificada.
 
-1. Espere a que TVSDK distribuya el `SeekEvent.SEEK_END` evento.
-1. Recupere la posición de reproducción ajustada final mediante event.actualPosition.
+1. Espere a que TVSDK distribuya el evento `SeekEvent.SEEK_END`.
+1. Recupere la posición de reproducción ajustada final mediante evento.actualPosition.
 
        Esto es importante porque la posición de inicio real después de la búsqueda puede ser diferente de la posición solicitada. Pueden aplicarse varias reglas, entre ellas:
    
