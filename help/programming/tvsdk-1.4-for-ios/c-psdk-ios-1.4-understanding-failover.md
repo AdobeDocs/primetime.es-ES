@@ -6,11 +6,14 @@ title: Conmutación por error
 uuid: 53cf611f-59e6-4728-a287-b98907d7f7bb
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '250'
+ht-degree: 0%
 
 ---
 
 
-# Conmutación por error{#failover}
+# Failover{#failover}
 
 La administración de la conmutación por error se produce cuando una lista de reproducción de variante tiene varias representaciones para la misma velocidad de bits y una de las representaciones deja de funcionar. El TVSDK cambia entre representaciones.
 
