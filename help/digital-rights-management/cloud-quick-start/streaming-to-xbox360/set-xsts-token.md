@@ -6,13 +6,16 @@ title: Configure el token XSTS en el reproductor
 uuid: 8995e029-deee-4e23-9cda-a50de8c4f2c0
 translation-type: tm+mt
 source-git-commit: b7f52b71bde1d7bf59ef51d4f6f90dfaa07e347b
+workflow-type: tm+mt
+source-wordcount: '66'
+ht-degree: 0%
 
 ---
 
 
 # Configure el token XSTS en el reproductor{#set-the-xsts-token-in-your-player}
 
-En Xbox360, se establece el token asincrónicamente como respuesta al `MediaPlayer.RequestKeyAttribute` evento.
+En Xbox360, configuras el token asincrónicamente en respuesta al evento `MediaPlayer.RequestKeyAttribute`.
 
 Establezca el token XSTS.
 
