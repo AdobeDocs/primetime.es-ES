@@ -7,7 +7,7 @@ uuid: 5189cef4-ee09-43b3-ae3d-1052fc535480
 translation-type: tm+mt
 source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Cuando falta una lista de reproducción completa, por ejemplo, cuando no se desc
 
 Si falta la lista de reproducción asociada con la velocidad de bits de resolución media, TVSDK busca una lista de reproducción variante con la misma resolución. Si encuentra la misma resolución, TVSDK inicio descargar la lista de reproducción variante y los segmentos desde la posición coincidente. Si el reproductor no encuentra la misma lista de reproducción de resolución, intentará desplazarse por otras listas de reproducción de velocidad de bits y sus variantes. Una velocidad de bits inmediatamente inferior es la primera opción, luego su variante, etc. Si todas las listas de reproducción de velocidad de bits inferior y sus variantes se agotan al intentar encontrar una lista de reproducción válida, TVSDK irá a la velocidad de bits superior y contará desde allí. Si no se encuentra una lista de reproducción válida, el proceso falla y el reproductor pasa al estado ERROR.
 
-La aplicación puede determinar cómo manejar esta situación. Por ejemplo, puede que desee cerrar la actividad del reproductor y dirigir al usuario a la actividad del catálogo. El evento de interés es el `STATUS_CHANGED` evento y la llamada de retorno correspondiente es el `onStatusChanged` método. Este es un código que controla si el reproductor cambia su estado interno a `ERROR`:
+La aplicación puede determinar cómo manejar esta situación. Por ejemplo, puede que desee cerrar la actividad del reproductor y dirigir al usuario a la actividad del catálogo. El evento de interés es el evento `STATUS_CHANGED` y la llamada de retorno correspondiente es el método `onStatusChanged`. Este es un código que monitorea si el reproductor cambia su estado interno a `ERROR`:
 
 ```java
 ... 
@@ -44,9 +44,9 @@ Si falta un segmento en el servidor porque, por ejemplo, el archivo de manifiest
 1. Recorra cada velocidad de bits disponible en cada variante disponible.
 1. Omita el segmento y emite una advertencia.
 
-Cuando TVSDK no puede obtener un segmento alternativo, activa una notificación de `CONTENT_ERROR` error. Esta notificación contiene una notificación interna con el `DOWNLOAD_ERROR` código. Si el flujo con el problema es una pista de audio alternativa, TVSDK genera la notificación de `AUDIO_TRACK_ERROR` error.
+Cuando TVSDK no puede obtener un segmento alternativo, activa una notificación de error `CONTENT_ERROR`. Esta notificación contiene una notificación interna con el código `DOWNLOAD_ERROR`. Si el flujo con el problema es una pista de audio alternativa, TVSDK genera la notificación de error `AUDIO_TRACK_ERROR`.
 
-Si el motor de vídeo no puede obtener segmentos de forma continua, limita los saltos de segmento continuos a 5, tras los cuales se detiene la reproducción y TVSDK emite un error `NATIVE_ERROR` con el código 5.
+Si el motor de vídeo no puede obtener segmentos de forma continua, limita los saltos de segmento continuos a 5, tras los cuales se detiene la reproducción y TVSDK emite un `NATIVE_ERROR` con el código 5.
 
 >[!NOTE]
 >
