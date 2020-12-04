@@ -6,11 +6,14 @@ title: Aplicación Google Cast para TVSDK de explorador
 uuid: 018143e2-143a-4f88-97c6-4b10a2083f9e
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '439'
+ht-degree: 0%
 
 ---
 
 
-# Aplicación Google Cast para TVSDK de explorador{#google-cast-app-for-browser-tvsdk}
+# Aplicación Google Cast para TVSDK del explorador{#google-cast-app-for-browser-tvsdk}
 
 Puede convertir cualquiera de los flujos de una aplicación de remitente basada en TVSDK y hacer que el flujo se reproduzca en Chromecast con el TVSDK del explorador.
 
@@ -50,7 +53,7 @@ Debe definir los mensajes para que el remitente y el receptor puedan entenderlos
 } 
 ```
 
-Cuando se envían mensajes personalizados, como el mensaje de búsqueda, a través de los SDK de envío, se requiere un espacio de nombres de mensajes personalizado. Este es un ejemplo de JavaScript:
+Cuando se envían mensajes personalizados, como el mensaje de búsqueda, a través de los SDK de envío, se requiere una Área de nombres de mensaje personalizada. Este es un ejemplo de JavaScript:
 
 ```js
 Custom Message Namespace 
@@ -65,7 +68,7 @@ var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime";
 
 Para establecer una conexión, el remitente y el receptor deben completar las siguientes tareas:
 
-* El remitente debe revisar la documentación de la plataforma en Desarrollo [de aplicaciones de](https://developers.google.com/cast/docs/sender_apps)remitente.
+* El remitente debe revisar la documentación de la plataforma en [Desarrollo de la aplicación del remitente](https://developers.google.com/cast/docs/sender_apps).
 * El receptor utiliza las API del receptor de envío para establecer una conexión con la aplicación del remitente. Por ejemplo:
 
    ```js
@@ -81,13 +84,13 @@ Para establecer una conexión, el remitente y el receptor deben completar las si
    window.castReceiverManager.start(); 
    ```
 
-## Gestión de mensajes {#section_3E4814546F5946C9B3E7A1AE384B4FF8}
+## Administración de mensajes {#section_3E4814546F5946C9B3E7A1AE384B4FF8}
 
 Para enviar mensajes al receptor, consulte la documentación de la plataforma del remitente.
 
 >[!IMPORTANT]
 >
->Debe incluir el espacio de nombres del mensaje personalizado `MSG_NAMESPACE` en todos los mensajes.
+>Debe incluir la Área de nombres de mensaje personalizada, `MSG_NAMESPACE` en todos los mensajes.
 
 Para la aplicación de receptor, siga la documentación de las API de receptor de difusión.
 
@@ -97,9 +100,9 @@ Para la aplicación de receptor, siga la documentación de las API de receptor d
 window.session.sendMessage(MSG_NAMESPACE, message, successCallback, errorCallback); //https://developers.google.com/cast/docs/reference/chrome/chrome.cast.Session#sendMessage
 ```
 
-**Gestión de eventos de remitente basados en Chrome**
+**Gestión del Evento del remitente basado en Chrome**
 
-Enlace los controladores de eventos a los elementos de la interfaz de usuario que enviarán mensajes cuando se activen los eventos correspondientes. Por ejemplo, para una aplicación de remitente basada en Chrome, el evento de búsqueda podría enviarse de esta manera:
+Enlace los controladores de evento a los elementos de interfaz de usuario que enviarán mensajes cuando se activen los eventos correspondientes. Por ejemplo, para una aplicación de remitente basada en Chrome, el evento de búsqueda se puede enviar de esta manera:
 
 ```js
 document.getElementById("#seekBar").addEventListener("click", seekEventHandler); 
