@@ -1,35 +1,38 @@
 ---
-description: Calidad de servicio (QoS) ofrece una vista detallada del rendimiento del motor de vídeo. TVSDK proporciona estadísticas detalladas sobre la reproducción, el almacenamiento en búfer y los dispositivos.
-seo-description: Calidad de servicio (QoS) ofrece una vista detallada del rendimiento del motor de vídeo. TVSDK proporciona estadísticas detalladas sobre la reproducción, el almacenamiento en búfer y los dispositivos.
+description: Calidad de servicio (QoS) oferta una vista detallada sobre el rendimiento del motor de vídeo. TVSDK proporciona estadísticas detalladas sobre la reproducción, el almacenamiento en búfer y los dispositivos.
+seo-description: Calidad de servicio (QoS) oferta una vista detallada sobre el rendimiento del motor de vídeo. TVSDK proporciona estadísticas detalladas sobre la reproducción, el almacenamiento en búfer y los dispositivos.
 seo-title: Estadísticas de calidad del servicio
 title: Estadísticas de calidad del servicio
 uuid: c08c1031-616a-4776-92e2-1c405467689b
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '225'
+ht-degree: 0%
 
 ---
 
 
 # Estadísticas de calidad del servicio {#quality-of-service-statistics}
 
-Calidad de servicio (QoS) ofrece una vista detallada del rendimiento del motor de vídeo. TVSDK proporciona estadísticas detalladas sobre la reproducción, el almacenamiento en búfer y los dispositivos.
+Calidad de servicio (QoS) oferta una vista detallada sobre el rendimiento del motor de vídeo. TVSDK proporciona estadísticas detalladas sobre la reproducción, el almacenamiento en búfer y los dispositivos.
 
 ## Leer las estadísticas de reproducción, almacenamiento en búfer y dispositivos de QOS {#section_9996406E2D814FA382B77E3041CB02BC}
 
-Puede leer estadísticas de reproducción, almacenamiento en búfer y dispositivos de la `PTQOSProvider` clase.
+Puede leer estadísticas de reproducción, almacenamiento en búfer y dispositivos de la clase `PTQOSProvider`.
 
-La `PTQOSProvider` clase proporciona varias estadísticas, incluida información sobre almacenamiento en búfer, velocidades de bits, velocidades de fotogramas, datos de tiempo, etc.
+La clase `PTQOSProvider` proporciona varias estadísticas, incluida información sobre almacenamiento en búfer, velocidades de bits, velocidades de fotogramas, datos de tiempo, etc.
 
 También proporciona información sobre el dispositivo, como el modelo, el sistema operativo y el ID del dispositivo del fabricante.
 
 >[!TIP]
 >
->No se puede cambiar el tamaño del búfer de reproducción, pero se puede supervisar el estado del tamaño del búfer para la depuración o el análisis. `PTPlaybackInformation` incluye propiedades como `playbackBufferFull` y `playbackLikelyToKeepUp`.
+>No se puede cambiar el tamaño del búfer de reproducción, pero se puede supervisar el estado del tamaño del búfer para la depuración o la análisis. `PTPlaybackInformation` incluye propiedades como  `playbackBufferFull` y  `playbackLikelyToKeepUp`.
 
 1. Cree una instancia de un reproductor multimedia.
-1. Cree un `PTQOSProvider` objeto y adjúntelo al reproductor de medios.
+1. Cree un objeto `PTQOSProvider` y adjúntelo al reproductor de medios.
 
-   El `PTQOSProvider` constructor toma un contexto de reproductor para poder recuperar información específica del dispositivo.
+   El constructor `PTQOSProvider` toma un contexto de reproductor para poder recuperar información específica del dispositivo.
 
    ```
    qosProvider = [[PTQOSProvider alloc]initWithPlayer:self.player]; 
@@ -37,7 +40,7 @@ También proporciona información sobre el dispositivo, como el modelo, el siste
 
 1. (Opcional) Lea las estadísticas de reproducción.
 
-   Una solución para leer estadísticas de reproducción es tener un temporizador, como un `NSTimer`, que recopile periódicamente los nuevos valores de QoS de la `PTQOSProvider`. Por ejemplo:
+   Una solución para leer las estadísticas de reproducción es tener un temporizador, como `NSTimer`, que recopila periódicamente los nuevos valores de QoS de `PTQOSProvider`. Por ejemplo:
 
    ```
    - (void)printPlaybackInfoLog { 
