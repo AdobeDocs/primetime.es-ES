@@ -6,17 +6,20 @@ title: Personalización de la reproducción con anuncios
 uuid: 58002ec2-65ab-4e3b-8e3b-f755ced5cb5a
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '1022'
+ht-degree: 0%
 
 ---
 
 
-# Personalización de la reproducción con anuncios{#customize-playback-with-ads}
+# Personalizar la reproducción con anuncios{#customize-playback-with-ads}
 
 Cuando la reproducción llega a una pausa publicitaria, pasa una pausa publicitaria o termina en una pausa publicitaria, TVSDK define un comportamiento predeterminado para la posición del cursor de reproducción actual.
 
 >[!TIP]
 >
->Puede anular el comportamiento predeterminado mediante la `PTAdPolicySelector` clase.
+>Puede anular el comportamiento predeterminado mediante la clase `PTAdPolicySelector`.
 
 El comportamiento predeterminado varía en función de si el usuario pasa la pausa publicitaria durante la reproducción normal o de si busca en un vídeo.
 
@@ -42,29 +45,29 @@ Los siguientes elementos de API son útiles para personalizar la reproducción:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTAdMetadata </span> </td> 
-   <td colname="col2"> Controle si un salto de publicidad debe marcarse como visto por un visor y, en caso afirmativo, cuándo debe marcarse. Establezca y obtenga la directiva observada con la propiedad <span class="codeph"> adBreakAsWatched </span> . </td> 
+   <td colname="col1"> <span class="codeph"> PTAdMetadata  </span> </td> 
+   <td colname="col2"> Controle si un salto de publicidad debe marcarse como visto por un visor y, en caso afirmativo, cuándo debe marcarse. Establezca y obtenga la directiva observada mediante la propiedad <span class="codeph"> adBreakAsWatched </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTAdPolicySelector </span> </td> 
+   <td colname="col1"> <span class="codeph"> PTAdPolicySelector  </span> </td> 
    <td colname="col2"> Protocolo que permite personalizar el comportamiento de la publicidad TVSDK. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTDefaultAdPolicySelector </span> </td> 
+   <td colname="col1"> <span class="codeph"> PTDefaultAdPolicySelector  </span> </td> 
    <td colname="col2"> Clase que implementa el comportamiento predeterminado de TVSDK. La aplicación puede anular esta clase para personalizar los comportamientos predeterminados sin implementar la interfaz completa. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTMediaPlayer </span> </td> 
+   <td colname="col1"> <span class="codeph"> PTMediaPlayer  </span> </td> 
    <td colname="col2"> 
     <ul id="ul_37700A741403448A8760FDDA68B099AA"> 
-     <li id="li_B465170D449E49489C5924572BEEB4A5"> <span class="codeph"> localTime </span>. <p>Es la hora local de la reproducción, excluyendo las pausas publicitarias colocadas. </p> </li> 
-     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"> <span class="codeph"> searchToLocalTime </span> . <p>Aquí, la búsqueda se produce en relación con una hora local del flujo. </p> </li> 
-     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"> <span class="codeph"> getTimeline.convertToLocalTime </span>. <p>La posición virtual en la línea de tiempo se convierte a la posición local. </p> </li> 
+     <li id="li_B465170D449E49489C5924572BEEB4A5"> <span class="codeph"> localTime  </span>. <p>Es la hora local de la reproducción, excluyendo las pausas publicitarias colocadas. </p> </li> 
+     <li id="li_D9D68CF428904BB2B84E1BCE828A90DC"> <span class="codeph"> searchToLocalTime  </span> . <p>Aquí, la búsqueda se produce en relación con una hora local del flujo. </p> </li> 
+     <li id="li_9DBCA75537DC4824AA66B53A3FA28812"> <span class="codeph"> getTimeline.convertToLocalTime  </span>. <p>La posición virtual en la línea de tiempo se convierte a la posición local. </p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> PTAdBreak </span> </td> 
-   <td colname="col2"> <span class="codeph"> isWatched </span> . Indica si el visor ha visto la publicidad. </td> 
+   <td colname="col1"> <span class="codeph"> PTAdBreak  </span> </td> 
+   <td colname="col2"> <span class="codeph"> isWatched,  </span> propiedad. Indica si el visor ha visto la publicidad. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -75,13 +78,13 @@ Para poder personalizar o anular los comportamientos de publicidad, registre la 
 
 Para personalizar los comportamientos de las publicidades, realice una de las siguientes acciones:
 
-* Conformidad con el `PTAdPolicySelector` protocolo e implemente todos los métodos de selección de directivas necesarios.
+* Conformidad con el protocolo `PTAdPolicySelector` e implemente todos los métodos de selección de directivas necesarios.
 
    Esta opción se recomienda si necesita anular **todos** los comportamientos de publicidad predeterminados.
 
-* Omitir la `PTDefaultAdPolicySelector` clase y proporcionar implementaciones solo para los comportamientos que requieren personalización.
+* Omitir la clase `PTDefaultAdPolicySelector` y proporcionar implementaciones solo para los comportamientos que requieren personalización.
 
-   Esta opción se recomienda si necesita anular solo **algunos** de los comportamientos predeterminados.
+   Esta opción se recomienda si necesita anular sólo **algunos** de los comportamientos predeterminados.
 
 Para ambas opciones, complete las siguientes tareas:
 
@@ -89,7 +92,7 @@ Para ambas opciones, complete las siguientes tareas:
 
    >[!NOTE]
    >
-   >Las directivas de publicidad personalizadas que se registran al principio de la reproducción se borran cuando se desasigna la `PTMediaPlayer` instancia. La aplicación debe registrar una instancia de selector de políticas cada vez que se cree una nueva sesión de reproducción.
+   >Las directivas de publicidad personalizadas registradas al principio de la reproducción se borran cuando se desasigna la instancia `PTMediaPlayer`. La aplicación debe registrar una instancia de selector de políticas cada vez que se cree una nueva sesión de reproducción.
 
    Por ejemplo:
 
@@ -104,7 +107,7 @@ Para ambas opciones, complete las siguientes tareas:
 
 1. Implemente sus personalizaciones.
 
-## Omitir pausas publicitarias durante un período de tiempo {#section_99809BE4D9BB4DEEBBF596C746CA428A}
+## Omitir pausas publicitarias para un período de tiempo {#section_99809BE4D9BB4DEEBBF596C746CA428A}
 
 De forma predeterminada, TVSDK fuerza la reproducción de una pausa publicitaria cuando el usuario busca durante una pausa publicitaria. Puede personalizar el comportamiento para omitir una pausa publicitaria si el tiempo transcurrido desde la finalización de una pausa anterior es de un número determinado de minutos.
 
@@ -247,11 +250,11 @@ double MIN_BREAK_INTERVAL  = 60 * 5; // 5 minutes
 @end
 ```
 
-## Guardar la posición del vídeo y reanudarlo más tarde {#section_FAE252E38CED48D4BDD38BAA4A6A20A4}
+## Guarde la posición del vídeo y reanude más tarde {#section_FAE252E38CED48D4BDD38BAA4A6A20A4}
 
 Puede guardar la posición de reproducción actual en un vídeo y reanudar la reproducción en la misma posición en una sesión futura.
 
-Las publicidades insertadas dinámicamente difieren entre las sesiones de usuario, por lo que guardar la posición **con** publicidades duplicadas se refiere a una posición diferente en una sesión futura. TVSDK proporciona métodos para recuperar la posición de reproducción e ignorar las publicidades duplicadas.
+Las publicidades insertadas dinámicamente difieren entre las sesiones de usuario, por lo que al guardar la posición **con** publicidades duplicadas se hace referencia a una posición diferente en una sesión futura. TVSDK proporciona métodos para recuperar la posición de reproducción e ignorar las publicidades duplicadas.
 
 1. Cuando el usuario cierra un vídeo, la aplicación recupera y guarda la posición en el vídeo.
 
@@ -259,13 +262,13 @@ Las publicidades insertadas dinámicamente difieren entre las sesiones de usuari
    >
    >No se incluyen las duraciones de los anuncios.
 
-   Los saltos de publicidad pueden variar en cada sesión debido a patrones de publicidad, límites de frecuencia, etc. La hora actual del vídeo en una sesión puede ser diferente en una sesión futura. Al guardar una posición en el vídeo, la aplicación recupera la hora local. Utilice la `localTime` propiedad para leer esta posición, que puede guardar en el dispositivo o en una base de datos del servidor.
+   Los saltos de publicidad pueden variar en cada sesión debido a patrones de publicidad, límites de frecuencia, etc. La hora actual del vídeo en una sesión puede ser diferente en una sesión futura. Al guardar una posición en el vídeo, la aplicación recupera la hora local. Utilice la propiedad `localTime` para leer esta posición, que puede guardar en el dispositivo o en una base de datos del servidor.
 
-   Por ejemplo: si el usuario se encuentra en el minuto 20 del vídeo y esta posición incluye cinco minutos de anuncios, `currentTime` será de 1200 segundos, mientras que `localTime` en esta posición serán de 900 segundos.
+   Por ejemplo: si el usuario se encuentra en el minuto 20 del video y esta posición incluye cinco minutos de anuncios, `currentTime` será de 1200 segundos, mientras que `localTime` en esta posición será de 900 segundos.
 
    >[!IMPORTANT]
    >
-   >La hora local y la hora actual son las mismas para flujos en directo/lineales. En este caso, `convertToLocalTime` no tiene efecto. Para VOD, el tiempo local permanece sin cambios mientras se reproducen los anuncios.
+   >La hora local y la hora actual son las mismas para flujos en directo/lineales. En este caso, `convertToLocalTime` no tiene ningún efecto. Para VOD, el tiempo local permanece sin cambios mientras se reproducen los anuncios.
 
    ```
    - (void) onMediaPlayerTimeChange:(NSNotification *)notification { 
@@ -288,7 +291,7 @@ Las publicidades insertadas dinámicamente difieren entre las sesiones de usuari
 
    Para buscar la hora actual, utilice `seekToTime`.
 
-1. Cuando la aplicación recibe el evento de cambio de `PTMediaPlayerStatusReady` estado, busque la hora local guardada.
+1. Cuando la aplicación reciba el evento de cambio de estado `PTMediaPlayerStatusReady`, busque la hora local guardada.
 
    ```
    [self.player seekToLocalTime:CMTimeMake(900, 1) completionHandler:^(BOOL finished) { 
@@ -298,7 +301,7 @@ Las publicidades insertadas dinámicamente difieren entre las sesiones de usuari
 
 1. Proporcione los saltos de publicidad como se especifica en la interfaz de directivas de publicidad.
 1. Implemente un selector de directivas de publicidad personalizado ampliando el selector de directivas de publicidad predeterminado.
-1. Proporcione los saltos de publicidad que deben presentarse al usuario mediante la implementación `selectAdBreaksToPlay`
+1. Proporcione los saltos de publicidad que deben presentarse al usuario implementando `selectAdBreaksToPlay`
 
    >[!NOTE]
    >
