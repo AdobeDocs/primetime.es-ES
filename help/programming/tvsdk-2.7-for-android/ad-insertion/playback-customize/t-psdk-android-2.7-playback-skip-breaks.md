@@ -6,11 +6,14 @@ title: Omitir pausas publicitarias durante un período de tiempo
 uuid: f8a5c1e3-e97f-421f-ac98-79de94a82955
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '322'
+ht-degree: 0%
 
 ---
 
 
-# Omitir pausas publicitarias durante un período de tiempo {#skip-ad-breaks-for-a-period-of-time}
+# Omitir pausas publicitarias para un período de tiempo {#skip-ad-breaks-for-a-period-of-time}
 
 De forma predeterminada, TVSDK fuerza la reproducción de una pausa publicitaria cuando el usuario busca durante una pausa publicitaria. Puede personalizar el comportamiento para omitir una pausa publicitaria si el tiempo transcurrido desde la finalización de una pausa anterior es de un número determinado de minutos.
 
@@ -32,7 +35,7 @@ Para anular el comportamiento predeterminado de pausa publicitaria del TVSDK, pu
 
    >[!NOTE]
    >
-   >La directiva de pausa `REMOVE` publicitaria está programada para su desaprobación. Adobe recomienda usar la directiva de `SKIP` pausa publicitaria en lugar de `REMOVE`.
+   >La directiva de `REMOVE` pausa publicitaria está programada para su desaprobación. Adobe recomienda que utilice la directiva de `SKIP` pausa publicitaria en lugar de `REMOVE`.
 
 El siguiente ejemplo de selector de directivas de publicidad personalizado omite las publicidades en los próximos cinco minutos (tiempo de reloj de pared) después de que un usuario haya visto una pausa publicitaria.
 
