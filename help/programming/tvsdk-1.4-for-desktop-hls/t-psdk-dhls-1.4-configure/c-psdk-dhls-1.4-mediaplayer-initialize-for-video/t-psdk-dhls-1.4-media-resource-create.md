@@ -6,6 +6,9 @@ title: Crear un recurso de medios
 uuid: 3d03d92f-69b3-4da8-9b16-25a264115ae5
 translation-type: tm+mt
 source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+workflow-type: tm+mt
+source-wordcount: '276'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource c
 
 La clase MediaResource representa el contenido que debe cargar la instancia de MediaPlayer.
 
-1. Cree un `MediaResource` elemento pasando información sobre el medio al `MediaResource` constructor.
+1. Cree un `MediaResource` pasando información sobre el medio al constructor `MediaResource`.
 
    <table id="table_DD0D5D9129D54F73881399B9B4FF546A"> 
     <thead> 
@@ -40,7 +43,7 @@ La clase MediaResource representa el contenido que debe cargar la instancia de M
       </tr> 
       <tr> 
       <td colname="col1"><span class="codeph"> metadatos</span> </td> 
-      <td colname="col2"> <p>Instancia de la clase <span class="codeph"> Metadata</span> , que puede contener información personalizada sobre el contenido que se va a cargar. </p> <p>Algunos ejemplos de contenido son contenido alternativo o de publicidad para colocarlo dentro del contenido principal. Si utiliza publicidad, configure <span class="codeph"> AuditudeSettings</span> antes de utilizar este constructor. Para obtener más información, consulte <a href="../../../tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-metadata/c-psdk-dhls-1.4-ad-insertion-metadata.md" format="dita" scope="local"> Metadatos</a>de inserción de publicidad. </p> </td> 
+      <td colname="col2"> <p>Instancia de la clase <span class="codeph"> Metadata</span>, que puede contener información personalizada sobre el contenido que se va a cargar. </p> <p>Algunos ejemplos de contenido son contenido alternativo o de publicidad para colocarlo dentro del contenido principal. Si utiliza publicidad, configure <span class="codeph"> AuditudeSettings</span> antes de utilizar este constructor. Para obtener más información, consulte <a href="../../../tvsdk-1.4-for-desktop-hls/ad-insertion/ad-insertion-metadata/c-psdk-dhls-1.4-ad-insertion-metadata.md" format="dita" scope="local"> Metadatos del Ad Insertion</a>. </p> </td> 
       </tr> 
     </tbody> 
    </table>
@@ -51,7 +54,7 @@ La clase MediaResource representa el contenido que debe cargar la instancia de M
    >
    >Para el contenido de vídeo a petición MP4 (VOD), TVSDK no admite reproducción mediante trucos, flujo de velocidad de bits adaptable (ABR), inserción de anuncios, subtítulos cerrados o DRM.
 
-   El código siguiente crea una `MediaResource` instancia:
+   El siguiente código crea una instancia `MediaResource`:
 
    ```
    // To do: Create metadata here
@@ -70,5 +73,5 @@ La clase MediaResource representa el contenido que debe cargar la instancia de M
    * La instancia de MediaPlayer.
 
       Para obtener más información, consulte [Carga de un recurso de medios en MediaPlayer](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).
-   * R `MediaPlayerItemLoader` Para obtener más información, consulte [Carga de un recurso de medios en MediaPlayer](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).
+   * A `MediaPlayerItemLoader` Para obtener más información, consulte [Carga de un recurso de medios en MediaPlayer](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-mediaplayer-initialize-for-video/t-psdk-dhls-1.4-media-resource-load.md).
 
