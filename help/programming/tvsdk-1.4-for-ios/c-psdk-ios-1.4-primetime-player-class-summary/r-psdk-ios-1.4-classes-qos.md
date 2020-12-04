@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Clases QoS{#qos-classes}
+# Clases de QoS{#qos-classes}
 
 Estas clases proporcionan información que le ayuda a determinar el rendimiento del reproductor.
 
