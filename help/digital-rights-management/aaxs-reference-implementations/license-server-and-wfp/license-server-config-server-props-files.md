@@ -39,4 +39,4 @@ Para preparar correctamente la contraseña de la credencial:
 >
 >El ejemplo anterior utiliza un punto y coma (;) como delimitador. Para plataformas que no sean Microsoft Windows, utilice dos puntos (:) como delimitador.
 
-La utilidad genera la contraseña cifrada, que debe copiar en el [!DNL .properties] archivo.
+La utilidad genera la contraseña cifrada, que debe copiar en el archivo [!DNL .properties].
