@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Clases de publicidad de línea de tiempo {#timeline-advertising-classes}
+# Clases publicitarias de escala de tiempo {#timeline-advertising-classes}
 
 Estas clases proporcionan información sobre las publicidades que se producen dentro de una línea de tiempo.
 
@@ -78,7 +78,8 @@ Estas clases proporcionan información sobre las publicidades que se producen de
   <tr rowsep="1"> 
    <td colname="1"> 
     <pre>
-     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> Clase PTContentResolver</a> , <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> protocolo PTContentResolver</a>
+     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTContentResolver.html" format="html" scope="external"> </a> PTContentResolverclass,  
+     <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTContentResolver.html" format="html" scope="external"> </a> PTContentResolverprotocol
     </pre> </td> 
    <td colname="2"> Clase que gestiona la parte de resolución de publicidad en el proceso de toma de decisiones de publicidad de Adobe Primetime. </td> 
   </tr> 
