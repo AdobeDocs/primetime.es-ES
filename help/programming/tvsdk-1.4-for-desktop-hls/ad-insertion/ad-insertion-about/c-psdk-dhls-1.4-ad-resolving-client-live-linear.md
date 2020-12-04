@@ -6,6 +6,9 @@ title: Resolución e inserción de anuncios en directo/lineal
 uuid: 69f287aa-b707-442b-8e07-16f81b242c4b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '324'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ TVSDK inserta publicidades de las siguientes formas:
 * **Anteponer**, que se encuentra al principio del contenido.
 * **Mid-roll**, que se encuentra en medio del contenido.
 
-TVSDK acepta la pausa publicitaria aunque la duración sea más larga o más corta que la duración de sustitución de puntos de referencia. De forma predeterminada, TVSDK admite el `#EXT-X-CUE` cue como un marcador de publicidad válido al resolver y colocar anuncios. Este marcador requiere el campo de metadatos `DURATION` en segundos y el identificador único de la señal. Por ejemplo:
+TVSDK acepta la pausa publicitaria aunque la duración sea más larga o más corta que la duración de sustitución de puntos de referencia. De forma predeterminada, TVSDK admite la señal `#EXT-X-CUE` como un marcador de publicidad válido al resolver y colocar publicidades. Este marcador requiere el campo de metadatos `DURATION` en segundos y el identificador único del cue. Por ejemplo:
 
 ```
 #EXT-X-CUE:DURATION=27,ID="..."
@@ -29,6 +32,6 @@ TVSDK acepta la pausa publicitaria aunque la duración sea más larga o más cor
 
 >[!IMPORTANT]
 >
->Al implementar una norma habitual `AdPolicySelector`, se puede dar una política diferente a `AdBreakTimelineItem`las listas previas, intermedias y posteriores en `AdPolicyInfo`, que se basa en el tipo de `AdBreakTimelineItem`las listas. Por ejemplo, puede mantener el contenido de lanzamiento intermedio después de reproducirse, pero eliminar el contenido previo después de reproducirse.
+>Al implementar un `AdPolicySelector` habitual, se puede dar una política diferente a pre-roll, mid-roll y post-roll `AdBreakTimelineItem`s en `AdPolicyInfo`, que se basa en el tipo de `AdBreakTimelineItem`s. Por ejemplo, puede mantener el contenido de lanzamiento intermedio después de reproducirse, pero eliminar el contenido previo después de reproducirse.
 
-Una vez iniciada la reproducción, el motor de vídeo actualiza periódicamente el archivo de manifiesto. TVSDK resuelve cualquier publicidad nueva e inserta la publicidad cuando se encuentra un punto de referencia en el flujo activo o lineal definido en el manifiesto. Después de resolver e insertar las publicidades, TVSDK vuelve a calcular la línea de tiempo virtual y distribuye un `TimelineEvent.TIMELINE_UPDATED` evento.
+Después de los inicios de reproducción, el motor de vídeo actualiza periódicamente el archivo de manifiesto. TVSDK resuelve cualquier publicidad nueva e inserta la publicidad cuando se encuentra un punto de referencia en el flujo activo o lineal definido en el manifiesto. Una vez que las publicidades se resuelven y se insertan, TVSDK vuelve a calcular la línea de tiempo virtual y distribuye un evento `TimelineEvent.TIMELINE_UPDATED`.
