@@ -6,6 +6,9 @@ title: NATIVE_ERROR Valores de reproducción de vídeo
 uuid: fbc08ecd-2e28-41ad-955b-557358bccdc8
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '1430'
+ht-degree: 6%
 
 ---
 
@@ -55,72 +58,72 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr> 
   <tr> 
    <td colname="col1"> 5 </td> 
-   <td colname="col2"><span class="codeph"> FILE_NOT_FOUND </span> </td> 
+   <td colname="col2"><span class="codeph"> FILE_NOT_FOUND  </span> </td> 
    <td colname="col3"> No se encuentra el recurso. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 6 </td> 
-   <td colname="col2"><span class="codeph"> GENERIC_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> GENERIC_ERROR  </span> </td> 
    <td colname="col3"> Error genérico. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 7 </td> 
-   <td colname="col2"><span class="codeph"> IRRECOVERABLE_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> IRRECOVERABLE_ERROR  </span> </td> 
    <td colname="col3"> Condición de error de la que no se puede recuperar el motor de vídeo. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 8 </td> 
-   <td colname="col2"><span class="codeph"> LOST_CONNECTION_RECOVERABLE </span> </td> 
+   <td colname="col2"><span class="codeph"> LOST_CONNECTION_RECOVERABLE  </span> </td> 
    <td colname="col3"> Error de red al intentar recuperarse. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 9 </td> 
-   <td colname="col2"><span class="codeph"> NO_FIXED_SIZE </span> </td> 
+   <td colname="col2"><span class="codeph"> NO_FIXED_SIZE  </span> </td> 
    <td colname="col3"> No se puede determinar el tamaño del recurso. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 10 </td> 
-   <td colname="col2"><span class="codeph"> NOT_IMPLEMENTED </span> </td> 
+   <td colname="col2"><span class="codeph"> NOT_IMPLEMENTED  </span> </td> 
    <td colname="col3"> Característica no implementada. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 11 </td> 
-   <td colname="col2"><span class="codeph"> OUT_OF_MEMORY </span> </td> 
+   <td colname="col2"><span class="codeph"> OUT_OF_MEMORY  </span> </td> 
    <td colname="col3"> Memoria insuficiente. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 12 </td> 
-   <td colname="col2"><span class="codeph"> PARSE_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> PARSE_ERROR  </span> </td> 
    <td colname="col3"> Error al analizar el archivo multimedia. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 13 </td> 
-   <td colname="col2"><span class="codeph"> SIZE_UNKNOWN </span> </td> 
+   <td colname="col2"><span class="codeph"> SIZE_UNKNOWN  </span> </td> 
    <td colname="col3"> El recurso tiene un tamaño, pero se desconoce. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 14 </td> 
-   <td colname="col2"><span class="codeph"> UNDER_FLOW </span> </td> 
+   <td colname="col2"><span class="codeph"> UNDER_FLOW  </span> </td> 
    <td colname="col3"> Condición de subdesbordamiento. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 15 </td> 
-   <td colname="col2"><span class="codeph"> UNSUPPORTED_CONFIG </span> </td> 
+   <td colname="col2"><span class="codeph"> UNSUPPORTED_CONFIG  </span> </td> 
    <td colname="col3"> No se admite la configuración. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 16 </td> 
-   <td colname="col2"><span class="codeph"> UNSUPPORTED_OPERATION </span> </td> 
+   <td colname="col2"><span class="codeph"> UNSUPPORTED_OPERATION  </span> </td> 
    <td colname="col3"> No se admite la operación. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 17 </td> 
-   <td colname="col2"><span class="codeph"> WAITING_FOR_INIT </span> </td> 
+   <td colname="col2"><span class="codeph"> WAITING_FOR_INIT  </span> </td> 
    <td colname="col3"> Aún no se ha inicializado. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 18 </td> 
-   <td colname="col2"><span class="codeph"> INVALID_PARAMETER </span> </td> 
+   <td colname="col2"><span class="codeph"> INVALID_PARAMETER  </span> </td> 
    <td colname="col3"> Parámetro no válido. </td> 
   </tr> 
   <tr> 
@@ -145,7 +148,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr> 
   <tr> 
    <td colname="col1"> 23 </td> 
-   <td colname="col2"><span class="codeph"> SOURCE_NOT_SPECIFIED </span> </td> 
+   <td colname="col2"><span class="codeph"> SOURCE_NOT_SPECIFIED  </span> </td> 
    <td colname="col3"> Recurso no especificado. </td> 
   </tr> 
   <tr> 
@@ -175,7 +178,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr> 
   <tr> 
    <td colname="col1"> 29 </td> 
-   <td colname="col2"><span class="codeph"> CONTAINER_NOT_SUPPORTED </span> </td> 
+   <td colname="col2"><span class="codeph"> CONTENEDOR_NOT_SUPPORTED  </span> </td> 
    <td colname="col3"> No se admite el tipo de contenedor. </td> 
   </tr> 
   <tr> 
@@ -205,7 +208,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr> 
   <tr> 
    <td colname="col1"> 35 </td> 
-   <td colname="col2"><span class="codeph"> VIDEO_PROFILE_NOT_SUPPORTED</span> </td> 
+   <td colname="col2"><span class="codeph"> VIDEO_PERFIL_NOT_SUPPORTED</span> </td> 
    <td colname="col3"> Perfil de vídeo no admitido. </td> 
   </tr> 
   <tr> 
@@ -250,12 +253,12 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr> 
   <tr> 
    <td colname="col1"> 44 </td> 
-   <td colname="col2"><span class="codeph"> NETWORK_DOWN </span> </td> 
+   <td colname="col2"><span class="codeph"> NETWORK_DOWN  </span> </td> 
    <td colname="col3"> La conexión de red del usuario no funciona. La reproducción puede detenerse en cualquier momento y se reanudará cuando la conexión esté disponible. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 45 </td> 
-   <td colname="col2"><span class="codeph"> NO_USABLE_BITRATE_PROFILE</span> </td> 
+   <td colname="col2"><span class="codeph"> NO_USABLE_BITRATE_PERFIL</span> </td> 
    <td colname="col3"> No se encontró ningún perfil de velocidad de bits utilizable en el flujo. </td> 
   </tr> 
   <tr> 
@@ -275,8 +278,8 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr> 
   <tr> 
    <td colname="col1"> 49 </td> 
-   <td colname="col2"><span class="codeph"> SWITCH_TO_ASYMMETRIC_PROFILE</span> </td> 
-   <td colname="col3"> DRM está cambiando a un perfil asimétrico. Se espera que todos los perfiles estén alineados en la duración. De lo contrario, se emitirá esta advertencia y es posible que haya saltos en la reproducción. </td> 
+   <td colname="col2"><span class="codeph"> SWITCH_TO_ASYMMETRIC_PERFIL</span> </td> 
+   <td colname="col3"> DRM está cambiando a un perfil asimétrico. Se espera que todos los perfiles estén alineados en su duración. De lo contrario, se emitirá esta advertencia y es posible que haya saltos en la reproducción. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 50 </td> 
@@ -300,7 +303,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr> 
   <tr> 
    <td colname="col1"> 54 </td> 
-   <td colname="col2"><span class="codeph"> LIVE_HOLD </span> </td> 
+   <td colname="col2"><span class="codeph"> LIVE_HOLD  </span> </td> 
    <td colname="col3"> El lector de medios no puede cargar segmentos porque ha llegado al final de la ventana activa. La carga de segmentos se reanudará cuando el servidor añada nuevos medios a la ventana activa. Este estado suele alcanzarse si: 
     <ul id="ul_FCFF658EDA4144E59970B317D6DEB624"> 
      <li id="li_2F6EEEB782D54CD999BC7CC7C0B78B48">BufferTime es demasiado alto (igual o superior a la duración de la ventana activa). </li> 
@@ -310,7 +313,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr> 
   <tr> 
    <td colname="col1"> 55 </td> 
-   <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLEAVING </span> </td> 
+   <td colname="col2"><span class="codeph"> BAD_MEDIA_INTERLEAVING  </span> </td> 
    <td colname="col3"> La intercalación de audio y vídeo en los medios no se realiza correctamente. Se trata de un error de empaquetado. La advertencia se envía cuando la diferencia supera los dos segundos. </td> 
   </tr> 
   <tr> 
@@ -321,7 +324,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   <tr> 
    <td colname="col1"> 57 </td> 
    <td colname="col2"><span class="codeph"> PLAYBACK_NOT_AUTHORIZED</span> </td> 
-   <td colname="col3"> La reproducción de HLS no se ha activado en Flash Player. Consulte AuthorizedFeatures.enableHLSPlayback. </td> 
+   <td colname="col3"> La reproducción de HLS no se ha activado en el Flash Player. Consulte AuthorizedFeatures.enableHLSPlayback. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 58 </td> 
@@ -375,7 +378,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr> 
   <tr> 
    <td colname="col1"> 68 </td> 
-   <td colname="col2"><span class="codeph"> PROTOCOL_NOT_SUPPORTED </span> </td> 
+   <td colname="col2"><span class="codeph"> PROTOCOL_NOT_SUPPORTED  </span> </td> 
    <td colname="col3"> No se admite el protocolo Web utilizado en la dirección URL. </td> 
   </tr> 
   <tr> 
@@ -415,8 +418,8 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr> 
   <tr> 
    <td colname="col1"> 76 </td> 
-   <td colname="col2"><span class="codeph"> AUDIO_START_ERROR</span> </td> 
-   <td colname="col3"> No se puede iniciar el audio. </td> 
+   <td colname="col2"><span class="codeph"> AUDIO_INICIO_ERROR</span> </td> 
+   <td colname="col3"> No se puede realizar el inicio del audio. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 77 </td> 
@@ -424,7 +427,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
    <td colname="col3"> No hay un receptor de audio presente en una estructura de datos interna. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 78 </td> 
+   <td colname="col1"> 58 </td> 
    <td colname="col2"><span class="codeph"> FILE_OPEN_ERROR</span> </td> 
    <td colname="col3"> No se puede abrir el archivo. </td> 
   </tr> 
@@ -439,13 +442,13 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
    <td colname="col3"> No se puede leer de un archivo. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> 81 </td> 
+   <td colname="col1"> 61 </td> 
    <td colname="col2"><span class="codeph"> ID3PARSE_ERROR</span> </td> 
    <td colname="col3"> Error al analizar los datos de ID3. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 82 </td> 
-   <td colname="col2"><span class="codeph"> SECURITY_ERROR </span> </td> 
+   <td colname="col2"><span class="codeph"> SECURITY_ERROR  </span> </td> 
    <td colname="col3"> Error al cargar el contenido debido a restricciones de seguridad. </td> 
   </tr> 
   <tr> 
@@ -455,7 +458,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr> 
   <tr> 
    <td colname="col1"> 84 </td> 
-   <td colname="col2"><span class="codeph"> AUDIO_ONLY_STREAM_START</span> </td> 
+   <td colname="col2"><span class="codeph"> AUDIO_ONLY_STREAM_INICIO</span> </td> 
    <td colname="col3"> El flujo se ha cambiado a un flujo de solo audio. </td> 
   </tr> 
   <tr> 
@@ -465,7 +468,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   </tr> 
   <tr> 
    <td colname="col1"> 87 </td> 
-   <td colname="col2"><span class="codeph"> KEY_NOT_FOUND </span> </td> 
+   <td colname="col2"><span class="codeph"> KEY_NOT_FOUND  </span> </td> 
    <td colname="col3"> No se encuentra la clave. </td> 
   </tr> 
   <tr> 
@@ -496,7 +499,7 @@ La interfaz del codificador de vídeo del AVE devuelve estas notificaciones de r
   <tr> 
    <td colname="col1"> 93 </td> 
    <td colname="col2"><span class="codeph"> TRICKPLAY_ENDED_DUE_TO_ERROR</span> </td> 
-   <td colname="col3">Se produjo un error al reproducir medios en el modo de reproducción <i></i> truco. El modo de reproducción de trucos finaliza y el flujo se pone en pausa. Llame a <span class="codeph"> Play()</span> para reproducir el medio en modo normal. </td> 
+   <td colname="col3">Se produjo un error al reproducir medios en el modo <i>de reproducción de trucos</i>. El modo de reproducción de trucos finaliza y el flujo se pone en pausa. Llame a <span class="codeph"> Play()</span> para reproducir el medio en modo normal. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 95 </td> 
