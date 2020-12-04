@@ -53,20 +53,20 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
 | Parámetro de consulta | Descripción | ¿Requerido? |
 |--- |--- |--- |
 | customerAuthenticator Autenticación de cliente como parámetro de consulta customerAuthenticator FairPlay | Ésta es la clave de API del cliente, una para los entornos de producción y prueba. Puede encontrarlo en la ficha Panel de administración de ExpressPlay. | Sí |
-| errorFormat | html o json. Si html (valor predeterminado), se proporciona una representación HTML de cualquier error en el cuerpo de entidad de la respuesta. Si se especifica json, se devuelve una respuesta estructurada en formato JSON. Consulte Errores [](https://www.expressplay.com/developer/restapi/#json-errors) JSON para obtener más información. El tipo de MIME de la respuesta es text/uri-lista si culmina con éxito, text/html para el formato de error HTML o application/json para el formato de error JSON. | No |
+| errorFormat | html o json. Si html (valor predeterminado), se proporciona una representación HTML de cualquier error en el cuerpo de entidad de la respuesta. Si se especifica json, se devuelve una respuesta estructurada en formato JSON. Consulte [Errores JSON](https://www.expressplay.com/developer/restapi/#json-errors) para obtener más información. El tipo de MIME de la respuesta es text/uri-lista si culmina con éxito, text/html para el formato de error HTML o application/json para el formato de error JSON. | No |
 
 **Tabla 4: Parámetros de Consulta de licencias**
 
 | **Parámetro de consulta** | **Descripción** | **¿Requerido?** |
 |---|---|---|
 | `generalFlags` | Una cadena hexadecimal de 4 bytes que representa los indicadores de licencia. ‘0000&#39; es el único valor permitido. | No |
-| `kek` | Clave de cifrado de clave (KEK). Las claves se almacenan cifradas con un KEK mediante un algoritmo de ajuste de claves (AES Key Wrap, RFC3394). Si `kek` se proporciona, es necesario proporcionar uno de los parámetros `kid` o los `ek` , *pero no ambos*. | No |
-| `kid` | Una representación de cadena hexadecimal de 16 bytes de la clave de codificación de contenido o una cadena `'^somestring'`. La longitud de la cadena seguida por el `'^'` no puede ser buena en 64 caracteres. | No |
+| `kek` | Clave de cifrado de clave (KEK). Las claves se almacenan cifradas con un KEK mediante un algoritmo de ajuste de claves (AES Key Wrap, RFC3394). Si se proporciona `kek`, debe suministrarse uno de los parámetros `kid` o `ek`, *pero no ambos*. | No |
+| `kid` | Una representación de cadena hexadecimal de 16 bytes de la clave de cifrado de contenido o una cadena `'^somestring'`. La longitud de la cadena seguida de `'^'` no puede ser buena en 64 caracteres. | No |
 | `ek` | Una representación de cadena hexadecimal de la clave de contenido cifrado. | No |
-| `contentKey` | Una representación de cadena hexadecimal de 16 bytes de la clave de codificación de contenido | Sí, a menos que se proporcione `kek` y `ek` o `kid` . |
+| `contentKey` | Una representación de cadena hexadecimal de 16 bytes de la clave de codificación de contenido | Sí, a menos que se proporcionen los `kek` y `ek` o `kid`. |
 | `iv` | Una representación de cadena hexadecimal de 16 bytes del cifrado de contenido IV | Sí |
 | `rentalDuration` | Duración del alquiler en segundos (predeterminado - 0) | No |
-| `fpExtension` | Un breve ajuste de formulario `extensionType` y `extensionPayload`, como una cadena separada por comas. Por ejemplo: […] `&fpExtension=wudo,AAAAAA==&`[…] | No, se puede utilizar cualquier número |
+| `fpExtension` | Un formulario corto que se ajusta `extensionType` y `extensionPayload` como una cadena separada por comas. Por ejemplo: […] `&fpExtension=wudo,AAAAAA==&`[…] | No, se puede utilizar cualquier número |
 
 **Tabla 5: Parámetros de Consulta de restricción de tokens**
 
@@ -80,8 +80,8 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> expirationTime </span> </td> 
-   <td> Hora de caducidad de este token. Este valor DEBE ser una cadena en formato <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a> de fecha y hora en el indicador de zona ‘Z’ ("Zulu time") o un entero precedido por un signo '+'. Un ejemplo de fecha y hora RFC 3339 es <span class="codeph"> 2006-04-14T12:01:10Z </span>. <p>Si el valor es una cadena en formato <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a> , representa una fecha y hora de caducidad absoluta para el token. Si el valor es un entero precedido por un signo '+', se interpreta como un número relativo de segundos, desde la emisión, que el token es válido. </p> Por ejemplo, <span class="codeph"> +60 </span> especifica un minuto. La duración máxima y predeterminada del token (si no se especifica) es de 30 días. </td> 
+   <td> <span class="codeph"> expirationTime  </span> </td> 
+   <td> Hora de caducidad de este token. Este valor DEBE ser una cadena con formato de fecha y hora <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a> en el indicador de zona ‘Z' ("Hora de Zulu") o un entero precedido por un signo '+'. Un ejemplo de fecha y hora RFC 3339 es <span class="codeph"> 2006-04-14T12:01:10Z </span>. <p>Si el valor es una cadena con formato de fecha y hora <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339 </a>, representa una fecha y hora de caducidad absoluta para el token. Si el valor es un entero precedido por un signo '+', se interpreta como un número relativo de segundos, desde la emisión, que el token es válido. </p> Por ejemplo, <span class="codeph"> +60 </span> especifica un minuto. La duración máxima y predeterminada del token (si no se especifica) es de 30 días. </td> 
    <td> No </td> 
   </tr> 
  </tbody> 
@@ -100,10 +100,10 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
 | **Código de estado HTTP** | **Descripción** | **Content-Type** | **El cuerpo de la entidad contiene** |
 |---|---|---|---|
 | `200 OK` | Sin errores. | `text/uri-list` | URL de adquisición de licencia + token |
-| `400 Bad Request` | Argumentos no válidos | `text/html` o `application/json` | Descripción del error |
-| `401 Unauthorized` | Error de autenticación | `text/html` o `application/json` | Descripción del error |
-| `404 Not found` | Dirección URL incorrecta | `text/html` o `application/json` | Descripción del error |
-| `50x Server Error` | Error del servidor | `text/html` o `application/json` | Descripción del error |
+| `400 Bad Request` | Argumentos no válidos | `text/html` o  `application/json` | Descripción del error |
+| `401 Unauthorized` | Error de autenticación | `text/html` o  `application/json` | Descripción del error |
+| `404 Not found` | Dirección URL incorrecta | `text/html` o  `application/json` | Descripción del error |
+| `50x Server Error` | Error del servidor | `text/html` o  `application/json` | Descripción del error |
 
 **Tabla 8: Códigos de error de evento**
 
@@ -137,7 +137,7 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
   </tr> 
   <tr> 
    <td> -2018 </td> 
-   <td> Distintivo de autenticación no válido: &lt;details&gt; <p>Nota:  Esto puede suceder si el autenticador es incorrecto o al acceder a la API de prueba en <span class="filepath"> *.test.express.com </span> con el autenticador de producción y viceversa. </p> <p importance="high">Nota:  El SDK de Test y la Herramienta de prueba avanzada (ATT) solo funcionan con <span class="filepath"> *.test.express.com </span>, mientras que los dispositivos de producción deben utilizar <span class="filepath"> *.service.expressplay.com </span>. </p> </td> 
+   <td> Distintivo de autenticación no válido: &lt;details&gt; <p>Nota:  Esto puede suceder si el autenticador es incorrecto o al acceder a la API de prueba en <span class="filepath"> *.test.expressplay.com </span> mediante el autenticador de producción y viceversa. </p> <p importance="high">Nota:  El SDK de Test y la Herramienta de prueba avanzada (ATT) solo funcionan con <span class="filepath"> *.test.express.com </span>, mientras que los dispositivos de producción deben utilizar <span class="filepath"> *.service.express.com </span>. </p> </td> 
   </tr> 
   <tr> 
    <td> -2019 </td> 
@@ -197,7 +197,7 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
   </tr> 
   <tr> 
    <td> -2040 </td> 
-   <td> <span class="codeph"> OutputControlFlag </span> debe codificarse en 4 bytes </td> 
+   <td> <span class="codeph"> OutputControlFlag  </span> debe codificarse 4 bytes </td> 
   </tr> 
   <tr> 
    <td> -3004 </td> 
@@ -221,11 +221,11 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
   </tr> 
   <tr> 
    <td> -4020 </td> 
-   <td> <span class="codeph"> kid </span> debe tener 32 caracteres hexadecimales </td> 
+   <td> <span class="codeph"> kid  </span> debe tener 32 caracteres hexadecimales </td> 
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td> <span class="codeph"> El niño </span> debe tener 64 caracteres después de ^ </td> 
+   <td> <span class="codeph"> El chico  </span> debe tener 64 caracteres después de la etiqueta ^ </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
@@ -233,7 +233,7 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
   </tr> 
   <tr> 
    <td> -4024 </td> 
-   <td> Clave o <span class="codeph"> clave cifrada no válida </span> </td> 
+   <td> Clave cifrada o <span class="codeph"> clave </span> no válida </td> 
   </tr> 
   <tr> 
    <td> -5003 </td> 
@@ -241,7 +241,7 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
   </tr> 
   <tr> 
    <td> -6001 </td> 
-   <td> Parámetros <span class="codeph"> de FPExtense no válidos </span> especificados </td> 
+   <td> Parámetros de <span class="codeph"> FPExtense </span> no válidos especificados </td> 
   </tr> 
   <tr> 
    <td> -6002 </td> 
@@ -249,7 +249,7 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
   </tr> 
   <tr> 
    <td> -6003 </td> 
-   <td> Se especificó un <span class="codeph"> parámetro iv </span> no válido </td> 
+   <td> Se especificó un parámetro <span class="codeph"> iv </span> no válido </td> 
   </tr> 
   <tr> 
    <td> -6004 </td> 
