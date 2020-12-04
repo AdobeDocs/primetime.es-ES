@@ -6,6 +6,9 @@ title: Flujos sin extensión
 uuid: c69ba62b-a940-4211-920d-2e559849fd6d
 translation-type: tm+mt
 source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+workflow-type: tm+mt
+source-wordcount: '167'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +23,7 @@ El explorador TVSDK analiza los primeros bytes de la respuesta para detectar el 
 
 ## Nivel de manifiesto {#section_AAD9EBAC883D4CC3A0133A45B555EECF}
 
-El SDK de explorador utiliza el `mediaResource.resourceType` parámetro que se pasa en el `replaceCurrentResource` método para detectar el tipo de contenido de la URL de manifiesto. Para obtener más información, consulte la `AdobePSDK.MediaPlayer` clase.
+El SDK del explorador utiliza el parámetro `mediaResource.resourceType` que se pasa en el método `replaceCurrentResource` para detectar el tipo de contenido de la dirección URL de manifiesto. Para obtener más información, consulte la clase `AdobePSDK.MediaPlayer`.
 
 En el reproductor de interfaz de usuario de Framework, puede especificar el tipo de recurso en el recurso de medios de la siguiente manera:
 
@@ -35,9 +38,9 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }); 
 ```
 
-Si no `resourceType` se proporciona, la interfaz de usuario determina el tipo de recurso de la extensión URL del recurso, que luego se pasa al `replaceCurrentResource` método .
+Si no se proporciona `resourceType`, el marco de interfaz de usuario determina el tipo de recurso de la extensión URL del recurso, que luego se pasa al método `replaceCurrentResource`.
 
 >[!TIP]
 >
->En el caso de los manifiestos sin extensión, asegúrese de que siempre `resourceType` se pasan al cargar un recurso en la interfaz de usuario.
+>Para el manifiesto sin extensión, asegúrese de que `resourceType` siempre se pasa al cargar un recurso en la interfaz de usuario Framework.
 
