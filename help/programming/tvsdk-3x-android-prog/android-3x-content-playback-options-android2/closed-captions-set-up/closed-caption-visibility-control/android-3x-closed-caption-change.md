@@ -6,6 +6,9 @@ title: Permitir que los usuarios cambien el seguimiento de rótulos
 uuid: 5a6d33f2-cece-48f6-8a68-fe76d9d2a950
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '141'
+ht-degree: 0%
 
 ---
 
@@ -30,7 +33,7 @@ Este procedimiento es un ejemplo de cómo crear un botón que permite al usuario
 
 1. Convierta la lista de pistas de subtítulos opcionales disponibles en una matriz de cadenas.
 
-   Las pistas de subtítulos cerrados que tienen actividad, es decir, los canales para los que TVSDK ha descubierto datos, se marcan de manera acorde.
+   Las pistas de subtítulos cerrados que tienen actividad, es decir, canales para los que TVSDK ha descubierto datos, se marcan de forma correspondiente.
 
    ```java
    /** 
@@ -58,7 +61,7 @@ Este procedimiento es un ejemplo de cómo crear un botón que permite al usuario
    } 
    ```
 
-1. Cuando el usuario hace clic en el botón, muestra un cuadro de diálogo que enumera todas las pistas de subtítulos opcionales predeterminadas.
+1. Cuando el usuario hace clic en el botón, muestra un cuadro de diálogo que lista todas las pistas de subtítulos opcionales predeterminadas.
 
    ```java
    public void selectClosedCaptioningClick(View view) { 
