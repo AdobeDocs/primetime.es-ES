@@ -6,11 +6,14 @@ title: Descripción general de la interfaz DRM
 uuid: b553ebad-8310-4517-8d97-ef8a1c5f4340
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '289'
+ht-degree: 0%
 
 ---
 
 
-# Descripción general de la interfaz DRM{#drm-interface-overview}
+# Descripción general de la interfaz de DRM{#drm-interface-overview}
 
 El SDK TVSDK del explorador proporciona una interfaz DRM que puede utilizar para reproducir contenido protegido por distintas soluciones DRM, incluidas FairPlay, PlayReady y Widevine.
 
@@ -20,7 +23,7 @@ El SDK TVSDK del explorador proporciona una interfaz DRM que puede utilizar para
 >
 >La compatibilidad con DRM está disponible para flujos MPEG-Dash protegidos con sistemas DRM de Microsoft PlayReady (en Internet Explorer en Windows 8.1 y Edge) y Widevine (en Google Chrome). La compatibilidad con DRM está disponible para flujos HLS en Safari que están protegidos con FairPlay.
 
-La interfaz clave del flujo de trabajo de DRM es la `DRMManager`. Se puede obtener una referencia a la `DRMManager` instancia mediante la instancia de MediaPlayer:
+La interfaz clave del flujo de trabajo de DRM es `DRMManager`. Se puede obtener una referencia a la instancia `DRMManager` mediante la instancia de MediaPlayer:
 
 * `var mediaPlayer = new AdobePSDK.MediaPlayer();`
 * `var drmManager = mediaPlayer.drmManager;`
@@ -100,14 +103,14 @@ Este es un flujo de trabajo de alto nivel para la reproducción de contenido pro
 
 1. De forma predeterminada, el tipo de sesión de la licencia de DRM es temporal, lo que significa que la licencia no se almacena una vez cerrada la sesión.
 
-   Puede especificar un tipo de sesión mediante una API en `DRMManager`.  Para la compatibilidad con versiones anteriores, los tipos de sesiones incluyen `temporary`, `persistent-license`, `persistent-usage-record`y `persistent`.
+   Puede especificar un tipo de sesión mediante una API en `DRMManager`.  Para la compatibilidad con versiones anteriores, los tipos de sesiones incluyen `temporary`, `persistent-license`, `persistent-usage-record` y `persistent`.
 
    ```js
    var drmManager = mediaPlayer.drmManager; 
     drmManager.setEMESessionType(“<YOUR_SESSION_TYPE>”); 
    ```
 
-1. Cuando `sessionType` se utiliza `persistent-license` o `persistent`, la licencia de DRM se puede devolver invocando `DRMManager.returnLicense`.
+1. Cuando el `sessionType` utilizado es `persistent-license` o `persistent`, se puede devolver la licencia de DRM invocando `DRMManager.returnLicense`.
 
    ```js
    var onLicenseReturnFunc = function () { 
