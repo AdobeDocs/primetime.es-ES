@@ -6,6 +6,9 @@ title: Configurar la gestión de errores
 uuid: 9e650ea7-86cb-4489-a3fd-80cd2ccef41f
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '145'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Puede configurar un lugar en la aplicación para que realice la gestión de errores en respuesta al estado ERROR.
 
-1. Agregue un detector de eventos para `AdobePSDK.MediaPlayerStatusChangeEvent`.
+1. Añada un detector de evento para `AdobePSDK.MediaPlayerStatusChangeEvent`.
 
    Por ejemplo:
 
@@ -23,13 +26,13 @@ Puede configurar un lugar en la aplicación para que realice la gestión de erro
                            onStatusChange);
    ```
 
-1. En el detector de eventos, cuando `event.status` esté `AdobePSDK.MediaPlayerStatus.ERROR`, proporcione la lógica para gestionar todos los errores.
-1. Después de gestionar el error, restablezca el `MediaPlayer` objeto o cargue un nuevo recurso de medios.
+1. En el detector de evento, cuando `event.status` es `AdobePSDK.MediaPlayerStatus.ERROR`, proporcione la lógica para gestionar todos los errores.
+1. Después de gestionar el error, restablezca el objeto `MediaPlayer` o cargue un nuevo recurso de medios.
 
        Cuando el objeto MediaPlayer está en el estado ERROR, no puede salir de este estado hasta que complete una de las siguientes tareas:
    
-   * Restaure el objeto MediaPlayer mediante el `MediaPlayer.reset` método .
-   * Cargue un nuevo recurso de medios mediante el `MediaPlayer.replaceCurrentResource` método .
+   * Restablezca el objeto MediaPlayer mediante el método `MediaPlayer.reset`.
+   * Cargue un nuevo recurso de medios mediante el método `MediaPlayer.replaceCurrentResource`.
 
 <!--<a id="example_342CA5A8CD7C45BD88233C5BDBB17220"></a>-->
 
