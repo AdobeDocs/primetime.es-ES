@@ -6,11 +6,14 @@ title: Trabajo con subtítulos opcionales
 uuid: 881266aa-3c32-4035-9547-0f363949f77b
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '240'
+ht-degree: 0%
 
 ---
 
 
-# Trabajo con subtítulos opcionales{#work-with-closed-captions}
+# Trabajar con subtítulos cerrados{#work-with-closed-captions}
 
 Los subtítulos opcionales muestran la parte de audio de un vídeo como texto en la pantalla cuando el sonido es inaudible o el visor es difícil de oír.
 
@@ -23,7 +26,7 @@ TVSDK admite la representación de estos formatos:
 
 Puede:
 
-* Seleccione una pista de subtítulos disponible para que sea la pista actual y escuche los eventos que indican pistas adicionales disponibles.
-* Activa o desactiva los subtítulos cerrados (visibles o no visibles) mediante la `MediaPlayer` interfaz.
-* Seleccione las opciones de estilo que dictan cómo el motor de vídeo subyacente procesa los subtítulos opcionales. Utilice la `MediaPlayerItem` interfaz para seleccionar formatos como la fuente o el color de fuente.
+* Seleccione una pista de subtítulos disponible para que sea la pista actual y escuche eventos que indiquen pistas adicionales disponibles.
+* Activa o desactiva los subtítulos cerrados (visibles o no visibles) mediante la interfaz `MediaPlayer`.
+* Seleccione las opciones de estilo que dictan cómo el motor de vídeo subyacente procesa los subtítulos opcionales. Utilice la interfaz `MediaPlayerItem` para seleccionar formatos como la fuente o el color de fuente.
 
