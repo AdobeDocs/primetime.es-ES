@@ -1,16 +1,19 @@
 ---
 description: Al configurar una arquitectura de red segura, se requieren protocolos de red para la interacción entre Adobe Primetime DRM y otros sistemas de la red empresarial.
 seo-description: Al configurar una arquitectura de red segura, se requieren protocolos de red para la interacción entre Adobe Primetime DRM y otros sistemas de la red empresarial.
-seo-title: Protocolos de red de Adobe Primetime DRM
-title: Protocolos de red de Adobe Primetime DRM
+seo-title: Protocolos de red Adobe Primetime DRM
+title: Protocolos de red Adobe Primetime DRM
 uuid: 8954e33c-83ac-4b40-9e45-005d4954b44e
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '255'
+ht-degree: 0%
 
 ---
 
 
-# Protocolos de red de Adobe Primetime DRM {#adobe-primetime-drm-network-protocols}
+# Protocolos de red Adobe Primetime DRM {#adobe-primetime-drm-network-protocols}
 
 Al configurar una arquitectura de red segura, se requieren protocolos de red para la interacción entre Adobe Primetime DRM y otros sistemas de la red empresarial.
 
@@ -45,4 +48,4 @@ Estos puertos deben habilitarse o deshabilitarse en el servidor de seguridad int
 
 La capa de sockets seguros (SSL) solo es necesaria si necesita compatibilidad con los clientes de Flash Media Rights Management Server 1.x.
 
-Se requiere SSL con autenticación de cliente para el servidor de claves DRM de Adobe Primetime. Para obtener más información, consulte [Uso del servidor](../../using-the-drm-key-server/requirements.md)de claves DRM de Adobe Primetime.
+Se requiere SSL con autenticación de cliente para Adobe Primetime DRM Key Server. Para obtener más información, consulte [Uso del servidor de claves DRM de Adobe Primetime](../../using-the-drm-key-server/requirements.md).
