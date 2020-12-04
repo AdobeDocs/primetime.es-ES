@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: fac84687085f289e984c189665bfe775337592b3
 workflow-type: tm+mt
 source-wordcount: '426'
-ht-degree: 21%
+ht-degree: 22%
 
 ---
 
@@ -18,7 +18,7 @@ Los espectadores están viendo la televisión no sólo en la televisión, sino t
 
 Adobe Primetime Ad Insertion le ayuda a crear experiencias de publicidad de destino sin errores de almacenamiento en búfer o reproducción. Puede insertar publicidades en contenido activo, lineal o VOD. También puede minimizar la complejidad aprovechando las integraciones existentes de Primetime con los servidores de publicidad líderes. Ofrezca experiencias publicitarias superiores con una visualización permanente y compatibilidad con anuncios VAST omitibles. Garantice una mayor participación y más ingresos al ofrecer mejores experiencias de visualización para sus clientes en todos los dispositivos.
 
-## Primetime Ad Insertion Help {#ad-insertion-user-guide}
+## Ayuda de Primetime Ad Insertion {#ad-insertion-user-guide}
 
 Esta guía de autoayuda explica cómo monetizar el contenido mediante la inserción de publicidad dinámica dirigida por el usuario en el servidor y la participación en la audiencia con anuncios personalizados. Utilice la navegación de la izquierda para explorar en profundidad cómo interactúan las distintas configuraciones y cómo rastrear las inserciones de anuncios.
 
@@ -29,9 +29,9 @@ Esta guía de autoayuda explica cómo monetizar el contenido mediante la inserci
 | [Notas de la versión de Primetime Ad Insertion](../release-notes/ptai-19x-release-notes.md) | Proporciona información específica de la versión, requisitos del sistema, limitaciones, problemas solucionados y problemas conocidos. |
 | [Información general sobre las interacciones del servidor de manifiesto](msapi-topics/ms-overview.md) | Proporciona información general sobre el servidor de manifiesto y cómo coordina los distintos sistemas. |
 | [Herramienta de depuración del servidor de manifiesto](manifest-server-debugging-tool.md) | Proporciona una visión detallada de la herramienta de depuración del servidor de manifiesto y de la información de depuración que proporciona para investigar los problemas de inserción de anuncios. |
-| [Descripción general del servicio de reempaquetado creativo](creative-repackaging-service/crs-overview.md) | Explica cómo CRS garantiza que los elementos creativos no relacionados con HLS se reproduzcan correctamente en los flujos HLS. |
+| [Visión general del servicio de reempaquetado creativo](creative-repackaging-service/crs-overview.md) | Explica cómo CRS garantiza que los elementos creativos no relacionados con HLS se reproduzcan correctamente en los flujos HLS. |
 
-## Principales guías de usuario de Primetime {#other-primetime-helps}
+## Guías clave de usuario de Primetime {#other-primetime-helps}
 
 | Guía del usuario | Descripción |
 |---|---|
