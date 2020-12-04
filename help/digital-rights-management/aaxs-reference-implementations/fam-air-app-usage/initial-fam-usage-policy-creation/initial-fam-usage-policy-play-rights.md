@@ -19,13 +19,13 @@ En la tabla siguiente se describen las preferencias de Derechos de reproducción
 |--- |--- |
 | Ventana de reproducción | La duración de una licencia es válida (en minutos) después de la primera vez que el usuario reproduce el contenido protegido. |
 | Protección de salida | Controla si se debe proteger la salida a dispositivos de procesamiento externos. Las salidas analógicas y digitales se pueden especificar de forma independiente. |
-| Restricciones | Bloquear lista de versiones de cliente no permitidas para reproducir contenido. Todas las columnas son opcionales. |
+| Restricciones | Lista de bloqueados de versiones de cliente no permitidas para reproducir contenido. Todas las columnas son opcionales. |
 | DRM | Especifica una lista de versiones DRM que no pueden reproducir contenido protegido. |
 | Tiempo de ejecución | Especifica una lista de versiones en tiempo de ejecución que no pueden reproducir contenido protegido. |
 | Nivel mínimo de seguridad |  |
 | DRM | Nivel mínimo de seguridad de DRM necesario para reproducir contenido protegido. |
 | Tiempo de ejecución | Nivel de seguridad mínimo de tiempo de ejecución necesario para reproducir contenido protegido. |
-| Aplicaciones permitidas | Permitir la lista de aplicaciones cliente permitidas para reproducir contenido. Si no se especifican aplicaciones, se permite cualquier aplicación SWF o AIR. |
+| Aplicaciones permitidas | Lista de permitidos de las aplicaciones cliente que pueden reproducir contenido. Si no se especifican aplicaciones, se permite cualquier aplicación SWF o AIR. |
 | SWF | Lista de URL SWF con permiso para reproducir contenido protegido. |
 | AIR | Lista de aplicaciones de AIR que permiten reproducir contenido protegido. El ID de editor es obligatorio, los campos restantes son opcionales. |
 
