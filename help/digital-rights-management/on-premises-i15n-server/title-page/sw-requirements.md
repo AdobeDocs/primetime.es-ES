@@ -6,6 +6,9 @@ title: Requisitos de software
 uuid: 9faa229b-1abf-4b55-b293-247777bcb1db
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '166'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
 * Tomcat 6
 * JDK 1.8
 
-## Envío de código/Contenido del paquete{#code-delivery-package-contents}
+## Envío de código / Contenido del paquete{#code-delivery-package-contents}
 
 El paquete del servidor de individualización local de Adobe Primetime DRM contiene lo siguiente:
 
@@ -32,7 +35,7 @@ El paquete del servidor de individualización local de Adobe Primetime DRM conti
    * [!DNL jsafe.dll] (Windows)
 
 * [!DNL adobe-flashaccess-i15n-setup.jar] - Utilidad para cifrar contraseñas de credenciales de servidor
-* [!DNL ROOT] - contiene un [!DNL crossdomain.xml] archivo
+* [!DNL ROOT] - contiene un  [!DNL crossdomain.xml] archivo
 
 * Archivos de caché de ECI: descargados previamente
 * [!DNL addIndivCert.py] - Una secuencia de comandos para actualizar la raíz de confianza de un servidor de licencias para admitir las personalizaciones de OnPremises
@@ -40,12 +43,12 @@ El paquete del servidor de individualización local de Adobe Primetime DRM conti
 * [!DNL client_sample/] - Una carpeta con un fragmento de código de cliente
 * Notas de la versión: para cualquier adición de último momento a la documentación
 
-## Obtención de certificados de servidor de individualización{#obtain-individualization-server-certificates}
+## Obtener certificados de servidor de individualización{#obtain-individualization-server-certificates}
 
 Para utilizar el servidor de individualización local, primero debe obtener dos credenciales digitales (certificados):
 
-* *Identificación de credenciales* de transporte - emitida por Adobe
-* *Credenciales* de CA de individualización: emitidos por Symantec (VeriSign)
+* *Individualización Transporte Credencial* - expedido por Adobe
+* *Identificación CA Credencial*  - emitida por Symantec (VeriSign)
 
 Para obtener estos certificados, envíe una solicitud a través del billete de Zendesk a: [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
 
