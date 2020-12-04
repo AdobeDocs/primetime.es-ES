@@ -4,6 +4,9 @@ title: Metadatos personalizados
 uuid: 99bdef62-32a9-4fd0-919c-5a2594e8d17e
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '117'
+ht-degree: 0%
 
 ---
 
