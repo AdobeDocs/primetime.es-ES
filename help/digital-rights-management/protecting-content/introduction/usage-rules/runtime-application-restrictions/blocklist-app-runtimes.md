@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Lista de bloqueados de los tiempos de ejecución de la aplicación {#blocklist-of-application-runtimes}
 
-La Lista de bloqueados de los tiempos de ejecución de la aplicación especifica la versión del cliente Primetime o Flash Runtime que no puede acceder al contenido. Especifique el tiempo de ejecución restringido (Flash Player, AIR o iOS), la plataforma y la versión.
+La lista de bloqueados de los tiempos de ejecución de la aplicación especifica la versión del cliente Primetime o Flash Runtime que no puede acceder al contenido. Especifique el tiempo de ejecución restringido (Flash Player, AIR o iOS), la plataforma y la versión.
 
 Ejemplo de caso de uso: De forma similar a la lista de bloqueados del cliente Primetime DRM, se puede especificar la versión más reciente de los tiempos de ejecución de Flash Player, AIR o iOS como la versión mínima necesaria para la adquisición de licencias y la reproducción de contenido.
 
