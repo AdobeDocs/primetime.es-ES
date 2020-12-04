@@ -20,10 +20,10 @@ El Ad Insertion Primetime admite la inserción de anuncios en varios recursos de
 
 ## VOD (anuncios con asignación de servidor) {#server-mapped-ads}
 
-El Ad Insertion Primetime admite la inserción de VOD con anuncios insertados antes del comienzo de la reproducción mediante la información de líneas de tiempo de anuncios definida en un formato VMAP.  El seguimiento de anuncios específicos de VMAP, como las señalizaciones breakStart/breakEnd, se entregará con el seguimiento [de anuncios](set-up-ad-tracking.md).
+El Ad Insertion Primetime admite la inserción de VOD con anuncios insertados antes del comienzo de la reproducción mediante la información de líneas de tiempo de anuncios definida en un formato VMAP.  El seguimiento de anuncios específicos de VMAP, como las señalizaciones breakStart/breakEnd, se entregará con [Seguimiento de anuncios](set-up-ad-tracking.md).
 
 ## Reproducción de Evento completo (VOD con señales de Ad Decisioning) {#full-event-replay}
 
-Primetime Ad Insertion también admite recursos VOD especializados que contienen señales en el flujo de contenido, como las que se encuentran en la reproducción de eventos en directo grabados anteriormente. Para obtener más información sobre los tipos de señales de decisión de publicidad (o formatos de señal) que admitimos, consulte [Uso de Ad Insertion en directo/lineal](ad-insertion-live-linear-stream.md).
+Primetime Ad Insertion también admite recursos VOD especializados que contienen señales en el flujo de contenido, como las que se encuentran en la reproducción de eventos en directo grabados anteriormente. Para obtener más información sobre los tipos de señales de decisión de publicidad (o formatos de señal) que admitimos, consulte [Uso de Ad Insertion en Live/Linear](ad-insertion-live-linear-stream.md).
 
-Se admiten escenarios de solicitud de publicidad única y de solicitud de publicidad múltiple en paralelo para los recursos de VOD que contienen más de una pausa publicitaria. Para obtener más información, consulte `ptmulticall` Parámetro en Descripción [](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md)del parámetro. Los formatos VAST y VMAP son compatibles con las señales en flujo.
+Se admiten escenarios de solicitud de publicidad única y de solicitud de publicidad múltiple en paralelo para los recursos de VOD que contienen más de una pausa publicitaria. Para obtener más información, consulte el parámetro `ptmulticall` en [Descripción del parámetro](/help/dynamic-ad-insertion/msapi-topics/ms-getting-started/ms-api-query-params.md). Los formatos VAST y VMAP son compatibles con las señales en flujo.
