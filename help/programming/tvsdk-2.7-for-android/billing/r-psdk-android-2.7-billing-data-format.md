@@ -1,18 +1,21 @@
 ---
-description: TVSDK envía métricas de facturación a Adobe en formato XML.
-seo-description: TVSDK envía métricas de facturación a Adobe en formato XML.
+description: TVSDK envía métricas de facturación al Adobe en formato XML.
+seo-description: TVSDK envía métricas de facturación al Adobe en formato XML.
 seo-title: Transmitir métricas de facturación
 title: Transmitir métricas de facturación
 uuid: f4a7f50e-f457-434e-bf26-1e06cb15a038
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '71'
+ht-degree: 0%
 
 ---
 
 
 # Transmitir métricas de facturación {#transmit-billing-metrics}
 
-TVSDK envía métricas de facturación a Adobe en formato XML.
+TVSDK envía métricas de facturación al Adobe en formato XML.
 
 <!--<a id="example_13ABDB1CC0B549968A534765378DA3A0"></a>-->
 
@@ -40,4 +43,4 @@ Si utiliza una herramienta de captura de red para supervisar las estadísticas q
 </request>
 ```
 
-Las propiedades booleanas `drmProtected`, `adsEnabled`y `midrollEnabled` solo aparecen si son verdaderas.
+Las propiedades booleanas `drmProtected`, `adsEnabled` y `midrollEnabled` sólo aparecen si son verdaderas.
