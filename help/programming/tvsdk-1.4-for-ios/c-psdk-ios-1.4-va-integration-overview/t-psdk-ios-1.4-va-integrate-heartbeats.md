@@ -6,6 +6,9 @@ title: Inicializar y configurar el análisis de vídeo
 uuid: 99c65d0b-ec3b-4a93-8dae-ef612112e510
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '631'
+ht-degree: 0%
 
 ---
 
@@ -17,21 +20,21 @@ Puede configurar el reproductor para rastrear y analizar el uso del vídeo.
 Antes de activar el seguimiento de vídeo (Video Heartbeat), asegúrese de que dispone de lo siguiente:
 
 * TVSDK para iOS
-* Información de configuración e inicialización: póngase en contacto con su representante de Adobe para obtener información específica sobre su cuenta de seguimiento de vídeo:
+* Información de configuración e inicialización: póngase en contacto con el representante de Adobe para obtener información específica sobre su cuenta de seguimiento de vídeo:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json </span> </td> 
-   <td colname="col2"> <p>Importante:  Este nombre de archivo de configuración JSON debe ser <span class="codeph"> ADBMobileConfig.json </span>. No se puede cambiar el nombre y la ruta de este archivo de configuración. La ruta de este archivo debe ser <span class="codeph"> &lt;raíz de origen&gt;/AdobeMobile </span>. </p> </td> 
+   <td colname="col1"> <span class="filepath"> ADBMobileConfig.json  </span> </td> 
+   <td colname="col2"> <p>Importante:  Este nombre de archivo de configuración JSON debe permanecer <span class="codeph"> ADBMobileConfig.json </span>. No se puede cambiar el nombre y la ruta de este archivo de configuración. La ruta a este archivo debe ser <span class="codeph"> &lt;raíz de origen&gt;/AdobeMobile </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> Extremo del servidor de seguimiento de AppMeasurement </span> </td> 
+   <td colname="col1"> <span class="codeph"> Extremo del servidor  </span> de seguimiento de AppMeasurement </td> 
    <td colname="col2"> Dirección URL del extremo de la colección back-end de Adobe Analytics (anteriormente SiteCatalyst). </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Extremo del servidor de seguimiento de análisis de vídeo </td> 
-   <td colname="col2"> Dirección URL del extremo de la colección back-end de análisis de vídeo. Aquí es donde se envían todas las llamadas de seguimiento de Video Heartbeat. <p>Sugerencia:  La dirección URL del servidor de seguimiento de visitantes es la misma que la del servidor de seguimiento de Analytics. Para obtener información sobre la implementación del servicio de ID de visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementación del servicio de ID </a>. </p> </td> 
+   <td colname="col2"> Dirección URL del extremo de la colección back-end de análisis de vídeo. Aquí es donde se envían todas las llamadas de seguimiento de Video Heartbeat. <p>Sugerencia:  La dirección URL del servidor de seguimiento de visitante es la misma que la del servidor de seguimiento de Analytics. Para obtener información sobre la implementación del servicio de ID de Visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementación del servicio de ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nombre de la cuenta </td> 
@@ -43,14 +46,14 @@ Antes de activar el seguimiento de vídeo (Video Heartbeat), asegúrese de que d
   </tr> 
   <tr> 
    <td colname="col1"> Editor </td> 
-   <td colname="col2"> Este es el ID de editor que su representante de Adobe proporciona a los clientes. <p>Sugerencia:  Este ID no es sólo una cadena con el nombre de la marca o la televisión. </p> </td> 
+   <td colname="col2"> Este es el ID del publicador, que su representante de Adobe proporciona a los clientes. <p>Sugerencia:  Este ID no es sólo una cadena con el nombre de la marca o la televisión. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 Para configurar el seguimiento de videos en su reproductor:
 
-1. Confirme que las opciones de tiempo de carga del archivo de `ADBMobileConfig.json` recursos son correctas.
+1. Confirme que las opciones de tiempo de carga en el archivo de recursos `ADBMobileConfig.json` son correctas.
 
    ```
    { 
@@ -83,8 +86,8 @@ Para configurar el seguimiento de videos en su reproductor:
 
    Para configurar las opciones de tiempo de carga:
 
-   1. Confirme que el `ADBMobileConfig.json` archivo contiene los valores adecuados proporcionados por Adobe.
-   1. Confirme que este archivo se encuentra en la `AdobeMobile` carpeta.
+   1. Confirme que el archivo `ADBMobileConfig.json` contiene los valores adecuados que proporciona Adobe.
+   1. Confirme que este archivo se encuentra en la carpeta `AdobeMobile`.
 
       Esta carpeta debe estar ubicada en la raíz del árbol de origen de la aplicación.
    1. Compile y cree su aplicación.
@@ -125,7 +128,7 @@ Para configurar el seguimiento de videos en su reproductor:
       }
       ```
 
-   1. Agregue los metadatos de Video Analytics a la instancia de metadatos global.
+   1. Añada los metadatos de Video Analytics a la instancia de metadatos global.
 
       Cuando esté listo, establezca la instancia de metadatos global en el recurso de medios o en el elemento del reproductor de medios:
 
@@ -163,7 +166,7 @@ Para configurar el seguimiento de videos en su reproductor:
 
    1. Destruya el rastreador de Video Analytics.
 
-      Antes de iniciar una nueva sesión de reproducción de contenido, elimine la instancia anterior del rastreador de vídeo. Después de recibir el evento de finalización de contenido (o notificación), espere unos minutos antes de destruir la instancia del rastreador de vídeo. Destruir la instancia inmediatamente podría interferir con la capacidad del rastreador de Video Analytics para enviar un ping de finalización de vídeo.
+      Antes de comenzar una nueva sesión de reproducción de contenido, elimine la instancia anterior del rastreador de vídeo. Después de recibir el evento de finalización de contenido (o notificación), espere unos minutos antes de destruir la instancia del rastreador de vídeo. Destruir la instancia inmediatamente podría interferir con la capacidad del rastreador de Video Analytics para enviar un ping de finalización de vídeo.
 
       ```
       self.videoAnalyticsTracker = nil;
@@ -171,7 +174,7 @@ Para configurar el seguimiento de videos en su reproductor:
 
    1. Marque manualmente el flujo en directo/lineal como completo.
 
-      Si tiene varios episodios en un flujo en directo, puede marcar manualmente un episodio como completado mediante la API completa. Esto finaliza la sesión de seguimiento de vídeo del episodio de vídeo actual y puede iniciar una nueva sesión de seguimiento del siguiente episodio.
+      Si tiene varios episodios en un flujo en directo, puede marcar manualmente un episodio como completado mediante la API completa. Esto finaliza la sesión de seguimiento de vídeo para el episodio de vídeo actual y puede crear un inicio de una nueva sesión de seguimiento para el siguiente episodio.
 
       >[!TIP]
       >
