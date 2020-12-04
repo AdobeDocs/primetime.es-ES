@@ -6,6 +6,9 @@ title: Formatos JSON para rastrear direcciones URL
 uuid: 4b17639b-c0de-4ef4-931b-aa7c4c036c0a
 translation-type: tm+mt
 source-git-commit: 2c7ac5c1b2d30b7eb819157ee4568739c1bdfb9d
+workflow-type: tm+mt
+source-wordcount: '238'
+ht-degree: 0%
 
 ---
 
@@ -364,7 +367,7 @@ Se ha abreviado para evitar repeticiones innecesarias, de modo que la estructura
 
 >[!NOTE]
 >
->El `offset` valor del `scte35` atributo extraído de `ad breaks` podría ser negativo. Esto se debe a que el sidecar JSON V2 contiene información sobre los saltos de publicidad que están parcialmente en la ventana de reproducción actual. Por lo tanto, el `scte35` atributo también contiene información sobre dichos saltos de publicidad.
+>El valor `offset` del atributo `scte35` extraído de `ad breaks` podría ser negativo. Esto se debe a que el sidecar JSON V2 contiene información sobre los saltos de publicidad que están parcialmente en la ventana de reproducción actual. Por lo tanto, el atributo `scte35` también contiene información sobre dichos saltos de publicidad.
 
 ## Formato JSON para el seguimiento de la versión 3 {#json_v3}
 
