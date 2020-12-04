@@ -6,6 +6,9 @@ title: Ciclo de vida y estados del objeto MediaPlayer
 uuid: a0eb27c8-180b-4c56-926f-59fa3bcef032
 translation-type: tm+mt
 source-git-commit: 21d1eae53cea303221de00765724e787cf6e84ef
+workflow-type: tm+mt
+source-wordcount: '471'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ El estado del reproductor de medios determina qué acciones son legales.
 
 Para trabajar con estados de reproductor de medios:
 
-* Puede recuperar el estado actual del `MediaPlayer` objeto con `MediaPlayer.getStatus()`.
+* Puede recuperar el estado actual del objeto `MediaPlayer` con `MediaPlayer.getStatus()`.
 
-* La lista de estados se define en la enumeración [MediaPlayerStatus](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/com/adobe/mediacore/MediaPlayerStatus.html) .
+* La lista de estados se define en la enumeración [MediaPlayerStatus](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/com/adobe/mediacore/MediaPlayerStatus.html).
 
-Diagrama de estado-transición para el ciclo vital de una `MediaPlayer` instancia:
+Diagrama de estado-transición para el ciclo vital de una instancia `MediaPlayer`:
 <!--<a id="fig_A6425F24C7734DC681D992859D2A6743"></a>-->
 
 ![](assets/media_player_statuses.png)
@@ -61,11 +64,11 @@ La siguiente tabla proporciona detalles sobre el ciclo vital y los estados del r
   </tr> 
   <tr> 
    <td colname="col1"> SUSPENDIDO </td> 
-   <td colname="col2"> <p>Si la aplicación sale de la reproducción, apaga el dispositivo o cambia las aplicaciones mientras se reproduce o se pausa el reproductor, el reproductor de medios se suspende y se liberan los recursos. </p> <p>Al llamar a <span class="codeph"> MediaPlayer.restore() </span> , el reproductor vuelve al estado en el que estaba el reproductor antes de SUSPENDERLO. La excepción es que si el jugador está BUSCANDO cuando se llama a suspendido, el jugador se PAUSA y luego SUSPENDE. </p> <p>Importante:  <p>Recuerde la siguiente información: 
+   <td colname="col2"> <p>Si la aplicación sale de la reproducción, apaga el dispositivo o cambia las aplicaciones mientras se reproduce o se pausa el reproductor, el reproductor de medios se suspende y se liberan los recursos. </p> <p>Al llamar a <span class="codeph"> MediaPlayer.restore() </span>, se devuelve el reproductor al estado en el que estaba el reproductor antes de SUSPENDERLO. La excepción es que si el jugador está BUSCANDO cuando se llama a suspendido, el jugador se PAUSA y luego SUSPENDE. </p> <p>Importante:  <p>Recuerde la siguiente información: 
       <ul id="ul_1B21668994D1474AAA0BE839E0D69B00"> 
-       <li id="li_08459A3AB03C45588D73FA162C27A56C">MediaPlayer <span class="codeph"> llama automáticamente a </span> suspender <span class="codeph"> solo cuando se destruya el objeto de superficie que utiliza </span> MediaPlayerView <span class="codeph"> </span> . </li> 
-       <li id="li_B9926AA2E7B9441490F37D24AE2678A1">MediaPlayer <span class="codeph"> llama automáticamente a </span> restore() <span class="codeph"> sólo cuando se crea un nuevo objeto de superficie que utiliza </span> MediaPlayerView <span class="codeph"> </span> . </li> 
-      </ul> </p> </p> <p>Si siempre desea pausar la reproducción cuando se restaure MediaPlayer, pida a la aplicación que llame a <span class="codeph"> MediaPlayer.pause() </span> en el método <span class="codeph"> onPause() de la actividad de Android </span> . </p> </td> 
+       <li id="li_08459A3AB03C45588D73FA162C27A56C">El <span class="codeph"> MediaPlayer </span> llama automáticamente a <span class="codeph"> suspender </span> sólo cuando se destruye el objeto de superficie que utiliza el <span class="codeph"> MediaPlayerView </span>. </li> 
+       <li id="li_B9926AA2E7B9441490F37D24AE2678A1">El <span class="codeph"> MediaPlayer </span> llama automáticamente a <span class="codeph"> restore() </span> sólo cuando se crea un nuevo objeto de superficie que utiliza el <span class="codeph"> MediaPlayerView </span>. </li> 
+      </ul> </p> </p> <p>Si siempre desea pausar la reproducción cuando se restaure MediaPlayer, pida a la aplicación que llame a <span class="codeph"> MediaPlayer.pause() </span> en el método <span class="codeph"> onPause() </span> de la Actividad de Android. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> COMPLETAR </td> 
@@ -77,7 +80,7 @@ La siguiente tabla proporciona detalles sobre el ciclo vital y los estados del r
   </tr> 
   <tr> 
    <td colname="col1"> ERROR </td> 
-   <td colname="col2"> <p>Error durante el proceso. Un error también puede afectar a lo que la aplicación puede hacer a continuación. Para obtener más información, consulte <a href="../../../tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-error-handling-set-up.md#set-up-error-handling" format="dita" scope="local"> Configurar la gestión de errores </a>. </p> </td> 
+   <td colname="col2"> <p>Error durante el proceso. Un error también puede afectar a lo que la aplicación puede hacer a continuación. Para obtener más información, consulte <a href="../../../tvsdk-2.7-for-android/content-playback-options/t-psdk-android-2.7-error-handling-set-up.md#set-up-error-handling" format="dita" scope="local"> Configuración de la gestión de errores </a>. </p> </td> 
   </tr> 
  </tbody> 
 </table>
