@@ -6,6 +6,9 @@ title: Reproducción y conmutación por error
 uuid: 511f16b9-2b86-42c1-8d89-09b26534200b
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
