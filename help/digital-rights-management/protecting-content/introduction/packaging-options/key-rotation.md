@@ -6,6 +6,9 @@ title: Rotación de clave
 uuid: 6ac3b828-2cd1-42df-b9ee-4daa8e553d5e
 translation-type: tm+mt
 source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+workflow-type: tm+mt
+source-wordcount: '206'
+ht-degree: 0%
 
 ---
 
