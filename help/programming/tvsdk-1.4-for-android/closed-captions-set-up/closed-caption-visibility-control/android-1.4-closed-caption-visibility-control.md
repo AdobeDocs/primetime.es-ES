@@ -33,7 +33,7 @@ Puede controlar la visibilidad de los subtítulos opcionales. Cuando la visibili
 >}
 >```
 
-1. Espere a que MediaPlayer tenga al menos el estado PREPARADO (consulte [Esperar un estado](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)válido).
+1. Espere a que MediaPlayer tenga al menos el estado PREPARADO (consulte [Espere a que se muestre un estado válido](../../../tvsdk-1.4-for-android/ui-configure/android-1.4-ui-state-prepared-wait-for.md)).
 1. Para obtener la configuración de visibilidad actual de los subtítulos cerrados, utilice el método getter en MediaPlayer, que devuelve un valor de visibilidad.
 
    ```java
