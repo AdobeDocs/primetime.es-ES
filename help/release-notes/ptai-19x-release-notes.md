@@ -16,7 +16,7 @@ Las notas de la versión de Primetime Ad Insertion 19.11.1 describen las novedad
 
 ## Novedades de PTAI 19.11.1
 
-**Cuando:** Lunes 4 de noviembre de 2019 a las 12:01 AM a la 01:00 AM ESTE
+**Cuándo:** lunes 4 de noviembre de 2019 a las 12:01 AM a las 01:00 AM ESTE
 
 Actualizaciones de mantenimiento.
 
@@ -24,31 +24,31 @@ Actualizaciones de mantenimiento.
 
 ### Versión 19.10.2
 
-**Cuando:** Jueves 31 de octubre de 2019 de 01:00 a 03:00 AM Este
+**Cuándo:** Jueves 31 de octubre de 2019, de 01:00 a.m. a 03:00 AM Este
 
 Actualizaciones de mantenimiento.
 
 ### Versión 19.10.1
 
-**Cuando:**  Martes 22 de octubre a las 01:00 AM a las 02:00 AM ESTE
+**Cuándo:**  Martes, 22 de octubre a las 01:00 AM a las 02:00 AM ESTE
 
 Actualizaciones de mantenimiento.
 
 ### Versión 19.9.1
 
-**Cuando:** Martes 10 de septiembre de 2019 a las 12:30 AM a las 2:00 AM hora del Este
+**Cuándo:** martes, 10 de septiembre de 2019 a las 12:30 AM a las 2:00 AM hora del Este
 
 Actualizaciones de seguridad
 
 ### Versión 19.8.3
 
-**Cuando:** Miércoles 28 de agosto de 2019, de las 12:30 a.m. a las 01:30 a.m.
+**Cuándo:** Miércoles, 28 de agosto de 2019, de 12:30 a.m. a 01:30 am ESTE
 
 Se corrigió un error en el cual los reproductores de Chromecast salieron inesperadamente de la reproducción cuando los segmentos de publicidad se desplegaban desde la ventana de DVR.
 
 ### Versión 19.8.2
 
-**Cuando:** Miércoles 21 de agosto de 2019 de 2:00 a 3:00 AM hora del Este
+**Cuándo:** miércoles, 21 de agosto de 2019 de 2:00 a 3:00 AM hora del este
 
 * Panel de SSAI: Estadísticas de sesión. Puede exportar los eventos de sesión mediante la opción Descargar CSV.
 
@@ -56,7 +56,7 @@ Se corrigió un error en el cual los reproductores de Chromecast salieron inespe
 
 ### Versión 19.8.1
 
-**Cuando:** Martes 6 de agosto de 2019 a las 2:30 AM hora del Este hasta el martes 6 de agosto de 2019 a las 4:30 AM hora del Este
+**Cuándo:** Martes, 6 de agosto de 2019 a las 2:30 AM hora del Este hasta el martes 6 de agosto de 2019 a las 4:30 AM hora del Este
 
 * Panel de SSAI: Nueva sección añadida, Estadísticas de sesión, al Panel de SSAI
    * Si tiene el ID de sesión para una sesión SSAI que tenía habilitado el modo de depuración (ptdebug=true), podrá buscar la siguiente actividad que se produjo en esa sesión:
@@ -69,7 +69,7 @@ Se corrigió un error en el cual los reproductores de Chromecast salieron inespe
 
 ### Versión 19.7.1
 
-**Cuando:** Miércoles, 10 de julio
+**Cuándo:** miércoles, 10 de julio
 
 * SSAI: Para valores ptcueformat que admiten la señalización de interrupción y salida EXT-X-CUE-OUT en flujos activos, se ha añadido una macro genérica para pasar datos de atributos en el ejemplo de etiqueta EXT-X-ASSET: Etiqueta que acompaña a la etiqueta #EXT-X-CUE-OUT: #EXT-X-ASSET:CAID=75BCD15,GENRE=Noticias,Programa=Macros de NewsAt10: # se puede utilizar para pasar Noticias (desde el atributo GENRE) a una dirección URL de llamada de publicidad # para pasar NewsAt10 (desde el atributo Programa) a una excepción de dirección URL de llamada de publicidad: Para la compatibilidad con versiones anteriores, # y # tienen la misma funcionalidad. Ambas macros pueden utilizarse para pasar el valor del atributo CAID, después de convertir el valor de hex a long. El valor long es 123456789 para el valor hex, 75BCD15, en el ejemplo anterior. Ambas macros se utilizarían para pasar 123456789 a una dirección URL de llamada de publicidad. La macro siempre inicio con #. La macro distingue entre mayúsculas y minúsculas, pero el atributo de la etiqueta EXT-X-ASSET no lo hace. Es decir, tanto el PROGRAMA como el Programa están permitidos en la etiqueta EXT-X-ASSET
 * SSAI: Cambios de configuración para un cliente específico para lo siguiente:
@@ -79,7 +79,7 @@ Se corrigió un error en el cual los reproductores de Chromecast salieron inespe
 
 ### Versión 19.6.1
 
-**Cuando:** Miércoles 12 de junio de 2019 11:30 PST a jueves 13 de junio de 2019 12:30 PST
+**Cuándo:** Miércoles, 12 de junio de 2019 11:30 PST a jueves 13 de junio de 2019 12:30 PST
 
 * CRS: Regla de normalización para elementos creativos de RevJet
    * Regla de normalización de URL creativa añadida para RevJet, utilizada por CRS y SSAI
@@ -95,7 +95,7 @@ Se corrigió un error en el cual los reproductores de Chromecast salieron inespe
 
 ### Versión 19.5.2
 
-**Cuando:** Miércoles 22 de mayo 2:30 AM Hora del Este a miércoles 22 de mayo 4:30 AM Hora del Este
+**Cuándo:** Miércoles, 22 de mayo 2:30 AM Hora del Este a Miércoles 22 de mayo 4:30 AM Hora del Este
 
 * Compatibilidad añadida con CMAF (contenido HLS/fMP4)
    * SSAI: Gestión de manifiestos CMAF
@@ -103,13 +103,13 @@ Se corrigió un error en el cual los reproductores de Chromecast salieron inespe
    * CRS: Flujo de trabajo añadido para volver a empaquetar anuncios en formato CMAF (HLS/fMP4)
 * SSAI: Se ha corregido un problema que impedía que se insertaran anuncios sin muestrear en contenido no mixto cuando tanto el contenido como la publicidad no tenían flujos de solo audio (EXT-X-STREAM-INF)
 * SSAI: Compatibilidad añadida con tokens de autenticación CDN de Limelight (LLNW) para segmentos de contenido
-   * Cuando `pttoken=limelight` o `pttoken=llnw` se agregue a la URL de arranque, agregaremos un encabezado secreto al recuperar la lista de reproducción maestra de origen y, a continuación, anexaremos los parámetros de consulta del encabezado X-Adobe-Sig de LLNW a los segmentos de contenido
-* SSAI: Se añadió otro valor pttoken (`pttoken=centurylink`) para la compatibilidad con autentificadores CDN CenturyLink, que se publicó el 30 de julio de 2018
-   * `pttoken=centurylink` tiene el mismo comportamiento que `pttoken=level3`, y ambos valores son válidos
+   * Cuando `pttoken=limelight` o `pttoken=llnw` se agreguen a la dirección URL de arranque, agregaremos un encabezado secreto al recuperar la lista de reproducción maestra de origen y anexaremos los parámetros de consulta del encabezado X-Adobe-Sig de LLNW a los segmentos de contenido
+* SSAI: Se ha añadido otro valor de pttoken (`pttoken=centurylink`) para la compatibilidad con autentificadores CDN de CenturyLink, que se publicó el 30 de julio de 2018
+   * `pttoken=centurylink` tiene el mismo comportamiento que  `pttoken=level3`, y ambos valores son válidos
 
 ### Versión 19.5.1
 
-**Cuando:** Jueves, 9 de mayo 2:30 AM hora del Este a jueves 9 de mayo 4:30 AM hora del Este
+**Cuándo:** Jueves, 9 de mayo 2:30 AM Hora del Este a Jueves, 9 de mayo 4:30 AM Hora del Este
 
 * SSAI: Actualizaciones de seguridad
 * PANEL CRS: Se ha truncado la cadena &quot;Ejemplo de FqAdId&quot; a 255 caracteres debido a restricciones de almacenamiento de datos (8 bits)
@@ -118,7 +118,7 @@ Se corrigió un error en el cual los reproductores de Chromecast salieron inespe
 
 ### Versión 19.4.1
 
-**Cuando:** Miércoles 10 de abril 2:30 AM Hora del Este hasta miércoles 10 de abril 4:30 AM Hora del Este
+**Cuándo:** Miércoles, 10 de abril 2:30 AM Hora del Este a Miércoles, 10 de abril 4:30 AM Hora del Este
 
 * CRS: La API de reempaquetado de CRS ya no admitirá comandos de POST HTTP. La API de reempaquetado de CRS redireccionará automáticamente (301) comandos del POST HTTP a HTTPS
    * A partir del 20 de mayo, se desactivará la redirección HTTP->HTTPS para los comandos del POST HTTP
@@ -144,7 +144,7 @@ Se corrigió un error en el cual los reproductores de Chromecast salieron inespe
 
 ### Versión 19.2.1
 
-**Cuando:** Miércoles 20 de febrero de 2019 1:30 AM Hora del Este hasta miércoles 20 de febrero de 2019 3:30 AM Hora del Este
+**Cuándo:** Miércoles, 20 de febrero de 2019 1:30 AM Hora del Este hasta miércoles, 20 de febrero de 2019 3:30 AM Hora del Este
 
 * SSAI: Direcciones URL añadidas de ClickThrough y ClickTracking para anuncios de vídeo al formato JSON v2 sidecar
    * Bajo la propiedad &quot;trackingURLs&quot;, sus nombres de valor &quot;evento&quot; serán &quot;pulsaciones&quot; y &quot;clickTracking&quot;
@@ -160,15 +160,15 @@ Se corrigió un error en el cual los reproductores de Chromecast salieron inespe
 
 ### Versión de la interfaz de usuario web
 
-**Cuando:** Miércoles 13 de febrero, 4:00 AM - 4:30 AM Pacífico
+**Cuándo:** Miércoles, 13 de febrero, 4:00 AM - 4:30 AM Pacífico
 
-**Qué:** Componente de interfaz de usuario web de Primetime y Decisioning
+**Qué:** Componente de IU web Primetime y Decisioning
 
 * Se corrigió el problema de la interfaz de usuario del calendario en el cual el usuario no podía seleccionar una fecha posterior al 31 de diciembre de 2018 desde el componente de calendario mientras se enviaba una campaña o se extraía un informe.
 
 ### Versión 19.1.2
 
-**Cuando:** Miércoles 30 de enero de 2019 1:30 AM Hora del Este hasta miércoles 30 de enero 3:30 AM Hora del Este
+**Cuándo:** Miércoles, 30 de enero de 2019 1:30 AM Hora del Este hasta Miércoles, 30 de enero 3:30 AM Hora del Este
 
 * SSAI: Se ha actualizado la estructura de clave de búsqueda que utiliza SSAI para almacenar y recuperar recursos de CRS, con el fin de controlar escenarios en los que los proveedores de publicidad tienen un ID de publicidad dinámico o un ID creativo para la misma publicidad
    * Nueva estructura de clave de búsqueda: Parámetros de zona, URL creativa y formato (duración del destinatario, formato de salida, CDN de destino)
@@ -185,7 +185,7 @@ Se corrigió un error en el cual los reproductores de Chromecast salieron inespe
 
 ### Versión 19.1.1
 
-**Cuando:** Miércoles, 9 de enero de 2019 1:30 AM Hora del Este hasta miércoles, 9 de enero 3:30 AM Hora del Este
+**Cuándo:** Miércoles, Enero 9, 2019 1:30 AM Hora del Este hasta Miércoles, Enero 9 3:30 AM Hora del Este
 
 * Se corrigió un problema en el cual la interpretación errónea de los encabezados HTTP de mantenimiento podía dar como resultado un error al validar los recursos creativos entrantes alojados en total-stream.net.
 * Se corrigió un problema en el cual las comillas simples (&#39;) y las comillas de doble (&quot;) en ID de publicidad, ID creativo y otros campos para una solicitud de reempaquetado ocasionaban que la solicitud de reempaquetado fallara.
