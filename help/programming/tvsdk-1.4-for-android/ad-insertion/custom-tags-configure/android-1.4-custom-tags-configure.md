@@ -33,7 +33,7 @@ TVSDK proporciona compatibilidad lista para usar con etiquetas de publicidad #EX
 >
 >**Limitación**
 >
->Cuando se reproduce HLS con la `Video` etiqueta en Safari y no con Flash Fallback, esta función no estará disponible en Safari.
+>Cuando se reproduce HLS con la etiqueta `Video` en Safari, y no con Flash Fallback, esta función no estará disponible en Safari.
 
 ## Uso de etiquetas HLS personalizadas {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
@@ -67,9 +67,9 @@ seg5.ts
 
 La aplicación puede configurar los siguientes escenarios:
 
-* Una notificación cuando `#EXT-X-ASSET` las etiquetas, o cualquier otro conjunto de nombres de etiquetas personalizados al que se haya suscrito, existan en el archivo.
-* Inserte publicidades cuando se encuentre una `#EXT-X-AD` etiqueta o cualquier otro nombre de etiqueta personalizado en el flujo.
+* Una notificación cuando `#EXT-X-ASSET` etiquetas, o cualquier otro conjunto de nombres de etiquetas personalizados al que se haya suscrito, existan en el archivo.
+* Inserte publicidades cuando se encuentre una etiqueta `#EXT-X-AD` o cualquier otro nombre de etiqueta personalizado en el flujo.
 
-Puede suscribirse a cualquiera de las etiquetas siguientes como etiquetas personalizadas: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Se le notifica con un `TimedMetadata` evento durante el análisis de los archivos de manifiesto.
+Puede suscribirse a cualquiera de las etiquetas siguientes como etiquetas personalizadas: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Se le notifica con un evento `TimedMetadata` durante el análisis de los archivos de manifiesto.
 
-Hay algunas etiquetas de publicidad, como `EXT-X-CUE`la que ya está suscrito. Estas etiquetas de publicidad también se utilizan en el generador de oportunidades predeterminado. Puede especificar qué etiquetas de publicidad utiliza el generador de oportunidades predeterminado si establece la `adTags` propiedad.
+Hay algunas etiquetas de publicidad, como `EXT-X-CUE`, a las que ya está suscrito. Estas etiquetas de publicidad también se utilizan en el generador de oportunidades predeterminado. Puede especificar qué etiquetas de publicidad utiliza el generador de oportunidades predeterminado si establece la propiedad `adTags`.
