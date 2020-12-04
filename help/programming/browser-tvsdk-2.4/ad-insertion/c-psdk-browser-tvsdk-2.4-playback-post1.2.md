@@ -6,6 +6,9 @@ title: Comportamiento de reproducción predeterminado y personalizado con anunci
 uuid: 58f11167-a764-4647-8490-05ca66eb6c47
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '522'
+ht-degree: 0%
 
 ---
 
@@ -38,17 +41,17 @@ En la tabla siguiente se describe cómo el SDK de TVSDK del explorador gestiona 
      <li id="li_D5CC30F063934C738971E2E8AF00C137"> En directo/lineal, reproduce la pausa publicitaria, incluso si la pausa publicitaria ya se ha visto. </li> 
      <li id="li_D962C0938DA74186AE99D117E5A74E38">En el caso de VOD, reproduce la pausa publicitaria y marca la pausa publicitaria como se vio. </li> 
     </ul> </td> 
-   <td colname="col3">Especifique una directiva diferente para el desglose de publicidad mediante <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
+   <td colname="col3">Especifique una directiva diferente para la pausa publicitaria mediante <span class="codeph"> selectPolicyForAdBreak</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> La aplicación busca hacia adelante más allá de las interrupciones publicitarias en el contenido principal. </td> 
    <td colname="col2"> Reproduce la última pausa publicitaria no observada que se omitió y reanuda la reproducción en la posición de búsqueda deseada cuando se termina la reproducción de los saltos. </td> 
-   <td colname="col3">Seleccione qué salto omitido se reproducirá mediante <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
+   <td colname="col3">Seleccione qué salto omitido se debe reproducir mediante <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> La aplicación busca hacia atrás en los saltos de publicidad en el contenido principal. </td> 
    <td colname="col2"> Salta a la posición de búsqueda deseada sin reproducir saltos de publicidad. </td> 
-   <td colname="col3">Seleccione qué salto omitido se reproducirá mediante <span class="codeph"> selectAdBreaksToPlay</span>.                      </td> 
+   <td colname="col3">Seleccione qué salto omitido se debe reproducir mediante <span class="codeph"> selectAdBreaksToPlay</span>.                      </td> 
   </tr> 
   <tr> 
    <td colname="col1"> La aplicación busca hacia delante en una pausa publicitaria. </td> 
@@ -73,11 +76,11 @@ En la tabla siguiente se describe cómo el SDK de TVSDK del explorador gestiona 
   <tr> 
    <td colname="col1"> La aplicación busca hacia delante publicidades insertadas mediante marcadores de publicidad personalizados. </td> 
    <td colname="col2"> Pasa a la posición de búsqueda seleccionada por el usuario. </td> 
-   <td colname="col3">Para obtener más información, consulte <a href="../../browser-tvsdk-2.4/content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-seek-scrub-bar-display.md" format="dita" scope="local"> Control de la búsqueda al utilizar la barra de búsqueda</a> </td> 
+   <td colname="col3">Para obtener más información, consulte <a href="../../browser-tvsdk-2.4/content-playback-options-browser-tvsdk/ui-configure/t-psdk-browser-tvsdk-2.4-ui-seek-scrub-bar-display.md" format="dita" scope="local"> Administrar búsqueda al utilizar la barra de búsqueda</a> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Configuración de comportamientos de publicidad personalizados {#section_custom_ad_behaviors}
 
-Puede establecer el comportamiento preferido en la fábrica de contenido de publicidad, según el `retrieveAdPolicySelectorCallbackFunc` método. Puede utilizar los métodos `selectPolicyForAdBreak`, `selectWatchedPolicyForAdBreak`, `selectPolicyForSeekIntoAd`y `selectAdBreaksToPlay` en la fábrica de contenido para seleccionar una política.
+Puede establecer el comportamiento preferido en la fábrica de contenido de publicidad en el método `retrieveAdPolicySelectorCallbackFunc`. Puede utilizar los métodos `selectPolicyForAdBreak`, `selectWatchedPolicyForAdBreak`, `selectPolicyForSeekIntoAd` y `selectAdBreaksToPlay` en la fábrica de contenido para seleccionar una política.
