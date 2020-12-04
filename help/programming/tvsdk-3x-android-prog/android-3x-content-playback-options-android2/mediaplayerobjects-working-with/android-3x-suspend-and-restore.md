@@ -7,6 +7,9 @@ title: Suspender y restaurar MediaPlayer
 uuid: 624a87df-df65-4358-915b-c09a3a4fa224
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '180'
+ht-degree: 0%
 
 ---
 
@@ -15,11 +18,11 @@ source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
 
 Suspender y restaurar TVSDK MediaPlayer cuando la pantalla de un dispositivo está desactivada y activada debe ser gestionada por la aplicación.
 
-Puede controlar las operaciones de suspensión y restauración en `MediaPlayer` el receptor de retransmisión de Android para la activación o desactivación de la pantalla.
+Puede controlar las operaciones de suspensión y restauración en `MediaPlayer` dentro del receptor de retransmisión de Android para la activación/desactivación de la pantalla.
 
-TVSDK no puede determinar cuándo un fragmento (o actividad) está en primer o segundo plano. Además, Android `SurfaceView` no se destruye cuando la pantalla del dispositivo está desactivada (pero la actividad está en pausa). Sin embargo, `SurfaceView` se *destruye* cuando el dispositivo pone la aplicación en segundo plano. TVSDK no puede detectar ninguno de estos cambios, por lo que su aplicación debe gestionarlos.
+TVSDK no puede determinar cuándo un fragmento (o Actividad) se encuentra en primer o segundo plano. Además, Android `SurfaceView` no se destruye cuando la pantalla del dispositivo está desactivada (pero la Actividad está en pausa). Sin embargo, `SurfaceView` *se destruye* cuando el dispositivo pone la aplicación en segundo plano. TVSDK no puede detectar ninguno de estos cambios, por lo que su aplicación debe gestionarlos.
 
-El siguiente código de ejemplo muestra cómo puede gestionar la aplicación la suspensión y restauración `MediaPlayer` cuando la pantalla del dispositivo está encendida y desactivada en la aplicación:
+El siguiente código de ejemplo muestra cómo la aplicación puede gestionar la suspensión y restauración de `MediaPlayer` cuando la pantalla del dispositivo está activada y desactivada en el nivel de la aplicación:
 
 ```java
 // Track the state of a fragment to determine if it is PAUSED or RESUMED 
