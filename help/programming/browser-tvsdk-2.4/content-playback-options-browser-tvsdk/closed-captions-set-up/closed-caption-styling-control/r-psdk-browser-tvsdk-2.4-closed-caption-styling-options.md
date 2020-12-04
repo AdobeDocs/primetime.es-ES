@@ -6,6 +6,9 @@ title: Opciones de estilo de subtítulos opcionales
 uuid: 0e2fd9f3-e569-4b5d-9b78-86f8ee6230ee
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '371'
+ht-degree: 0%
 
 ---
 
@@ -44,21 +47,21 @@ new TextFormat(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Fuente </td> 
-   <td colname="2"> <p>Tipo de fuente. </p> <p>Solo se puede establecer en un valor definido por la enumeración <span class="codeph"> TextFormat.Font </span> y que represente, por ejemplo, un solo espacio con o sin serifs. </p> <p>Sugerencia:  Las fuentes disponibles en un dispositivo pueden variar y se utilizan sustituciones cuando es necesario. Monospace con serifs se utiliza generalmente como sustituto, aunque esta sustitución puede ser específica del sistema. </p> </td> 
+   <td colname="2"> <p>Tipo de fuente. </p> <p>Sólo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Font </span> y que represente, por ejemplo, un solo espacio con o sin serifs. </p> <p>Sugerencia:  Las fuentes disponibles en un dispositivo pueden variar y se utilizan sustituciones cuando es necesario. Monospace con serifs se utiliza generalmente como sustituto, aunque esta sustitución puede ser específica del sistema. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Tamaño </td> 
-   <td colname="2"> <p>Tamaño del rótulo. </p> <p> Solo se puede establecer en un valor definido por la enumeración <span class="codeph"> TextFormat.Size </span> : 
+   <td colname="2"> <p>Tamaño del rótulo. </p> <p> Sólo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Size </span>: 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
-      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIO </span> - Tamaño estándar </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE </span> - Aproximadamente 30% mayor que medio </li> 
-      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PEQUEÑO </span> - Aproximadamente un 30% menor que medio </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PREDETERMINADO </span> : el tamaño predeterminado del rótulo; igual que medium </li> 
+      <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIO  </span> - Tamaño estándar </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE  </span> - Aproximadamente 30% mayor que medio </li> 
+      <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PEQUEÑO  </span> - Aproximadamente un 30% menor que medio </li> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PREDETERMINADO  </span> - El tamaño predeterminado del rótulo; igual que medium </li> 
      </ul> </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Color de fuente </td> 
-   <td colname="2"> <p>Color de fuente. </p> <p>Solo se puede establecer en un valor definido por la enumeración <span class="codeph"> TextFormat.Color </span> . </p> </td> 
+   <td colname="2"> <p>Color de fuente. </p> <p>Sólo se puede establecer en un valor definido por la lista desglosada <span class="codeph"> TextFormat.Color </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Color de fondo </td> 
@@ -66,7 +69,7 @@ new TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacidad de fuente </td> 
-   <td colname="2"> <p>La opacidad del texto. </p> <p>Expresado como porcentaje de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY </span> para la fuente es 100. </p> </td> 
+   <td colname="2"> <p>La opacidad del texto. </p> <p>Expresado como porcentaje de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> para la fuente es 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Margen inferior </td> 
