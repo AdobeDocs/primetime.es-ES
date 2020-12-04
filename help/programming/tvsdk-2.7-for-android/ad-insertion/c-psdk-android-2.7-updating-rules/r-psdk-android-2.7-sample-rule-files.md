@@ -6,6 +6,9 @@ title: Ejemplo de reglas de selección creativa
 uuid: 58e6637e-9f5c-471a-8bc8-d217b36e5f9d
 translation-type: tm+mt
 source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+workflow-type: tm+mt
+source-wordcount: '104'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +19,7 @@ En AdobeTVSDKConfig.json puede especificar reglas predeterminadas, así como reg
 
 ## Reglas predeterminadas de muestra {#section_xy4_3fx_hz}
 
-A continuación se muestra un ejemplo de un [!DNL AdobeTVSDKConfig.json] archivo que define solo las reglas predeterminadas:
+A continuación se muestra un ejemplo de un archivo [!DNL AdobeTVSDKConfig.json] que define únicamente las reglas predeterminadas:
 
 ```
 {
@@ -66,7 +69,7 @@ A continuación se muestra un ejemplo de un [!DNL AdobeTVSDKConfig.json] archivo
 
 ## Ejemplo de reglas predeterminadas con reglas de zona adicionales {#section_ocv_3fx_hz}
 
-A continuación se muestra un ejemplo de un [!DNL AdobeTVSDKConfig.json] archivo que define reglas predeterminadas, además de reglas adicionales para un ID de zona específico (en este caso, zona **&quot;1234&quot;**):
+El siguiente es un ejemplo de archivo [!DNL AdobeTVSDKConfig.json] que define reglas predeterminadas, además de reglas adicionales para un ID de zona específico (en este caso, zona **&quot;1234&quot;**):
 
 ```
 {
