@@ -6,6 +6,9 @@ title: Almacenar objetos de metadatos temporizados a medida que se distribuyen
 uuid: 38e72a9b-571a-48da-9c17-80be453e6a98
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '219'
+ht-degree: 0%
 
 ---
 
@@ -14,20 +17,20 @@ source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
 
 La aplicación debe utilizar los objetos PTTimedMetadata adecuados en los momentos adecuados.
 
-Durante el análisis de contenido, que se realiza antes de la reproducción, TVSDK identifica las etiquetas suscritas y notifica a la aplicación sobre estas etiquetas. El tiempo que se asocia a cada uno `PTTimedMetadata` es el tiempo absoluto en la línea de tiempo de reproducción.
+Durante el análisis de contenido, que se realiza antes de la reproducción, TVSDK identifica las etiquetas suscritas y notifica a la aplicación sobre estas etiquetas. El tiempo asociado a cada `PTTimedMetadata` es el tiempo absoluto en la línea de tiempo de reproducción.
 
 La aplicación debe completar las siguientes tareas:
 
 1. Realice un seguimiento del tiempo de reproducción actual.
 1. Haga coincidir el tiempo de reproducción actual con los objetos `PTTimedMetadata` enviados.
 
-1. Utilice el `PTTimedMetadata` punto en el que la hora de inicio es igual al tiempo de reproducción actual.
+1. Utilice el `PTTimedMetadata` donde el tiempo de inicio es igual al tiempo de reproducción actual.
 
    >[!NOTE]
    >
-   >El código siguiente supone que solo hay una `PTTimedMetadata` instancia a la vez. Si hay varias instancias, la aplicación debe guardarlas correctamente en un diccionario. Un método consiste en crear una matriz en un momento determinado y almacenar todas las instancias de dicha matriz.
+   >El código siguiente supone que sólo hay una instancia `PTTimedMetadata` por vez. Si hay varias instancias, la aplicación debe guardarlas correctamente en un diccionario. Un método consiste en crear una matriz en un momento determinado y almacenar todas las instancias de dicha matriz.
 
-   El siguiente ejemplo muestra cómo guardar `PTTimedMetadata` objetos con una `NSMutableDictionary (timedMetadataCollection)` tecla antes de la hora de inicio de cada uno de ellos `timedMetadata`.
+   El siguiente ejemplo muestra cómo guardar `PTTimedMetadata` objetos en una `NSMutableDictionary (timedMetadataCollection)` clave por el tiempo de inicio de cada `timedMetadata`.
 
    ```
    NSMutableDictionary *timedMetadataCollection; 
@@ -52,9 +55,9 @@ La aplicación debe completar las siguientes tareas:
    }
    ```
 
-## Análisis de las etiquetas de ID3 de Nielsen {#example_3B51E9D4AF2449FAA8E804206F873ECF}
+## Analizando etiquetas de ID3 de Nielsen {#example_3B51E9D4AF2449FAA8E804206F873ECF}
 
-Para extraer la etiqueta ID3 para el análisis, utilice lo siguiente en el `onMediaPlayerSubscribedTagIdentified` método:
+Para extraer la etiqueta ID3 para analizarla, utilice lo siguiente en el método `onMediaPlayerSubscribedTagIdentified`:
 
 ```
 (void)onMediaPlayerSubscribedTagIdentified:(NSNotification *)notification 
