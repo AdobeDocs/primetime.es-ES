@@ -6,6 +6,9 @@ title: Implementar una resolución de contenido personalizada
 uuid: cf85dd90-242e-4f9e-9785-158ca0fc9465
 translation-type: tm+mt
 source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+workflow-type: tm+mt
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
@@ -14,15 +17,15 @@ source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
 
 Puede implementar sus propios resueltores de contenido en función de los resueltores predeterminados.
 
-Cuando el TVSDK del explorador detecta una nueva oportunidad, se repite a través de los resueltores de contenido registrados que buscan una que sea capaz de resolver esa oportunidad usando el `canResolve` método . El primero que devuelve true se selecciona para resolver la oportunidad. Si no se puede resolver ningún contenido, se omitirá esa oportunidad. Dado que el proceso de resolución de contenido suele ser asíncrono, la resolución de contenido es responsable de notificar al SDK de TVSDK del explorador cuando se ha completado el proceso.
+Cuando el TVSDK del explorador detecta una nueva oportunidad, se repite a través de los resueltores de contenido registrados que buscan una que sea capaz de resolver esa oportunidad mediante el método `canResolve`. El primero que devuelve true se selecciona para resolver la oportunidad. Si no se puede resolver ningún contenido, se omitirá esa oportunidad. Dado que el proceso de resolución de contenido suele ser asíncrono, la resolución de contenido es responsable de notificar al SDK de TVSDK del explorador cuando se ha completado el proceso.
 
 Recuerde la siguiente información:
 
-* La resolución de contenido llama `client.process` para especificar la operación de línea de tiempo que debe ejecutar TVSDK.
+* La resolución de contenido llama a `client.process` para especificar la operación de línea de tiempo que debe ejecutar TVSDK.
 
    La operación suele ser una colocación de pausa publicitaria.
 
-* La resolución de contenido llama `client.notifyCompleted` si el proceso de resolución es correcto o `client.notifyFailed` si el proceso falla.
+* La resolución de contenido llama a `client.notifyCompleted` si el proceso de resolución es exitoso o `client.notifyFailed` si falla el proceso.
 
 1. Cree una resolución de oportunidad personalizada.
 
@@ -106,7 +109,7 @@ Recuerde la siguiente información:
    }; 
    ```
 
-1. Registre la fábrica de contenido personalizado para que se reproduzca el flujo de medios.
+1. Registre la fábrica de contenido personalizado para la reproducción del flujo de medios.
 
    En el reproductor de interfaz de usuario de Framework, puede especificar la fábrica de contenido personalizado de la siguiente manera:
 
