@@ -6,6 +6,9 @@ title: Resolver e insertar publicidad en directo/lineal
 uuid: 722569f2-d260-4fcc-b6b9-01d86aa00e28
 translation-type: tm+mt
 source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+workflow-type: tm+mt
+source-wordcount: '291'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +24,7 @@ TVSDK inserta publicidades de las siguientes formas:
 * **Anteponer**, que se coloca antes del contenido.
 * **Mid-roll**, que se coloca en medio del contenido.
 
-TVSDK acepta la pausa publicitaria aunque la duración sea más larga o más corta que la duración de sustitución de puntos de referencia. De forma predeterminada, TVSDK admite el `#EXT-X-CUE` cue como un marcador de publicidad válido al resolver y colocar anuncios. Este marcador requiere que el valor del campo `DURATION` de metadatos se exprese en segundos y el ID único del cue. Por ejemplo:
+TVSDK acepta la pausa publicitaria aunque la duración sea más larga o más corta que la duración de sustitución de puntos de referencia. De forma predeterminada, TVSDK admite la señal `#EXT-X-CUE` como un marcador de publicidad válido al resolver y colocar publicidades. Este marcador requiere que el valor del campo de metadatos `DURATION` se exprese en segundos y el identificador único del cue. Por ejemplo:
 
 ```
 #EXT-X-CUE:DURATION=27,ID="..."
@@ -29,4 +32,4 @@ TVSDK acepta la pausa publicitaria aunque la duración sea más larga o más cor
 
 Puede definir y suscribirse a indicaciones (etiquetas) adicionales.
 
-Una vez iniciada la reproducción, el motor de vídeo actualiza periódicamente el archivo de manifiesto. TVSDK resuelve cualquier publicidad nueva e inserta la publicidad cuando se encuentra un punto de referencia en el flujo activo o lineal definido en el manifiesto. Después de resolver e insertar las publicidades, TVSDK vuelve a calcular la línea de tiempo virtual y distribuye un `TimelineItemsUpdatedEventListener.onTimelineUpdated` evento.
+Después de los inicios de reproducción, el motor de vídeo actualiza periódicamente el archivo de manifiesto. TVSDK resuelve cualquier publicidad nueva e inserta la publicidad cuando se encuentra un punto de referencia en el flujo activo o lineal definido en el manifiesto. Una vez que las publicidades se resuelven y se insertan, TVSDK vuelve a calcular la línea de tiempo virtual y distribuye un evento `TimelineItemsUpdatedEventListener.onTimelineUpdated`.
