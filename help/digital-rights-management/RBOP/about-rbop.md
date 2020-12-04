@@ -6,11 +6,14 @@ title: Descripción general de RBOP
 uuid: 57219331-d949-443c-88b3-6f714ab6c82e
 translation-type: tm+mt
 source-git-commit: 9bbcb228d3367fbf53de811bf2941ca653ce3b0e
+workflow-type: tm+mt
+source-wordcount: '196'
+ht-degree: 0%
 
 ---
 
 
-# Descripción general de RBOP {#rbop-overview}
+# Información general de RBOP {#rbop-overview}
 
 La protección de salida basada en resolución (RBOP) es un mecanismo que proporciona protección de salida basada en el recuento vertical de píxeles del contenido.
 
@@ -20,8 +23,8 @@ Para facilitar el proceso de especificación de los requisitos de protección de
 
 Secciones de esta guía:
 
-* [Los conceptos](../RBOP/output-protection-concepts.md) de RBOP proporcionan una visión general conceptual de la configuración, las opciones y los significados asociados con la protección de salida.
-* [La asistencia](../RBOP/client-support.md) al cliente RBOP describe las funciones disponibles con las distintas versiones de Flash Player y TVSDK.
-* [La configuración](../RBOP/sample-output-protection-config.md) RBOP de muestra presenta una configuración de muestra que ilustra los conceptos y la forma de la configuración.
-* [La gramática](../RBOP/output-protection-grammar.md) RBOP abarca la gramática de la entrada de configuración, enfatiza las opciones de entrada válidas e inválidas y explica cómo se interpretan los campos opcionales omitidos.
+* [RBOP ](../RBOP/output-protection-concepts.md) Concepts proporciona una visión general conceptual de la configuración, las opciones y los significados asociados con la protección de salida.
+* [La ](../RBOP/client-support.md) asistencia técnica al cliente RBOP describe las funciones disponibles con diferentes versiones de Flash Player y TVSDK.
+* [La ](../RBOP/sample-output-protection-config.md) configuración de RBOP de muestra presenta una configuración de muestra que ilustra los conceptos y la forma de la configuración.
+* [RBOP ](../RBOP/output-protection-grammar.md) Grammarincluye la gramática de la entrada de configuración, enfatiza las opciones de entrada válidas e inválidas y explica cómo se interpretan los campos opcionales omitidos.
 
