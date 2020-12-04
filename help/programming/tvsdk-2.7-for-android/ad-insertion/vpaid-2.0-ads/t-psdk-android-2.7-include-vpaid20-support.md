@@ -6,11 +6,14 @@ title: Implementación de la integración con VPAID 2.0
 uuid: fa5b9cdd-e684-4656-91b7-50781dc59e23
 translation-type: tm+mt
 source-git-commit: 25f97c8d296f71deddc8f9d12b97007ddf73f603
+workflow-type: tm+mt
+source-wordcount: '184'
+ht-degree: 2%
 
 ---
 
 
-# Implementación de la integración con VPAID 2.0 {#implement-vpaid-integration}
+# Implementar la integración de VPAID 2.0 {#implement-vpaid-integration}
 
 Para agregar compatibilidad con VPAID 2.0, agregue una vista de publicidad personalizada y los oyentes adecuados.
 
@@ -33,11 +36,11 @@ Para agregar compatibilidad con VPAID 2.0:
        _playerFrame.addView(view);
    ```
 
-1. Cree oyentes y procese los eventos descritos en los oyentes de eventos.
+1. Cree oyentes y procese los eventos descritos en los eventos-oyentes.
 
    >[!IMPORTANT]
    >
-   >En un flujo de trabajo de VPAID 2.0, para las vistas de publicidad personalizadas es muy importante mantener la `CustomAdView` instancia entre `AdBreak` inicios (evento `AD_BREAK_START`) y `AdBreak` finalizaciones (evento `AD_BREAK_COMPLETE`), desde el momento en que crea la vista de publicidad personalizada hasta el momento en que la elimina. Es decir, no cree una vista de publicidad personalizada en cada inicio de pausa publicitaria y elimínelo en cada pausa publicitaria completada.
+   >En un flujo de trabajo de VPAID 2.0, para las vistas de publicidad personalizadas es muy importante mantener la instancia `CustomAdView` entre `AdBreak` inicios (evento `AD_BREAK_START`) y `AdBreak` finalizaciones (evento `AD_BREAK_COMPLETE`), desde el momento en que se crea la vista de publicidad personalizada hasta el momento en que se elimina. Es decir, no cree una vista de publicidad personalizada en cada inicio de pausa publicitaria y elimínelo en cada pausa publicitaria completada.
    >
    >
    >Además, solo debe crear la vista de publicidad personalizada cuando el reproductor esté en el estado PREPARADO,
@@ -54,7 +57,7 @@ Para agregar compatibilidad con VPAID 2.0:
    >} 
    >```
    >
-   >Por último, antes de eliminar la vista de publicidad personalizada, debe eliminarla del `FrameLayout`. Por ejemplo:
+   >Finalmente, antes de eliminar la vista de publicidad personalizada, debe eliminarla de `FrameLayout`. Por ejemplo:
    >
    >
    ```
