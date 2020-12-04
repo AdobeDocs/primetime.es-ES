@@ -6,6 +6,9 @@ title: Publicidades tipo titular complementarias
 uuid: 6f38f6ec-bc8b-4ea1-845f-90031b3d8a00
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 
@@ -35,8 +38,8 @@ El contenido de un PTAdAsset describe una pancarta adjunta.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
-La `PTMediaPlayerAdStartedNotification` notificación devuelve una `PTAd` instancia que contiene una `companionAssets` propiedad (matriz de `PtAdAsset`).
-Cada uno `PtAdAsset` proporciona información sobre cómo mostrar el recurso.
+La notificación `PTMediaPlayerAdStartedNotification` devuelve una instancia `PTAd` que contiene una propiedad `companionAssets` (matriz de `PtAdAsset`).
+Cada `PtAdAsset` proporciona información sobre cómo mostrar el recurso.
 
 <table id="table_760C885E2DCA4BE983CC57FDA7BD5B14"> 
  <thead> 
@@ -65,7 +68,7 @@ Cada uno `PtAdAsset` proporciona información sobre cómo mostrar el recurso.
   </tr> 
   <tr> 
    <td colname="col1"> data </td> 
-   <td colname="col2"> Datos del tipo especificado por <span class="codeph"> resourceType</span> para este letrero complementario. </td> 
+   <td colname="col2"> Los datos del tipo especificado por <span class="codeph"> resourceType</span> para esta pancarta complementaria. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -74,7 +77,7 @@ Cada uno `PtAdAsset` proporciona información sobre cómo mostrar el recurso.
 
 Para mostrar anuncios en letreros, debe crear instancias de letreros y permitir que TVSDK escuche eventos relacionados con anuncios.
 
-TVSDK proporciona una lista de publicidades tipo titular complementarias que están asociadas con una publicidad lineal a través del evento de `PTMediaPlayerAdPlayStartedNotification` notificación.
+TVSDK proporciona una lista de publicidades tipo titular complementarias que están asociadas con una publicidad lineal a través del evento de notificación `PTMediaPlayerAdPlayStartedNotification`.
 
 Los manifiestos pueden especificar publicidades de titular complementarias mediante:
 
@@ -84,17 +87,17 @@ Los manifiestos pueden especificar publicidades de titular complementarias media
 
 Para cada anuncio complementario, TVSDK indica los tipos disponibles para la aplicación.
 
-1. Cree una `PTAdBannerView` instancia para cada ranura de publicidad complementaria en la página.
+1. Cree una instancia `PTAdBannerView` para cada ranura de publicidad complementaria en la página.
 
        Asegúrese de que se ha proporcionado la siguiente información:
    
    * Para evitar la recuperación de anuncios complementarios de diferentes tamaños, una instancia de letrero que especifica la anchura y la altura.
    * Tamaños de pancarta estándar.
 
-1. Agregue un observador para el `PTMediaPlayerAdStartedNotification` que haga lo siguiente:
+1. Añada un observador para `PTMediaPlayerAdStartedNotification` que haga lo siguiente:
    1. Borra las publicidades existentes en la instancia del letrero.
-   1. Obtiene la lista de publicidades complementarias de `Ad.getCompanionAssets``PTAd.companionAssets`.
-   1. Si la lista de anuncios complementarios no está vacía, repita la lista para las instancias de letrero.
+   1. Obtiene la lista de publicidades complementarias de `Ad.getCompanionAssets` `PTAd.companionAssets`.
+   1. Si la lista de anuncios complementarios no está vacía, repita la lista para las instancias de letreros.
 
       Cada instancia de pancarta ( a `PTAdAsset`) contiene información como, por ejemplo, ancho, alto, tipo de recurso (html, iframe o static) y datos necesarios para mostrar la pancarta adjunta.
    1. Si una publicidad de vídeo no tiene anuncios complementarios reservados con ella, la lista de recursos complementarios no contiene datos para esa publicidad de vídeo.
@@ -102,7 +105,7 @@ Para cada anuncio complementario, TVSDK indica los tipos disponibles para la apl
       Para mostrar una publicidad en pantalla independiente, agregue la lógica a la secuencia de comandos para ejecutar una etiqueta de visualización de publicidad en DFP normal (DoubleClick para editores) en la instancia de letrero adecuada.
    1. Envía la información del letrero a una función de la página que muestra los letreros en una ubicación adecuada.
 
-      Generalmente es un `div`usuario y su función utiliza el `div ID` para mostrar el letrero. Por ejemplo:
+      Generalmente es `div` y su función utiliza `div ID` para mostrar la pancarta. Por ejemplo:
 
       ```
       - (void) onMediaPlayerAdPlayStarted:(NSNotification *) notification { 
