@@ -4,6 +4,9 @@ title: Audio alternativo
 uuid: cc38ded2-45b7-4be4-8f46-a919fdaf79cf
 translation-type: tm+mt
 source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+workflow-type: tm+mt
+source-wordcount: '226'
+ht-degree: 0%
 
 ---
 
@@ -14,19 +17,19 @@ El audio alternativo o de enlace tardío le permite alternar entre las pistas de
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-Cuando TVSDK crea la `MediaPlayerItem` instancia para el vídeo actual, crea un `AudioTrack` elemento para cada pista de audio disponible. El elemento contiene una `name` propiedad, una cadena que generalmente contiene una descripción reconocible por el usuario del idioma de esa pista. El elemento también contiene información sobre si se utiliza esa pista de forma predeterminada.
+Cuando TVSDK crea la instancia `MediaPlayerItem` para el vídeo actual, crea un elemento `AudioTrack` para cada pista de audio disponible. El elemento contiene una propiedad `name`, una cadena que generalmente contiene una descripción reconocible por el usuario del idioma de esa pista. El elemento también contiene información sobre si se utiliza esa pista de forma predeterminada.
 
 Cuando es hora de reproducir el vídeo, puede solicitar una lista de las pistas de audio disponibles, dejar que el usuario elija una y configurar la reproducción del vídeo con la pista seleccionada.
 
-Aunque no es habitual, si una pista de audio adicional está disponible después de crear el `MediaPlayerItem`, TVSDK activa un `MediaPlayerItem.AUDIO_UPDATED` evento.
+Aunque no es habitual, si una pista de audio adicional está disponible después de crear el `MediaPlayerItem`, TVSDK activa un evento `MediaPlayerItem.AUDIO_UPDATED`.
 
-## API agregadas {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
+## API añadidas {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
 Se han agregado las siguientes API para admitir audio alternativo:
 
 **hasAlternateAudio**
 
-Si el medio especificado tiene una pista de audio alternativa, distinta de la pista predeterminada, se devuelve esta función booleana `true`. Si no hay una pista de audio alternativa, la función devuelve `false`.
+Si el medio especificado tiene una pista de audio alternativa, distinta de la pista predeterminada, esta función booleana devuelve `true`. Si no hay una pista de audio alternativa, la función devuelve `false`.
 
 ```
 bool MediaPlayerItemImpl::hasAlternateAudio() const { 
@@ -36,7 +39,7 @@ bool MediaPlayerItemImpl::hasAlternateAudio() const {
 
 **getAudioTracks**
 
-Esta función devuelve una lista de todas las pistas de audio disponibles en un medio especificado.
+Esta función devuelve la lista de todas las pistas de audio disponibles en un medio especificado.
 
 ```
 virtual PSDKErrorCode getAudioTracks(PSDKImmutableArray<AudioTrack>*& out) const { 
