@@ -6,11 +6,14 @@ title: Clases de escala de tiempo
 uuid: 4acbe2f8-9552-491d-8043-2e0557b66a23
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '100'
+ht-degree: 0%
 
 ---
 
 
-# Clases de escala de tiempo{#timeline-classes}
+# Clases de línea de tiempo{#timeline-classes}
 
 Estas clases proporcionan información sobre la cronología de los medios en particular, incluida la colocación de los anuncios.
 
