@@ -30,7 +30,7 @@ La resolución y carga de anuncios puede provocar un retraso inaceptable para un
 
    1. TVSDK descarga una lista de reproducción y *resuelve* todas las publicidades.
    1. TVSDK *carga* anuncios preliminares, mueve el reproductor al estado PREPARADO y comienza la reproducción del contenido.
-   1. TVSDK *carga* el resto de las publicidades y las coloca en la línea de tiempo a medida que se produce la reproducción.
+   1. TVSDK *carga* las publicidades restantes y las coloca en la línea de tiempo a medida que se produce la reproducción.
 
    Esta función mejora el proceso básico al colocar el reproductor en el estado PREPARADO antes de que se carguen todas las publicidades.
 
@@ -57,7 +57,7 @@ La resolución y carga de anuncios puede provocar un retraso inaceptable para un
 >* Con la resolución diferida de publicidad, si existen varios saltos de publicidad al mismo tiempo (VMAP), se resolverán al mismo tiempo.
 >* No se recomienda reducir el valor de *setDelayAdLoadingTolerance() *por debajo del valor predeterminado (5 segundos). Al hacerlo, el reproductor podría &quot;almacenar en búfer&quot; innecesariamente.
 >* La resolución diferida de publicidad no afecta a los anuncios previos.
->* La resolución de publicidad diferida se admite actualmente en Auditude-Plugin. Se recomienda no establecer ** setDelayAdLoadingen como true si utiliza una resolución personalizada.
+>* La resolución de publicidad diferida se admite actualmente en Auditude-Plugin. Se recomienda no establecer *setDelayAdLoading* en true si utiliza una resolución personalizada.
 
 >
 
