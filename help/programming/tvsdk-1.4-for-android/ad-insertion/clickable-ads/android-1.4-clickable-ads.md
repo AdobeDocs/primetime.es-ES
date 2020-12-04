@@ -6,6 +6,9 @@ title: Publicidades en las que se puede hacer clic
 uuid: a8fbd553-aff5-4854-a78c-f5d57675a504
 translation-type: tm+mt
 source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+workflow-type: tm+mt
+source-wordcount: '113'
+ht-degree: 0%
 
 ---
 
