@@ -6,6 +6,9 @@ title: Prácticas recomendadas para anuncios en titulares complementarios
 uuid: d844babb-20ab-4380-9487-eb1c24b58877
 translation-type: tm+mt
 source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+workflow-type: tm+mt
+source-wordcount: '163'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
 
 TVSDK es compatible con las publicidades tipo titular complementarias, que son publicidades que acompañan un anuncio lineal y que a menudo permanecen en la página después de que finaliza el anuncio lineal. La aplicación es responsable de mostrar los letreros adjuntos que se proporcionan con un anuncio lineal.
 
-## Prácticas recomendadas para anuncios en titulares complementarios {#best-practices-for-companion-banner-ads}
+## Prácticas recomendadas para anuncios tipo titular adjuntos {#best-practices-for-companion-banner-ads}
 
 Al mostrar publicidades complementarias, siga estas recomendaciones:
 
