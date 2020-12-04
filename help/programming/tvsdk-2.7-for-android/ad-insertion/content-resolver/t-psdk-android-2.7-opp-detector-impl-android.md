@@ -6,6 +6,9 @@ title: Implementar un generador de oportunidades personalizado
 uuid: 93d8253f-10f9-4950-a273-28975cb69caa
 translation-type: tm+mt
 source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+workflow-type: tm+mt
+source-wordcount: '117'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +17,7 @@ source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
 
 Puede implementar sus propios generadores de oportunidades implementando la clase OpportunityGenerator.
 
-1. Implemente la personalización `ContentFactory` implementando la `ContentFactory` interfaz y la anulación `retrieveGenerators`.
+1. Implemente su `ContentFactory` personalizada implementando la interfaz `ContentFactory` y anulando `retrieveGenerators`.
 
    Por ejemplo:
 
@@ -47,14 +50,14 @@ Puede implementar sus propios generadores de oportunidades implementando la clas
    itemLoader.load(resource, id, config);
    ```
 
-1. Cree una clase de generador de oportunidades personalizada que implemente la `OpportunityGenerator` clase.
+1. Cree una clase de generador de oportunidades personalizada que implemente la clase `OpportunityGenerator`.
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
    {...}
    ```
 
-   1. En el generador de oportunidades personalizado, omita `doConfigure`y `doUpdate``doCleanup`:
+   1. En el generador de oportunidades personalizado, omita `doConfigure`, `doUpdate` y `doCleanup`:
 
       ```java
       @Override 
@@ -86,7 +89,7 @@ Puede implementar sus propios generadores de oportunidades implementando la clas
       ); 
       ```
 
-   1. Por cada oportunidad creada, llama `resolve` a la `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
+   1. Para cada oportunidad creada, llame a `resolve` en el `OpportunityGeneratorClient:getClient().resolve(opportunity);`.
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
