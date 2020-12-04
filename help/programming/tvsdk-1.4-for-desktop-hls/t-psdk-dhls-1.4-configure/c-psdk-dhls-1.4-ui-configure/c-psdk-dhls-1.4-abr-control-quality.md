@@ -25,24 +25,24 @@ Puede establecer la directiva de conmutación de velocidad de bits adaptable (AB
  <tbody> 
   <tr> 
    <td colname="col01"> Velocidad de bits inicial </td> 
-   <td colname="col2"> <p>Velocidad de bits de reproducción deseada (en bits por segundo) para el primer segmento. Cuando se reproducen inicios, se utiliza el perfil más cercano, que es igual o bueno a la velocidad de bits inicial, para el primer segmento. </p> <p> Si se define una velocidad de bits mínima y la velocidad de bits inicial es inferior a la velocidad mínima, TVSDK selecciona el perfil con la velocidad de bits más baja por encima de la velocidad de bits mínima. Si la velocidad inicial es superior a la velocidad máxima, TVSDK selecciona la velocidad más alta por debajo de la velocidad máxima. </p> <p>Si la velocidad de bits inicial es cero o indefinida, la velocidad de bits inicial viene determinada por la directiva ABR. </p> <p> <span class="apiname"> ABRInitialBitRate </span> devuelve un valor entero que representa el perfil byte por segundo. </p> </td> 
+   <td colname="col2"> <p>Velocidad de bits de reproducción deseada (en bits por segundo) para el primer segmento. Cuando se reproducen inicios, se utiliza el perfil más cercano, que es igual o bueno a la velocidad de bits inicial, para el primer segmento. </p> <p> Si se define una velocidad de bits mínima y la velocidad de bits inicial es inferior a la velocidad mínima, TVSDK selecciona el perfil con la velocidad de bits más baja por encima de la velocidad de bits mínima. Si la velocidad inicial es superior a la velocidad máxima, TVSDK selecciona la velocidad más alta por debajo de la velocidad máxima. </p> <p>Si la velocidad de bits inicial es cero o indefinida, la velocidad de bits inicial viene determinada por la directiva ABR. </p> <p> <span class="apiname"> ABRInitialBitRate  </span> devuelve un valor entero que representa el perfil byte por segundo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Velocidad de bits mínima </td> 
-   <td colname="col2"> <p>La velocidad de bits más baja permitida a la que puede cambiar el ABR. El cambio de ABR ignora los perfiles con una velocidad de bits inferior a esta velocidad de bits. </p> <p> <span class="apiname"> ABRMinBitRate </span> devuelve un valor entero que representa el perfil bits por segundo. </p> </td> 
+   <td colname="col2"> <p>La velocidad de bits más baja permitida a la que puede cambiar el ABR. El cambio de ABR ignora los perfiles con una velocidad de bits inferior a esta velocidad de bits. </p> <p> <span class="apiname"> ABRMinBitRate  </span> devuelve un valor entero que representa el perfil bits por segundo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Velocidad de bits máxima </td> 
-   <td colname="col2"> <p>La velocidad de bits máxima permitida a la que puede cambiar el ABR. El cambio de ABR ignora los perfiles con una velocidad de bits superior a esta velocidad de bits. </p> <p> <span class="apiname"> ABRMaxBitRate </span> devuelve un valor entero que representa el perfil bits por segundo. </p> </td> 
+   <td colname="col2"> <p>La velocidad de bits máxima permitida a la que puede cambiar el ABR. El cambio de ABR ignora los perfiles con una velocidad de bits superior a esta velocidad de bits. </p> <p> <span class="apiname"> ABRMaxBitRate  </span> devuelve un valor entero que representa el perfil bits por segundo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Política de conmutación ABR </td> 
    <td colname="col2"> La reproducción cambia gradualmente al perfil de velocidad de bits más alta cuando es posible. Puede establecer la directiva para el cambio ABR, que determina la rapidez con la que TVSDK cambia entre perfiles. El valor predeterminado es <span class="codeph"> MODERATE_POLICY </span>. <p>Cuando TVSDK decide cambiar a una velocidad de bits más alta, el reproductor selecciona el perfil de velocidad de bits ideal para cambiar según la directiva ABR actual: 
      <ul id="ul_058D0FFC944C476A83BB9E756B95DEBD"> 
-      <li id="li_C690A12DC34C4754B01C2D0616FB6A0A"> <span class="codeph"> CONSERVATIVE_POLICY </span>: Cambia al perfil con la siguiente velocidad de bits más alta cuando el ancho de banda es un 50% superior a la velocidad de bits actual. </li> 
-      <li id="li_FF5BDB099B554940AC296938C7A12B81"> <span class="codeph"> MODERATE_POLICY </span>: Cambia al siguiente perfil de velocidad de bits más alto cuando el ancho de banda es un 20% mayor que la velocidad de bits actual. </li> 
-      <li id="li_E602508429864C279BF78360E95718A6"> <span class="codeph"> AGGRESSIVE_POLICY </span>: Cambia inmediatamente al perfil de velocidad de bits más alto cuando el ancho de banda es mayor que la velocidad de bits actual. </li> 
-     </ul> </p> <p>Si la velocidad de bits inicial es cero o no se especifica, pero se especifica una política, la reproducción inicio con el perfil de velocidad de bits más bajo para los valores conservadores, el perfil más cercano a la velocidad de bits media de los perfiles disponibles para moderados y el perfil de velocidad de bits más alto para los valores agresivos. </p> <p>La directiva funciona con las restricciones de las velocidades de bits mínimas y máximas, si se especifican estas velocidades. </p> <p> <span class="codeph"> ABRPolicy </span> devuelve la configuración actual de la enumeración <span class="codeph"> ABRControlParameters </span> : CONSERVATIVE_POLICY, MODERATE_POLICY o AGGRESSIVE_POLICY. </p> </td> 
+      <li id="li_C690A12DC34C4754B01C2D0616FB6A0A"> <span class="codeph"> CONSERVATIVE_POLICY  </span>: Cambia al perfil con la siguiente velocidad de bits más alta cuando el ancho de banda es un 50% superior a la velocidad de bits actual. </li> 
+      <li id="li_FF5BDB099B554940AC296938C7A12B81"> <span class="codeph"> MODERATE_POLICY  </span>: Cambia al siguiente perfil de velocidad de bits más alto cuando el ancho de banda es un 20% mayor que la velocidad de bits actual. </li> 
+      <li id="li_E602508429864C279BF78360E95718A6"> <span class="codeph"> AGGRESSIVE_POLICY  </span>: Cambia inmediatamente al perfil de velocidad de bits más alto cuando el ancho de banda es mayor que la velocidad de bits actual. </li> 
+     </ul> </p> <p>Si la velocidad de bits inicial es cero o no se especifica, pero se especifica una política, la reproducción inicio con el perfil de velocidad de bits más bajo para los valores conservadores, el perfil más cercano a la velocidad de bits media de los perfiles disponibles para moderados y el perfil de velocidad de bits más alto para los valores agresivos. </p> <p>La directiva funciona con las restricciones de las velocidades de bits mínimas y máximas, si se especifican estas velocidades. </p> <p> <span class="codeph"> ABRPolicy  </span> devuelve la configuración actual de la  <span class="codeph"> enumeración ABRControlParameters  </span> enum: CONSERVATIVE_POLICY, MODERATE_POLICY o AGGRESSIVE_POLICY. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -50,7 +50,7 @@ Puede establecer la directiva de conmutación de velocidad de bits adaptable (AB
 Tenga en cuenta la siguiente información:
 
 * El mecanismo de conmutación por error de TVSDK puede anular su configuración, ya que TVSDK favorece una reproducción continua en lugar de cumplir estrictamente los parámetros de control.
-* Cuando cambia la velocidad de bits, TVSDK se distribuye `ProfileEvent.PROFILE_CHANGED`.
+* Cuando cambia la velocidad de bits, TVSDK distribuye `ProfileEvent.PROFILE_CHANGED`.
 * Puede cambiar la configuración de ABR en cualquier momento y el reproductor cambiará para utilizar el perfil que más se adapte a la configuración más reciente.
 
 Por ejemplo, si un flujo tiene los siguientes perfiles:
@@ -65,21 +65,21 @@ Si especifica un intervalo de 300000 a 2000000, TVSDK solo tendrá en cuenta los
 
 Para definir los parámetros de control ABR, realice una de las siguientes acciones:
 
-* Utilice la clase `ABRControlParameterBuilder` auxiliar para establecer cualquier subconjunto de parámetros (funciona en `ABRControlParameter` segundo plano)
+* Utilice la clase auxiliar `ABRControlParameterBuilder` para establecer cualquier subconjunto de parámetros (funciona con `ABRControlParameter` entre bastidores)
 
-* Defina los parámetros de la `ABRControlParameter` clase.
+* Establezca los parámetros en la clase `ABRControlParameter`.
 
-## Configurar velocidades de bits adaptables mediante ABRControlParametersBuilder {#section_3DDE397A7CE445E1832EBAA46CE5C069}
+## Configure las velocidades de bits adaptables mediante ABRControlParametersBuilder {#section_3DDE397A7CE445E1832EBAA46CE5C069}
 
-El uso de la clase `ABRControlParametersBuilder` auxiliar es la forma más sencilla y eficaz de establecer los parámetros ABR.
+El uso de la clase auxiliar `ABRControlParametersBuilder` es la forma más sencilla y eficaz de establecer los parámetros ABR.
 
-* El constructor `ABRControlParametersBuilder` establece todos los parámetros ABR en valores predeterminados en el `ABRControlParameters` objeto subyacente.
+* El constructor `ABRControlParametersBuilder` establece todos los parámetros ABR en valores predeterminados en el objeto `ABRControlParameters` subyacente.
 
-* Puede restablecer parámetros ABR individuales durante el tiempo de ejecución, siempre y cuando mantenga una referencia a la misma `ABRControlParametersBuilder` instancia.
+* Puede restablecer parámetros ABR individuales durante el tiempo de ejecución, siempre y cuando mantenga una referencia a la misma instancia `ABRControlParametersBuilder`.
 
-Esta clase también incluye el método `toABRControlParameters()` auxiliar. Utilice este método para obtener una instancia de `ABRControlParameters` y establecerla en la `mediaPlayer.ABRControlParameters` propiedad. Esto hace que la configuración entre en vigor en el reproductor.
+Esta clase también incluye el método auxiliar `toABRControlParameters()`. Utilice este método para obtener una instancia de `ABRControlParameters` y establecerla en la propiedad `mediaPlayer.ABRControlParameters`. Esto hace que la configuración entre en vigor en el reproductor.
 
-1. Cree una instancia de la clase auxiliar y establezca los parámetros en el Reproductor de medios `ABRControlParametersBuilder` .
+1. Cree una instancia de la clase auxiliar `ABRControlParametersBuilder` y defina los parámetros en Media Player.
 
    >[!NOTE]
    >
@@ -106,19 +106,19 @@ Esta clase también incluye el método `toABRControlParameters()` auxiliar. Util
      abrBuilder.toABRControlParameters();
    ```
 
-   Para conservar la configuración anterior, debe mantener una referencia a la misma `ABRControlParametersBuilder` instancia que creó en el paso 1.
+   Para conservar la configuración anterior, debe mantener una referencia a la misma instancia `ABRControlParametersBuilder` que creó en el paso 1.
 
-## Configurar velocidades de bits adaptables mediante ABRControlParameters {#section_02161FD0A73F40ED9CAE17F9AF850483}
+## Configure las velocidades de bits adaptables mediante ABRControlParameters {#section_02161FD0A73F40ED9CAE17F9AF850483}
 
-Los valores de control de ABR solo se pueden establecer con `ABRControlParameters`, pero se puede construir uno nuevo en cualquier momento.
+Puede establecer valores de control de ABR solamente con `ABRControlParameters`, pero puede construir uno nuevo en cualquier momento.
 
-Esta capacidad de establecer parámetros ABR se admitía antes de la existencia de la `ABRControlParametersBuilder` clase, pero esta capacidad sigue siendo efectiva para establecer parámetros ABR en tiempo de construcción. Sin embargo, para cambiar parámetros individuales después de la construcción, debe utilizar la `ABRControlParametersBuilder` clase.
+Esta capacidad para establecer parámetros ABR se admitía antes de la existencia de la clase `ABRControlParametersBuilder`, pero esta capacidad sigue siendo efectiva para configurar parámetros ABR en tiempo de construcción. Sin embargo, para cambiar parámetros individuales después de la construcción, debe utilizar la clase `ABRControlParametersBuilder`.
 
-Se aplican las siguientes condiciones a `ABRControlParameters`:
+Las siguientes condiciones se aplican a `ABRControlParameters`:
 
 * Debe proporcionar valores para todos los parámetros en tiempo de construcción.
 * No se pueden cambiar valores individuales después del tiempo de construcción.
-* Si los parámetros especificados están fuera del rango permitido, se `ArgumentError` genera un error.
+* Si los parámetros que especifica están fuera del rango permitido, se genera un `ArgumentError`.
 
 1. Decida las velocidades de bits iniciales, mínimas y máximas.
 1. Determine la directiva ABR:
@@ -127,7 +127,7 @@ Se aplican las siguientes condiciones a `ABRControlParameters`:
    * `MODERATE_POLICY`
    * `AGGRESSIVE_POLICY`
 
-1. Establezca los valores de parámetro ABR en el constructor y asígnelos al Reproductor de medios `ABRControlParameters` .
+1. Establezca los valores de parámetro ABR en el constructor `ABRControlParameters` y asígnelos a Media Player.
 
    ```
    mediaPlayer.abrControlParameters = new ABRControlParameters( 
