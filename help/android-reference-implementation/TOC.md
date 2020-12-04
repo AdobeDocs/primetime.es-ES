@@ -19,7 +19,7 @@ ht-degree: 7%
 + Implementación de referencia de Primetime {#reference}
    + [Cómo utilizar la implementación de referencia de Primetime](ref-implementation/how-to-use-ref-player.md)
    + [Estructura de implementación de referencia](ref-implementation/ref-player-structure.md)
-   + Cómo utilizar los administradores de funciones {#feature-managers}
+   + Cómo usar administradores de funciones {#feature-managers}
       + [Cómo utilizar los administradores de funciones](ref-implementation/using-feature-managers/how-to-use-feature-managers.md)
       + [Creando administradores de funciones pasando la información de configuración a MediaPlayer...](ref-implementation/using-feature-managers/creating-feature-managers.md)
       + [Activación o desactivación de funciones mediante ManagerFactory](ref-implementation/using-feature-managers/turning-features-on-off.md)
@@ -28,7 +28,7 @@ ht-degree: 7%
       + [Configure el entorno de desarrollo](set-up-dev-environment/set-up-dev-environment-overview.md)
       + [Descargar y configurar software de requisitos previos](set-up-dev-environment/download-prereqs-android.md)
       + [Genere la implementación de referencia de Primetime](set-up-dev-environment/install-the-ref-player-project.md)
-   + Explorar el código {#explore-code}
+   + Explore el código {#explore-code}
       + [PlayerFragment](set-up-dev-environment/exploring-code/player-fragment.md)
       + [Administradores de funciones](set-up-dev-environment/exploring-code/about-psdk-feature-managers.md)
       + [ConfigProvider](set-up-dev-environment/exploring-code/config-provider.md)
@@ -39,12 +39,12 @@ ht-degree: 7%
       + [Objeto JSON para marcadores de publicidad personalizados](set-up-dev-environment/exploring-code/json-custom-ad-markers.md)
       + [Objeto JSON para el ID de recurso de asignación de derechos](set-up-dev-environment/exploring-code/json-entitlement-resource-id.md)
       + [Ejemplo de formato de fuente JSON](set-up-dev-environment/exploring-code/example-json-feed-format.md)
-   + Implementación de la reproducción de vídeo {#implement-video}
+   + Implementar la reproducción de vídeo {#implement-video}
       + [Operaciones esenciales de reproducción de vídeo](implement-video-playback/video-playback.md)
       + [Habilitar la reproducción de vídeo](implement-video-playback/enable-video-playback.md)
       + [Protección de contenido DRM](implement-video-playback/content-protection.md)
    + [Varias velocidades de bits](implement-video-playback/mbr.md)
-   + Configurar un reproductor para la reproducción de DVR con anuncios {#dvr}
+   + Configure un reproductor para la reproducción de DVR con anuncios {#dvr}
       + [DVR sin inserción de anuncio](implement-video-playback/dvr/dvr-without-ad-insertion.md)
       + [DVR con inserción de anuncios](implement-video-playback/dvr/dvr-with-ad-insertion.md)
       + [Elección de un punto de partida personalizado para DVR](implement-video-playback/dvr/dvr-custom-start-point.md)
