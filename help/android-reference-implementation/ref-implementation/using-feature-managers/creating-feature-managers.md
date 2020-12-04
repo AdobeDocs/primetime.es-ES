@@ -6,6 +6,9 @@ title: Creación de administradores de funciones pasando la información de conf
 uuid: 106ececd-a670-4360-b000-a31fec65233c
 translation-type: tm+mt
 source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+workflow-type: tm+mt
+source-wordcount: '251'
+ht-degree: 0%
 
 ---
 
@@ -22,11 +25,11 @@ Las funciones de TVSDK se rigen por la configuración y se implementan mediante 
 
 * `MediaPlayer` es el objeto del reproductor de medios TVSDK que contiene el recurso de vídeo.
 
-   Los administradores de funciones registran los detectores de eventos TVSDK en este objeto de reproductor, recuperan datos de la sesión de reproducción y activan las funciones de TVSDK en la sesión de reproducción.
+   Los administradores de funciones registran los oyentes de evento TVSDK en este objeto de reproductor, recuperan datos de la sesión de reproducción y activan las funciones de TVSDK en la sesión de reproducción.
 
 Cada función tiene una interfaz de configuración correspondiente. Por ejemplo, `CCManager` utiliza `ICCConfig` para recuperar la configuración. `ICCConfig` contiene métodos para obtener la información de configuración relacionada solo con subtítulos opcionales.
 
-El siguiente ejemplo muestra el [!DNL ICCConfig.java] archivo, configurado para recibir información sobre la visibilidad de subtítulos cerrados, el estilo de fuente y el borde de fuente del `MediaPlayer`:
+El siguiente ejemplo muestra el archivo [!DNL ICCConfig.java], configurado para recibir información sobre la visibilidad de subtítulos opcionales, el estilo de fuente y el borde de fuente de `MediaPlayer`:
 
 ```java
 // Constructor of CCManager 
@@ -64,7 +67,7 @@ El siguiente ejemplo muestra el [!DNL ICCConfig.java] archivo, configurado para 
 }
 ```
 
-Una aplicación que utiliza una función TVSDK puede crear su administrador de funciones con un proveedor de configuración y un `MediaPlayer` objeto. Por ejemplo:
+Una aplicación que utiliza una función TVSDK puede crear su administrador de funciones con un proveedor de configuración y un objeto `MediaPlayer`. Por ejemplo:
 
 ```java
 // This application needs to use the advertising workflow feature 
