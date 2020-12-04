@@ -6,11 +6,14 @@ seo-description: Este flujo de trabajo se aparta de la mayoría de los sistemas 
 uuid: b313594b-0feb-4f27-bf02-f04b955e2140
 translation-type: tm+mt
 source-git-commit: 17a492d30c65b1b5e12419f04afa0116654b99fc
+workflow-type: tm+mt
+source-wordcount: '210'
+ht-degree: 0%
 
 ---
 
 
-# Flujo de trabajo de CEK externo de AAXS DRM{#aaxs-drm-external-cek-workflow}
+# Flujo de trabajo externo de CEK AAXS DRM{#aaxs-drm-external-cek-workflow}
 
 Este flujo de trabajo se aparta de la mayoría de los sistemas DRM existentes, ya que no requiere el uso de ningún repositorio central ni de un sistema de administración de claves de contenido (CKMS). Sin embargo, para los clientes que desean que AAXS funcione con su CKMS existente, AAXS proporciona una función llamada &quot;CEK externo&quot;, en la que el CEK se suministra externamente en el momento de la emisión de paquetes y licencias.
 
