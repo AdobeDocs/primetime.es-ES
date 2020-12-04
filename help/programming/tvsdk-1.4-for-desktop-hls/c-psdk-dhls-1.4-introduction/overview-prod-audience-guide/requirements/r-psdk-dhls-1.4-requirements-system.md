@@ -6,11 +6,14 @@ title: Requisitos de sistema y software
 uuid: e0f58dac-96b6-41d1-bc4c-543bb3b4823b
 translation-type: tm+mt
 source-git-commit: 51302d6eaeccdd51b227171cfbd72fca3aeec115
+workflow-type: tm+mt
+source-wordcount: '230'
+ht-degree: 0%
 
 ---
 
 
-# Requisitos de sistema y software{#system-and-software-requirements}
+# Requisitos del sistema y del software{#system-and-software-requirements}
 
 TVSDK requiere propiedades específicas para contenido multimedia, contenido de manifiesto, DRM y versiones de software.
 
