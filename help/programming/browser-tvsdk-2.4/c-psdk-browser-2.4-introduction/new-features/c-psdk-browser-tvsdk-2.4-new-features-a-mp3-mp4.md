@@ -13,7 +13,7 @@ ht-degree: 0%
 ---
 
 
-# Funciones compatibles con MP3 y MP4 {#supported-mp-and-mp-features}
+# Funciones admitidas de MP3 y MP4 {#supported-mp-and-mp-features}
 
 El TVSDK del explorador admite varias funciones MP3 y MP4 que puede implementar para agregar funcionalidad a sus aplicaciones.
 * [Funciones de audio MP3: Reproducción básica](#core-playback)
@@ -22,7 +22,7 @@ El TVSDK del explorador admite varias funciones MP3 y MP4 que puede implementar 
 
 >[!TIP]
 >
->En las tablas de matriz de funciones que se muestran a continuación, el icono ![](assets/supported15.png) admitido significa que la función se admite en la versión actual.
+>En las tablas de la matriz de características que se muestran a continuación, ![icono admitido](assets/supported15.png) significa que la función se admite en la versión actual.
 
 ## Funciones de audio MP3 {#section_C900C301291A40529D02EACC3CD4D55A}
 
@@ -32,7 +32,7 @@ El TVSDK del explorador admite varias funciones MP3 y MP4 que puede implementar 
 |--- |--- |--- |--- |--- |--- |
 | Reproducción | MP3 VOD | Reproducción general (Reproducir, Pausa, Buscar) | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
 
-## Funciones de audio MP4 {#mp4-audio-features}
+## Características de audio MP4 {#mp4-audio-features}
 
 ### Reproducción principal {#mp4-core-playback}
 
@@ -40,7 +40,7 @@ El TVSDK del explorador admite varias funciones MP3 y MP4 que puede implementar 
 |--- |--- |--- |--- |--- |--- |
 | Reproducción | VOD MP4 | Reproducción general (Reproducir, Pausa, Buscar) | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
 
-## Funciones de vídeo MP4 {#section_1A8CBC5AA4FA4477813FD9EFF26AC104}
+## Características de vídeo MP4 {#section_1A8CBC5AA4FA4477813FD9EFF26AC104}
 
 ### Inserción de anuncios principales
 
