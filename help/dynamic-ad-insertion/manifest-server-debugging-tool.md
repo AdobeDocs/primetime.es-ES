@@ -13,9 +13,9 @@ pagecreatedat: en
 pagelayout: video
 sidecolumn: left
 translation-type: tm+mt
-source-git-commit: 6da7d597503d98875735c54e9a794f8171ad408b
+source-git-commit: 3efbd1113e82c4d5f84798997b6f744daf6f508e
 workflow-type: tm+mt
-source-wordcount: '2430'
+source-wordcount: '2437'
 ht-degree: 0%
 
 ---
@@ -309,7 +309,7 @@ Registros de este tipo de solicitudes de registro que el servidor de manifiesto 
 
 ### Registros TRACE_WEBVTT_RESPONSE {#trace-webvtt-response-records}
 
-Registra ``of ``este ``type ``registro ``responses ``del ``manifest ``servidor ``sends ``a ``clients ``en `` `answer` ``a ``requests `` `for` ``WEBVTT ``subtítulos. Los campos más allá de TRACE_WEBVTT_RESPONSE &quot;aparecen en el orden mostrado en la tabla, separadas por `by`fichas.
+Registros de este tipo de respuestas de registro que el servidor de manifiesto envía a los clientes en respuesta a solicitudes de `WEBVTT` rótulos. Los campos más allá de `TRACE_WEBVTT_RESPONSE` aparecen en el orden mostrado en la tabla, separados por tabuladores.
 
 | Campo | Tipo | Descripción |
 |--- |--- |--- |
