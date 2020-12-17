@@ -4,10 +4,10 @@ seo-title: Notas de la versión de Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: fac84687085f289e984c189665bfe775337592b3
+source-git-commit: 6e4d29f3fb85410943b960b179147b2fc2f1e7c4
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 39%
+source-wordcount: '280'
+ht-degree: 38%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 39%
 
 Bienvenido a las Notas de la versión de Adobe Primetime. Los documentos enumerados en el panel de navegación izquierdo proporcionan información específica de la versión, requisitos del sistema, limitaciones, problemas fijos y problemas conocidos.
 
-## Mejoras y correcciones en PTAI 20.10.1
+## Mejoras y correcciones en PTAI 20.12.1
 
-La versión se centró en las actualizaciones de mantenimiento.
+La versión incluye una revisión para abordar problemas intermitentes de conectividad con los clientes.
 
 ## Correcciones en TVSDK 3.12 para Android
 
