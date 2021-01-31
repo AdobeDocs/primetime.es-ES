@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: Ayuda de programación de Primetime
 user-guide-description: Le permite aprender a desarrollar aplicaciones y reproductores de vídeo mediante Java en dispositivos Android y Objective-C en dispositivos iOS.
 translation-type: tm+mt
-source-git-commit: 02ac57d14cf5c4c2819d17413a9d3e9a31237715
+source-git-commit: aab96dcf5107be90534350156ee66a88de80613e
 workflow-type: tm+mt
-source-wordcount: '4327'
+source-wordcount: '4342'
 ht-degree: 0%
 
 ---
@@ -599,7 +599,7 @@ ht-degree: 0%
          + [Inicializar y configurar el análisis de vídeo](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-integrate-heartbeats.md)
          + [Implementar compatibilidad con metadatos personalizados](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-custom-metadata.md)
          + [Implementar compatibilidad con capítulos](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-chapter-support.md)
-         + [Implementar actualizaciones de tiempo personalizadas](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-imp-cust-time-updates.md)
+         + [Implementar actualizaciones de tiempo personalizadas](https://experienceleague.adobe.com/docs/primetime/programming/tvsdk-1-4-for-android/configure-user-interface/inserting-ads/android-1.4-imp-cust-time-updates.html?lang=en#tvsdk-1-4-for-android)
          + [Configuración del sistema de informes de análisis de vídeo en el servidor](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-server-side-set-up.md)
          + [Acceso a los informes de análisis de vídeo](tvsdk-1.4-for-android/android-1.4-integrating-adobe-analytics/va-integration-overview/android-1.4-va-reports-access.md)
       + Protección del contenido {#content-protection}
