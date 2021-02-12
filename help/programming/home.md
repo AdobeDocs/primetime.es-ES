@@ -4,7 +4,7 @@ seo-title: Ayuda de programación de Adobe Primetime
 description: 'null'
 seo-description: 'null'
 translation-type: tm+mt
-source-git-commit: fac84687085f289e984c189665bfe775337592b3
+source-git-commit: 242b5a2875ebc0e0020296ce9489dd54438b5ad0
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 43%
@@ -25,7 +25,7 @@ Consulte para obtener más información sobre la [versión actual publicada](tvs
 | [Notas de la versión de Primetime](/help/release-notes/home.md) | Proporciona información específica de la versión, requisitos del sistema, limitaciones, problemas solucionados y problemas conocidos. |
 | [Ayuda de conversión y migración de Primetime](/help/migration-guides/home.md) | Explica el proceso de conversión y migración para pasar de su grupo de TVSDK de Primetime existente al grupo de próxima generación. |
 | [Implementación de referencia](/help/android-reference-implementation/home.md) | Ayuda a comprender el SDK de TVSDK y a modificar los administradores de funciones para personalizar su reproductor personal. |
-| [Ayuda de Primetime Ad Insertion](/help/dynamic-ad-insertion/home.md) | Explica cómo monetizar el contenido mediante la inserción de publicidad dinámica dirigida por el usuario en el servidor y captar la atención de la audiencia con anuncios personalizados. |
+| [Ayuda de Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Explica cómo monetizar el contenido mediante la inserción de publicidad dinámica dirigida por el usuario en el servidor y captar la atención de la audiencia con anuncios personalizados. |
 | [Digital Rights Management](/help/digital-rights-management/home.md) | Ayuda a conocer mejor los distintos casos de usuario en Digital Rights Management (DRM) |
 | [Referencias de la API de Primetime](/help/reference/api-references.md) | Proporciona información detallada sobre las funciones de TVSDK, las estructuras de datos y otras construcciones de programación. |
 | [Archivos](https://helpx.adobe.com/primetime/archives.html) | Descargue archivos PDF de la documentación archivada. |
