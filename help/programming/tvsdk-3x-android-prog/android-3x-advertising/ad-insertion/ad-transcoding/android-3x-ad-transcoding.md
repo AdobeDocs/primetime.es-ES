@@ -5,9 +5,9 @@ seo-title: Volver a empaquetar anuncios incompatibles con el servicio de reempaq
 title: Volver a empaquetar anuncios incompatibles con el servicio de reempaquetado creativo de Adobe (CRS)
 uuid: ef542d13-6d52-4429-8a1e-0af2df236f12
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '353'
 ht-degree: 0%
 
 ---
@@ -35,8 +35,6 @@ Para activar esta función de CRS opcional, póngase en contacto con su represen
 >
 
 
-
-Para obtener más información sobre CRS, consulte [Creative Packaging Service (CRS)](../../../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
 ## Habilitar CRS en aplicaciones TVSDK {#enable-crs-in-tvsdk-applications}
 
