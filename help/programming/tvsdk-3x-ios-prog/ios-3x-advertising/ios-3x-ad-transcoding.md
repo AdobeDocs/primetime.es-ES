@@ -5,9 +5,9 @@ seo-title: Volver a empaquetar anuncios incompatibles con el servicio de reempaq
 title: Volver a empaquetar anuncios incompatibles con el servicio de reempaquetado de Adobe Creative
 uuid: 56a2405d-b395-4fea-820d-343590be7c19
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: cecc559480b9b52c412fefff4361603d6f14caf7
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,6 @@ Las publicidades que se proporcionan desde varios terceros, como un servidor de 
 Cuando TVSDK encuentra por primera vez una publicidad incompatible, el reproductor ignora la publicidad y envía una solicitud al servicio creativo de reempaquetado (CRS), que forma parte del back-end de inserción y Primetime, para volver a empaquetar la publicidad en un formato compatible. CRS intenta generar representaciones M3U8 de velocidad de bits múltiple del anuncio y almacena estas representaciones en la red de Envío de contenido (CDN) de Primetime. La próxima vez que TVSDK reciba una respuesta de publicidad que apunte a esa publicidad, el reproductor utilizará la versión M3U8 compatible con HLS de la CDN.
 
 Para activar esta función opcional, póngase en contacto con el representante de Adobe.
-
-Para obtener más información sobre CRS, consulte [Creative Packaging Service (CRS)](../../../dynamic-ad-insertion/creative-repackaging-service/crs-overview.md).
 
 ## Compatibilidad con varios CDN para el envío de anuncios de CRS {#section_900FDDA5454143718F1EB4C9732C8E1C}
 
