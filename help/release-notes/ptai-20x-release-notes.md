@@ -2,7 +2,7 @@
 title: Notas de la versión de PTAI 20.12.1
 description: Las notas de la versión de PTAI describen las novedades o los cambios que se han producido en Primetime Ad Insertion en el año 2020.
 translation-type: tm+mt
-source-git-commit: 4790c8ab25ca6ecf118adf3037fc2e4e4f451cb3
+source-git-commit: 8133c35bed7fc72a6c642016a2a4b69204ad8f7a
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 0%
@@ -22,9 +22,9 @@ Las notas de la versión de Primetime Ad Insertion 20.12.1 describen las novedad
 
 * Incluye una revisión para abordar problemas intermitentes de conectividad de cliente (5xx) en el Ad Insertion Primetime que se encontró el 30 de noviembre de 2020.
 
-### Mejoras y correcciones en versiones anteriores
+## Mejoras y correcciones en versiones anteriores
 
-#### Versión 20.11.1
+### Versión 20.11.1
 
 **Cuándo:** Jueves, 5 de noviembre de 2020, de 2:00 a.m. a 5:00 AM Hora del Este
 
@@ -32,7 +32,7 @@ Las notas de la versión de Primetime Ad Insertion 20.12.1 describen las novedad
 
 * Actualizaciones de mantenimiento.
 
-#### Versión 20.10.2
+### Versión 20.10.2
 
 **Cuándo:** Jueves, 29 de octubre de 2020, de las 12:01 AM a las 06:00 AM Hora del Este
 
@@ -40,7 +40,7 @@ Las notas de la versión de Primetime Ad Insertion 20.12.1 describen las novedad
 
 * Actualizaciones de mantenimiento.
 
-#### Versión 20.10.1
+### Versión 20.10.1
 
 **Cuándo:** Martes, 13 de octubre de 2020, de las 3:00 a las 7:00 a.m., hora del Este
 
@@ -48,7 +48,7 @@ Las notas de la versión de Primetime Ad Insertion 20.12.1 describen las novedad
 
 * Actualizaciones de mantenimiento.
 
-#### Versión 20.9.3
+### Versión 20.9.3
 
 **Cuándo:** miércoles 30 de septiembre de 2020 a las 3:30 AM a las 6:30 AM hora del Este
 
@@ -56,7 +56,7 @@ Las notas de la versión de Primetime Ad Insertion 20.12.1 describen las novedad
 
 * Parámetro de API de Bootstrap añadido `ptparallelstream`. Esto permite a los clientes con reproductores que solicitan flujos de audio o vídeo CMAF desactivados en paralelo para garantizar que los anuncios de las pistas de audio y vídeo sean coherentes. Establezca el valor del parámetro en true para habilitar esta función u omitir para deshabilitarla.
 
-#### Versión 20.9.2
+### Versión 20.9.2
 
 **Cuándo:** Martes, 15 de septiembre de 2020, de las 3:30 AM a las 6:30 AM, hora del Este
 
@@ -71,7 +71,7 @@ Para obtener más información o activar esta función, póngase en contacto con
    >
    >Este tiempo de espera solo se aplica a las solicitudes de publicidad, no a las solicitudes creativas de publicidad.
 
-#### Versión 20.9.1
+### Versión 20.9.1
 
 **Cuándo:** Martes, 1 de septiembre de 2020, de las 3:30 AM a las 7:30 AM, hora del Este
 
@@ -79,7 +79,7 @@ Para obtener más información o activar esta función, póngase en contacto con
 
 * Se corrigió el problema con los clientes que usaban HLS/CMAF, donde a veces faltaban tokens CDN EXT-X-MAP o etiquetas EXT-X-MAP que a veces salían incorrectamente de la ventana DVR.
 
-#### Versión 20.8.4
+### Versión 20.8.4
 
 **Cuándo:** Miércoles, 19 de agosto de 2020 de las 3:30 a las 7:30 AM hora del Este
 
@@ -87,7 +87,7 @@ Para obtener más información o activar esta función, póngase en contacto con
 
 Actualizaciones de mantenimiento.
 
-#### Versión 20.8.1
+### Versión 20.8.1
 
 **Cuándo:** Martes, 4 de agosto de 2020 de las 3:00 AM a las 6:00 AM Hora del Este
 
@@ -95,7 +95,7 @@ Actualizaciones de mantenimiento.
 
 Actualizaciones de mantenimiento.
 
-#### Versión 20.7.1
+### Versión 20.7.1
 
 **Cuándo:** Jueves, 9 de julio de 2020, de 03:00 AM a 05:00 AM Hora del Este
 
@@ -109,7 +109,7 @@ Actualizaciones de mantenimiento.
 
 * Panel mejorado de la consola de SSAI para el panel Estadísticas de sesión
 
-#### Versión 20.6.2
+### Versión 20.6.2
 
 **Cuándo:** Jueves 18 de junio de 2020, de 03:00 AM a 04:00 AM Hora del Este
 
@@ -117,7 +117,7 @@ Actualizaciones de mantenimiento.
 
 Se ha mejorado la sincronización de flujo para los clientes de vídeo que requieren una precisión de milisegundos. Póngase en contacto con la asistencia de Adobe para habilitar la precisión de milisegundos para `#EXT-X-PROGRAM-DATE-TIME tags`.
 
-#### Versión 20.6.1
+### Versión 20.6.1
 
 **Cuándo:** Martes, 2 de junio de 2020, de 03:00 a.m. a 05:00 am, hora del Este
 
@@ -135,9 +135,9 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 * Se corrigió un problema en el cual las etiquetas EXT-X-DISCONTINUITY se eliminaban de la parte superior de la lista de reproducción al cambiar de publicidades a contenido. Póngase en contacto con la asistencia de Adobe para habilitar esta corrección.
 
-#### Versión 20.5.1
+### Versión 20.5.1
 
-**Cuándo:** Martes, 5 de mayo de 2020, de 04:00 AM a 05:00 AM Hora del Este
+**Cuándo:** Martes, 5 de mayo de 2020, de 04:00 a.m. a 05:00 AM Hora del Este
 
 * Se ha corregido un problema para garantizar que se proporcionen encabezados CORS correctos al enviar encabezados If-Modified-Since.
 
@@ -145,7 +145,7 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 * Actualizaciones de mantenimiento.
 
-#### Versión 20.3.4
+### Versión 20.3.4
 
 **Cuándo:** Miércoles, 1 de abril de 2020, de 03:00 AM a 04:00 AM Hora del Este
 
@@ -153,7 +153,7 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 * Actualizaciones de seguridad.
 
-#### Versión 20.3.3
+### Versión 20.3.3
 
 **Cuándo:** Jueves, 26 de marzo de 2020, de 03:00 AM a 04:00 AM Hora del Este
 
@@ -163,7 +163,7 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 * Se corrigió un problema con los flujos de audio CMAF/desmuestreados, en el cual en determinados escenarios los números EXT-X-MEDIA-SEQUENCE se incrementaban incorrectamente.
 
-#### Versión 20.3.2
+### Versión 20.3.2
 
 **Cuándo:** Miércoles, 11 de marzo de 2020 de las 5:30 AM a las 7:00 AM Hora del Este
 
@@ -171,7 +171,7 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 * Actualizaciones de mantenimiento.
 
-#### Versión 20.3.1
+### Versión 20.3.1
 
 **Cuándo:** Jueves, 05 de marzo de 2020 de las 02:30 a las 04:30 AM Hora del Este
 
@@ -183,14 +183,14 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 * Correcciones de seguridad y mantenimiento.
 
-#### Versión 20.2.1
+### Versión 20.2.1
 
 **Cuándo:** Jueves 13 de febrero de 2020 de las 4:30 a las 5:30 AM hora del Este
 
 * Se ha añadido la compatibilidad con la vinculación de recursos de publicidad que contienen varios flujos de solo audio en función del idioma, el códec o la velocidad de bits.
 * Pequeñas mejoras de rendimiento y actualizaciones de mantenimiento.
 
-#### Versión 20.1.3
+### Versión 20.1.3
 
 **Cuándo:** Martes, 28 de enero de 2020, de las 2:00 a.m. a las 03:00 a.m., hora del Este
 
@@ -204,13 +204,13 @@ Póngase en contacto con la asistencia de Adobe para habilitar las siguientes nu
 
 * Purgue los objetos V1 antiguos de los grupos de NetStorage para mantener el recuento de objetos dentro de los límites seguros de Akamai.
 
-#### Versión 20.1.2 (revisión)
+### Versión 20.1.2 (revisión)
 
 **Cuándo:** Lunes, 20 de enero de 2020, de 02:00 a.m. a 03:00 AM Hora del Este
 
 * Actualizaciones de mantenimiento.
 
-#### Versión 20.1.1
+### Versión 20.1.1
 
 **Cuándo:** Miércoles, 15 de enero de 2020 de las 4:00 a las 5:00 AM Hora del Este
 
