@@ -16,10 +16,10 @@ ht-degree: 14%
 # Notas de la versión de Primetime  {#release-notes}
 
 + [Información general sobre las notas de la versión](home.md)
-+ Ad Insertion Primetime {#ptai}
-   + [Notas de la versión de PTAI 21.2.2](ptai-21x-release-notes.md)
-   + [Notas de la versión de PTAI 20.12.1](ptai-20x-release-notes.md)
-   + [Notas de la versión de PTAI 19.11.1](ptai-19x-release-notes.md)
++ Inserción de publicidad de Primetime {#ptai}
+   + [Notas de la versión PTAI 21.2.2](ptai-21x-release-notes.md)
+   + [Notas de la versión PTAI 20.12.1](ptai-20x-release-notes.md)
+   + [Notas de la versión 19.11.1 de PTAI](ptai-19x-release-notes.md)
 + TVSDK para iOS {#tvsdk-ios}
    + [Notas de la versión de TVSDK 3.12 para iOS](tvsdk-3x-ios.md)
    + [Notas de la versión de TVSDK 1.4 para iOS](tvsdk-1-4-ios.md)
@@ -30,13 +30,13 @@ ht-degree: 14%
    + [Notas de la versión de TVSDK 1.4 para Android](tvsdk-1-4-android.md)
 + Explorador TVSDK {#browser-tvsdk}
    + [Notas de la versión de TVSDK 2.4 del explorador](tvsdk-24-browser.md)
-+ TVSDK para HLS de escritorio {tvsdk-desktop-hls}
-   + [Notas de la versión de TVSDK 1.4 for Desktop HLS](tvsdk-1-4-desktop-hls.md)
-+ Primetime Offline Packager {#offline-packager}
++ TVSDK para escritorio HLS {tvsdk-desktop-hls}
+   + [Notas de la versión de TVSDK 1.4 para Desktop HLS](tvsdk-1-4-desktop-hls.md)
++ Paquete sin conexión de Primetime {#offline-packager}
    + [Versiones de la versión 2 de Primetime Offline Packager](offline-packager-2x-release-note.md)
-+ Servidor de flujo Primetime {#streaming-server}
-   + [Versiones de Primetime Streaming Server versión 1](primetime-streaming-server-1x.md)
++ Servidor de transmisión de Primetime {#streaming-server}
+   + [Versiones de la versión 1 de Primetime Streaming Server](primetime-streaming-server-1x.md)
 + TVSDK para Playstation 4 {#tvsdk-playstation}
    + [Notas de la versión de TVSDK 2.1 PlayStation 4](tvsdk-21-ps4.md)
-+ Digital Rights Management {#drm}
++ Administración de derechos digitales {#drm}
    + [Notas de la versión de DRM 5.3.1](drm-531-release-notes.md)
