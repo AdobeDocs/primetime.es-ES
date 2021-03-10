@@ -1,30 +1,27 @@
 ---
-description: Aunque el escenario predeterminado del servicio de reempaquetado creativo (CRS) es usar una red de Envío de contenido (CDN), puede implementar recursos CRS en más de una CDN.
-seo-description: Aunque el escenario predeterminado del servicio de reempaquetado creativo (CRS) es usar una red de Envío de contenido (CDN), puede implementar recursos CRS en más de una CDN.
-seo-title: Compatibilidad de varios CDN con CRS y envío
-title: Compatibilidad de varios CDN con CRS y envío
-uuid: c5557a38-aa49-4161-bb58-3e8dff9a4d64
+description: Aunque el escenario predeterminado del servicio de reempaquetado creativo (CRS) es utilizar una red de entrega de contenido (CDN), puede implementar recursos CRS en más de una CDN.
+title: Compatibilidad con varias CDN para la entrega de anuncios CRS
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '189'
 ht-degree: 0%
 
 ---
 
 
-# Compatibilidad con varios CDN para el envío de anuncios de CRS {#multiple-cdn-support-for-crs-ad-delivery}
+# Compatibilidad con múltiples CDN para el envío de anuncios CRS {#multiple-cdn-support-for-crs-ad-delivery}
 
-Aunque el escenario predeterminado del servicio de reempaquetado creativo (CRS) es usar una red de Envío de contenido (CDN), puede implementar recursos CRS en más de una CDN.
+Aunque el escenario predeterminado del servicio de reempaquetado creativo (CRS) es utilizar una red de entrega de contenido (CDN), puede implementar recursos CRS en más de una CDN.
 
 ## Requisitos
 
-Puede utilizar varias CDN por las siguientes razones:
+Puede utilizar varias CDN por los siguientes motivos:
 
-* Requisito de ampliación para grandes eventos de visualización
-* Requisito para hacer coincidir el origen CDN del recurso CRS con el origen CDN del contenido principal.
-* Requisito de usar una CDN diferente de la CDN predeterminada de CRS (Akamai).
+* Requisito de ampliación para eventos de visualización grandes
+* Requisito para hacer coincidir la fuente de CDN del recurso CRS con la fuente de CDN del contenido principal.
+* Requisito para utilizar una CDN diferente de la CDN predeterminada de CRS (Akamai).
 
-Cuando el servidor de manifiesto realiza una búsqueda de solicitudes transcodificadas, utiliza una URL de arranque que contiene varios parámetros de consulta. Si ha configurado un entorno multi-CDN, la dirección URL de arranque también deberá contener el parámetro `ptcdn`. El servidor de manifiesto utiliza este parámetro para identificar el servidor CDN desde el que se obtiene la versión transcodificada de la publicidad.
+Cuando el servidor de manifiestos realiza una búsqueda de solicitudes transcodificadas, utiliza una URL de arranque que contiene varios parámetros de consulta. Si ha configurado un entorno de varias CDN, la URL de arranque también tendrá que contener el parámetro `ptcdn`. El servidor de manifiesto utiliza este parámetro para identificar el servidor CDN desde el que obtener la versión transcodificada del anuncio.
 
-Para obtener más información, consulte [Compatibilidad con múltiples CDN](../../~old-creative-repackaging-service/multi-cdn-supportt.md) en la documentación de CRS.
+Para obtener más información, consulte [Compatibilidad con varias CDN](../../~old-creative-repackaging-service/multi-cdn-supportt.md) en la documentación de CRS.
