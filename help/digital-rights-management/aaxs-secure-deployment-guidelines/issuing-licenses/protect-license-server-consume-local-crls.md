@@ -1,9 +1,9 @@
 ---
-seo-title: Consumir CRL generadas localmente
-title: Consumir CRL generadas localmente
-uuid: 5a4519b8-6dbd-4921-9048-6c9f67aae18d
+title: Consumir listas CRL generadas localmente
+description: Consumir listas CRL generadas localmente
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
@@ -11,15 +11,15 @@ ht-degree: 0%
 ---
 
 
-# Consumir listas CRL generadas localmente{#consume-locally-generated-crls}
+# Utilice listas CRL generadas localmente{#consume-locally-generated-crls}
 
-Para consumir listas de revocación de certificados (CRL) generadas localmente y listas de actualización de directivas, utilice las API de acceso a Adobe para comprobar la firma. Las API comprueban que las listas no se han manipulado y que han sido firmadas por el servidor de licencias correcto.
+Para consumir listas de revocación de certificados (CRL) generadas localmente y listas de actualización de directivas, utilice las API de acceso a Adobe para comprobar la firma. Las API verifican que las listas no se hayan manipulado y que hayan sido firmadas por el servidor de licencias correcto.
 
 * Llame a `RevocationList.verifySignature` para comprobar la firma antes de proporcionar RevocationList a cualquier API.
 
-   Para obtener más información, consulte `RevocationListFactory` en la *Referencia de API de acceso a Adobe*.
+   Para obtener más información, consulte `RevocationListFactory` en la *Referencia de API de acceso al Adobe*.
 
 * Llame a `PolicyUpdateList.verifySignature`para comprobar la firma antes de proporcionar el `PolicyUpdateList` a cualquier API.
 
-   Para obtener más información, consulte `PolicyUpdateList` en la *Referencia de API de acceso a Adobe*.
+   Para obtener más información, consulte `PolicyUpdateList` en la *Referencia de API de acceso al Adobe*.
 
