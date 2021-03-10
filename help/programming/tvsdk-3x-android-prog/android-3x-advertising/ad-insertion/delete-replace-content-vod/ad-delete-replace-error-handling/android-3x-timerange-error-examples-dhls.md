@@ -1,13 +1,10 @@
 ---
-description: TVSDK responde a especificaciones erróneas del intervalo de tiempo combinando o reemplazando los intervalos de tiempo según corresponda.
-seo-description: TVSDK responde a especificaciones erróneas del intervalo de tiempo combinando o reemplazando los intervalos de tiempo según corresponda.
-seo-title: Ejemplos de errores de intervalo de tiempo
-title: Ejemplos de errores de intervalo de tiempo
-uuid: 25ac5985-a844-452e-ac95-5006fdf413e6
+description: TVSDK responde a especificaciones de intervalo de tiempo erróneas combinando o reemplazando los intervalos de tiempo según corresponda.
+title: Ejemplos de error de intervalo de tiempo
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Ejemplos de error de intervalo de tiempo {#time-range-error-examples}
 
-TVSDK responde a especificaciones erróneas del intervalo de tiempo combinando o reemplazando los intervalos de tiempo según corresponda.
+TVSDK responde a especificaciones de intervalo de tiempo erróneas combinando o reemplazando los intervalos de tiempo según corresponda.
 
-**Intervalo de tiempo del DELETE**
+**intervalo de tiempo del DELETE**
 
-En el ejemplo siguiente, se definen cuatro intervalos de tiempo de DELETE que se intersectan. TVSDK combina los cuatro intervalos de tiempo en uno, de modo que el intervalo de eliminación real es de 0 a 50.
+En el ejemplo siguiente, se definen cuatro intervalos de tiempo de DELETE que se intersectan. TVSDK combina los cuatro intervalos de tiempo en uno, de modo que el intervalo de eliminación real es de 0 a 50 segundos.
 
 ```
 "time-ranges": {
@@ -47,7 +44,7 @@ En el ejemplo siguiente, se definen cuatro intervalos de tiempo de DELETE que se
 
 **REEMPLAZAR intervalo de tiempo**
 
-En el ejemplo siguiente, se definen cuatro intervalos de tiempo REPLACE con intervalos de tiempo que entran en conflicto. En este caso, TVSDK sustituye 0-50 por 25 anuncios. Va con la primera duración de reemplazo en el orden de clasificación, porque hay conflictos en intervalos posteriores.
+En el siguiente ejemplo, cuatro intervalos de tiempo REPLACE se definen con intervalos de tiempo conflictivos. En este caso, TVSDK reemplaza 0-50s por 25s de anuncios. Va con la primera duración de reemplazo en el orden de clasificación, ya que hay conflictos en intervalos posteriores.
 
 ```
 "time-ranges": {
