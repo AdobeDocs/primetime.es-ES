@@ -1,13 +1,10 @@
 ---
-description: TVSDK admite la eliminación y sustitución programáticas de contenido de publicidad en flujos VOD.
-seo-description: TVSDK admite la eliminación y sustitución programáticas de contenido de publicidad en flujos VOD.
-seo-title: Eliminar y reemplazar publicidades en flujos VOD
-title: Eliminar y reemplazar publicidades en flujos VOD
-uuid: a1d0a8d3-7275-4d64-8996-6af257d5516a
+description: TVSDK admite la eliminación y sustitución programáticas de contenido de publicidad en flujos de VOD.
+title: Eliminar y reemplazar anuncios en flujos de VOD
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '73'
 ht-degree: 0%
 
 ---
@@ -15,6 +12,6 @@ ht-degree: 0%
 
 # Información general {#delete-and-replace-ads-in-vod-streams-overview}
 
-TVSDK admite la eliminación y sustitución programáticas de contenido de publicidad en flujos VOD.
+TVSDK admite la eliminación y sustitución programáticas de contenido de publicidad en flujos de VOD.
 
-La función Eliminar y reemplazar amplía la función de marcadores de publicidad personalizados. Los marcadores de publicidad personalizados marcan secciones del contenido principal como períodos de contenido relacionados con la publicidad. Además de marcar estos intervalos de tiempo, también puede eliminar y reemplazar dichos intervalos.
+La función de eliminar y reemplazar amplía la función de marcadores de anuncios personalizados. Los marcadores de anuncios personalizados marcan secciones del contenido principal como períodos de contenido relacionado con la publicidad. Además de marcar estos intervalos de tiempo, también puede eliminar y reemplazar intervalos de tiempo.
