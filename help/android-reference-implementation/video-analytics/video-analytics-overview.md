@@ -1,13 +1,10 @@
 ---
-description: Puede realizar un seguimiento de vídeo fácilmente integrando una aplicación basada en TVSDK con su cuenta de Adobe Analytics.
-seo-description: Puede realizar un seguimiento de vídeo fácilmente integrando una aplicación basada en TVSDK con su cuenta de Adobe Analytics.
-seo-title: Información general
+description: Puede realizar fácilmente el seguimiento de vídeos integrando una aplicación basada en TVSDK con su cuenta de Adobe Analytics.
 title: Información general
-uuid: 19ef7bf6-951b-44c5-b899-d14f6c8047a2
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -15,10 +12,10 @@ ht-degree: 0%
 
 # Información general {#overview}
 
-Puede realizar un seguimiento de vídeo fácilmente integrando una aplicación basada en TVSDK con su cuenta de Adobe Analytics.
+Puede realizar fácilmente el seguimiento de vídeos integrando una aplicación basada en TVSDK con su cuenta de Adobe Analytics.
 
-La integración de Adobe Primetime TVSDK con Adobe Analytics le permite realizar el seguimiento de datos de vídeo en sus aplicaciones Android. Esta integración entre el TVSDK se denomina aquí *análisis de vídeo*.
+La integración de Adobe Primetime TVSDK con Adobe Analytics le permite rastrear datos de vídeo en sus aplicaciones Android. Esta integración entre el TVSDK se denomina en este documento *video analytics*.
 
-Esta sección de la guía de implementación de referencia resume cómo se ha implementado el análisis de vídeo en la implementación de referencia de Android de Primetime y describe cómo se puede habilitar y configurar el análisis de vídeo en el reproductor basado en TVSDK en función de la implementación de referencia.
+En esta sección de la guía de implementación de referencia se resume cómo se ha implementado Video Analytics en la implementación de referencia de Android de Primetime y se describe cómo habilitar y configurar Video Analytics en el reproductor basado en TVSDK en función de la implementación de referencia.
 
-La implementación de análisis de vídeo está deshabilitada de forma predeterminada en la implementación de referencia. Para poder rastrear datos de vídeo, debe tener una cuenta de Adobe Analytics que funcione. A continuación, debe configurar el componente de análisis de vídeo de la implementación de referencia con la información de su cuenta de Adobe Analytics.
+La implementación de Video Analytics está deshabilitada de forma predeterminada en la implementación de referencia. Para poder rastrear datos de vídeo, debe tener una cuenta de Adobe Analytics que funcione. A continuación, debe configurar el componente de análisis de vídeo de la implementación de referencia con la información de su cuenta de Adobe Analytics.
