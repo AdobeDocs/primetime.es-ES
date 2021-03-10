@@ -1,13 +1,10 @@
 ---
-description: Puede implementar sus propios resueltores de contenido en función de los resueltores predeterminados.
-seo-description: Puede implementar sus propios resueltores de contenido en función de los resueltores predeterminados.
-seo-title: Implementar una resolución de contenido personalizada
-title: Implementar una resolución de contenido personalizada
-uuid: 88627fdc-3b68-4a9f-847e-a490ea8e3034
+description: Puede implementar sus propios resolvedores de contenido en función de los resolvedores predeterminados.
+title: Implementación de una resolución de contenido personalizado
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '241'
 ht-degree: 1%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 1%
 
 # Implementar una resolución de contenido personalizada {#implement-a-custom-content-resolver}
 
-Puede implementar sus propios resueltores de contenido en función de los resueltores predeterminados.
+Puede implementar sus propios resolvedores de contenido en función de los resolvedores predeterminados.
 
-Cuando TVSDK detecta una nueva oportunidad, se repite a través de los resueltores de contenido registrado buscando una que sea capaz de resolver esa oportunidad. El primero que devuelve true se selecciona para resolver la oportunidad. Si no se puede resolver ningún contenido, se omitirá esa oportunidad. Dado que el proceso de resolución de contenido suele ser asincrónico, la resolución de contenido es responsable de notificar cuándo se ha completado el proceso.
+Cuando TVSDK detecta una nueva oportunidad, se repite a través de los solucionadores de contenido registrados buscando una que sea capaz de resolver esa oportunidad. El primero que devuelve true se selecciona para resolver la oportunidad. Si no se puede resolver ningún contenido, se omite esa oportunidad. Dado que el proceso de resolución de contenido suele ser asíncrono, el gestor de contenido es responsable de notificar cuándo se ha completado el proceso.
 
-1. Cree una instancia `AdvertisingFactory` personalizada y sobrescriba `createContentResolver`.
+1. Cree una instancia personalizada `AdvertisingFactory` y reemplace `createContentResolver`.
 
    Por ejemplo:
 
@@ -66,8 +63,8 @@ Cuando TVSDK detecta una nueva oportunidad, se repite a través de los resueltor
                   advertisingMetadata);
    ```
 
-1. Cree una clase de resolución de publicidad personalizada que extienda la clase `ContentResolver`.
-   1. En la resolución de publicidad personalizada, anule esta función protegida:
+1. Cree una clase de resolución de anuncios personalizada que amplíe la clase `ContentResolver`.
+   1. En la resolución de anuncios personalizada, anule esta función protegida:
 
       ```java
       void doResolveAds(Metadata metadata,  
@@ -93,10 +90,10 @@ Cuando TVSDK detecta una nueva oportunidad, se repite a través de los resueltor
       )
       ```
 
-   1. Una vez resueltas las publicidades, llame a una de las siguientes funciones:
+   1. Una vez resueltos los anuncios, llame a una de las siguientes funciones:
 
-      * Si la resolución de la publicidad se realiza correctamente: `notifyResolveComplete(Vector<TimelineOperation> proposals)`
-      * Si falla la resolución de la publicidad: `notifyResolveError(Error error)`
+      * Si la resolución del anuncio se realiza correctamente: `notifyResolveComplete(Vector<TimelineOperation> proposals)`
+      * Si la resolución del anuncio falla: `notifyResolveError(Error error)`
 
       Por ejemplo, si falla:
 
@@ -109,7 +106,7 @@ Cuando TVSDK detecta una nueva oportunidad, se repite a través de los resueltor
 
 <!--<a id="example_4F0D7692A92E480A835D6FDBEDBE75E7"></a>-->
 
-Esta resolución de publicidad personalizada de ejemplo realiza una solicitud HTTP al servidor de publicidad y recibe una respuesta JSON.
+Este solucionador de anuncios personalizado de ejemplo realiza una solicitud HTTP al servidor de publicidad y recibe una respuesta JSON.
 
 ```java
 public class CustomAdResolver extends ContentResolver { 
@@ -128,7 +125,7 @@ public class CustomAdResolver extends ContentResolver {
 }
 ```
 
-Ejemplo de respuesta JSON de servidor de publicidad para un flujo en directo:
+Ejemplo de respuesta del servidor de publicidad JSON para un flujo en directo:
 
 ```
 {     
@@ -165,7 +162,7 @@ Ejemplo de respuesta JSON de servidor de publicidad para un flujo en directo:
 } 
 ```
 
-Ejemplo de respuesta JSON de servidor de publicidad para VOD:
+Ejemplo de respuesta de servidor de publicidad JSON para VOD:
 
 ```
 {     
