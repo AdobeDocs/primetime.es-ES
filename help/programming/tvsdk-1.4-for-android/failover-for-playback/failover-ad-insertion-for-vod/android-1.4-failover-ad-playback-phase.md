@@ -1,23 +1,20 @@
 ---
-description: TVSDK descarga los segmentos de publicidad y los procesa en la pantalla del dispositivo.
-seo-description: TVSDK descarga los segmentos de publicidad y los procesa en la pantalla del dispositivo.
-seo-title: Fase de reproducción de publicidad
-title: Fase de reproducción de publicidad
-uuid: 1bbcea08-3475-4a64-9f89-c455d5dd828e
+description: TVSDK descarga los segmentos de anuncio y los procesa en la pantalla del dispositivo.
+title: Fase de reproducción del anuncio
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
 
-# Fase de reproducción de publicidad{#ad-playback-phase}
+# Fase de reproducción de anuncio{#ad-playback-phase}
 
-TVSDK descarga los segmentos de publicidad y los procesa en la pantalla del dispositivo.
+TVSDK descarga los segmentos de anuncio y los procesa en la pantalla del dispositivo.
 
-En este punto, TVSDK ha resuelto las publicidades, las ha colocado en la línea de tiempo e intenta procesar el contenido en la pantalla.
+En este punto, TVSDK ha resuelto anuncios, los ha colocado en la cronología e intenta renderizar el contenido en la pantalla.
 
 En esta fase pueden producirse las siguientes clases principales de errores:
 
@@ -25,12 +22,12 @@ En esta fase pueden producirse las siguientes clases principales de errores:
 * Errores al descargar el archivo de manifiesto
 * Errores al descargar los segmentos de medios
 
-Para las tres clases de error, TVSDK reenvía eventos activados a la aplicación, incluidos:
+Para las tres clases de error, TVSDK reenvía a su aplicación eventos activados, incluidos:
 
 * Eventos de notificación activados cuando se produce una conmutación por error.
 * Eventos de notificación cuando se cambia el perfil debido al algoritmo de conmutación por error.
-* Los eventos de notificación se activan cuando se consideran todas las opciones de conmutación por error y no se puede realizar ninguna acción adicional automáticamente.
+* Los eventos de notificación se activan cuando se tienen en cuenta todas las opciones de conmutación por error y no se puede realizar ninguna acción adicional automáticamente.
 
    La aplicación debe realizar la acción adecuada.
 
-Independientemente de si se producen errores o no, TVSDK llama a onAdBreakComplete por cada `onAdBreakStart` y `onAdComplete` por cada `onAdStart`. Sin embargo, si no se pudieron descargar los segmentos, es posible que haya espacios en la línea de tiempo. Cuando los huecos son lo suficientemente grandes, los valores en la posición del cursor de reproducción y el progreso del anuncio informado pueden mostrar discontinuidades.
+Tanto si se producen errores como si no, TVSDK llama a onAdBreakComplete para cada `onAdBreakStart` y `onAdComplete` para cada `onAdStart`. Sin embargo, si no se pueden descargar los segmentos, es posible que haya espacios en la cronología. Cuando los espacios son lo suficientemente grandes, los valores en la posición del cabezal de reproducción y el progreso del anuncio registrado pueden mostrar interrupciones.
