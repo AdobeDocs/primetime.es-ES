@@ -1,21 +1,18 @@
 ---
-description: El contenido de un AdBannerAsset describe una pancarta adjunta.
-seo-description: El contenido de un AdBannerAsset describe una pancarta adjunta.
-seo-title: Datos de pancarta complementarios
-title: Datos de pancarta complementarios
-uuid: b2c709da-9d19-49d1-8116-9c947371b77c
+description: El contenido de un AdBannerAsset describe un banner complementario.
+title: Datos de banner complementario
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '178'
 ht-degree: 0%
 
 ---
 
 
-# Datos de pancarta complementarios{#companion-banner-data}
+# Datos del banner complementario{#companion-banner-data}
 
-El contenido de un AdBannerAsset describe una pancarta adjunta.
+El contenido de un AdBannerAsset describe un banner complementario.
 
 <!--<a id="section_D730B4FD6FD749E9860B6A07FC110552"></a>-->
 
@@ -32,31 +29,31 @@ Cada `AdBannerAsset` proporciona información sobre cómo mostrar el recurso.
  <tbody> 
   <tr> 
    <td colname="col1"> width </td> 
-   <td colname="col2"> Anchura de la pancarta adjunta en píxeles. </td> 
+   <td colname="col2"> Anchura del banner complementario en píxeles. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> height </td> 
-   <td colname="col2"> Altura del letrero acompañante en píxeles. </td> 
+   <td colname="col2"> Altura del banner complementario en píxeles. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> tipo de recurso </td> 
-   <td colname="col2">El tipo de recurso para esta pancarta complementaria: 
+   <td colname="col2">El tipo de recurso para este banner complementario: 
     <ul id="ul_A067787FE49E4B6095BE0AC1D447DBB3"> 
      <li id="li_02B7224C67004095B3F6E50FD21E507E">html: Los datos están en código HTML. </li> 
-     <li id="li_5F37E14472424F808C6094F42009E676">iframe: Los datos son una dirección URL de iframe (src). </li> 
+     <li id="li_5F37E14472424F808C6094F42009E676">iframe: Los datos son una URL de iframe (src). </li> 
      <li id="li_48E74AC5F00640EC8A4DE2CB31E106EC">static: Los datos son una dirección URL de imagen estática (src). </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td colname="col1">
     <pre>
-      datos de pancarta
+      datos de banner
     </pre> </td> 
-   <td colname="col2"> Los datos del tipo especificado por <span class="codeph"> resourceType</span> para esta pancarta complementaria. </td> 
+   <td colname="col2"> Los datos del tipo especificado por <span class="codeph"> resourceType</span> para este banner complementario. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> dirección URL estática </td> 
-   <td colname="col2"> <p>A veces, el letrero acompañante también puede tener una dirección URL estática que sea una dirección URL directa a la imagen. </p> <p>Si no desea utilizar html o iframe, puede utilizar una dirección URL directa para una imagen. En este caso, puede utilizar staticURL para mostrar la pancarta. </p> <p>Importante:  Debe comprobar si la dirección URL estática es una cadena válida, ya que es posible que esta propiedad no siempre esté disponible. </p> </td> 
+   <td colname="col2"> <p>A veces, el banner complementario también puede tener una dirección URL estática que sea una dirección URL directa de la imagen. </p> <p>Si no desea utilizar html o iframe, puede utilizar una dirección URL directa para una imagen. En este caso, puede utilizar la dirección URL estática para mostrar el banner. </p> <p>Importante:  Debe comprobar si la dirección URL estática es una cadena válida, ya que es posible que esta propiedad no siempre esté disponible. </p> </td> 
   </tr> 
  </tbody> 
 </table>
