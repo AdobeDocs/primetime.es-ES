@@ -1,13 +1,12 @@
 ---
 title: Notas de la versión de Primetime
-seo-title: Notas de la versión de Adobe Primetime
-description: 'null'
-seo-description: 'null'
+description: Notas de la versión de Primetime
+copied-description: true
 translation-type: tm+mt
-source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 31%
+source-wordcount: '342'
+ht-degree: 32%
 
 ---
 
@@ -42,7 +41,7 @@ Consulte para obtener más información sobre la versión actual publicada para 
 | [Ayuda de conversión y migración de Primetime](/help/migration-guides/home.md) | Explica el proceso de conversión y migración para pasar de su grupo de TVSDK de Primetime existente al grupo de próxima generación. |
 | [Implementación de referencia](/help/android-reference-implementation/home.md) | Ayuda a comprender el SDK de TVSDK y a modificar los administradores de funciones para personalizar su reproductor personal. |
 | [Referencias de la API de Primetime](/help/reference/api-references.md) | Proporciona información detallada sobre las funciones de TVSDK, las estructuras de datos y otras construcciones de programación. |
-| [Administración de derechos digitales](/help/digital-rights-management/home.md) | Ayuda a conocer mejor los distintos casos de usuario en Digital Rights Management (DRM) |
+| [Digital Rights Management](/help/digital-rights-management/home.md) | Ayuda a conocer mejor los distintos casos de usuario en Digital Rights Management (DRM) |
 | [Ayuda de Primetime Ad Insertion](/help/primetime-ad-insertion/home.md) | Explica cómo monetizar el contenido mediante la inserción de publicidad dinámica dirigida por el usuario en el servidor y captar la atención de la audiencia con anuncios personalizados. |
 | [Archivos](https://helpx.adobe.com/primetime/archives.html) | Descargue archivos PDF de la documentación archivada. |
 
@@ -54,6 +53,6 @@ Consulte para obtener más información sobre la versión actual publicada para 
 
 * [Autenticación de Primetime](https://tve.helpdocsonline.com/home)
 
-* [Foros de Adobe Primetime DRM](https://forums.adobe.com/community/adobe_access)
+* [Foros DRM de Adobe Primetime](https://forums.adobe.com/community/adobe_access)
 
 * [Recursos para desarrolladores de Adobe Primetime](https://www.adobe.com/devnet/primetime.html)
