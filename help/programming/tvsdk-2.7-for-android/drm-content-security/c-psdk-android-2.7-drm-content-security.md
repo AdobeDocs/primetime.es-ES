@@ -1,14 +1,11 @@
 ---
-description: Puede utilizar las funciones del sistema Primetime Digital Rights Management (DRM) para proporcionar un acceso seguro al contenido del vídeo. Como alternativa, puede utilizar soluciones DRM de terceros como alternativa a la solución integrada de Adobe.
+description: Puede utilizar las funciones del sistema de Digital Rights Management Primetime (DRM) para proporcionar acceso seguro al contenido de vídeo. Como alternativa, puede utilizar soluciones DRM de terceros como una alternativa a la solución integrada de Adobe.
 keywords: DRM;HLS
-seo-description: Puede utilizar las funciones del sistema Primetime Digital Rights Management (DRM) para proporcionar un acceso seguro al contenido del vídeo. Como alternativa, puede utilizar soluciones DRM de terceros como alternativa a la solución integrada de Adobe.
-seo-title: Protección del contenido
-title: Protección del contenido
-uuid: bba696fe-e6ef-42bc-a65b-2fd8623ffc61
+title: Protección de contenido
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '91'
 ht-degree: 0%
 
 ---
@@ -16,6 +13,6 @@ ht-degree: 0%
 
 # Información general {#content-protection-overview}
 
-Puede utilizar las funciones del sistema Primetime Digital Rights Management (DRM) para proporcionar un acceso seguro al contenido del vídeo. Como alternativa, puede utilizar soluciones DRM de terceros como alternativa a la solución integrada de Adobe.
+Puede utilizar las funciones del sistema de Digital Rights Management Primetime (DRM) para proporcionar acceso seguro al contenido de vídeo. Como alternativa, puede utilizar soluciones DRM de terceros como una alternativa a la solución integrada de Adobe.
 
 Póngase en contacto con su representante de Adobe para obtener la información más actualizada sobre la disponibilidad de soluciones DRM de terceros.
