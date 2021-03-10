@@ -1,13 +1,10 @@
 ---
 description: Puede configurar un control de interfaz de usuario para el volumen de sonido.
-seo-description: Puede configurar un control de interfaz de usuario para el volumen de sonido.
-seo-title: Proporcionar control de volumen
 title: Proporcionar control de volumen
-uuid: 63e96424-54d0-4c16-bd94-2366722f752a
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '83'
 ht-degree: 0%
 
 ---
@@ -24,5 +21,5 @@ Puede configurar un control de interfaz de usuario para el volumen de sonido.
    void setVolume(int volume) throws IllegalStateException;
    ```
 
-   El valor del volumen representa el volumen solicitado expresado como una proporción del volumen máximo, donde 0 es silencioso y 100 es el volumen máximo.
+   El valor del volumen representa el volumen solicitado expresado como una proporción del volumen máximo, donde 0 no dice nada y 100 es el volumen máximo.
 
