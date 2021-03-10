@@ -1,13 +1,10 @@
 ---
-description: Puede configurar botones que llamen a los métodos TVSDK para pausar y reproducir el medio.
-seo-description: Puede configurar botones que llamen a los métodos TVSDK para pausar y reproducir el medio.
-seo-title: Implementar un botón de reproducción/pausa
+description: Puede configurar botones que llamen a métodos TVSDK para pausar y reproducir el contenido.
 title: Implementar un botón de reproducción/pausa
-uuid: b0ce4103-819e-4a1c-8238-1d7728ec8770
 translation-type: tm+mt
-source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '72'
+source-wordcount: '52'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Implementar un botón de reproducción/pausa {#implement-a-play-pause-button}
 
-Puede configurar botones que llamen a los métodos TVSDK para pausar y reproducir el medio.
+Puede configurar botones que llamen a métodos TVSDK para pausar y reproducir el contenido.
 
-Utilice el siguiente código de muestra para implementar un botón de reproducción o pausa:
+Utilice el siguiente código de ejemplo para implementar un botón de reproducción o pausa:
 
 <!--<a id="example_BC2632D673FE451190A30A23145090D0"></a>-->
 
