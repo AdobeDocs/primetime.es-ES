@@ -1,13 +1,10 @@
 ---
-description: Los flujos de medios pueden incluir metadatos adicionales en forma de etiquetas en el archivo de descripción de la presentación de medios (MPD), y este archivo indica la ubicación de la publicidad. Puede especificar nombres de etiquetas personalizados y recibir notificaciones cuando determinadas etiquetas aparezcan en el archivo de manifiesto.
-seo-description: Los flujos de medios pueden incluir metadatos adicionales en forma de etiquetas en el archivo de descripción de la presentación de medios (MPD), y este archivo indica la ubicación de la publicidad. Puede especificar nombres de etiquetas personalizados y recibir notificaciones cuando determinadas etiquetas aparezcan en el archivo de manifiesto.
-seo-title: Etiquetas personalizadas
+description: Los flujos de contenido multimedia pueden incluir metadatos adicionales en forma de etiquetas en el archivo de descripción de la presentación de contenido (MPD) y este archivo indica la ubicación de la publicidad. Puede especificar nombres de etiquetas personalizados y recibir notificaciones cuando determinadas etiquetas aparezcan en el archivo de manifiesto.
 title: Etiquetas personalizadas
-uuid: d1e34288-545b-440f-a262-2fb853f0e3c4
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Información general {#custom-tags-overview}
 
-Los flujos de medios pueden incluir metadatos adicionales en forma de etiquetas en el archivo de descripción de la presentación de medios (MPD), y este archivo indica la ubicación de la publicidad. Puede especificar nombres de etiquetas personalizados y recibir notificaciones cuando determinadas etiquetas aparezcan en el archivo de manifiesto.
+Los flujos de contenido multimedia pueden incluir metadatos adicionales en forma de etiquetas en el archivo de descripción de la presentación de contenido (MPD) y este archivo indica la ubicación de la publicidad. Puede especificar nombres de etiquetas personalizados y recibir notificaciones cuando determinadas etiquetas aparezcan en el archivo de manifiesto.
 
 ## Etiquetas de contenido HLS {#section_E99299152089418FBA56F5F09FC547B0}
 
@@ -23,7 +20,7 @@ Los flujos de medios pueden incluir metadatos adicionales en forma de etiquetas 
 >
 >Esta función no está disponible para Safari en equipos Apple, ya que el SDK del explorador utiliza la etiqueta de vídeo, en lugar de Flash o MSE, para reproducir contenido HLS.
 
-El SDK de TVSDK del explorador proporciona compatibilidad lista para usar con etiquetas de publicidad #EXT específicas. La aplicación puede utilizar etiquetas personalizadas para mejorar el flujo de trabajo de la publicidad o para admitir situaciones de bloqueo. Para admitir flujos de trabajo avanzados, el SDK de TVSDK del explorador le permite especificar y suscribirse a etiquetas adicionales en el manifiesto. Puede recibir una notificación cuando estas etiquetas aparezcan en el archivo de manifiesto.
+El SDK de TVSDK del explorador proporciona compatibilidad lista para usar con etiquetas publicitarias #EXT específicas. La aplicación puede utilizar etiquetas personalizadas para mejorar el flujo de trabajo publicitario o para admitir situaciones de bloqueo. Para admitir flujos de trabajo avanzados, el SDK de explorador le permite especificar y suscribirse a etiquetas adicionales en el manifiesto. Se le puede notificar cuando estas etiquetas aparezcan en el archivo de manifiesto.
 
 >[!TIP]
 >
@@ -31,11 +28,11 @@ El SDK de TVSDK del explorador proporciona compatibilidad lista para usar con et
 
 >[!NOTE]
 >
->Cuando se reproduce HLS con la etiqueta Vídeo en Safari y no con Flash Fallback, esta función no estará disponible en Safari.
+>Cuando se reproduce HLS utilizando la etiqueta de vídeo en Safari y no utilizando la reserva de Flash, esta función no estará disponible en Safari.
 
 ## Uso de etiquetas HLS personalizadas {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
-A continuación se muestra un ejemplo de un recurso de VOD personalizado:
+Este es un ejemplo de recurso de VOD personalizado:
 
 ```
 #EXTM3U
@@ -65,22 +62,22 @@ seg5.ts
 
 La aplicación puede configurar los siguientes escenarios:
 
-* Una notificación cuando `#EXT-X-ASSET` etiquetas, o cualquier otro conjunto de nombres de etiquetas personalizados al que se haya suscrito, existan en el archivo.
+* En el archivo existe una notificación cuando `#EXT-X-ASSET` etiquetas, o cualquier otro conjunto de nombres de etiquetas personalizados al que se haya suscrito.
 * Inserte publicidades cuando se encuentre una etiqueta `#EXT-X-AD` o cualquier otro nombre de etiqueta personalizado en el flujo.
 
-Puede suscribirse a cualquiera de las etiquetas siguientes como etiquetas personalizadas: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Se le notifica con un evento `TimedMetadata` durante el análisis de los archivos de manifiesto.
+Puede suscribirse a cualquiera de las siguientes etiquetas como etiquetas personalizadas: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Se le notifica con un evento `TimedMetadata` durante el análisis de los archivos de manifiesto.
 
-Hay algunas etiquetas de publicidad, como `EXT-X-CUE`, a las que ya está suscrito. Estas etiquetas de publicidad también se utilizan en el generador de oportunidades predeterminado. Puede especificar qué etiquetas de publicidad utiliza el generador de oportunidades predeterminado si establece la propiedad `adTags`.
+Hay algunas etiquetas publicitarias, como `EXT-X-CUE`, a las que ya está suscrito. El generador de oportunidades predeterminado también utiliza estas etiquetas de publicidad. Puede especificar qué etiquetas de publicidad utiliza el generador de oportunidades predeterminado estableciendo la propiedad `adTags` .
 
 ## Etiquetas de contenido DASH {#section_967A952319BE4048B4C6612FFF7ADA6E}
 
-DASH tiene dos formas de señalizar eventos:
+DASH tiene dos formas de señalar eventos:
 
 * En el archivo MPD.
 
-   Este archivo es similar al archivo M3U8 en el contenido HLS y los eventos MPD existen en el archivo .mpd.
+   Este archivo es similar al archivo M3U8 en contenido HLS y los eventos MPD existen en el archivo .mpd.
 * Inband en la representación
 
-   Los eventos en banda se multiplexan con representaciones agregando los mensajes de evento como parte de los segmentos. Una representación es una lista de segmentos de audio y vídeo que se reproducen en secuencia. Los datos de evento de banda se incrustan en estos segmentos.
+   Los eventos dentro de banda se multiplexan con representaciones agregando los mensajes de evento como parte de los segmentos. Una representación es una lista de segmentos de vídeo y audio que se reproducen en secuencia. Los datos de evento de entrada se incrustan en estos segmentos.
 
-Estos eventos se notifican como `TimedMetadata` eventos a la aplicación en cuanto el Explorador TVSDK los analiza. Una vez notificado un evento, no se le notificará nuevamente.
+Estos eventos se notifican como eventos `TimedMetadata` a la aplicación en cuanto el explorador TVSDK los analiza. Una vez que se notifica un evento, no se vuelve a notificar.
