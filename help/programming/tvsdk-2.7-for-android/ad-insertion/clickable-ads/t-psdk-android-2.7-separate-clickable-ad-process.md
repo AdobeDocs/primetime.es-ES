@@ -1,13 +1,10 @@
 ---
 description: Debe separar la lógica de IU del reproductor del proceso que administra los clics en publicidad. Una forma de hacerlo es implementar varios fragmentos para una actividad.
-seo-description: Debe separar la lógica de IU del reproductor del proceso que administra los clics en publicidad. Una forma de hacerlo es implementar varios fragmentos para una actividad.
-seo-title: Separe el proceso de publicidad en el que se puede hacer clic
 title: Separe el proceso de publicidad en el que se puede hacer clic
-uuid: c37f5916-eb25-41ec-b5f4-efb82ec56371
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '173'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
@@ -19,7 +16,7 @@ Debe separar la lógica de IU del reproductor del proceso que administra los cli
 
 1. Implemente un fragmento para contener `MediaPlayer`.
 
-   Este fragmento debe llamar a `notifyClick()` y será responsable de la reproducción de vídeo.
+   Este fragmento debe llamar a `notifyClick()` y será responsable de la reproducción del vídeo.
 
    ```java
    public class PlayerFragment extends SherlockFragment { 
@@ -31,7 +28,7 @@ Debe separar la lógica de IU del reproductor del proceso que administra los cli
    } 
    ```
 
-1. Implemente un fragmento diferente para mostrar un elemento de la interfaz de usuario que indique que se puede hacer clic en una publicidad, supervise ese elemento de la interfaz de usuario y comunique los clics del usuario al fragmento que contiene el `MediaPlayer`.
+1. Implemente un fragmento diferente para mostrar un elemento de interfaz de usuario que indique que se puede hacer clic en un anuncio, supervise ese elemento de interfaz de usuario y comunique los clics del usuario con el fragmento que contiene el `MediaPlayer`.
 
    Este fragmento debe declarar una interfaz para la comunicación de fragmentos. El fragmento captura la implementación de la interfaz durante su método de ciclo de vida `onAttach()` y puede llamar a los métodos de interfaz para comunicarse con la actividad.
 
