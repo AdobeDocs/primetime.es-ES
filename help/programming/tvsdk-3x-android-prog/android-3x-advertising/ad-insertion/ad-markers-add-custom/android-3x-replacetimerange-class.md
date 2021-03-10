@@ -1,19 +1,16 @@
 ---
 description: La clase de utilidad ReplaceTimeRange es una extensión de la clase TimeRange que se utilizará con CustomRangeMetadata.
-seo-description: La clase de utilidad ReplaceTimeRange es una extensión de la clase TimeRange que se utilizará con CustomRangeMetadata.
-seo-title: Clase ReplaceTimeRange
-title: Clase ReplaceTimeRange
-uuid: d554c17a-2bdc-4c4a-bb8f-2d357511bb32
+title: ReplaceTimeRange, clase
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '54'
+source-wordcount: '36'
 ht-degree: 0%
 
 ---
 
 
-# Clase ReplaceTimeRange {#replacetimerange-class}
+# ReplaceTimeRange, clase {#replacetimerange-class}
 
 La clase de utilidad ReplaceTimeRange es una extensión de la clase TimeRange que se utilizará con CustomRangeMetadata.
 
