@@ -1,22 +1,21 @@
 ---
 title: Ayuda de programación de Adobe Primetime
-seo-title: Ayuda de programación de Adobe Primetime
-description: 'null'
-seo-description: 'null'
+description: Ayuda de programación de Adobe Primetime
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 242b5a2875ebc0e0020296ce9489dd54438b5ad0
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 43%
+source-wordcount: '220'
+ht-degree: 44%
 
 ---
 
 
 # Ayuda de programación de Primetime
 
-Bienvenido a la ayuda de programación para Android e iOS para Adobe Primetime. Los documentos enumerados en la navegación izquierda le permiten aprender a desarrollar aplicaciones y reproductores de vídeo mediante Java en dispositivos Android y Objective-C en dispositivos iOS.
+Le damos la bienvenida a la ayuda de programación de Android e iOS para Adobe Primetime. Los documentos enumerados en la navegación de la izquierda le permiten aprender a desarrollar aplicaciones y reproductores de vídeo utilizando Java en dispositivos Android y Objective-C en dispositivos iOS.
 
-Consulte para obtener más información sobre la [versión actual publicada](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview.md).
+Consulte para obtener más información sobre la [versión actual](tvsdk-3x-ios-prog/ios-3x-introduction/ios-3x-overview/ios-3x-overview.md).
 
 ## Consulte también
 
@@ -34,7 +33,7 @@ Consulte para obtener más información sobre la [versión actual publicada](tvs
 
 * [Conozca Adobe Primetime](https://www.adobe.com/in/marketing/primetime.html)
 
-* [Monitoreo de simultaneidad](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
+* [Supervisión de la concurrencia](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
 
 * [Autenticación de Primetime](https://tve.helpdocsonline.com/home)
 
