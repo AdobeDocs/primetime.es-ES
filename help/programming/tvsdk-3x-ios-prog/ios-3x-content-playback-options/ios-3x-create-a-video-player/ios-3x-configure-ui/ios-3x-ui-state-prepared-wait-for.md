@@ -1,22 +1,19 @@
 ---
-description: Para poder utilizar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
-seo-description: Para poder utilizar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
-seo-title: Esperar un estado válido
-title: Esperar un estado válido
-uuid: ad9df366-c443-4e6b-a7ab-658d5691eb94
+description: Para poder usar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
+title: Espere un estado válido
 translation-type: tm+mt
-source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '90'
 ht-degree: 0%
 
 ---
 
 
-# Esperar un estado válido {#wait-for-a-valid-state}
+# Espere un estado válido {#wait-for-a-valid-state}
 
-Para poder utilizar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
+Para poder usar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
 
-El reproductor pasa por varios estados. Esperar a que el reproductor esté en el estado correcto garantiza que el recurso de medios se haya cargado correctamente. Si el reproductor no tiene al menos el estado requerido, muchos métodos del reproductor generan `IllegalStateException`.
+El reproductor pasa por varios estados. Esperar que el reproductor esté en el estado correcto garantiza que el recurso de medios se haya cargado correctamente. Si el reproductor no está en al menos el estado requerido, muchos métodos del reproductor arrojan `IllegalStateException`.
 
 El estado requerido suele ser `PTMediaPlayerStatusReady`.
