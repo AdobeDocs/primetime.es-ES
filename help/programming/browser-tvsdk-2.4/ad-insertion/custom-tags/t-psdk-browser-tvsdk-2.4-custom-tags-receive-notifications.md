@@ -1,23 +1,20 @@
 ---
 description: Para recibir notificaciones sobre etiquetas en el manifiesto, escuche AdobePSDK.TimedMetadataEvent.
-seo-description: Para recibir notificaciones sobre etiquetas en el manifiesto, escuche AdobePSDK.TimedMetadataEvent.
-seo-title: Añadir oyentes para notificaciones de metadatos temporizados
-title: Añadir oyentes para notificaciones de metadatos temporizados
-uuid: c82c5549-0ab6-4343-a766-5176e784d4cb
+title: Agregar oyentes para notificaciones de metadatos temporizados
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '83'
+source-wordcount: '67'
 ht-degree: 0%
 
 ---
 
 
-# Añadir oyentes para notificaciones de metadatos temporizados{#add-listeners-for-timed-metadata-notifications}
+# Agregar oyentes para notificaciones de metadatos temporizados{#add-listeners-for-timed-metadata-notifications}
 
 Para recibir notificaciones sobre etiquetas en el manifiesto, escuche AdobePSDK.TimedMetadataEvent.
 
-Cuando se crea un nuevo objeto `TimedMetadata`, MediaPlayer distribuye `AdobePSDK.TimedMetadataEvent`.
+Cuando se crea un nuevo objeto `TimedMetadata`, MediaPlayer envía `AdobePSDK.TimedMetadataEvent`.
 
 1. Implemente los oyentes adecuados.
 
@@ -28,7 +25,7 @@ Cuando se crea un nuevo objeto `TimedMetadata`, MediaPlayer distribuye `AdobePSD
        } 
    ```
 
-1. Registre los oyentes de evento.
+1. Registre los oyentes del evento.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIMED_METADATA_AVAILABLE, onTimedMetadataEvent);
