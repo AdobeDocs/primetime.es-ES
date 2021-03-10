@@ -1,44 +1,41 @@
 ---
-description: Este ejemplo muestra la manera recomendada de incluir marcadores de publicidad personalizados en la línea de tiempo de reproducción.
-seo-description: Este ejemplo muestra la manera recomendada de incluir marcadores de publicidad personalizados en la línea de tiempo de reproducción.
-seo-title: Colocar marcadores de publicidad personalizados en la línea de tiempo
-title: Colocar marcadores de publicidad personalizados en la línea de tiempo
-uuid: ee74d1f3-7186-44b8-bad7-55af579842e8
+description: Este ejemplo muestra la forma recomendada de incluir marcadores de anuncios personalizados en la cronología de reproducción.
+title: Coloque marcadores de anuncios personalizados en la cronología
 translation-type: tm+mt
-source-git-commit: 9f1f27bc6c23994338775a32f978a2e768a0f3aa
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
 
 
-# Coloque marcadores de publicidad personalizados en la línea de tiempo {#place-custom-ad-markers-on-the-timeline}
+# Coloque marcadores de anuncios personalizados en la cronología {#place-custom-ad-markers-on-the-timeline}
 
-Este ejemplo muestra la manera recomendada de incluir marcadores de publicidad personalizados en la línea de tiempo de reproducción.
+Este ejemplo muestra la forma recomendada de incluir marcadores de anuncios personalizados en la cronología de reproducción.
 
-1. Traduzca la información de posicionamiento de anuncios fuera de banda en una lista/matriz de clase `RepaceTimeRange`.
-1. Cree una instancia de la clase `CustomRangeMetadata` y utilice su método `setTimeRangeList` con la lista/matriz como argumento para establecer su lista de intervalo de tiempo.
+1. Traduzca la información de colocación de anuncios fuera de banda a una lista/matriz de la clase `RepaceTimeRange`.
+1. Cree una instancia de la clase `CustomRangeMetadata` y utilice su método `setTimeRangeList` con la lista/matriz como argumento para establecer su lista de intervalos de tiempo.
 1. Utilice su método `setType` para establecer el tipo en `MARK_RANGE`.
-1. Utilice el método `MediaPlayerItemConfig.setCustomRangeMetadata` con la instancia `CustomRangeMetadata` como argumento para establecer los metadatos del rango personalizado.
-1. Utilice el método `MediaPlayer.replaceCurrentResource` con la instancia `MediaPlayerItemConfig` como argumento para establecer que el nuevo recurso sea el recurso actual.
+1. Utilice el método `MediaPlayerItemConfig.setCustomRangeMetadata` con la instancia `CustomRangeMetadata` como argumento para establecer los metadatos de intervalo personalizados.
+1. Utilice el método `MediaPlayer.replaceCurrentResource` con la instancia `MediaPlayerItemConfig` como argumento para establecer que el nuevo recurso sea el actual.
 1. Espere un evento `STATE_CHANGED`, que informa de que el reproductor está en el estado `PREPARED`.
-1. Reproducción de vídeo inicio llamando a `MediaPlayer.play`.
+1. Inicie la reproducción de vídeo llamando a `MediaPlayer.play`.
 
 Este es el resultado de completar las tareas en este ejemplo: >
-* Si un `ReplaceTimeRange` se superpone a otro en la línea de tiempo de reproducción, por ejemplo, la posición de inicio de un `ReplaceTimeRange` es anterior a una posición final ya colocada, TVSDK ajusta en silencio el inicio del `ReplaceTimeRange` infractor para evitar el conflicto.
+* Si un `ReplaceTimeRange` se superpone con otro en la línea de tiempo de reproducción, por ejemplo, la posición inicial de un `ReplaceTimeRange` es anterior a una posición final ya colocada, TVSDK ajusta silenciosamente el inicio del `ReplaceTimeRange` infractor para evitar el conflicto.
 
-   Esto hace que el `ReplaceTimeRange` ajustado sea más corto que el especificado originalmente. Si el ajuste da como resultado una duración de cero, TVSDK suprime de forma silenciosa la infracción `ReplaceTimeRange`.
+   Esto hace que el `ReplaceTimeRange` ajustado sea más corto que el especificado originalmente. Si el ajuste lleva a una duración de cero, TVSDK descarta de forma silenciosa el `ReplaceTimeRange` infractor.
 
-* TVSDK busca intervalos de tiempo adyacentes para los saltos de publicidad personalizados y los agrupa en pausas de publicidad independientes.
+* TVSDK busca intervalos de tiempo adyacentes para pausas publicitarias personalizadas y los agrupa en pausas publicitarias independientes.
 
-   Los intervalos de tiempo no adyacentes a ningún otro intervalo de tiempo se traducen en pausas publicitarias que contienen un solo anuncio.
-* Si la aplicación intenta cargar un recurso de medios cuya configuración contiene `CustomRangeMetadata` que solo se puede usar en los marcadores de publicidad personalizados de contexto, TVSDK emite una excepción si el recurso subyacente no es de tipo VOD.
-* Cuando se trata de marcadores de publicidad personalizados, TVSDK desactiva otros mecanismos de resolución de publicidad (por ejemplo, Adobe Primetime y decisiones de publicidad).
+   Los intervalos de tiempo que no son adyacentes a ningún otro intervalo de tiempo se traducen en pausas publicitarias que contienen un solo anuncio.
+* Si la aplicación intenta cargar un recurso de medios cuya configuración contiene `CustomRangeMetadata` que solo puede utilizarse en los marcadores de anuncios personalizados de contexto, TVSDK genera una excepción si el recurso subyacente no es del tipo VOD.
+* Cuando se trata de marcadores de anuncios personalizados, TVSDK desactiva otros mecanismos de resolución de anuncios (por ejemplo, Adobe Primetime y toma de decisiones).
 
-   Puede utilizar cualquier módulo TVSDK de resolución de anuncios o el mecanismo de marcadores de anuncios personalizados. Cuando se utilizan marcadores de publicidad personalizados, el contenido de la publicidad se considera resuelto y se coloca en la línea de tiempo.
+   Puede utilizar cualquier módulo TVSDK de resolución de anuncios o el mecanismo de marcadores de anuncios personalizados. Cuando se utilizan marcadores de anuncios personalizados, el contenido de la publicidad se considera resuelto y se coloca en la cronología.
 
-El siguiente fragmento de código coloca tres intervalos de tiempo en la línea de tiempo como marcadores de publicidad personalizados.
+El siguiente fragmento de código coloca tres intervalos de tiempo en la cronología como marcadores de anuncios personalizados.
 
 ```java
 // Assume that the 3 time ranges are obtained through external means 
