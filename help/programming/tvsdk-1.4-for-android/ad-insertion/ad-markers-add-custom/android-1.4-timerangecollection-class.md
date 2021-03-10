@@ -1,13 +1,10 @@
 ---
-description: La clase de utilidad TimeRangeCollection abstrae la noción de una colección ordenada de especificaciones de TimeRange y proporciona servicios para traducirse en una instancia de metadatos.
-seo-description: La clase de utilidad TimeRangeCollection abstrae la noción de una colección ordenada de especificaciones de TimeRange y proporciona servicios para traducirse en una instancia de metadatos.
-seo-title: Clase TimeRangeCollection
+description: La clase de utilidad TimeRangeCollection abstrae la noción de una colección ordenada de especificaciones de TimeRange y proporciona servicios para traducirse a sí misma en una instancia de metadatos.
 title: Clase TimeRangeCollection
-uuid: 5705dc9d-4325-44b0-b5aa-196d09c3a67e
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Clase TimeRangeCollection{#timerangecollection-class}
 
-La clase de utilidad TimeRangeCollection abstrae la noción de una colección ordenada de especificaciones de TimeRange y proporciona servicios para traducirse en una instancia de metadatos.
+La clase de utilidad TimeRangeCollection abstrae la noción de una colección ordenada de especificaciones de TimeRange y proporciona servicios para traducirse a sí misma en una instancia de metadatos.
 
 <!--<a id="section_D87AA7BC628D458DAB12D5247AD34B41"></a>-->
 
@@ -35,4 +32,4 @@ public final class TimeRangeCollection {
 }
 ```
 
-El parámetro `type`, que es el primer parámetro posicional en la firma de los métodos constructores, es una instancia de la lista desglosada `TimeRangeCollection#Type`. Forma parte de la clase `TimeRangeCollection`. Los valores definidos actualmente por esta lista desglosada son `MARK_RANGES`, `DELETE_RANGES` y `REPLACE_RANGES`. Puede crear objetos `TimeRangeCollection` utilizando estos tres tipos.
+El parámetro `type`, que es el primer parámetro posicional en la firma de los métodos constructores, es una instancia de la enumeración `TimeRangeCollection#Type`. Esto forma parte de la clase `TimeRangeCollection`. Los valores que están definidos actualmente por esta enumeración son `MARK_RANGES`, `DELETE_RANGES` y `REPLACE_RANGES`. Puede crear objetos `TimeRangeCollection` utilizando estos tres tipos.
