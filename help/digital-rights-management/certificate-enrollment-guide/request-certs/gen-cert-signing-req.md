@@ -1,9 +1,9 @@
 ---
-seo-title: Generar una solicitud de firma de certificado (solicitante)
 title: Generar una solicitud de firma de certificado (solicitante)
-uuid: 04abd5d2-77ac-4f89-8bea-31d389159aee
+description: Generar una solicitud de firma de certificado (solicitante)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -33,18 +33,18 @@ ht-degree: 0%
 
 1. Generar una solicitud de firma de certificado (CSR).
 
-   Para utilizar OpenSSL para generar un CSR, abra una ventana de comandos e introduzca lo siguiente:
+   Para utilizar OpenSSL para generar una CSR, abra una ventana de comandos e introduzca lo siguiente:
 
    ```
    openssl req -new -key mycompany-license.key -out mycompany-license.csr -batch 
    ```
 
 1. Se le pedirá que introduzca la contraseña de la clave privada.
-1. Cree una copia de seguridad de su clave privada y contraseña.
+1. Cree una copia de seguridad de la clave privada y la contraseña.
 
-   Si pierde la clave privada o se ve comprometida, póngase en contacto con el administrador de certificados de Adobe para revocar el certificado y solicitar uno nuevo.
+   Si pierde la clave privada o si está en peligro, póngase en contacto con el administrador de certificados de Adobe para revocar el certificado y solicitar uno nuevo.
 
    >[!NOTE]
    >
-   >Adobe recomienda utilizar un HSM para proteger la clave privada y la contraseña.
+   >Adobe recomienda utilizar un HSM para proteger su clave privada y contraseña.
 
