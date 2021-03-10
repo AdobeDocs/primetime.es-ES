@@ -1,23 +1,21 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Reemplazar intervalos de tiempo con un anuncio de Adobe Primetime para la toma de decisiones de publicidad
-title: Reemplazar intervalos de tiempo con un anuncio de Adobe Primetime para la toma de decisiones de publicidad
-uuid: 101ac42d-5ba5-4487-af95-483a6594808a
+title: Reemplazar intervalos de tiempo por un anuncio de Adobe Primetime ad decisioning
+description: Reemplazar intervalos de tiempo por un anuncio de Adobe Primetime ad decisioning
+copied-description: true
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '54'
+source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
 
-# Reemplazar intervalos de tiempo con una publicidad para la toma de decisiones de publicidad para Adobe Primetime{#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
+# Reemplazar intervalos de tiempo por un anuncio de Adobe Primetime ad decisioning{#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
 
-Elimine `TimeRanges` entre `begin` y `end` en `localTime` de la línea de tiempo. Sustitúyalo por un AdBreak de `begin` a `begin+replaceDuration`.
+Elimine `TimeRanges` entre `begin` y `end` en `localTime` de la cronología. Sustitúyalo por un AdBreak de `begin` a `begin+replaceDuration`.
 
-Reemplazar intervalos con anuncios de Primetime y decisiones.
+Reemplace intervalos con anuncios de Primetime y decisioning.
 
 ```
 {   
