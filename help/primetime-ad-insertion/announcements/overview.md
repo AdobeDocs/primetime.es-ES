@@ -1,27 +1,25 @@
 ---
-title: Anuncios de Adobe Primetime Ad Insertion
-seo-title: Anuncios de Adobe Primetime Ad Insertion
-description: Anuncios sobre las últimas versiones de funciones y otras noticias relacionadas con Primetime Ad Insertion
-seo-description: Anuncios sobre las últimas versiones de funciones y otras noticias relacionadas con Primetime Ad Insertion
+title: Anuncios del Ad Insertion de Adobe Primetime
+description: Anuncios sobre versiones recientes de funcionalidades y otras noticias relacionadas sobre Primetime Ad Insertion
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
 
 
-# Anuncios del Ad Insertion Primetime
+# Anuncios del Ad Insertion de Primetime
 
 ## Reducción de los errores de publicidad programática mediante tiempos de espera de resolución de publicidad
 
 Publicado el 1 de diciembre de 2000
 
-Adobe se centra en ayudar a nuestros clientes de Primetime Ad Insertion a maximizar la monetización de su inventario de anuncios. Prestamos especial atención a la reducción de las complejidades de satisfacer la demanda programática, que representa más de las tres cuartas partes de la inversión en publicidad de vídeo digital de EE.UU. según eMarketer. La venta mediante programación permite a los editores maximizar la demanda de su inventario publicitario, lo que permite aumentar las tasas de relleno y el rendimiento. Sin embargo, también aumenta la exposición a errores de publicidad, como respuestas VAST mal formadas, errores HTTP y otros que pueden provocar pérdidas de ingresos y/o malas experiencias de visor.
+El Adobe se centra en ayudar a nuestros clientes Ad Insertion de Primetime a maximizar la monetización de su inventario de anuncios. Prestamos especial atención a la reducción de las complejidades de satisfacer la demanda programática, que representa más de las tres cuartas partes del gasto en publicidad de vídeo digital de EE. UU. según eMarketer. La venta mediante programación permite a los editores maximizar la demanda de su inventario de anuncios, lo que produce mayores tasas de relleno y rendimiento. Sin embargo, también aumenta la exposición a errores de publicidad, como respuestas VAST mal formadas, errores HTTP y otros que pueden provocar pérdidas de ingresos o malas experiencias del visor.
 
-Un problema común es la lentitud y las respuestas de los asociados en los programas. Generalmente, las transacciones publicitarias programáticas se producen en milisegundos. Sin embargo, a veces una única fuente de demanda puede tardar una cantidad excesiva de tiempo en responder. Un retraso de un único proveedor puede afectar a todo el proceso de despacho de la publicidad, lo que provoca pantallas vacías temporales para el visor, ranuras de anuncios sin rellenar o, en casos extremos, la necesidad de reiniciar un flujo de vídeo. Desafortunadamente, identificar y evitar las fuentes de demanda lentas es un gran desafío.
+Un problema común es la lentitud de las respuestas publicitarias de los asociados programáticos. Normalmente, las transacciones publicitarias programáticas se producen en milisegundos. Sin embargo, a veces una única fuente de demanda puede tardar una cantidad excesiva de tiempo en responder. Un retraso de un solo proveedor puede afectar a todo el proceso de realización de publicidad, lo que provoca pantallas vacías temporales para el visor, ranuras de anuncios sin rellenar o, en casos extremos, la necesidad de reiniciar un flujo de vídeo. Desafortunadamente, identificar y evitar las fuentes de demanda lentas es un desafío importante.
 
-Para solucionar este problema, Adobe ha agregado nuevas herramientas al Ad Insertion Primetime que permiten a los clientes establecer restricciones de tiempo para la resolución de anuncios. La configuración de estas reglas hace que las fuentes de demanda lenta se omitan automáticamente, lo que garantiza que los reproductores de vídeo obtengan respuestas de publicidad de manera oportuna. Esto permite a los editores limitar en gran medida las interrupciones provenientes de fuentes de demanda lenta, ayudándoles a maximizar las tasas de relleno de inventario y a ofrecer experiencias de visualización ininterrumpidas de calidad de TV.
+Para solucionar este problema, Adobe ha agregado nuevas herramientas al Ad Insertion de Primetime que permiten a los clientes establecer restricciones de tiempo para la resolución de anuncios. La configuración de estas reglas hace que las fuentes de demanda lenta se omitan automáticamente, lo que garantiza que los reproductores de vídeo obtengan respuestas de publicidad de forma oportuna. Esto permite a los editores limitar en gran medida las interrupciones causadas por fuentes de demanda lenta, lo que les ayuda a maximizar las tasas de llenado de inventario y a ofrecer experiencias de visualización ininterrumpidas y de calidad de TV.
 
-Para habilitar el tiempo de espera de resolución de publicidad en Primetime Ad Insertion, modifique las API de arranque para incluir el parámetro ptadtimeout (duración en milisegundos).  Las solicitudes de publicidad que no se completen antes de la duración del tiempo de espera no se vincularán (se procesarán las publicidades de reserva).
+Para habilitar el tiempo de espera de resolución de publicidad en el Ad Insertion de Primetime, modifique las API de arranque para incluir el parámetro ptadtimeout (duración en milisegundos).  Las solicitudes de publicidad que no se completen antes de que expire el tiempo de espera no se vincularán (se procesarán los anuncios de reserva).
