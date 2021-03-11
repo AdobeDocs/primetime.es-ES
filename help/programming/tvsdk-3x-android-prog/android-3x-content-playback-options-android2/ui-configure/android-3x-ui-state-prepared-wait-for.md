@@ -1,25 +1,22 @@
 ---
-description: Para poder utilizar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
-seo-description: Para poder utilizar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
-seo-title: Esperar un estado válido
-title: Esperar un estado válido
-uuid: 7a86b4cf-f7a0-4d90-9ff2-401640a395c5
+description: Para poder usar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
+title: Espere a que aparezca un estado válido
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
 
-# Esperar un estado válido {#wait-for-a-valid-status}
+# Espere a que aparezca un estado válido {#wait-for-a-valid-status}
 
-Con TVSDK, puede controlar la experiencia de reproducción básica para vídeo en directo y vídeo a petición (VOD). TVSDK proporciona métodos y propiedades en la instancia del reproductor que puede utilizar para configurar la interfaz de usuario del reproductor.
+Con TVSDK, puede controlar la experiencia de reproducción básica para vídeo en directo y vídeo bajo demanda (VOD). TVSDK proporciona métodos y propiedades en la instancia del reproductor que puede utilizar para configurar la interfaz de usuario del reproductor.
 
-Para poder utilizar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
+Para poder usar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
 
-Esperar a que el reproductor esté en el estado correcto garantiza que el recurso de medios se haya cargado correctamente. Si el reproductor no tiene al menos el estado requerido, muchos métodos del reproductor generan `MediaPlayerException`.
+Esperar que el reproductor esté en el estado correcto garantiza que el recurso de medios se haya cargado correctamente. Si el reproductor no está en al menos el estado requerido, muchos métodos del reproductor arrojan `MediaPlayerException`.
 
 El estado requerido suele estar PREPARADO. Cuando esto sucede, se ejecuta la rutina de llamada de retorno para `StatusChangeEventListener.onStatusChanged()`.
 
