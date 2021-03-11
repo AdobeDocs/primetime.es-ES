@@ -1,13 +1,10 @@
 ---
-description: Cuando se reproduce contenido, el SDK de TVSDK del explorador puede mostrar anuncios y pasar información sobre anuncios al crear el objeto MediaResource.
-seo-description: Cuando se reproduce contenido, el SDK de TVSDK del explorador puede mostrar anuncios y pasar información sobre anuncios al crear el objeto MediaResource.
-seo-title: Publicidades
+description: Cuando se reproduce contenido, el SDK de explorador puede mostrar anuncios y pasar información sobre anuncios al crear el objeto MediaResource .
 title: Publicidades
-uuid: 9a5e8c83-18ce-41e8-9cb1-fdc9da903faf
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '100'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Información general {#ads-overview}
 
-Cuando se reproduce contenido, el SDK de TVSDK del explorador puede mostrar anuncios y pasar información sobre anuncios al crear el objeto MediaResource.
+Cuando se reproduce contenido, el SDK de explorador puede mostrar anuncios y pasar información sobre anuncios al crear el objeto MediaResource .
 
-Opcionalmente, puede llamar a la función `prepareToPlay` después de recibir `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
+Si lo desea, puede llamar a la función `prepareToPlay` después de recibir `AdobePSDK.MediaPlayerStatus.INITIALIZED`.
 
 ```js
 function onStatusChange (event) { 
@@ -42,14 +39,14 @@ player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED, onStatusChange);
 var mediaResource = new AdobePSDK.MediaResource(resourceUrl, resourceType, auditudeSettings, false);
 ```
 
-El SDK de TVSDK de explorador también proporciona los siguientes eventos específicos de publicidad que puede utilizar en los controladores de evento para evitar que el contenido se reenvíe rápidamente cuando se reproduzcan anuncios:
+El SDK de explorador también proporciona los siguientes eventos específicos de publicidad que puede utilizar en los controladores de eventos para evitar que el contenido se reenvíe rápidamente cuando se reproduzcan anuncios:
 
 * `AdobePSDK.PSDKEventType.AD_BREAK_STARTED`
 * `AdobePSDK.PSDKEventType.AD_BREAK_COMPLETED`
 * `AdobePSDK.PSDKEventType.AD_STARTED`
 * `AdobePSDK.PSDKEventType.AD_COMPLETED`
 
-Para ver cómo funciona en la interfaz de usuario, especifique la configuración de la publicidad de la siguiente manera:
+Para ver que esto funciona en el marco de IU, especifique la configuración de publicidad de la siguiente manera:
 
 ```js
 // Using UI Framework 
@@ -71,4 +68,4 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }; 
 ```
 
-Para obtener más información sobre los `AuditudeSettings` requeridos, consulte [Metadatos de inserción de publicidad](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md).
+Para obtener más información sobre el `AuditudeSettings` requerido, consulte [Metadatos de inserción de anuncios](../../ad-insertion/ad-insertion-metadata/c-psdk-browser-tvsdk-2.4-ad-insertion-metadata.md).
