@@ -1,13 +1,10 @@
 ---
-description: Puede activar una experiencia de tipo TV para poder unirse en medio de un anuncio, en transmisiones en directo.
-seo-description: Puede activar una experiencia de tipo TV para poder unirse en medio de un anuncio, en transmisiones en directo.
-seo-title: Inserción parcial de pausa publicitaria
+description: Puede activar una experiencia parecida a la TV para poder unirse en medio de un anuncio, en transmisiones en directo.
 title: Inserción parcial de pausa publicitaria
-uuid: 296a9b6a-9e9f-4ca7-ab8a-c8cbc98fb9af
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
@@ -15,24 +12,24 @@ ht-degree: 0%
 
 # Inserción parcial de pausa publicitaria {#partial-ad-break-insertion}
 
-Puede activar una experiencia de tipo TV para poder unirse en medio de un anuncio, en transmisiones en directo.
+Puede activar una experiencia parecida a la TV para poder unirse en medio de un anuncio, en transmisiones en directo.
 
-La función Salto de anuncio parcial le permite imitar una experiencia parecida a la de un televisor en la que, si el cliente inicio un flujo en directo dentro de un midroll, el inicio se producirá dentro de ese midroll. Es similar a cambiar a un canal de TV y los comerciales funcionan perfectamente.
+La función Parcial de Ad Break le permite imitar una experiencia parecida a un televisor en la que, si el cliente inicia un flujo en vivo dentro de un midroll, este se iniciará dentro de ese midroll. Es similar a cambiar a un canal de televisión y los anuncios se ejecutan sin problemas.
 
-Por ejemplo, si un usuario se une en medio de una pausa publicitaria de 90 segundos (tres anuncios de 30 segundos), 10 segundos después de la segunda publicidad (es decir, a los 40 segundos de la pausa publicitaria), sucederá lo siguiente:
+Por ejemplo, si un usuario se une en medio de una pausa publicitaria de 90 segundos (tres anuncios de 30 segundos), 10 segundos después del segundo anuncio (es decir, a los 40 segundos de la pausa publicitaria), sucederá lo siguiente:
 
 * El segundo anuncio se reproduce durante el resto de la duración (20 segundos) seguido del tercer anuncio.
 * Los rastreadores de anuncios para el anuncio reproducido parcialmente (el segundo anuncio) no se activan. Solo se activa el rastreador del tercer anuncio.
 
-Este comportamiento no está habilitado de forma predeterminada. Para habilitar esta función en la aplicación, haga lo siguiente.
+Este comportamiento no está habilitado de forma predeterminada. Para habilitar este funcionamiento en la aplicación, haga lo siguiente.
 
-1. Desactive las preconfiguraciones activas mediante el método setEnableLivePreroll de la clase AdvertisingMetadata.
+1. Deshabilite las preconfiguraciones activas mediante el método setEnableLivePreroll de la clase AdvertisingMetadata .
 
    ```
    advertisingMetadata.setEnableLivePreroll(String.valueOf(false))
    ```
 
-1. Active la preferencia para la inserción parcial de pausa publicitaria. Utilice el nuevo método setParalAdBreakPref en la interfaz de MediaPlayer para activar esta función. Utilice el método getPartialAdBreakPref para buscar el estado actual de esta preferencia.
+1. Active la preferencia para la inserción parcial de pausa publicitaria. Utilice el nuevo método setPartialAdBreakPref en la interfaz de MediaPlayer para activar esta función. Utilice el método getPartialAdBreakPref para encontrar el estado actual de esta preferencia.
 
    ```
    MediaPlayer mediaPlayer = DefaultMediaPlayer.create(getActivity().getApplicationContext()); 
@@ -40,11 +37,11 @@ Este comportamiento no está habilitado de forma predeterminada. Para habilitar 
           mediaPlayer.setPartialAdBreakPref(true); 
    ```
 
-1. Esta función requiere que implemente un selector de directivas de publicidad personalizado para personalizar el comportamiento. Si todavía no tiene una implementación personalizada de la clase AdvertisingFactory, agregue una nueva implementación AdvertisingFactory. Anule el método createAdPolicySelector. Este método devuelve una nueva instancia de la implementación de AdPolicySelector.
+1. Esta función requiere que implemente un selector de directiva de publicidad personalizado para personalizar el comportamiento. Si todavía no tiene una implementación personalizada de la clase AdvertisingFactory, agregue una nueva implementación de AdvertisingFactory. Anule el método createAdPolicySelector . Este método devuelve una nueva instancia de la implementación de AdPolicySelector.
 
-   A continuación se proporciona una implementación de muestra para su referencia. La siguiente implementación de muestra está disponible para su uso desde el paquete com.adobe.mediacore. Sin embargo, se simplifica para facilitar la consulta y no se recomienda su uso tal cual.
+   A continuación se muestra una implementación de muestra para su referencia. La siguiente implementación de muestra está disponible para su uso desde el paquete com.adobe.mediacore . Sin embargo, se simplifica para facilitar la referencia y no se recomienda utilizarlo tal cual.
 
-   1. Ejemplo de selector de directivas de publicidad
+   1. Ejemplo de selector de políticas de publicidad
 
       ```
        package com.adobe.mediacore;
@@ -187,7 +184,7 @@ Este comportamiento no está habilitado de forma predeterminada. Para habilitar 
       } 
       ```
 
-   1. Registre AdvertisingFactory con el reproductor multimedia
+   1. Registre AdvertisingFactory en el reproductor de contenidos
 
       ```
       AdvertisingFactory advertisingFactory = createPartialAdBreakFactory();  
