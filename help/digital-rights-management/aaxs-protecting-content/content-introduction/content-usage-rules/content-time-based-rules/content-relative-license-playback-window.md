@@ -1,9 +1,9 @@
 ---
-seo-title: Ventana de reproducción
 title: Ventana de reproducción
-uuid: be3b1430-e522-442e-85ca-5a2f78b60130
+description: Ventana de reproducción
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Ventana de reproducción{#playback-window}
 
-Especifica la duración durante la que una licencia es válida la primera vez que se utiliza para reproducir contenido protegido.
+Especifica la duración de una licencia válida después de la primera vez que se utiliza para reproducir contenido protegido.
 
-Ejemplo de caso de uso: Algunos modelos de negocio permiten un período de alquiler de 30 días, pero una vez que comienza la reproducción, debe completarse en 48 horas. Esta longevidad de 48 horas de la licencia se define como la ventana de reproducción.
+Ejemplo de caso de uso: Algunos modelos de negocio permiten un periodo de alquiler de 30 días, pero una vez que comienza la reproducción, debe completarse en 48 horas. Esta longevidad de 48 horas de la licencia se define como la ventana de reproducción.
