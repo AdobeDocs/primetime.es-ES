@@ -1,13 +1,10 @@
 ---
-description: Estas clases proporcionan información cuando el TVSDK se utiliza incorrectamente.
-seo-description: Estas clases proporcionan información cuando el TVSDK se utiliza incorrectamente.
-seo-title: Clases de error
+description: Estas clases proporcionan información sobre cuándo se utiliza incorrectamente el TVSDK.
 title: Clases de error
-uuid: 0c77e20d-edaf-495c-9b33-02edc0a4432c
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '93'
 ht-degree: 0%
 
 ---
@@ -15,12 +12,12 @@ ht-degree: 0%
 
 # Clases de error {#error-classes}
 
-Estas clases proporcionan información cuando el TVSDK se utiliza incorrectamente.
+Estas clases proporcionan información sobre cuándo se utiliza incorrectamente el TVSDK.
 
 Paquete: [com.adobe.mediacore.errors](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/errors/package-detail.html)
 
 | Nombre | Descripción |
 |---|---|
-| [IllegalStateException](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/errors/IllegalStateException.html) | Clase que describe un error generado por las clases TVSDK cuando se hace un uso indebido de una API. |
-| [MediaError](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/errors/MediaError.html) | Clase. Proporciona un código de notificación y metadatos adicionales sobre un error de medios. |
+| [IllegalStateException](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/errors/IllegalStateException.html) | Clase que describe un error generado por las clases TVSDK cuando se utiliza incorrectamente una API. |
+| [MediaError](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/errors/MediaError.html) | Clase. Proporciona un código de notificación y metadatos adicionales sobre un error multimedia. |
 
