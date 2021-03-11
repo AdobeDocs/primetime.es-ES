@@ -1,13 +1,10 @@
 ---
-description: Si utiliza la configuración predeterminada, no tiene que hacer nada más para habilitar o configurar la facturación. Si ha obtenido parámetros de configuración diferentes del representante de habilitación de Adobe, utilice la clase BillingMetricsConfiguration para configurar estos parámetros antes de inicializar el reproductor de medios.
-seo-description: Si utiliza la configuración predeterminada, no tiene que hacer nada más para habilitar o configurar la facturación. Si ha obtenido parámetros de configuración diferentes del representante de habilitación de Adobe, utilice la clase BillingMetricsConfiguration para configurar estos parámetros antes de inicializar el reproductor de medios.
-seo-title: Configurar métricas de facturación
+description: Si utiliza la configuración predeterminada, no hay nada más que hacer para habilitar o configurar la facturación. Si ha obtenido parámetros de configuración diferentes de su representante de habilitación de Adobe, utilice la clase BillingMetricsConfiguration para establecer estos parámetros antes de inicializar el reproductor de medios.
 title: Configurar métricas de facturación
-uuid: 04d3b53e-f08c-49d0-ba42-5375f1307d2e
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '145'
 ht-degree: 0%
 
 ---
@@ -15,17 +12,17 @@ ht-degree: 0%
 
 # Configurar métricas de facturación{#configure-billing-metrics}
 
-Si utiliza la configuración predeterminada, no tiene que hacer nada más para habilitar o configurar la facturación. Si ha obtenido parámetros de configuración diferentes del representante de habilitación de Adobe, utilice la clase BillingMetricsConfiguration para configurar estos parámetros antes de inicializar el reproductor de medios.
+Si utiliza la configuración predeterminada, no hay nada más que hacer para habilitar o configurar la facturación. Si ha obtenido parámetros de configuración diferentes de su representante de habilitación de Adobe, utilice la clase BillingMetricsConfiguration para establecer estos parámetros antes de inicializar el reproductor de medios.
 
-La mayoría de los clientes debe utilizar la configuración predeterminada.
+La mayoría de los clientes deben utilizar la configuración predeterminada.
 
 >[!IMPORTANT]
 >
->La configuración que defina permanecerá en vigor durante toda la vida útil del reproductor de medios. Una vez que inicialice el reproductor multimedia, no podrá cambiar la configuración.
+>La configuración que establezca permanecerá en vigor durante toda la vida útil del reproductor de contenidos. Una vez que inicialice el reproductor de contenidos, no podrá cambiar la configuración.
 
 Para configurar las métricas de facturación:
 
-* Introduzca la siguiente muestra de código.
+* Introduzca el siguiente ejemplo de código.
 
    ```js
    var config = new AdobePSDK.MediaPlayerItemConfig(); 
