@@ -1,52 +1,49 @@
 ---
 description: Puede utilizar TVSDK para recuperar información sobre los medios que puede mostrar en la barra de búsqueda.
-seo-description: Puede utilizar TVSDK para recuperar información sobre los medios que puede mostrar en la barra de búsqueda.
-seo-title: Mostrar la duración, el tiempo actual y el tiempo restante del vídeo
-title: Mostrar la duración, el tiempo actual y el tiempo restante del vídeo
-uuid: afb43169-2d82-4137-ba38-27caef3d8c21
+title: Mostrar la duración, la hora actual y el tiempo restante del vídeo
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
 
 
-# Muestre la duración, la hora actual y el tiempo restante del vídeo{#display-the-duration-current-time-and-remaining-time-of-the-video}
+# Mostrar la duración, la hora actual y el tiempo restante del vídeo{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
 Puede utilizar TVSDK para recuperar información sobre los medios que puede mostrar en la barra de búsqueda.
 
 1. Espere a que el reproductor esté en el estado PREPARADO.
-1. Recupere el tiempo actual del cursor de reproducción mediante el método `MediaPlayer.getCurrentTime`.
+1. Recupere el tiempo actual del cabezal de reproducción mediante el método `MediaPlayer.getCurrentTime`.
 
-   Esto devuelve la posición actual del cursor de reproducción en la línea de tiempo virtual en milisegundos. El tiempo se calcula en relación con el flujo resuelto que puede contener varias instancias de contenido alternativo, como anuncios múltiples o pausas publicitarias que se dividen en el flujo principal. Para flujos en directo/lineal, el tiempo devuelto siempre está en el rango de la ventana de reproducción.
+   Esto devuelve la posición actual del cabezal de reproducción en la cronología virtual en milisegundos. El tiempo se calcula en función del flujo resuelto que puede contener varias instancias de contenido alternativo, como varios anuncios o pausas publicitarias duplicados en el flujo principal. Para los flujos en directo/lineales, el tiempo devuelto siempre está en el intervalo de la ventana de reproducción.
 
    ```java
    long getCurrentTime() throws IllegalStateException;
    ```
 
-1. Recupere el rango de reproducción del flujo y determine la duración.
-   1. Utilice el método `mediaPlayer.getPlaybackRange` para obtener el intervalo de tiempo de la línea de tiempo virtual.
+1. Recupere el intervalo de reproducción de la emisión y determine la duración.
+   1. Utilice el método `mediaPlayer.getPlaybackRange` para obtener el intervalo de tiempo de la cronología virtual.
 
       ```java
       TimeRange getPlaybackRange() throws IllegalStateException;
       ```
 
-   1. Analice el intervalo de tiempo usando `mediacore.utils.TimeRange`.
-   1. Para determinar la duración, reste el inicio desde el final del rango.
+   1. Analice el intervalo de tiempo con `mediacore.utils.TimeRange`.
+   1. Para determinar la duración, reste el inicio desde el final del intervalo.
 
-      Esto incluye la duración del contenido adicional que se inserta en el flujo (anuncios).
+      Esto incluye la duración del contenido adicional que se inserta en la emisión (anuncios).
 
-      Para VOD, el intervalo siempre comienza con cero y el valor final es igual a la suma de la duración del contenido principal y la duración del contenido adicional que se inserta en el flujo (anuncios).
+      Para VOD, el intervalo siempre comienza con cero y el valor final es igual a la suma de la duración del contenido principal y las duraciones del contenido adicional que se inserta en la emisión (anuncios).
 
-      Para un recurso lineal/activo, el rango representa el rango de la ventana de reproducción y este rango cambia durante la reproducción.
+      Para un recurso lineal/activo, el rango representa el intervalo de la ventana de reproducción y este intervalo cambia durante la reproducción.
 
-      TVSDK llama a la rellamada `onUpdated` para indicar que se actualizó el elemento de medios y que se actualizaron sus atributos (incluido el intervalo de reproducción).
+      TVSDK llama a su llamada de retorno `onUpdated` para indicar que el elemento multimedia se ha actualizado y que sus atributos (incluido el intervalo de reproducción) se han actualizado.
 
 1. Utilice los métodos disponibles en las clases `MediaPlayer` y `SeekBar` que están disponibles públicamente en el SDK para Android para configurar los parámetros de la barra de búsqueda.
 
-   Por ejemplo, aquí hay un posible diseño que contiene los elementos `SeekBar` y dos `TextView`.
+   Por ejemplo, este es un posible diseño que contiene los elementos `SeekBar` y dos `TextView`.
 
    ```xml
    <LinearLayout 
@@ -80,7 +77,7 @@ Puede utilizar TVSDK para recuperar información sobre los medios que puede most
 
 1. Utilice un temporizador para recuperar periódicamente la hora actual y actualizar SeekBar.
 
-   El ejemplo siguiente utiliza la clase auxiliar `Clock.java` como temporizador, que está disponible en el reproductor de referencia PrimetimeReference. Esta clase establece un detector de evento y activa un evento `onTick` cada segundo, o cualquier otro valor de tiempo de espera que pueda especificar.
+   El siguiente ejemplo utiliza la clase de ayuda `Clock.java` como temporizador, que está disponible en el reproductor de referencia PrimetimeReference. Esta clase establece un detector de eventos y déclencheur un evento `onTick` cada segundo u otro valor de tiempo de espera que pueda especificar.
 
    ```java
    playbackClock = new Clock(PLAYBACK_CLOCK, CLOCK_TIMER); 
@@ -93,7 +90,7 @@ Puede utilizar TVSDK para recuperar información sobre los medios que puede most
    playbackClock.addClockEventListener(playbackClockEventListener);
    ```
 
-   En cada marca de reloj, este ejemplo recupera la posición actual del reproductor de medios y actualiza SeekBar. Utiliza los dos elementos TextView para marcar el tiempo actual y la posición final del intervalo de reproducción como valores numéricos.
+   En cada visto del reloj, este ejemplo recupera la posición actual del reproductor de medios y actualiza SeekBar. Utiliza los dos elementos TextView para marcar la hora actual y la posición final del intervalo de reproducción como valores numéricos.
 
    ```java
    @Override 
