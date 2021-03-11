@@ -1,33 +1,30 @@
 ---
-description: Cuando el TVSDK del explorador solicita una publicidad que no se encuentra en el servidor de publicidad principal, el reproductor debe solicitar la publicidad desde el servidor secundario. La plantilla de servicio de publicidad de vídeo (VAST) establece el estándar de comunicación entre los servidores de publicidad y los reproductores de vídeo y es la respuesta que envía el servidor de publicidad secundario cuando se solicita la publicidad.
-seo-description: Cuando el TVSDK del explorador solicita una publicidad que no se encuentra en el servidor de publicidad principal, el reproductor debe solicitar la publicidad desde el servidor secundario. La plantilla de servicio de publicidad de vídeo (VAST) establece el estándar de comunicación entre los servidores de publicidad y los reproductores de vídeo y es la respuesta que envía el servidor de publicidad secundario cuando se solicita la publicidad.
-seo-title: Anuncios VAST
+description: Cuando el TVSDK del explorador solicita una publicidad que no está en el servidor de publicidad principal, el reproductor debe solicitar la publicidad desde el servidor secundario. La plantilla de servicio de publicidad de vídeo (VAST) establece el estándar de comunicación entre servidores de publicidad y reproductores de vídeo, y es la respuesta que envía el servidor de publicidad secundario cuando solicita el anuncio.
 title: Anuncios VAST
-uuid: 052dae0c-2425-456c-aebe-531f68bb5aa8
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
 
 
-# Publicidades VAST {#vast-ads}
+# Anuncios VAST {#vast-ads}
 
-Cuando el TVSDK del explorador solicita una publicidad que no se encuentra en el servidor de publicidad principal, el reproductor debe solicitar la publicidad desde el servidor secundario. La plantilla de servicio de publicidad de vídeo (VAST) establece el estándar de comunicación entre los servidores de publicidad y los reproductores de vídeo y es la respuesta que envía el servidor de publicidad secundario cuando se solicita la publicidad.
+Cuando el TVSDK del explorador solicita una publicidad que no está en el servidor de publicidad principal, el reproductor debe solicitar la publicidad desde el servidor secundario. La plantilla de servicio de publicidad de vídeo (VAST) establece el estándar de comunicación entre servidores de publicidad y reproductores de vídeo, y es la respuesta que envía el servidor de publicidad secundario cuando solicita el anuncio.
 
 Para obtener más información sobre VAST, consulte [Plantilla de servicio de publicidad de vídeo digital (VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
 
-El TVSDK del explorador admite los siguientes elementos de publicidad VAST:
+El SDK de TVSDK del explorador admite los siguientes elementos de publicidad VAST:
 
-## Publicidades envolventes y en línea {#section_11B8A1A8F52F4F77981C6AAC02185087}
+## Anuncios envolventes y en línea {#section_11B8A1A8F52F4F77981C6AAC02185087}
 
 Se admiten los siguientes elementos:
 
-* **`wrapper`** Cuando el reproductor necesita comunicarse con un servidor de publicidad secundario para solicitar una publicidad, el elemento envolvente proporciona la información de redirección. Un elemento envolvente puede apuntar a varios contenedores que finalmente apuntan a un anuncio VAST.
+* **`wrapper`** Cuando el reproductor necesita ponerse en contacto con un servidor de publicidad secundario para solicitar una publicidad, el elemento wrapper proporciona la información de redirección. Un elemento envolvente puede señalar a varios contenedores que finalmente apuntan a un anuncio VAST.
 
-* **`inline`** Se admiten los siguientes elementos necesarios:
+* **`inline`** Se admiten los siguientes elementos obligatorios:
 
 * `AdSystem`
 * `AdTitle`
@@ -39,18 +36,18 @@ Se admiten los siguientes elementos:
 * `Survey`
 * `Error`
 
-## Elementos creativos {#section_0121F948CB074E49A8132D202786CAA4}
+## Creativos {#section_0121F948CB074E49A8132D202786CAA4}
 
 Este elemento es un archivo que forma parte de un anuncio VAST y contiene un elemento `creative` que puede admitir un anuncio lineal, un anuncio no lineal o un anuncio complementario. En el elemento `creative`, se admiten los elementos `id`, `sequence` y `adId`.
 
-A continuación encontrará más información sobre los tipos de publicidad:
+A continuación se muestra más información sobre los tipos de publicidad:
 
-* **Publicidades linealesSe admiten** los siguientes elementos:
+* **Anuncios** linealesSe admiten los siguientes elementos:
 
-   * `TrackingEvent`, que contiene el  `Tracking` elemento.
+   * `TrackingEvent`, que contiene el  `Tracking` elemento .
       * `Duration`
       * `AdParameters`
-      * `VideoClicks`, incluidos los siguientes:
+      * `VideoClicks`, lo que incluye lo siguiente:
 
       * `ClickThrough`
       * `ClickTracking`
@@ -64,7 +61,7 @@ A continuación encontrará más información sobre los tipos de publicidad:
          >
          >En este elemento, se admiten los atributos `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework` y `type`.
 
-* **Publicidades no linealesSe admiten** los siguientes elementos:
+* **Anuncios no** linealesSe admiten los siguientes elementos:
 
    * `Non-linear`
 
@@ -78,7 +75,7 @@ A continuación encontrará más información sobre los tipos de publicidad:
       * `NonLinearClickThrough`
       * `AdParameters`
 
-* **Publicidades complementariasSe admiten** los siguientes elementos:
+* **Anuncios** complementariosSe admiten los siguientes elementos:
 
    * `Companion`
 
