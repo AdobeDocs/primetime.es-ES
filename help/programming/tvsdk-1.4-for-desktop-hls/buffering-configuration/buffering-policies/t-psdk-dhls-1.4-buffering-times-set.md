@@ -1,13 +1,10 @@
 ---
 description: MediaPlayer proporciona métodos para establecer y obtener el tiempo de almacenamiento en búfer inicial y el tiempo de almacenamiento en búfer de reproducción.
-seo-description: MediaPlayer proporciona métodos para establecer y obtener el tiempo de almacenamiento en búfer inicial y el tiempo de almacenamiento en búfer de reproducción.
-seo-title: Establecer horas de almacenamiento en búfer
-title: Establecer horas de almacenamiento en búfer
-uuid: 25142b01-5381-49c9-b89a-24c858faaf13
+title: Establecer tiempos de almacenamiento en búfer
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '191'
 ht-degree: 0%
 
 ---
@@ -19,9 +16,9 @@ MediaPlayer proporciona métodos para establecer y obtener el tiempo de almacena
 
 >[!TIP]
 >
->Si no establece los parámetros de control del búfer antes de iniciar la reproducción, el reproductor de medios toma el valor predeterminado de 2 segundos para el búfer inicial y 30 segundos para el tiempo de búfer de reproducción en curso.
+>Si no establece los parámetros de control de búfer antes de comenzar la reproducción, el reproductor de medios toma como valor predeterminado 2 segundos para el búfer inicial y 30 segundos para el tiempo de búfer de reproducción en curso.
 
-1. Configure el objeto `BufferControlParameters`, que encapsula el tiempo de búfer inicial y los parámetros de control de tiempo del búfer de reproducción:
+1. Configure el objeto `BufferControlParameters`, que encapsula el tiempo de búfer inicial y los parámetros de control de tiempo de búfer de reproducción:
 
        Esta clase proporciona los siguientes métodos de fábrica:
    
@@ -31,7 +28,7 @@ MediaPlayer proporciona métodos para establecer y obtener el tiempo de almacena
       createSimple(bufferTime:uint):BufferControlParameters
       ```
 
-   * Para configurar los tiempos de búfer inicial y de reproducción:
+   * Para establecer los tiempos de búfer inicial y de reproducción:
 
       ```
       createDual(initialBufferTime:uint, playbackBufferTime:uint):BufferControlParameters 
@@ -39,10 +36,10 @@ MediaPlayer proporciona métodos para establecer y obtener el tiempo de almacena
 
       Estos métodos generan un `IllegalArgumentException` si los parámetros no son válidos, como cuando:
 
-   * El tiempo de búfer inicial es menor que cero.
-   * El tiempo de búfer inicial es bueno al tiempo de búfer.
+   * El tiempo de búfer inicial es inferior a cero.
+   * El tiempo de búfer inicial es bueno que el tiempo de búfer.
 
-1. Para establecer los valores de los parámetros del búfer, utilice este método `MediaPlayer`:
+1. Para establecer los valores de los parámetros de búfer, utilice este método `MediaPlayer`:
 
    ```
    public function set bufferControlParameters(value:BufferControlParameters):void
@@ -56,10 +53,10 @@ MediaPlayer proporciona métodos para establecer y obtener el tiempo de almacena
 
 <!--<a id="example_B5C5004188574D8D8AB8525742767280"></a>-->
 
-Por ejemplo, para establecer el búfer inicial en 2 segundos y el tiempo del búfer de reproducción en 30 segundos:
+Por ejemplo, para establecer el búfer inicial en 2 segundos y el tiempo de búfer de reproducción en 30 segundos:
 
 ```
 mediaPlayer.bufferControlParameters = BufferControlParameters.createDual(2000, 30000); 
 ```
 
-La `psdkdemo` muestra esta función; utilice la configuración de la aplicación para establecer los valores del búfer.
+El `psdkdemo` muestra esta función; utilice la configuración de la aplicación para establecer los valores del búfer.
