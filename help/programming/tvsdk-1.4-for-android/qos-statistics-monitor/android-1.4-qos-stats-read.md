@@ -1,13 +1,10 @@
 ---
-description: Puede leer estadísticas de reproducción, almacenamiento en búfer y dispositivos desde la clase QOSProvider.
-seo-description: Puede leer estadísticas de reproducción, almacenamiento en búfer y dispositivos desde la clase QOSProvider.
-seo-title: Leer las estadísticas de reproducción, almacenamiento en búfer y dispositivos de QOS
+description: Puede leer las estadísticas de reproducción, almacenamiento en búfer y dispositivos desde la clase QOSProvider.
 title: Leer las estadísticas de reproducción, almacenamiento en búfer y dispositivos de QOS
-uuid: 19228a50-3721-4dc1-89b6-97458518e272
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '157'
+source-wordcount: '138'
 ht-degree: 1%
 
 ---
@@ -15,16 +12,16 @@ ht-degree: 1%
 
 # Leer las estadísticas de reproducción, almacenamiento en búfer y dispositivos de QOS{#read-qos-playback-buffering-and-device-statistics}
 
-Puede leer estadísticas de reproducción, almacenamiento en búfer y dispositivos desde la clase QOSProvider.
+Puede leer las estadísticas de reproducción, almacenamiento en búfer y dispositivos desde la clase QOSProvider.
 
-La clase `QOSProvider` proporciona varias estadísticas, incluida información sobre almacenamiento en búfer, velocidades de bits, velocidades de fotogramas, datos de tiempo, etc.
+La clase `QOSProvider` proporciona varias estadísticas, incluida información sobre el almacenamiento en búfer, las tasas de bits, las tasas de fotogramas, los datos de tiempo, etc.
 
-También proporciona información sobre el dispositivo, como el fabricante, el modelo, el sistema operativo, la versión del SDK, el ID del dispositivo del fabricante y el tamaño y la densidad de la pantalla.
+También proporciona información sobre el dispositivo, como el fabricante, el modelo, el sistema operativo, la versión del SDK, el ID del dispositivo del fabricante y la densidad/tamaño de la pantalla.
 
-1. Cree una instancia de un reproductor multimedia.
+1. Cree una instancia de un reproductor de medios.
 1. Cree un objeto `QOSProvider` y adjúntelo al reproductor de medios.
 
-   El constructor `QOSProvider` toma un contexto de reproductor para poder recuperar información específica del dispositivo.
+   El constructor `QOSProvider` toma un contexto de reproductor para que pueda recuperar información específica del dispositivo.
 
    ```java
    // Create Media Player. 
@@ -34,7 +31,7 @@ También proporciona información sobre el dispositivo, como el fabricante, el m
 
 1. (Opcional) Lea las estadísticas de reproducción.
 
-   Una solución para leer las estadísticas de reproducción es tener un temporizador que recopila periódicamente los nuevos valores de QoS de `QOSProvider`. Por ejemplo:
+   Una solución para leer las estadísticas de reproducción es tener un temporizador que obtenga periódicamente los nuevos valores de QoS de `QOSProvider`. Por ejemplo:
 
    ```java
    _playbackClock = new Clock(PLAYBACK_CLOCK, 1000); // every 1 second 
