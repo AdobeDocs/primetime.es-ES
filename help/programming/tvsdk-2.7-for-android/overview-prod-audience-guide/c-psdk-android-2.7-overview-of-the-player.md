@@ -1,58 +1,55 @@
 ---
 description: TVSDK para Android 2.5 incluye una serie de funciones que puede implementar en sus reproductores.
-seo-description: TVSDK para Android 2.5 incluye una serie de funciones que puede implementar en sus reproductores.
-seo-title: Funciones de Primetime TVSDK
-title: Funciones de Primetime TVSDK
-uuid: 20ef9abf-1a33-4afc-bb2e-4910e3398a7a
+title: Funciones de TVSDK de Primetime
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
 
-# Características de Primetime TVSDK {#primetime-tvsdk-features}
+# Funciones de TVSDK de Primetime {#primetime-tvsdk-features}
 
 TVSDK para Android 2.7 incluye una serie de funciones que puede implementar en sus reproductores.
 
 Funciones de TVSDK:
 
-* **VOD y reproducción en directo/lineal**
+* **Reproducción de VOD y de directo/lineal**
 
-   * Administración de la ventana de reproducción, incluidos los métodos que reproducen, detienen, pausan, buscan y recuperan la posición del cursor de reproducción
-   * Compatibilidad con reproducción de evento completo
-   * Subtítulos opcionales (608, 708, WebVTT) y formas alternativas de audio para aumentar la accesibilidad
-   * Controles para el estilo de texto en rótulos
-   * Capacidad de DVR, avance rápido y rebobinado rápido (los dos últimos se conocen como *modo de juego truco*)
+   * Administración de la ventana de reproducción, incluidos los métodos que reproducen, detienen, ponen en pausa, buscan y recuperan la posición del cabezal de reproducción
+   * Compatibilidad con la reproducción de eventos completos
+   * Subtítulos (608, 708, WebVTT) y formas de audio alternativas para aumentar la accesibilidad
+   * Controles del estilo del texto en los rótulos
+   * Capacidad DVR, avance rápido y rebobinado rápido (los dos últimos se conocen como *modo de reproducción mediante trucos*)
    * Lógica de velocidad de bits adaptable (ABR) y configuración inicial de los controles ABR
-   * Compatibilidad con failover de manifiesto en directo
+   * Compatibilidad con failover de manifiesto activo
    * Búferes de reproducción ajustables
-   * Compatibilidad con el seguimiento de duración, tamaño y tiempo de descarga del fragmento
+   * Duración del fragmento, tamaño y compatibilidad con seguimiento de tiempo de descarga
 
 * **Publicidad**
 
    * VPAID 2.0
    * Vinculación de anuncios del lado del cliente
 
-      * Inserción de anuncios perfecta, incluida la compatibilidad con VAST/VMAP
+      * Inserción de publicidad perfecta, incluida la compatibilidad con VAST/VMAP
       * Compatibilidad con etiquetas de referencia personalizadas para anuncios
-      * Compatibilidad para marcar, reemplazar y eliminar publicidades C3
-      * Flujo de trabajo personalizable de inserción de publicidad o contenido, incluida la señalización de bloqueo
+      * Compatibilidad para marcar, reemplazar y eliminar anuncios C3
+      * Flujo de trabajo personalizable de contenido/inserción de publicidad, incluida la señalización de bloqueo
 
-* **Protección del contenido**
+* **Protección de contenido**
 
    * Acceso a servicios relacionados con la administración de derechos digitales (DRM)
-   * Reproducción de flujos HLS sin cifrar o con flujo en directo HTTP protegido (PHLS)
-   * Control de salida basado en la resolución, basado en la directiva DRM
+   * Reproducción de transmisiones HLS sin encriptar o con transmisión en directo HTTP protegida (PHLS)
+   * Control de salida basado en resolución, basado en la directiva DRM
 
-* **Seguimiento de anuncios y videos**
+* **Seguimiento de anuncios y vídeos**
 
-   * Seguimiento de eventos QoS
-   * Notificaciones que ayudan a TVSDK y a su aplicación a comunicarse asincrónicamente sobre el estado de los vídeos, los anuncios y otros elementos. Las notificaciones también registran la actividad.
+   * Seguimiento de eventos de QoS
+   * Notificaciones que ayudan a TVSDK y a su aplicación a comunicarse de forma asíncrona sobre el estado de los vídeos, anuncios y otros elementos. Las notificaciones también registran la actividad.
 
 * **Registro**
 
-   * Registro de depuración
-   * Compatibilidad con el seguimiento de la duración, el tamaño y el tiempo de descarga del fragmento.
+   * Registro de Debug
+   * Compatibilidad de seguimiento para la duración, el tamaño y el tiempo de descarga del fragmento.
