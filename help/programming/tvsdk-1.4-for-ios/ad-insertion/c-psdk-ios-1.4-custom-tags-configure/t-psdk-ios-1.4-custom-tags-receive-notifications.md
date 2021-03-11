@@ -1,35 +1,32 @@
 ---
 description: Para recibir notificaciones sobre etiquetas en el manifiesto, implemente los oyentes de notificación correspondientes.
-seo-description: Para recibir notificaciones sobre etiquetas en el manifiesto, implemente los oyentes de notificación correspondientes.
-seo-title: Añadir oyentes para notificaciones de metadatos temporizadas
-title: Añadir oyentes para notificaciones de metadatos temporizadas
-uuid: dcd1bd92-0617-4eab-8b06-7301aaff42f3
+title: Agregar oyentes para notificaciones de metadatos temporizados
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
 
 
-# Añadir oyentes para notificaciones de metadatos temporizadas {#add-listeners-for-timed-metadata-notifications}
+# Agregar oyentes para notificaciones de metadatos temporizadas {#add-listeners-for-timed-metadata-notifications}
 
 Para recibir notificaciones sobre etiquetas en el manifiesto, implemente los oyentes de notificación correspondientes.
 
-Puede supervisar los metadatos temporizados escuchando los siguientes eventos, que notifican a la aplicación la actividad relacionada:
+Puede monitorizar los metadatos temporizados escuchando los siguientes eventos, que notifican a la aplicación de la actividad relacionada:
 
-* `PTTimedMetadataChangedNotification`:: Cada vez que se identifica una etiqueta suscrita única durante el análisis del contenido, TVSDK prepara un nuevo  `PTTimedMetadata` objeto y distribuye esta notificación.
+* `PTTimedMetadataChangedNotification`: Cada vez que se identifica una etiqueta suscrita única durante el análisis del contenido, TVSDK prepara un nuevo  `PTTimedMetadata` objeto y envía esta notificación.
 
-   El objeto contiene el nombre de la etiqueta a la que se suscribió, la hora local de la reproducción en la que aparecerá esta etiqueta y otros datos.
+   El objeto contiene el nombre de la etiqueta a la que se ha suscrito, la hora local de la reproducción en la que aparecerá esta etiqueta y otros datos.
 
-* `PTMediaPlayerTimeChangeNotification` :: En el caso de flujos en directo/lineales en los que el manifiesto/lista de reproducción se actualiza periódicamente, es posible que aparezcan etiquetas personalizadas adicionales en la lista de reproducción/manifiesto actualizado, por lo que se pueden añadir  `TimedMetadata` objetos adicionales a la  `MediaPlayerItem.timedMetadata` propiedad.
+* `PTMediaPlayerTimeChangeNotification` : Para flujos en directo/lineales en los que el manifiesto/lista de reproducción se actualiza periódicamente, pueden aparecer etiquetas personalizadas adicionales en la lista de reproducción/manifiesto actualizado, por lo que se pueden agregar  `TimedMetadata` objetos adicionales a la  `MediaPlayerItem.timedMetadata` propiedad.
 
    Este evento notifica a la aplicación cuando esto sucede.
 
-   Recupere los metadatos temporizados de una de las siguientes formas.
+   Recupere los metadatos temporizados de una de las siguientes maneras.
 
-   * Configure la aplicación para que se agregue como oyente a la notificación `PTTimedMetadataChangedNotification` y busque el objeto mediante `PTTimedMetadataKey`.
+   * Configure la aplicación para que se añada como oyente a la notificación `PTTimedMetadataChangedNotification` y busque el objeto mediante `PTTimedMetadataKey`.
 
       ```
       [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onTimedMetadataChanged:)  
@@ -41,5 +38,5 @@ Puede supervisar los metadatos temporizados escuchando los siguientes eventos, q
       }
       ```
 
-   * Acceda a la propiedad `timedMetadataCollection` de `PTMediaPlayerItem`, que consta de todos los objetos `PTTimedMetadata` notificados hasta ahora.
+   * Acceda a la propiedad `timedMetadataCollection` de `PTMediaPlayerItem`, que consta de todos los objetos `PTTimedMetadata` que se han notificado hasta el momento.
 
