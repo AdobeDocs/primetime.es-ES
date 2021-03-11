@@ -1,9 +1,9 @@
 ---
-seo-title: Creación de una IU de autenticación
-title: Creación de una IU de autenticación
-uuid: 4744bac0-c36e-4b0a-b3fb-d81c7f2e7617
+title: Crear una interfaz de usuario de autenticación
+description: Crear una interfaz de usuario de autenticación
+copied-description: true
 translation-type: tm+mt
-source-git-commit: e60d285b9e30cdd19728e3029ecda995cd100ac9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 1. Cree una interfaz de usuario para recuperar las credenciales de autenticación del usuario.
 
-   A continuación se muestra un ejemplo de Flex de una interfaz de usuario sencilla para recuperar las credenciales de usuario. Consta de un objeto de panel que contiene dos objetos `TextInput`, uno para cada una de las credenciales de nombre de usuario y contraseña. El panel también contiene un botón que inicia el método `credentials()`.
+   A continuación se muestra un ejemplo de Flex de una interfaz de usuario sencilla para recuperar las credenciales de usuario. Consta de un objeto de panel que contiene dos objetos `TextInput`, uno para cada nombre de usuario y credenciales de contraseña. El panel también contiene un botón que inicia el método `credentials()`.
 
    ```xml
    <mx:Panel x="236.5"  
@@ -59,7 +59,7 @@ ht-degree: 0%
    </mx:Script> 
    ```
 
-   Una forma de implementar este tipo de interfaz sencilla es incluir el panel como parte de un nuevo estado. El nuevo estado se origina a partir del estado base cuando se genera el objeto `DRMAuthenticateEvent`. El ejemplo siguiente contiene un objeto `VideoDisplay` con un atributo de origen que apunta a un archivo de vídeo protegido. En este caso, se modifica el método `credentials()` para que también devuelva la aplicación al estado base. Este método lo hace después de pasar las credenciales de usuario y restablecer los valores del objeto TextInput.
+   Una forma de implementar este tipo de interfaz sencilla es incluir el panel como parte de un nuevo estado. El nuevo estado se origina desde el estado base cuando se produce el objeto `DRMAuthenticateEvent`. El siguiente ejemplo contiene un objeto `VideoDisplay` con un atributo de origen que apunta a un archivo de vídeo protegido. En este caso, el método `credentials()` se modifica para que también devuelva la aplicación al estado base. Este método lo hace después de pasar las credenciales del usuario y restablecer los valores del objeto TextInput.
 
    ```xml
    <?xml version="1.0" encoding="utf-8"?> 
