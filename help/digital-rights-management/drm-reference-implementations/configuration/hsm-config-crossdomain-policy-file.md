@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Archivo de política entre dominios
-title: Archivo de política entre dominios
-uuid: 5e813345-2cea-4c1a-a892-dfd95b6efc22
+title: Archivo de directiva entre dominios
+description: Archivo de directiva entre dominios
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '47'
+source-wordcount: '45'
 ht-degree: 0%
 
 ---
@@ -15,4 +13,4 @@ ht-degree: 0%
 
 # Archivo de directiva entre dominios{#cross-domain-policy-file}
 
-Si los clientes de Flash Runtime necesitan solicitar una licencia de un servidor de licencias, se requiere un archivo de política DRM entre dominios. Para obtener más información sobre las directivas entre dominios, consulte *Uso del SDK de DRM de Adobe Primetime para la protección de contenido*.
+Si los clientes de Flash Runtime necesitan solicitar una licencia de un servidor de licencias, se requiere un archivo de directiva DRM entre dominios. Para obtener más información sobre las políticas entre dominios, consulte *Usar el SDK de Adobe Primetime DRM para proteger contenido*.
