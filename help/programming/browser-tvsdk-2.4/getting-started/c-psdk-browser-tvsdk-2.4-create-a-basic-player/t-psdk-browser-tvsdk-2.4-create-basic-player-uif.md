@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Creación de un reproductor básico mediante la interfaz de usuario Framework
-title: Creación de un reproductor básico mediante la interfaz de usuario Framework
-uuid: d1a82dbb-1c05-4d0c-b6bc-e07cbede93cb
+title: Creación de un reproductor básico mediante el marco de IU
+description: Creación de un reproductor básico mediante el marco de IU
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 4102780d0c7d0b96d120c1c2b3d14c47bc1b0e6f
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '134'
 ht-degree: 1%
 
 ---
@@ -15,9 +13,9 @@ ht-degree: 1%
 
 # Crear un reproductor básico con la interfaz de usuario Framework{#create-a-basic-player-using-the-ui-framework}
 
-Para crear un reproductor básico con la interfaz de usuario Framework:
+Para crear un reproductor básico con el marco de IU:
 
-1. Cree un `<div>` para su instancia de reproductor.
+1. Cree un `<div>` para la instancia del reproductor.
 
    Por ejemplo:
 
@@ -36,7 +34,7 @@ Para crear un reproductor básico con la interfaz de usuario Framework:
    </script>
    ```
 
-   Cuando se crea el reproductor, el elemento `<div>` especificado recibe una clase CSS de `ptp-main-video-div-style`. El DOM resultante aparece algo así:
+   Cuando se crea el reproductor, el elemento `<div>` especificado recibe una clase CSS de `ptp-main-video-div-style`. El DOM resultante se muestra de esta manera:
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
@@ -44,9 +42,9 @@ Para crear un reproductor básico con la interfaz de usuario Framework:
    </div>
    ```
 
-1. Añada un control de interfaz de usuario.
+1. Agregue un control de interfaz de usuario.
 
-   Por ejemplo, agregue una barra de control que aparezca cuando el ratón pase sobre el reproductor:
+   Por ejemplo, agregue una barra de control que aparezca cuando el ratón se sitúa sobre el reproductor:
 
    ```js
    <script> 
@@ -73,7 +71,7 @@ Para crear un reproductor básico con la interfaz de usuario Framework:
    </div>
    ```
 
-El objeto que se devuelve al llamar a `ptp.videoPlayer()` proporciona un comportamiento que ajusta la API del reproductor de medios TVSDK y permite el control programático de la reproducción. Al realizar llamadas en la instancia del reproductor de medios, la interfaz de usuario se actualiza a sí misma según los eventos activados por el reproductor de medios:
+El objeto devuelto al llamar a `ptp.videoPlayer()` proporciona un comportamiento que ajusta la API del reproductor de medios TVSDK y permite el control programático de la reproducción. Cuando realiza llamadas en la instancia del reproductor de contenidos, la interfaz de usuario se actualiza a sí misma en función de los eventos activados por el reproductor de contenidos:
 
 ```js
 <script> 
