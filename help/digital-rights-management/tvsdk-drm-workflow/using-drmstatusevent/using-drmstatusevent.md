@@ -1,9 +1,9 @@
 ---
-seo-title: Información general sobre el uso de la clase DRMStatusEvent
 title: Información general sobre el uso de la clase DRMStatusEvent
-uuid: 9faf35fe-63ac-43a8-a945-4735c12efb04
+description: Información general sobre el uso de la clase DRMStatusEvent
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 9bbcb228d3367fbf53de811bf2941ca653ce3b0e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
@@ -11,8 +11,8 @@ ht-degree: 0%
 ---
 
 
-# Uso de la información general de la clase DRMStatusEvent {#using-the-drmstatusevent-class-overview}
+# Información general sobre la clase DRMStatusEvent {#using-the-drmstatusevent-class-overview}
 
-Se distribuye un objeto `DRMStatusEvent` cuando el contenido protegido por Primetime DRM comienza a reproducirse correctamente. (El éxito implica que la licencia se verifica y que el usuario está autenticado y autorizado para la vista del contenido).
+Se envía un objeto `DRMStatusEvent` cuando el contenido protegido por Primetime DRM comienza a reproducirse correctamente. (El éxito implica que la licencia se verifica y que el usuario está autenticado y autorizado para ver el contenido).
 
-El objeto `DRMStatusEvent` contiene información relacionada con la licencia, incluso si la licencia puede estar disponible sin conexión o cuándo caduca y el contenido ya no se puede ver.
+El objeto `DRMStatusEvent` contiene información relacionada con la licencia, incluso si la licencia puede estar disponible sin conexión o cuándo caduca y ya no se puede ver el contenido.
