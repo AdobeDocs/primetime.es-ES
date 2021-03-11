@@ -1,29 +1,26 @@
 ---
-description: Puede configurar un lugar para gestionar los errores.
-seo-description: Puede configurar un lugar para gestionar los errores.
-seo-title: Configurar la gestión de errores
-title: Configurar la gestión de errores
-uuid: 7c122830-6259-4e95-882e-fb1700454e6e
+description: Puede configurar un lugar para controlar los errores.
+title: Configuración de la gestión de errores
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 1%
+source-wordcount: '90'
+ht-degree: 2%
 
 ---
 
 
-# Configurar la gestión de errores {#set-up-error-handling}
+# Configuración de la gestión de errores {#set-up-error-handling}
 
-Puede configurar un lugar para gestionar los errores.
+Puede configurar un lugar para controlar los errores.
 
-1. Implementar una función de llamada de retorno de evento para `MediaPlayerEvent.STATUS_CHANGED`.
+1. Implemente una función de llamada de retorno de evento para `MediaPlayerEvent.STATUS_CHANGED`.
 
-   TVSDK pasa información de evento, como un objeto `MediaPlayerStatusChangeEvent`.
-1. En la llamada de retorno, cuando el estado devuelto sea `MediaPlayerStatus.ERROR`, proporcione lógica para controlar todos los errores.
-1. Después de gestionar el error, restablezca el objeto `MediaPlayer` o cargue un nuevo recurso de medios.
+   TVSDK pasa información de eventos, como un objeto `MediaPlayerStatusChangeEvent`.
+1. En la rellamada, cuando el estado devuelto es `MediaPlayerStatus.ERROR`, proporcione lógica para gestionar todos los errores.
+1. Una vez que se haya manejado el error, restablezca el objeto `MediaPlayer` o cargue un nuevo recurso de medios.
 
-   Cuando el objeto `MediaPlayer` está en el estado de error, permanece en ese estado hasta que lo restablezca mediante el método `MediaPlayer.reset`.
+   Cuando el objeto `MediaPlayer` se encuentra en estado de error, permanece en ese estado hasta que se restablece con el método `MediaPlayer.reset`.
 
 <!--<a id="example_E74BB605ED08450295B8902F1E4BB8F5"></a>-->
 
