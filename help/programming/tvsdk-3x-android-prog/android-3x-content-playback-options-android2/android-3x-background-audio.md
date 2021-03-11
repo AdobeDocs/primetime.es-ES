@@ -1,9 +1,9 @@
 ---
-seo-title: Habilitar audio de fondo
 title: Habilitar audio de fondo
-uuid: aa6dc934-e85c-4db1-901b-9777f47106e6
+description: Habilitar audio de fondo
+copied-description: true
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Para activar la reproducción de audio cuando la aplicación está en segundo pl
 _mediaPlayer.enableAudioPlaybackInBackground(true);
 ```
 
-La aplicación debe pausar la reproducción cuando pierda su retención en el enfoque de audio durante eventos como responder al teléfono, etc. El siguiente fragmento de código muestra cómo implementar el `OnAudioFocusChangeListener`:
+La aplicación debe pausar la reproducción cuando pierda la retención en el foco del audio durante eventos como responder al teléfono, etc. El siguiente fragmento de código muestra cómo implementar `OnAudioFocusChangeListener`:
 
 ```
 /** 
