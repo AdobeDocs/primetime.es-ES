@@ -1,27 +1,24 @@
 ---
-description: Para la inserción de anuncios en directo, es posible que tenga que salir de una pausa publicitaria antes de que todas las publicidades del desglose se reproduzcan hasta la finalización.
-seo-description: Para la inserción de anuncios en directo, es posible que tenga que salir de una pausa publicitaria antes de que todas las publicidades del desglose se reproduzcan hasta la finalización.
-seo-title: Implementar un retorno de pausa publicitaria anticipado
-title: Implementar un retorno de pausa publicitaria anticipado
-uuid: 41b70ee1-290b-4732-899e-32b234ec1d9a
+description: Para la inserción de anuncios en directo, es posible que tenga que salir de una pausa publicitaria antes de que todos los anuncios de la pausa se reproduzcan hasta el final.
+title: Implementación de un retorno de pausa publicitaria anticipado
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '207'
-ht-degree: 1%
+source-wordcount: '176'
+ht-degree: 2%
 
 ---
 
 
 # Implementar un retorno de pausa publicitaria anticipado {#implement-an-early-ad-break-return}
 
-Para la inserción de anuncios en directo, es posible que tenga que salir de una pausa publicitaria antes de que todas las publicidades del desglose se reproduzcan hasta la finalización.
+Para la inserción de anuncios en directo, es posible que tenga que salir de una pausa publicitaria antes de que todos los anuncios de la pausa se reproduzcan hasta el final.
 
-Por ejemplo, es posible que la duración de la pausa publicitaria en determinados eventos deportivos no se conozca antes de los inicios de interrupción. TVSDK proporciona una duración predeterminada, pero si el juego se reanuda antes de que finalice la pausa, la pausa publicitaria se debe salir. Otro ejemplo es una señal de emergencia durante una pausa publicitaria en un flujo en directo.
+Por ejemplo, es posible que la duración de la pausa publicitaria en ciertos eventos deportivos no se conozca antes de que comience la pausa. TVSDK proporciona una duración predeterminada, pero si el juego se reanuda antes de que finalice la pausa publicitaria, debe salir de la misma. Otro ejemplo es una señal de emergencia durante una pausa publicitaria en una emisión en directo.
 
-1. Suscríbase a los marcadores de anuncios de empalme de salida/entrada ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` y `#EXT-X-CUE`).
+1. Suscríbase a los marcadores de anuncios de salida/entrada de empalme ( `#EXT-X-CUE-OUT`, `#EXT-X-CUE-IN` y `#EXT-X-CUE`).
 
-   Para obtener más información acerca de cómo dividir los marcadores de publicidad, consulte [Generadores de oportunidades y solucionadores de contenido](../../../tvsdk-1.4-for-android/content-resolver/android-1.4-content-resolver-about.md).
+   Para obtener más información sobre cómo empalmar/insertar marcadores de anuncios, consulte [Generadores de oportunidades y resoltores de contenido](../../../tvsdk-1.4-for-android/content-resolver/android-1.4-content-resolver-about.md).
 1. Utilice un `ContentFactory` personalizado.
 1. En `retrieveGenerators()`, utilice el `SpliceInPlacementOpportunityGenerator`.
 
@@ -35,7 +32,7 @@ Por ejemplo, es posible que la duración de la pausa publicitaria en determinado
    }
    ```
 
-   Para obtener más información sobre el uso de un `ContentFactory` personalizado, consulte el paso 1 en [Implementación de un detector de oportunidades personalizado](../../../tvsdk-1.4-for-android/content-resolver/android-1.4-opp-detector-impl.md).
+   Para obtener más información sobre el uso de un `ContentFactory` personalizado, consulte el paso 1 en [Implementar un detector de oportunidades personalizado](../../../tvsdk-1.4-for-android/content-resolver/android-1.4-opp-detector-impl.md) .
 
 1. En el mismo `ContentFactory` personalizado, implemente `retrieveResolvers` e incluya `AuditudeResolver` y `SpliceInCustomResolver`.
 
