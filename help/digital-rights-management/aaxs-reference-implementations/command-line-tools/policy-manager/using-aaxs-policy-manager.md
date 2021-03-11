@@ -1,9 +1,9 @@
 ---
-seo-title: Uso del Administrador de directivas
-title: Uso del Administrador de directivas
-uuid: 729aa6bc-8851-40e3-8b86-629a4786575b
+title: Uso del Administrador de políticas
+description: Uso del Administrador de políticas
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
@@ -11,6 +11,6 @@ ht-degree: 0%
 ---
 
 
-# Uso de Policy Manager {#using-policy-manager}
+# Uso del Administrador de directivas {#using-policy-manager}
 
-Con el Administrador de políticas, puede crear y administrar políticas. Antes de ejecutar el Administrador de directivas, defina opcionalmente los valores para las propiedades del Administrador de directivas en el archivo de configuración. El archivo de configuración especifica la información que se aplicará a todas las directivas. Todas las propiedades del Administrador de directivas también se pueden especificar en la línea de comandos.
+Con el Administrador de políticas, puede crear y administrar políticas. Antes de ejecutar el Administrador de directivas, opcionalmente defina los valores para las propiedades del Administrador de directivas en el archivo de configuración. El archivo de configuración especifica la información que se aplicará a todas las directivas. Todas las propiedades del Administrador de directivas también se pueden especificar en la línea de comandos.
