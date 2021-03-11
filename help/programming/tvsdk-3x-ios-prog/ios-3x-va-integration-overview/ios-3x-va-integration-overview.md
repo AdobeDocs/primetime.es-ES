@@ -1,9 +1,9 @@
 ---
-seo-title: Análisis de vídeo
 title: Análisis de vídeo
-uuid: 53698800-1602-4a24-beab-2f3da0062a4f
+description: Análisis de vídeo
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '6'
 ht-degree: 0%
