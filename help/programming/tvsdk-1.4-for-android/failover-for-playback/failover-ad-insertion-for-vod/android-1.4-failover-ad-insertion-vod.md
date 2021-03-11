@@ -1,13 +1,10 @@
 ---
-description: El proceso de inserción de anuncios de vídeo a petición (VOD) consta de las fases de resolución, inserción y reproducción de anuncios. Para el seguimiento de anuncios, TVSDK debe informar a un servidor de seguimiento remoto sobre el progreso de reproducción de cada anuncio. Cuando surgen situaciones inesperadas, toma las medidas adecuadas.
-seo-description: El proceso de inserción de anuncios de vídeo a petición (VOD) consta de las fases de resolución, inserción y reproducción de anuncios. Para el seguimiento de anuncios, TVSDK debe informar a un servidor de seguimiento remoto sobre el progreso de reproducción de cada anuncio. Cuando surgen situaciones inesperadas, toma las medidas adecuadas.
-seo-title: Inserción de publicidad y conmutación por error para VOD
-title: Inserción de publicidad y conmutación por error para VOD
-uuid: b7fbc3f9-9c38-4026-a54a-45ebc528c5f5
+description: El proceso de inserción de anuncios de vídeo bajo demanda (VOD) consta de las fases de resolución, inserción y reproducción de anuncios. Para el seguimiento de anuncios, TVSDK debe informar a un servidor de seguimiento remoto sobre el progreso de reproducción de cada anuncio. Cuando surgen situaciones inesperadas, se deben tomar las medidas adecuadas.
+title: inserción y conmutación por error de publicidad para VOD
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
@@ -15,4 +12,4 @@ ht-degree: 0%
 
 # Información general {#advertising-insertion-and-failover-for-vod-overview}
 
-El proceso de inserción de anuncios de vídeo a petición (VOD) consta de las fases de resolución, inserción y reproducción de anuncios. Para el seguimiento de anuncios, TVSDK debe informar a un servidor de seguimiento remoto sobre el progreso de reproducción de cada anuncio. Cuando surgen situaciones inesperadas, toma las medidas adecuadas.
+El proceso de inserción de anuncios de vídeo bajo demanda (VOD) consta de las fases de resolución, inserción y reproducción de anuncios. Para el seguimiento de anuncios, TVSDK debe informar a un servidor de seguimiento remoto sobre el progreso de reproducción de cada anuncio. Cuando surgen situaciones inesperadas, se deben tomar las medidas adecuadas.
