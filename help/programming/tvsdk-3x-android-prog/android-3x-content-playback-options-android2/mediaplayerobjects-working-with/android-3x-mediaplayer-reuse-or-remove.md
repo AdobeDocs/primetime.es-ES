@@ -1,13 +1,10 @@
 ---
 description: Puede restablecer, reutilizar o liberar una instancia de MediaPlayer que ya no necesite.
-seo-description: Puede restablecer, reutilizar o liberar una instancia de MediaPlayer que ya no necesite.
-seo-title: Reutilización o eliminación de una instancia de MediaPlayer
-title: Reutilización o eliminación de una instancia de MediaPlayer
-uuid: 74a46689-1708-4d26-9a4e-a4cdb0e55451
+title: Reutilizar o quitar una instancia de MediaPlayer
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
@@ -19,19 +16,19 @@ Puede restablecer, reutilizar o liberar una instancia de MediaPlayer que ya no n
 
 ## Restablecer o reutilizar una instancia de MediaPlayer {#section_E6A2446A2D0B4ACD9EA980685B2E57D9}
 
-Cuando se restablece una instancia `MediaPlayer`, se devuelve a su estado IDLE no inicializado tal como se define en `MediaPlayerStatus`.
+Cuando se restablece una instancia `MediaPlayer`, se vuelve a su estado IDLE no inicializado tal como se define en `MediaPlayerStatus`.
 
 Esta operación resulta útil en los siguientes casos:
 
-* Desea reutilizar una instancia `MediaPlayer` pero necesita cargar un nuevo `MediaResource` (contenido de vídeo) y reemplazar la instancia anterior.
+* Desea reutilizar una instancia `MediaPlayer` pero debe cargar un nuevo `MediaResource` (contenido de vídeo) y reemplazar la instancia anterior.
 
-   Restablecer le permite reutilizar la instancia `MediaPlayer` sin necesidad de aprovechar la sobrecarga de liberar recursos, volver a crear `MediaPlayer` y reasignar recursos.
+   El restablecimiento le permite reutilizar la instancia `MediaPlayer` sin necesidad de liberar recursos, volver a crear `MediaPlayer` y reasignar recursos.
 
-* Cuando `MediaPlayer` está en estado ERROR y debe borrarse.
+* Cuando el `MediaPlayer` está en estado ERROR y debe borrarse.
 
    >[!IMPORTANT]
    >
-   >Esta es la única manera de recuperarse del estado ERROR.
+   >Esta es la única manera de recuperarse del estado de ERROR.
 
    1. Llame a `reset` para devolver la instancia `MediaPlayer` a su estado no inicializado:
 
@@ -45,22 +42,22 @@ Esta operación resulta útil en los siguientes casos:
       >
       >Para borrar un error, cargue el mismo `MediaResource`.
 
-   1. Cuando reciba la rellamada de `STATUS_CHANGED` evento con el estado `PREPARED`, inicio la reproducción.
+   1. Cuando reciba la llamada de retorno de evento `STATUS_CHANGED` con el estado `PREPARED`, inicie la reproducción.
 
 ## Liberar una instancia y recursos de MediaPlayer {#section_13A0914AFF784943ABC343F7EB249C4E}
 
-Debe liberar una instancia `MediaPlayer` y recursos cuando ya no necesite el `MediaResource`.
+Debe liberar una instancia y recursos `MediaPlayer` cuando ya no necesite el `MediaResource`.
 
 Cuando libera un objeto `MediaPlayer`, se desasignan los recursos de hardware subyacentes asociados a este objeto `MediaPlayer`.
 
-A continuación se indican algunas razones para lanzar un `MediaPlayer`:
+Estas son algunas razones para publicar un `MediaPlayer`:
 
-* La retención de recursos innecesarios puede afectar al rendimiento.
-* Si se deja un objeto innecesario `MediaPlayer` creado como instancia, puede producirse un consumo continuo de la batería para dispositivos móviles.
+* Mantener recursos innecesarios puede afectar al rendimiento.
+* Dejar un objeto `MediaPlayer` innecesario creado como instancia puede llevar a un consumo continuo de batería para dispositivos móviles.
 * Si hay varias instancias
-Como no se admite el mismo códec de vídeo en un dispositivo, es posible que se produzca un error de reproducción en otras aplicaciones.
+Como el mismo códec de vídeo no se admite en un dispositivo, puede producirse un error de reproducción en otras aplicaciones.
 
-* Libere el `MediaPlayer`.
+* Suelte el `MediaPlayer`.
 
    ```java
    void release() throws MediaPlayerException;
@@ -68,4 +65,4 @@ Como no se admite el mismo códec de vídeo en un dispositivo, es posible que se
 
    >[!NOTE]
    >
-   >Una vez liberada la instancia `MediaPlayer`, ya no podrá usarla. Si se llama a algún método de la interfaz `MediaPlayer` después de liberarlo, se genera un `MediaPlayerException`.
+   >Una vez lanzada la instancia `MediaPlayer`, ya no puede usarla. Si se llama a algún método de la interfaz `MediaPlayer` después de su lanzamiento, se genera un `MediaPlayerException`.
