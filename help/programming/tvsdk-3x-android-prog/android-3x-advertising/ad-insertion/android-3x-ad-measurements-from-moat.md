@@ -1,25 +1,22 @@
 ---
-description: TVSDK toma información de FreeWheel y otros servidores de publicidad que proporcionan respuestas VAST. FreeWheel proporciona, dentro de las respuestas VAST, información del servicio Moat. El servicio Moat cuenta e impresiones con una precisión que muestra mejor si los creativos captan o descuidan los intereses de una audiencia.
-seo-description: TVSDK toma información de FreeWheel y otros servidores de publicidad que proporcionan respuestas VAST. FreeWheel proporciona, dentro de las respuestas VAST, información del servicio Moat. El servicio Moat cuenta e impresiones con una precisión que muestra mejor si los creativos captan o descuidan los intereses de una audiencia.
-seo-title: Mediciones de anuncios de Moat
+description: TVSDK toma información de FreeWheel y otros servidores de publicidad que proporcionan respuestas VAST. FreeWheel proporciona, dentro de las respuestas VAST, información del servicio Moat. El servicio Moat cuenta las impresiones de los anuncios con una precisión que muestra mejor si los creativos capturan o descuidan los intereses de la audiencia.
 title: Mediciones de anuncios de Moat
-uuid: 4de4ea5e-ef52-4b6b-b215-7601a2dfdb96
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
 
 
-# Mediciones de publicidad de Moat {#ad-measurements-from-moat}
+# Mediciones de anuncios de Moat {#ad-measurements-from-moat}
 
-TVSDK toma información de FreeWheel y otros servidores de publicidad que proporcionan respuestas VAST. FreeWheel proporciona, dentro de las respuestas VAST, información del servicio Moat. El servicio Moat cuenta e impresiones con una precisión que muestra mejor si los creativos captan o descuidan los intereses de una audiencia.
+TVSDK toma información de FreeWheel y otros servidores de publicidad que proporcionan respuestas VAST. FreeWheel proporciona, dentro de las respuestas VAST, información del servicio Moat. El servicio Moat cuenta las impresiones de los anuncios con una precisión que muestra mejor si los creativos capturan o descuidan los intereses de la audiencia.
 
 Moat es un servicio que mide la visualización de anuncios en muchos usos, desde exploradores hasta aplicaciones. Moat genera datos de análisis de marketing en tiempo real en varias plataformas.
 
-El XML de respuesta VAST tiene una propiedad y un elemento que el código puede leer, la propiedad `Ad id` más externa y el elemento `Extension` más externo. De cualquier forma, el código puede utilizar TVSDK para guardar tanto la información `Ad id` como la información `Extension` y, a continuación, organizar la información en una estructura de árbol. Con esta organización, el código puede recoger los datos de cualquier nivel y pasarlos a donde sea necesario. El valor de la propiedad `Ad id` externa permite que el código coordine la información desde la campaña asociada.
+El XML de respuesta VAST tiene una propiedad y un elemento que el código puede leer, la propiedad `Ad id` más externa y el elemento `Extension` más externo. De cualquier manera, el código puede utilizar TVSDK para guardar tanto la información `Ad id` como la información `Extension` y, a continuación, organizar la información en una estructura de árbol. Con esta organización, su código puede recoger los datos de cualquier nivel y pasarlos a donde quiera que deban ir. El valor de la propiedad `Ad id` externa permite que el código coordine la información de la campaña asociada.
 
 Por ejemplo, FreeWheel puede devolver datos en un elemento Extensions. A continuación se muestra un elemento de muestra.
 
@@ -39,10 +36,10 @@ Por ejemplo, FreeWheel puede devolver datos en un elemento Extensions. A continu
 </Extensions> 
 ```
 
-El volante libre también puede establecer la propiedad `id` en el elemento `Ad`, como se muestra en el ejemplo siguiente.
+La rueda libre también puede establecer la propiedad `id` en el elemento `Ad`, como se muestra en el ejemplo siguiente.
 
 ```xml
 <Ad id="118566" sequence="1">
 ```
 
-Para obtener información sobre API, consulte la documentación de API de la clase `NetworkAdInfo`.
+Para obtener información de la API, consulte la documentación de la API para la clase `NetworkAdInfo`.
