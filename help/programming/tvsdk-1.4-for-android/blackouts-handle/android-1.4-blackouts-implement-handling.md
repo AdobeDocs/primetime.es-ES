@@ -1,23 +1,20 @@
 ---
-description: TVSDK proporciona API y código de muestra para controlar los períodos de interrupción.
-seo-description: TVSDK proporciona API y código de muestra para controlar los períodos de interrupción.
-seo-title: Implementación de la gestión de interrupciones
-title: Implementación de la gestión de interrupciones
-uuid: db7f831c-5069-4426-bfe3-5fc51fec7930
+description: TVSDK proporciona API y código de muestra para la gestión de periodos de interrupción.
+title: Implementación de la gestión de bloqueos
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
 
-# Implementar la gestión de bloqueo{#implement-blackout-handling}
+# Implementar la gestión de bloqueos{#implement-blackout-handling}
 
-TVSDK proporciona API y código de muestra para controlar los períodos de interrupción.
+TVSDK proporciona API y código de muestra para la gestión de periodos de interrupción.
 
-Para implementar la gestión de interrupciones, incluido el suministro de contenido alternativo durante la interrupción:
+Para implementar la gestión de bloqueos, incluido el suministro de contenido alternativo durante la interrupción:
 
 1. Configure la aplicación para detectar etiquetas de bloqueo en un manifiesto de flujo en directo.
 
@@ -30,7 +27,7 @@ Para implementar la gestión de interrupciones, incluido el suministro de conten
    }
    ```
 
-1. Cree oyentes de evento para eventos de metadatos temporizados en flujos en primer y segundo plano.
+1. Cree oyentes de eventos para eventos de metadatos temporizados en flujos en primer y segundo plano.
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -39,7 +36,7 @@ Para implementar la gestión de interrupciones, incluido el suministro de conten
    }
    ```
 
-1. Implemente controladores de evento de metadatos temporizados para flujos de primer plano y de fondo.
+1. Implemente controladores de eventos de metadatos temporizados para flujos en primer y segundo plano.
 
    Primer plano:
 
@@ -78,7 +75,7 @@ Para implementar la gestión de interrupciones, incluido el suministro de conten
    }; 
    ```
 
-1. Controle los objetos `TimedMetadata` cuando se ejecute `MediaPlayer` time.
+1. Gestione los objetos `TimedMetadata` cuando se ejecute el tiempo `MediaPlayer` .
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
@@ -101,7 +98,7 @@ Para implementar la gestión de interrupciones, incluido el suministro de conten
    };
    ```
 
-1. Cree métodos para cambiar el contenido al inicio y al final del período de interrupción.
+1. Cree métodos para cambiar contenido al principio y al final del periodo de interrupción.
 
    ```java
    private void handleTimedMetadataList(long currentTime) { 
@@ -186,7 +183,7 @@ Para implementar la gestión de interrupciones, incluido el suministro de conten
 
    >[!NOTE]
    >
-   >Actualmente, para varios flujos en directo de velocidad de bits, en ocasiones los perfiles de velocidad de bits ajustable (ABR) pueden quedar fuera de sincronización. Esto provoca objetos de duplicado `timedMetadata` para la misma etiqueta suscrita. Para evitar cálculos incorrectos que no se pueden buscar, se recomienda comprobar si hay intervalos superpuestos que no se pueden buscar después de los cálculos, como en el siguiente ejemplo:
+   >Actualmente, para varios flujos en directo de velocidad de bits, ocasionalmente los perfiles de velocidad de bits ajustable (ABR) pueden no estar sincronizados. Esto provoca objetos `timedMetadata` duplicados para la misma etiqueta suscrita. Para evitar cálculos incorrectos que no se pueden buscar, es muy recomendable comprobar si hay intervalos que no se pueden buscar superpuestos después de los cálculos, como en el siguiente ejemplo:
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
