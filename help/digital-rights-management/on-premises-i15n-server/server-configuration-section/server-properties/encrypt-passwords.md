@@ -1,9 +1,9 @@
 ---
-seo-title: Cifrar contraseñas
-title: Cifrar contraseñas
-uuid: 94dc7fe9-fe40-4779-912a-d84b58e4ee36
+title: Codificar contraseñas
+description: Codificar contraseñas
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1547eb3dd220fafc08df923f40504736c16a866c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 0%
@@ -11,14 +11,14 @@ ht-degree: 0%
 ---
 
 
-# Cifrar contraseñas{#encrypt-passwords}
+# Codificar contraseñas{#encrypt-passwords}
 
-Los archivos de propiedades incluyen varios valores de contraseña que no debe introducir como texto sin formato. Cifre estos valores con el siguiente comando:
+Los archivos de propiedades incluyen varios valores de contraseña que no se deben introducir como texto sin formato. Cifre estos valores con el siguiente comando:
 
 `java -jar adobe-flashaccess-i15n-setup.jar password`
 
 Este comando generará una contraseña cifrada que se utilizará en los archivos de propiedades.
 
 >[!NOTE]
->Esta no es la utilidad utilizada para cifrar las contraseñas del servidor de licencias.
+>Esta no es la utilidad utilizada para cifrar contraseñas del servidor de licencias.
 
