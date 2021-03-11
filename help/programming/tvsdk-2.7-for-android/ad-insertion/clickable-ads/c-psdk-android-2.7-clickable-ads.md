@@ -1,13 +1,10 @@
 ---
-description: TVSDK le proporciona información para que pueda actuar en las publicidades de pulsaciones. A medida que cree la interfaz de usuario del reproductor, debe decidir cómo responder cuando un usuario haga clic en una publicidad en la que se pueda hacer clic.
-seo-description: TVSDK le proporciona información para que pueda actuar en las publicidades de pulsaciones. A medida que cree la interfaz de usuario del reproductor, debe decidir cómo responder cuando un usuario haga clic en una publicidad en la que se pueda hacer clic.
-seo-title: Publicidades en las que se puede hacer clic
-title: Publicidades en las que se puede hacer clic
-uuid: 92d5b8bf-196e-4e17-9526-f11cbc50aae4
+description: TVSDK le proporciona información para que pueda actuar sobre los anuncios pulsados. A medida que crea la interfaz de usuario del reproductor, debe decidir cómo responder cuando un usuario hace clic en un anuncio en el que se puede hacer clic.
+title: Anuncios en los que se puede hacer clic
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '78'
 ht-degree: 0%
 
 ---
@@ -15,6 +12,6 @@ ht-degree: 0%
 
 # Información general {#clickable-ads-overview}
 
-TVSDK le proporciona información para que pueda actuar en las publicidades de pulsaciones. A medida que cree la interfaz de usuario del reproductor, debe decidir cómo responder cuando un usuario haga clic en una publicidad en la que se pueda hacer clic.
+TVSDK le proporciona información para que pueda actuar sobre los anuncios pulsados. A medida que crea la interfaz de usuario del reproductor, debe decidir cómo responder cuando un usuario hace clic en un anuncio en el que se puede hacer clic.
 
-Para TVSDK para Android, solo se puede hacer clic en las publicidades lineales.
+Para TVSDK para Android, solo se puede hacer clic en los anuncios lineales.
