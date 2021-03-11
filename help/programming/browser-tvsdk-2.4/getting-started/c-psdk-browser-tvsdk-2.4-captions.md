@@ -1,13 +1,10 @@
 ---
-description: Puede mostrar subtítulos al reproducir contenido de vídeo.
-seo-description: Puede mostrar subtítulos al reproducir contenido de vídeo.
-seo-title: Rótulos
-title: Rótulos
-uuid: 4dedcedc-50e5-4983-bb09-3f316337117e
+description: Los subtítulos se pueden mostrar al reproducir contenido de vídeo.
+title: Subtítulos
 translation-type: tm+mt
-source-git-commit: d2b8cb67c54fadb8e0e7d2bdc15e393fdce8550e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '64'
+source-wordcount: '55'
 ht-degree: 3%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 3%
 
 # Subtítulos{#captions}
 
-Puede mostrar subtítulos al reproducir contenido de vídeo.
+Los subtítulos se pueden mostrar al reproducir contenido de vídeo.
 
-Para gestionar rótulos, debe agregar el detector de eventos `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED`:
+Para gestionar los rótulos, debe añadir el detector de eventos `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED`:
 
 ```js
 ... 
@@ -37,7 +34,7 @@ function onCaptionsUpdateEvent (event) {
 </pre>
 ```
 
-El marco de interfaz de usuario proporciona una implementación de comportamientos de subtítulos predeterminados, que se puede modificar. Los comportamientos de los subtítulos opcionales también se pueden modificar ampliando los comportamientos de los subtítulos opcionales predeterminados. Por ejemplo:
+El marco de la interfaz de usuario proporciona una implementación de comportamientos de subtítulos predeterminada, que se puede modificar. Los comportamientos de los subtítulos también se pueden modificar ampliando los comportamientos predeterminados de los subtítulos. Por ejemplo:
 
 ```js
 // Using UI Framework 
