@@ -1,30 +1,27 @@
 ---
-description: En ocasiones, habrá ocasiones en las que el contenido no se puede reproducir. Esto puede deberse a cualquier número de situaciones, incluidos errores en la pila de red del explorador, la capa de transporte, el sistema operativo, el tiempo de ejecución de Flash Player o el sistema DRM Primetime.
-seo-description: En ocasiones, habrá ocasiones en las que el contenido no se puede reproducir. Esto puede deberse a cualquier número de situaciones, incluidos errores en la pila de red del explorador, la capa de transporte, el sistema operativo, el tiempo de ejecución de Flash Player o el sistema DRM Primetime.
-seo-title: Información general sobre los errores de prueba
-title: Información general sobre los errores de prueba
-uuid: 44b4ab0e-5f08-44b0-bcb5-a869f6add69b
+description: En ocasiones, habrá momentos en que el contenido no se pueda reproducir. Cualquier cantidad de situaciones pueden causar esto, incluidos errores en la pila de red del explorador, la capa de transporte, el sistema operativo, el tiempo de ejecución del Flash Player o el sistema DRM de Primetime.
+title: Información general sobre errores de prueba
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
 
 
-# Errores de prueba {#triaging-errors}
+# Prueba de errores {#triaging-errors}
 
-En ocasiones, habrá ocasiones en las que el contenido no se puede reproducir. Esto puede deberse a cualquier número de situaciones, incluidos errores en la pila de red del explorador, la capa de transporte, el sistema operativo, el tiempo de ejecución de Flash Player o el sistema DRM Primetime.
+En ocasiones, habrá momentos en que el contenido no se pueda reproducir. Cualquier cantidad de situaciones pueden causar esto, incluidos errores en la pila de red del explorador, la capa de transporte, el sistema operativo, el tiempo de ejecución del Flash Player o el sistema DRM de Primetime.
 
-El primer paso de diagnóstico es determinar si el problema se manifiesta sin la codificación DRM introducida en la ecuación. Intente empaquetar el contenido, pero indique al empaquetador que no lo codifique. Si el problema persiste, es probable que se trate de un problema de codificación o empaquetado del contenido, o de algún lugar de la infraestructura de red. Si el problema desaparece cuando el contenido se empaqueta sin cifrado, es probable que el error de reproducción se deba a un problema de DRM y debe participar en la prueba cliente/servidor.
+El primer paso de diagnóstico es determinar si el problema se manifiesta sin el cifrado DRM introducido en la ecuación. Intente empaquetar el contenido, pero indique al empaquetador que no cifra el contenido. Si el problema persiste, es probable que se trate de un problema de codificación o empaquetado del contenido, o de algún lugar de la infraestructura de red. Si el problema desaparece cuando el contenido se empaqueta sin cifrado, es probable que el fallo de reproducción se deba a un problema de DRM y debe realizar una prueba cliente/servidor.
 
-Primetime DRM (fuera de Primetime Cloud DRM) ha estado en el mercado durante varios años. Como tal, existe una gran cantidad de información de origen comunitario sobre la solución de problemas y la configuración de Primetime DRM. Adobe ha proporcionado un foro para que los usuarios de Primetime DRM (anteriormente llamado Adobe Access) puedan acumulados y compartir problemas y resoluciones. Para determinar si el problema se ha discutido anteriormente, consulte: [https://forums.adobe.com/community/adobe_access](https://forums.adobe.com/community/adobe_access)
+Primetime DRM (fuera de Primetime Cloud DRM) ha estado en el mercado durante varios años. Como tal, existe una gran cantidad de información de origen comunitario sobre la solución de problemas y la configuración de Primetime DRM. Adobe ha proporcionado un foro para los usuarios de Primetime DRM (antes llamado Acceso a Adobe) para agregar y compartir problemas y resoluciones. Para determinar si su problema se ha discutido anteriormente, consulte: [https://forums.adobe.com/community/adobe_access](https://forums.adobe.com/community/adobe_access)
 
-## Prueba de error del cliente {#section_D0EBAEB0C27F4B01BD44124DEE62F6BA}
+## Prueba de error de cliente {#section_D0EBAEB0C27F4B01BD44124DEE62F6BA}
 
-Si el contenido no se reproduce, examine el panel derecho de los Reproductores de video de muestra, que registrará cualquier `DRMErrorEvent` que se produzca. Si hay un evento de error, se correlacionará con uno de los errores de tiempo de ejecución de Flash Player:
+Si el contenido no se reproduce, examine el panel derecho de los reproductores de vídeo de muestra, que registrarán cualquier `DRMErrorEvent` que se produzca. Si hay un evento de error, se correlacionará con uno de los errores de tiempo de ejecución de Flash Player :
 
-* [Referencia](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages) de mensajes de error del cliente DRM; o
-* [Errores](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/runtimeErrors.html)  en tiempo de ejecución de Flash AS3(DRM emite inicio a 3300)
+* [Referencia](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages) de mensajes de error de cliente DRM; o
+* [Errores de tiempo de ejecución de Flash AS3](https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/runtimeErrors.html)  (los problemas de DRM empiezan en 3300)
 
