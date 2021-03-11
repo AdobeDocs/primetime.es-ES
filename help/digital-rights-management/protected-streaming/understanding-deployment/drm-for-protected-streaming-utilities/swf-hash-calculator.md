@@ -1,21 +1,18 @@
 ---
-description: La utilidad calculadora hash SWF calcula el compendio de una aplicación SWF ubicada en un archivo.
-seo-description: La utilidad calculadora hash SWF calcula el compendio de una aplicación SWF ubicada en un archivo.
-seo-title: Calculadora hash SWF
-title: Calculadora hash SWF
-uuid: 0cf972c1-4717-4d78-a594-b27178ece512
+description: La utilidad Calculadora de hash SWF calcula el compendio de una aplicación SWF ubicada en un archivo.
+title: Calculadora de hash SWF
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '65'
 ht-degree: 0%
 
 ---
 
 
-# Calculadora hash SWF{#swf-hash-calculator}
+# Calculadora de hash SWF{#swf-hash-calculator}
 
-La utilidad calculadora hash SWF calcula el compendio de una aplicación SWF ubicada en un archivo.
+La utilidad Calculadora de hash SWF calcula el compendio de una aplicación SWF ubicada en un archivo.
 
 Para ejecutar el lavafaros, escriba:
 
