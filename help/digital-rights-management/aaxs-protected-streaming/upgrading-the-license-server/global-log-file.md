@@ -1,9 +1,9 @@
 ---
-seo-title: Archivo de registro global
 title: Archivo de registro global
-uuid: e43844e7-92d9-45d4-b8b0-e5d7328a4963
+description: Archivo de registro global
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%
@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # Archivo de registro global{#global-log-file}
 
-El archivo de registro global, flashaccess-global.log, se encuentra en *LicenseServer.LogRoot*. Este registro puede contener mensajes de registro generados por el SDK de Adobe Access o mensajes de registro generados durante la inicialización del servidor.
+El archivo de registro global, flashaccess-global.log, se encuentra en *LicenseServer.LogRoot*. Este registro puede contener mensajes de registro generados por el SDK de acceso a Adobe o mensajes de registro generados durante la inicialización del servidor.
