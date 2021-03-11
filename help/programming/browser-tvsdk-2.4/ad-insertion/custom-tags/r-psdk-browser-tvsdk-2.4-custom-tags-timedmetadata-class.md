@@ -1,21 +1,18 @@
 ---
-description: Cuando el SDK del explorador detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta procesar automáticamente la etiqueta y exponerla como un objeto TimedMetadata.
-seo-description: Cuando el SDK del explorador detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta procesar automáticamente la etiqueta y exponerla como un objeto TimedMetadata.
-seo-title: Clase de metadatos temporizados
+description: Cuando el SDK del explorador detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta procesar automáticamente la etiqueta y la expone como un objeto TimedMetadata .
 title: Clase de metadatos temporizados
-uuid: 3f276618-5f61-4b41-bd2d-78e7f32178d9
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
 
-# Clase de metadatos temporizados{#timed-metadata-class}
+# Clase de metadatos temporizada{#timed-metadata-class}
 
-Cuando el SDK del explorador detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta procesar automáticamente la etiqueta y exponerla como un objeto TimedMetadata.
+Cuando el SDK del explorador detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta procesar automáticamente la etiqueta y la expone como un objeto TimedMetadata .
 
 La clase `TimedMetadata` proporciona los siguientes elementos:
 
@@ -40,12 +37,12 @@ La clase `TimedMetadata` proporciona los siguientes elementos:
   <tr> 
    <td colname="col1"> <p>time </p> </td> 
    <td colname="col02"> <p>Número </p> </td> 
-   <td colname="col2"> <p>La posición de tiempo local (milisegundos) en relación con el inicio del contenido principal en el que están presentes los metadatos temporizados en el flujo. </p> </td> 
+   <td colname="col2"> <p>La posición de tiempo local (milisegundos) relativa al inicio del contenido principal donde estos metadatos temporizados están presentes en el flujo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>id </p> </td> 
    <td colname="col02"> <p>Cadena </p> </td> 
-   <td colname="col2"> <p>Identificador único de los metadatos temporizados. </p> <p>Normalmente se extrae del atributo de identificación de señal/etiqueta si está presente. De lo contrario, es un valor aleatorio único. </p> </td> 
+   <td colname="col2"> <p>Identificador único de los metadatos temporizados. </p> <p>Generalmente se extrae del atributo de ID de cue/etiqueta si está presente. De lo contrario, es un valor aleatorio único. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>name </p> </td> 
@@ -53,14 +50,14 @@ La clase `TimedMetadata` proporciona los siguientes elementos:
    <td colname="col2"> <p>Nombre de los metadatos temporizados. </p> <p>Si el tipo es TAG, el valor representa el nombre del cue/etiqueta. Si el tipo es ID3, el valor es nulo. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p>content </p> </td> 
+   <td colname="col1"> <p>contenido </p> </td> 
    <td colname="col02"> <p>Cadena </p> </td> 
-   <td colname="col2"> <p>El contenido sin procesar de los metadatos temporizados. </p> <p>Si el tipo es TAG, el valor representa la lista completa del atributo de la etiqueta/cue. Si el tipo id3, el valor es nulo. </p> </td> 
+   <td colname="col2"> <p>El contenido sin procesar de los metadatos temporizados. </p> <p>Si el tipo es TAG, el valor representa la lista completa de atributos de la cue/etiqueta. Si el tipo id3, el valor es nulo. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <p>metadatos </p> </td> 
+   <td colname="col1"> <p>metadata </p> </td> 
    <td colname="col02"> <p><span class="codeph"> Metadatos</span> </p> </td> 
-   <td colname="col2"> <p>La información procesada/extraída de la etiqueta personalizada de lista de reproducción/manifiesto. </p> </td> 
+   <td colname="col2"> <p>La información procesada/extraída de la etiqueta personalizada lista de reproducción/manifiesto. </p> </td> 
   </tr> 
  </tbody> 
 </table>
