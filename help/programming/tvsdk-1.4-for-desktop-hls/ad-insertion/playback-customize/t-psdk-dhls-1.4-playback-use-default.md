@@ -1,19 +1,16 @@
 ---
 description: Puede elegir usar comportamientos de publicidad predeterminados.
-seo-description: Puede elegir usar comportamientos de publicidad predeterminados.
-seo-title: Usar el comportamiento de reproducción predeterminado
-title: Usar el comportamiento de reproducción predeterminado
-uuid: 7139384c-167a-4cab-816a-c02fb723a5cb
+title: Uso del comportamiento de reproducción predeterminado
 translation-type: tm+mt
-source-git-commit: 1985694f99c548284aad6e6b4e070bece230bdf4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '71'
+source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
 
-# Usar el comportamiento de reproducción predeterminado{#use-the-default-playback-behavior}
+# Utilizar el comportamiento de reproducción predeterminado{#use-the-default-playback-behavior}
 
 Puede elegir usar comportamientos de publicidad predeterminados.
 
