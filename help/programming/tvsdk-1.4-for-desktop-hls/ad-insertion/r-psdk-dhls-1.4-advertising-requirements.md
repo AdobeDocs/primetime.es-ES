@@ -1,13 +1,10 @@
 ---
-description: Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de Adobe Primetime para la toma de decisiones de publicidad.
-seo-description: Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de Adobe Primetime para la toma de decisiones de publicidad.
-seo-title: Requisitos de publicidad
+description: Puede insertar anuncios en su VOD y contenido en directo/lineal mediante la interfaz de Adobe Primetime ad decisioning .
 title: Requisitos de publicidad
-uuid: 734e6fc1-9343-4a5c-86a9-2a6d8e2b9acc
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 0%
 
 # Requisitos de publicidad{#advertising-requirements}
 
-Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de Adobe Primetime para la toma de decisiones de publicidad.
+Puede insertar anuncios en su VOD y contenido en directo/lineal mediante la interfaz de Adobe Primetime ad decisioning .
 
 <!--<a id="section_4889E0ED7A4241D98E61AD6C846B84B6"></a>-->
 
-Primetime y la toma de decisiones funciona con TVSDK para identificar oportunidades de publicidad, resolver publicidades e insertar publicidades resueltas en sus flujos de vídeo.
-Para incorporar publicidades en el contenido de vídeo, asegúrese de que la publicidad y el contenido de vídeo principal cumplen los siguientes requisitos:
+La toma de decisiones de anuncios de Primetime funciona con TVSDK para identificar oportunidades de publicidad, resolver anuncios e insertar anuncios resueltos en sus flujos de vídeo.
+Para incorporar publicidades al contenido del vídeo, asegúrese de que la publicidad y el contenido del vídeo principal cumplan los siguientes requisitos:
 
-* La versión HLS del contenido de publicidad no puede ser superior a la versión HLS del contenido principal.
-* Las publicidades no tienen que ser multiplexadas (sin restricciones), independientemente de si el contenido principal es multiplexado.
+* La versión HLS del contenido publicitario no puede ser superior a la versión HLS del contenido principal.
+* Los anuncios no tienen que ser multiplexados (sin restricciones), independientemente de si el contenido principal es multiplexado.
 
