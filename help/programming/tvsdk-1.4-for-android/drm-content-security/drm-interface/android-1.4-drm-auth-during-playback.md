@@ -1,13 +1,10 @@
 ---
 description: Cuando los metadatos DRM de un vídeo se incluyen en el flujo de medios, realice la autenticación durante la reproducción.
-seo-description: Cuando los metadatos DRM de un vídeo se incluyen en el flujo de medios, realice la autenticación durante la reproducción.
-seo-title: Autenticación DRM durante la reproducción
 title: Autenticación DRM durante la reproducción
-uuid: a1a63e3e-be34-49e1-96c4-ae266003b3d1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -17,13 +14,13 @@ ht-degree: 0%
 
 Cuando los metadatos DRM de un vídeo se incluyen en el flujo de medios, realice la autenticación durante la reproducción.
 
-Considere la función de rotación de licencias, en la que un recurso se cifra con varias licencias de DRM. Cada vez que se descubren nuevos metadatos DRM, utilice métodos `DRMHelper` para comprobar si los metadatos DRM requieren autenticación DRM.
+Tenga en cuenta la función de rotación de licencias, en la que un recurso se cifra con varias licencias DRM. Cada vez que se descubren nuevos metadatos DRM, utilice métodos `DRMHelper` para comprobar si los metadatos DRM requieren autenticación DRM.
 
 >[!NOTE]
 >
->Este tutorial no gestiona licencias enlazadas a dominios. Idealmente, antes de iniciar la reproducción, compruebe si está trabajando con una licencia enlazada a dominio. Si es así, realice la autenticación de dominio (si es necesario) y únase al dominio.
+>Este tutorial no gestiona licencias enlazadas al dominio. Lo ideal es que, antes de iniciar la reproducción, compruebe si está trabajando con una licencia enlazada al dominio. Si es así, realice la autenticación del dominio (si es necesario) y únase al dominio.
 
-1. Cuando se descubren nuevos metadatos DRM en un recurso, se distribuye un evento en la capa de la aplicación.
+1. Cuando se descubren nuevos metadatos DRM en un recurso, se envía un evento a la capa de la aplicación.
 
    ```java
    mediaPlayer.addEventListener(MediaPlayerEvent.DRM_METADATA,  
@@ -37,9 +34,9 @@ Considere la función de rotación de licencias, en la que un recurso se cifra c
    };
    ```
 
-1. Use `DRMMetadata` para comprobar si se necesita autenticación. Si no, no haga nada; la reproducción continúa sin interrupciones.
-1. En caso contrario, realice la autenticación DRM. Dado que esta operación es asincrónica y se gestiona en un subproceso diferente, no afecta a la interfaz de usuario ni a la reproducción de vídeo.
-1. Si se produce un error de autenticación, el usuario no puede continuar viendo el vídeo y la reproducción finaliza. De lo contrario, la reproducción continuará ininterrumpidamente.
+1. Utilice `DRMMetadata` para comprobar si se necesita autenticación. Si no es así, no haga nada; la reproducción continúa sin pausarlo.
+1. De lo contrario, realice la autenticación DRM. Dado que esta operación es asincrónica y se gestiona en un subproceso diferente, no afecta a la interfaz de usuario ni a la reproducción de vídeo.
+1. Si la autenticación falla, el usuario no puede seguir viendo el vídeo y la reproducción deja de verse. De lo contrario, la reproducción continuará ininterrumpidamente.
 
 ```java
 DRMMetadataInfoEventListener drmMetadataInfoEventListener =  
