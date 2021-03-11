@@ -1,9 +1,9 @@
 ---
-seo-title: Resumen de las clases de Primetime Player
 title: Resumen de las clases de Primetime Player
-uuid: 19dbe885-0f04-4d58-a625-27d1aef6ded8
+description: Resumen de las clases de Primetime Player
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '12'
 ht-degree: 0%
@@ -11,4 +11,4 @@ ht-degree: 0%
 ---
 
 
-# Resumen de clases de Primetime Player{#primetime-player-classes-summary}
+# Resumen de las clases de Primetime Player{#primetime-player-classes-summary}
