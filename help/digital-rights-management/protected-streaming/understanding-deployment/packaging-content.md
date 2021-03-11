@@ -1,23 +1,20 @@
 ---
 description: Al empaquetar contenido, debe especificar la URL del servidor de licencias.
-seo-description: Al empaquetar contenido, debe especificar la URL del servidor de licencias.
-seo-title: Empaquetado de contenido
-title: Empaquetado de contenido
-uuid: 2e47a9a2-bbc6-4995-8ce5-6ca6b116349b
+title: Contenido del paquete
 translation-type: tm+mt
-source-git-commit: 9d2e046ae259c05fb4c278f464c9a26795e554fc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
 
 
-# Empaquetado de contenido{#packaging-content}
+# Contenido del paquete{#packaging-content}
 
 Al empaquetar contenido, debe especificar la URL del servidor de licencias.
 
-La URL del servidor DRM de Adobe Primetime utiliza el siguiente formato:
+La URL del servidor Adobe Primetime DRM utiliza el siguiente formato:
 
 ```
 http(s)://<license-server-host:port>/flashaccessserver/<tenant-name>
@@ -31,4 +28,4 @@ https://mylicenseserver.com:8080/flashaccessserver/tenant1
 
 Si cada inquilino utiliza un servidor de licencias y una credencial de transporte diferentes, asegúrese de especificar el certificado del inquilino correcto en el empaquetador.
 
-Si desea asegurarse de que el servidor emite licencias solo para el contenido de los empaquetadores conocidos, debe incluir el certificado del empaquetador en la lista de permitidos del empaquetador del archivo de configuración del inquilino.
+Si desea asegurarse de que el servidor emite licencias solo para contenido de paquetes conocidos, debe incluir el certificado del empaquetador en la lista de permitidos del empaquetador del archivo de configuración del inquilino.
