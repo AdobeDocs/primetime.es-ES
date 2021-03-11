@@ -1,31 +1,28 @@
 ---
-description: Puede utilizar la API de reempaquetado de CRS para transcodificar los elementos creativos de anuncios que no sean HLS con antelación, de modo que una versión de HLS estará disponible cuando necesite ejecutarla, eliminando el retraso de 2 a 4 minutos asociado con el reempaquetado justo a tiempo (JIT).
-seo-description: Puede utilizar la API de reempaquetado de CRS para transcodificar los elementos creativos de anuncios que no sean HLS con antelación, de modo que una versión de HLS estará disponible cuando necesite ejecutarla, eliminando el retraso de 2 a 4 minutos asociado con el reempaquetado justo a tiempo (JIT).
-seo-title: API de reempaquetado
+description: Puede utilizar la API de reempaquetado de CRS para transcodificar los creativos de anuncios no HLS con antelación, de modo que haya una versión de HLS disponible cuando necesite ejecutarla, eliminando el retraso de 2-4 minutos asociado con el reempaquetado justo a tiempo (JIT).
 title: API de reempaquetado
-uuid: 03cd2428-510a-4b99-8496-059a48d5abba
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
 
 
-# Reempaquetar API {#repackaging-api}
+# Reempaquetado de API {#repackaging-api}
 
-Puede utilizar la API de reempaquetado de CRS para transcodificar los elementos creativos de anuncios que no sean HLS con antelación, de modo que una versión de HLS estará disponible cuando necesite ejecutarla, eliminando el retraso de 2 a 4 minutos asociado con el reempaquetado justo a tiempo (JIT).
+Puede utilizar la API de reempaquetado de CRS para transcodificar los creativos de anuncios no HLS con antelación, de modo que haya una versión de HLS disponible cuando necesite ejecutarla, eliminando el retraso de 2-4 minutos asociado con el reempaquetado justo a tiempo (JIT).
 
 ## Solicitud HTTP {#section_F616F5722F0B4AB7939EE2ECBEDDB297}
 
-Envíe un comando de POST HTTP a la dirección URL especificada para indicar a CRS qué elemento creativo de publicidad desea transcodificar y qué opciones desea utilizar. El código de respuesta informa del éxito o del error y otra información.
+Envíe un comando POST HTTP a la dirección URL especificada para indicar a CRS qué creativo de publicidad desea transcodificar y qué opciones desea que utilice. El código de respuesta informa de errores o éxito y otra información.
 
 Esta solicitud requiere un nombre de usuario y una contraseña. Puede obtenerlos del administrador técnico de cuentas de Adobe. Si necesita información sobre la autenticación, póngase en contacto con su representante de habilitación de Adobe Primetime.
 
-Para enviar una solicitud de transcodificación a CRS, envíe un mensaje HTTP de la siguiente manera:
+Para enviar una solicitud de transcodificación a CRS, envíe un mensaje HTTP como se indica a continuación:
 
-* **URL -** [https://id3.auditude.com/repackage](https://id3.auditude.com/repackage)
+* **URL:** [https://id3.auditude.com/repackage](https://id3.auditude.com/repackage)
 
 * **Método -** `POST`
 
@@ -33,7 +30,7 @@ Para enviar una solicitud de transcodificación a CRS, envíe un mensaje HTTP de
 
 * **Encabezado -** `Content-Type: text/xml`
 
-* **Body -** XML como en el ejemplo siguiente:
+* **Body -** XML como en el siguiente ejemplo:
 
    ```xml
    <RepackageList>
@@ -55,7 +52,7 @@ Para enviar una solicitud de transcodificación a CRS, envíe un mensaje HTTP de
    </RepackageList>
    ```
 
-El bloque `RepackageList` del Cuerpo puede contener de 1 a 300 bloques `Repackage`. Si el número de bloques `Repackage` en el cuerpo supera los 300, la solicitud HTTP generará el siguiente error:
+El bloque `RepackageList` del Cuerpo puede contener de 1 a 300 `Repackage` bloques. Si el número de bloques `Repackage` en el cuerpo supera los 300, la solicitud HTTP fallará con el siguiente error:
 
 ```
 <codeph>
@@ -67,26 +64,26 @@ El bloque `RepackageList` del Cuerpo puede contener de 1 a 300 bloques `Repackag
 
 Los parámetros opcionales y requeridos en un bloque `Repackage` son los siguientes:
 
-* **`AdSystem`** (Requerido): El servidor de publicidad de origen, por ejemplo,  `Auditude`,  `FreeWheel`,  `Apad.tv`. Es un valor de cadena que corresponde al elemento VAST `AdSystem`.
+* **`AdSystem`** (Obligatorio): El servidor de publicidad de origen, por ejemplo,  `Auditude`,  `FreeWheel`,  `Apad.tv`. Este es un valor de cadena que corresponde al elemento VAST `AdSystem`.
 
-* **`AdId`** (Requerido): es un identificador para el servidor de publicidad de terceros especificado en la solicitud. Corresponde al atributo `id` del elemento `Ad` en una respuesta VAST.
+* **`AdId`** (Obligatorio): Es un identificador del servidor de publicidad de terceros especificado en la solicitud. Corresponde al atributo `id` del elemento `Ad` en una respuesta VAST.
 
-* **`CreativeURL`** (Requerido): la ubicación (URI) del elemento creativo de la publicidad que se va a transcodificar. Esto corresponde al elemento VAST `MediaFile`.
+* **`CreativeURL`** (Obligatorio) : La ubicación (URI) del creativo de publicidad que se va a transcodificar. Esto corresponde al elemento VAST `MediaFile`.
 
-* `CreativeID` (opcional): identificador del elemento creativo de publicidad que se incluirá como parte de la experiencia de publicidad.
-* **`Zone`** (Requerido): Id. de zona de su cuenta (consulte con el administrador técnico de su cuenta). Es un valor numérico que corresponde al ajuste de plataforma de Auditude `publisher_site_id`.
+* `CreativeID` (opcional): El identificador del creativo de publicidad que se va a incluir como parte de la experiencia publicitaria.
+* **`Zone`** (Obligatorio) : ID de zona de su cuenta (consulte con el administrador técnico de su cuenta). Se trata de un valor numérico que corresponde a la configuración `publisher_site_id` de la plataforma de Auditude.
 
-* **`Format`** (opcional) - Parámetros para controlar la forma en que CRS transcodifica el elemento creativo de la publicidad:
+* **`Format`** (opcional) - Parámetros para controlar cómo el CRS transcodifica el creativo de publicidad:
 
-   * `clientside` - Genere resultados compatibles con la URL que utiliza TVSDK para comunicarse con la CDN.
+   * `clientside` - Genera resultados compatibles con la URL que utiliza TVSDK para comunicarse con la CDN.
    >[!IMPORTANT]
    >
-   >Debe proporcionar este parámetro si desea que la publicidad reempaquetada sea compatible con el Ad Insertion del cliente. Si no lo proporciona, la publicidad reempaquetada solo será compatible con el Ad Insertion del lado del servidor.
+   >Debe proporcionar este parámetro si desea que la publicidad reempaquetada sea compatible con el Ad Insertion del cliente. Si no lo proporciona, el anuncio reempaquetado solo será compatible con el Ad Insertion del servidor.
 
-   * `hls` - Genere un elemento creativo de anuncios transcodificados compatible con HLS.
-   * `dash` - Genere un elemento creativo de anuncios transcodificados y compatibles con DASH.
-   * `id3` - Inyecte las etiquetas de metadatos temporizados ID3 en el elemento creativo de publicidad transcodificado.
-   * `targetdur` - Duración del segmento (en segundos) para el elemento creativo de anuncio transcodificado. El valor predeterminado es `targetdur=4`. Este valor debe corresponder al valor especificado en el manifiesto para `<s>` en la etiqueta de duración de destinatario: `#EXT-X-TARGETDURATION:<s>`.
+   * `hls` - Genera un creativo de anuncios transcodificados y compatible con HLS.
+   * `dash` - Genera un creativo de anuncios transcodificados y compatible con DASH.
+   * `id3` - Inserte etiquetas de metadatos temporizados ID3 en el creativo de publicidad transcodificado.
+   * `targetdur` - Duración del segmento (en segundos) para el creativo de anuncio transcodificado. El valor predeterminado es `targetdur=4`. Este valor debe corresponder al valor especificado en el manifiesto para `<s>` en la etiqueta de duración de destino: `#EXT-X-TARGETDURATION:<s>`.
 
    >[!NOTE]
    >
@@ -94,18 +91,18 @@ Los parámetros opcionales y requeridos en un bloque `Repackage` son los siguien
 
 >[!IMPORTANT]
 >
->Para garantizar una reproducción más fluida, establezca `targetdur` para que coincida con la duración del fragmento de contenido.
+>Para garantizar una reproducción más suave, establezca `targetdur` para que coincida con la duración del fragmento de contenido.
 
 ## Respuesta HTTP {#section_B30D27E4A6AC4AAD9E758162EFF7D963}
 
 CRS responde a la solicitud con uno de los siguientes códigos de estado:
 
-* **HTTP 202** : aceptado (con cuerpo vacío). Esto indica el éxito. CRS carga la publicidad transcodificada en el servidor CDN.
-* **HTTP 400** : solicitud incorrecta. El XML publicado no es válido.
+* **HTTP 202** : aceptado (con cuerpo vacío). Esto indica éxito. CRS carga la publicidad transcodificada en el servidor de CDN.
+* **HTTP 400** : solicitud incorrecta. El XML registrado no es válido.
 * **HTTP 500** : error interno del servidor. El servidor encontró un problema interno (por ejemplo, el servidor no pudo conectarse a una base de datos).
 
 ## Pretranscodificación de recursos para SSAI o CSAI {#section_098888BB74FD4DC1AD0BD507B2A48318}
 
-Mediante la API de reempaquetado, puede precodificar futuros eventos SSAI o CSAI. Si los recursos están destinados a utilizarse con SSAI en el futuro, asegúrese de que todos los parámetros de las llamadas de POST son únicos. Los parámetros son: AdSystem, AdId, CreativeURL, Zona, Formato. Cualquier diferencia en este conjunto de parámetros resulta en una nueva solicitud de transcodificación para SSAI.
+Con la API de reempaquetado, puede pretranscodificar futuros eventos SSAI o CSAI. Si los recursos van a utilizarse con SSAI en el futuro, asegúrese de que todos los parámetros de las llamadas de POST sean únicos. Los parámetros son: AdSystem, AdId, CreativeURL, Zona, Formato. Cualquier diferencia en este conjunto de parámetros resulta en una nueva solicitud de transcodificación para SSAI.
 
-Para los recursos que se utilicen con CSAI en el futuro, la exclusividad de los recursos depende de Zone y CreativeURL. AdSystem y AdId no dan como resultado distintos recursos transcodificados y están disponibles para los clientes.
+Para los recursos utilizados con CSAI en el futuro, la exclusividad de los recursos depende de Zone y CreativeURL. AdSystem y AdId no generan recursos transcodificados diferentes y están disponibles para los clientes.
