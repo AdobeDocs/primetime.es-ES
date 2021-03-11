@@ -1,23 +1,20 @@
 ---
-description: Para poder utilizar la mayoría de los métodos del reproductor de TVSDK del explorador, el reproductor debe tener un estado válido.
-seo-description: Para poder utilizar la mayoría de los métodos del reproductor de TVSDK del explorador, el reproductor debe tener un estado válido.
-seo-title: Esperar un estado válido
-title: Esperar un estado válido
-uuid: 0add29a8-fbd8-483a-8c99-e4bc6de9e3d3
+description: Para poder usar la mayoría de los métodos del reproductor TVSDK del explorador, el reproductor debe estar en un estado válido.
+title: Espere un estado válido
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '154'
+source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
 
-# Esperar un estado válido {#wait-for-a-valid-state}
+# Espere un estado válido {#wait-for-a-valid-state}
 
-Para poder utilizar la mayoría de los métodos del reproductor de TVSDK del explorador, el reproductor debe tener un estado válido.
+Para poder usar la mayoría de los métodos del reproductor TVSDK del explorador, el reproductor debe estar en un estado válido.
 
-El jugador se mueve por varios estados. Esperar a que el reproductor esté en el estado correcto garantiza que el recurso de medios se haya cargado correctamente. Si el reproductor no está al menos en el estado requerido, muchos métodos del reproductor generan `IllegalStateException`.
+El reproductor se mueve por varios estados. Esperar que el reproductor esté en el estado correcto garantiza que el recurso de medios se haya cargado correctamente. Si el reproductor no está en al menos el estado requerido, muchos métodos del reproductor arrojan `IllegalStateException`.
 
 El estado requerido suele estar PREPARADO.
 
