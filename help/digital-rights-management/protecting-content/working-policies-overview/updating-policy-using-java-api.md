@@ -1,9 +1,9 @@
 ---
-seo-title: Actualización de una directiva DRM con la API de Java
 title: Actualización de una directiva DRM con la API de Java
-uuid: ec21351c-900e-48f5-845a-c0b430c210d7
+description: Actualización de una directiva DRM con la API de Java
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -15,14 +15,14 @@ ht-degree: 0%
 
 Para actualizar una directiva DRM con la API de Java:
 
-1. Configure el entorno de desarrollo e incluya en el proyecto todos los archivos JAR enumerados en [Configuración del entorno de desarrollo](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-1. Cree una instancia de DRM `Policy` y lea la directiva de DRM desde un archivo o base de datos.
+1. Configure su entorno de desarrollo e incluya en su proyecto todos los archivos JAR enumerados en [Configuración del entorno de desarrollo](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Cree una instancia de DRM `Policy` y lea la política de DRM desde un archivo o base de datos.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Actualice el objeto DRM `Policy` estableciendo sus propiedades, como el nombre y las reglas de uso.
+1. Actualice el objeto DRM `Policy` estableciendo sus propiedades, como su nombre y reglas de uso.
 
    ```java
    // Change the DRM policy name.  
@@ -61,4 +61,4 @@ Para actualizar una directiva DRM con la API de Java:
    out.close();
    ```
 
-Consulte `com.adobe.flashaccess.samples.policy.UpdatePolicy` en el directorio Reference Implementation Command Line Tools [!DNL samples] (Herramientas de línea de comandos de implementación de referencia) para obtener el origen de este código de muestra.
+Consulte `com.adobe.flashaccess.samples.policy.UpdatePolicy` en el directorio Herramientas de la línea de comandos de implementación de referencia [!DNL samples] para obtener el origen de este código de ejemplo.
