@@ -1,9 +1,9 @@
 ---
-seo-title: Uso de la línea de comandos
 title: Uso de la línea de comandos
-uuid: 54b1e867-c6cc-4355-b8e6-a7ec910bd33d
+description: Uso de la línea de comandos
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Uso de la línea de comandos {#command-line-usage}
 
-Para ejecutar la herramienta, utilice la sintaxis siguiente:
+Para ejecutar la herramienta, utilice la siguiente sintaxis:
 
 ```
 java -jar AdobePublisherIDUtility.jar 
@@ -29,11 +29,11 @@ java -jar AdobePublisherIDUtility.jar
 ```
 
 * 
-   * `signaturefile`* especifica la ruta al archivo signature.xml de la aplicación de AIR, ubicado en el  [!DNL META-INF] directorio de aplicaciones
+   * `signaturefile`* especifica la ruta al archivo signatures.xml de la aplicación de AIR, ubicado en el  [!DNL META-INF] directorio de aplicaciones
 
 * `signingcert` especifica el certificado utilizado para firmar la aplicación de AIR
 
 >[!NOTE]
 >
->Para determinar el ID de editor de una aplicación de iOS, utilice la opción `-s` y especifique el certificado utilizado para firmar la aplicación de iOS. ***Se requiere Adobe Primetime para crear aplicaciones de iOS que puedan reproducir contenido*** protegido con Access.
+>Para determinar el ID del editor de una aplicación de iOS, utilice la opción `-s` y especifique el certificado utilizado para firmar la aplicación de iOS. ***Adobe Primetime es necesario para crear aplicaciones de iOS que puedan reproducir contenido*** protegido por Access.
 
