@@ -1,50 +1,47 @@
 ---
-description: Para mostrar anuncios en letreros, debe crear instancias de letreros y permitir que el SDK de TVSDK del explorador escuche eventos relacionados con la publicidad.
-seo-description: Para mostrar anuncios en letreros, debe crear instancias de letreros y permitir que el SDK de TVSDK del explorador escuche eventos relacionados con la publicidad.
-seo-title: Mostrar publicidades tipo titular
-title: Mostrar publicidades tipo titular
-uuid: aabc126e-b3aa-42dd-ab50-a7db8e324c50
+description: Para mostrar anuncios de tipo titular, debe crear instancias de banner y permitir que el SDK de TVSDK del explorador escuche eventos relacionados con anuncios.
+title: Mostrar anuncios de tipo titular
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
 
-# Mostrar publicidades tipo titular {#display-banner-ads}
+# Mostrar anuncios de tipo titular {#display-banner-ads}
 
-Para mostrar anuncios en letreros, debe crear instancias de letreros y permitir que el SDK de TVSDK del explorador escuche eventos relacionados con la publicidad.
+Para mostrar anuncios de tipo titular, debe crear instancias de banner y permitir que el SDK de TVSDK del explorador escuche eventos relacionados con anuncios.
 
-El explorador TVSDK proporciona una lista de publicidades tipo titular complementarias que están asociadas con una publicidad lineal a través del evento `AdobePSDK.PSDKEventType.AD_STARTED`.
+El TVSDK del explorador proporciona una lista de anuncios de banners complementarios asociados a un anuncio lineal a través del evento `AdobePSDK.PSDKEventType.AD_STARTED` .
 
-Los manifiestos pueden especificar publicidades de titular complementarias mediante:
+Los manifiestos pueden especificar anuncios de banners complementarios mediante:
 
-* Un fragmento de código HTML
-* Dirección URL de una página de iFrame
-* La dirección URL de una imagen estática o un archivo SWF de Adobe Flash
+* Un fragmento HTML
+* La dirección URL de una página de iFrame
+* La URL de una imagen estática o un archivo SWF de Flash de Adobe
 
-Para cada publicidad complementaria, el SDK del explorador indica qué tipos están disponibles para la aplicación.
+Para cada anuncio complementario, el SDK de explorador indica qué tipos están disponibles para su aplicación.
 
-Añada un detector para el evento `AdobePSDK.PSDKEventType.AD_STARTED` que haga lo siguiente:
-1. Borra las publicidades existentes en la instancia del letrero.
-1. Obtiene la lista de publicidades complementarias de `Ad.getCompanionAssets`.
-1. Si la lista de anuncios complementarios no está vacía, repita la lista para las instancias de letreros.
+Agregue un oyente para el evento `AdobePSDK.PSDKEventType.AD_STARTED` que haga lo siguiente:
+1. Borra los anuncios existentes en la instancia del banner.
+1. Obtiene la lista de anuncios complementarios de `Ad.getCompanionAssets`.
+1. Si la lista de anuncios complementarios no está vacía, repita la lista para las instancias de banner.
 
-   Cada instancia de pancarta (una `AdBannerAsset`) contiene información como, por ejemplo, ancho, alto, tipo de recurso (html, iframe o static) y datos necesarios para mostrar la pancarta adjunta.
+   Cada instancia de banner (un `AdBannerAsset`) contiene información, como ancho, alto, tipo de recurso (html, iframe o static) y datos necesarios para mostrar el banner complementario.
 1. Si una publicidad de vídeo no tiene anuncios complementarios reservados con ella, la lista de recursos complementarios no contiene datos para esa publicidad de vídeo.
-1. Envía la información del letrero a una función de la página que muestra los letreros en una ubicación adecuada.
+1. Envía la información del banner a una función de la página que muestra los banners en una ubicación adecuada.
 
-   Generalmente es `div` y su función utiliza `div ID` para mostrar la pancarta. Por ejemplo:
+   Normalmente es `div` y su función utiliza el `div ID` para mostrar el banner. Por ejemplo:
 
-   Añada el detector de evento:
+   Añada el detector de eventos:
 
    ```js
    _player.addEventListener(AdobePSDK.PSDKEventType.AD_STARTED, onAdStarted);
    ```
 
-   Implementar el controlador de oyentes:
+   Implemente el controlador de escucha:
 
    ```js
    private function onAdStarted(event:AdPlaybackEvent):void 
@@ -64,7 +61,7 @@ Añada un detector para el evento `AdobePSDK.PSDKEventType.AD_STARTED` que haga 
    }
    ```
 
-   Ejemplo de JavaScript para controlar la visualización:
+   Ejemplo de JavaScript para gestionar la visualización:
 
    ```js
    function displayCompanion (resourceType, width, height, data) { 
