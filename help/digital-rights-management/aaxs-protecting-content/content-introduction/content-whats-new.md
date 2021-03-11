@@ -1,13 +1,10 @@
 ---
-description: 'Adobe® Access™ es una solución avanzada de gestión de derechos digitales y protección de contenidos para contenidos audiovisuales de alto valor. Mediante las herramientas que cree con las API de Java, puede crear políticas, aplicar políticas a los archivos que contengan contenido de audio y vídeo y cifrar dichos archivos. Los pasos de alto nivel para realizar estas tareas son los siguientes '
-seo-description: 'Adobe® Access™ es una solución avanzada de gestión de derechos digitales y protección de contenidos para contenidos audiovisuales de alto valor. Mediante las herramientas que cree con las API de Java, puede crear políticas, aplicar políticas a los archivos que contengan contenido de audio y vídeo y cifrar dichos archivos. Los pasos de alto nivel para realizar estas tareas son los siguientes '
-seo-title: Información general
+description: 'Adobe® Access™ es una avanzada solución de protección de contenidos y gestión de derechos digitales para contenido audiovisual de alto valor. Con las herramientas que crea mediante las API de Java, puede crear políticas, aplicar políticas a archivos que contengan contenido de audio y vídeo y cifrar esos archivos. Los pasos de alto nivel para realizar estas tareas son los siguientes '
 title: Información general
-uuid: 874c175b-8207-49fa-aad4-204ccbee9c2c
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '430'
 ht-degree: 0%
 
 ---
@@ -15,12 +12,12 @@ ht-degree: 0%
 
 # Información general {#overview}
 
-Adobe® Access™ es una solución avanzada de gestión de derechos digitales y protección de contenidos para contenidos audiovisuales de alto valor. Mediante las herramientas que cree con las API de Java, puede crear políticas, aplicar políticas a los archivos que contengan contenido de audio y vídeo y cifrar dichos archivos. Los pasos de alto nivel para realizar estas tareas son los siguientes:
+Adobe® Access™ es una avanzada solución de protección de contenidos y gestión de derechos digitales para contenido audiovisual de alto valor. Con las herramientas que crea mediante las API de Java, puede crear políticas, aplicar políticas a archivos que contengan contenido de audio y vídeo y cifrar esos archivos. Los pasos de alto nivel para realizar estas tareas son los siguientes:
 
-1. Utilice las API de Java para establecer las propiedades de directiva y los parámetros de codificación.
-1. Cree una directiva que describa las funciones de uso del contenido. (Consulte [Uso de políticas](../../aaxs-protecting-content/content-working-with-policies/content-working-with-policies-overview.md)).
+1. Utilice las API de Java para establecer las propiedades de la directiva y los parámetros de codificación.
+1. Cree una directiva que describa las funciones de uso del contenido. (Consulte [Trabajo con directivas](../../aaxs-protecting-content/content-working-with-policies/content-working-with-policies-overview.md)).
 
-   Puede crear cualquier número de directivas. La mayoría de los usuarios crea un pequeño número de directivas y las aplica a muchos archivos.
+   Puede crear cualquier número de directivas. La mayoría de los usuarios crean un pequeño número de directivas y las aplican a muchos archivos.
 
 1. Empaquete un archivo multimedia.
 
@@ -28,19 +25,19 @@ Adobe® Access™ es una solución avanzada de gestión de derechos digitales y 
 
 1. Implemente el servidor de licencias para emitir una licencia al usuario.
 
-El contenido cifrado ya está listo para la implementación y el cliente puede solicitar la licencia al servidor.
+El contenido cifrado ya está listo para su implementación y el cliente puede solicitar la licencia al servidor.
 
 El SDK proporciona una API de Java para realizar estas tareas e incluye implementaciones de referencia del servidor de licencias y herramientas de línea de comandos basadas en las API de Java. Para obtener más información, consulte *Uso de las implementaciones de referencia de acceso a Adobe*.
 
 ## Novedades de Adobe Access 5.2 {#section_06220EDE36B54DCB9CA7963B76DA8167}
 
-* **CEK** externo: La capacidad de integrar un sistema de administración de claves de contenido (CKMS) al servicio de licencias DRM y a los flujos de trabajo de empaquetado de contenido, en lugar de cifrar el CEK y agregarlo a los metadatos del contenido. Consulte [Información general de CEK externo de DRM de acceso a Adobe](../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md).
+* **CEK** externo: La capacidad de integrar un sistema de administración de claves de contenido (CKMS) en los flujos de trabajo de servicio de licencias DRM y paquetes de contenido, en lugar de cifrar el CEK y agregarlo a los metadatos del contenido. Consulte [Información general del CEK externo DRM de acceso al Adobe](../../aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md).
 
-* **Devolución** de licencia (vale): Capacidad de un cliente para devolver (o eliminar) una licencia emitida al cliente.
-* **Servidor** de claves Xbox: La capacidad de proteger el contenido enviado a la Xbox y a la Xbox 360. (Se requiere un cliente de Adobe Primetime).
+* **Regreso** de licencia (cupón): Capacidad de un cliente para devolver (o eliminar) una licencia emitida al cliente.
+* **Servidor** de claves Xbox: La capacidad de proteger el contenido enviado a Xbox y Xbox 360. (Se requiere un cliente de Adobe Primetime).
 
 ## Reglas de uso personalizadas {#custom-usage-rules}
 
-Especifica reglas de uso personalizadas. Los datos personalizados pueden incluirse en las licencias emitidas por el servidor de licencias. La interpretación y el manejo de estos datos depende completamente de la implementación de la aplicación cliente y del servidor de licencias.
+Especifica reglas de uso personalizadas. Los datos personalizados se pueden incluir en las licencias emitidas por el servidor de licencias. La interpretación/gestión de estos datos depende completamente de la implementación de la aplicación cliente y del servidor de licencias.
 
-Ejemplo de caso de uso: Permite la extensibilidad de las reglas de uso al permitir que otras reglas comerciales se transmitan de forma segura como parte de la directiva o la licencia de contenido. Por motivos de seguridad, como estas reglas de uso se aplican en el código de la aplicación cliente personalizada, esta opción debe usarse junto con las opciones de lista de permitidos SWF de la aplicación de AIR o Flash Player. Para obtener más información, consulte [Restricciones del tiempo de ejecución y de la aplicación](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md).
+Ejemplo de caso de uso: Permite la extensibilidad de las reglas de uso al permitir que otras reglas comerciales se transmitan de forma segura como parte de la directiva o la licencia de contenido. Por motivos de seguridad, dado que estas reglas de uso se aplican en el código personalizado de la aplicación cliente, esta opción debe utilizarse junto con las opciones de lista de permitidos SWF de la aplicación de AIR o del Flash Player. Para obtener más información, consulte [Restricciones de tiempo de ejecución y aplicación](../../aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md).
