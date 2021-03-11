@@ -1,13 +1,10 @@
 ---
 description: El código puede solicitar una clave a través de DRMManager.
-seo-description: El código puede solicitar una clave a través de DRMManager.
-seo-title: Flujo de trabajo de solicitud de clave en HTML5 TVSDK
 title: Flujo de trabajo de solicitud de clave en HTML5 TVSDK
-uuid: a1f50eba-4301-49a1-b2e5-9add6687cff8
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '119'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
@@ -34,9 +31,9 @@ license acquisition. </p>
    setProtectionData: function(protectionData) 
 ```
 
-El código debería llamar a esta API antes de iniciar la reproducción del contenido de la forma normal. MediaPlayer.vo.protection.ProtectionData está documentada aquí: [https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
+Su código tendría que llamar a esta API antes de iniciar la reproducción del contenido de la forma normal. MediaPlayer.vo.protection.ProtectionData está documentada aquí: [https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html](https://vm2.dashif.org/dash.js/docs/jsdocs/MediaPlayer.vo.protection.ProtectionData.html)
 
-A continuación se muestra un objeto de datos de protección de muestra con direcciones URL de servidor de licencias tanto para PlayReady como para Widevine.
+Este es un objeto de datos de protección de ejemplo con URL del servidor de licencias para PlayReady y Widevine.
 
 ```
 var protectionData = { 
