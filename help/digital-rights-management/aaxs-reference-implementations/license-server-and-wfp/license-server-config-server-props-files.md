@@ -1,9 +1,9 @@
 ---
-seo-title: Archivos de propiedades del servidor
 title: Archivos de propiedades del servidor
-uuid: 3d3a0ee3-009f-4d62-9587-7e487ecdcafd
+description: Archivos de propiedades del servidor
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '182'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Archivos de propiedades del servidor {#server-properties-files}
 
-El servidor requiere dos archivos de configuración, uno para el servidor de licencias y otro para el empaquetador. Ambos archivos deben colocarse en la ruta de clases. Los archivos de propiedades contienen la ubicación de las credenciales emitidas por Adobe. Estas credenciales se pueden especificar como archivo .pfx y contraseña o proporcionando un alias y una contraseña para una credencial almacenada en un HSM.
+El servidor requiere dos archivos de configuración, uno para el servidor de licencias y otro para el empaquetador. Ambos archivos deben colocarse en la ruta de clase. Los archivos de propiedades contienen la ubicación de las credenciales emitidas por el Adobe. Estas credenciales se pueden especificar como archivo .pfx y contraseña, o bien proporcionando un alias y una contraseña para una credencial almacenada en un HSM.
 
-Consulte los archivos de propiedades para obtener detalles sobre los valores específicos y el uso de cada parámetro. Puede encontrar archivos de propiedades de ejemplo en el directorio &quot;resources&quot; de la implementación de referencia (Referencia Implementation\Server\resources).
+Consulte los archivos de propiedad para obtener detalles sobre los valores específicos y el uso de cada parámetro. Puede encontrar archivos de propiedades de ejemplo en el directorio &quot;resources&quot; de la implementación de referencia (consulte Implementation\Server\resources).
 
-Para garantizar la seguridad de la contraseña de la credencial, se proporciona una herramienta (ScrambleUtil.class) para cifrar la contraseña antes de que se introduzca en el archivo flashaccess-refimpl.properties o flashaccess-refimpl-packager.properties.
+Para garantizar la seguridad de la contraseña de su credencial, se proporciona una herramienta (ScrambleUtil.class) para cifrar la contraseña antes de que se introduzca en el archivo flashaccess-refimpl.properties o flashaccess-refimpl-packager.properties .
 
 Para preparar correctamente la contraseña de la credencial:
 
@@ -39,4 +39,4 @@ Para preparar correctamente la contraseña de la credencial:
 >
 >El ejemplo anterior utiliza un punto y coma (;) como delimitador. Para plataformas que no sean Microsoft Windows, utilice dos puntos (:) como delimitador.
 
-La utilidad genera la contraseña cifrada, que debe copiar en el archivo [!DNL .properties].
+La utilidad envía la contraseña cifrada, que debe copiarse en el archivo [!DNL .properties].
