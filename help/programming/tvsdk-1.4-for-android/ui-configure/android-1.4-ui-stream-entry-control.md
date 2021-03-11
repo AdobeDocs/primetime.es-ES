@@ -1,25 +1,22 @@
 ---
-description: De forma predeterminada, al iniciar la reproducción, VOD media inicio en 0 (MediaPlayer.LIVE_POINT). Puede anular el comportamiento predeterminado.
-seo-description: De forma predeterminada, al iniciar la reproducción, VOD media inicio en 0 (MediaPlayer.LIVE_POINT). Puede anular el comportamiento predeterminado.
-seo-title: Escriba una secuencia a una hora específica
-title: Escriba una secuencia a una hora específica
-uuid: ac3479e2-46a1-4ac8-a9e8-68a23f5dd74d
+description: De forma predeterminada, al iniciar la reproducción, el contenido de VOD se inicia en 0 (MediaPlayer.LIVE_POINT). Puede anular el comportamiento predeterminado.
+title: Introduzca una emisión a una hora específica
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '86'
+ht-degree: 2%
 
 ---
 
 
-# Escriba un flujo a una hora específica {#enter-a-stream-at-a-specific-time}
+# Introduzca un flujo a una hora específica {#enter-a-stream-at-a-specific-time}
 
-De forma predeterminada, al iniciar la reproducción, VOD media inicio en 0 (MediaPlayer.LIVE_POINT). Puede anular el comportamiento predeterminado.
+De forma predeterminada, al iniciar la reproducción, el contenido de VOD se inicia en 0 (MediaPlayer.LIVE_POINT). Puede anular el comportamiento predeterminado.
 
 1. Pase una posición a `MediaPlayer.prepareToPlay`.
 
-   TVSDK considera que la posición dada es el punto de partida del recurso. No se requiere ninguna operación de búsqueda. Si la posición no se encuentra dentro del rango buscable, TVSDK utiliza la posición predeterminada.
+   TVSDK considera que la posición dada es el punto de partida del recurso. No se requiere ninguna operación de búsqueda. Si la posición no se encuentra dentro del rango en el que se puede buscar, TVSDK utiliza la posición predeterminada.
 
    Por ejemplo:
 
