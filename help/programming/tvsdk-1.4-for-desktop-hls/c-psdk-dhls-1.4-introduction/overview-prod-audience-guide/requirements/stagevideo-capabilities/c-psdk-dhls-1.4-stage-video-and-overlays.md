@@ -1,13 +1,10 @@
 ---
-description: Puede utilizar las superposiciones HTML con StageVideo para mostrar los elementos de la interfaz de usuario en el plano de vídeo de la lista de visualización de Flash. Este plano está por encima del plano de StageVideo, por lo que StageVideo siempre se muestra detrás de cualquier elemento de lista de visualización de Flash.
-seo-description: Puede utilizar las superposiciones HTML con StageVideo para mostrar los elementos de la interfaz de usuario en el plano de vídeo de la lista de visualización de Flash. Este plano está por encima del plano de StageVideo, por lo que StageVideo siempre se muestra detrás de cualquier elemento de lista de visualización de Flash.
-seo-title: Superposiciones de StageVideo y HTML
+description: Puede utilizar superposiciones HTML con StageVideo para mostrar elementos de IU en el plano de vídeo de la lista de visualización de Flash. Este plano está por encima del plano StageVideo, por lo que StageVideo siempre se muestra detrás de cualquier elemento de lista de visualización de Flash.
 title: Superposiciones de StageVideo y HTML
-uuid: 84e862ab-4c35-47a2-9c4e-f792d3ef5363
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -15,19 +12,19 @@ ht-degree: 0%
 
 # Superposiciones de StageVideo y HTML{#stagevideo-and-html-overlays}
 
-Puede utilizar las superposiciones HTML con StageVideo para mostrar los elementos de la interfaz de usuario en el plano de vídeo de la lista de visualización de Flash. Este plano está por encima del plano de StageVideo, por lo que StageVideo siempre se muestra detrás de cualquier elemento de lista de visualización de Flash.
+Puede utilizar superposiciones HTML con StageVideo para mostrar elementos de IU en el plano de vídeo de la lista de visualización de Flash. Este plano está por encima del plano StageVideo, por lo que StageVideo siempre se muestra detrás de cualquier elemento de lista de visualización de Flash.
 
-Las superposiciones HTML son elementos de la interfaz de usuario que se pueden mostrar en el plano de visualización de Flash en un vídeo representado por `StageVideo` en su propio plano. Antes de Flash 15, no se podían usar superposiciones HTML cuando no estaba disponible la aceleración de hardware. A partir de Flash 15, las superposiciones HTML se muestran cuando `StageVideo` regresa al procesamiento por software.
+Las superposiciones HTML son elementos de la interfaz de usuario que se pueden mostrar en el plano de visualización del Flash en vídeo procesado por `StageVideo` en su propio plano. Antes del Flash 15, no se podían usar superposiciones HTML cuando la aceleración de hardware no estaba disponible. A partir del Flash 15, las superposiciones HTML se muestran cuando `StageVideo` vuelve a la representación de software.
 
 >[!IMPORTANT]
 >
->Según las capacidades del sistema, el rendimiento puede degradarse en bueno o en menor grado al utilizar superposiciones HTML.
+>Según las capacidades del sistema, el rendimiento puede degradarse a un bueno o menor grado al utilizar superposiciones HTML.
 
-Considere la siguiente información:
+Tenga en cuenta la siguiente información:
 
 * En el Flash Player 15:
 
-   * Puede utilizar las superposiciones HTML si está disponible la aceleración de hardware.
+   * Puede utilizar las superposiciones HTML si la aceleración de hardware está disponible.
    * Para utilizar superposiciones HTML, establezca `wmode` en `opaque`.
 
 * En el Flash Player 14:
@@ -44,7 +41,7 @@ Estos son los requisitos mínimos del explorador para utilizar las superposicion
    * Versión 9+ en Windows 7 y posterior
    * Versión 10+ en Windows XP
 
-* Chrome versión 26 y posterior
+* Chrome versión 26 y posteriores
 
    >[!IMPORTANT]
    >
