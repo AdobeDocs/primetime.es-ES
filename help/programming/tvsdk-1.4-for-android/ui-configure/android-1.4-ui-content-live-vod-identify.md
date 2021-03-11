@@ -1,13 +1,10 @@
 ---
 description: En algunos casos, debe saber si el contenido multimedia está activo o VOD.
-seo-description: En algunos casos, debe saber si el contenido multimedia está activo o VOD.
-seo-title: Identifique si el contenido está activo o VOD
-title: Identifique si el contenido está activo o VOD
-uuid: cd71b8d3-259a-48f8-a6ad-02b57da146a7
+title: Identificar si el contenido está activo o VOD
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '90'
+source-wordcount: '67'
 ht-degree: 0%
 
 ---
@@ -17,8 +14,8 @@ ht-degree: 0%
 
 En algunos casos, debe saber si el contenido multimedia está activo o VOD.
 
-1. Asegúrese de que el reproductor está en al menos el estado PREPARADO.
-1. Determine si el contenido `MediaPlayerItem` está activo (true) o VOD (false).
+1. Asegúrese de que el reproductor esté en al menos el estado PREPARADO.
+1. Determine si el contenido `MediaPlayerItem` está activo (verdadero) o VOD (falso).
 
    ```java
    boolean isLive();
