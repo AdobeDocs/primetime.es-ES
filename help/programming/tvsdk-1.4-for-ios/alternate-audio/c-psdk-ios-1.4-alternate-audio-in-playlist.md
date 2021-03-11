@@ -1,13 +1,10 @@
 ---
-description: La lista de reproducción de un vídeo puede especificar un número ilimitado de pistas de audio alternativas para el contenido del vídeo principal. Por ejemplo, es posible que desee agregar idiomas diferentes al contenido del vídeo o permitir que el usuario cambie entre distintas pistas del dispositivo mientras se reproduce el contenido.
-seo-description: La lista de reproducción de un vídeo puede especificar un número ilimitado de pistas de audio alternativas para el contenido del vídeo principal. Por ejemplo, es posible que desee agregar idiomas diferentes al contenido del vídeo o permitir que el usuario cambie entre distintas pistas del dispositivo mientras se reproduce el contenido.
-seo-title: Pistas de audio alternativas en la lista de reproducción
-title: Pistas de audio alternativas en la lista de reproducción
-uuid: 68f01375-9d57-4839-a1c0-7e022b374012
+description: La lista de reproducción de un vídeo puede especificar un número ilimitado de pistas de audio alternativas para el contenido principal del vídeo. Por ejemplo, es posible que desee agregar distintos idiomas al contenido de vídeo o permitir que el usuario cambie entre distintas pistas de su dispositivo mientras se reproduce el contenido.
+title: Alternar pistas de audio en la lista de reproducción
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '346'
+source-wordcount: '291'
 ht-degree: 0%
 
 ---
@@ -15,18 +12,18 @@ ht-degree: 0%
 
 # Pistas de audio alternativas en la lista de reproducción{#alternate-audio-tracks-in-the-playlist}
 
-La lista de reproducción de un vídeo puede especificar un número ilimitado de pistas de audio alternativas para el contenido del vídeo principal. Por ejemplo, es posible que desee agregar idiomas diferentes al contenido del vídeo o permitir que el usuario cambie entre distintas pistas del dispositivo mientras se reproduce el contenido.
+La lista de reproducción de un vídeo puede especificar un número ilimitado de pistas de audio alternativas para el contenido principal del vídeo. Por ejemplo, es posible que desee agregar distintos idiomas al contenido de vídeo o permitir que el usuario cambie entre distintas pistas de su dispositivo mientras se reproduce el contenido.
 
-Las pistas de audio alternativas, o el audio de enlace tardío, permiten a los usuarios cambiar entre varias pistas de idioma para flujos de vídeo HTTP (en directo/lineal y VOD) y no es necesario modificar, duplicado ni volver a empaquetar el vídeo para cada pista de audio. Puede proporcionar varias pistas de idioma para un recurso de vídeo antes o después del empaquetado inicial del recurso.
+Las pistas de audio alternativas, o el audio de enlace tardío, permiten a los usuarios cambiar entre varias pistas de idiomas para flujos de vídeo HTTP (en directo/lineal y VOD), y no es necesario modificar, duplicar ni volver a empaquetar el vídeo para cada pista de audio. Puede proporcionar varias pistas de idioma para un recurso de vídeo antes o después del empaquetado inicial del recurso.
 
 >[!TIP]
 >
->Para que el audio alternativo se mezcle con la pista de vídeo del medio principal, las marcas de hora de la pista alternativa deben coincidir con las marcas de hora del audio de la pista principal.
+>Para que el audio alternativo se mezcle con la pista de vídeo del medio principal, las marcas de tiempo de la pista alternativa deben coincidir con las marcas de tiempo del audio en la pista principal.
 
 Los siguientes requisitos se aplican si utiliza pistas de audio alternativas e incorpora publicidad:
 
-* Si el contenido principal tiene pistas de audio alternativas, las publicidades deben tener al menos un flujo de solo audio.
-* Cada duración de segmento del flujo de solo audio de un anuncio debe ser igual a la duración del segmento del flujo de vídeo de un anuncio.
+* Si el contenido principal tiene pistas de audio alternativas, los anuncios deben tener al menos un flujo de solo audio.
+* La duración de cada segmento del flujo de solo audio de un anuncio debe ser igual a la duración del segmento del flujo de vídeo de un anuncio.
 
 La pista de audio principal se incluye en la colección de pistas de audio con la etiqueta `default`. Los metadatos de los flujos de audio alternativos se incluyen en la lista de reproducción de las etiquetas `#EXT-X-MEDIA` con `TYPE=AUDIO`.
 
