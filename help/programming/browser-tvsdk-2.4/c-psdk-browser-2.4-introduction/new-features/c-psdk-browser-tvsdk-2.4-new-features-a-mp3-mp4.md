@@ -1,28 +1,25 @@
 ---
 description: El TVSDK del explorador admite varias funciones MP3 y MP4 que puede implementar para agregar funcionalidad a sus aplicaciones.
-seo-description: El TVSDK del explorador admite varias funciones MP3 y MP4 que puede implementar para agregar funcionalidad a sus aplicaciones.
-seo-title: Funciones compatibles con MP3 y MP4
-title: Funciones compatibles con MP3 y MP4
-uuid: 33e3130f-fc78-40b8-a4b7-2fcdd5a2b4f9
+title: Funciones MP3 y MP4 compatibles
 translation-type: tm+mt
-source-git-commit: ba291a4615a8e0713cf610f76f41e328da96ec4d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '220'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
 
-# Funciones admitidas de MP3 y MP4 {#supported-mp-and-mp-features}
+# Funciones MP3 y MP4 compatibles {#supported-mp-and-mp-features}
 
 El TVSDK del explorador admite varias funciones MP3 y MP4 que puede implementar para agregar funcionalidad a sus aplicaciones.
-* [Funciones de audio MP3: Reproducción básica](#core-playback)
-* [Funciones de audio MP4: Reproducción básica](#mp4-audio-features)
+* [Funciones de audio MP3: reproducción principal](#core-playback)
+* [Funciones de audio MP4: reproducción principal](#mp4-audio-features)
 * [Funciones de vídeo MP4: Ad Insertion principal](#section_1A8CBC5AA4FA4477813FD9EFF26AC104)
 
 >[!TIP]
 >
->En las tablas de la matriz de características que se muestran a continuación, ![icono admitido](assets/supported15.png) significa que la función se admite en la versión actual.
+>En las tablas de matriz de características que se muestran a continuación, ![icon compatible](assets/supported15.png) significa que la función es compatible con la versión actual.
 
 ## Funciones de audio MP3 {#section_C900C301291A40529D02EACC3CD4D55A}
 
@@ -30,21 +27,21 @@ El TVSDK del explorador admite varias funciones MP3 y MP4 que puede implementar 
 
 | Categoría | Tipo de contenido | Función | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Reproducción | MP3 VOD | Reproducción general (Reproducir, Pausa, Buscar) | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
+| Reproducción | VOD MP3 | Reproducción general (reproducción, pausa, llamada a otro punto del contenido) | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
 
-## Características de audio MP4 {#mp4-audio-features}
+## Funciones de audio de MP4 {#mp4-audio-features}
 
 ### Reproducción principal {#mp4-core-playback}
 
 | Categoría | Tipo de contenido | Función | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Reproducción | VOD MP4 | Reproducción general (Reproducir, Pausa, Buscar) | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
+| Reproducción | VOD MP4 | Reproducción general (reproducción, pausa, llamada a otro punto del contenido) | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
 
-## Características de vídeo MP4 {#section_1A8CBC5AA4FA4477813FD9EFF26AC104}
+## Funciones de vídeo de MP4 {#section_1A8CBC5AA4FA4477813FD9EFF26AC104}
 
-### Inserción de anuncios principales
+### Inserción de publicidad principal
 
 | Categoría | Tipo de contenido | Función | Flash | HTML5: FF, IE, Chrome, Android Chrome | HTML5: Safari, iOS Safari |
 |--- |--- |--- |--- |--- |--- |
-| Ad Insertion | VOD MP4 | Anteponer | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
-| Ad Insertion | VOD MP4 | Post-roll | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
+| Ad Insertion | VOD MP4 | Anuncio | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
+| Ad Insertion | VOD MP4 | Anuncio | No admitido | ![icono admitido](assets/supported15.png) | ![icono admitido](assets/supported15.png) |
