@@ -1,21 +1,18 @@
 ---
-description: Estas clases le permiten personalizar el registro.
-seo-description: Estas clases le permiten personalizar el registro.
-seo-title: Clases de registro
+description: Estas clases permiten personalizar el registro.
 title: Clases de registro
-uuid: 8b07472e-b529-4c35-b49b-a499debfcff0
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '126'
 ht-degree: 0%
 
 ---
 
 
-# Clases de registro{#logging-classes}
+# Registrando clases{#logging-classes}
 
-Estas clases le permiten personalizar el registro.
+Estas clases permiten personalizar el registro.
 
 Paquete: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/package-summary.html)
 
