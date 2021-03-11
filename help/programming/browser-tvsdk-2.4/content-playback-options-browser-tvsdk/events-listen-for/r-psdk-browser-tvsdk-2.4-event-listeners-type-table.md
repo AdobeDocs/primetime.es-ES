@@ -1,27 +1,24 @@
 ---
-description: Al registrar los oyentes de evento con el TVSDK del explorador, debe especificar un tipo de evento para escuchar y el nombre de la llamada de retorno. Cuando se produce un evento, TVSDK del explorador llama a la llamada de retorno y le pasa un objeto de evento del tipo adecuado.
-seo-description: Al registrar los oyentes de evento con el TVSDK del explorador, debe especificar un tipo de evento para escuchar y el nombre de la llamada de retorno. Cuando se produce un evento, TVSDK del explorador llama a la llamada de retorno y le pasa un objeto de evento del tipo adecuado.
-seo-title: Tipos de evento y clases para llamadas de retorno
-title: Tipos de evento y clases para llamadas de retorno
-uuid: 13d7e939-ff45-4a52-bcbe-70abb56ac205
+description: Cuando registra oyentes de eventos con el TVSDK del explorador, especifica un tipo de evento para escuchar y el nombre de la llamada de retorno. Cuando se produce un evento, el TVSDK del explorador llama a la rellamada y le pasa un objeto de evento del tipo adecuado.
+title: Tipos de eventos y clases para las llamadas de retorno
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
 
-# Tipos de evento y clases para rellamadas{#event-types-and-classes-for-callbacks}
+# Tipos de eventos y clases para las llamadas de retorno{#event-types-and-classes-for-callbacks}
 
-Al registrar los oyentes de evento con el TVSDK del explorador, debe especificar un tipo de evento para escuchar y el nombre de la llamada de retorno. Cuando se produce un evento, TVSDK del explorador llama a la llamada de retorno y le pasa un objeto de evento del tipo adecuado.
+Cuando registra oyentes de eventos con el TVSDK del explorador, especifica un tipo de evento para escuchar y el nombre de la llamada de retorno. Cuando se produce un evento, el TVSDK del explorador llama a la rellamada y le pasa un objeto de evento del tipo adecuado.
 
 <table frame="all" colsep="1" rowsep="1" id="table_FE58AD65AF3B4483816C00D7EAD2FB4F"> 
  <thead> 
   <tr rowsep="1"> 
-   <th colname="2" class="entry"> Al escuchar este nombre de evento (AdobePSDK.EventType) </th> 
-   <th class="entry">frases/browser-tvsdk-name pasa un evento a su llamada de retorno de este tipo de objeto (<span class="codeph"> AdobePSDK.Evento</span>) </th> 
+   <th colname="2" class="entry"> Cuando escucha este nombre de evento (AdobePSDK.EventType) </th> 
+   <th class="entry">frases/browser-tvsdk-name pasa un evento a su devolución de llamada de este tipo de objeto (<span class="codeph"> AdobePSDK.Event</span>) </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -84,7 +81,7 @@ Al registrar los oyentes de evento con el TVSDK del explorador, debe especificar
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"><span class="codeph"> RESERVATION_REACHED</span> </td> 
-   <td><span class="codeph"> ReservationEvent</span> </td> 
+   <td><span class="codeph"> ReserationEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> 
@@ -95,11 +92,11 @@ Al registrar los oyentes de evento con el TVSDK del explorador, debe especificar
    <td><span class="codeph"> PlaybackRateEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> PERFIL_CHANGED</span> </td> 
+   <td colname="2"><span class="codeph"> PROFILE_CHANGED</span> </td> 
    <td><span class="codeph"> ProfileEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"><span class="codeph"> PLAY_INICIO</span> </td> 
+   <td colname="2"><span class="codeph"> PLAY_START</span> </td> 
    <td><span class="codeph"> PSDKEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
