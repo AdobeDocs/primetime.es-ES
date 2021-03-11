@@ -1,21 +1,19 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Deshabilitar las publicidades previas al lanzamiento
-title: Deshabilitar las publicidades previas al lanzamiento
-uuid: 2e307a58-49f2-43d6-908b-97684ad6e3d3
+title: Deshabilitar anuncios previos a la emisión
+description: Deshabilitar anuncios previos a la emisión
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '45'
+source-wordcount: '43'
 ht-degree: 0%
 
 ---
 
 
-# Deshabilitar anuncios previos{#disable-pre-roll-ads}
+# Deshabilitar anuncios previos a la emisión{#disable-pre-roll-ads}
 
-Para desactivar el prelanzamiento, cambie los generadores de oportunidades predeterminados para que no realicen la llamada previa al lanzamiento. Los generadores de oportunidades predeterminados son:
+Para desactivar el anuncio previo a la emisión, cambie los generadores de oportunidades predeterminados para que no realice la llamada previa a la emisión. Los generadores de oportunidades predeterminados son:
 
 ```
 @inheritDoc 
@@ -28,7 +26,7 @@ return result;
 }
 ```
 
-Para desactivar el prelanzamiento en los flujos en directo, cambie lo anterior para incluir solo SpliceOutOpportunityGenerator:
+Para desactivar el anuncio previo a la emisión en directo, cambie lo anterior para incluir solo el SpliceOutOportunityGenerator:
 
 ```
 @inheritDoc 
