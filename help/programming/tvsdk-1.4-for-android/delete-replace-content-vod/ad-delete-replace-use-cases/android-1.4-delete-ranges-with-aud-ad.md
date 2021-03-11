@@ -1,13 +1,10 @@
 ---
-description: Puede quitar TimeRanges entre el inicio y el final en localTime de la línea de tiempo.
-seo-description: Puede quitar TimeRanges entre el inicio y el final en localTime de la línea de tiempo.
-seo-title: Eliminar intervalos
-title: Eliminar intervalos
-uuid: 2f4afa0d-69e3-4929-8dbd-b553c8a64d96
+description: Puede eliminar TimeRanges entre el inicio y el final en localTime desde la cronología.
+title: Eliminar rangos
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '79'
 ht-degree: 0%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 0%
 
 # Eliminar rangos{#delete-ranges}
 
-Puede quitar TimeRanges entre el inicio y el final en localTime de la línea de tiempo.
+Puede eliminar TimeRanges entre el inicio y el final en localTime desde la cronología.
 
 >[!NOTE]
 >
->Si sólo desea eliminar ciertos rangos del contenido y el mapa de publicidad debe utilizarse tal como lo define el servidor de publicidad, cree una instancia `CustomRangeMetadata` y especifique el tipo como una operación de DELETE con los rangos personalizados definidos.
+>Si solo desea eliminar ciertos intervalos del contenido y el mapa de anuncios debe usarse tal como lo define el servidor de publicidad, cree una instancia `CustomRangeMetadata` y especifique el tipo como una operación de DELETE con los intervalos personalizados definidos.
 
-Elimine intervalos con una publicidad de Adobe Primetime para la toma de decisiones de publicidad.
+Eliminar intervalos con un anuncio de Adobe Primetime ad decisioning.
 
 ```
 {   
