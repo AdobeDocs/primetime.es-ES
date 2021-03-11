@@ -1,9 +1,9 @@
 ---
-seo-title: Protección del contenido
-title: Protección del contenido
-uuid: 100935cb-2b4c-45d7-839c-7b357b065377
+title: Protección de contenido
+description: Protección de contenido
+copied-description: true
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '6'
 ht-degree: 0%
@@ -11,5 +11,5 @@ ht-degree: 0%
 ---
 
 
-# Protección del contenido{#content-protection}
+# Protección de contenido{#content-protection}
 
