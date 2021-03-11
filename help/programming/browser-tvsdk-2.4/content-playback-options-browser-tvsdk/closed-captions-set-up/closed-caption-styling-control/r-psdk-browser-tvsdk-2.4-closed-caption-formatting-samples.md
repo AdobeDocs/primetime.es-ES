@@ -1,23 +1,20 @@
 ---
-description: Puede especificar el formato de los subtítulos opcionales.
-seo-description: Puede especificar el formato de los subtítulos opcionales.
-seo-title: Ejemplos de formato de rótulo
+description: Puede especificar el formato de subtítulos.
 title: Ejemplos de formato de rótulo
-uuid: d55a506a-6662-4252-95f6-4073b2997f3b
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '41'
+source-wordcount: '33'
 ht-degree: 0%
 
 ---
 
 
-# Ejemplos: Formato del rótulo{#examples-caption-formatting}
+# Ejemplos: Formato de rótulo{#examples-caption-formatting}
 
-Puede especificar el formato de los subtítulos opcionales.
+Puede especificar el formato de subtítulos.
 
-## Ejemplo 1: Especifique los valores de formato explícitamente {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
+## Ejemplo 1: Especificar valores de formato explícitamente {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
 
 ```js
 // Set CC style. 
@@ -37,5 +34,5 @@ var tf = new AdobePSDK.TextFormat(
 
 >[!IMPORTANT]
 >
->El SDK de explorador no admite la opacidad de borde, color de relleno o relleno de la fuente.
+>El SDK del explorador no admite la opacidad de borde, color de relleno o borde de fuente.
 
