@@ -1,23 +1,20 @@
 ---
-description: Para poder utilizar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
-seo-description: Para poder utilizar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
-seo-title: Esperar un estado válido
-title: Esperar un estado válido
-uuid: 918ab021-3685-424a-b84e-683da0357724
+description: Para poder usar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
+title: Espere un estado válido
 translation-type: tm+mt
-source-git-commit: 8ff38bdc1a7ff9732f7f1fae37f64d0e1113ff40
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
 
 
-# Esperar un estado válido {#wait-for-a-valid-state}
+# Espere un estado válido {#wait-for-a-valid-state}
 
-Con TVSDK puede controlar la experiencia de reproducción básica para vídeo en directo y vídeo a petición (VOD). TVSDK proporciona métodos y propiedades en la instancia del reproductor que puede utilizar para configurar la interfaz de usuario del reproductor.Antes de utilizar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
+Con TVSDK, puede controlar la experiencia de reproducción básica para vídeo en directo y vídeo bajo demanda (VOD). TVSDK proporciona métodos y propiedades en la instancia del reproductor que puede utilizar para configurar la interfaz de usuario del reproductor. Antes de poder utilizar la mayoría de los métodos del reproductor TVSDK, el reproductor debe estar en un estado válido.
 
-El reproductor pasa por varios estados. Esperar a que el reproductor esté en el estado correcto garantiza que el recurso de medios se haya cargado correctamente. Si el reproductor no tiene al menos el estado requerido, muchos métodos de reproductor generan `IllegalStateException`.
+El reproductor pasa por varios estados. Esperar que el reproductor esté en el estado correcto garantiza que el recurso de medios se haya cargado correctamente. Si el reproductor no está en al menos el estado requerido, muchos métodos del reproductor arrojan `IllegalStateException`.
 
 El estado requerido suele estar PREPARADO.
 
