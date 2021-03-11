@@ -1,13 +1,10 @@
 ---
-description: El TVSDK del explorador admite publicidades tipo titular complementarias, que son publicidades que acompañan un anuncio lineal y que a menudo permanecen en la página después de que finaliza el anuncio lineal. La aplicación es responsable de mostrar los letreros adjuntos que se proporcionan con un anuncio lineal.
-seo-description: El TVSDK del explorador admite publicidades tipo titular complementarias, que son publicidades que acompañan un anuncio lineal y que a menudo permanecen en la página después de que finaliza el anuncio lineal. La aplicación es responsable de mostrar los letreros adjuntos que se proporcionan con un anuncio lineal.
-seo-title: Publicidades tipo titular complementarias
+description: El explorador TVSDK admite anuncios tipo titular adjuntos, que son anuncios que acompañan un anuncio lineal y que a menudo permanecen en la página después de que finalice el anuncio lineal. La aplicación es responsable de mostrar los banners adjuntos que se proporcionan con un anuncio lineal.
 title: Publicidades tipo titular complementarias
-uuid: 5655c348-268d-42d6-92c2-f5de39ff666f
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
@@ -15,20 +12,20 @@ ht-degree: 0%
 
 # Información general {#companion-banner-ads-overview}
 
-El TVSDK del explorador admite publicidades tipo titular complementarias, que son publicidades que acompañan un anuncio lineal y que a menudo permanecen en la página después de que finaliza el anuncio lineal. La aplicación es responsable de mostrar los letreros adjuntos que se proporcionan con un anuncio lineal.
+El explorador TVSDK admite anuncios tipo titular adjuntos, que son anuncios que acompañan un anuncio lineal y que a menudo permanecen en la página después de que finalice el anuncio lineal. La aplicación es responsable de mostrar los banners adjuntos que se proporcionan con un anuncio lineal.
 
-Al mostrar publicidades complementarias, siga estas recomendaciones:
+Cuando muestre anuncios complementarios, siga estas recomendaciones:
 
-* Intente presentar tantos anuncios de letreros adjuntos de un anuncio de vídeo como se adapten al diseño del reproductor.
-* Presente una pancarta complementaria solo si tiene una ubicación que coincida con la altura y la anchura especificadas de la pancarta adjunta.
+* Intente presentar tantos anuncios de banner de acompañamiento de un anuncio de vídeo como se ajuste al diseño del reproductor.
+* Presente un banner complementario solo si tiene una ubicación que coincida con la altura y anchura especificadas del banner complementario.
 
    >[!TIP]
    >
-   >No cambie el tamaño del letrero.
+   >No cambie el tamaño del banner.
 
-* Presente los letreros adjuntos lo antes posible después de que comience el anuncio.
-* No superponga el contenedor principal de anuncios/vídeos con pancartas complementarias.
-* Continúe mostrando las pancartas complementarias una vez que finalice la publicidad.
+* Presente los banners adjuntos lo antes posible después de que comience el anuncio.
+* No superponga el contenedor principal de anuncios/vídeos con banners complementarios.
+* Continúe mostrando banners complementarios una vez que finalice el anuncio.
 
-   El estándar es mostrar cada pancarta adjunta hasta que tenga un reemplazo para esta pancarta.
+   El estándar es mostrar cada banner complementario hasta que tenga un reemplazo para este banner.
 
