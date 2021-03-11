@@ -1,13 +1,10 @@
 ---
-description: El formato de códec de audio 3 (AC-3, también conocido como Dolby Digital®) 5.1, permite a los proveedores de contenido comprimir el tamaño de los archivos de audio multicanal sin perjudicar la calidad de sonido. AC-3 es un formato 5.1, lo que significa que proporciona cinco canales de ancho de banda completo para una experiencia de usuario más rica.
-seo-description: El formato de códec de audio 3 (AC-3, también conocido como Dolby Digital®) 5.1, permite a los proveedores de contenido comprimir el tamaño de los archivos de audio multicanal sin perjudicar la calidad de sonido. AC-3 es un formato 5.1, lo que significa que proporciona cinco canales de ancho de banda completo para una experiencia de usuario más rica.
-seo-title: Formato AC-3 5.1
+description: El códec de audio 3 (AC-3, también conocido como Dolby Digital®) 5.1, permite a los proveedores de contenido comprimir el tamaño de los archivos de audio multicanal sin perjudicar la calidad de sonido. AC-3 es un formato 5.1, lo que significa que proporciona cinco canales de ancho de banda completo para una mejor experiencia de usuario.
 title: Formato AC-3 5.1
-uuid: 9d1adf33-4c9b-4d31-8212-ac301f3e44c5
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '397'
 ht-degree: 0%
 
 ---
@@ -15,20 +12,20 @@ ht-degree: 0%
 
 # Formato AC-3 5.1 {#ac-format}
 
-El formato de códec de audio 3 (AC-3, también conocido como Dolby Digital®) 5.1, permite a los proveedores de contenido comprimir el tamaño de los archivos de audio multicanal sin perjudicar la calidad de sonido. AC-3 es un formato 5.1, lo que significa que proporciona cinco canales de ancho de banda completo para una experiencia de usuario más rica.
+El códec de audio 3 (AC-3, también conocido como Dolby Digital®) 5.1, permite a los proveedores de contenido comprimir el tamaño de los archivos de audio multicanal sin perjudicar la calidad de sonido. AC-3 es un formato 5.1, lo que significa que proporciona cinco canales de ancho de banda completo para una mejor experiencia de usuario.
 
 Para obtener más información, consulte [Dolby Digital 5.1](https://www.dolby.com/us/en/technologies/dolby-digital.html).
 
 TVSDK admite las siguientes funciones AC-3 5.1:
 
-* Audio envolvente AC-3
-* Flujos mixtos/no mezclados para el tipo de audio envolvente
-* Posibilidad de consulta del dispositivo para ver si el códec de audio envolvente está disponible en el dispositivo.
+* Audio de sonido envolvente AC-3
+* Flujos mixtos/sin mezclar para el tipo de audio surround
+* Capacidad para consultar el dispositivo para ver si el códec de audio envolvente está disponible en el dispositivo.
 
-   Los resultados determinan qué tipo de códec de audio preferido se selecciona. Se descarta el manifiesto con el tipo de códec de audio que el dispositivo no va a usar. Por ejemplo, si se ha seleccionado el formato AC-3, no se tendrán en cuenta los perfiles con el formato de codificación de audio avanzada (AAC).
+   Los resultados determinan qué tipo de códec de audio preferido se selecciona. Se descarta el manifiesto con el tipo de códec de audio que el dispositivo no va a utilizar. Por ejemplo, si se ha seleccionado el formato AC-3, no se tienen en cuenta los perfiles con el formato Advanced Audio Coding (AAC).
 * Modo de paso
 
-   En el modo de paso, en lugar de descodificar los medios del formato AC-3 5.1 a un formato de modulación de código de impulso multicanal (PCM), el TVSDK se modifica o no se modifica (según el dispositivo) del medio Dolby desde el Decoder. Este medio se envía al dispositivo de audio (altavoz o receptor) para que el dispositivo de audio pueda descodificar y reproducir el flujo envolvente Dolby.
+   En el modo de paso a través, en lugar de descodificar el medio del formato AC-3 5.1 a un formato de modulación de código de impulso (PCM) multicanal, el TVSDK se modifica o no modifica (dependiendo del dispositivo) Dolby media desde el Decoder. Este medio se envía al dispositivo de audio (altavoz o receptor) para que el dispositivo de audio pueda descodificar y reproducir el flujo envolvente de Dolby.
 
 >[!IMPORTANT]
 >
@@ -43,7 +40,7 @@ No se admiten las siguientes funciones de AC-3 5.1:
 
 Este es el flujo de trabajo típico que se produce cuando TVSDK encuentra un manifiesto con medios AC-3 y AAC:
 
-1. Consultas TVSDK que admiten el códec del dispositivo.
+1. TVSDK consulta qué códec puede admitir el dispositivo.
 1. Se selecciona el códec con mayor calidad.
 
    Este es el orden en el que se selecciona la calidad:
@@ -57,11 +54,11 @@ Este es el flujo de trabajo típico que se produce cuando TVSDK encuentra un man
 >
 >La aplicación no puede obtener información sobre perfiles ignorados.
 
-## Determinar el modo de salida {#section_D2AFBF33D3904AC2A7C653A60C3A0CD3}
+## Determine el modo de salida {#section_D2AFBF33D3904AC2A7C653A60C3A0CD3}
 
-Durante el procesamiento de medios AC-3, si un dispositivo Android está conectado al sistema de altavoces, la decisión de reproducir contenido en modo envolvente o estéreo depende de cómo se configure el dispositivo.
+Durante el procesamiento de medios AC-3, si un dispositivo Android está conectado al sistema de altavoces, la decisión de reproducir contenido en modo surround o estéreo depende de cómo esté configurado el dispositivo.
 
-|  | **Sonido envolvente** | **Altavoz estéreo** |
+|  | **Sonido surround** | **Altavoz estéreo** |
 |---|---|---|
-| Configuración de dispositivo Dolby activado (o automático) | Configuración de dispositivo Dolby activado (o automático) | Modo estéreo |
+| Configuración del dispositivo Dolby activado (o automático) | Configuración del dispositivo Dolby activado (o automático) | Modo estéreo |
 | Configuración del dispositivo Dolby desactivado | Modo estéreo | Modo estéreo |
