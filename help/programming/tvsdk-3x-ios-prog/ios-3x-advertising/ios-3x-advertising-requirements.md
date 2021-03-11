@@ -1,13 +1,10 @@
 ---
-description: Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de Adobe Primetime para la toma de decisiones de publicidad.
-seo-description: Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de Adobe Primetime para la toma de decisiones de publicidad.
-seo-title: Requisitos de publicidad
+description: Puede insertar anuncios en su VOD y contenido en directo/lineal mediante la interfaz de Adobe Primetime ad decisioning .
 title: Requisitos de publicidad
-uuid: 0287f1e4-746f-42e5-b811-409064dd9b13
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
@@ -15,21 +12,21 @@ ht-degree: 0%
 
 # Requisitos de publicidad {#advertising-requirements}
 
-Puede insertar anuncios en el VOD y contenido en directo o lineal mediante la interfaz de Adobe Primetime para la toma de decisiones de publicidad.
+Puede insertar anuncios en su VOD y contenido en directo/lineal mediante la interfaz de Adobe Primetime ad decisioning .
 
 <!--<a id="section_A2966DC850E140FE9400A1D9E412F819"></a>-->
 
-Primetime y la toma de decisiones funciona con TVSDK para identificar oportunidades de publicidad, resolver publicidades e insertar publicidades resueltas en sus flujos de vídeo.
+La toma de decisiones de anuncios de Primetime funciona con TVSDK para identificar oportunidades de publicidad, resolver anuncios e insertar anuncios resueltos en sus flujos de vídeo.
 
-Para incorporar publicidades en el contenido de vídeo, asegúrese de que la publicidad y el contenido de vídeo principal cumplen los siguientes requisitos:
+Para incorporar publicidades al contenido del vídeo, asegúrese de que la publicidad y el contenido del vídeo principal cumplan los siguientes requisitos:
 
-* La versión HLS del contenido de publicidad no puede ser superior a la versión HLS del contenido principal.
-* Las publicidades deben ser multiplexadas y contener una representación solo de audio, independientemente de si el contenido principal está multiplexado.
+* La versión HLS del contenido publicitario no puede ser superior a la versión HLS del contenido principal.
+* Los anuncios deben ser multiplexados y contener una representación de solo audio, independientemente de si el contenido principal está multiplexado o no.
 * Las listas de reproducción de anuncios deben tener las mismas representaciones de velocidad de bits que las representaciones de la lista de reproducción de contenido principal.
-* La duración del destinatario y la duración del fragmento individual de un anuncio no pueden superar la duración del destinatario del contenido principal.
-* Si el contenido principal contiene un flujo de solo audio, el contenido de la publicidad también debe contener un flujo de solo audio.
-* Si el contenido principal contiene flujos de subtítulos, el contenido de la publicidad debe estar sin cifrar.
-* Si el contenido principal es una velocidad de bits múltiple (MBR), el contenido de la publicidad también debe ser MBR.
+* La duración objetivo y la duración de fragmento individual de un anuncio no pueden superar la duración objetivo del contenido principal.
+* Si el contenido principal contiene un flujo de solo audio, el contenido publicitario también debe contener un flujo de solo audio.
+* Si el contenido principal contiene secuencias de subtítulos, el contenido publicitario debe estar sin encriptar.
+* Si el contenido principal es una tasa de bits múltiple (MBR), el contenido publicitario también debe ser MBR.
 * Si el contenido principal tiene pistas de audio alternativas, cada anuncio debe tener al menos un flujo de solo audio.
 
-Si la publicidad no tiene al menos un flujo de solo audio, se omitirá.
+Si el anuncio no tiene al menos un flujo de solo audio, se omite el anuncio.
