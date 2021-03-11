@@ -1,13 +1,10 @@
 ---
-description: El SDK de TVSDK del explorador distribuye eventos de calidad de servicio (QoS) para notificar a la aplicación sobre eventos que podrían influir en el cálculo de las estadísticas de QoS, como el almacenamiento en búfer y la búsqueda de eventos.
-seo-description: El SDK de TVSDK del explorador distribuye eventos de calidad de servicio (QoS) para notificar a la aplicación sobre eventos que podrían influir en el cálculo de las estadísticas de QoS, como el almacenamiento en búfer y la búsqueda de eventos.
-seo-title: Eventos de QoS
+description: El TVSDK del explorador envía eventos de calidad de servicio (QoS) para notificar a la aplicación de los eventos que pueden influir en el cálculo de las estadísticas de QoS, como el almacenamiento en búfer y la búsqueda de eventos.
 title: Eventos de QoS
-uuid: 3384bc51-b435-4cd9-a1f8-9abf2605205b
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '105'
 ht-degree: 1%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 1%
 
 # Eventos de QoS{#qos-events}
 
-El SDK de TVSDK del explorador distribuye eventos de calidad de servicio (QoS) para notificar a la aplicación sobre eventos que podrían influir en el cálculo de las estadísticas de QoS, como el almacenamiento en búfer y la búsqueda de eventos.
+El TVSDK del explorador envía eventos de calidad de servicio (QoS) para notificar a la aplicación de los eventos que pueden influir en el cálculo de las estadísticas de QoS, como el almacenamiento en búfer y la búsqueda de eventos.
 
-Para recibir notificaciones sobre todos los eventos relacionados con QoS, cree una instancia de `AdobePSDK.QOSProvider` y adjunte la instancia de MediaPlayer a esta instancia `QOSProvider`:
+Para recibir notificaciones sobre todos los eventos relacionados con QoS, cree una instancia de `AdobePSDK.QOSProvider` y adjunte la instancia de MediaPlayer a esta instancia de `QOSProvider`:
 
 ```js
 var qosProvider = new AdobePSDK.QOSProvider(); 
