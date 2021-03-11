@@ -1,25 +1,22 @@
 ---
-description: Puede habilitar la reserva cuando una publicidad en línea VMAP contenga un tipo de medio no válido.
-seo-description: Puede habilitar la reserva cuando una publicidad en línea VMAP contenga un tipo de medio no válido.
-seo-title: Definir el comportamiento de las publicidades de reserva para las publicidades en línea de VMAP
-title: Definir el comportamiento de las publicidades de reserva para las publicidades en línea de VMAP
-uuid: bc8cb0b4-5ea9-429b-ab5d-746c6f03e74b
+description: Puede habilitar la reserva cuando un anuncio en línea VMAP contenga un tipo de medio no válido.
+title: Definir el comportamiento de las publicidades de reserva para las publicidades en línea VMAP
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '108'
 ht-degree: 0%
 
 ---
 
 
-# Defina el comportamiento de las publicidades de reserva para las publicidades en línea de VMAP {#define-fallback-ad-behavior-for-vmap-inline-ads}
+# Defina el comportamiento de los anuncios en línea de VMAP {#define-fallback-ad-behavior-for-vmap-inline-ads}
 
-Puede habilitar la reserva cuando una publicidad en línea VMAP contenga un tipo de medio no válido.
+Puede habilitar la reserva cuando un anuncio en línea VMAP contenga un tipo de medio no válido.
 
-1. Establezca `setFallbackOnInvalidCreativeEnabled` en `true` para que VMAP se devuelva cuando el tipo de medio de un anuncio lineal/en línea no sea válido para HLS.
+1. Configure `setFallbackOnInvalidCreativeEnabled` en `true` para que VMAP vuelva a aparecer cuando el tipo de medio de un anuncio lineal/en línea no sea válido para HLS.
 
-   El valor predeterminado es `false`. Si un anuncio lineal falla porque tiene un tipo de medio no válido o porque no se puede volver a empaquetar el anuncio, este indicador permite que Primetime y la decisión de la publicidad sigan el mismo comportamiento de reserva que si el anuncio fuera un contenedor VAST vacío.
+   El valor predeterminado es `false`. Si un anuncio lineal falla porque tiene un tipo de medio no válido o porque no se puede volver a empaquetar, este indicador permite que la toma de decisiones de anuncio de Primetime siga el mismo comportamiento de reserva que si el anuncio fuera un envoltorio VAST vacío.
 
    ```java
    AuditudeSettings result = new AuditudeSettings(); 
