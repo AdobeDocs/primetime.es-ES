@@ -1,41 +1,38 @@
 ---
-description: Para mostrar anuncios en letreros, debe crear instancias de letreros y permitir que TVSDK escuche eventos relacionados con anuncios.
-seo-description: Para mostrar anuncios en letreros, debe crear instancias de letreros y permitir que TVSDK escuche eventos relacionados con anuncios.
-seo-title: Mostrar publicidades tipo titular
-title: Mostrar publicidades tipo titular
-uuid: cfd4b26c-9643-4b60-9aff-bc27dec289f1
+description: Para mostrar anuncios de banners, debe crear instancias de banners y permitir que TVSDK escuche eventos relacionados con anuncios.
+title: Mostrar anuncios de tipo titular
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
 
-# Mostrar publicidades tipo titular {#display-banner-ads}
+# Mostrar anuncios de tipo titular {#display-banner-ads}
 
-Para mostrar anuncios en letreros, debe crear instancias de letreros y permitir que TVSDK escuche eventos relacionados con anuncios.
+Para mostrar anuncios de banners, debe crear instancias de banners y permitir que TVSDK escuche eventos relacionados con anuncios.
 
-TVSDK proporciona una lista de publicidades tipo titular complementarias que están asociadas con una publicidad lineal a través del evento `AdPlaybackEventListener.onAdBreakStart`.
+TVSDK proporciona una lista de anuncios de tipo titular asociados a un anuncio lineal a través del evento `AdPlaybackEventListener.onAdBreakStart` .
 
-Los manifiestos pueden especificar publicidades de titular complementarias mediante:
+Los manifiestos pueden especificar anuncios de banners complementarios mediante:
 
-* Un fragmento de código HTML
-* Dirección URL de una página de iFrame
-* La URL de una imagen estática o un archivo SWF de Adobe Flash
+* Un fragmento HTML
+* La dirección URL de una página de iFrame
+* La URL de una imagen estática o un archivo SWF de Flash de Adobe
 
-Para cada anuncio complementario, TVSDK indica los tipos disponibles para la aplicación.
+Para cada anuncio complementario, TVSDK indica qué tipos están disponibles para su aplicación.
 
-1. Añada un detector para el evento `AdPlaybackEventListener.onAdBreakStart` que haga lo siguiente:
+1. Añada un oyente para el evento `AdPlaybackEventListener.onAdBreakStart` que haga lo siguiente:
 
-   * Borra las publicidades existentes en la instancia del letrero.
-   * Obtiene la lista de publicidades complementarias de `Ad.getCompanionAssets`.
-   * Si la lista de anuncios complementarios no está vacía, repita la lista para las instancias de letreros.
+   * Borra los anuncios existentes en la instancia del banner.
+   * Obtiene la lista de anuncios complementarios de `Ad.getCompanionAssets`.
+   * Si la lista de anuncios complementarios no está vacía, repita la lista para las instancias de banner.
 
-      Cada instancia de pancarta (una `AdAsset`) contiene información como, por ejemplo, ancho, alto, tipo de recurso (html, iframe o static) y datos necesarios para mostrar la pancarta adjunta.
+      Cada instancia de banner (un `AdAsset`) contiene información, como ancho, alto, tipo de recurso (html, iframe o static) y datos necesarios para mostrar el banner complementario.
    * Si una publicidad de vídeo no tiene anuncios complementarios reservados con ella, la lista de recursos complementarios no contiene datos para esa publicidad de vídeo.
-   * Para mostrar una publicidad en pantalla independiente, agregue la lógica a la secuencia de comandos para ejecutar una etiqueta de visualización de publicidad en DFP normal (DoubleClick para editores) en la instancia de letrero adecuada.
-   * Envía la información del letrero a una función de la página que muestra los letreros en una ubicación adecuada.
+   * Para mostrar un anuncio en pantalla independiente, agregue la lógica a la secuencia de comandos para ejecutar una etiqueta de publicidad de visualización DFP normal (DoubleClick for Publishers) en la instancia de banner adecuada.
+   * Envía la información del banner a una función de la página que muestra los banners en una ubicación adecuada.
 
-      Generalmente es `div` y su función utiliza `div ID` para mostrar la pancarta.
+      Normalmente es `div` y su función utiliza el `div ID` para mostrar el banner.
