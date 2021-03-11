@@ -1,21 +1,18 @@
 ---
-description: Cuando TVSDK detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta procesar automáticamente la etiqueta y exponerla en forma de objeto PTTimedMetadata.
-seo-description: Cuando TVSDK detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta procesar automáticamente la etiqueta y exponerla en forma de objeto PTTimedMetadata.
-seo-title: Clase de metadatos temporizados
+description: Cuando TVSDK detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta automáticamente procesar la etiqueta y exponerla en forma de objeto PTTimedMetadata .
 title: Clase de metadatos temporizados
-uuid: d1ac6b0b-163f-4968-9160-0f60ff439c09
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
 
 
-# Clase de metadatos temporizados{#timed-metadata-class}
+# Clase de metadatos temporizada{#timed-metadata-class}
 
-Cuando TVSDK detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta procesar automáticamente la etiqueta y exponerla en forma de objeto PTTimedMetadata.
+Cuando TVSDK detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta automáticamente procesar la etiqueta y exponerla en forma de objeto PTTimedMetadata .
 
 La clase proporciona los siguientes elementos:
 
@@ -41,7 +38,7 @@ La clase proporciona los siguientes elementos:
   <tr> 
    <td colname="col1"><span class="codeph"> time</span> </td> 
    <td colname="col02"><span class="codeph"> CMTime</span></td> 
-   <td colname="col2"> La posición de tiempo, en milisegundos, en relación con el inicio del contenido principal en el que están presentes los metadatos temporizados en el flujo. </td> 
+   <td colname="col2"> Posición temporal, en milisegundos, relativa al inicio del contenido principal en el que están presentes los metadatos temporizados en la emisión. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> type</span> </td> 
@@ -49,7 +46,7 @@ La clase proporciona los siguientes elementos:
    <td colname="col2">Tipo de metadatos temporizados. 
     <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
      <li id="li_739D30561BFB4D9B97DF212E4880BA2C">TAG: indica que los metadatos temporizados se crearon a partir de una etiqueta de la lista de reproducción/manifiesto. </li> 
-     <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3: indica que los metadatos temporizados se crearon a partir de una etiqueta ID3 en el flujo de medios. </li> 
+     <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3 : indica que los metadatos temporizados se crearon a partir de una etiqueta ID3 en el flujo de medios. </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
@@ -75,8 +72,8 @@ Recuerde lo siguiente:
 
 | Elemento | Descripción |
 |---|---|
-| TAG, ID3 | Tipos posibles para los metadatos temporizados. |
-| `@property (nonatomic, assign) CMTime time` | La posición de tiempo, en relación con el inicio del contenido principal, donde se insertaron estos metadatos en el flujo. |
+| TAG, ID3 | Tipos posibles de metadatos temporizados. |
+| `@property (nonatomic, assign) CMTime time` | Posición temporal, relativa al inicio del contenido principal, donde estos metadatos se insertaron en el flujo. |
 | `@property (nonatomic, assign) PTTimedMetadataType type` | Devuelve el tipo de metadatos temporizados. |
 | `@property (nonatomic, retain) NSString *metadataId` | Devuelve el ID extraído de los atributos cue/tag. De lo contrario, se proporciona un valor aleatorio único. |
 | `@property (nonatomic, retain) NSString *name` | Devuelve el nombre del cue, que suele ser el nombre de la etiqueta HLS. |
