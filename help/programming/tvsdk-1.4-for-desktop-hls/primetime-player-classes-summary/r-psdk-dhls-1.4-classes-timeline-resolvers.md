@@ -1,13 +1,10 @@
 ---
-description: Estas clases ayudan a resolver el contenido, como las publicidades, que se va a colocar en la línea de tiempo.
-seo-description: Estas clases ayudan a resolver el contenido, como las publicidades, que se va a colocar en la línea de tiempo.
-seo-title: Clases de resolución de línea de tiempo
+description: Estas clases ayudan a resolver contenido, como anuncios, que se colocarán en la cronología.
 title: Clases de resolución de línea de tiempo
-uuid: a36349b2-23ee-4774-99b2-7e1cd9168686
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '99'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Clases de resolución de línea de tiempo{#timeline-resolvers-classes}
 
-Estas clases ayudan a resolver el contenido, como las publicidades, que se va a colocar en la línea de tiempo.
+Estas clases ayudan a resolver contenido, como anuncios, que se colocarán en la cronología.
 
-Paquete: [com.adobe.mediacore.timeline.resolvers](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/resolvers/package-detail.html)
+Paquete: [com.adobe.mediacore.time.resolvers](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/resolvers/package-detail.html)
 
 | Nombre | Descripción |
 |---|---|
