@@ -1,31 +1,28 @@
 ---
-description: Puede implementar una barra de control con compatibilidad con DVR para VOD y transmisión en directo. La compatibilidad con DVR incluye el concepto de una ventana que se puede buscar y el punto activo del cliente.
-seo-description: Puede implementar una barra de control con compatibilidad con DVR para VOD y transmisión en directo. La compatibilidad con DVR incluye el concepto de una ventana que se puede buscar y el punto activo del cliente.
-seo-title: Construir una barra de control mejorada para DVR
-title: Construir una barra de control mejorada para DVR
-uuid: 83c56def-a454-4f26-bdfc-2ef2497ef9bd
+description: Puede implementar una barra de control con soporte DVR para VOD y transmisión en vivo. La compatibilidad con DVR incluye el concepto de una ventana que se puede buscar y el punto activo del cliente.
+title: Construya una barra de control mejorada para DVR
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
 
-# Construir una barra de control mejorada para DVR{#construct-a-control-bar-enhanced-for-dvr}
+# Construya una barra de control mejorada para DVR{#construct-a-control-bar-enhanced-for-dvr}
 
-Puede implementar una barra de control con compatibilidad con DVR para VOD y transmisión en directo. La compatibilidad con DVR incluye el concepto de una ventana que se puede buscar y el punto activo del cliente.
+Puede implementar una barra de control con soporte DVR para VOD y transmisión en vivo. La compatibilidad con DVR incluye el concepto de una ventana que se puede buscar y el punto activo del cliente.
 
 * Para VOD, la longitud de la ventana que se puede buscar es la duración de todo el recurso.
-* Para la transmisión en directo, la duración de la ventana DVR (buskable) se define como el intervalo de tiempo que comienza en la ventana de reproducción en directo y termina en el punto de activación del cliente.
+* Para la transmisión en directo, la longitud de la ventana DVR (buskable) se define como el intervalo de tiempo que comienza en la ventana de reproducción en directo y termina en el punto de activación del cliente.
 
-   El punto activo del cliente se calcula restando la longitud almacenada en el búfer del extremo de la ventana activa. La duración del destinatario es un valor mayor o igual que la duración máxima de un fragmento en el manifiesto.
+   El punto activo del cliente se calcula restando la longitud almacenada en el búfer del final de la ventana activa. La duración del objetivo es un valor mayor o igual que la duración máxima de un fragmento en el manifiesto.
 
-   La barra de control para la reproducción en directo admite DVR colocando primero el pulgar en el punto activo del cliente al iniciar la reproducción y mostrando una región que marca el área en la que no se permite la búsqueda.
+   La barra de control para la reproducción en directo admite DVR colocando primero el pulgar en el punto de lanzamiento del cliente al iniciar la reproducción y mostrando una región que marca el área donde no se permite la búsqueda.
 
 Para una barra de control:
 
-1. Añada una superposición en la barra de control que representa el rango de reproducción.
+1. Agregue una superposición a la barra de control que represente el intervalo de reproducción.
 
-1. Cuando el usuario inicio buscar, compruebe si la posición deseada de la búsqueda está dentro del rango buscable.
+1. Cuando el usuario empiece a buscar, compruebe si la posición de búsqueda deseada está dentro del rango en el que se puede buscar.
