@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Implementar compatibilidad con capítulos
 title: Implementar compatibilidad con capítulos
-uuid: f62a8244-6393-4a38-9ae2-8ac31f6a8a06
+description: Implementar compatibilidad con capítulos
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '60'
 ht-degree: 0%
 
 ---
@@ -15,15 +13,15 @@ ht-degree: 0%
 
 # Implementar compatibilidad con capítulos {#implement-chapter-support}
 
-Puede definir y rastrear *capítulos personalizados* para el seguimiento de vídeo en aplicaciones basadas en TVSDK.
+Puede definir y rastrear capítulos *personalizados* para el seguimiento de vídeo en aplicaciones basadas en TVSDK.
 
-Los capítulos personalizados son administrados por la aplicación y se basan en datos CMS o de otra manera que la aplicación utiliza para definir capítulos.
+Los capítulos personalizados los gestiona la aplicación y se basan en datos de CMS o en otra forma que la aplicación utilice para definir capítulos.
 
 >[!CAUTION]
 >
->Los capítulos predeterminados no se admiten en el SDK 2.5 de Android.
+>Los capítulos predeterminados no son compatibles con el Android TVSDK 2.5.
 
-1. Defina y rastree los capítulos personalizados.
+1. Defina y rastree capítulos personalizados.
 
    ```java
    // First, enable chapter tracking by setting   
