@@ -1,13 +1,10 @@
 ---
-description: Estas clases ayudan a realizar operaciones que afectan a la línea de tiempo.
-seo-description: Estas clases ayudan a realizar operaciones que afectan a la línea de tiempo.
-seo-title: Clases de operaciones de línea de tiempo
+description: Estas clases ayudan a realizar operaciones que afectan a la cronología.
 title: Clases de operaciones de línea de tiempo
-uuid: ecf0f27c-b2f2-46a9-b57c-1401f6ce934e
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Clases de operaciones de línea de tiempo{#timeline-operations-classes}
 
-Estas clases ayudan a realizar operaciones que afectan a la línea de tiempo.
+Estas clases ayudan a realizar operaciones que afectan a la cronología.
 
-Paquete: [com.adobe.mediacore.timeline.operations](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/operations/package-detail.html)
+Paquete: [com.adobe.mediacore.línea de tiempo.operations](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/timeline/operations/package-detail.html)
 
 | Nombre | Descripción |
 |---|---|
