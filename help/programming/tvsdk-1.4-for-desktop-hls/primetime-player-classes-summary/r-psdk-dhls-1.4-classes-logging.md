@@ -1,21 +1,18 @@
 ---
-description: Estas clases le permiten personalizar el registro.
-seo-description: Estas clases le permiten personalizar el registro.
-seo-title: Clases de registro
+description: Estas clases permiten personalizar el registro.
 title: Clases de registro
-uuid: 947f3ec8-c5fe-4a55-b306-f338205ab4e6
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '163'
 ht-degree: 0%
 
 ---
 
 
-# Clases de registro{#logging-classes}
+# Registrando clases{#logging-classes}
 
-Estas clases le permiten personalizar el registro.
+Estas clases permiten personalizar el registro.
 
 Paquete: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/package-detail.html)
 
@@ -28,12 +25,12 @@ Paquete: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/ap
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/BaseLogger.html" format="html" scope="external"> BaseLogger</a></span> </td> 
-   <td colname="2"> Clase. Clase de implementación base de la interfaz del registrador. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/BaseLogger.html" format="html" scope="external"> Logger base</a></span> </td> 
+   <td colname="2"> Clase. Clase de implementación básica de la interfaz del registrador. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/DefaultLogger.html" format="html" scope="external"> DefaultLogger</a></span> </td> 
-   <td colname="2"> Clase. El registrador predeterminado envía todo el mensaje entrante para rastrear. </td> 
+   <td colname="2"> Clase. El registrador predeterminado envía todos los mensajes entrantes para rastrear. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Log.html" format="html" scope="external"> Registro</a></span> </td> 
