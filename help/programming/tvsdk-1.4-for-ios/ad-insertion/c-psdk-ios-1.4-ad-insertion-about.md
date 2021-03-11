@@ -1,46 +1,43 @@
 ---
-description: La inserción de anuncios resuelve anuncios para vídeo a petición (VOD), para flujo continuo en directo y para flujo continuo lineal con seguimiento de anuncios y reproducción de anuncios. TVSDK realiza las solicitudes necesarias al servidor de publicidad, recibe información sobre las publicidades del contenido especificado y coloca las publicidades en el contenido en fases.
-seo-description: La inserción de anuncios resuelve anuncios para vídeo a petición (VOD), para flujo continuo en directo y para flujo continuo lineal con seguimiento de anuncios y reproducción de anuncios. TVSDK realiza las solicitudes necesarias al servidor de publicidad, recibe información sobre las publicidades del contenido especificado y coloca las publicidades en el contenido en fases.
-seo-title: Insertar publicidades
+description: La inserción de publicidad resuelve los anuncios para vídeo bajo demanda (VOD) , para flujo continuo en directo y para flujo lineal con seguimiento de anuncios y reproducción de anuncios. TVSDK realiza las solicitudes necesarias al servidor de publicidad, recibe información sobre las publicidades del contenido especificado y coloca las publicidades en el contenido por fases.
 title: Insertar publicidades
-uuid: 6fffb340-65ea-4c47-a55b-c0ec4917d37c
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---
 
 
-# Insertar publicidades{#insert-ads}
+# Insertar anuncios{#insert-ads}
 
-La inserción de anuncios resuelve anuncios para vídeo a petición (VOD), para flujo continuo en directo y para flujo continuo lineal con seguimiento de anuncios y reproducción de anuncios. TVSDK realiza las solicitudes necesarias al servidor de publicidad, recibe información sobre las publicidades del contenido especificado y coloca las publicidades en el contenido en fases.
+La inserción de publicidad resuelve los anuncios para vídeo bajo demanda (VOD) , para flujo continuo en directo y para flujo lineal con seguimiento de anuncios y reproducción de anuncios. TVSDK realiza las solicitudes necesarias al servidor de publicidad, recibe información sobre las publicidades del contenido especificado y coloca las publicidades en el contenido por fases.
 
-Un *`ad break`* contiene una o más publicidades que se reproducen en secuencia. TVSDK inserta las publicidades en el contenido principal como miembros de uno o varios saltos de publicidad.
+Un *`ad break`* contiene uno o más anuncios que se reproducen en secuencia. TVSDK inserta anuncios en el contenido principal como miembros de una o más pausas publicitarias.
 
 >[!TIP]
 >
->Si la publicidad tiene errores, TVSDK la ignora.
+>Si el anuncio tiene errores, TVSDK ignora el anuncio.
 
-## Resolver e insertar publicidades de VOD {#section_157344F857C64F36B48AD441F6E7FABA}
+## Resolver e insertar anuncios de VOD {#section_157344F857C64F36B48AD441F6E7FABA}
 
 TVSDK admite varios casos de uso para la resolución e inserción de anuncios de VOD.
 
-* Inserción previa de publicidad, donde las publicidades se insertan al principio del contenido.
-* Inserción de anuncio intermedia, donde se inserta al menos un anuncio en medio del contenido.
-* Inserción de anuncio posterior, donde al menos una publicidad se anexa al final del contenido.
+* Inserción de anuncio pre-roll, donde los anuncios se insertan al principio del contenido.
+* Inserción de anuncio mid-roll, donde se inserta al menos un anuncio en medio del contenido.
+* Inserción de anuncio posterior a la emisión, donde se anexa al final del contenido al menos un anuncio.
 
-TVSDK resuelve las publicidades, inserta las publicidades en ubicaciones definidas por el servidor de publicidad y calcula la línea de tiempo virtual antes de los inicios de reproducción. Después de los inicios de reproducción, no se pueden producir cambios, como anuncios insertados o insertados que se eliminan.
+TVSDK resuelve los anuncios, los inserta en ubicaciones definidas por el servidor de publicidad y calcula la cronología virtual antes de que comience la reproducción. Una vez que comienza la reproducción, no se pueden producir cambios, como insertarse o eliminar anuncios insertados.
 
-## Resuelva e inserte anuncios en directo y lineal {#section_A6A1BB262D084462A1D134083556B7CC}
+## Resuelva e inserte anuncios en vivo y lineales {#section_A6A1BB262D084462A1D134083556B7CC}
 
-TVSDK admite varios casos de uso para la resolución e inserción de anuncios en directo y lineal.
+TVSDK admite varios casos de uso para la resolución y la inserción de anuncios en directo y lineal.
 
-* Inserción previa de publicidad, donde al menos se inserta una publicidad al principio del contenido.
-* Inserción de anuncio intermedia, donde se inserta al menos un anuncio en medio del contenido.
+* Inserción de anuncio previo a la emisión, donde se inserta al menos un anuncio al principio del contenido.
+* Inserción de anuncio mid-roll, donde se inserta al menos un anuncio en medio del contenido.
 
-TVSDK resuelve los anuncios e inserta los anuncios cuando se encuentra un punto de referencia en el flujo en directo o lineal. De forma predeterminada, TVSDK admite las siguientes indicaciones como marcadores de publicidad válidos al resolver y colocar publicidades:
+TVSDK resuelve los anuncios e inserta los anuncios cuando se encuentra un punto de referencia en el flujo en directo o lineal. De forma predeterminada, TVSDK admite las siguientes indicaciones como marcadores de publicidad válidos al resolver y colocar anuncios:
 
 * # EXT-X-CUEPOINT
 * # EXT-X-AD
@@ -53,28 +50,28 @@ Estos marcadores requieren el `DURATION` en segundos del campo de metadatos y el
 #EXT-X-CUE DURATION=27 ID=identiferForThisCue ... 
 ```
 
-Para obtener más información sobre las indicaciones adicionales, consulte [Suscripción a etiquetas personalizadas](../ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-custom-tags-subscribe.md).
+Para obtener más información sobre sugerencias adicionales, consulte [Suscribirse a etiquetas personalizadas](../ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-custom-tags-subscribe.md).
 
-## Rastrear publicidad de cliente {#section_12355C7A35F14C15A2A18AAC90FEC2F5}
+## Seguimiento del anuncio de cliente {#section_12355C7A35F14C15A2A18AAC90FEC2F5}
 
-TVSDK rastrea automáticamente las publicidades para VOD y flujo en directo/lineal.
+TVSDK rastrea automáticamente los anuncios para VOD y flujo en directo/lineal.
 
-Las notificaciones se utilizan para informar a la aplicación sobre el progreso de una publicidad, incluida la información sobre cuándo comienza y cuándo finaliza una publicidad.
+Las notificaciones se utilizan para informar a la aplicación del progreso de una publicidad, incluida la información sobre cuándo comienza y cuándo finaliza una publicidad.
 
 ## Implementar un retorno de pausa publicitaria anticipado {#section_EEB9FE62CA7E4790B58D3CA906F43DCF}
 
-Para la inserción de anuncios en directo, es posible que tenga que salir de una pausa publicitaria antes de que todas las publicidades del desglose se reproduzcan hasta la finalización.
+Para la inserción de anuncios en directo, es posible que tenga que salir de una pausa publicitaria antes de que todos los anuncios de la pausa se reproduzcan hasta el final.
 
-Estos son algunos ejemplos de un retorno de pausa publicitaria anticipado:
+Estos son algunos ejemplos de un retorno anticipado de pausa publicitaria:
 
 * Duración de la pausa publicitaria en determinados eventos deportivos.
 
-   Aunque se proporciona una duración predeterminada, si el juego se reanuda antes de que finalice la pausa, la pausa publicitaria debe salir.
-* Una señal de emergencia durante una pausa publicitaria en un flujo en directo.
+   Aunque se proporciona una duración predeterminada, si el juego se reanuda antes de que finalice la pausa publicitaria, esta debe salir.
+* Señal de emergencia durante una pausa publicitaria en una emisión en directo.
 
-La capacidad de salir de una pausa publicitaria antes se identifica mediante una etiqueta personalizada en el manifiesto conocida como un empalme o una etiqueta de inicio. TVSDK permite a la aplicación suscribirse a estas etiquetas de empalme para proporcionar una oportunidad de empalme.
+La capacidad de salir de una pausa publicitaria anticipadamente se identifica mediante una etiqueta personalizada en el manifiesto conocida como empalme o etiqueta de inclusión. TVSDK permite que la aplicación se suscriba a estas etiquetas de complemento para proporcionar una oportunidad de complemento.
 
-* Para utilizar la etiqueta `#EXT-X-CUE-IN` como una oportunidad de empalme e implementar un retorno de pausa publicitaria temprano:
+* Para utilizar la etiqueta `#EXT-X-CUE-IN` como una oportunidad de inicio de secuencia e implementar un retorno de pausa publicitaria anticipado:
 
    1. Suscríbase a la etiqueta .
 
@@ -82,7 +79,7 @@ La capacidad de salir de una pausa publicitaria antes se identifica mediante una
       [PTSDKConfig setSubscribedTags:[NSArray arrayWithObject:@"#EXT-X-CUE-IN"]];
       ```
 
-   1. Añada la resolución de la oportunidad de inicio de sesión.
+   1. Añada la resolución de oportunidad de cue-in.
 
       ```
       // self.player is the PTMediaPlayer instance created for content and ad playback 
@@ -92,13 +89,13 @@ La capacidad de salir de una pausa publicitaria antes se identifica mediante una
       [clientFactory registerOpportunityResolver:[PTDefaultAdSpliceInOpportunityResolver adSpliceInOpportunityResolverWithTag:@"#EXT-X-CUE-IN"]];
       ```
 
-* Para compartir la misma etiqueta para salir y empalmar:
+* Para compartir la misma etiqueta para el empalme y el empalme:
 
-   1. Si la aplicación está compartiendo la misma señal para indicar cue-out/splice-out y cue-in/splice-in, extienda `PTDefaultAdOpportunityResolver` e implemente el método `preparePlacementOpportunity`.
+   1. Si la aplicación está compartiendo el mismo cue para indicar cue-out/splice-out y cue-in/splice-in, amplíe `PTDefaultAdOpportunityResolver` e implemente el método `preparePlacementOpportunity`.
 
       >[!TIP]
       >
-      >El siguiente código supone que la aplicación tiene una implementación para el método `isCueInOpportunity`.
+      >El siguiente código supone que la aplicación tiene una implementación para el método `isCueInOpportunity` .
       >
       >
       ```
@@ -115,7 +112,7 @@ La capacidad de salir de una pausa publicitaria antes se identifica mediante una
       >}
       >```
 
-   1. Registre la resolución de oportunidad extendida en la instancia `PTDefaultMediaPlayerClientFactory`.
+   1. Registre la resolución de oportunidad extendida en la instancia `PTDefaultMediaPlayerClientFactory` .
 
       ```
       // self.player is the PTMediaPlayer instance created for content and ad playback 
