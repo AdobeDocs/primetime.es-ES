@@ -1,25 +1,22 @@
 ---
-description: El TVSDK proporciona API y código de muestra para controlar los períodos de interrupción.
-seo-description: El TVSDK proporciona API y código de muestra para controlar los períodos de interrupción.
-seo-title: Implementación de la gestión de interrupciones
-title: Implementación de la gestión de interrupciones
-uuid: 38a78a57-b641-439a-a7d8-da571a0902e4
+description: El SDK de TVSDK proporciona API y código de muestra para controlar los periodos de interrupción.
+title: Implementación de la gestión de bloqueos
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '129'
 ht-degree: 1%
 
 ---
 
 
-# Implementar la administración de bloqueos {#implement-blackout-handling}
+# Implementación de la gestión de bloqueos {#implement-blackout-handling}
 
-El TVSDK proporciona API y código de muestra para controlar los períodos de interrupción.
+El SDK de TVSDK proporciona API y código de muestra para controlar los periodos de interrupción.
 
-Para implementar la gestión de apagones y proporcionar contenido alternativo durante la interrupción:
+Para implementar la gestión de bloqueos y proporcionar contenido alternativo durante la interrupción:
 
-1. Configure la aplicación para suscribirse a etiquetas de bloqueo en un manifiesto de flujo en directo.
+1. Configure la aplicación para suscribirse a las etiquetas de interrupción en un manifiesto de flujo en directo.
 
 ```
  - (void) createMediaPlayer:(PTMediaPlayerItem *)item
@@ -30,7 +27,7 @@ Para implementar la gestión de apagones y proporcionar contenido alternativo du
  }
 ```
 
-1. Añada un detector de notificaciones para `PTTimedMetadataChangedNotification`.
+1. Agregue un oyente de notificación para `PTTimedMetadataChangedNotification`.
 
    ```
    - (void)addobservers 
@@ -64,7 +61,7 @@ Para implementar la gestión de apagones y proporcionar contenido alternativo du
    }
    ```
 
-1. Gestionar objetos `TimedMetadata` con actualizaciones constantes durante la reproducción.
+1. Gestione objetos `TimedMetadata` con actualizaciones constantes durante la reproducción.
 
    ```
    - (void)onMediaPlayerTimeChange:(NSNotification *)notification 
@@ -85,7 +82,7 @@ Para implementar la gestión de apagones y proporcionar contenido alternativo du
    }
    ```
 
-1. Añada el controlador `PTTimedMetadata` para cambiar al contenido alternativo y volver al contenido principal como lo indica el objeto `PTTimedMetadata` y su tiempo de reproducción.
+1. Agregue el controlador `PTTimedMetadata` para cambiar al contenido alternativo y regresar al contenido principal como indica el objeto `PTTimedMetadata` y su tiempo de reproducción.
 
    ```
    - (void)handleCollectionAtTime:(int)currentTime 
@@ -200,7 +197,7 @@ Para implementar la gestión de apagones y proporcionar contenido alternativo du
    }
    ```
 
-1. Implemente un método de escucha para objetos `PTTimedMetadata` en segundo plano.
+1. Implemente un método de escucha para los objetos `PTTimedMetadata` en segundo plano.
 
    ```
    - (void)onSubscribedTagInBackground:(NSNotification *)notification 
@@ -230,7 +227,7 @@ Para implementar la gestión de apagones y proporcionar contenido alternativo du
    }
    ```
 
-1. Si el rango de interrupción está en el DVR en el flujo de reproducción, actualice los rangos que no se pueden buscar.
+1. Si el rango de bloqueo está en el DVR en el flujo de reproducción, actualice los rangos no buscables.
 
    ```
    // This sample assumes that blackoutStartTimedMetadata is the PTTimedMetadata  
