@@ -1,13 +1,10 @@
 ---
-description: Puede implementar sus propios detectores de oportunidades.
-seo-description: Puede implementar sus propios detectores de oportunidades.
-seo-title: Implementar un detector de oportunidades personalizado
+description: Puede implementar sus propios detectores de oportunidad.
 title: Implementar un detector de oportunidades personalizado
-uuid: 18fb431b-4585-4293-92a7-b77ab7f9b7db
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '160'
 ht-degree: 0%
 
 ---
@@ -15,18 +12,18 @@ ht-degree: 0%
 
 # Implementar un detector de oportunidades personalizado{#implement-a-custom-opportunity-detector}
 
-Puede implementar sus propios detectores de oportunidades.
+Puede implementar sus propios detectores de oportunidad.
 
-* Si el generador de oportunidades está basado en `TimedMetadata` objetos asociados con el flujo de medios actual, debe extender el `SpliceOutOpportunityGenerator` o `TimedMetadataOpportunityGenerator`.
+* Si el generador de oportunidades se basa en `TimedMetadata` objetos asociados con el flujo de medios actual, debe ampliar `SpliceOutOpportunityGenerator` o `TimedMetadataOpportunityGenerator`.
 
-* Si el generador de oportunidades se basa en datos fuera de banda proporcionados por un servicio externo (como un CIS), entonces debe extender el `OpportunityGenerator`.
+* Si el generador de oportunidades se basa en datos fuera de banda proporcionados por un servicio externo (como un CIS), entonces debe ampliar el `OpportunityGenerator`.
 
 1. Cree el generador de oportunidades personalizado.
 
-       Si el generador de oportunidades personalizado se basa en objetos &quot;TimedMetadata&quot;, extienda el parámetro &quot;TimedMetadataOpportunityGenerator&quot; y anule estos métodos:
+       Si su generador de oportunidades personalizado se basa en objetos `TimedMetadata`, amplíe `TimedMetadataOportunityGenerator` y anule estos métodos:
    
-   * `doConfigure` - Este método se llama después de que se haya creado el elemento del reproductor de medios y proporciona al generador de oportunidades la posibilidad de crear un conjunto inicial de oportunidades si es necesario
-   * `doProcess` - Este método se llama cada vez que  `TimedMetadata` se detecta un nuevo objeto (por ejemplo, para flujos en vivo/lineales cada vez que se actualiza la lista de reproducción/manifiesto)
+   * `doConfigure` - Se llama a este método después de que se haya creado el elemento del reproductor de contenidos y proporciona al generador de oportunidades la oportunidad de crear un conjunto inicial de oportunidades si es necesario
+   * `doProcess` - Se llama a este método cada vez que  `TimedMetadata` se detecta un nuevo contenido (por ejemplo, para emisiones en directo/lineales cada vez que se actualiza la lista de reproducción/manifiesto)
 
    ```
    public class CustomOpportunityGenerator extends TimedMetadataOpportunityGenerator { 
