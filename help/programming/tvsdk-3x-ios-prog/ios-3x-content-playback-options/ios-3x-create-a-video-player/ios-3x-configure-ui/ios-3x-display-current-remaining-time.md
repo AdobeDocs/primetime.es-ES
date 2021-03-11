@@ -1,13 +1,10 @@
 ---
 description: Puede mostrar el tiempo actual y restante del contenido que se está reproduciendo.
-seo-description: Puede mostrar el tiempo actual y restante del contenido que se está reproduciendo.
-seo-title: Mostrar la hora actual y el tiempo restante
 title: Mostrar la hora actual y el tiempo restante
-uuid: b96ade8b-1c81-4367-ba37-fc41a92d7cbc
 translation-type: tm+mt
-source-git-commit: a63768e51c911914a6ba9d884e2587fa34939f9d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '84'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 Puede mostrar el tiempo actual y restante del contenido que se está reproduciendo.
 
-1. Para implementar una visualización que muestre el tiempo actual y restante del contenido activo, utilice el siguiente código de muestra:
+1. Para implementar una pantalla que muestre el tiempo actual y restante del contenido activo, utilice el siguiente código de ejemplo:
 
    * 
 
