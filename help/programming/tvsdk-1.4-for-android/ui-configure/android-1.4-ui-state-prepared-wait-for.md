@@ -1,23 +1,20 @@
 ---
-description: Con TVSDK puede controlar la experiencia de reproducción básica para vídeo en directo y vídeo a petición (VOD). TVSDK proporciona métodos y propiedades en la instancia del reproductor que puede utilizar para configurar la interfaz de usuario del reproductor.
-seo-description: Con TVSDK puede controlar la experiencia de reproducción básica para vídeo en directo y vídeo a petición (VOD). TVSDK proporciona métodos y propiedades en la instancia del reproductor que puede utilizar para configurar la interfaz de usuario del reproductor.
-seo-title: Esperar un estado válido
-title: Esperar un estado válido
-uuid: 22b68162-1625-4e8a-8566-b0c198155622
+description: Con TVSDK, puede controlar la experiencia de reproducción básica para vídeo en directo y vídeo bajo demanda (VOD). TVSDK proporciona métodos y propiedades en la instancia del reproductor que puede utilizar para configurar la interfaz de usuario del reproductor.
+title: Espere un estado válido
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '143'
 ht-degree: 0%
 
 ---
 
 
-# Esperar un estado válido {#wait-for-a-valid-state}
+# Espere un estado válido {#wait-for-a-valid-state}
 
-Con TVSDK puede controlar la experiencia de reproducción básica para vídeo en directo y vídeo a petición (VOD). TVSDK proporciona métodos y propiedades en la instancia del reproductor que puede utilizar para configurar la interfaz de usuario del reproductor.
+Con TVSDK, puede controlar la experiencia de reproducción básica para vídeo en directo y vídeo bajo demanda (VOD). TVSDK proporciona métodos y propiedades en la instancia del reproductor que puede utilizar para configurar la interfaz de usuario del reproductor.
 
-Para poder utilizar la mayoría de los métodos del reproductor TVSDK, el reproductor debe tener un estado válido.
-El jugador se mueve por varios estados. Esperar a que el reproductor esté en el estado correcto garantiza que el recurso de medios se haya cargado correctamente. Si el reproductor no está al menos en el estado requerido, muchos métodos del reproductor generan `IllegalStateException`.
+Para poder usar la mayoría de los métodos del reproductor TVSDK, el reproductor debe estar en un estado válido.
+El reproductor se mueve por varios estados. Esperar que el reproductor esté en el estado correcto garantiza que el recurso de medios se haya cargado correctamente. Si el reproductor no está en al menos el estado requerido, muchos métodos del reproductor arrojan `IllegalStateException`.
 
 El estado requerido suele estar PREPARADO.
