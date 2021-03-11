@@ -1,9 +1,9 @@
 ---
-seo-title: Detección de retroceso
-title: Detección de retroceso
-uuid: fc80c98f-7ee5-414b-87fe-0dbb8d4f6019
+title: Detección de reversión
+description: Detección de reversión
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 58bb3bedc5b0ac63afd96eb6101d9ad779e6deed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
@@ -11,8 +11,8 @@ ht-degree: 0%
 ---
 
 
-# Detección de rollback {#rollback-detection}
+# Detección de reversión {#rollback-detection}
 
-Si la implementación de Adobe Access utiliza reglas comerciales que requieren que el cliente mantenga el estado (por ejemplo, el intervalo de la ventana de reproducción), Adobe recomienda encarecidamente que el servidor realice un seguimiento del contador de reversión y utilice la lista de permitidas por AIR o SWF.
+Si su implementación de Adobe Access utiliza reglas comerciales que requieren que el cliente mantenga el estado (por ejemplo, el intervalo de la ventana de reproducción), Adobe recomienda encarecidamente que el servidor realice un seguimiento del contador de reversión y utilice la lista de permitidos de AIR o SWF.
 
-El contador de reversión se envía al servidor en la mayoría de las solicitudes del cliente. Si la implementación de Adobe Access no requiere el contador de reversión, se puede ignorar. De lo contrario, Adobe recomienda que el servidor almacene el ID de equipo aleatorio (obtenido mediante `MachineToken.getMachineId().getUniqueId()`) y el valor de contador actual en una base de datos. Para obtener más información sobre cómo incrementar y rastrear el contador de rollback, consulte ClientState en *Referencia de API de acceso a Adobe* y *Detección de rollback* en *Uso del SDK de acceso a Adobe para proteger contenido*.
+El contador de reversión se envía al servidor en la mayoría de las solicitudes del cliente. Si la implementación de Adobe Access no requiere el contador de reversión, se puede ignorar. De lo contrario, Adobe recomienda que el servidor almacene el ID de equipo aleatorio (obtenido mediante `MachineToken.getMachineId().getUniqueId()`) y el valor de contador actual en una base de datos. Para obtener más información sobre cómo incrementar y rastrear el contador de reversión, consulte ClientState en *Referencia de API de acceso a Adobe* y *Detección de reversión* en *Uso del SDK de acceso a Adobe para la protección de contenido*.
