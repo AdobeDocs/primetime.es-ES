@@ -1,9 +1,9 @@
 ---
-seo-title: Implementación del registro de dominios
 title: Implementación del registro de dominios
-uuid: 2871cc15-eaea-430d-b6fe-f3692d82733b
+description: Implementación del registro de dominios
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '37'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Implementación del registro de dominio {#implementing-domain-registration}
 
-El servidor de licencias de implementación de referencia muestra dos variaciones en la lógica comercial de registro de dominio. Un servidor de dominio típico implementaría sólo uno de estos flujos de trabajo:
+El servidor de licencias de implementación de referencia muestra dos variaciones en la lógica empresarial de registro de dominios. Un servidor de dominio típico implementaría solo uno de estos flujos de trabajo:
 
 * Dominios basados en identidad
 * Dominios anónimos
