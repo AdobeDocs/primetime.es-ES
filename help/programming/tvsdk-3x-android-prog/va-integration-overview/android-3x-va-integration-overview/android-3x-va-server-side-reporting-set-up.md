@@ -1,31 +1,29 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Configuración del sistema de informes de análisis de vídeo en el servidor
-title: Configuración del sistema de informes de análisis de vídeo en el servidor
-uuid: c3e6ed33-bf33-4e42-b692-a9579deced40
+title: Configuración de informes de análisis de vídeo en el servidor
+description: Configuración de informes de análisis de vídeo en el servidor
+copied-description: true
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '110'
 ht-degree: 0%
 
 ---
 
 
-# Configure el sistema de informes de análisis de vídeo en el servidor {#set-up-video-analytics-reporting-on-the-server-side}
+# Configurar informes de análisis de vídeo en el servidor {#set-up-video-analytics-reporting-on-the-server-side}
 
-El representante de Adobe se encargará de la mayoría de los aspectos de la configuración del lado del servidor para Adobe Analytics sistema de informes. Para obtener más información, consulte [Ayuda y referencia de Analytics - Administrador de grupos de informes](https://microsite.omniture.com/t2/help/en_US/reference/#Report_Suite_Manager).
-1. Para habilitar el nivel de conversión para la ID del grupo de informes (RSID):
-   1. Acceso **[!UICONTROL Admin Tools]**.
+El representante de Adobe se encargará de la mayoría de los aspectos de la configuración del lado del servidor para los informes de Adobe Analytics. Para obtener más información, consulte [Ayuda y referencia de Analytics - Administrador de grupos de informes](https://microsite.omniture.com/t2/help/en_US/reference/#Report_Suite_Manager).
+1. Para habilitar el nivel de conversión para el ID del grupo de informes (RSID):
+   1. Acceda a **[!UICONTROL Admin Tools]**.
    1. Seleccione **[!UICONTROL Report Suites]**.
    1. Seleccione el RSID que desea configurar.
    1. Haga clic en **[!UICONTROL Edit Settings]** > **[!UICONTROL General]** > **[!UICONTROL General Account Settings]**.
    1. En el cuadro combinado **[!UICONTROL Conversion Level]**, seleccione **[!UICONTROL Enabled, no Shopping Cart]**.
    1. Haga clic **[!UICONTROL Save]**.
-1. Para habilitar el seguimiento de videos:
-   1. Acceso **[!UICONTROL Admin Tools]**.
-   1. Seleccionar **[!UICONTROL Report Suites]**
+1. Para habilitar el seguimiento de vídeo:
+   1. Acceda a **[!UICONTROL Admin Tools]**.
+   1. Seleccione **[!UICONTROL Report Suites]**
    1. Seleccione el RSID que desea configurar.
    1. Haga clic en **[!UICONTROL Video Management]** > **[!UICONTROL Edit Settings]** > **[!UICONTROL Video Reporting]**.
    1. Seleccione la configuración y haga clic en **[!UICONTROL Save]**.
