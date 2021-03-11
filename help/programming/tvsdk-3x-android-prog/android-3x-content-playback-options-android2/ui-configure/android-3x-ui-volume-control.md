@@ -1,14 +1,11 @@
 ---
 description: Puede configurar un control de interfaz de usuario para ajustar el volumen del vídeo.
-seo-description: Puede configurar un control de interfaz de usuario para ajustar el volumen del vídeo.
-seo-title: Proporcionar control de volumen
 title: Proporcionar control de volumen
-uuid: c87fe656-0329-4c9c-b65b-43be48c77062
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 1%
+source-wordcount: '98'
+ht-degree: 2%
 
 ---
 
@@ -17,11 +14,11 @@ ht-degree: 1%
 
 Puede configurar un control de interfaz de usuario para ajustar el volumen del vídeo.
 
-1. En la rutina de llamada de retorno del elemento de interfaz de control de volumen, asegúrese de que el reproductor está en un estado válido para este comando.
+1. En la rutina de llamada de retorno del elemento de interfaz de control de volumen, asegúrese de que el reproductor esté en un estado válido para este comando.
 
    >[!TIP]
    >
-   >Cualquier estado, excepto RELEASED, es válido.
+   >Cualquier estado es válido, excepto LANZADO.
 
 1. Llame a `setVolume` para configurar el volumen de audio.
 
@@ -31,4 +28,4 @@ Puede configurar un control de interfaz de usuario para ajustar el volumen del v
    void setVolume(int volume) throws MediaPlayerException;
    ```
 
-   El valor del volumen representa el volumen solicitado expresado como una proporción del volumen máximo, donde `0` es silencioso y `1` es el volumen máximo.
+   El valor del volumen representa el volumen solicitado expresado como una proporción del volumen máximo, donde `0` no dice nada y `1` es el volumen máximo.
