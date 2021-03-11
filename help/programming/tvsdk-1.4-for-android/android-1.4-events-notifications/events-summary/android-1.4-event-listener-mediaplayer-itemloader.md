@@ -1,19 +1,16 @@
 ---
 description: TVSDK distribuye eventos de elementos del reproductor de medios como respuesta a la carga de un elemento de medios.
-seo-description: TVSDK distribuye eventos de elementos del reproductor de medios como respuesta a la carga de un elemento de medios.
-seo-title: Eventos del cargador
-title: Eventos del cargador
-uuid: 1b401ff5-4313-4c64-8be9-99bdeb58ba2a
+title: Eventos Loader
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
 
-# Eventos del cargador{#loader-events}
+# Loader events{#loader-events}
 
 TVSDK distribuye eventos de elementos del reproductor de medios como respuesta a la carga de un elemento de medios.
 
@@ -23,10 +20,10 @@ Para recibir notificaciones sobre eventos relacionados con la carga de un recurs
 
 | Evento | Significado |
 |---|---|
-| [onLoadComplete](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItemLoader.LoaderListener.html#onLoadComplete(com.adobe.mediacore.MediaPlayerItem))([](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItem.html) mediaPlayerItemplayerItem) | La carga de recursos multimedia se completó correctamente. |
-| [onError](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItemLoader.LoaderListener.html#onError(com.adobe.ave.MediaErrorCode,%20java.lang.String)) | Se produjo un problema con la carga de recursos multimedia. |
+| [onLoadComplete](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItemLoader.LoaderListener.html#onLoadComplete(com.adobe.mediacore.MediaPlayerItem))([](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItem.html) mediaPlayerPackageItem) | La carga de recursos multimedia se completó correctamente. |
+| [onError](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/MediaPlayerItemLoader.LoaderListener.html#onError(com.adobe.ave.MediaErrorCode,%20java.lang.String)) | Se ha producido un problema con la carga de recursos multimedia. |
 
 >[!NOTE]
 >
->Consulte también `onLoadInfo (loadInfo)` en eventos de QoS.
+>Consulte también `onLoadInfo (loadInfo)` en los eventos de QoS.
 
