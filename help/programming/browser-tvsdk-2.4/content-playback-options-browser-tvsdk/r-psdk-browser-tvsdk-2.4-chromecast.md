@@ -1,50 +1,47 @@
 ---
-description: Puede convertir cualquiera de los flujos de una aplicación de remitente basada en TVSDK y hacer que el flujo se reproduzca en Chromecast con el TVSDK del explorador.
-seo-description: Puede convertir cualquiera de los flujos de una aplicación de remitente basada en TVSDK y hacer que el flujo se reproduzca en Chromecast con el TVSDK del explorador.
-seo-title: Aplicación Google Cast para TVSDK de explorador
-title: Aplicación Google Cast para TVSDK de explorador
-uuid: 018143e2-143a-4f88-97c6-4b10a2083f9e
+description: Puede emitir cualquiera de las emisiones de una aplicación de remitente basada en TVSDK y hacer que el flujo se reproduzca en Chromecast con el TVSDK del explorador.
+title: Aplicación Google Cast para TVSDK de navegador
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
 
 
-# Aplicación Google Cast para TVSDK del explorador{#google-cast-app-for-browser-tvsdk}
+# Aplicación Google Cast para el TVSDK del explorador{#google-cast-app-for-browser-tvsdk}
 
-Puede convertir cualquiera de los flujos de una aplicación de remitente basada en TVSDK y hacer que el flujo se reproduzca en Chromecast con el TVSDK del explorador.
+Puede emitir cualquiera de las emisiones de una aplicación de remitente basada en TVSDK y hacer que el flujo se reproduzca en Chromecast con el TVSDK del explorador.
 
 <!--<a id="section_87CE5D6D46F0439EB6E63A742D6DD9C8"></a>-->
 
-Hay dos componentes de una aplicación con función de difusión:
+Hay dos componentes de una aplicación habilitada para reenvío:
 
 * La aplicación del remitente, que actúa como control remoto.
 
-   Las aplicaciones de envío incluyen teléfonos inteligentes, equipos personales, etc. La aplicación se puede desarrollar con SDK nativos para iOS, Android y Chrome.
-* La aplicación receptor, que se ejecuta en Chromecast y reproduce el contenido.
+   Las aplicaciones de remitente incluyen teléfonos inteligentes, equipos personales, etc. La aplicación se puede desarrollar con SDK nativos para iOS, Android y Chrome.
+* La aplicación del receptor, que se ejecuta en Chromecast y reproduce el contenido.
 
    >[!IMPORTANT]
    >
    >Esta aplicación solo puede ser una aplicación HTML5.
 
-El remitente y el receptor se comunican mediante los SDK de envío para transmitir mensajes.
+El remitente y el destinatario se comunican utilizando los SDK de reparto para pasar mensajes.
 
 ## Flujo de trabajo básico {#section_FAF680FF29DA4D24A50AC0A2B6402B58}
 
-A continuación se presenta una descripción general del proceso:
+A continuación se muestra una descripción general del proceso:
 
 1. La aplicación del remitente establece una conexión con la aplicación del receptor.
-1. La aplicación del remitente envía un mensaje para cargar los medios en la aplicación del receptor.
-1. La aplicación receptor inicia la reproducción.
-1. La aplicación del remitente envía mensajes de control de reproducción, como reproducir, pausar, buscar, avanzar rápidamente, rebobinar, rebobinar, cambiar el volumen, etc., a la aplicación del receptor.
-1. La aplicación receptora reacciona a estos mensajes.
+1. La aplicación del remitente envía un mensaje para cargar el contenido en la aplicación del receptor.
+1. La aplicación del receptor inicia la reproducción.
+1. La aplicación del remitente envía mensajes de control de reproducción, como reproducción, pausa, búsqueda, avance rápido, rebobinado rápido, rebobinado, cambio de volumen, etc., a la aplicación del receptor.
+1. La aplicación del receptor reacciona a estos mensajes.
 
 ## Formato del mensaje {#section_1624159DD51D4C87B3E5803DEEBCB6B7}
 
-Debe definir los mensajes para que el remitente y el receptor puedan entenderlos. Este es un ejemplo de un mensaje de búsqueda:
+Debe definir los mensajes para que el remitente y el destinatario puedan entenderlos. Este es un ejemplo de mensaje de búsqueda:
 
 ```js
 { 
@@ -53,7 +50,7 @@ Debe definir los mensajes para que el remitente y el receptor puedan entenderlos
 } 
 ```
 
-Cuando se envían mensajes personalizados, como el mensaje de búsqueda, a través de los SDK de envío, se requiere una Área de nombres de mensaje personalizada. Este es un ejemplo de JavaScript:
+Al enviar mensajes personalizados, como el mensaje de búsqueda a través de los SDK de Cast, se requiere un espacio de nombres de mensaje personalizado. Este es un ejemplo en JavaScript:
 
 ```js
 Custom Message Namespace 
@@ -64,11 +61,11 @@ var MSG_NAMESPACE = "urn:x-cast:com.adobe.primetime";
 
 >[!IMPORTANT]
 >
->Las API de TVSDK del explorador no están involucradas al establecer la conexión.
+>Las API del TVSDK del explorador no están implicadas al establecer la conexión.
 
 Para establecer una conexión, el remitente y el receptor deben completar las siguientes tareas:
 
-* El remitente debe revisar la documentación de la plataforma en [Desarrollo de la aplicación del remitente](https://developers.google.com/cast/docs/sender_apps).
+* El remitente debe revisar la documentación de la plataforma en [Desarrollo de aplicaciones del remitente](https://developers.google.com/cast/docs/sender_apps).
 * El receptor utiliza las API del receptor de envío para establecer una conexión con la aplicación del remitente. Por ejemplo:
 
    ```js
@@ -90,19 +87,19 @@ Para enviar mensajes al receptor, consulte la documentación de la plataforma de
 
 >[!IMPORTANT]
 >
->Debe incluir la Área de nombres de mensaje personalizada, `MSG_NAMESPACE` en todos los mensajes.
+>Debe incluir el espacio de nombres del mensaje personalizado, `MSG_NAMESPACE` en todos los mensajes.
 
-Para la aplicación de receptor, siga la documentación de las API de receptor de difusión.
+Para la aplicación del receptor, siga la documentación de las API del receptor de conversión.
 
-**Ejemplo de un mensaje de remitente basado en Chrome**
+**Ejemplo de mensaje de remitente basado en Chrome**
 
 ```js
 window.session.sendMessage(MSG_NAMESPACE, message, successCallback, errorCallback); //https://developers.google.com/cast/docs/reference/chrome/chrome.cast.Session#sendMessage
 ```
 
-**Gestión del Evento del remitente basado en Chrome**
+**Gestión de eventos de remitente basada en Chrome**
 
-Enlace los controladores de evento a los elementos de interfaz de usuario que enviarán mensajes cuando se activen los eventos correspondientes. Por ejemplo, para una aplicación de remitente basada en Chrome, el evento de búsqueda se puede enviar de esta manera:
+Enlace los controladores de eventos a los elementos de la interfaz de usuario que enviarán mensajes cuando se activen los eventos correspondientes. Por ejemplo, para una aplicación de remitente basada en Chrome, el evento de búsqueda podría enviarse de esta manera:
 
 ```js
 document.getElementById("#seekBar").addEventListener("click", seekEventHandler); 
@@ -115,7 +112,7 @@ function seekEventHandler(event) {
 
 **Gestión de mensajes del receptor**
 
-Desde la aplicación receptor, a continuación se muestra un ejemplo de cómo gestionar el mensaje de búsqueda:
+Desde la aplicación del receptor, a continuación se muestra un ejemplo de cómo gestionar el mensaje de búsqueda:
 
 ```js
 customMessageBus.onMessage = function (event) { 
