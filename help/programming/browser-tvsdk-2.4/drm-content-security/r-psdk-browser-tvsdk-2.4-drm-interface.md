@@ -1,27 +1,24 @@
 ---
-description: El SDK TVSDK del explorador proporciona una interfaz DRM que puede utilizar para reproducir contenido protegido por distintas soluciones DRM, incluidas FairPlay, PlayReady y Widevine.
-seo-description: El SDK TVSDK del explorador proporciona una interfaz DRM que puede utilizar para reproducir contenido protegido por distintas soluciones DRM, incluidas FairPlay, PlayReady y Widevine.
-seo-title: Descripción general de la interfaz DRM
-title: Descripción general de la interfaz DRM
-uuid: b553ebad-8310-4517-8d97-ef8a1c5f4340
+description: El TVSDK del explorador proporciona una interfaz DRM que puede utilizar para reproducir contenido protegido por distintas soluciones DRM, incluidas FairPlay, PlayReady y Widevine.
+title: Información general de la interfaz DRM
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
 
-# Descripción general de la interfaz de DRM{#drm-interface-overview}
+# Información general de la interfaz DRM{#drm-interface-overview}
 
-El SDK TVSDK del explorador proporciona una interfaz DRM que puede utilizar para reproducir contenido protegido por distintas soluciones DRM, incluidas FairPlay, PlayReady y Widevine.
+El TVSDK del explorador proporciona una interfaz DRM que puede utilizar para reproducir contenido protegido por distintas soluciones DRM, incluidas FairPlay, PlayReady y Widevine.
 
 <!--<a id="section_59994F2059B245E996E0776214804A0A"></a>-->
 
 >[!IMPORTANT]
 >
->La compatibilidad con DRM está disponible para flujos MPEG-Dash protegidos con sistemas DRM de Microsoft PlayReady (en Internet Explorer en Windows 8.1 y Edge) y Widevine (en Google Chrome). La compatibilidad con DRM está disponible para flujos HLS en Safari que están protegidos con FairPlay.
+>La compatibilidad con DRM está disponible para flujos MPEG-Dash protegidos con sistemas Microsoft PlayReady (en Internet Explorer en Windows 8.1 y Edge) y Widevine (en Google Chrome) DRM. La compatibilidad con DRM está disponible para flujos HLS en Safari que están protegidos con FairPlay.
 
 La interfaz clave del flujo de trabajo de DRM es `DRMManager`. Se puede obtener una referencia a la instancia `DRMManager` mediante la instancia de MediaPlayer:
 
@@ -32,7 +29,7 @@ La interfaz clave del flujo de trabajo de DRM es `DRMManager`. Se puede obtener 
 
 Este es un flujo de trabajo de alto nivel para la reproducción de contenido protegido con DRM:
 
-1. Para adjuntar los datos específicos del sistema DRM que utilizará el SDK TVSDK del explorador en el proceso de adquisición de licencias para un flujo protegido, realice la siguiente llamada antes de invocar `mediaPlayer.replaceCurrentResource`:
+1. Para adjuntar los datos específicos del sistema DRM que utilizará el SDK de TVSDK del explorador en el proceso de adquisición de licencias para un flujo protegido, realice la siguiente llamada antes de invocar a `mediaPlayer.replaceCurrentResource`:
 
    ```js
    var protectionData = { 
@@ -95,22 +92,22 @@ Este es un flujo de trabajo de alto nivel para la reproducción de contenido pro
    drmManager.setProtectionData(protectionData);
    ```
 
-1. Cuando no se configuran los datos de protección, la información necesaria, como la URL de la licencia, se recupera del cuadro PSSH para los sistemas DRM, cuando corresponde.
+1. Cuando no se establecen los datos de protección, se recupera la información necesaria, como la URL de la licencia, del cuadro PSSH para los sistemas DRM, cuando corresponde.
 
    >[!TIP]
    >
-   >Si se especifican datos de protección, se anula la dirección URL de licencia especificada en el cuadro PSSH.
+   >Si se especifican datos de protección, se anula la URL de licencia especificada en el cuadro PSSH.
 
 1. De forma predeterminada, el tipo de sesión de la licencia de DRM es temporal, lo que significa que la licencia no se almacena una vez cerrada la sesión.
 
-   Puede especificar un tipo de sesión mediante una API en `DRMManager`.  Para la compatibilidad con versiones anteriores, los tipos de sesiones incluyen `temporary`, `persistent-license`, `persistent-usage-record` y `persistent`.
+   Puede especificar un tipo de sesión mediante una API en `DRMManager`.  Para la compatibilidad con versiones anteriores, los tipos de sesión incluyen `temporary`, `persistent-license`, `persistent-usage-record` y `persistent`.
 
    ```js
    var drmManager = mediaPlayer.drmManager; 
     drmManager.setEMESessionType(“<YOUR_SESSION_TYPE>”); 
    ```
 
-1. Cuando el `sessionType` utilizado es `persistent-license` o `persistent`, se puede devolver la licencia de DRM invocando `DRMManager.returnLicense`.
+1. Cuando el `sessionType` utilizado es `persistent-license` o `persistent`, la licencia de DRM puede devolverse invocando `DRMManager.returnLicense`.
 
    ```js
    var onLicenseReturnFunc = function () { 
