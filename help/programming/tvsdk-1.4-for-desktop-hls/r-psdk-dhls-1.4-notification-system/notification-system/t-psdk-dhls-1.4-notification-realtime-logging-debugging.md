@@ -1,40 +1,37 @@
 ---
-description: Puede utilizar las notificaciones para implementar el registro en tiempo real en la aplicación de vídeo.
-seo-description: Puede utilizar las notificaciones para implementar el registro en tiempo real en la aplicación de vídeo.
-seo-title: Añadir el registro y la depuración en tiempo real
-title: Añadir el registro y la depuración en tiempo real
-uuid: 568ea2e7-963b-427e-9cb2-e261e4423902
+description: Puede utilizar notificaciones para implementar el registro en tiempo real en la aplicación de vídeo.
+title: Añadir el registro en tiempo real y la depuración
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
 
-# Añadir el registro y la depuración en tiempo real{#add-real-time-logging-and-debugging}
+# Añadir el registro en tiempo real y la depuración{#add-real-time-logging-and-debugging}
 
-Puede utilizar las notificaciones para implementar el registro en tiempo real en la aplicación de vídeo.
+Puede utilizar notificaciones para implementar el registro en tiempo real en la aplicación de vídeo.
 
-El sistema de notificaciones le permite recopilar información de registro y depuración para realizar diagnósticos y validaciones sin tener que hacer demasiado hincapié en el sistema.
+El sistema de notificaciones le permite recopilar información de registro y depuración para realizar diagnósticos y validaciones sin tener que enfatizar demasiado el sistema.
 
 >[!IMPORTANT]
 >
->El back-end de inicio de sesión no forma parte de una configuración de producción y no se espera que gestione tráfico de alta carga. Si su implementación no necesita ser absolutamente completa, considere la eficacia de la transmisión de datos para evitar sobrecargar su sistema.
+>El back-end de registro no forma parte de una configuración de producción y no se espera que gestione tráfico de alta carga. Si su implementación no necesita ser absolutamente completa, considere la eficacia de la transmisión de datos para evitar sobrecargar su sistema.
 
-Este es un ejemplo de cómo recuperar notificaciones.
+A continuación, se muestra un ejemplo de cómo recuperar notificaciones.
 
-1. Cree un subproceso de ejecución basado en temporizador para la aplicación de vídeo que consulta periódicamente los datos recopilados por el sistema de notificaciones TVSDK.
+1. Cree un subproceso de ejecución basado en temporizador para la aplicación de vídeo que consulte periódicamente los datos recopilados por el sistema de notificación TVSDK.
 
-1. Si el intervalo del temporizador es demasiado grande y el tamaño de la lista del evento es demasiado pequeño, la lista del evento de notificación se desbordará. Para evitar este desbordamiento, realice una de las siguientes acciones:
+1. Si el intervalo del temporizador es demasiado grande y el tamaño de la lista de eventos es demasiado pequeño, la lista de eventos de notificación se desbordará. Para evitar este desbordamiento, realice una de las siguientes acciones:
 
    * Disminuya el intervalo de tiempo que impulsa el subproceso que sondea por nuevos eventos.
-   * Aumente el tamaño de la lista de notificación.
+   * Aumente el tamaño de la lista de notificaciones.
 
-1. Serialice las últimas entradas de evento de notificación en formato JSON y envíe las entradas a un servidor remoto para su postprocesamiento.
+1. Serialice las entradas de evento de notificación más recientes en formato JSON y envíe las entradas a un servidor remoto para su posprocesamiento.
 
-   El servidor remoto podría entonces mostrar gráficamente los datos proporcionados en tiempo real.
-1. Para detectar la pérdida de eventos de notificación, busque espacios en la secuencia de valores de índice de evento.
+   El servidor remoto podría mostrar gráficamente los datos proporcionados en tiempo real.
+1. Para detectar la pérdida de eventos de notificación, busque espacios en la secuencia de valores de índice de eventos.
 
-   Cada evento de notificación tiene un valor de índice que se incrementa automáticamente en la clase `NotificationHistory`.
+   Cada evento de notificación tiene un valor de índice que se incrementa automáticamente con la clase `NotificationHistory`.
