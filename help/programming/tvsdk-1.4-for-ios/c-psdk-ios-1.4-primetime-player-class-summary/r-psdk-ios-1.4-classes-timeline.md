@@ -1,13 +1,10 @@
 ---
 description: Estas clases proporcionan información sobre la cronología de los medios en particular, incluida la colocación de los anuncios.
-seo-description: Estas clases proporcionan información sobre la cronología de los medios en particular, incluida la colocación de los anuncios.
-seo-title: Clases de escala de tiempo
-title: Clases de escala de tiempo
-uuid: 4acbe2f8-9552-491d-8043-2e0557b66a23
+title: Clases de cronología
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '82'
 ht-degree: 0%
 
 ---
@@ -26,12 +23,12 @@ Estas clases proporcionan información sobre la cronología de los medios en par
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTPlacementOpportunity.html" format="html" scope="external"> PTPlacementOpportunity</a> </td> 
-   <td colname="2"> Una clase de oportunidad representa un punto de interés en la línea de tiempo. </td> 
+   <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTPlacementOpportunity.html" format="html" scope="external"> PTPlacementOportunity</a> </td> 
+   <td colname="2"> Una clase de oportunidad representa un punto de interés en la cronología. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTTimeline.html" format="html" scope="external"> PTTimeline</a> </td> 
-   <td colname="2"> Clase que representa la línea de tiempo del contenido, incluidos los saltos de publicidad. </td> 
+   <td colname="2"> Clase que representa la cronología del contenido, incluidas las pausas publicitarias. </td> 
   </tr> 
  </tbody> 
 </table>
