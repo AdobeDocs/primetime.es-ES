@@ -1,9 +1,9 @@
 ---
-seo-title: Habilitar la demostración del modelo de uso
 title: Habilitar la demostración del modelo de uso
-uuid: 43930ebb-e936-4f48-990d-7ad19992e326
+description: Habilitar la demostración del modelo de uso
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 1. Especifique la propiedad personalizada `RI_UsageModelDemo=true` en el momento del empaquetado.
 
-   Si va a empaquetar contenido con la herramienta de línea de comandos de Media Packager, introduzca:
+   Si empaqueta contenido con la herramienta de línea de comandos de Media Packager, introduzca:
 
    ```
    java -jar AdobeMediaPackager.jar [<i>source_file</i>] [<i>dest_file</i>] -k RI_UsageModelDemo=true
