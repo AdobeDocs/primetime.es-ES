@@ -1,13 +1,10 @@
 ---
-description: Cuando se restablece una instancia de MediaPlayer, se devuelve a su estado IDLE no inicializado tal como se define en MediaPlayerState.
-seo-description: Cuando se restablece una instancia de MediaPlayer, se devuelve a su estado IDLE no inicializado tal como se define en MediaPlayerState.
-seo-title: Restablecer o reutilizar una instancia de MediaPlayer
+description: Cuando se restablece una instancia de MediaPlayer, se vuelve a su estado IDLE sin inicializar tal como se define en MediaPlayerState.
 title: Restablecer o reutilizar una instancia de MediaPlayer
-uuid: 72cc4511-8ab0-44e5-b93c-b36f0321bba8
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '300'
+source-wordcount: '276'
 ht-degree: 0%
 
 ---
@@ -17,15 +14,15 @@ ht-degree: 0%
 
 Puede restablecer, reutilizar o liberar una instancia de MediaPlayer que ya no necesite.
 
-Cuando se restablece una instancia de MediaPlayer, se devuelve a su estado IDLE no inicializado tal como se define en MediaPlayerState.
+Cuando se restablece una instancia de MediaPlayer, se vuelve a su estado IDLE sin inicializar tal como se define en MediaPlayerState.
 
 Esta operación resulta útil en los siguientes casos:
 
-* Desea reutilizar una instancia `MediaPlayer` pero necesita cargar un nuevo `MediaResource` (contenido de vídeo) y reemplazar la instancia anterior.
+* Desea reutilizar una instancia `MediaPlayer` pero debe cargar un nuevo `MediaResource` (contenido de vídeo) y reemplazar la instancia anterior.
 
-   Restablecer le permite reutilizar la instancia `MediaPlayer` sin necesidad de aprovechar la sobrecarga de liberar recursos, volver a crear `MediaPlayer` y reasignar recursos.
+   El restablecimiento le permite reutilizar la instancia `MediaPlayer` sin necesidad de liberar recursos, volver a crear `MediaPlayer` y reasignar recursos.
 
-* Cuando `MediaPlayer` está en un estado ERROR y debe borrarse.
+* Cuando el `MediaPlayer` está en estado ERROR y debe borrarse.
 
    >[!IMPORTANT]
    >
@@ -43,7 +40,7 @@ Esta operación resulta útil en los siguientes casos:
    >
    >Para borrar un error, cargue el mismo `MediaResource`.
 
-1. Cuando reciba la rellamada de evento `STATUS_CHANGED` con el estado PREPARADO, inicio la reproducción.
+1. Cuando reciba la llamada de retorno de evento `STATUS_CHANGED` con el estado PREPARADO, inicie la reproducción.
 
 ## Liberar una instancia y recursos de MediaPlayer{#release-a-mediaplayer-instance-and-resources}
 
@@ -51,16 +48,16 @@ Debe liberar una instancia y recursos de MediaPlayer cuando ya no necesite Media
 
 Cuando libera un objeto `MediaPlayer`, se desasignan los recursos de hardware subyacentes asociados a este objeto `MediaPlayer`.
 
-A continuación se indican algunas razones para lanzar un MediaPlayer:
+Estas son algunas razones para lanzar un MediaPlayer:
 
-* La retención de recursos innecesarios puede afectar al rendimiento.
-* Dejar un objeto `MediaPlayer` innecesario puede llevar a un consumo continuo de la batería para dispositivos móviles.
-* Si no se admiten varias instancias del mismo códec de vídeo en un dispositivo, es posible que se produzca un error de reproducción en otras aplicaciones.
+* Mantener recursos innecesarios puede afectar al rendimiento.
+* Dejar un objeto `MediaPlayer` innecesario puede llevar a un consumo continuo de batería para dispositivos móviles.
+* Si en un dispositivo no se admiten varias instancias del mismo códec de vídeo, puede ocurrir un error de reproducción en otras aplicaciones.
 
-1. Libere el `MediaPlayer`.
+1. Suelte el `MediaPlayer`.
 
    ```java
    void release() throws IllegalStateException;
    ```
 
-Una vez liberada la instancia `MediaPlayer`, ya no podrá usarla. Si se llama a algún método de la interfaz `MediaPlayer` después de liberarlo, se genera un `IllegalStateException`.
+Una vez lanzada la instancia `MediaPlayer`, ya no puede usarla. Si se llama a algún método de la interfaz `MediaPlayer` después de su lanzamiento, se genera un `IllegalStateException`.
