@@ -1,28 +1,25 @@
 ---
-description: El SDK de TVSDK del explorador prepara objetos TimedMetadata para etiquetas suscritas cada vez que estos objetos se encuentran en el archivo de descripción de la presentación de medios (MPD).
-seo-description: El SDK de TVSDK del explorador prepara objetos TimedMetadata para etiquetas suscritas cada vez que estos objetos se encuentran en el archivo de descripción de la presentación de medios (MPD).
-seo-title: Suscripción a etiquetas de publicidad personalizadas
+description: El SDK de TVSDK del explorador prepara objetos TimedMetadata para etiquetas suscritas cada vez que se encuentran estos objetos en el archivo de descripción de la presentación de medios (MPD).
 title: Suscripción a etiquetas de publicidad personalizadas
-uuid: 208f61f4-dc33-4363-aa71-878458740a8d
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---
 
 
-# Suscripción a etiquetas de publicidad personalizadas{#subscribe-to-custom-ad-tags}
+# Suscripción a las etiquetas de publicidad personalizadas{#subscribe-to-custom-ad-tags}
 
-El SDK de TVSDK del explorador prepara objetos TimedMetadata para etiquetas suscritas cada vez que estos objetos se encuentran en el archivo de descripción de la presentación de medios (MPD).
+El SDK de TVSDK del explorador prepara objetos TimedMetadata para etiquetas suscritas cada vez que se encuentran estos objetos en el archivo de descripción de la presentación de medios (MPD).
 
-Debe suscribirse a las etiquetas antes de los inicios de reproducción.
-Para suscribirse a etiquetas, establezca un vector que contenga los nombres de etiquetas personalizados en la propiedad `subscribedTags`. Si también necesita cambiar las etiquetas de publicidad utilizadas por el generador de oportunidades predeterminado, establezca un vector que contenga los nombres de etiquetas de publicidad personalizados en la propiedad `adTags`.
+Debe suscribirse a las etiquetas antes de que se inicie la reproducción.
+Para suscribirse a etiquetas, establezca un vector que contenga los nombres de etiqueta personalizados en la propiedad `subscribedTags` . Si también necesita cambiar las etiquetas de publicidad utilizadas por el generador de oportunidades predeterminado, establezca un vector que contenga los nombres de etiquetas de publicidad personalizadas en la propiedad `adTags` .
 
 Para suscribirse a etiquetas personalizadas:
 
-1. Cree una nueva configuración de elementos del reproductor multimedia.
+1. Cree una nueva configuración de elementos del reproductor de medios.
 
    ```js
    var mediaPlayerItemConfig = new AdobePSDK.MediPlayerItemConfig();
@@ -34,18 +31,18 @@ Para suscribirse a etiquetas personalizadas:
    var subscribeTags = [];
    ```
 
-1. Añada los nombres de etiquetas personalizados a este vector.
+1. Agregue los nombres de etiqueta personalizados a este vector.
 
    >[!IMPORTANT]
    >
-   >Si está trabajando con flujos HLS, recuerde incluir el prefijo `#`.
+   >Si está tratando con flujos HLS, recuerde incluir el prefijo `#`.
 
    ```js
    subscribeTags.push("urn:mpeg:dash:event:2012"); 
    subscribeTags.push("urn:com:adobe:dpi:simple:2015"); 
    ```
 
-1. Asigne el vector actualizado a la propiedad `mediaPlayerItemConfig.subscribeTags`.
+1. Asigne el vector actualizado a la propiedad `mediaPlayerItemConfig.subscribeTags` .
 
    ```js
    mediaPlayerItemConfig.subscribeTags = subscribeTags;
@@ -57,13 +54,13 @@ Para suscribirse a etiquetas personalizadas:
    var adTags= [];
    ```
 
-1. Añada el nombre de la etiqueta de publicidad personalizada a este vector.
+1. Agregue el nombre de la etiqueta de publicidad personalizada a este vector.
 
    ```js
    adTags.push("urn:com:adobe:dpi:simple:2015");
    ```
 
-1. Asigne el vector actualizado a la propiedad `mediaPlayerItemConfig.adTags`.
+1. Asigne el vector actualizado a la propiedad `mediaPlayerItemConfig.adTags` .
 
    ```js
    mediaPlayerItemConfig.adTags = adTags;
