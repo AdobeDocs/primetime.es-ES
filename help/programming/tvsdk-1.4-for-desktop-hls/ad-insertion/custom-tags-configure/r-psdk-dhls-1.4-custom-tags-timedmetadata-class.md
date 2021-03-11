@@ -1,21 +1,18 @@
 ---
-description: Cuando TVSDK detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta procesar automáticamente la etiqueta y exponerla en forma de objeto TimedMetadata.
-seo-description: Cuando TVSDK detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta procesar automáticamente la etiqueta y exponerla en forma de objeto TimedMetadata.
-seo-title: Clase de metadatos temporizados
+description: Cuando TVSDK detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta automáticamente procesar la etiqueta y exponerla en forma de objeto TimedMetadata .
 title: Clase de metadatos temporizados
-uuid: 827a3bcf-a584-4032-aa19-4fc7730778cc
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
 
 
-# Clase de metadatos temporizados{#timed-metadata-class}
+# Clase de metadatos temporizada{#timed-metadata-class}
 
-Cuando TVSDK detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta procesar automáticamente la etiqueta y exponerla en forma de objeto TimedMetadata.
+Cuando TVSDK detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta automáticamente procesar la etiqueta y exponerla en forma de objeto TimedMetadata .
 
 La clase proporciona los siguientes elementos:
 
@@ -29,9 +26,9 @@ La clase proporciona los siguientes elementos:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"><span class="codeph"> content</span> </td> 
+   <td colname="col1"><span class="codeph"> contenido</span> </td> 
    <td colname="col02"> Cadena </td> 
-   <td colname="col2"> El contenido sin procesar de los metadatos temporizados. Si el tipo es TAG, el valor representa la lista completa del atributo de la etiqueta/cue. Si el tipo id3, es nulo. </td> 
+   <td colname="col2"> El contenido sin procesar de los metadatos temporizados. Si el tipo es TAG, el valor representa la lista completa de atributos de la cue/etiqueta. Si el tipo id3 es nulo. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> id</span> </td> 
@@ -39,9 +36,9 @@ La clase proporciona los siguientes elementos:
    <td colname="col2"> Identificador único de los metadatos temporizados. Normalmente, este valor se extrae del atributo cue/tag ID. De lo contrario, se proporciona un valor aleatorio único. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> metadatos</span> </td> 
+   <td colname="col1"><span class="codeph"> metadata</span> </td> 
    <td colname="col02"> Metadatos </td> 
-   <td colname="col2"> La información procesada/extraída de la etiqueta personalizada de lista de reproducción/manifiesto. </td> 
+   <td colname="col2"> La información procesada/extraída de la etiqueta personalizada lista de reproducción/manifiesto. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> name</span> </td> 
@@ -51,7 +48,7 @@ La clase proporciona los siguientes elementos:
   <tr> 
    <td colname="col1"><span class="codeph"> time</span> </td> 
    <td colname="col02"> Número </td> 
-   <td colname="col2"> La posición de tiempo, en milisegundos, en relación con el inicio del contenido principal en el que están presentes los metadatos temporizados en el flujo. </td> 
+   <td colname="col2"> Posición temporal, en milisegundos, relativa al inicio del contenido principal en el que están presentes los metadatos temporizados en la emisión. </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> type</span> </td> 
@@ -59,7 +56,7 @@ La clase proporciona los siguientes elementos:
    <td colname="col2">Tipo de metadatos temporizados. 
     <ul id="ul_70FBFB33E9F846D8B38592560CCE9560"> 
      <li id="li_739D30561BFB4D9B97DF212E4880BA2C">TAG: indica que los metadatos temporizados se crearon a partir de una etiqueta de la lista de reproducción/manifiesto. </li> 
-     <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3: indica que los metadatos temporizados se crearon a partir de una etiqueta ID3 en el flujo de medios. </li> 
+     <li id="li_E785E1DEF1CC4D9DBE7764E5D05EFAFC">ID3 : indica que los metadatos temporizados se crearon a partir de una etiqueta ID3 en el flujo de medios. </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
@@ -85,11 +82,11 @@ Recuerde lo siguiente:
 
 | Elemento | Descripción |
 |---|---|
-| `TAG, ID3 ID3, TAG` | Tipos posibles para los metadatos temporizados. |
-| `public function TimedMetadata(type:String, time:Number, id:String, name:String, content:String, metadata:Metadata)` | Constructor predeterminado (tiempo es el tiempo de flujo local). |
+| `TAG, ID3 ID3, TAG` | Tipos posibles de metadatos temporizados. |
+| `public function TimedMetadata(type:String, time:Number, id:String, name:String, content:String, metadata:Metadata)` | Constructor predeterminado (la hora es la hora de flujo local). |
 | `content:String` | El contenido sin procesar de la etiqueta de origen de estos metadatos temporizados. |
-| `time:Number` | La posición de tiempo, en relación con el inicio del contenido principal, donde se insertaron estos metadatos en el flujo. |
-| `metadata:Metadata` | Metadatos insertados en el flujo. |
+| `time:Number` | Posición temporal, relativa al inicio del contenido principal, donde estos metadatos se insertaron en el flujo. |
+| `metadata:Metadata` | Los metadatos insertados en el flujo. |
 | `type:String` | Devuelve el tipo de metadatos temporizados. |
 | `id:String` | Devuelve el ID extraído de los atributos cue/tag. De lo contrario, se proporciona un valor aleatorio único. |
 | `name:String` | Devuelve el nombre del cue, que suele ser el nombre de la etiqueta HLS. |
