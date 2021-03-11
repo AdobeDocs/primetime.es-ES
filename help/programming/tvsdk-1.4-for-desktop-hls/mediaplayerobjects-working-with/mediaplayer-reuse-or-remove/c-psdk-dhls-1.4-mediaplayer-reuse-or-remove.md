@@ -1,13 +1,10 @@
 ---
 description: Puede restablecer, reutilizar o liberar una instancia de MediaPlayer que ya no necesite.
-seo-description: Puede restablecer, reutilizar o liberar una instancia de MediaPlayer que ya no necesite.
-seo-title: Reutilización o eliminación de una instancia de MediaPlayer
-title: Reutilización o eliminación de una instancia de MediaPlayer
-uuid: 70a78f15-034d-4a3c-b163-176f76e5b5e2
+title: Reutilizar o quitar una instancia de MediaPlayer
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '60'
+source-wordcount: '40'
 ht-degree: 0%
 
 ---
