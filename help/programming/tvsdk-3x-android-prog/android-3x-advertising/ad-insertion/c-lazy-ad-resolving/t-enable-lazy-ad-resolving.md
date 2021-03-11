@@ -1,35 +1,32 @@
 ---
 description: Puede habilitar o deshabilitar la función de resolución de publicidad diferida mediante el mecanismo de carga de publicidad diferida existente (la resolución de publicidad diferida está deshabilitada de forma predeterminada).
-keywords: Lazy;Ad resolving;Ad loading;delayLoading
-seo-description: Puede habilitar o deshabilitar la función de resolución de publicidad diferida mediante el mecanismo de carga de publicidad diferida existente (la resolución de publicidad diferida está deshabilitada de forma predeterminada).
-seo-title: Habilitar la resolución diferida de publicidad
-title: Habilitar la resolución diferida de publicidad
-uuid: 91884eea-a622-4f5d-b6a8-36bb0050ba1d
+keywords: Aceite;resolución de publicidad;carga de publicidad;delayLoading
+title: Habilitar la resolución de anuncios diferidos
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '298'
 ht-degree: 0%
 
 ---
 
 
-# Habilitar la resolución de publicidad diferida {#enable-lazy-ad-resolving}
+# Habilitar la resolución de anuncios diferidos {#enable-lazy-ad-resolving}
 
 Puede habilitar o deshabilitar la función de resolución de publicidad diferida mediante el mecanismo de carga de publicidad diferida existente (la resolución de publicidad diferida está deshabilitada de forma predeterminada).
 
 Puede habilitar o deshabilitar la resolución de publicidad diferida llamando a [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) con true o false.
 
-* Utilice los métodos booleanos *hasDelayAdLoading* y *setDelayAdLoading* en AdvertisingMetadata para controlar la temporización de la resolución de publicidad y la colocación de las publicidades en la línea de tiempo:
+* Utilice los métodos booleanos *hasDelayAdLoading* y *setDelayAdLoading* en AdvertisingMetadata para controlar la temporización de la resolución de la publicidad y la colocación de la publicidad en la cronología:
 
-   * Si *hasDelayAdLoading* devuelve false, TVSDK espera hasta que todas las publicidades se resuelvan y se coloquen antes de realizar la transición al estado PREPARADO.
-   * Si *hasDelayAdLoading* devuelve true, TVSDK solo resuelve las publicidades y transiciones iniciales en el estado PREPARADO.
+   * Si *hasDelayAdLoading* devuelve el valor false, TVSDK espera hasta que todos los anuncios se resuelvan y se coloquen antes de pasar al estado PREPARADO.
+   * Si *hasDelayAdLoading* devuelve el valor &quot;True&quot;, TVSDK solo resuelve los anuncios iniciales y las transiciones al estado PREPARADO.
 
-      * Las demás publicidades se resuelven y se colocan durante la reproducción.
-   * Cuando *hasPreroll *o *hasLivePreroll* devuelve false, TVSDK supone que no hay anuncios previos y inicio la reproducción del contenido inmediatamente. Estos valores predeterminados están establecidos en true.
+      * Los anuncios restantes se resuelven y se colocan durante la reproducción.
+   * Cuando *hasPreroll *o *hasLivePreroll* devuelven false, TVSDK supone que no hay anuncios previos a la publicación e inicia la reproducción del contenido inmediatamente. Se establecen de forma predeterminada como verdadero.
 
 
-**API relevantes para la resolución de publicidad diferida:**
+**API relevantes para la resolución de anuncios diferidos:**
 
 ```
 Class:    com.adobe.mediacore.metadata.AdvertisingMetadata 
@@ -51,9 +48,9 @@ Methods:
 
 Para reflejar con precisión los anuncios como señales en una barra de desplazamiento, escuche el evento `TimelineEvent`y vuelva a dibujar la barra de desplazamiento cada vez que reciba este evento.
 
-Cuando la resolución diferida de publicidad está habilitada para los flujos de VOD, todos los saltos de publicidad se colocan en la línea de tiempo; sin embargo, muchos de los saltos de publicidad aún no se resolverán. La aplicación puede determinar si desea o no dibujar estos marcadores seleccionando `TimelineMarker::getDuration()`. Si el valor es bueno a cero, las publicidades dentro de la pausa publicitaria se han resuelto.
+Cuando la resolución de publicidad diferida está habilitada para las emisiones de VOD, todas las pausas publicitarias se colocan en la cronología, sin embargo, muchas de las pausas publicitarias aún no se resolverán. La aplicación puede determinar si desea dibujar o no estos marcadores marcando el `TimelineMarker::getDuration()`. Si el valor es bueno a cero, se han resuelto los anuncios dentro de la pausa publicitaria.
 
-TVSDK distribuye este evento cuando se ha resuelto una pausa publicitaria y también cuando el reproductor transición al estado PREPARADO.
+TVSDK envía este evento cuando se ha resuelto una pausa publicitaria y también cuando el reproductor pasa al estado PREPARADO.
 
 ```
 mediaPlayer.addEventListener(MediaPlayerEvent.TIMELINE_UPDATED, timelineUpdatedEventListener); 
