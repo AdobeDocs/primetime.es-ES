@@ -1,13 +1,10 @@
 ---
-description: La optimización de redireccionamiento 302 minimiza el número de 302 respuestas de redireccionamiento, lo que permite a la aplicación equilibrar la carga de manera más eficaz.
-seo-description: La optimización de redireccionamiento 302 minimiza el número de 302 respuestas de redireccionamiento, lo que permite a la aplicación equilibrar la carga de manera más eficaz.
-seo-title: Optimización de redireccionamiento HTTP 302
+description: La optimización de redireccionamiento 302 minimiza el número de 302 respuestas de redireccionamiento, lo que permite a su aplicación equilibrar la carga de manera más efectiva.
 title: Optimización de redireccionamiento HTTP 302
-uuid: d3009c6c-320a-4c0f-b6ba-bf6473049823
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '149'
 ht-degree: 1%
 
 ---
@@ -15,22 +12,22 @@ ht-degree: 1%
 
 # Optimización de redireccionamiento HTTP 302 {#http-redirect-optimization}
 
-La optimización de redireccionamiento 302 minimiza el número de 302 respuestas de redireccionamiento, lo que permite a la aplicación equilibrar la carga de manera más eficaz.
+La optimización de redireccionamiento 302 minimiza el número de 302 respuestas de redireccionamiento, lo que permite a su aplicación equilibrar la carga de manera más efectiva.
 
-Si se redirige una solicitud de manifiesto principal y se habilita la optimización 302 en el reproductor, las solicitudes posteriores realizadas para los recursos de ese manifiesto utilizarán la ubicación de dominio final, lo que evita las respuestas adicionales 302. Esta función está habilitada de forma predeterminada y puede cambiar esta configuración.
+Si se redirige una solicitud de manifiesto principal y se habilita la optimización 302 en el reproductor, las solicitudes posteriores realizadas para los recursos desde ese manifiesto utilizarán la ubicación de dominio final, lo que evita respuestas adicionales 302. Esta función está habilitada de forma predeterminada y puede cambiar esta configuración.
 
 >[!IMPORTANT]
 >
->Esta función solo se admite en los exploradores certificados que admiten la propiedad `responseURL` en el objeto `XMLHttpRequest`.
+>Esta función solo se admite en exploradores certificados que admitan la propiedad `responseURL` en el objeto `XMLHttpRequest`.
 
 Para la reserva de Flash, recuerde la siguiente información:
 
-* Los usuarios finales deben tener instalado Adobe Flash Player versión 23 o posterior.
-* Si la integridad del flujo está deshabilitada, solo se admite la redirección 302 en exploradores certificados.
+* Los usuarios finales deben tener instalado el Flash Player de Adobe versión 23 o posterior.
+* Si se deshabilita la integridad del flujo, solo se admite el redireccionamiento 302 en exploradores certificados.
 
 ## Desactivación de la optimización de redireccionamiento 302 {#disabling-redirect-optimization}
 
-Puede utilizar la propiedad useRedirectUrl para habilitar la redirección 302 (true) o la desactivación (false).
+Puede utilizar la propiedad useRedirectUrl para habilitar el redireccionamiento 302 (true) o deshabilitar (false).
 
 Por ejemplo:
 
