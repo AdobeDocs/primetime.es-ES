@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Implementar compatibilidad con capítulos
 title: Implementar compatibilidad con capítulos
-uuid: 70f10621-febe-4443-84e7-ce95bec53377
+description: Implementar compatibilidad con capítulos
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '84'
 ht-degree: 0%
 
 ---
@@ -15,9 +13,9 @@ ht-degree: 0%
 
 # Implementar compatibilidad con capítulos{#implement-chapter-support}
 
-Un capítulo se define como el tiempo entre cada pausa publicitaria. Por ejemplo, el tiempo entre una pausa publicitaria previa y la primera mitad del resumen se define como el primer capítulo. Puede definir y rastrear capítulos para el seguimiento de vídeo en una aplicación basada en TVSDK del explorador mediante capítulos personalizados. La aplicación administra los capítulos personalizados en función de los datos de CMS o de otro modo que la aplicación utiliza para definir capítulos.
+Un capítulo se define como el tiempo entre cada pausa publicitaria. Por ejemplo, el tiempo entre una pausa publicitaria pre-roll y la primera mitad de la emisión se define como el primer capítulo. Puede definir y rastrear capítulos para el seguimiento de vídeo en una aplicación basada en TVSDK de explorador mediante capítulos personalizados. La aplicación administra los capítulos personalizados basados en datos de CMS o en otra forma que la aplicación utilice para definir capítulos.
 
-1. Defina y rastree los capítulos personalizados.
+1. Defina y rastree capítulos personalizados.
 
    ```js
    vaObj.enableChapterTracking = true; 
