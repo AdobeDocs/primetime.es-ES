@@ -1,46 +1,43 @@
 ---
 description: TVSDK gestiona los errores de intervalo de tiempo según el problema específico, combinando o reordenando los intervalos de tiempo incorrectamente definidos.
-seo-description: TVSDK gestiona los errores de intervalo de tiempo según el problema específico, combinando o reordenando los intervalos de tiempo incorrectamente definidos.
-seo-title: Gestión de errores de reemplazo y eliminación de publicidad
 title: Gestión de errores de reemplazo y eliminación de publicidad
-uuid: ab153591-0011-44b4-87f9-be0302c2295e
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
 
 
-# Administración de errores de reemplazo y eliminación de publicidad {#ad-deletion-and-replacement-error-handling}
+# Administración de errores de eliminación y reemplazo de publicidad {#ad-deletion-and-replacement-error-handling}
 
 TVSDK gestiona los errores de intervalo de tiempo según el problema específico, combinando o reordenando los intervalos de tiempo incorrectamente definidos.
 
-TVSDK trata los errores `timeRanges` mediante la combinación y reordenación predeterminadas. En primer lugar, ordena los intervalos de tiempo definidos por el cliente por la hora *de inicio*. En función de este orden de clasificación, combina intervalos adyacentes y los une si hay subconjuntos e intersecciones entre los intervalos.
+TVSDK trata los errores `timeRanges` al realizar la combinación y reordenación predeterminadas. En primer lugar, ordena los intervalos de tiempo definidos por el cliente por la *hora de inicio*. En función de este orden de clasificación, combina intervalos adyacentes y los une si hay subconjuntos e intersecciones entre los intervalos.
 
 TVSDK gestiona los errores de intervalo de tiempo de la siguiente manera:
 
-* Desordenado: TVSDK reordena los intervalos de tiempo.
+* Fuera de orden: TVSDK reordena los intervalos de tiempo.
 * Subconjunto: TVSDK combina los subconjuntos de intervalo de tiempo.
-* Intersección: TVSDK combina los intervalos de tiempo interrelacionados.
-* Conflicto de intervalos de reemplazo: TVSDK elige la duración de reemplazo desde la primera vez que aparece `timeRange` en el grupo en conflicto.
+* Intersección : TVSDK combina los intervalos de tiempo que se intersectan.
+* Conflicto de intervalos de reemplazo : TVSDK elige la duración de reemplazo desde la primera vez que aparece `timeRange` en el grupo en conflicto.
 
-TVSDK gestiona los conflictos de modo de señalización de la siguiente manera:
+TVSDK gestiona los conflictos del modo de señalización de la siguiente manera:
 
 * Si se definen intervalos REPLACE, TVSDK cambia automáticamente el modo de señalización a CUSTOM_RANGE.
-* Si los rangos de DELETE o MARK están definidos y el modo de señalización es CUSTOM_RANGE, TVSDK elimina o marca estos rangos. En este caso no hay inserción de publicidad.
-* Si un rango de DELETE o un rango MARK define una duración de sustitución, TVSDK ignora esta duración.
+* Si se definen intervalos de DELETE o rangos de MARCA y el modo de señalización es CUSTOM_RANGE, TVSDK elimina o marca estos rangos. En este caso, no hay inserción de publicidad.
+* Si un intervalo de DELETE o un intervalo MARK define una duración de reemplazo, TVSDK ignora esta duración.
 
-Cuando el servidor no devuelve un valor válido `AdBreaks`:
+Cuando el servidor no devuelve un `AdBreaks` válido:
 
 * TVSDK genera y procesa un `NOPTimelineOperation` para el `AdBreak` vacío. No se reproduce ningún anuncio.
 
 ## Ejemplos de error de intervalo de tiempo {#time-range-error-examples}
 
-TVSDK responde a especificaciones erróneas del intervalo de tiempo combinando o reemplazando los intervalos de tiempo según corresponda.
+TVSDK responde a especificaciones de intervalo de tiempo erróneas combinando o reemplazando los intervalos de tiempo según corresponda.
 
-En el ejemplo siguiente, se definen cuatro intervalos de tiempo de DELETE que se intersectan. TVSDK combina los cuatro intervalos de tiempo en uno, de modo que el intervalo de eliminación real es de 0 a 50.
+En el ejemplo siguiente, se definen cuatro intervalos de tiempo de DELETE que se intersectan. TVSDK combina los cuatro intervalos de tiempo en uno, de modo que el intervalo de eliminación real es de 0 a 50 segundos.
 
 ```
 "time-ranges": {
@@ -61,7 +58,7 @@ En el ejemplo siguiente, se definen cuatro intervalos de tiempo de DELETE que se
 }
 ```
 
-En el ejemplo siguiente, se definen cuatro intervalos de tiempo REPLACE con intervalos de tiempo que entran en conflicto. En este caso, TVSDK sustituye 0-50 por 25 anuncios. Va con la primera duración de reemplazo en el orden de clasificación, porque hay conflictos en intervalos posteriores.
+En el siguiente ejemplo, cuatro intervalos de tiempo REPLACE se definen con intervalos de tiempo conflictivos. En este caso, TVSDK reemplaza 0-50s por 25s de anuncios. Va con la primera duración de reemplazo en el orden de clasificación, ya que hay conflictos en intervalos posteriores.
 
 ```
 "time-ranges": {
