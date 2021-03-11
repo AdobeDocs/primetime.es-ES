@@ -1,23 +1,20 @@
 ---
-description: Elimine TimeRanges entre el inicio y el final en localTime de la línea de tiempo.
-seo-description: Elimine TimeRanges entre el inicio y el final en localTime de la línea de tiempo.
-seo-title: Eliminar intervalos con la publicidad de decisiones y Primetime
-title: Eliminar intervalos con la publicidad de decisiones y Primetime
-uuid: efd36a2f-db61-434a-bc2a-50a866f44b33
+description: Elimine los intervalos de tiempo entre el inicio y el final en localTime de la cronología.
+title: Eliminar intervalos con anuncios de Primetime y decisioning
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '60'
+source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
 
-# Eliminar intervalos con publicidad de Primetime y decisiones{#delete-ranges-with-primetime-ad-decisioning-ad}
+# Eliminar intervalos con anuncios de Primetime y decisioning{#delete-ranges-with-primetime-ad-decisioning-ad}
 
-Elimine TimeRanges entre el inicio y el final en localTime de la línea de tiempo.
+Elimine los intervalos de tiempo entre el inicio y el final en localTime de la cronología.
 
-Eliminar intervalos con una publicidad de frase.
+Eliminar intervalos con un anuncio de Frase.
 
 ```
 {   
