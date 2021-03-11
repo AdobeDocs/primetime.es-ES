@@ -1,21 +1,18 @@
 ---
-seo-title: Objeto JSON para el ID de recurso de asignación de derechos
-title: Objeto JSON para el ID de recurso de asignación de derechos
-uuid: f5b659da-1732-404c-bf00-d32a0ae39aa1
-description: El siguiente bloque de código proporciona un ejemplo de un objeto JSON cuando el ID del recurso de asignación de derechos es una cadena de texto simple.
-seo-description: El siguiente bloque de código proporciona un ejemplo de un objeto JSON cuando el ID del recurso de asignación de derechos es una cadena de texto simple.
+title: Objeto JSON para el ID de recurso de derecho
+description: El siguiente bloque de código proporciona un ejemplo de objeto JSON cuando el ID del recurso de asignación de derechos es una cadena de texto simple.
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '95'
 ht-degree: 0%
 
 ---
 
 
-# Objeto JSON para el identificador de recurso de asignación de derechos {#json-object-for-entitlement-resource-id}
+# Objeto JSON para el ID de recurso de asignación {#json-object-for-entitlement-resource-id}
 
-El siguiente bloque de código proporciona un ejemplo de un objeto JSON cuando el ID del recurso de asignación de derechos es una cadena de texto simple. En este caso, el ID de recurso es la cadena &quot;resource&quot;.
+El siguiente bloque de código proporciona un ejemplo de objeto JSON cuando el ID del recurso de asignación de derechos es una cadena de texto simple. En este caso, el ID de recurso es la cadena &quot;recurso&quot;.
 
 ```
 "metadata" : { 
@@ -25,7 +22,7 @@ El siguiente bloque de código proporciona un ejemplo de un objeto JSON cuando e
 }
 ```
 
-El siguiente bloque de código proporciona un ejemplo de un objeto JSON cuando el ID del recurso de asignación de derechos es una cadena mRSS con codificación HTML.
+El siguiente bloque de código proporciona un ejemplo de objeto JSON cuando el ID del recurso de derechos es una cadena mRSS con codificación HTML.
 
 ```
 <rss version="2.0" xmlns:media="https://search.yahoo.com/mrss/"> 
