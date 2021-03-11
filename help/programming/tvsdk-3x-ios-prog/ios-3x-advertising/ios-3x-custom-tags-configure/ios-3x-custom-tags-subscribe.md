@@ -1,26 +1,23 @@
 ---
-description: TVSDK prepara objetos PTTimedMetadata para etiquetas suscritas cada vez que estos objetos se encuentran en el manifiesto de contenido.
-seo-description: TVSDK prepara objetos PTTimedMetadata para etiquetas suscritas cada vez que estos objetos se encuentran en el manifiesto de contenido.
-seo-title: Suscripción a etiquetas personalizadas
+description: TVSDK prepara objetos PTTimedMetadata para etiquetas suscritas cada vez que se encuentran estos objetos en el manifiesto de contenido.
 title: Suscripción a etiquetas personalizadas
-uuid: e47076b2-6184-4c20-bae4-ba7ae62cf198
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 1%
+source-wordcount: '91'
+ht-degree: 2%
 
 ---
 
 
 # Suscripción a etiquetas personalizadas {#subscribe-to-custom-tags}
 
-TVSDK prepara objetos PTTimedMetadata para etiquetas suscritas cada vez que estos objetos se encuentran en el manifiesto de contenido.
+TVSDK prepara objetos PTTimedMetadata para etiquetas suscritas cada vez que se encuentran estos objetos en el manifiesto de contenido.
 
-Antes de los inicios de reproducción, debe suscribirse a las etiquetas.
-Para recibir notificaciones sobre las etiquetas personalizadas en los manifiestos HLS:
+Antes de iniciar la reproducción, debe suscribirse a las etiquetas .
+Para recibir notificaciones sobre etiquetas personalizadas en manifiestos HLS:
 
-1. Configure los nombres de etiquetas de publicidad personalizados de forma global pasando una matriz que contenga las etiquetas personalizadas a `setSubscribedTags` en `PTSDKConfig`.
+1. Establezca los nombres de etiquetas de publicidad personalizados de forma global pasando una matriz que contenga las etiquetas personalizadas a `setSubscribedTags` en `PTSDKConfig`.
 
    >[!IMPORTANT]
    >
