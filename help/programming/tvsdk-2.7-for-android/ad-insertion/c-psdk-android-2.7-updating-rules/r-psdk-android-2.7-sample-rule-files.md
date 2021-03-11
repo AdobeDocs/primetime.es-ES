@@ -1,13 +1,10 @@
 ---
 description: En AdobeTVSDKConfig.json puede especificar reglas predeterminadas, así como reglas para zonas específicas.
-seo-description: En AdobeTVSDKConfig.json puede especificar reglas predeterminadas, así como reglas para zonas específicas.
-seo-title: Ejemplo de reglas de selección creativa
 title: Ejemplo de reglas de selección creativa
-uuid: 58e6637e-9f5c-471a-8bc8-d217b36e5f9d
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---
@@ -17,9 +14,9 @@ ht-degree: 0%
 
 En AdobeTVSDKConfig.json puede especificar reglas predeterminadas, así como reglas para zonas específicas.
 
-## Reglas predeterminadas de muestra {#section_xy4_3fx_hz}
+## Ejemplo de reglas predeterminadas {#section_xy4_3fx_hz}
 
-A continuación se muestra un ejemplo de un archivo [!DNL AdobeTVSDKConfig.json] que define únicamente las reglas predeterminadas:
+El siguiente es un ejemplo de archivo [!DNL AdobeTVSDKConfig.json] que define solo reglas predeterminadas:
 
 ```
 {
