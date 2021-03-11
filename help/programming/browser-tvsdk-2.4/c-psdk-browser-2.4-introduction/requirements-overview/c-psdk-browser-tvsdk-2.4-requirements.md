@@ -1,13 +1,10 @@
 ---
-description: Esta versión incluye reproductores y admite una amplia gama de exploradores.
-seo-description: Esta versión incluye reproductores y admite una amplia gama de exploradores.
-seo-title: Requisitos
+description: Esta versión incluye reproductores y admite una amplia gama de navegadores.
 title: Requisitos
-uuid: 9726b083-f52a-410c-8ab4-47b4913d5172
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
@@ -17,14 +14,14 @@ ht-degree: 0%
 
 El SDK de explorador requiere propiedades específicas para el contenido multimedia, el contenido de manifiesto y las versiones de software.
 
-La versión de TVSDK del explorador incluye los siguientes reproductores:
+La versión TVSDK del explorador incluye los siguientes reproductores:
 
 * `Primetime.js` para HLS en equipos de escritorio y móviles
 
 Los reproductores incluyen las siguientes API de referencia:
 
-* `Primetime.js` TVSDK del explorador
-* API de JavaScript para la reproducción principal
+* `Primetime.js` Explorador TVSDK
+* API de JavaScript para reproducción principal
 * Reproductor de demostración de referencia
 
 **Plataformas certificadas:**
