@@ -1,21 +1,18 @@
 ---
-description: Un objeto MediaPlayer encapsula el comportamiento y la funcionalidad de un reproductor de medios.
-seo-description: Un objeto MediaPlayer encapsula el comportamiento y la funcionalidad de un reproductor de medios.
-seo-title: Configuración de MediaPlayer
+description: Un objeto MediaPlayer encapsula el comportamiento y la funcionalidad de un reproductor multimedia.
 title: Configuración de MediaPlayer
-uuid: 2279e388-6fbc-49a2-8560-218d3d31e1d6
 translation-type: tm+mt
-source-git-commit: af9b865bc1627a97bf8957b5460ff9b46052a7dc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '107'
+source-wordcount: '91'
 ht-degree: 0%
 
 ---
 
 
-# Configure MediaPlayer{#set-up-the-mediaplayer}
+# Configuración de MediaPlayer{#set-up-the-mediaplayer}
 
-Un objeto MediaPlayer encapsula el comportamiento y la funcionalidad de un reproductor de medios.
+Un objeto MediaPlayer encapsula el comportamiento y la funcionalidad de un reproductor multimedia.
 
 1. Cree una instancia de `MediaPlayer` mediante lo siguiente:
 
@@ -29,7 +26,7 @@ Un objeto MediaPlayer encapsula el comportamiento y la funcionalidad de un repro
    var view = new AdobePSDK.MediaPlayerView(container);
    ```
 
-   donde `container` es el elemento destinatario `div` que contiene su `HTMLMediaElement`.
+   donde `container` es el elemento `div` de destino que contiene su `HTMLMediaElement`.
 
    Por ejemplo, en una página HTML:
 
@@ -43,7 +40,7 @@ Un objeto MediaPlayer encapsula el comportamiento y la funcionalidad de un repro
    </div>
    ```
 
-   Llamar:
+   Llamada:
 
    ```js
    var view = new  
@@ -53,13 +50,13 @@ Un objeto MediaPlayer encapsula el comportamiento y la funcionalidad de un repro
          document.getElementById("videoDiv"));  
    ```
 
-1. Adjunte su instancia `MediaPlayerView` a su instancia `MediaPlayer`:
+1. Adjunte la instancia `MediaPlayerView` a la instancia `MediaPlayer`:
 
    ```js
    player.view = view;
    ```
 
-1. Adjunte el elemento de controles personalizados `div` a la instancia de MediaPlayer.
+1. Adjunte el elemento `div` de controles personalizados a la instancia de MediaPlayer.
 
    Por ejemplo, en HTML:
 
@@ -71,7 +68,7 @@ Un objeto MediaPlayer encapsula el comportamiento y la funcionalidad de un repro
    </div>
    ```
 
-   Llamar:
+   Llamada:
 
    ```js
    if (typeof player.getView() !== 'undefined') { 
