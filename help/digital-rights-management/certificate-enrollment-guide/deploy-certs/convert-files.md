@@ -1,9 +1,9 @@
 ---
-seo-title: Convertir archivos
 title: Convertir archivos
-uuid: e17ee003-5ac2-4bb8-83b7-81ee8fa9ee46
+description: Convertir archivos
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Convertir archivos{#convert-files}
 
-Mediante una utilidad como OpenSSL y la clave privada, el solicitante genera los archivos PKCS#12 (pfx) y PEM/DER introduciendo los siguientes comandos desde una ventana de comandos:
+Utilizando una utilidad como OpenSSL y la clave privada, el solicitante genera los archivos PKCS#12 (pfx) y PEM/DER introduciendo los siguientes comandos desde una ventana de comandos:
 
 1. Convierta el archivo PKCS#7 en un archivo PEM temporal.
 
@@ -26,7 +26,7 @@ Mediante una utilidad como OpenSSL y la clave privada, el solicitante genera los
 
    >[!NOTE]
    >
-   >Este PEM temporal contiene el certificado y los certificados de las CA intermedias. Utilice estos certificados para generar el archivo PFX.
+   >Este PEM temporal contiene su certificado y los certificados para las CA intermedias. Utilice estos certificados para generar el archivo PFX.
 
 1. Convierta el archivo PEM temporal en un archivo PFX.
 
@@ -49,7 +49,7 @@ Mediante una utilidad como OpenSSL y la clave privada, el solicitante genera los
    >
    >Aunque no es obligatorio, Adobe recomienda utilizar contraseñas diferentes para la clave privada (private_key_password) y el PFX (pfx_password).
 
-   Este archivo PEM final solo contiene su certificado.
+   Este archivo PEM final contiene solamente su certificado.
 
 1. Convierta el archivo PEM en un archivo DER.
 
@@ -61,5 +61,5 @@ Mediante una utilidad como OpenSSL y la clave privada, el solicitante genera los
 
    >[!NOTE]
    >
-   >Los archivos DER solo son necesarios para el empaquetador HTTP Dynamic Streaming.
+   >Los archivos DER solo son necesarios para el empaquetador de HTTP Dynamic Streaming.
 
