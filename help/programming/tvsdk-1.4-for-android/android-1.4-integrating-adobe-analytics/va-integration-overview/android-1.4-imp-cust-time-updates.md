@@ -1,13 +1,10 @@
 ---
-description: En algunas implementaciones de análisis, es posible que la aplicación cliente desee proporcionar una posición de cursor de reproducción diferente a la que indica el valor localTime de TVSDK. Por ejemplo, durante una reproducción de flujo lineal, se puede proporcionar el cursor de reproducción de cada programa en relación con su tiempo de inicio.
-seo-description: En algunas implementaciones de análisis, es posible que la aplicación cliente desee proporcionar una posición de cursor de reproducción diferente a la que indica el valor localTime de TVSDK. Por ejemplo, durante una reproducción de flujo lineal, se puede proporcionar el cursor de reproducción de cada programa en relación con su tiempo de inicio.
-seo-title: Implementar actualizaciones de tiempo personalizadas
+description: En algunas implementaciones de analytics, es posible que la aplicación cliente desee proporcionar una posición de cabezal de reproducción diferente a la registrada en el valor localTime de TVSDK. Por ejemplo, durante una reproducción de flujo lineal, se puede proporcionar el cabezal de reproducción de cada programa en relación con su tiempo de inicio.
 title: Implementar actualizaciones de tiempo personalizadas
-uuid: 7f5d46e5-eab6-4bdc-b015-ae27ddb609ce
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '181'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 0%
 
 # Implementar actualizaciones de tiempo personalizadas {#implement-custom-time-updates}
 
-En algunas implementaciones de análisis, es posible que la aplicación cliente desee proporcionar una posición de cursor de reproducción diferente a la que indica el valor localTime de TVSDK. Por ejemplo, durante una reproducción de flujo lineal, se puede proporcionar el cursor de reproducción de cada programa en relación con su tiempo de inicio.
+En algunas implementaciones de analytics, es posible que la aplicación cliente desee proporcionar una posición de cabezal de reproducción diferente a la registrada en el valor localTime de TVSDK. Por ejemplo, durante una reproducción de flujo lineal, se puede proporcionar el cabezal de reproducción de cada programa en relación con su tiempo de inicio.
 
 >[!TIP]
 >
->Sobrescriba este método solo si desea proporcionar una posición de cabeza lectora distinta de la posición predeterminada.
+>Anule este método solo si desea proporcionar una posición del cabezal de reproducción distinta de la predeterminada.
 
-Para anular la posición predeterminada del cursor de reproducción:
+Para anular la posición predeterminada del cabezal de reproducción:
 
 ```java
 vaMetadata.setCurrentTimeUpdateBlock(new VideoAnalyticsMetadata.CurrentTimeUpdateBlock() { 
@@ -36,4 +33,4 @@ vaMetadata.setCurrentTimeUpdateBlock(new VideoAnalyticsMetadata.CurrentTimeUpdat
 
 >[!IMPORTANT]
 >
->Los valores de este fragmento de código son solo ejemplos. Debe utilizar valores diferentes para la posición personalizada del cursor de reproducción.
+>Los valores de este fragmento de código son solo muestras. Debe utilizar valores diferentes para la posición del cabezal de reproducción personalizado.
