@@ -1,23 +1,21 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Carga segura de publicidad a través de HTTPS
 title: Carga segura de publicidad a través de HTTPS
-uuid: 0d680fef-a372-4157-a89b-d9f10003c768
+description: Carga segura de publicidad a través de HTTPS
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
 
-# Carga de publicidad segura a través de HTTPS{#secure-ad-loading-over-https}
+# Carga de anuncios segura a través de HTTPS{#secure-ad-loading-over-https}
 
-Adobe Primetime ofrece una opción para solicitar la primera llamada al servidor de publicidad Primetime y las llamadas relacionadas con CRS a través de HTTPS.
+Adobe Primetime proporciona una opción para solicitar la primera llamada al servidor de publicidad de Primetime y a las llamadas relacionadas con CRS a través de HTTPS.
 
-La función no está habilitada de forma predeterminada. Utilice lo siguiente para habilitar la carga segura de publicidad.
+La función no está activada de forma predeterminada. Utilice lo siguiente para habilitar la carga segura de anuncios.
 
 ```
 AuditudeSettings auditudeSettings = new AuditudeSettings(); 
