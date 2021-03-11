@@ -1,21 +1,18 @@
 ---
-seo-title: Objeto JSON para anuncios Primetime
-title: Objeto JSON para anuncios Primetime
-uuid: acf968d2-9856-4ed6-a046-1ac17d176571
-description: El bloque de código siguiente define los detalles del objeto JSON cuando el valor de tipo es Primetime ads.
-seo-description: El bloque de código siguiente define los detalles del objeto JSON cuando el valor de tipo es Primetime ads.
+title: Objeto JSON para anuncios de Primetime
+description: El bloque de código siguiente define el objeto JSON de detalles cuando el valor de tipo son anuncios de Primetime.
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
 
 
-# Objeto JSON para publicidades Primetime {#json-object-for-primetime-ads}
+# Objeto JSON para anuncios de Primetime {#json-object-for-primetime-ads}
 
-El bloque de código siguiente define los detalles del objeto JSON cuando el valor de tipo es Primetime ads.
+El bloque de código siguiente define el objeto JSON de detalles cuando el valor de tipo son anuncios de Primetime.
 
 ```
 “metadata”: {
@@ -38,9 +35,9 @@ El bloque de código siguiente define los detalles del objeto JSON cuando el val
 
 | Propiedad | Descripción |
 |---|---|
-| domain | Dominio de anuncios Primetime que se usará para las solicitudes de publicidad. |
-| mediaid | La media configurada en los anuncios Primetime para este contenido. |
-| zoneid | Los anuncios de Primetime zoneid. Consulte la documentación de anuncios Primetime para obtener más información. |
-| objetivo | Matriz de pares clave/valor que se utiliza para dirigir publicidades específicas para el contenido. |
+| domain | Dominio de anuncios de Primetime que se utilizará para las solicitudes de publicidad. |
+| mediaid | La mediaid que se ha configurado en los anuncios de Primetime para este contenido. |
+| zoneid | El anuncio de Primetime zoneid. Consulte la documentación de anuncios de Primetime para obtener más información. |
+| segmentación | Matriz de pares clave/valor que se utiliza para dirigir anuncios específicos para el contenido. |
 
 Consulte [com.adobe.mediacore.metadata.AuditudeSettings](https://help.adobe.com/en_US/primetime/api/psdk/javadoc/com/adobe/mediacore/metadata/AuditudeSettings.html) para obtener más información sobre el valor de estos atributos.
