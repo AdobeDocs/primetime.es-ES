@@ -1,29 +1,26 @@
 ---
-description: La solicitud de asignación de derechos y la respuesta se pasan a través de una conexión SSL mutuamente autenticada entre el servidor de licencias y el servicio de asignación de derechos del cliente.
-seo-description: La solicitud de asignación de derechos y la respuesta se pasan a través de una conexión SSL mutuamente autenticada entre el servidor de licencias y el servicio de asignación de derechos del cliente.
-seo-title: SEIS Public API
-title: SEIS Public API
-uuid: f3a17d61-04ee-4bdb-9d64-a98066c6d1c8
+description: La solicitud y la respuesta de asignación de derechos se pasan a través de una conexión SSL mutuamente autenticada entre el servidor de licencias y el servicio de asignación de derechos del cliente.
+title: API pública DE SEES
 translation-type: tm+mt
-source-git-commit: 15403abbd53486e1faa2146cda83f41bd8116632
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
 
 
-# SEES Public API {#sees-public-api}
+# SEES API pública {#sees-public-api}
 
-La solicitud de asignación de derechos y la respuesta se pasan a través de una conexión SSL mutuamente autenticada entre el servidor de licencias y el servicio de asignación de derechos del cliente.
+La solicitud y la respuesta de asignación de derechos se pasan a través de una conexión SSL mutuamente autenticada entre el servidor de licencias y el servicio de asignación de derechos del cliente.
 
-El esquema de URI HTTPS ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) se utiliza para definir el extremo de asignación de derechos y el método de solicitud de POST HTTP ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) se utiliza para la solicitud. El extremo de asignación de derechos, así como un indicador que indica la asignación de derechos en el back-end, son obligatorios y deben incluirse en la directiva en el momento del empaquetado.
+El esquema de URI HTTPS ( [https://tools.ietf.org/html/rfc7230#section-2.7.2](https://tools.ietf.org/html/rfc7230#section-2.7.2)) se utiliza para definir el extremo de la asignación de derechos y el método de solicitud del POST HTTP ( [https://tools.ietf.org/html/rfc7231#section-4.3.3](https://tools.ietf.org/html/rfc7231#section-4.3.3)) se utiliza para la solicitud. El extremo de la asignación de derechos, así como un indicador que indique la asignación de derechos de back-end, son obligatorios y deben incluirse en la directiva en el momento del empaquetado.
 
-## Solicitud de asignación de derechos {#section_BFBFEF0795CA46D6842C479256B95F95}
+## Solicitud de derecho {#section_BFBFEF0795CA46D6842C479256B95F95}
 
 El cuerpo de la solicitud de asignación de derechos será un objeto JSON definido como se muestra a continuación.
 
-**Definición de objeto de solicitud de asignación de derechos JSON**
+**Definición de objeto de solicitud de derechos JSON**
 
 ```
 { 
@@ -55,11 +52,11 @@ El cuerpo de la solicitud de asignación de derechos será un objeto JSON defini
 }
 ```
 
-## Respuesta de asignación de derechos {#section_F15A9FD6BAD946B3B4C5C14612F90154}
+## Respuesta de derecho {#section_F15A9FD6BAD946B3B4C5C14612F90154}
 
 El cuerpo de la respuesta de asignación de derechos es un objeto JSON.
 
-**Definición de objeto de respuesta de asignación de derechos JSON**
+**Definición de objeto de respuesta de la asignación JSON**
 
 ```
 { 
