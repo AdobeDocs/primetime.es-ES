@@ -1,21 +1,18 @@
 ---
-description: Si la aplicación necesita gestionar eventos enviados desde el administrador de funciones, debe registrar al administrador en el archivo PlayerFragment.java.
-seo-description: Si la aplicación necesita gestionar eventos enviados desde el administrador de funciones, debe registrar al administrador en el archivo PlayerFragment.java.
-seo-title: Gestión de eventos
+description: Si la aplicación necesita gestionar eventos distribuidos desde el administrador de funciones, debe registrar al administrador en el archivo PlayerFragment.java .
 title: Gestión de eventos
-uuid: 13639f02-0dcc-4a0a-8524-515da5478006
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 2%
+source-wordcount: '50'
+ht-degree: 4%
 
 ---
 
 
-# Administración de eventos {#handling-events}
+# Gestión de eventos {#handling-events}
 
-Si la aplicación necesita gestionar eventos enviados desde el administrador de funciones, debe registrar al administrador en el archivo PlayerFragment.java.
+Si la aplicación necesita gestionar eventos distribuidos desde el administrador de funciones, debe registrar al administrador en el archivo PlayerFragment.java .
 
 Por ejemplo:
 
