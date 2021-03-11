@@ -1,23 +1,20 @@
 ---
-description: Los informes de análisis de vídeo se dirigen a las plataformas de Adobe Analytics sistema de informes.
-seo-description: Los informes de análisis de vídeo se dirigen a las plataformas de Adobe Analytics sistema de informes.
-seo-title: Acceso a los informes de análisis de vídeo
-title: Acceso a los informes de análisis de vídeo
-uuid: 82a03409-ad17-4442-8e89-58de2618e8c8
+description: Los informes de análisis de vídeo se dirigen a las plataformas de informes de Adobe Analytics.
+title: Acceso a informes de análisis de vídeo
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '59'
 ht-degree: 0%
 
 ---
 
 
-# Acceda a los informes de análisis de vídeo {#access-video-analytics-reports}
+# Acceso a informes de análisis de vídeo {#access-video-analytics-reports}
 
-Los informes de análisis de vídeo se dirigen a las plataformas de Adobe Analytics sistema de informes.
+Los informes de análisis de vídeo se dirigen a las plataformas de informes de Adobe Analytics.
 
 Para obtener más información sobre la configuración de Adobe Analytics, consulte la documentación de [Adobe Analytics](https://microsite.omniture.com/t2/help/en_US/reference/).
-1. Seleccione el RSID habilitado para seguimiento de videos.
+1. Seleccione el RSID habilitado para seguimiento de vídeo.
 1. Seleccione **[!UICONTROL Video]** > **[!UICONTROL Video Engagement]** > **[!UICONTROL Video Overview]**.
 1. Seleccione un clip de vídeo.
