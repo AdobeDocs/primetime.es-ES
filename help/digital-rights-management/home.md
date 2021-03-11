@@ -1,20 +1,19 @@
 ---
 title: Ayuda de Primetime Digital Rights Management
-seo-title: Ayuda de Adobe Digital Rights Management
-description: 'null'
-seo-description: 'null'
+description: Ayuda de Primetime Digital Rights Management
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 242b5a2875ebc0e0020296ce9489dd54438b5ad0
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 51%
+source-wordcount: '211'
+ht-degree: 54%
 
 ---
 
 
-# Ayuda de Primetime Digital Rights Management (DRM)
+# Ayuda del Digital Rights Management de Primetime (DRM)
 
-Bienvenido a la ayuda de Digital Rights Management para Adobe Primetime. Los documentos enumerados en la navegación izquierda son los activadores clave para la distribución de contenido digital.
+Le damos la bienvenida a la ayuda de Digital Rights Management para Adobe Primetime. Los documentos enumerados en la navegación izquierda son los activadores clave para la distribución de contenido digital.
 
 ## Consulte también
 
@@ -32,7 +31,7 @@ Bienvenido a la ayuda de Digital Rights Management para Adobe Primetime. Los doc
 
 * [Conozca Adobe Primetime](https://www.adobe.com/in/marketing/primetime.html)
 
-* [Monitoreo de simultaneidad](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
+* [Supervisión de la concurrencia](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
 
 * [Autenticación de Primetime](https://tve.helpdocsonline.com/home)
 
