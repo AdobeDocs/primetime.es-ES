@@ -1,23 +1,20 @@
 ---
-description: Este es un ejemplo de cómo crear un botón que permite al usuario seleccionar una pista de subtítulos opcionales.
-seo-description: Este es un ejemplo de cómo crear un botón que permite al usuario seleccionar una pista de subtítulos opcionales.
-seo-title: Ejemplo Permitir que los usuarios cambien el seguimiento de rótulos
-title: Ejemplo Permitir que los usuarios cambien el seguimiento de rótulos
-uuid: 4b69d569-0d6e-4388-9fe3-488e2a4d762d
+description: Este es un ejemplo de cómo crear un botón que permita al usuario seleccionar una pista de subtítulos.
+title: Ejemplo Permitir que los usuarios cambien el seguimiento de rótulo
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
 
-# Ejemplo: Permitir que los usuarios cambien el seguimiento de rótulos{#example-allow-users-to-change-the-caption-track}
+# Ejemplo: Permitir que los usuarios cambien el seguimiento de rótulo{#example-allow-users-to-change-the-caption-track}
 
-Este es un ejemplo de cómo crear un botón que permite al usuario seleccionar una pista de subtítulos opcionales.
+Este es un ejemplo de cómo crear un botón que permita al usuario seleccionar una pista de subtítulos.
 
-1. Cree un botón sencillo para cambiar la pista de subtítulos opcionales.
+1. Cree un botón sencillo para cambiar la pista de subtítulos.
 
    ```xml
       <Button 
@@ -31,7 +28,7 @@ Este es un ejemplo de cómo crear un botón que permite al usuario seleccionar u
      android:text="CC" /> 
    ```
 
-1. Convierta la lista de pistas de subtítulos opcionales disponibles en una matriz de cadenas. Las pistas de subtítulos opcionales que tienen actividad (es decir, canales para los que TVSDK ha descubierto datos) se marcan de manera acorde:
+1. Convierta la lista de pistas de subtítulos cerrados disponibles en una matriz de cadenas. Las pistas de subtítulos cerrados que tienen actividad (es decir, los canales para los que TVSDK ha descubierto datos) se marcan según corresponda:
 
    ```java
    /** 
@@ -57,7 +54,7 @@ Este es un ejemplo de cómo crear un botón que permite al usuario seleccionar u
    } 
    ```
 
-1. Cuando el usuario hace clic en el botón, muestra un cuadro de diálogo que lista todas las pistas de CC predeterminadas.
+1. Cuando el usuario haga clic en el botón , muestre un cuadro de diálogo que enumere todas las pistas de CC predeterminadas.
 
    ```java
       public void selectClosedCaptioningClick(View view) { 
