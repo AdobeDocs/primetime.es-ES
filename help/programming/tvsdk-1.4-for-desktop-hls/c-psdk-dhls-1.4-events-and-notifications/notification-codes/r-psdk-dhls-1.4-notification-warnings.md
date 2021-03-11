@@ -1,21 +1,18 @@
 ---
-description: Esta tabla muestra información detallada sobre WARN. escriba notificaciones.
-seo-description: Esta tabla muestra información detallada sobre WARN. escriba notificaciones.
-seo-title: Códigos de notificación de ADVERTENCIA
-title: Códigos de notificación de ADVERTENCIA
-uuid: 1ce5be07-f5bf-443c-b907-9768633e1300
+description: Esta tabla proporciona información detallada sobre WARN. notificaciones del tipo .
+title: ADVERTENCIA de códigos de notificación
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '272'
 ht-degree: 2%
 
 ---
 
 
-# ADVERTENCIA de códigos de notificación{#warning-notification-codes}
+# WARNING notification codes{#warning-notification-codes}
 
-Esta tabla muestra información detallada sobre WARN. escriba notificaciones.
+Esta tabla proporciona información detallada sobre WARN. notificaciones del tipo .
 
 <!--<a id="section_F25366B6703040E3ADA993C113618F01"></a>-->
 
@@ -41,13 +38,13 @@ La mayoría de las advertencias contienen metadatos relevantes, por ejemplo, la 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 200000  </span> </td> 
-   <td colname="2"><span class="codeph"> PLAYBACK_OPERATION_FALIL  </span> </td> 
+   <td colname="2"><span class="codeph"> PLAYBACK_OPERATION_FAIL  </span> </td> 
    <td colname="3"><span class="codeph"> AUDIO_TRACK_ERROR  </span><span class="codeph"> SEEK_ERROR  </span> </td> 
    <td colname="4"><span class="codeph"> DESCRIPCIÓN  </span> </td> 
    <td colname="5"> <p>Se ha producido un error en una operación relacionada con la reproducción, pero es posible que la reproducción continúe. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>Resolución de publicidad  </b> </td> 
+   <td colname="1"><b>Resolución de anuncios  </b> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -56,12 +53,12 @@ La mayoría de las advertencias contienen metadatos relevantes, por ejemplo, la 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 201000  </span> </td> 
    <td colname="2"><span class="codeph"> AD_RESOLVER_FAIL  </span> </td> 
-   <td colname="3"><span class="codeph"> AD_RESOLVER_RESOLVE_FAIL  </span><span class="codeph"> RESOURCE_PLACEMENT_ NO SE PUDO  </span><span class="codeph"> AD_RESOLVER_ METADATA_INVALID  </span> </td> 
-   <td colname="4"> <p>Ninguno </p> </td> 
-   <td colname="5"> <p>La resolución de publicidad no pudo resolver/insertar el contenido de la publicidad. La reproducción puede continuar. </p> </td> 
+   <td colname="3"><span class="codeph"> AD_RESOLVER_ RESOLVE_FAIL  </span><span class="codeph"> RESOURCE_PLACEMENT_ ERROR  </span><span class="codeph"> AD_RESOLVER_ METADATA_INVALID  </span> </td> 
+   <td colname="4"> <p>Ninguna </p> </td> 
+   <td colname="5"> <p>El solucionador de anuncios no ha podido resolver/insertar el contenido del anuncio. Puede que la reproducción continúe. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>Manifiestos de antecedentes</b> </td> 
+   <td colname="1"><b>Manifiestos de fondo</b> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -69,15 +66,15 @@ La mayoría de las advertencias contienen metadatos relevantes, por ejemplo, la 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 204000  </span> </td> 
-   <td colname="2"><span class="codeph"> BACKGROUND_MANIFEST_ ADVERTENCIA</span> </td> 
-   <td colname="3"> <p>Ninguno </p> </td> 
+   <td colname="2"><span class="codeph"> BACKGROUND_MANIFEST_ WARNING</span> </td> 
+   <td colname="3"> <p>Ninguna </p> </td> 
    <td colname="4"><span class="codeph"> BACKGROUND_MANIFEST_ WARNING_</span> <span class="codeph"> ERRORBACKGROUND_MANIFEST_ WARNING_</span> <span class="codeph"> NAMEDESCRIPTION</span> </td> 
-   <td colname="5"> <p> Error en la descarga del manifiesto en segundo plano. Cualquier problema relacionado con la actualización del manifiesto de fondo se envía como una advertencia TVSDK y no provoca que la reproducción se detenga. </p> </td> 
+   <td colname="5"> <p> Error en la descarga del manifiesto en segundo plano. Cualquier problema en la actualización del manifiesto de fondo se envía como advertencia de TVSDK y no provoca que se detenga la reproducción. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> 204001  </span> </td> 
    <td colname="2"><span class="codeph"> INVALID_SEEK_ WARNING</span> </td> 
-   <td colname="3"> <p>Ninguno </p> </td> 
+   <td colname="3"> <p>Ninguna </p> </td> 
    <td colname="4"><span class="codeph"> DESCRIPCIÓN</span> </td> 
    <td colname="5"> <p> </p> </td> 
   </tr> 
@@ -91,17 +88,17 @@ La mayoría de las advertencias contienen metadatos relevantes, por ejemplo, la 
   <tr rowsep="1"> 
    <td colname="1" morerows="1"><span class="codeph"> 209100  </span> </td> 
    <td colname="2" morerows="1"><span class="codeph"> NATIVE_WARNING  </span> </td> 
-   <td colname="3" morerows="1"> <p>Ninguno </p> </td> 
+   <td colname="3" morerows="1"> <p>Ninguna </p> </td> 
    <td colname="4"><b>AVE</b> <p><span class="codeph"> NATIVE_ERROR_CODE  </span><span class="codeph"> NATIVE_ERROR_NAME  </span><span class="codeph"> DESCRIPCIÓN  </span> </p> </td> 
    <td colname="5"> <p>La biblioteca AVE de bajo nivel ha generado un error. </p> <p>Consulte <a href="../../c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-native-error-summary.md" format="html" scope="external"> Detalles de las notificaciones NATIVE_ERROR</a> para obtener información detallada sobre los valores de estos campos de metadatos. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="4"><b>DRM</b> <p><span class="codeph"> NATIVE_SUBERROR_</span> <span class="codeph"> CODEDRM_ERROR_STRING</span> </p> </td> 
-   <td colname="5">Código de error secundario DRM y cadena de error del servidor DRM. Consulte <a href="../../c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-native-error-summary.md" format="html" scope="external"> Detalles de las notificaciones NATIVE_ERROR</a> para obtener información detallada sobre los valores de estos campos de metadatos.
+   <td colname="5">Código de error menor de DRM y cadena de error del servidor DRM. Consulte <a href="../../c-psdk-dhls-1.4-events-and-notifications/notification-codes/c-psdk-dhls-1.4-native-error-summary.md" format="html" scope="external"> Detalles de las notificaciones NATIVE_ERROR</a> para obtener información detallada sobre los valores de estos campos de metadatos.
    </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><b>Genérico</b> </td> 
+   <td colname="1"><b>Genéricas</b> </td> 
    <td colname="2"> </td> 
    <td colname="3"> </td> 
    <td colname="4"> </td> 
@@ -110,9 +107,9 @@ La mayoría de las advertencias contienen metadatos relevantes, por ejemplo, la 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> 299999  </span> </td> 
    <td colname="2"><span class="codeph"> GENERIC_WARNING  </span> </td> 
-   <td colname="3"> <p>Ninguno </p> </td> 
-   <td colname="4"> <p>Ninguno </p> </td> 
-   <td colname="5"> <p>Marca un evento de advertencia genérico. En realidad no es emitido por TVSDK. Es sólo un marcador para el final del rango de códigos numéricos correspondientes a eventos de advertencia. </p> </td> 
+   <td colname="3"> <p>Ninguna </p> </td> 
+   <td colname="4"> <p>Ninguna </p> </td> 
+   <td colname="5"> <p>Marca un evento de advertencia genérico. No es emitido por TVSDK. Es solo un marcador para el final del rango de códigos numéricos correspondientes a eventos de advertencia. </p> </td> 
   </tr> 
  </tbody> 
 </table>
