@@ -1,13 +1,10 @@
 ---
 description: Puede completar flujos de trabajo específicos del Digital Rights Management (DRM).
-seo-description: Puede completar flujos de trabajo específicos del Digital Rights Management (DRM).
-seo-title: Digital Rights Management
 title: Digital Rights Management
-uuid: 011605c7-50c4-4ad5-9961-8cd92d0e6fd8
 translation-type: tm+mt
-source-git-commit: 5a786d8001326f874a51d65b8e8badca44f46e96
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 Puede completar flujos de trabajo específicos del Digital Rights Management (DRM).
 
-Puede escuchar el evento `AdobePSDK.DRMMetadataInfoEvent` para controlar los flujos de trabajo de DRM:
+Puede escuchar el evento `AdobePSDK.DRMMetadataInfoEvent` para gestionar los flujos de trabajo de DRM:
 
 ```js
 ... 
@@ -25,15 +22,15 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 ...
 ```
 
-## Añadir Digital Rights Management {#add-digital-rights-management}
+## Agregar Digital Rights Management {#add-digital-rights-management}
 
-1. Añada el `DRMMetadataInfoAvailableEvent` para obtener el `DRMMetadata`.
+1. Agregue `DRMMetadataInfoAvailableEvent` para obtener el `DRMMetadata`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
    ```
 
-1. Implemente la sección `onDRMMetadataInfoAvailable` por encima de la línea en el paso 1.
+1. Implemente la sección `onDRMMetadataInfoAvailable` encima de la línea en el paso 1.
 
    ```js
    var onDRMMetadataInfoAvaialble = function(event) { 
@@ -48,7 +45,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    };
    ```
 
-1. Cree DRMManager en el método setupVideo.
+1. Cree DRMManager en el método setupVideo .
 
    ```js
    var drmManager = player.drmManager;
@@ -72,13 +69,13 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    };
    ```
 
-1. Añada los datos de protección a drmManager.
+1. Agregue los datos de protección a drmManager.
 
    ```js
    drmManager.setProtectionData(protectionData);
    ```
 
-1. Cambie la URL del recurso a una secuencia de prueba DASH.
+1. Cambie la URL del recurso a un flujo de prueba DASH.
 
    >[!TIP]
    >
