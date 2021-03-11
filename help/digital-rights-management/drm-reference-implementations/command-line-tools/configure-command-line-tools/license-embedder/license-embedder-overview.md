@@ -1,9 +1,9 @@
 ---
-seo-title: Información general
 title: Información general
-uuid: 5487d1d3-7eb8-410d-a4b1-cde3e94c00a1
+description: Información general
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 0%
@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# Incrustación de licencias DRM {#license-embedder}
+# Incrustador de licencias DRM {#license-embedder}
 
-Utilice [!DNL AdobeLicenseEmbedder.jar] para incrustar las licencias pregeneradas en el contenido que protege Media Packager.
+Utilice [!DNL AdobeLicenseEmbedder.jar] para incrustar licencias pregeneradas en el contenido que protege Media Packager.
 
-## Uso de la línea de comandos del incrustador de licencias {#license-embedder-command-line-usage}
+## Uso de la línea de comandos del grabador de licencias {#license-embedder-command-line-usage}
 
 ```
 java -jar AdobeLicenseEmbedder.jar sourcefile destfile [options]
@@ -44,15 +44,15 @@ En la tabla siguiente se describen las opciones de la línea de comandos que pue
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -m metadata-filename  </span> </td> 
-   <td colname="2" class="- topic/entry "> Especifica los metadatos de contenido para los que puede generar una licencia. Esta opción es necesaria para generar una licencia. </td> 
+   <td colname="2" class="- topic/entry "> Especifica los metadatos de contenido para los que se puede generar una licencia. Esta opción es necesaria para generar una licencia. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -noprompt  </span> </td> 
-   <td colname="2" class="- topic/entry "> No pregunte si se debe sobrescribir el archivo de destino. Si el archivo de destino ya existe y el <span class="codeph"> -o </span> no se ha aplicado, se producirá un error. </td> 
+   <td colname="2" class="- topic/entry "> No pregunte si el archivo de destino debe sobrescribirse. Si el archivo de destino ya existe y <span class="codeph"> -o </span> no se ha aplicado, se produce un error. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -o  </span> </td> 
-   <td colname="2" class="- topic/entry "> Si el archivo de destino ya existe, puede sobrescribirlo sin que se le pregunte. </td> 
+   <td colname="2" class="- topic/entry "> Si el archivo de destino ya existe, puede sobrescribirlo sin que se le solicite. </td> 
   </tr> 
  </tbody> 
 </table>
