@@ -1,9 +1,9 @@
 ---
-seo-title: Detalles del flujo de trabajo de directivas
 title: Detalles del flujo de trabajo de directivas
-uuid: b355fcf6-3416-440f-9b30-a155e20f9f74
+description: Detalles del flujo de trabajo de directivas
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 635e2893439c5459907c54d2c3bd86f58da0eec5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 0%
@@ -11,51 +11,51 @@ ht-degree: 0%
 ---
 
 
-# Flujo de trabajo de BEES {#bees-workflow}
+# Flujo de trabajo BEES {#bees-workflow}
 
 **Resumen:**
 
-* **Política** : cree una directiva DRM para BEES que indique que BEES es necesaria para todo el contenido empaquetado con esta directiva.
-* **Empaquetado** : empaquete el contenido con la directiva DRM según BEES.
-* **Autenticación** : autentique el dispositivo cliente y utilice la API de DRM de Primetime, o la API de Primetime, para asociar este token a DRM de Primetime Cloud. Si lo hace, el dispositivo cliente enviará este autentificador a Primetime Cloud DRM junto con todas las solicitudes de licencia. Primetime Cloud DRM no procesará el listado, sino que lo transmitirá (como un blob opaco) a su extremo BEES para su procesamiento.
-* **Licencias** : solicite una licencia para el contenido protegido. El dispositivo cliente anexará automáticamente el autentificador establecido anteriormente a la llamada.
-* **Asignación de derechos** : Primetime Cloud DRM determinará que el contenido se empaquetó con una política que requiere BEES. Primetime Cloud DRM construirá una solicitud JSON para enviar al extremo BEES. La respuesta de BEES indicará a Primetime Cloud DRM si desea o no emitir una licencia y, opcionalmente, qué política de DRM utilizar.
+* **Política** : cree una directiva DRM con reconocimiento de BEES que indique que BEES es necesaria para todo el contenido empaquetado con esta directiva.
+* **Empaquetado** : Empaquete contenido utilizando la directiva DRM según BEES.
+* **Autenticación** : autentique su dispositivo cliente y utilice la API de DRM de Primetime o la API de Primetime para asociar este token a DRM de Primetime Cloud. Si lo hace, el dispositivo cliente enviará este token de autenticación a Primetime Cloud DRM junto con todas las solicitudes de licencia. El DRM de Primetime Cloud no procesará este token, sino que lo transmitirá (como un blob opaco) a su punto final de BEES para su procesamiento.
+* **Licencias** : solicite una licencia para su contenido protegido. El dispositivo cliente anexará automáticamente el token de autenticación establecido anteriormente a la llamada.
+* **Derechos** : el DRM de Primetime Cloud determinará que el contenido esté empaquetado con una política que requiere BEES. Primetime Cloud DRM construirá una solicitud JSON para enviar al extremo BEES. La respuesta de BEES indicará a Primetime Cloud DRM si emitir o no una licencia y, opcionalmente, qué política de DRM utilizar.
 
 ## Detalles del flujo de trabajo de directivas {#policy-workflow-details}
 
-Cuando Primetime Cloud DRM procesa una solicitud de licencia, analiza la directiva DRM en la solicitud para determinar si se requiere una llamada a un servicio de asignación de derechos back-end para poder mostrar el contenido. Si se requiere una llamada BEES **, Primetime Cloud DRM creará la solicitud BEES y, a continuación, analizará la directiva DRM para obtener un extremo de URL BEES especificado para la solicitud BEES.
+Cuando Primetime Cloud DRM procesa una solicitud de licencia, analiza la política DRM en la solicitud para determinar si se requiere una llamada a un servicio de asignación de derechos backend para poder mostrar el contenido. Si se requiere una llamada a BEES *es* , el DRM de Primetime Cloud creará la solicitud BEES y, a continuación, analizará la política de DRM para obtener un extremo de URL BEES especificado para la solicitud BEES.
 
-Aplique la directiva DRM que indica el requisito BEES, especificando las dos siguientes propiedades personalizadas en la directiva:
+Aplique su política de DRM que indique el requisito de BEES, especificando las dos siguientes propiedades personalizadas en la directiva:
 
     * `policy.customProp.1=bees.required=&lt;true>`
     * `policy.customProp.2=bees.url=&lt;url to=&quot;&quot; your=&quot;&quot; BEES=&quot;&quot; endpoint=&quot;&quot;>`
 
 <!--<a id="example_F617FC49A4824C0CB234C92E57D876D3"></a>-->
 
-Por ejemplo, si utiliza el Administrador de directivas de DRM de Primetime ( [!DNL AdobePolicyManager.jar]), especificará las dos propiedades personalizadas siguientes en el archivo de configuración [!DNL flashaccesstools.properties]:
+Por ejemplo, si utiliza el Administrador de políticas de DRM de Primetime ( [!DNL AdobePolicyManager.jar]), debe especificar las dos propiedades personalizadas siguientes en el archivo de configuración [!DNL flashaccesstools.properties]:
 
 * `policy.customProp.1=bees.required=true`
 * `policy.customProp.2=bees.url=https://mybeesserver.example.com/bees`
 
 >[!NOTE]
 >
->Si ya está utilizando `policy.customProp.1` o `policy.customProp.2` para otra propiedad, simplemente utilice números únicos para las propiedades más nuevas.
+>Si ya está utilizando `policy.customProp.1` o `policy.customProp.2` para otra propiedad, simplemente utilice números únicos para las propiedades más recientes.
 
 ## Detalles del flujo de trabajo del paquete {#package-workflow-details}
 
-Durante el empaquetado del contenido protegido por Adobe Access, debe aplicar una de las directivas DRM que reconoce BEES al contenido.
+Durante el empaquetado del contenido protegido por Access en el Adobe, debe aplicar al contenido una de sus políticas DRM con conocimiento de BEES.
 
 ## Detalles del flujo de trabajo de autenticación {#authentication-workflow-details}
 
-Para que el extremo BEES pueda tomar decisiones de asignación de derechos, el dispositivo cliente debe proporcionar información de autenticación. Esto se logra mediante el uso de su propio autentificador específico del cliente.
+Para que el punto final de BEES tome decisiones de asignación de derechos, el dispositivo cliente debe proporcionar información de autenticación. Esto se logra mediante el uso de su propio token de autenticación específico del cliente.
 
-Primetime Cloud DRM no tiene que entender este token: simplemente pasa este token a su extremo BEES. El dispositivo cliente es responsable de crear o adquirir este token y configurarlo mediante la API `DRMManager.setAuthenticationToken()`.
+El DRM de Primetime Cloud no tiene que comprender este token: simplemente pasa este token a su extremo BEES. El dispositivo cliente es responsable de crear o adquirir este token y configurarlo mediante la API `DRMManager.setAuthenticationToken()`.
 
-Para asociar este token con Primetime Cloud DRM, haga lo siguiente para que se envíe con la solicitud de licencia:
+Haga lo siguiente para asociar este token a Primetime Cloud DRM para que se envíe con la solicitud de licencia:
 
 Cree una instancia del objeto `DRMManager` con los metadatos DRM del contenido empaquetado para DRM de Primetime Cloud.
 
-El método `setAuthenticationToken()` funciona asociando la matriz de bytes dada con la URL del servidor de licencias proporcionada en los metadatos de DRM que se utilizaron para crear instancias de `DRMManager`.
+El método `setAuthenticationToken()` funciona asociando la matriz de bytes dada con la URL del servidor de licencias proporcionada en los metadatos DRM que se utilizaron para crear instancias `DRMManager`.
 
 ```java
 //client device acquires auth token needed by your BEES endpoint  
@@ -65,13 +65,13 @@ mgr.setAuthenticationToken(<auth token>);
 
 El token se envía con todas las solicitudes de licencia hasta que se borra el token llamando a `.setAuthenticationToken` con null como parámetro.
 
-## Detalles del flujo de trabajo de licencias{#license-workflow-details}
+## Detalles del flujo de trabajo de licencia{#license-workflow-details}
 
 Solicite una licencia de Primetime Cloud DRM llamando a `mgr.loadVoucher()`.
 
-## Detalles de solicitud y respuesta de asignación de derechos{#entitlement-request-and-response-details}
+## Detalles de solicitud y respuesta de derecho{#entitlement-request-and-response-details}
 
-Cuando Primetime Cloud DRM determina que el contenido se empaquetó con una directiva DRM según BEES, crea la siguiente solicitud JSON para enviarla al extremo BEES especificado en la directiva DRM:
+Cuando el DRM de Primetime Cloud determina que el contenido se empaquetó con una directiva DRM según BEES, construye la siguiente solicitud JSON para enviarla al extremo BEES especificado en la directiva DRM:
 
 ```
 {
@@ -105,7 +105,7 @@ Cuando Primetime Cloud DRM determina que el contenido se empaquetó con una dire
 }
 ```
 
-Se espera la siguiente respuesta del criterio de valoración de BEES:
+Se espera la siguiente respuesta del punto final de BEES:
 
 ```
 {
@@ -153,4 +153,4 @@ Se espera la siguiente respuesta del criterio de valoración de BEES:
 }
 ```
 
-Primetime Cloud DRM utiliza la respuesta para determinar si debe o no emitir una licencia al dispositivo solicitante y si debe sustituir una nueva directiva DRM en el proceso de generación de licencias. Si `isAllowed` es `true` y no se proporciona ninguna directiva en la respuesta, se utilizará la directiva DRM original utilizada durante el tiempo de empaquetado de contenido para generar la licencia.
+Primetime Cloud DRM utiliza la respuesta para determinar si debe emitir o no una licencia en el dispositivo solicitante y si debe sustituir una nueva directiva DRM en el proceso de generación de licencias. Si `isAllowed` es `true` y no se proporciona ninguna política en la respuesta, entonces la Política DRM original usada durante el tiempo de empaquetado de contenido se utilizará para generar la licencia.
