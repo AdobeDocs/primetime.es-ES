@@ -1,23 +1,20 @@
 ---
-description: Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con el tiempo de inicio.
-seo-description: Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con el tiempo de inicio.
-seo-title: Uso de metadatos temporizados
-title: Uso de metadatos temporizados
-uuid: 9bbdaefa-4ac5-4e08-92b4-15ebe5c46864
+description: Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con la hora de inicio.
+title: Usar metadatos temporizados
 translation-type: tm+mt
-source-git-commit: 25a0dfef12ecf10ba939500c4ba539468c41ee1b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 1%
+source-wordcount: '100'
+ht-degree: 2%
 
 ---
 
 
 # Usar metadatos temporizados{#use-timed-metadata}
 
-Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con el tiempo de inicio.
+Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con la hora de inicio.
 
-Para utilizar estos objetos guardados `PTTimedMetadata` durante la reproducción, utilice el diccionario guardado de [Almacenar objetos de metadatos temporizados a medida que se distribuyen](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
+Para utilizar estos `PTTimedMetadata` objetos guardados durante la reproducción, utilice el diccionario guardado de [Almacene los objetos de metadatos temporizados a medida que se envían](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
 
 1. Extraiga y actualice el tiempo de reproducción actual desde esta notificación y busque todos los objetos `PTTimedMetadata` con tiempos de inicio que coincidan con el tiempo de reproducción actual.
 
@@ -60,4 +57,4 @@ Para utilizar estos objetos guardados `PTTimedMetadata` durante la reproducción
    }
    ```
 
-1. Extraiga periódicamente instancias antiguas `PTTimedMetadata` de la lista para evitar que la memoria crezca continuamente.
+1. Elimine periódicamente instancias `PTTimedMetadata` obsoletas de la lista para evitar que la memoria crezca continuamente.
