@@ -1,24 +1,21 @@
 ---
 description: Puede elegir usar comportamientos de publicidad predeterminados.
-seo-description: Puede elegir usar comportamientos de publicidad predeterminados.
-seo-title: Usar el comportamiento de reproducción predeterminado
-title: Usar el comportamiento de reproducción predeterminado
-uuid: ccda5223-17c1-4cda-b875-e706f5dc8648
+title: Uso del comportamiento de reproducción predeterminado
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '60'
 ht-degree: 0%
 
 ---
 
 
-# Usar el comportamiento de reproducción predeterminado {#use-the-default-playback-behavior}
+# Utilizar el comportamiento de reproducción predeterminado {#use-the-default-playback-behavior}
 
 Puede elegir usar comportamientos de publicidad predeterminados.
 
 Para utilizar comportamientos predeterminados:
 
-    * Si implementa su propia clase &quot;AdvertisingFactory&quot;, devuelva null para &quot;createAdPolicySelector&quot;.
+    * Si implementa su propia clase &quot;AdvertisingFactory&quot;, devuelva null para &quot;createAdPolicySelector&quot; .
     
-    * Si no tiene una implementación personalizada para la clase `AdvertisingFactory′, TVSDK utiliza un selector de directivas de publicidad predeterminado.
+    * Si no tiene una implementación personalizada para la clase &quot;AdvertisingFactory&quot;, TVSDK utiliza un selector de políticas de publicidad predeterminado .
