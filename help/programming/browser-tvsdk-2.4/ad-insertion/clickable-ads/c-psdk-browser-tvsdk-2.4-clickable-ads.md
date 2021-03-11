@@ -1,13 +1,10 @@
 ---
-description: El TVSDK del explorador proporciona a la aplicación de vídeo la información necesaria para responder al clic de un usuario en una publicidad en la que se puede hacer clic.
-seo-description: El TVSDK del explorador proporciona a la aplicación de vídeo la información necesaria para responder al clic de un usuario en una publicidad en la que se puede hacer clic.
-seo-title: Publicidades en las que se puede hacer clic
-title: Publicidades en las que se puede hacer clic
-uuid: 493c3199-b5ba-4809-86eb-e80f10eb957b
+description: El SDK de explorador proporciona a la aplicación de vídeo la información necesaria para responder al clic de un usuario en un anuncio en el que se puede hacer clic.
+title: Anuncios en los que se puede hacer clic
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '184'
 ht-degree: 0%
 
 ---
@@ -15,12 +12,12 @@ ht-degree: 0%
 
 # Información general {#clickable-ads-overview}
 
-El TVSDK del explorador proporciona a la aplicación de vídeo la información necesaria para responder al clic de un usuario en una publicidad en la que se puede hacer clic.
+El SDK de explorador proporciona a la aplicación de vídeo la información necesaria para responder al clic de un usuario en un anuncio en el que se puede hacer clic.
 
-Cuando un usuario hace clic en una publicidad en la que se puede hacer clic, una respuesta típica de una aplicación de vídeo es abrir una nueva ventana del explorador y navegar hasta la dirección URL asociada a la publicidad. Para facilitar esto, el SDK de TVSDK del explorador activa las notificaciones de publicidad que la aplicación puede utilizar para administrar el proceso de pulsaciones.
+Cuando un usuario hace clic en un anuncio en el que se puede hacer clic, una respuesta habitual de una aplicación de vídeo es abrir una nueva ventana del explorador y navegar a la URL asociada a la publicidad. Para facilitarle este proceso, el SDK de TVSDK del explorador activa y notifica que la aplicación puede utilizar para administrar el proceso de pulsaciones.
 
-En la aplicación, puede proporcionar al usuario un control para hacer clic (por ejemplo, un botón) mientras se reproduce la publicidad en la que se puede hacer clic. Debe crear controladores para eventos activados por el SDK de TVSDK del explorador que estén asociados con la publicidad (por ejemplo, inicio de publicidad, publicidad pulsada y finalización). Por último, debe implementar los comportamientos específicos que su aplicación seguirá cuando un usuario haga clic en la publicidad (por ejemplo, si desea pausar la publicidad, mostrar la URL de pulsación, etc.).
+En la aplicación, puede proporcionar al usuario un control para hacer clic (por ejemplo, un botón) mientras se reproduce el anuncio en el que se puede hacer clic. Debe crear controladores para los eventos activados por el TVSDK del explorador que estén asociados al anuncio (por ejemplo, inicio de anuncio, publicidad pulsada y finalización). Por último, debe implementar los comportamientos específicos que su aplicación seguirá cuando un usuario haga clic en el anuncio (por ejemplo, para pausar o no la publicidad, mostrar la URL de pulsación, etc.).
 
 >[!NOTE]
 >
->El reproductor de referencia incluido con el SDK de TVSDK del explorador incluye una posible solución de trabajo para procesar publicidades de pulsaciones.
+>El reproductor de referencia incluido con el SDK de TVSDK del explorador incluye una posible solución de trabajo para procesar anuncios en los que se hacen clic.
