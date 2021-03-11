@@ -1,13 +1,10 @@
 ---
-description: Cargue un recurso creando una instancia directa de MediaResource y cargando el contenido del vídeo que se va a reproducir. Esta es una forma de cargar un recurso de medios.
-seo-description: Cargue un recurso creando una instancia directa de MediaResource y cargando el contenido del vídeo que se va a reproducir. Esta es una forma de cargar un recurso de medios.
-seo-title: Cargar un recurso de medios en MediaPlayer
-title: Cargar un recurso de medios en MediaPlayer
-uuid: 6ee8032f-0728-423f-a1d2-5030aa7db14f
+description: Cargue un recurso creando una instancia de MediaResource directamente y cargando el contenido del vídeo que desea reproducir. Esta es una forma de cargar un recurso de medios.
+title: Carga de un recurso de medios en MediaPlayer
 translation-type: tm+mt
-source-git-commit: 4ef05be045334a2e723da4c7c6a7ee22fb0f776c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
@@ -15,26 +12,26 @@ ht-degree: 0%
 
 # Cargar un recurso de medios en MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
 
-Cargue un recurso creando una instancia directa de MediaResource y cargando el contenido del vídeo que se va a reproducir. Esta es una forma de cargar un recurso de medios.
+Cargue un recurso creando una instancia de MediaResource directamente y cargando el contenido del vídeo que desea reproducir. Esta es una forma de cargar un recurso de medios.
 
-1. Configure el elemento que se puede reproducir de MediaPlayer con el nuevo recurso que se va a reproducir.
+1. Establezca el elemento que se puede reproducir en MediaPlayer con el nuevo recurso que se va a reproducir.
 
-   Reemplace el elemento que se puede reproducir en este momento en MediaPlayer llamando a `MediaPlayer.replaceCurrentItem` y pasando una instancia `MediaResource` existente.
+   Reemplace el elemento que MediaPlayer puede reproducir actualmente llamando a `MediaPlayer.replaceCurrentItem` y pasando una instancia `MediaResource` existente.
 
 1. Registre una implementación de la interfaz `MediaPlayer.PlaybackEventListener` con la instancia `MediaPlayer`.
 
    * `onPrepared`
-   * `onStateChanged`y compruebe si hay INICIALIZADO y ERROR.
+   * `onStateChanged`, y compruebe si hay INICIALIZADO y ERROR.
 
-1. Cuando el estado del reproductor de medios cambia a INITIALIZADO, puede llamar a `MediaPlayer.prepareToPlay`
+1. Cuando el estado del reproductor de contenidos cambia a INITIALIZADO, puede llamar a `MediaPlayer.prepareToPlay`
 
-   El estado INITIALIZED indica que el medio se ha cargado correctamente. La llamada `prepareToPlay` inicio la resolución de publicidad y el proceso de colocación, si existe.
+   El estado INITIALIZED indica que el medio se ha cargado correctamente. Al llamar a `prepareToPlay` se inicia el proceso de resolución y colocación de publicidad, si existe.
 
-1. Cuando TVSDK llama a la rellamada `onPrepared`, el flujo de medios se ha cargado correctamente y está preparado para la reproducción.
+1. Cuando TVSDK llama a la llamada de retorno `onPrepared` , el flujo de medios se ha cargado correctamente y está preparado para la reproducción.
 
    Cuando se carga el flujo de medios, se crea un `MediaPlayerItem`.
 
->Si se produce un error, `MediaPlayer` cambia al estado ERROR. También notifica a la aplicación llamando a la llamada de retorno `PlaybackEventListener.onStateChanged`.
+>Si se produce un error, el `MediaPlayer` cambia al estado ERROR. También notifica a la aplicación llamando a la llamada de retorno `PlaybackEventListener.onStateChanged`.
 >
 >Esto pasa varios parámetros:
 >* Un parámetro `state` de tipo `MediaPlayer.PlayerState` con el valor `MediaPlayer.PlayerState.ERROR`.
@@ -43,7 +40,7 @@ Cargue un recurso creando una instancia directa de MediaResource y cargando el c
 * Un parámetro `notification` de tipo `MediaPlayerNotification` que contiene información de diagnóstico sobre el evento de error.
 
 
-El siguiente código de muestra simplificado ilustra el proceso de carga de un recurso de medios:
+El siguiente código de ejemplo simplificado ilustra el proceso de carga de un recurso de medios:
 
 ```java
 // mediaResource is a properly configured MediaResource instance 
