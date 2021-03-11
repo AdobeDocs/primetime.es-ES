@@ -1,13 +1,10 @@
 ---
-description: Para el contenido de vídeo a petición (VOD), el SDK de TVSDK del explorador inserta y divide las publicidades del contenido principal para que la duración de la línea de tiempo aumente.
-seo-description: Para el contenido de vídeo a petición (VOD), el SDK de TVSDK del explorador inserta y divide las publicidades del contenido principal para que la duración de la línea de tiempo aumente.
-seo-title: Resolución e inserción de anuncios de VOD
+description: Para el contenido de vídeo bajo demanda (VOD), el SDK de TVSDK del explorador inserta los saltos de publicidad duplicando los anuncios en el contenido principal, de modo que la duración de la cronología aumente.
 title: Resolución e inserción de anuncios de VOD
-uuid: 34a30ae5-d553-4c5d-9829-8e5eaa41c104
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
@@ -15,22 +12,22 @@ ht-degree: 0%
 
 # Resolución e inserción de anuncios de VOD{#vod-ad-resolving-and-insertion}
 
-Para el contenido de vídeo a petición (VOD), el SDK de TVSDK del explorador inserta y divide las publicidades del contenido principal para que la duración de la línea de tiempo aumente.
+Para el contenido de vídeo bajo demanda (VOD), el SDK de TVSDK del explorador inserta los saltos de publicidad duplicando los anuncios en el contenido principal, de modo que la duración de la cronología aumente.
 
-Antes de la reproducción, el SDK de TVSDK del explorador resuelve anuncios conocidos, inserta y rompe el contenido principal tal como se describe en una línea de tiempo que se devuelve a partir de la toma de decisiones de anuncios de Adobe Primetime y, si es necesario, vuelve a calcular la línea de tiempo virtual.
+Antes de la reproducción, el SDK de TVSDK del explorador resuelve anuncios conocidos, inserta y rompe el contenido principal tal como se describe en una cronología que se devuelve de la toma de decisiones de anuncios de Adobe Primetime y vuelve a calcular la cronología virtual, si es necesario.
 
-El SDK de TVSDK de explorador inserta publicidades de las siguientes formas:
+El TVSDK del explorador inserta los anuncios de las siguientes maneras:
 
-* **Anteponer**, que está antes del contenido.
-* **Post-roll**, que se encuentra después del contenido.
+* **Anuncio previo a la emisión**, que se encuentra antes del contenido.
+* **Anuncio**, que se encuentra después del contenido.
 
-Después de los inicios de reproducción, no se pueden producir cambios adicionales en el contenido. Las publicidades no pueden ser:
+Una vez iniciada la reproducción, no se pueden producir cambios adicionales en el contenido. Los anuncios no pueden ser:
 
 * Insertado
 * Eliminado
 
-   Por ejemplo, no puede eliminar las publicidades integradas del contenido para crear ofertas de una experiencia sin publicidad.
+   Por ejemplo, no puede eliminar anuncios integrados del contenido para ofrecer una experiencia sin publicidad.
 * Reemplazado
 
-   Por ejemplo, no puede reemplazar las publicidades integradas con las publicidades de objetivo.
+   Por ejemplo, no se pueden reemplazar los anuncios integrados por anuncios orientados.
 
