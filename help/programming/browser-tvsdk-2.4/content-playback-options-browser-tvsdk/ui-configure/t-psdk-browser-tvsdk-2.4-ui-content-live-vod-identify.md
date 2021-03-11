@@ -1,13 +1,10 @@
 ---
 description: Es posible que deba saber si el contenido multimedia está activo o VOD.
-seo-description: Es posible que deba saber si el contenido multimedia está activo o VOD.
-seo-title: Identifique si el contenido está activo o VOD
-title: Identifique si el contenido está activo o VOD
-uuid: 5455801e-b5eb-4829-bde6-ef4440cd69c5
+title: Identificar si el contenido está activo o VOD
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '106'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---
@@ -17,7 +14,7 @@ ht-degree: 0%
 
 Es posible que deba saber si el contenido multimedia está activo o VOD.
 
-1. Espere a que el TVSDK del explorador active un evento `AdobePSDK.PSDKEventType.STATUS_CHANGED` con un `event.status` de `AdobePSDK.MediaPlayerStatus.PREPARED`.
+1. Espere a que el TVSDK del explorador almacene en déclencheur un evento `AdobePSDK.PSDKEventType.STATUS_CHANGED` con un `event.status` de `AdobePSDK.MediaPlayerStatus.PREPARED`.
 
    Este paso garantiza que el recurso de medios se haya cargado correctamente.
 
