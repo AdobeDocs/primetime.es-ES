@@ -1,21 +1,18 @@
 ---
-description: Puede utilizar varios solucionadores de contenido para gestionar diferentes operaciones de línea de tiempo.
-seo-description: Puede utilizar varios solucionadores de contenido para gestionar diferentes operaciones de línea de tiempo.
-seo-title: El contenido se resuelve para la eliminación o sustitución de publicidades
-title: El contenido se resuelve para la eliminación o sustitución de publicidades
-uuid: 2954ce0f-aed2-4a85-8e53-d4e89d1497b6
+description: Puede utilizar varios resolvedores de contenido para gestionar diferentes operaciones de cronología.
+title: Resolución de contenido para eliminación/reemplazo de anuncios
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '34'
 ht-degree: 0%
 
 ---
 
 
-# El contenido se resuelve para la eliminación o reemplazo de publicidades {#content-resolvers-for-ad-deletion-replacement}
+# Resuelven el contenido para la eliminación/reemplazo de anuncios {#content-resolvers-for-ad-deletion-replacement}
 
-Puede utilizar varios solucionadores de contenido para gestionar diferentes operaciones de línea de tiempo.
+Puede utilizar varios resolvedores de contenido para gestionar diferentes operaciones de cronología.
 
 ```java
 List<ContentResolver> contentResolvers = new ArrayList<ContentResolver>(); 
