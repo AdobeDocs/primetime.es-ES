@@ -1,9 +1,9 @@
 ---
-seo-title: Parte inicial del contenido en la clara
-title: Parte inicial del contenido en la clara
-uuid: 97c4df2d-c019-468b-93a7-e93942caa042
+title: Parte inicial del contenido en blanco
+description: Parte inicial del contenido en blanco
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%
@@ -13,6 +13,6 @@ ht-degree: 0%
 
 # Parte inicial del contenido en clear{#initial-portion-of-content-in-the-clear}
 
-Especifica una cantidad opcional de tiempo, en segundos, que el principio del contenido se deja en blanco (es decir, no se cifra).
+Especifica una cantidad de tiempo opcional, en segundos, que el principio del contenido se deja en claro (lo que significa que no está cifrado).
 
-Ejemplo de caso de uso: Permite un tiempo de reproducción más rápido mientras el cliente de Adobe Access descarga la licencia en segundo plano. La parte no cifrada del vídeo comienza a reproducirse inmediatamente, mientras que la inicialización de Adobe Access y la adquisición de licencias se producen entre bastidores. Con esta función desactivada, los usuarios pueden notar un retraso en la reproducción, ya que el ordenador cliente está realizando todos los pasos de licencia antes de que se produzca la reproducción de vídeo.
+Ejemplo de caso de uso: Permite un tiempo de reproducción más rápido mientras el cliente de acceso a Adobe descarga la licencia en segundo plano. La parte no cifrada del vídeo comienza a reproducirse inmediatamente, mientras que la inicialización de Adobe Access y la adquisición de licencias se producen entre bastidores. Con esta función desactivada, los usuarios pueden observar un retraso en la experiencia de reproducción, ya que el equipo cliente está realizando todos los pasos de licencia antes de que se produzca cualquier reproducción de vídeo.
