@@ -1,9 +1,9 @@
 ---
-seo-title: Detalles del proceso de adquisición de licencias
-title: Detalles del proceso de adquisición de licencias
-uuid: 4825c49e-fa6f-4c98-9d21-a2743930ca2e
+title: Detalles del proceso de adquisición de licencia
+description: Detalles del proceso de adquisición de licencia
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 3fdef12b717bb6f70ca27d9278de61d709f8349c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 0%
@@ -17,9 +17,9 @@ Este proceso presenta una vista detallada a nivel de API del flujo de trabajo de
 
 1. Con un objeto `URLLoader`, cargue los bytes del archivo de metadatos del contenido protegido.
 
-   Establezca este objeto en una variable, como `metadata_bytes`. Todo el contenido controlado por Primetime DRM tiene metadatos Primetime DRM. Cuando se empaqueta el contenido, estos metadatos se pueden guardar como un archivo de metadatos independiente ( [!DNL .metadata]) junto con el contenido. Como alternativa, los metadatos pueden codificarse en Base64 e insertarse en el cuerpo del archivo de manifiesto de vídeo. Para obtener más información, consulte [Empaquetado de archivos multimedia](../protecting-content/packaging-media-overview/packaging-media-files.md).
-   1. Si es necesario, elimine el signo de exclamación `!` del inicio de la cadena.
-   1. Si es necesario para contenido HLS o HDS, descodifique los metadatos incluidos en la cadena codificada en Base64 a datos binarios antes de pasarlos.
+   Establezca este objeto como una variable, por ejemplo `metadata_bytes`. Todo el contenido controlado por Primetime DRM tiene metadatos de Primetime DRM. Cuando se empaqueta el contenido, estos metadatos se pueden guardar como un archivo de metadatos independiente ( [!DNL .metadata]) junto al contenido. Como alternativa, los metadatos pueden codificarse con Base64 e insertarse en el cuerpo del archivo de manifiesto de vídeo. Para obtener más información, consulte [Empaquetado de archivos multimedia](../protecting-content/packaging-media-overview/packaging-media-files.md).
+   1. Si es necesario, elimine el signo de exclamación `!` del principio de la cadena.
+   1. Si es necesario para el contenido de HLS o HDS, descodifique los metadatos incluidos en la cadena codificada Base64 a datos binarios antes de pasarlos.
 1. Cree una instancia `DRMContentData`.
 
    Coloque este código en un bloque try-catch:
@@ -34,14 +34,14 @@ Este proceso presenta una vista detallada a nivel de API del flujo de trabajo de
 
    [Android: DRMMetadata](https://help.adobe.com/en_US/primetime/api/drm-apis/client/android/index.html)
 
-1. Cree oyentes para escuchar los `DRMStatusEvent` y `DRMErrorEvent` enviados desde el objeto `DRMManager`.
+1. Cree oyentes para escuchar los `DRMStatusEvent` y `DRMErrorEvent` distribuidos desde el objeto `DRMManager`.
 
    ```
    DRMManager.addEventListener(DRMStatusEvent.DRM_STATUS, onDRMStatus); 
    DRMManager.addEventListener(DRMErrorEvent.DRM_ERROR, onDRMError);
    ```
 
-   En el detector `DRMStatusEvent`, compruebe que la licencia es válida (no es nula). En el detector `DRMErrorEvent`, gestione `DRMErrorEvents`. Consulte *Uso de la clase DRMStatusEvent* y *Uso de la clase DRMErrorEvent* en esta guía.
+   En el detector `DRMStatusEvent`, compruebe que la licencia sea válida (no nula). En el oyente `DRMErrorEvent`, gestione `DRMErrorEvents`. Consulte *Uso de las clases DRMStatusEvent* y *Uso de la clase DRMErrorEvent* en esta guía.
 
 1. Cargue la licencia necesaria para reproducir el contenido.
 En primer lugar, intente cargar una licencia almacenada localmente para reproducir el contenido:
@@ -54,7 +54,7 @@ En primer lugar, intente cargar una licencia almacenada localmente para reproduc
 
    [iOS: acquisitionLicense:](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/interface_d_r_m_manager.html#a52accb5ed5b49d6e5d91277d78279f1b)
 
-   Una vez completada la carga, el objeto `DRMManager` distribuye `DRMStatusEvent.DRM_Status`.
+   Una vez finalizada la carga, el objeto `DRMManager` distribuye `DRMStatusEvent.DRM_Status`.
 
 1. Compruebe el objeto `DRMVoucher`.
 
@@ -72,7 +72,7 @@ En primer lugar, intente cargar una licencia almacenada localmente para reproduc
       [Android: DRMAuthauthenticationMethod](https://help.adobe.com/en_US/primetime/api/drm-apis/client/android/index.html?com/adobe/ave/drm/DRMLicenseAcquiredCallback.html)
 
       [iOS: DRMAuthauthenticationMethod](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/_d_r_m_interface_8h.html#a2003f29af93898b52a4123c2dd92c457)
-   1. Si el método de autenticación es `USERNAME_AND_PASSWORD`, la aplicación debe proporcionar un mecanismo para permitir que el usuario introduzca credenciales.
+   1. Si el método de autenticación es `USERNAME_AND_PASSWORD`, la aplicación debe proporcionar un mecanismo que permita al usuario introducir credenciales.
 
       Pase las credenciales del usuario al servidor de licencias para autenticar al usuario:
 
@@ -80,7 +80,7 @@ En primer lugar, intente cargar una licencia almacenada localmente para reproduc
       DRMManager.authenticate( metadata.serverURL, metadata.domain, username, password)
       ```
 
-      El `DRMManager` distribuye un `DRMAuthenticationErrorEvent` si falla la autenticación o un `DRMAuthenticationCompleteEvent` si la autenticación se realiza correctamente. Cree oyentes para estos eventos.
+      El `DRMManager` envía un `DRMAuthenticationErrorEvent` si la autenticación falla o un `DRMAuthenticationCompleteEvent` si la autenticación se realiza correctamente. Cree oyentes para estos eventos.
 
       [Android: authentication()](https://help.adobe.com/en_US/primetime/api/drm-apis/client/android/com/adobe/ave/drm/DRMManager.html#authenticate(com.adobe.ave.drm.DRMMetadata,%20java.lang.String,%20java.lang.String,%20java.lang.String,%20java.lang.String,%20com.adobe.ave.drm.DRMOperationErrorCallback,%20com.adobe.ave.drm.DRMAuthenticationCompleteCallback))
 
@@ -92,7 +92,7 @@ En primer lugar, intente cargar una licencia almacenada localmente para reproduc
 
    1. Si el método de autenticación es `UNKNOWN`, debe utilizar un método de autenticación personalizado.
 
-      En este caso, el proveedor de contenido ha dispuesto que la autenticación se realice de forma fuera de banda, no utilizando las API de Primetime. El procedimiento de autenticación personalizada debe producir un token de autenticación que se pueda pasar al método `DRMManager.setAuthenticationToken()`.
+      En este caso, el proveedor de contenido ha organizado que la autenticación se realice fuera de banda, no utilizando las API de Primetime. El procedimiento de autenticación personalizada debe producir un token de autenticación que se pueda pasar al método `DRMManager.setAuthenticationToken()`.
 
       [Android: setAuthenticationToken()](https://help.adobe.com/en_US/primetime/api/drm-apis/client/android/com/adobe/ave/drm/DRMManager.html#setAuthenticationToken(com.adobe.ave.drm.DRMMetadata,%20java.lang.String,%20byte[],%20com.adobe.ave.drm.DRMOperationErrorCallback,%20com.adobe.ave.drm.DRMOperationCompleteCallback))
 
@@ -100,17 +100,17 @@ En primer lugar, intente cargar una licencia almacenada localmente para reproduc
 
       >[!NOTE]
       >
-      >Como alternativa, independientemente del método de autenticación, `.setAuthenticationToken()` puede utilizarse para enviar datos personalizados del cliente al servidor de licencias. Se trata de una sobrecarga de la API, ya que este mecanismo es la única manera de enviar datos personalizados dinámicos del cliente al servidor de licencias en el momento de la adquisición de la licencia. Este método de transporte de datos personalizado se analiza en profundidad en varias publicaciones de foros en los foros [Primetime DRM (Adobe Access) ](https://forums.adobe.com/community/adobe_access).
+      >Alternativamente, independientemente del método de autenticación, `.setAuthenticationToken()` se puede utilizar para enviar datos personalizados del cliente al servidor de licencias. Se trata de una sobrecarga de la API, ya que este mecanismo es la única forma de enviar datos personalizados dinámicos desde el cliente al servidor de licencias en el momento de la adquisición de la licencia. Este método de transporte de datos personalizado se analiza en detalle en varias publicaciones de foros en los foros [Primetime DRM (Acceso a Adobe) ](https://forums.adobe.com/community/adobe_access).
 
-1. Si falla la autenticación, la aplicación debe volver al paso 6.
+1. Si la autenticación falla, la aplicación debe volver al paso 6.
 
-   Asegúrese de que la aplicación tenga un mecanismo para gestionar y limitar los errores de autenticación repetidos. Por ejemplo, después de tres intentos, se muestra un mensaje al usuario indicando que la autenticación ha fallado y que no se puede reproducir el contenido.
-1. Para utilizar el token almacenado en lugar de solicitar al usuario que introduzca credenciales, configure el token con el método `DRMManager.setAuthenticationToken()`.
+   Asegúrese de que la aplicación tenga un mecanismo para gestionar y limitar los errores de autenticación repetidos. Por ejemplo, después de tres intentos, muestra un mensaje al usuario indicando que la autenticación ha fallado y que no se puede reproducir el contenido.
+1. Para utilizar el token almacenado en lugar de solicitar al usuario que introduzca credenciales, establezca el token con el método `DRMManager.setAuthenticationToken()` .
 
    A continuación, descargue la licencia del servidor de licencias y reproduzca el contenido como se muestra en el paso 6.
-   1. **Opcional:** Si la autenticación se realiza correctamente, puede capturar el autentificador, que es una matriz de bytes almacenada en la memoria caché.
+   1. **Opcional:** Si la autenticación se realiza correctamente, puede capturar el token de autenticación, que es una matriz de bytes almacenada en caché en la memoria.
 
-      Obtenga este token con la propiedad `DRMAuthenticationCompleteEvent.token`. Puede almacenar y utilizar el autentificador para que el usuario no tenga que introducir repetidamente credenciales para este contenido. El servidor de licencias determina el período válido del autentificador.
+      Obtenga este token con la propiedad `DRMAuthenticationCompleteEvent.token`. Puede almacenar y utilizar el token de autenticación para que el usuario no tenga que introducir repetidamente credenciales para este contenido. El servidor de licencias determina el periodo válido del token de autenticación.
 
       [Android: OperationComplete()](https://help.adobe.com/en_US/primetime/api/drm-apis/client/android/com/adobe/ave/drm/DRMOperationCompleteCallback.html)
 
@@ -123,7 +123,7 @@ En primer lugar, intente cargar una licencia almacenada localmente para reproduc
       LoadVoucherSetting.FORCE_REFRESH)
    ```
 
-   Una vez completada la carga, el objeto `DRMManager` distribuye `DRMStatusEvent.DRM_STATUS`. Escuche este evento y cuando se envíe, podrá reproducir el contenido.  Reproduzca el vídeo creando un objeto Primetime y llamando a su método `play()`:
+   Una vez finalizada la carga, el objeto `DRMManager` distribuye `DRMStatusEvent.DRM_STATUS`. Escuche este evento y, cuando se envíe, podrá reproducir el contenido.  Para reproducir el vídeo, cree un objeto Primetime y llame a su método `play()`:
 
    ```
    stream = new Primetime(connection); 
