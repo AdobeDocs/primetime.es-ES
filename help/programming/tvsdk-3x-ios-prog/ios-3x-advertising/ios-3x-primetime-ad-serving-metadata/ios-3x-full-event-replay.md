@@ -1,37 +1,34 @@
 ---
-description: TVSDK es compatible con la resolución e inserción de anuncios para VOD y flujos en directo/lineal.
-seo-description: TVSDK es compatible con la resolución e inserción de anuncios para VOD y flujos en directo/lineal.
-seo-title: Metadatos del servidor de publicidad Primetime
-title: Metadatos del servidor de publicidad Primetime
-uuid: 61e224dd-551a-438f-8560-e64915087fef
+description: TVSDK admite la resolución e inserción de anuncios para flujos VOD y en directo/lineal.
+title: Metadatos del servidor de publicidad de Primetime
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
 
 
-# Habilitar publicidades en reproducción de evento completo {#section_6016E1DAF03645C8A8388D03C6AB7571}
+# Habilitar anuncios en reproducción de eventos completos {#section_6016E1DAF03645C8A8388D03C6AB7571}
 
-La reproducción en evento completo (FER) es un recurso de VOD que actúa como recurso de vídeo/DVR, por lo que la aplicación debe tomar los pasos necesarios para garantizar que los anuncios se coloquen correctamente.
+La reproducción de eventos completos (FER) es un recurso de VOD que actúa como activo/DVR, por lo que la aplicación debe tomar medidas para garantizar que los anuncios se coloquen correctamente.
 
-Para el contenido en directo, TVSDK utiliza los metadatos/indicaciones del manifiesto para determinar dónde colocar los anuncios. Sin embargo, a veces el contenido en directo o lineal puede parecerse al contenido de VOD. Por ejemplo, cuando se completa el contenido activo, se agrega una etiqueta `EXT-X-ENDLIST` al manifiesto activo. Para HLS, la etiqueta `EXT-X-ENDLIST` significa que el flujo es un flujo VOD. TVSDK no puede diferenciar automáticamente este flujo de un flujo de VOD normal para insertar correctamente anuncios.
+Para el contenido en directo, TVSDK utiliza los metadatos/indicaciones del manifiesto para determinar dónde colocar los anuncios. Sin embargo, a veces el contenido en directo/lineal puede parecerse al contenido de VOD. Por ejemplo, cuando el contenido en directo se completa, se añade una etiqueta `EXT-X-ENDLIST` al manifiesto en directo. Para HLS, la etiqueta `EXT-X-ENDLIST` significa que el flujo es un flujo de VOD. TVSDK no puede diferenciar automáticamente este flujo de un flujo de VOD normal para insertar anuncios correctamente.
 
-La aplicación debe indicar a TVSDK si el contenido está activo o VOD especificando `PTAdSignalingMode`.
+La aplicación debe indicar a TVSDK si el contenido está activo o VOD; para ello, especifique `PTAdSignalingMode`.
 
-Para un flujo FER, el servidor de decisiones de anuncios de Adobe Primetime no debe proporcionar la lista de pausas publicitarias que deben insertarse en la línea de tiempo antes de iniciar la reproducción. Este es el proceso habitual para el contenido de VOD. En su lugar, al especificar un modo de señalización diferente, TVSDK lee todos los puntos de referencia del manifiesto FER y va al servidor de publicidad para cada punto de referencia para solicitar una pausa publicitaria. Este proceso es similar al contenido en directo/DVR.
+Para un flujo FER, el servidor de Adobe Primetime ad decisioning no debe proporcionar la lista de pausas publicitarias que deben insertarse en la cronología antes de iniciar la reproducción. Este es el proceso típico del contenido de VOD. En su lugar, al especificar un modo de señalización diferente, TVSDK lee todos los puntos de referencia del manifiesto FER y va al servidor de publicidad de cada punto de referencia para solicitar una pausa publicitaria. Este proceso es similar al contenido en directo/DVR.
 
-Además de cada solicitud asociada a un punto de referencia, TVSDK realiza una solicitud de publicidad adicional para anuncios previos.
+Además de cada solicitud asociada a un punto de referencia, TVSDK realiza una solicitud de anuncio adicional para anuncios previos a la emisión.
 
-1. Desde un origen externo, como vCMS, obtenga el modo de señalización que debe utilizarse.
+1. Desde una fuente externa, como vCMS, obtenga el modo de señalización que debe utilizarse.
 1. Cree los metadatos relacionados con la publicidad.
-1. Si se debe sobrescribir el comportamiento predeterminado, especifique `PTAdSignalingMode` mediante `PTAdMetadata.signalingMode`.
+1. Si se debe sobrescribir el comportamiento predeterminado, especifique `PTAdSignalingMode` utilizando `PTAdMetadata.signalingMode`.
 
    Los valores válidos son `PTAdSignalingModeDefault`, `PTAdSignalingModeManifestCues` y `PTAdSignalingModeServerMap`.
 
-   Debe establecer el modo de señalización de publicidad antes de llamar a `prepareToPlay`. Tras los inicios de TVSDK para resolver y colocar anuncios en la línea de tiempo, se omiten los cambios en el modo de señalización de publicidad. Establezca el modo cuando cree los metadatos de publicidad para el recurso.
+   Debe establecer el modo de señalización de publicidad antes de llamar a `prepareToPlay`. Una vez que TVSDK empiece a resolver y a colocar anuncios en la cronología, se omiten los cambios en el modo de señalización de anuncios. Establezca el modo cuando cree los metadatos de publicidad para el recurso.
 
 1. Continúe con la reproducción.
 
