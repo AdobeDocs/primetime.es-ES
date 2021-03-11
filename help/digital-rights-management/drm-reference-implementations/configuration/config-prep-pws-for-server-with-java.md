@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Preparación de contraseñas mediante Java
-title: Preparación de contraseñas mediante Java
-uuid: 8a708d22-764f-4229-95ca-109482563432
+title: Preparación de contraseñas con Java
+description: Preparación de contraseñas con Java
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 055989cbe3a187516f18816492aaea709cc80c81
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '24'
+source-wordcount: '22'
 ht-degree: 0%
 
 ---
@@ -15,7 +13,7 @@ ht-degree: 0%
 
 # Preparación de contraseñas con Java{#prepare-passwords-using-java}
 
-Ejecute `ScrambleUtil.class` con Java:
+Ejecute el `ScrambleUtil.class` con Java:
 
 1. Vaya a `[DRM SDK DVD]\Reference Implementation\Server\Reference Implementation Server\refimpl/scrambler/ refimpl/scrambler/`
 1. Desde la línea de comandos, escriba:
