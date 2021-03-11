@@ -1,13 +1,10 @@
 ---
-description: Cargue un recurso creando una instancia directa de MediaResource y cargando el contenido del vídeo que se va a reproducir.
-seo-description: Cargue un recurso creando una instancia directa de MediaResource y cargando el contenido del vídeo que se va a reproducir.
-seo-title: Cargar un recurso de medios en MediaPlayer
-title: Cargar un recurso de medios en MediaPlayer
-uuid: ac31ccfe-161d-41a2-9a6e-38fae11ceab5
+description: Cargue un recurso creando una instancia de MediaResource directamente y cargando el contenido del vídeo que desea reproducir.
+title: Carga de un recurso de medios en MediaPlayer
 translation-type: tm+mt
-source-git-commit: 7d61a6cd8cb2c381f85a19d9ccac3d235ffceaf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 0%
 
 # Cargar un recurso de medios en MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
 
-Cargue un recurso creando una instancia directa de MediaResource y cargando el contenido del vídeo que se va a reproducir.
+Cargue un recurso creando una instancia de MediaResource directamente y cargando el contenido del vídeo que desea reproducir.
 
-1. Configure el elemento que se puede reproducir del objeto `MediaPlayer` con el nuevo recurso que se va a reproducir.
+1. Establezca el elemento que se puede reproducir del objeto `MediaPlayer` con el nuevo recurso que se va a reproducir.
 
-   Reemplace el elemento del objeto `MediaPlayer` que se puede reproducir en ese momento llamando a `replaceCurrentResource` y pasando una instancia `MediaResource` existente.
+   Reemplace el elemento que actualmente se puede reproducir del objeto `MediaPlayer` existente llamando a `replaceCurrentResource` y pasando una instancia `MediaResource` existente.
 
-1. Espere a que el TVSDK del explorador distribuya `AdobePSDK.MediaPlayerStatusChangeEvent` con `event.status` que sea igual a cualquiera de los siguientes:
+1. Espere a que el TVSDK del explorador distribuya `AdobePSDK.MediaPlayerStatusChangeEvent` con `event.status` que sea igual a cualquiera de las siguientes opciones:
 
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.PREPARED`
@@ -29,19 +26,19 @@ Cargue un recurso creando una instancia directa de MediaResource y cargando el c
 
       A través de estos eventos, el objeto MediaPlayer notifica a la aplicación si el recurso multimedia se ha cargado correctamente.
 
-1. Cuando el estado del reproductor de medios cambia a `MediaPlayerStatus.INITIALIZED`, puede llamar a `MediaPlayer.prepareToPlay`.
+1. Cuando el estado del reproductor de contenidos cambia a `MediaPlayerStatus.INITIALIZED`, puede llamar a `MediaPlayer.prepareToPlay`.
 
-   El estado INITIALIZED indica que el medio se ha cargado correctamente. La llamada `prepareToPlay` inicio la resolución de publicidad y el proceso de colocación, si existe.
-1. Cuando TVSDK del explorador distribuye el evento `MediaPlayerStatus.PREPARED`, el flujo de medios se ha cargado correctamente (se ha creado un elemento MediaPlayerItem) y está preparado para la reproducción.
+   El estado INITIALIZED indica que el medio se ha cargado correctamente. Al llamar a `prepareToPlay` se inicia el proceso de resolución y colocación de publicidad, si existe.
+1. Cuando el SDK del explorador distribuye el evento `MediaPlayerStatus.PREPARED` , el flujo de medios se ha cargado correctamente (se ha creado un MediaPlayerItem) y está preparado para la reproducción.
 
-Si se produce un error, `MediaPlayer` cambia a `MediaPlayerStatus.ERROR`.
+Si se produce un error, el `MediaPlayer` cambia al `MediaPlayerStatus.ERROR`.
 
-También notifica a la aplicación mediante el envío del evento `MediaPlayerStatus.ERROR`.
+También notifica a su aplicación mediante el envío del evento `MediaPlayerStatus.ERROR` .
 
 ><!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
 
 
-El siguiente código de muestra simplificado ilustra el proceso de carga de un recurso de medios:
+El siguiente código de ejemplo simplificado ilustra el proceso de carga de un recurso de medios:
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  
