@@ -1,9 +1,9 @@
 ---
-seo-title: Ejemplo de un recurso de VOD personalizado
 title: Ejemplo de un recurso de VOD personalizado
-uuid: 1db76b3f-b57a-428a-b79f-d4657ded8391
+description: Ejemplo de un recurso de VOD personalizado
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Ejemplo de un recurso de VOD personalizado{#example-of-a-customized-vod-asset}
 
-A continuación se muestra un ejemplo de un recurso de VOD personalizado:
+Este es un ejemplo de recurso de VOD personalizado:
 
 ```
 #EXTM3U
@@ -43,6 +43,6 @@ seg5.ts
 
 La aplicación podría configurar los siguientes escenarios:
 
-* Una notificación cuando `#EXT-X-ASSET` etiquetas, o cualquier otro conjunto de nombres de etiquetas personalizados al que se haya suscrito, existan en el archivo.
+* En el archivo existe una notificación cuando `#EXT-X-ASSET` etiquetas, o cualquier otro conjunto de nombres de etiquetas personalizados al que se haya suscrito.
 * Inserte publicidades cuando se encuentre una etiqueta `#EXT-X-AD` o cualquier otro nombre de etiqueta personalizado en el flujo.
 
