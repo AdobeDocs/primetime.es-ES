@@ -1,20 +1,17 @@
 ---
-description: TVSDK rastrea automáticamente las publicidades para VOD y flujo en directo/lineal.
-seo-description: TVSDK rastrea automáticamente las publicidades para VOD y flujo en directo/lineal.
-seo-title: Seguimiento de publicidades de cliente
-title: Seguimiento de publicidades de cliente
-uuid: 77e8dc80-9941-45e2-91ae-3ba9b62961ca
+description: TVSDK rastrea automáticamente los anuncios para VOD y flujo en directo/lineal.
+title: Seguimiento de anuncios de clientes
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '61'
+source-wordcount: '48'
 ht-degree: 0%
 
 ---
 
 
-# Seguimiento de publicidades de cliente{#client-ad-tracking}
+# Seguimiento de anuncios de cliente{#client-ad-tracking}
 
-TVSDK rastrea automáticamente las publicidades para VOD y flujo en directo/lineal.
+TVSDK rastrea automáticamente los anuncios para VOD y flujo en directo/lineal.
 
-Las notificaciones se utilizan para informar a la aplicación sobre el progreso de una publicidad, incluida la información sobre cuándo comienza y cuándo finaliza una publicidad.
+Las notificaciones se utilizan para informar a la aplicación del progreso de una publicidad, incluida la información sobre cuándo comienza y cuándo finaliza una publicidad.
