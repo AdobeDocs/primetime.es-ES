@@ -1,9 +1,9 @@
 ---
-seo-title: Archivo de directiva de dominio cruzado
-title: Archivo de directiva de dominio cruzado
-uuid: 8eae1a52-7eec-46fd-a189-6952f5be98e8
+title: Archivo de directiva entre dominios
+description: Archivo de directiva entre dominios
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '40'
 ht-degree: 0%
@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # Archivo de directiva de dominio cruzado {#crossdomain-policy-file}
 
-Para que los clientes de Flash Runtime puedan solicitar una licencia del servidor de licencias, se requiere un archivo de directiva entre dominios. Consulte *Uso del SDK de Adobe Access para la protección de contenido* para obtener más información.
+Para que los clientes de Flash Runtime soliciten una licencia del servidor de licencias, se requiere un archivo de directiva entre dominios. Consulte *Uso del SDK de acceso a Adobe para la protección de contenido* para obtener más información.
