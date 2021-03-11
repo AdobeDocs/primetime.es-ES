@@ -1,26 +1,23 @@
 ---
-description: Puede personalizar o anular los comportamientos de publicidad.
-seo-description: Puede personalizar o anular los comportamientos de publicidad.
-seo-title: Configurar la reproducción personalizada
-title: Configurar la reproducción personalizada
-uuid: 9cbf0bcf-7932-409e-a690-e79f284eaf74
+description: Puede personalizar o anular los comportamientos publicitarios.
+title: Configuración de una reproducción personalizada
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '159'
 ht-degree: 1%
 
 ---
 
 
-# Configurar la reproducción personalizada {#cset-up-customized-playback}
+# Configuración de reproducción personalizada {#cset-up-customized-playback}
 
 Puede personalizar o anular el comportamiento de la publicidad registrando la instancia de directiva de publicidad con TVSDK.
 
-Para personalizar los comportamientos de las publicidades, realice una de las siguientes acciones:
+Para personalizar los comportamientos publicitarios, realice una de las siguientes acciones:
 
-* Implementar la interfaz `AdPolicySelector` y todos sus métodos.
-Esta opción se recomienda si necesita anular todos los comportamientos de publicidad predeterminados.
+* Implemente la interfaz `AdPolicySelector` y todos sus métodos.
+Se recomienda esta opción si necesita anular todos los comportamientos de publicidad predeterminados.
 
 * Amplíe la clase `DefaultAdPolicySelector` y proporcione implementaciones solo para los comportamientos que requieren
 personalización.
@@ -28,15 +25,15 @@ Esta opción se recomienda si necesita anular solo algunos de los comportamiento
 
 Para ambas opciones, complete las siguientes tareas:
 
-Para personalizar los comportamientos de publicidad:
+Para personalizar el comportamiento de los anuncios:
 
-1. Implementar la interfaz AdPolicySelector y todos sus métodos.
+1. Implemente la interfaz AdPolicySelector y todos sus métodos.
 
-1. Asigne la instancia de directiva que usará TVSDK a través de la fábrica de publicidad.
+1. Asigne la instancia de directiva que utilizará TVSDK a través de la fábrica de publicidad.
 
 >[!IMPORTANT]
 >
->Las directivas de publicidad personalizadas que se registran al principio de >reproducción se borran cuando la instancia de MediaPlayer está >desasignada.La aplicación debe registrar una instancia de directiva >selector cada vez que se cree una nueva sesión de reproducción.
+>Las políticas de publicidad personalizadas que se registran al principio de >reproducción se borran cuando la instancia de MediaPlayer está >desasignada.La aplicación debe registrar una instancia de directiva >selector cada vez que se cree una nueva sesión de reproducción.
 
 Por ejemplo:
 
