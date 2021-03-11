@@ -1,9 +1,9 @@
 ---
-seo-title: Acerca de los archivos ECI
 title: Acerca de los archivos ECI
-uuid: 124d8ab1-933b-4a1b-992a-919f3d799460
+description: Acerca de los archivos ECI
+copied-description: true
 translation-type: tm+mt
-source-git-commit: d8e4c39c297d69b154baf0b4d67cf09b5cf0a9d4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Acerca de los archivos ECI{#about-eci-files}
 
-Además de las CRL, también es necesario actualizar periódicamente los archivos de interfaz común integrada (ECI). Siempre que Adobe añada compatibilidad con una nueva plataforma de cliente DRM Primetime (por ejemplo: iOS, Android, Windows Flash Player, etc.), se crea un nuevo registro ECI. Para poder admitir la individualización de este cliente, debe estar presente un registro ECI correspondiente en el servidor de individualización.
+Además de las listas CRL, también debe actualizar periódicamente los archivos de la interfaz común integrada (ECI). Siempre que el Adobe añada compatibilidad con una nueva plataforma de cliente de Primetime DRM (por ejemplo: iOS, Android, Windows FlashPlayer, etc.), se crea un nuevo registro ECI. Para poder admitir la individualización de este cliente, es necesario que haya un registro ECI correspondiente en el servidor de individualización.
 
-Dado que el lanzamiento de nuevos clientes Primetime DRM no es muy frecuente, Adobe publicará los datos de ECI actualizados según sea necesario. Periódicamente, Adobe recopilará los archivos ECI y los alojará en la siguiente ubicación para su distribución:
+Dado que el lanzamiento de nuevos clientes de DRM de Primetime no es muy frecuente, el Adobe publicará los datos de ECI actualizados según sea necesario. Periódicamente, los Adobes recopilarán archivos ECI y los alojarán en la siguiente ubicación para su distribución:
 
 ```
 http://cdmdownload.adobe.com/indiv/onprem/eci/Latest.txt
@@ -23,7 +23,7 @@ http://cdmdownload.adobe.com/indiv/onprem/eci/Latest.txt
 
 El archivo [!DNL Latest.txt] contendrá la dirección URL del archivo de distribución CRL más reciente.
 
-Adobe creará el archivo zip ECI de la manera que se describe a continuación:
+Adobe creará el archivo zip ECI de la manera descrita a continuación:
 
 Estructura de carpetas:
 
@@ -31,7 +31,7 @@ Estructura de carpetas:
 ECI\*
 ```
 
-El contenido de la carpeta se comprimirá de forma recursiva:
+El contenido de la carpeta se comprimirá varias veces:
 
 ```
 zip -R ECI ECI.zip
@@ -55,14 +55,14 @@ Por ejemplo:
 20150310_aea45bf06241f04fba2b310ff9a8066c6aba73c8d22387b60509481e9cefc43e.zip
 ```
 
-Debe comprobar periódicamente la ubicación anterior para buscar archivos ECI actualizados.
+Debe comprobar periódicamente la ubicación anterior para consultar los archivos ECI actualizados.
 
 Realice el siguiente proceso de instalación después de la descarga:
 
-1. Observe el compendio SHA-256 y vuelva a calcularlo con OpenSSL o una herramienta equivalente.
-1. Compárela con la especificada en el nombre del archivo.
+1. Observe el compendio SHA-256 y vuelva a calcularlo usando OpenSSL o una herramienta equivalente.
+1. Compare todo con el especificado en el nombre del archivo.
 1. Cambie el nombre del archivo a [!DNL ECI.zip].
 1. Descomprima el directorio [!DNL ECI].
-1. Reemplace el directorio ECI antiguo por el nuevo.
-1. Reinicie el servidor de individualización.
+1. Sustituya el antiguo directorio ECI por el nuevo.
+1. Reinicie el servidor de Individualización.
 
