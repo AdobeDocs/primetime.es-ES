@@ -1,9 +1,9 @@
 ---
-seo-title: Información general
 title: Información general
-uuid: 578e749f-ee11-4682-9159-95a17982f3c4
+description: Información general
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
@@ -15,5 +15,5 @@ ht-degree: 0%
 
 El servidor de licencias de implementación de referencia muestra dos variaciones en la lógica empresarial de registro de dominios:
 
-* **Basado**  en la identidad: cada usuario autenticado tiene un dominio y un número específico de dispositivos que pueden unirse al dominio.
-* **Anónimo** : un gran número de dispositivos pertenece a un dominio y puede que no se requiera autenticación.
+* **Basado en identidad** : Cada usuario autenticado tiene un dominio y un número específico de dispositivos que pueden unirse al dominio.
+* **Anonymous** : un gran número de dispositivos pertenecen a un dominio y puede que no se requiera autenticación.
