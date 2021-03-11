@@ -1,21 +1,18 @@
 ---
-description: Estas clases le permiten personalizar el registro.
-seo-description: Estas clases le permiten personalizar el registro.
-seo-title: Clases de registro
+description: Estas clases permiten personalizar el registro.
 title: Clases de registro
-uuid: feb4ee77-37de-4260-85fa-4931e059e034
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '83'
 ht-degree: 0%
 
 ---
 
 
-# Clases de registro{#logging-classes}
+# Registrando clases{#logging-classes}
 
-Estas clases le permiten personalizar el registro.
+Estas clases permiten personalizar el registro.
 
 <table frame="all" colsep="1" rowsep="1" id="table_389797D3CEF14EA2862E0B20C6E6CC41"> 
  <thead> 
@@ -35,7 +32,7 @@ Estas clases le permiten personalizar el registro.
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <a href="https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Protocols/PTLogger.html" format="html" scope="external"> PTLogger</a> </td> 
-   <td colname="2"> Protocolo. Métodos necesarios para implementar un registrador personalizado para el TVSDK. </td> 
+   <td colname="2"> Protocolo. Los métodos necesarios para implementar un registrador personalizado para el TVSDK. </td> 
   </tr> 
  </tbody> 
 </table>
