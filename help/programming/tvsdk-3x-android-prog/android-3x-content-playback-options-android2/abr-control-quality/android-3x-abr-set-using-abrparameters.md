@@ -1,30 +1,27 @@
 ---
-description: Los valores de control de ABR solo se pueden establecer con ABRControlParameters, pero se puede construir uno nuevo en cualquier momento.
-seo-description: Los valores de control de ABR solo se pueden establecer con ABRControlParameters, pero se puede construir uno nuevo en cualquier momento.
-seo-title: Configurar velocidades de bits adaptables mediante ABRControlParameters
-title: Configurar velocidades de bits adaptables mediante ABRControlParameters
-uuid: 283ccd3d-535b-43ca-8ca5-82d12df31798
+description: Puede establecer valores de control de ABR solo con ABRControlParameters, pero puede construir uno nuevo en cualquier momento.
+title: Configurar las tasas de bits adaptables mediante ABRControlParameters
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
 
-# Configure las velocidades de bits adaptables mediante ABRControlParameters {#configure-adaptive-bit-rates-using-abrcontrolparameters}
+# Configurar las tasas de bits adaptables mediante ABRControlParameters {#configure-adaptive-bit-rates-using-abrcontrolparameters}
 
-Los valores de control de ABR solo se pueden establecer con ABRControlParameters, pero se puede construir uno nuevo en cualquier momento.
+Puede establecer valores de control de ABR solo con ABRControlParameters, pero puede construir uno nuevo en cualquier momento.
 
 Las siguientes condiciones se aplican a `ABRControlParameters`:
 
-* En tiempo de construcción, debe proporcionar valores para todos los parámetros.
-* Después de la construcción, no se pueden cambiar los valores individuales.
-* Si los parámetros que especifica están fuera del rango permitido, se genera un `ArgumentError`.
+* En el momento de la construcción, debe proporcionar valores para todos los parámetros.
+* Después de la construcción, no se pueden cambiar valores individuales.
+* Si los parámetros especificados están fuera del rango permitido, se genera un `ArgumentError`.
 
-1. Determinar las velocidades de bits iniciales, mínimas y máximas.
-1. Determine la directiva ABR:
+1. Determine las tasas de bits inicial, mínima y máxima.
+1. Determine la política ABR:
 
    * `ABR_CONSERVATIVE`
    * `ABR_MODERATE`
