@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Generador de oportunidades
 title: Generador de oportunidades
-uuid: 26f4dcab-6c6b-4d27-a073-017673bf098f
+description: Generador de oportunidades
+copied-description: true
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '8'
+source-wordcount: '6'
 ht-degree: 0%
 
 ---
