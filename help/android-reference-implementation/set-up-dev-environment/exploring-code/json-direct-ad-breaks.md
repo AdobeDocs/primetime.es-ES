@@ -1,23 +1,20 @@
 ---
-seo-title: Objeto JSON para saltos de publicidad directos
-title: Objeto JSON para saltos de publicidad directos
-uuid: ffb901f4-0a8b-40fe-b6ba-5ffebc324cf2
-description: Detalles del objeto JSON cuando el valor de tipo es directo y saltos de publicidad
-seo-description: Detalles del objeto JSON cuando el valor de tipo es directo y saltos de publicidad
+title: Objeto JSON para pausas publicitarias directas
+description: Detalla el objeto JSON cuando el valor de tipo es un salto de publicidad directo
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
 
 
-# Objeto JSON para saltos de publicidad directos{#json-object-for-direct-ad-breaks}
+# Objeto JSON para pausas publicitarias directas{#json-object-for-direct-ad-breaks}
 
-El siguiente bloque de código define los detalles del objeto JSON cuando el valor de tipo es saltos de publicidad directos.
+El siguiente bloque de código define el objeto JSON de detalles cuando el valor de tipo es pausas publicitarias directas.
 
-El `MetadataNode` devuelto por `IFeedItemAdapter:getStreamMetadata()` contiene una entrada con una clave de tipo `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` y un valor de una representación de cadena de los detalles del valor del objeto JSON debajo.
+El `MetadataNode` devuelto por `IFeedItemAdapter:getStreamMetadata()` contiene una entrada con una clave de tipo `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` y un valor de una representación de cadena del valor del objeto JSON de detalles que aparece a continuación.
 
 ```
 “metadata”: { 
@@ -53,10 +50,10 @@ El `MetadataNode` devuelto por `IFeedItemAdapter:getStreamMetadata()` contiene u
 
 | Propiedad | Descripción |
 |---|---|
-| `tag` | Una cadena que se asigna al campo de etiqueta en `com.adobe.mediacore.timeline.advertising.AdBreak`. |
-| `time` | Indica el tiempo de inicio de la pausa publicitaria y se asigna al campo de tiempo en `com.adobe.mediacore.timeline.advertising.AdBreak`. Un valor de 0 indica un anuncio previo. |
-| `replace` | Indica la duración del reemplazo de pausa publicitaria, se asigna al campo `replaceDuration` en `com.adobe.mediacore.timeline.advertising.AdBreak`. |
-| `ad-list` | Una lista de publicidades que se reproducirán durante una pausa publicitaria determinada, se asigna al campo `List<Ad>` en `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `tag` | Cadena que se asigna al campo de etiqueta en `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `time` | Indica la hora de inicio de la pausa publicitaria y se asigna al campo de tiempo en `com.adobe.mediacore.timeline.advertising.AdBreak`. El valor 0 indica un anuncio pre-roll. |
+| `replace` | Indica la duración del reemplazo de pausa publicitaria y se asigna al campo `replaceDuration` en `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `ad-list` | Una lista de anuncios que se deben reproducir durante la pausa publicitaria dada, se asigna al campo `List<Ad>` en `com.adobe.mediacore.timeline.advertising.AdBreak`. |
 
 El siguiente bloque de código define el objeto JSON para la matriz de lista de anuncios.
 
@@ -77,7 +74,7 @@ El siguiente bloque de código define el objeto JSON para la matriz de lista de 
 
 | Propiedad | Descripción |
 |---|---|
-| `url` | La dirección URL del contenido de la publicidad se asigna al campo de dirección URL en `com.adobe.mediacore.timeline.advertising.Ad`. |
-| `duration` | La duración de la publicidad se asigna al campo de duración en `com.adobe.mediacore.timeline.advertising.Ad`. |
+| `url` | La dirección URL del contenido del anuncio se asigna al campo URL en `com.adobe.mediacore.timeline.advertising.Ad`. |
+| `duration` | La duración del anuncio se asigna al campo de duración en `com.adobe.mediacore.timeline.advertising.Ad`. |
 | `tag` | Una cadena de descripción. |
 
