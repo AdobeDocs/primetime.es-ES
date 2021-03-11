@@ -1,13 +1,10 @@
 ---
-description: Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource con información sobre el contenido del vídeo y cargue el recurso multimedia. La clase MediaResource representa el contenido que debe cargar la instancia de MediaPlayer.
-seo-description: Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource con información sobre el contenido del vídeo y cargue el recurso multimedia. La clase MediaResource representa el contenido que debe cargar la instancia de MediaPlayer.
-seo-title: Crear un recurso de medios
-title: Crear un recurso de medios
-uuid: d9fe982a-bedf-445c-b5be-f7918693782a
+description: Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource con información sobre el contenido de vídeo y cargue el recurso de medios. La clase MediaResource representa el contenido que debe cargar la instancia de MediaPlayer.
+title: Creación de un recurso de medios
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Crear un recurso de medios {#create-a-media-resource}
 
-Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource con información sobre el contenido del vídeo y cargue el recurso multimedia. La clase MediaResource representa el contenido que debe cargar la instancia de MediaPlayer.
+Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource con información sobre el contenido de vídeo y cargue el recurso de medios. La clase MediaResource representa el contenido que debe cargar la instancia de MediaPlayer.
 
 1. Cree un `MediaResource` pasando información sobre el medio al constructor `MediaResource`.
 
@@ -29,27 +26,27 @@ Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource c
     <tbody> 
     <tr> 
     <td colname="col1"> <p>url </p> </td> 
-    <td colname="col2"> <p>Una cadena que representa la URL del manifiesto/lista de reproducción del medio. </p> </td> 
+    <td colname="col2"> <p>Cadena que representa la dirección URL del manifiesto/lista de reproducción del contenido. </p> </td> 
     </tr> 
     <tr> 
     <td colname="col1"> <p>type </p> </td> 
-    <td colname="col2"> <p>Uno de los siguientes miembros de la lista desglosada <span class="codeph"> MediaResource.Type </span> que corresponde al tipo de archivo indicado: 
+    <td colname="col2"> <p>Uno de los siguientes miembros de la enumeración <span class="codeph"> MediaResource.Type </span> que corresponde al tipo de archivo indicado: 
     <ul id="ul_72636C41CA7E4538A3BE11A79E0282FC"> 
     <li id="li_070960200DEB40E992C58FCB8909AEA3"> <span class="codeph"> HLS  </span> - M3U8 </li> 
     </ul> </p> </td> 
     </tr> 
     <tr> 
-    <td colname="col1"> <p>metadatos </p> </td> 
-    <td colname="col2"> <p>Instancia de la clase <span class="codeph"> Metadata </span>, que puede contener información personalizada sobre el contenido que se va a cargar. </p> <p>Algunos ejemplos de contenido son contenido alternativo o de publicidad para colocarlo dentro del contenido principal. Si utiliza publicidad, configure <span class="codeph"> AuditudeSettings </span>. Para obtener más información, consulte <a href="../../../tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata-set-up.md" format="dita" scope="local"> Metadatos del Ad Insertion </a>. </p> </td> 
+    <td colname="col1"> <p>metadata </p> </td> 
+    <td colname="col2"> <p>Una instancia de la clase <span class="codeph"> Metadata </span> , que puede contener información personalizada sobre el contenido que se va a cargar. </p> <p>Algunos ejemplos de contenido son contenido alternativo o de anuncio para colocarlo dentro del contenido principal. Si utiliza publicidad, configure <span class="codeph"> AuditudeSettings </span>. Para obtener más información, consulte <a href="../../../tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata-set-up.md" format="dita" scope="local"> Metadatos del Ad Insertion </a>. </p> </td> 
     </tr> 
     </tbody> 
     </table>
 
    >[!IMPORTANT]
    >
-   >TVSDK admite la reproducción solo para tipos de contenido específicos. Si intenta cargar cualquier otro tipo de contenido, TVSDK distribuye un evento de error.
+   >TVSDK admite la reproducción solo para tipos de contenido específicos. Si intenta cargar cualquier otro tipo de contenido, TVSDK envía un evento de error.
    >
-   >Para el contenido de vídeo a petición MP4 (VOD), TVSDK no admite reproducción mediante trucos, flujo de velocidad de bits adaptable (ABR), inserción de anuncios, subtítulos cerrados o DRM.
+   >Para el contenido de vídeo bajo demanda (VOD) de MP4, TVSDK no admite la reproducción mediante trucos, el flujo de velocidad de bits adaptable (ABR), la inserción de anuncios, los subtítulos cerrados o DRM.
 
    El siguiente código crea una instancia `MediaResource`:
 
