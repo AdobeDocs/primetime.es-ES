@@ -1,20 +1,19 @@
 ---
 title: Ayuda de migración de Primetime
-seo-title: Ayuda de migración de Adobe Primetime
-description: 'null'
-seo-description: 'null'
+description: Ayuda de migración de Primetime
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 242b5a2875ebc0e0020296ce9489dd54438b5ad0
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 48%
+source-wordcount: '208'
+ht-degree: 50%
 
 ---
 
 
 # Ayuda de conversión y migración de Primetime
 
-Bienvenido a la ayuda de Migración y Conversión para Adobe Primetime. Los documentos que se muestran en la navegación izquierda explican el proceso de conversión y migración para pasar de su grupo de TVSDK de Primetime existente al grupo de próxima generación.
+Le damos la bienvenida a la ayuda de Migración y Conversión de Adobe Primetime. Los documentos que aparecen en la sección de navegación izquierda explican el proceso de conversión y migración para pasar de su grupo de TVSDK de Primetime existente al grupo de próxima generación.
 
 ## Consulte también
 
@@ -32,7 +31,7 @@ Bienvenido a la ayuda de Migración y Conversión para Adobe Primetime. Los docu
 
 * [Conozca Adobe Primetime](https://www.adobe.com/in/marketing/primetime.html)
 
-* [Monitoreo de simultaneidad](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
+* [Supervisión de la concurrencia](https://tve.helpdocsonline.com/concurrency-monitoring-introduction)
 
 * [Autenticación de Primetime](https://tve.helpdocsonline.com/home)
 
