@@ -1,27 +1,24 @@
 ---
-description: Puede controlar la visibilidad de los subtítulos opcionales. Cuando se ha habilitado la visibilidad, se muestra la pista seleccionada actualmente. Si cambia la pista que está actualizada, la configuración de visibilidad permanece igual.
-seo-description: Puede controlar la visibilidad de los subtítulos opcionales. Cuando se ha habilitado la visibilidad, se muestra la pista seleccionada actualmente. Si cambia la pista que está actualizada, la configuración de visibilidad permanece igual.
-seo-title: Control de la visibilidad de los subtítulos opcionales
-title: Control de la visibilidad de los subtítulos opcionales
-uuid: f142e60d-5581-4d1c-9d4d-a4a58ac1b67b
+description: Puede controlar la visibilidad de los subtítulos cerrados. Cuando se ha habilitado la visibilidad, se muestra la pista seleccionada actualmente. Si cambia la pista que está actualizada, la configuración de visibilidad seguirá siendo la misma.
+title: Control de la visibilidad de los subtítulos
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 0%
+source-wordcount: '177'
+ht-degree: 1%
 
 ---
 
 
-# Controlar la visibilidad de los subtítulos opcionales {#control-closed-caption-visibility}
+# Control de la visibilidad de los subtítulos {#control-closed-caption-visibility}
 
-Puede controlar la visibilidad de los subtítulos opcionales. Cuando se ha habilitado la visibilidad, se muestra la pista seleccionada actualmente. Si cambia la pista que está actualizada, la configuración de visibilidad permanece igual.
+Puede controlar la visibilidad de los subtítulos cerrados. Cuando se ha habilitado la visibilidad, se muestra la pista seleccionada actualmente. Si cambia la pista que está actualizada, la configuración de visibilidad seguirá siendo la misma.
 
 >[!TIP]
 >
->Si se muestra texto de subtítulos opcionales cuando el reproductor entra en el modo de búsqueda, el texto ya no se muestra una vez finalizada la búsqueda. En su lugar, después de unos segundos, TVSDK muestra el siguiente texto de subtítulos opcionales en el vídeo después de la posición de búsqueda final.
+>Si el texto del subtítulo se muestra cuando el reproductor entra en el modo de búsqueda, el texto ya no se muestra una vez finalizada la búsqueda. En su lugar, después de unos segundos, TVSDK muestra el siguiente texto de subtítulo cerrado en el vídeo después de la posición de búsqueda final.
 >
->Los valores de visibilidad de los subtítulos cerrados se definen en `MediaPlayer.Visibility`.
+>Los valores de visibilidad para los subtítulos cerrados se definen en `MediaPlayer.Visibility`.
 >
 >
 ```java
@@ -31,9 +28,9 @@ Puede controlar la visibilidad de los subtítulos opcionales. Cuando se ha habil
 >}
 >```
 
-1. Espere a que `MediaPlayer` esté en al menos el estado PREPARADO. Para obtener más información, consulte [Espera un estado válido](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md).
+1. Espere a que `MediaPlayer` esté en al menos el estado PREPARADO. Para obtener más información, consulte [Espera a un estado válido](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/ui-configure/android-3x-ui-state-prepared-wait-for.md).
 
-1. Para obtener la configuración de visibilidad actual de los subtítulos cerrados, utilice el método getter en `MediaPlayer`, que devuelve un valor de visibilidad.
+1. Para obtener la configuración de visibilidad actual para los subtítulos cerrados, utilice el método getter en `MediaPlayer`, que devuelve un valor de visibilidad.
 
    ```java
    MediaPlayer.Visibility getCCVisibility() throws MediaPlayerException;
