@@ -1,13 +1,10 @@
 ---
-description: En la toma de decisiones de publicidad de Adobe Primetime, puede realizar destinatarios de publicidades en pares de clave-valor.
-seo-description: En la toma de decisiones de publicidad de Adobe Primetime, puede realizar destinatarios de publicidades en pares de clave-valor.
-seo-title: Información de objetivo
-title: Información de objetivo
-uuid: 72114bef-36a1-4f2d-92e8-59f4885d70d2
+description: En Adobe Primetime Ad Decisioning, puede dirigir las publicidades a pares clave-valor.
+title: Información de segmentación
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '51'
+source-wordcount: '37'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Información de objetivo{#targeting-information}
 
-En la toma de decisiones de publicidad de Adobe Primetime, puede realizar destinatarios de publicidades en pares de clave-valor.
+En Adobe Primetime Ad Decisioning, puede dirigir las publicidades a pares clave-valor.
 
-Para pasar estos pares de valor clave al SDK de TVSDK del explorador:
+Para pasar estos pares de clave-valor a Browser TVSDK:
 
 ```js
 var auditudeSettings = new AdobePSDK.AuditudeSettings(); 
