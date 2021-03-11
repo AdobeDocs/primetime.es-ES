@@ -1,9 +1,9 @@
 ---
-seo-title: Archivo de propiedades de Packager
-title: Archivo de propiedades de Packager
-uuid: 156624ec-66f0-4718-8a66-ed04a47f234d
+title: Archivo de propiedades del paquete
+description: Archivo de propiedades del paquete
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%
@@ -11,6 +11,6 @@ ht-degree: 0%
 ---
 
 
-# Archivo de propiedades de Packager {#packager-properties-file}
+# Archivo de propiedades del paquete {#packager-properties-file}
 
-Utilice el archivo [!DNL flashaccess-refimpl-packager.properties] para configurar el componente del empaquetador de carpetas vigiladas de la implementación de referencia. Como mínimo, asegúrese de establecer la URL del servidor de licencias, el certificado del servidor de licencias, las credenciales del empaquetador y las opciones de protección de claves. Este archivo también contiene la ubicación de cada carpeta vigilada (packager.watchfolder.source). `n`). Los cambios realizados en los valores de este archivo de propiedades tendrán efecto la próxima vez que se ejecute el empaquetador de carpetas observado (no es necesario reiniciar el servidor). Sin embargo, si hay un error de configuración en el empaquetador, se cerrará el subproceso del empaquetador de carpetas observado y el servidor deberá reiniciarse para reiniciar el subproceso del empaquetador.
+Utilice el archivo [!DNL flashaccess-refimpl-packager.properties] para configurar el componente del empaquetador de carpetas vigiladas de la implementación de referencia. Como mínimo, asegúrese de establecer la URL del servidor de licencias, el certificado del servidor de licencias, las credenciales del empaquetador y las opciones de protección de claves. Este archivo también contiene la ubicación de cada carpeta vigilada (packager.watchfolder.source). `n`). Cualquier cambio realizado en los valores de este archivo de propiedad surtirá efecto la próxima vez que se ejecute el paquete de carpetas visto (no es necesario reiniciar el servidor). Sin embargo, si hay un error de configuración en el empaquetador, se cerrará el subproceso del empaquetador de carpetas visto y el servidor deberá reiniciarse para reiniciar el subproceso del empaquetador.
