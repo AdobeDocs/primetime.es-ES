@@ -1,13 +1,10 @@
 ---
 description: El audio de enlace tardío utiliza MediaPlayer para reproducir un vídeo especificado en una lista de reproducción M3U8 HLS y que puede contener varios flujos de audio alternativos.
-seo-description: El audio de enlace tardío utiliza MediaPlayer para reproducir un vídeo especificado en una lista de reproducción M3U8 HLS y que puede contener varios flujos de audio alternativos.
-seo-title: Acceso a pistas de audio alternativas
 title: Acceso a pistas de audio alternativas
-uuid: c7060022-29ec-43c1-811b-41cca5f5356c
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
@@ -20,11 +17,11 @@ El audio de enlace tardío utiliza MediaPlayer para reproducir un vídeo especif
 1. Espere a que MediaPlayer esté en al menos el estado PREPARADO.
 1. Escuche este evento:
 
-   `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`:: La lista inicial de las pistas de audio está disponible.
+   `MediaPlayer.PlaybackEventListener.onStateChanged with state MediaPlayer.PlayerState.INITIALIZED`: La lista inicial de pistas de audio está disponible.
 
 1. Obtenga las pistas de audio disponibles de la instancia `MediaPlayerItem`.
 
    `mediaPlayerItem.getAudioTracks()` 1. (Opcional) Presente las pistas disponibles al usuario.
-1. Configure la pista de audio seleccionada en la instancia `MediaPlayerItem`.
+1. Defina la pista de audio seleccionada en la instancia `MediaPlayerItem` .
 
    `mediaPlayerItem.selectAudioTrack(audioTrack)`
