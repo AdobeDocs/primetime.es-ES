@@ -1,9 +1,9 @@
 ---
-seo-title: ¿Qué NO es compatible con Primetime Cloud DRM?
 title: ¿Qué NO es compatible con Primetime Cloud DRM?
-uuid: 5168d916-8dc7-4b75-9536-89a74c2b04fd
+description: ¿Qué NO es compatible con Primetime Cloud DRM?
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 7e8df034035fe465fbe403949ef828e7811ced2e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 Primetime Cloud DRM admite casi todas las funciones disponibles actualmente con Primetime DRM. Sin embargo, debido a algunas de las funciones de DRM que requieren la comunicación con el subsistema de reglas comerciales back-end de un cliente, algunas funciones no están disponibles con Primetime Cloud DRM.
 
-Las funciones que no admite actualmente Primetime Cloud DRM son:
+Las funciones actualmente no compatibles con el DRM de Primetime Cloud son:
 
 * Contenido empaquetado con un CEK externo (donde el servidor de licencias solicita el CEK del contenido desde un sistema de administración de claves externas)
 * Dominios de dispositivo
-* Encadenamiento de licencias avanzado
-* Devolución/devolución de licencia
-* PHLS/PHDS. Son esquemas de protección que no utilizan un servidor de licencias
+* Encadenado de licencias avanzado
+* Regreso/revocación de la licencia
+* PHLS/PHDS. Estos son esquemas de protección que no utilizan un servidor de licencias
 * Autenticación de usuario/contraseña
 
