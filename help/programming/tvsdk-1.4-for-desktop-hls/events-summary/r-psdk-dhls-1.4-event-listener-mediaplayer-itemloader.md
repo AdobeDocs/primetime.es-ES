@@ -1,27 +1,24 @@
 ---
 description: TVSDK distribuye eventos de elementos del reproductor de medios como respuesta a la carga de un elemento de medios.
-seo-description: TVSDK distribuye eventos de elementos del reproductor de medios como respuesta a la carga de un elemento de medios.
-seo-title: Eventos del cargador
-title: Eventos del cargador
-uuid: 0ad37715-14b1-457c-892f-0db0d6220f0c
+title: Eventos Loader
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---
 
 
-# Eventos del cargador{#loader-events}
+# Loader events{#loader-events}
 
 TVSDK distribuye eventos de elementos del reproductor de medios como respuesta a la carga de un elemento de medios.
 
 Estos eventos proporcionan un flujo de trabajo alternativo. No es necesario que implemente esta interfaz al crear un `MediaPlayer`. Utilícelo cuando desee tener un `MediaPlayerItemLoader`.
 
-Para recibir notificaciones sobre eventos relacionados con la carga de un recurso de reproductor multimedia, registre los oyentes para los siguientes eventos con el objeto `MediaPlayerItemLoader`.
+Para recibir notificaciones sobre eventos relacionados con la carga de un recurso de reproductor de contenidos, registre oyentes para los eventos siguientes con el objeto `MediaPlayerItemLoader` .
 
 | Evento | Significado |
 |---|---|
-| MediaPlayerItemLoader.[completado](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerItemLoader.html#event:completed) | La carga de recursos multimedia se completó correctamente. |
-| MediaPlayerItemLoader.[error](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerItemLoader.html#event:failed) | Se produjo un problema con la carga de recursos multimedia. |
+| MediaPlayerItemLoader.[complete](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerItemLoader.html#event:completed) | La carga de recursos multimedia se completó correctamente. |
+| MediaPlayerItemLoader.[failed](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/MediaPlayerItemLoader.html#event:failed) | Se ha producido un problema con la carga de recursos multimedia. |
