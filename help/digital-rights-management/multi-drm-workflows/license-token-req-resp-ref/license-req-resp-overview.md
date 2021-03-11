@@ -1,13 +1,10 @@
 ---
-description: ExpressPlay proporciona documentación de referencia en su sitio. Parte de la documentación de referencia de solicitud y respuesta de ExpressPlay que es relevante para Primetime Cloud DRM, con tecnología ExpressPlay, también se publica aquí para mayor comodidad.
-seo-description: ExpressPlay proporciona documentación de referencia en su sitio. Parte de la documentación de referencia de solicitud y respuesta de ExpressPlay que es relevante para Primetime Cloud DRM, con tecnología ExpressPlay, también se publica aquí para mayor comodidad.
-seo-title: Introducción a la solicitud de token de licencia de ExpressPlay/referencia de respuesta
-title: Introducción a la solicitud de token de licencia de ExpressPlay/referencia de respuesta
-uuid: 50d67b55-4683-4dac-9928-b8ec165ad6d8
+description: ExpressPlay proporciona documentación de referencia en su sitio. Algunos de los documentos de referencia de solicitud / respuesta de ExpressPlay que son relevantes para el DRM de Primetime Cloud, con tecnología ExpressPlay también están publicados aquí para su comodidad.
+title: Descripción general de la solicitud del token de licencia de ExpressPlay/referencia de la respuesta
 translation-type: tm+mt
-source-git-commit: ffb993889a78ee068b9028cb2bd896003c5d4d4c
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---
@@ -15,6 +12,6 @@ ht-degree: 0%
 
 # Información general {#expressplay-license-token-request-response-reference-overview}
 
-ExpressPlay proporciona documentación de referencia en su sitio. Parte de la documentación de referencia de solicitud y respuesta de ExpressPlay que es relevante para Primetime Cloud DRM, con tecnología ExpressPlay, también se publica aquí para mayor comodidad.
+ExpressPlay proporciona documentación de referencia en su sitio. Algunos de los documentos de referencia de solicitud / respuesta de ExpressPlay que son relevantes para el DRM de Primetime Cloud, con tecnología ExpressPlay también están publicados aquí para su comodidad.
 
 La documentación más reciente y completa de la API de ExpressPlay se encuentra aquí: [https://www.expressplay.com/developer/restapi/](https://www.expressplay.com/developer/restapi/).
