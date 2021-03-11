@@ -1,29 +1,26 @@
 ---
 description: En la clase PlayerFragment se edita el código para crear los administradores de funciones totalmente habilitados.
-seo-description: En la clase PlayerFragment se edita el código para crear los administradores de funciones totalmente habilitados.
-seo-title: PlayerFragment
-title: PlayerFragment
-uuid: 83f02c31-f3b1-4d16-97c8-5b391e8c999a
+title: Fragmento del reproductor
 translation-type: tm+mt
-source-git-commit: 31b6cad26bcc393d731080a70eff1c59551f1c8e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '118'
 ht-degree: 0%
 
 ---
 
 
-# PlayerFragment {#playerfragment}
+# Fragmento del reproductor {#playerfragment}
 
 En la clase PlayerFragment se edita el código para crear los administradores de funciones totalmente habilitados.
 
 La clase `PlayerFragment` contiene todos los componentes de la interfaz de usuario, como `playerFrame`, `ControlBar`, `playerClickableAdFragment` y `adOverlay`.
 
-Gestiona la inicialización de todos estos componentes, así como la creación del reproductor, la configuración de las vistas, la creación de administradores de funciones para el reproductor de medios, la administración de eventos de medios como reanudar, reproducir y pausar y gestionar los oyentes de evento para `QoSManager`, `DRMManager`, `CCManager`, `AAManager`, `AdsManager`, `PlaybackManager` y `EntitlementManager`.
+Gestiona la inicialización de todos estos componentes, así como la creación del reproductor, la configuración de las vistas, la creación de administradores de funciones para el reproductor de contenidos, la gestión de eventos multimedia como reanudación, reproducción y pausa y el manejo de los oyentes de eventos para `QoSManager`, `DRMManager`, `CCManager`, `AAManager`, `AdsManager`, `PlaybackManager` y `EntitlementManager`.
 
 El archivo XML que incluye los parámetros de configuración para `PlayerFragment` es `res/layout/fragment_player.xml`.
 
-Antes de crear los administradores de funciones, debe crear el reproductor multimedia asegurándose de que el siguiente código esté en el archivo `PlayerFragment.java`:
+Antes de crear los administradores de funciones, debe crear el reproductor de contenidos asegurándose de que el siguiente código se encuentra en el archivo `PlayerFragment.java` :
 
 ```java
 private MediaPlayer createMediaPlayer() { 
