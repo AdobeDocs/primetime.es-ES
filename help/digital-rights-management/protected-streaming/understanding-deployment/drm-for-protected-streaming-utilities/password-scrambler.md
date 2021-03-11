@@ -1,23 +1,20 @@
 ---
-description: La utilidad Password Scrambler cifra una contraseña para el servidor Adobe Primetime DRM para los archivos de configuración de flujo protegido.
-seo-description: La utilidad Password Scrambler cifra una contraseña para el servidor Adobe Primetime DRM para los archivos de configuración de flujo protegido.
-seo-title: Rótulo de contraseña
-title: Rótulo de contraseña
-uuid: 56df0f49-f3fd-464d-b4ba-25e1b497158a
+description: La utilidad Password Scrambler cifra una contraseña para el servidor Adobe Primetime DRM para los archivos de configuración de transmisión protegida.
+title: Desencadenador de contraseña
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
 
-# Rótulo de contraseña {#password-scrambler}
+# Descodificador de contraseña {#password-scrambler}
 
-La utilidad Password Scrambler cifra una contraseña para el servidor Adobe Primetime DRM para los archivos de configuración de flujo protegido.
+La utilidad Password Scrambler cifra una contraseña para el servidor Adobe Primetime DRM para los archivos de configuración de transmisión protegida.
 
-Para ejecutar el codificador, escriba:
+Para ejecutar el marcador, escriba:
 
 ```
 Scrambler.bat  
@@ -48,4 +45,4 @@ Todas las contraseñas especificadas en los archivos [!DNL flashaccess-global.xm
 
 >[!NOTE]
 >
->La utilidad Password Scrambler de Primetime DRM Server for Protected Streaming no es intercambiable con el codificador que se proporciona con el servidor de licencias de implementación de referencia.
+>La utilidad Password Scrambler del servidor Primetime DRM para transmisión protegida no es intercambiable con el reproductor que se proporciona con el servidor de licencias de implementación de referencia.
