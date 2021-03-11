@@ -1,13 +1,10 @@
 ---
 description: Puede agregar botones de pausa y reproducción para pausar o reproducir el vídeo.
-seo-description: Puede agregar botones de pausa y reproducción para pausar o reproducir el vídeo.
-seo-title: Reproducción y pausa de un vídeo
-title: Reproducción y pausa de un vídeo
-uuid: 3778a1fb-929c-4579-a14c-561179473dea
+title: Reproducir y pausar un vídeo
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
@@ -18,19 +15,19 @@ ht-degree: 0%
 Puede agregar botones de pausa y reproducción para pausar o reproducir el vídeo.
 
 1. Para crear un botón de pausa o reproducción:
-   1. Espere a que el reproductor esté al menos en el estado preparado.
-   1. Para reproducir inicio, llame al método `play`:
+   1. Espere a que el reproductor esté en al menos el estado preparado.
+   1. Para iniciar la reproducción, llame al método `play` :
 
       ```java
       void play() throws MediaPlayerException;
       ```
 
-   1. Para pausar la reproducción, llame al método `pause()`:
+   1. Para pausar la reproducción, llame al método `pause()` :
 
       ```java
       void pause() throws MediaPlayerException;
       ```
 
-1. Utilice la llamada de retorno de evento de estado modificado para comprobar si hay errores o para realizar otras acciones adecuadas.
+1. Utilice la llamada de retorno de evento de cambio de estado para comprobar si hay errores o para realizar otras acciones adecuadas.
 
-   TVSDK llama a esta llamada de retorno para `pause()` o `play()` y pasa información sobre el cambio de estado, incluido el nuevo estado, como pausado o en reproducción.
+   TVSDK llama a esta rellamada para `pause()` o `play()` y pasa información sobre el cambio de estado, incluido el nuevo estado, como pausado o reproducido.
