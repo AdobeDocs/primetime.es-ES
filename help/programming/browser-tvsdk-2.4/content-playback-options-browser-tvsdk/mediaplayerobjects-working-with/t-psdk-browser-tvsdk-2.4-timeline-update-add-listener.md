@@ -1,23 +1,20 @@
 ---
-description: Para recibir notificaciones sobre actualizaciones de línea de tiempo, registre los oyentes de evento correspondientes.
-seo-description: Para recibir notificaciones sobre actualizaciones de línea de tiempo, registre los oyentes de evento correspondientes.
-seo-title: Añadir oyentes para TimelineUpdatedEvent
-title: Añadir oyentes para TimelineUpdatedEvent
-uuid: 7d742e15-5a55-4155-93a7-7b79f21c1472
+description: Para recibir notificaciones sobre actualizaciones de la cronología, registre los oyentes de eventos correspondientes.
+title: Agregar oyentes para TimelineUpdatedEvent
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
 
-# Añadir oyentes para TimelineUpdatedEvent{#add-listeners-for-timelineupdatedevent}
+# Agregar oyentes para TimelineUpdatedEvent{#add-listeners-for-timelineupdatedevent}
 
-Para recibir notificaciones sobre actualizaciones de línea de tiempo, registre los oyentes de evento correspondientes.
+Para recibir notificaciones sobre actualizaciones de la cronología, registre los oyentes de eventos correspondientes.
 
-Cada vez que se actualiza la línea de tiempo, `MediaPlayer` distribuye `AdobePSDK.TimelineEvent` con el tipo `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
+Cada vez que se actualiza la línea de tiempo, `MediaPlayer` envía `AdobePSDK.TimelineEvent` con el tipo `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
 1. Implemente los oyentes adecuados.
 
    ```js
@@ -36,7 +33,7 @@ Cada vez que se actualiza la línea de tiempo, `MediaPlayer` distribuye `AdobePS
    }
    ```
 
-1. Registre los oyentes de evento.
+1. Registre los oyentes del evento.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIMELINE_UPDATED,  
