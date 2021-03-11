@@ -1,13 +1,10 @@
 ---
-description: Es posible que deba saber si el contenido multimedia es en directo o vídeo a petición (VOD).
-seo-description: Es posible que deba saber si el contenido multimedia es en directo o vídeo a petición (VOD).
-seo-title: Identifique si el contenido está activo o VOD
-title: Identifique si el contenido está activo o VOD
-uuid: e6a66104-97fb-438a-8356-e21f94058c85
+description: Es posible que deba saber si el contenido multimedia está activo o si se trata de vídeo bajo demanda (VOD).
+title: Identificar si el contenido está activo o VOD
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '90'
+source-wordcount: '66'
 ht-degree: 0%
 
 ---
@@ -15,7 +12,7 @@ ht-degree: 0%
 
 # Identifique si el contenido está activo o VOD {#identify-whether-the-content-is-live-or-vod}
 
-Es posible que deba saber si el contenido multimedia es en directo o vídeo a petición (VOD).
+Es posible que deba saber si el contenido multimedia está activo o si se trata de vídeo bajo demanda (VOD).
 
 1. Asegúrese de que el reproductor está en al menos el estado `PREPARED`.
 1. Determine si el contenido `MediaPlayerItem` está activo ( `true`) o VOD ( `false`).
