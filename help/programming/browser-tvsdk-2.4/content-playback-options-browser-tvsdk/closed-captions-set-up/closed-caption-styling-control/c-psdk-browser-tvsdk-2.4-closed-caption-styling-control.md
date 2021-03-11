@@ -1,13 +1,10 @@
 ---
-description: Puede proporcionar información de estilo para las pistas de subtítulos opcionales mediante la clase TextFormat. Esto establece el estilo de cualquier subtítulo cerrado que muestre el reproductor.
-seo-description: Puede proporcionar información de estilo para las pistas de subtítulos opcionales mediante la clase TextFormat. Esto establece el estilo de cualquier subtítulo cerrado que muestre el reproductor.
-seo-title: Control del estilo de los subtítulos opcionales
-title: Control del estilo de los subtítulos opcionales
-uuid: 85d9d6a6-5480-42ba-84ae-69121424f498
+description: Puede proporcionar información de estilo para las pistas de subtítulos mediante la clase TextFormat. Esto establece el estilo de cualquier subtítulo cerrado que muestre el reproductor.
+title: Control del estilo de los subtítulos
 translation-type: tm+mt
-source-git-commit: 592245f5a7186d18dabbb5a98a468cbed7354aed
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '72'
 ht-degree: 0%
 
 ---
@@ -15,6 +12,6 @@ ht-degree: 0%
 
 # Información general {#control-closed-caption-styling-overview}
 
-Puede proporcionar información de estilo para las pistas de subtítulos opcionales mediante la clase TextFormat. Esto establece el estilo de cualquier subtítulo cerrado que muestre el reproductor.
+Puede proporcionar información de estilo para las pistas de subtítulos mediante la clase TextFormat. Esto establece el estilo de cualquier subtítulo cerrado que muestre el reproductor.
 
-Esta clase encapsula información de estilo de subtítulos opcionales, como el tipo de fuente, el tamaño, el color y la opacidad de fondo.
+Esta clase encapsula información de estilo de subtítulos cerrados como el tipo de fuente, el tamaño, el color y la opacidad del fondo.
