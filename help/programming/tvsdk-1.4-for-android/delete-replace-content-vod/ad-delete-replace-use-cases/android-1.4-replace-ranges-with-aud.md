@@ -1,29 +1,26 @@
 ---
-description: Puede insertar publicidades en el contenido de VOD.
-seo-description: Puede insertar publicidades en el contenido de VOD.
-seo-title: Reemplazar intervalos de tiempo con una publicidad
-title: Reemplazar intervalos de tiempo con una publicidad
-uuid: 50cdcc06-7df5-414b-95d4-c684bc68dce3
+description: Puede insertar anuncios en contenido de VOD.
+title: Reemplazar intervalos de tiempo por una publicidad
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '107'
+source-wordcount: '94'
 ht-degree: 0%
 
 ---
 
 
-# Reemplazar intervalos de tiempo con una publicidad{#replace-time-ranges-with-an-ad}
+# Reemplazar intervalos de tiempo por un anuncio{#replace-time-ranges-with-an-ad}
 
-Puede insertar publicidades en el contenido de VOD.
+Puede insertar anuncios en contenido de VOD.
 
-En este caso, `TimeRanges` entre `begin` y `end` en `localTime` se eliminan de la línea de tiempo. Se reemplazan por un `AdBreak` de `begin` a `begin+replaceDuration`. Si la duración de sustitución no existe como parámetro, el servidor realiza la determinación en el Adbreak devuelto.
+En este caso, `TimeRanges` entre `begin` y `end` en `localTime` se eliminan de la cronología. Se sustituyen por un `AdBreak` de `begin` a `begin+replaceDuration`. Si la duración de reemplazo no existe como parámetro, el servidor realiza la determinación en el Adbreak devuelto.
 
 >[!NOTE]
 >
->Siempre debe proporcionar una duración de reemplazo específica para los intervalos personalizados. Si no hay anuncios que vayan a reemplazar este intervalo personalizado, proporcione una duración de reemplazo de 0.
+>Siempre debe proporcionar una duración de reemplazo específica para los intervalos personalizados. Si no hay anuncios que vayan a reemplazar este intervalo personalizado, proporcione un valor de 0 para la duración de reemplazo.
 
-Reemplazar intervalos con anuncios de Primetime y decisiones.
+Reemplace intervalos con anuncios de Primetime y decisioning.
 
 ```
 {   
