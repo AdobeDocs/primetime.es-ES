@@ -1,9 +1,9 @@
 ---
-seo-title: Aplicación de fuga de prisión (requiere Adobe Primetime)
-title: Aplicación de fuga de prisión (requiere Adobe Primetime)
-uuid: 12be7499-c359-406f-ace9-a4aad9e00207
+title: Aplicación de la fuga de prisión (requiere Adobe Primetime)
+description: Aplicación de la fuga de prisión (requiere Adobe Primetime)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 1b9792a10ad606b99b6639799ac2aacb707b2af5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
@@ -11,11 +11,11 @@ ht-degree: 0%
 ---
 
 
-# Aplicación de fuga de prisión (requiere Adobe Primetime) {#jailbreak-enforcement-requires-adobe-primetime}
+# Aplicación de Jailbreak (requiere Adobe Primetime) {#jailbreak-enforcement-requires-adobe-primetime}
 
-En plataformas que admiten la detección de saltos de cárcel (como dispositivos móviles Android e iOS), si se habilita la aplicación de saltos de cárcel, se deshabilita la reproducción de contenido si se detecta [!DNL jailbreak/root] en el dispositivo.
+En plataformas que admiten la detección de saltos de la cárcel (como dispositivos móviles Android e iOS), habilitar la aplicación de saltos de la cárcel no permite la reproducción de contenido si se ha detectado [!DNL jailbreak/root] en el dispositivo.
 
 >[!NOTE]
 >
->Esta regla de uso es compatible con los clientes de Adobe Access versión 4.0 o superior, pero no afecta a las plataformas que no admiten la detección de saltos de cárcel. El comportamiento de los clientes más antiguos depende de la versión mínima del cliente admitida por el servidor de licencias.
+>Esta regla de uso es compatible con los clientes de acceso a Adobe versión 4.0 y posteriores, pero no tiene ningún efecto en las plataformas que no admiten la detección de saltos de cárcel. El comportamiento de los clientes más antiguos depende de la versión mínima del cliente admitida por el servidor de licencias.
 
