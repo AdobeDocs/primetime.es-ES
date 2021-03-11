@@ -1,13 +1,10 @@
 ---
 description: Puede guardar la posición de reproducción actual en un vídeo y reanudar la reproducción en la misma posición en una sesión futura.
-seo-description: Puede guardar la posición de reproducción actual en un vídeo y reanudar la reproducción en la misma posición en una sesión futura.
-seo-title: Guardar la posición del vídeo y reanudarlo más tarde
-title: Guardar la posición del vídeo y reanudarlo más tarde
-uuid: 322f780d-09ba-44b0-b2e5-46288bf58fda
+title: Guarde la posición del vídeo y reanude más tarde
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
@@ -17,21 +14,21 @@ ht-degree: 0%
 
 Puede guardar la posición de reproducción actual en un vídeo y reanudar la reproducción en la misma posición en una sesión futura.
 
-Las publicidades insertadas dinámicamente difieren entre las sesiones de usuario, por lo que al guardar la posición **con** publicidades duplicadas se hace referencia a una posición diferente en una sesión futura. TVSDK proporciona métodos para recuperar la posición de reproducción e ignorar las publicidades duplicadas.
+Los anuncios insertados de forma dinámica difieren entre las sesiones de usuario, por lo que guardar la posición **con** publicidad duplicada hace referencia a una posición diferente en una sesión futura. TVSDK proporciona métodos para recuperar la posición de reproducción e ignorar los anuncios duplicados.
 
-1. Cuando el usuario cierra un vídeo, la aplicación recupera y guarda la posición en el vídeo.
+1. Cuando el usuario sale de un vídeo, la aplicación recupera y guarda la posición en el vídeo.
 
    >[!TIP]
    >
    >No se incluyen las duraciones de los anuncios.
 
-   Los saltos de publicidad pueden variar en cada sesión debido a patrones de publicidad, límites de frecuencia, etc. La hora actual del vídeo en una sesión puede ser diferente en una sesión futura. Al guardar una posición en el vídeo, la aplicación recupera la hora local, que puede guardar en el dispositivo o en una base de datos del servidor.
+   Las pausas publicitarias pueden variar en cada sesión debido a patrones de anuncios, restricciones de frecuencia, etc. La hora actual del vídeo en una sesión puede ser diferente en una sesión futura. Al guardar una posición en el vídeo, la aplicación recupera la hora local, que puede guardar en el dispositivo o en una base de datos del servidor.
 
-   Por ejemplo: si el usuario se encuentra en el minuto 20 del vídeo y esta posición incluye cinco minutos de anuncios, `getCurrentTime` devolverá 1200 segundos, mientras que `getLocalTime` en esta posición devolverá 900 segundos.
+   Por ejemplo, si el usuario se encuentra en el minuto 20 del vídeo y esta posición incluye cinco minutos de anuncios, `getCurrentTime` devolverá 1200 segundos, mientras que `getLocalTime` en esta posición devolverá 900 segundos.
 
    >[!IMPORTANT]
    >
-   >La hora local y la hora actual son las mismas para flujos en directo/lineales. En este caso, `convertToLocalTime` no tiene ningún efecto. Para VOD, el tiempo local permanece sin cambios mientras se reproducen los anuncios.
+   >La hora local y la hora actual son las mismas para los flujos en directo/lineales. En este caso, `convertToLocalTime` no tiene ningún efecto. Para VOD, la hora local permanece sin cambios mientras se reproduce el anuncio.
 
    ```java
    // Save the user session when player activity stops 
@@ -52,7 +49,7 @@ Las publicidades insertadas dinámicamente difieren entre las sesiones de usuari
    } 
    ```
 
-1. Restaure la sesión de usuario cuando se reanude la actividad del reproductor.
+1. Restaure la sesión del usuario cuando se reanude la actividad del reproductor.
 
    ```java
    @Override 
@@ -78,11 +75,11 @@ Las publicidades insertadas dinámicamente difieren entre las sesiones de usuari
 
       >[!TIP]
       >
-      >Este método solo se llama con valores de hora locales. Si se llama al método con los resultados de tiempo actuales, se produce un comportamiento incorrecto.
+      >Solo se llama a este método con valores de hora locales. Si se llama al método con resultados de tiempo actuales, se produce un comportamiento incorrecto.
 
-   * Para buscar la hora actual, utilice `seek`.
+   * Para buscar el tiempo actual, utilice `seek`.
 
-1. Cuando la aplicación reciba el evento de cambio de estado `onStatusChanged`, busque la hora local guardada.
+1. Cuando la aplicación reciba el evento de cambio de estado `onStatusChanged` , busque la hora local guardada.
 
    ```java
    private final MediaPlayer.PlaybackEventListener _playbackEventListener =  
@@ -101,8 +98,8 @@ Las publicidades insertadas dinámicamente difieren entre las sesiones de usuari
    } 
    ```
 
-1. Proporcione los saltos de publicidad como se especifica en la interfaz de directivas de publicidad.
-1. Implemente un selector de directivas de publicidad personalizado ampliando el selector de directivas de publicidad predeterminado.
-1. Proporcione los pausas publicitarias que deben presentarse al usuario implementando `selectAdBreaksToPlay`.
+1. Proporcione los pausas publicitarias tal como se especifica en la interfaz de directivas de publicidad.
+1. Implemente un selector de políticas de publicidad personalizado ampliando el selector de directivas de publicidad predeterminado.
+1. Proporcione las pausas publicitarias que se deben presentar al usuario implementando `selectAdBreaksToPlay`.
 
-   Este método incluye una pausa publicitaria previa y las pausas publicitarias intermedias antes de la posición horaria local. La aplicación puede decidir reproducir una pausa publicitaria previa y reanudar a la hora local especificada, reproducir una pausa publicitaria media y reanudar a la hora local especificada o no reproducir ninguna pausa publicitaria.
+   Este método incluye una pausa publicitaria pre-roll y las pausas publicitarias intermedias antes de la posición horaria local. La aplicación puede decidir reproducir una pausa publicitaria previa y reanudar a la hora local especificada, reproducir una pausa publicitaria intermedia y reanudar a la hora local especificada o no reproducir ninguna pausa publicitaria.
