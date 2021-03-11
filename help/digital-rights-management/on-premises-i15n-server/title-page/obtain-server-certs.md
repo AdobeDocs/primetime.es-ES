@@ -1,9 +1,9 @@
 ---
-seo-title: Obtención de certificados de servidor de individualización
-title: Obtención de certificados de servidor de individualización
-uuid: ae1e848e-0a19-4ec3-8419-ce5fd783c279
+title: Obtener certificados de servidor de individualización
+description: Obtener certificados de servidor de individualización
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
@@ -13,12 +13,12 @@ ht-degree: 0%
 
 # Obtener certificados de servidor de individualización{#obtain-individualization-server-certificates}
 
-Para utilizar el servidor de individualización local, primero debe obtener dos credenciales digitales (certificados):
+Para utilizar el servidor de individualización On Premies, primero debe obtener dos credenciales digitales (certificados):
 
-* *Individualización Transporte Credencial* - expedido por Adobe
-* *Identificación CA Credencial*  - emitida por Symantec (VeriSign)
+* *Individualización Credencial*  de transporte- expedido por Adobe
+* *Individualization CA Credential* : emitido por Symantec (VeriSign)
 
 Para obtener estos certificados:
 
-1. Envíe una solicitud por medio de un billete de Zendesk a: [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
-Tenga en cuenta que estas credenciales se suman a las necesarias para el funcionamiento de un servidor de licencias DRM Primetime.
+1. Envíe una solicitud a través de un ticket de Zendesk a: [https://adobeprimetime.zendesk.com](https://adobeprimetime.zendesk.com)
+Tenga en cuenta que estas credenciales se suman a las necesarias para operar un servidor de licencias DRM de Primetime.
