@@ -1,13 +1,10 @@
 ---
-description: El audio de enlace tardío utiliza PTMediaPlayer para reproducir un vídeo especificado en una lista de reproducción HLS M3U8 y que puede contener varios flujos de audio alternativos.
-seo-description: El audio de enlace tardío utiliza PTMediaPlayer para reproducir un vídeo especificado en una lista de reproducción HLS M3U8 y que puede contener varios flujos de audio alternativos.
-seo-title: Acceso a pistas de audio alternativas
+description: El audio de enlace tardío utiliza PTMediaPlayer para reproducir un vídeo especificado en una lista de reproducción M3U8 HLS y que puede contener varios flujos de audio alternativos.
 title: Acceso a pistas de audio alternativas
-uuid: 2915a74f-5ec3-457e-890d-5c79be39f37a
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
@@ -15,12 +12,12 @@ ht-degree: 0%
 
 # Acceso a pistas de audio alternativas {#access-alternate-audio-tracks}
 
-El audio de enlace tardío utiliza PTMediaPlayer para reproducir un vídeo especificado en una lista de reproducción HLS M3U8 y que puede contener varios flujos de audio alternativos.
+El audio de enlace tardío utiliza PTMediaPlayer para reproducir un vídeo especificado en una lista de reproducción M3U8 HLS y que puede contener varios flujos de audio alternativos.
 
-1. Espere a que MediaPlayer tenga al menos el estado `PTMediaPlayerStatusReady`.
+1. Espere a que MediaPlayer esté en al menos el estado `PTMediaPlayerStatusReady`.
 1. Escuche este evento:
 
-   notificación `PTMediaPlayerItemMediaSelectionOptionsAvailable`: La lista inicial de las pistas de audio está disponible.
+   notificación `PTMediaPlayerItemMediaSelectionOptionsAvailable`: La lista inicial de pistas de audio está disponible.
 
    ```
    [[NSNotificationCenter defaultCenter] addObserver:self 
@@ -39,4 +36,4 @@ El audio de enlace tardío utiliza PTMediaPlayer para reproducir un vídeo espec
    ```
 
 1. (Opcional) Presente las pistas disponibles al usuario.
-1. Configure la pista de audio seleccionada en la instancia `PTMediaPlayerItem`.
+1. Defina la pista de audio seleccionada en la instancia `PTMediaPlayerItem` .
