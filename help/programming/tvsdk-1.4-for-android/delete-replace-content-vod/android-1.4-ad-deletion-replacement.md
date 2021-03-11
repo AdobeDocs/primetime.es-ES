@@ -1,13 +1,10 @@
 ---
-description: Estos cambios en la API de Android TVSDK admiten eliminación y sustitución.
-seo-description: Estos cambios en la API de Android TVSDK admiten eliminación y sustitución.
-seo-title: Cambios en la API de reemplazo y eliminación de publicidad
+description: Estos cambios en la API TVSDK de Android admiten la eliminación y sustitución de anuncios.
 title: Cambios en la API de reemplazo y eliminación de publicidad
-uuid: 2bb8a331-6851-4442-99de-b01500a0e1e2
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '428'
 ht-degree: 0%
 
 ---
@@ -15,9 +12,9 @@ ht-degree: 0%
 
 # Cambios en la API de reemplazo y eliminación de publicidad{#ad-deletion-and-replacement-api-changes}
 
-Estos cambios en la API de Android TVSDK admiten eliminación y sustitución.
+Estos cambios en la API TVSDK de Android admiten la eliminación y sustitución de anuncios.
 
-* `AdSignalingMode` Nuevo modo personalizado de señalización de publicidad de intervalo de tiempo
+* `AdSignalingMode` Nuevo modo de señalización de anuncio de intervalo de tiempo personalizado
 
 * `AdvertisingMetadata` Nuevo  `setTimeRanges(TimeRangeCollection timeRanges, Metadata options)`: Establece los intervalos de tiempo para marcar, eliminar o reemplazar al procesar metadatos
 
@@ -28,24 +25,24 @@ Estos cambios en la API de Android TVSDK admiten eliminación y sustitución.
 
 * Nueva clase `ContentRemoval`
 
-   `TimelineOperation` clase que define el intervalo de tiempo que se va a eliminar de la línea de tiempo
+   `TimelineOperation` clase que define el intervalo de tiempo que se va a eliminar de la cronología
 
 * `AuditudeResolver`
 
    * Nuevo `private LinkedList<AuditudeRequest> _requestQueue`
-   * Nuevo `void startConsumer()`: Inicios que procesan la cola de solicitudes de Primetime y toma de decisiones y se aseguran de que cada solicitud se emite a intervalos `MIN_INIT_REQUEST_INTERVAL`
+   * Nuevo `void startConsumer()`: Inicia el procesamiento de la cola de solicitudes de primetime y decisioning y garantiza que cada solicitud se publique a intervalos `MIN_INIT_REQUEST_INTERVAL`
 
-   * Nuevo `processReplacementRange()`: Extrae intervalos de tiempo de los metadatos de publicidad y genera `PlacementInformations`, y crea una solicitud de toma de decisiones de publicidad Primetime que contiene `PlacementInformations`.
+   * Nuevo `processReplacementRange()`: Extrae intervalos de tiempo de los metadatos de publicidad, genera `PlacementInformations` y crea una solicitud de toma de decisiones de publicidad de Primetime que contiene el `PlacementInformations`.
 
-   * Nuevo `canDoResolver()`: Comprueba si la oportunidad de colocación tiene metadatos de primetime y decisioning
+   * Nuevo `canDoResolver()`: Comprueba si la oportunidad de colocación tiene metadatos de Primetime y decisioning
 
-* Nueva `CustomRangeHelper` clase auxiliar que extrae metadatos de intervalo de tiempo de los metadatos de anuncio y elimina subconjuntos/superposiciones/intervalos de tiempo no válidos.
+* Nueva clase `CustomRangeHelper` Helper que extrae metadatos de intervalo de tiempo de los metadatos de anuncio y elimina los subconjuntos/superposiciones/intervalos de tiempo no válidos.
 
-* Nueva `DeleteContentResolver` resolución de contenido que resuelve las oportunidades de colocación de `PlacementInformation.Mode.DELETE`
+* Nuevo `DeleteContentResolver` solucionador de contenido que resuelve las oportunidades de colocación de `PlacementInformation.Mode.DELETE`
 
-* Nueva `NopTimelineOperation` operación de la nueva línea de tiempo para cuando no se necesita reemplazar o colocar una pausa publicitaria. Esta clase se utiliza para distinguir entre esto y cuando se produce un error durante el proceso de resolución.
+* Nueva `NopTimelineOperation` nueva operación de cronología para los casos en los que no es necesario realizar la colocación o el reemplazo de una pausa publicitaria. Esta clase se utiliza para distinguir entre esto y cuando se produce un error durante el proceso de resolución.
 
-* `TimelineOperationQueue` Comprueba si la Operación de línea de tiempo es una operación  `NopTimelineOperation` antes de procesarla.
+* `TimelineOperationQueue` Comprueba si la operación de línea de tiempo es una  `NopTimelineOperation` antes del procesamiento.
 
 * `CustomAdMarkersContentResolver` Nuevo  `canDoResolve()`: Comprueba si una oportunidad de colocación es del tipo  `Mode.MARK`
 
@@ -58,21 +55,21 @@ Estos cambios en la API de Android TVSDK admiten eliminación y sustitución.
    * Nuevo modo `enum (INSERT, DELETE, REPLACE, MARK)`
    * Nuevo tipo `CUSTOM_TIME_RANGES`
 
-* `TimeRange` Nuevo  `compareTo(TimeRange timeRange)`: Así se pueden ordenar los intervalos de tiempo en función del tiempo de inicio
+* `TimeRange` Nuevo  `compareTo(TimeRange timeRange)`: De modo que puede ordenar los intervalos de tiempo en función de la hora de inicio
 
-* Nueva `ReplacementTimeRange` Amplía la clase `TimeRange` que representa un intervalo de tiempo de reemplazo, con un parámetro `begin`, `end` y `replacement-duration`.
+* La nueva `ReplacementTimeRange` amplía la clase `TimeRange` que representa un intervalo de tiempo de reemplazo, con un parámetro `begin`, `end` y `replacement-duration`.
 
 * `TimeRangeCollection`
 
    * Nuevo `MARK_RANGES, DELETE_RANGES, REPLACE_RANGES`
    * Se cambió el nombre `CUSTOM_AD_MARKERS` a `MARK_RANGES`
 
-   * Se modificó `toMetadata(Metadata options)` para colocar los rangos delete/mark/replace en metadatos de publicidad.
+   * Se ha modificado `toMetadata(Metadata options)` para colocar intervalos de eliminación/marca/sustitución en metadatos de publicidad.
 
 * `MediaPlayerNotification`
 
-   * Nuevo `UNDEFINED_TIME_RANGES`: Cuando el modo de señalización de publicidad es Mapa del servidor o Señales de manifiesto, y los rangos de reemplazo también están en los metadatos de publicidad, se omiten los rangos de reemplazo.
-   * Nuevo `REPLACE_RANGES_NOT_AVAILABLE`: Cuando el modo de señalización de publicidad es Intervalos de tiempo personalizados y los rangos de reemplazo no están disponibles, se enviará una advertencia.
+   * Nuevo `UNDEFINED_TIME_RANGES`: Cuando el modo de señalización de anuncio es Mapa del servidor o Señales de manifiesto, y los rangos de sustitución también están en los metadatos de anuncio, se omiten los rangos de reemplazo.
+   * Nuevo `REPLACE_RANGES_NOT_AVAILABLE`: Cuando el modo de señalización de publicidad es Intervalos de tiempo personalizados y los intervalos de reemplazo no están disponibles, se envía una advertencia.
 
 * `AdvertisingFactory` Nuevo  `public abstract List<ContentResolver> createContentResolvers(MediaPlayerItem item)`
 
@@ -82,12 +79,12 @@ Estos cambios en la API de Android TVSDK admiten eliminación y sustitución.
 
 * `DefaultMediaPlayer`
 
-   * En `prepareToPlay()`: Realiza una búsqueda inicial a 0, ya que si se elimina el rango `[0,n]`, el reproductor multimedia no se reproducirá automáticamente.
+   * En `prepareToPlay()`: Realiza una búsqueda inicial a 0, ya que si se elimina el rango `[0,n]`, el reproductor de contenidos no se reproducirá automáticamente.
 
-   * En `prepareToPlay()`: Recorre la lista de información de colocación inicial para que `mediaplayerclient` se resuelva.
+   * En `prepareToPlay()`: Pasa por la lista de información de colocación inicial para que `mediaplayerclient` se resuelva.
 
-   * En `extractAdSignalingMode()`: Aloje el nuevo modo Intervalo de tiempo personalizado.
-   * Nuevo `private static List<PlacementInformation> createInitalPlacementInformations()`: Genera la información de colocación inicial para el modo de señalización de publicidad y los solucionadores de contenido (derivados de metadatos de publicidad).
+   * En `extractAdSignalingMode()`: Aloje el nuevo modo Intervalo de tiempo personalizado .
+   * Nuevo `private static List<PlacementInformation> createInitalPlacementInformations()`: Genera la información de colocación inicial para el modo de señalización de publicidad y los resoltores de contenido (derivados de los metadatos de publicidad).
    * En `ContentPlacementCompletedListener`: Comprueba si `mediaPlayerClient` es `doneInitialResolving` antes de llamar a `endAdResolving`.
 
 * `MediaPlayerClient`
@@ -101,8 +98,8 @@ Estos cambios en la API de Android TVSDK admiten eliminación y sustitución.
 
 * `VideoEngineTimeline`
 
-   * Nuevo `removeContent(TimelineOperation timelineOperation)`: Quita un rango determinado de contenido de la línea de tiempo.
+   * Nuevo `removeContent(TimelineOperation timelineOperation)`: Quita un intervalo de contenido determinado de la cronología.
    * Nuevo `removeContentByLocalTime(long begin, long end)`: Elimina el contenido por hora local, dado `begin` y `end`.
 
-* `DefaultOpportunityDetectorFactory` Modificado  `createOpportunityDetector`: Para los flujos VOD, solo devuelve un nuevo  `SpliceOutOpportunityDetector` si no hay intervalos MARK o REPLACE (ya que dichos intervalos tienen prioridad sobre el modo de señalización).
+* `DefaultOpportunityDetectorFactory` Modificado  `createOpportunityDetector`: Para los flujos de VOD, solo devuelve un valor nuevo  `SpliceOutOpportunityDetector` si no hay intervalos MARK o REPLACE (ya que dichos intervalos tienen prioridad sobre el modo de señalización).
 
