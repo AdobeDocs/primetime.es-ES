@@ -1,9 +1,9 @@
 ---
-seo-title: Generación de números aleatorios
 title: Generación de números aleatorios
-uuid: 3ea25c48-1dbe-4039-8091-36c289702f78
+description: Generación de números aleatorios
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # Generación de números aleatorios{#generating-random-numbers}
 
-Los generadores de números aleatorios de hardware pueden utilizarse en servidores Linux para garantizar que se genera suficiente entropía. Si la máquina no puede generar suficiente entropía, las operaciones de Adobe Access que requieren una fuente aleatoria se bloquearán mientras se esperan datos de `/dev/random`.
+Los generadores aleatorios de hardware se pueden usar en servidores Linux para garantizar que se genere suficiente entropía. Si el equipo no puede generar suficiente entropía, las operaciones de acceso a Adobe que requieren una fuente de aleatoriedad se bloquearán mientras esperan los datos de `/dev/random`.
