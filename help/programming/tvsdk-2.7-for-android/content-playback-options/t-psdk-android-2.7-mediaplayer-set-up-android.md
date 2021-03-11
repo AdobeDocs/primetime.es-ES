@@ -1,31 +1,28 @@
 ---
 description: Cree una instancia de MediaPlayer y coloque una vista de ella en un diseño de marco.
-seo-description: Cree una instancia de MediaPlayer y coloque una vista de ella en un diseño de marco.
-seo-title: Configuración de MediaPlayer
 title: Configuración de MediaPlayer
-uuid: 49c3edb9-b6e2-49f8-b4aa-f230af7de6b0
 translation-type: tm+mt
-source-git-commit: 812d04037c3b18f8d8cdd0d18430c686c3eee1ff
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
 
-# Configure MediaPlayer {#set-up-the-mediaplayer}
+# Configuración de MediaPlayer {#set-up-the-mediaplayer}
 
-TVSDK proporciona herramientas para crear una aplicación de reproductor de vídeo avanzada (el reproductor Primetime) que se puede integrar con otros componentes de Primetime. También ofrece una serie de funciones diseñadas para maximizar la calidad de la reproducción de vídeo.
+TVSDK proporciona herramientas para crear una aplicación de reproductor de vídeo avanzada (el reproductor Primetime) que se puede integrar con otros componentes de Primetime. También proporciona varias funciones diseñadas para maximizar la calidad de la reproducción de vídeo.
 
 Cree una instancia de MediaPlayer y coloque una vista de ella en un diseño de marco.
 
-1. Cree una instancia `MediaPlayer`, pasando un objeto `android.content.Context` al constructor:
+1. Cree una instancia de `MediaPlayer`, pasando un objeto `android.content.Context` al constructor:
 
    ```java
    MediaPlayer mediaPlayer = new MediaPlayer(context);
    ```
 
-1. Proporcione un diseño de marco ( `android.widget.FrameLayout`) para contener un `ViewGroup` de `mediaPlayer`:
+1. Proporcione un diseño de marco ( `android.widget.FrameLayout`) para contener `ViewGroup` de `mediaPlayer`:
 
    ```java
    FrameLayout playerFrame = (FrameLayout) _viewGroup.findViewById(R.id.playerFrame);
@@ -49,4 +46,4 @@ Cree una instancia de MediaPlayer y coloque una vista de ella en un diseño de m
    playerFrame.addView(mediaPlayer.getView());
    ```
 
->La instancia `MediaPlayer` ( `mediaPlayer`) ahora está disponible y configurada correctamente para mostrar contenido de vídeo en la pantalla del dispositivo.
+>La instancia `MediaPlayer` ( `mediaPlayer`) ya está disponible y configurada correctamente para mostrar contenido de vídeo en la pantalla del dispositivo.
