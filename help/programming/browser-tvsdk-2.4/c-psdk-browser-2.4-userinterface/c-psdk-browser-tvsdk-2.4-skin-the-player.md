@@ -1,35 +1,32 @@
 ---
-description: Puede utilizar la siguiente información para ayudarle a aplicar la piel al reproductor. Para cada construcción visual, los comportamientos correspondientes se mencionan en el comportamiento predeterminado.
-seo-description: Puede utilizar la siguiente información para ayudarle a aplicar la piel al reproductor. Para cada construcción visual, los comportamientos correspondientes se mencionan en el comportamiento predeterminado.
-seo-title: Aplicación de apariencia al reproductor
-title: Aplicación de apariencia al reproductor
-uuid: 516ff846-d76d-4062-b64b-3032f7a70470
+description: Puede utilizar la siguiente información para ayudarle a despellejar el reproductor. Para cada construcción visual, los comportamientos correspondientes se mencionan en el comportamiento predeterminado.
+title: Desenfocar el reproductor
 translation-type: tm+mt
-source-git-commit: 19e7c941b3337c3b4d37f0b6a1350aac2ad8a0cc
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '1449'
+source-wordcount: '1422'
 ht-degree: 0%
 
 ---
 
 
-# Aplicación de apariencia al reproductor {#skinning-the-player}
+# Desenfocar el reproductor {#skinning-the-player}
 
-Puede utilizar la siguiente información para ayudarle a aplicar la piel al reproductor. Para cada construcción visual, los comportamientos correspondientes se mencionan en el comportamiento predeterminado.
+Puede utilizar la siguiente información para ayudarle a despellejar el reproductor. Para cada construcción visual, los comportamientos correspondientes se mencionan en el comportamiento predeterminado.
 
 >[!IMPORTANT]
 >
->Los detalles de aplicación de aspectos de este documento corresponden a los elementos predeterminados de la interfaz de usuario creados por la interfaz de usuario. Si el reproductor ha modificado estos elementos, también es necesario cambiar los elementos de aplicación de aspectos.
+>Los detalles de despellejado de este documento son para los elementos de IU predeterminados que crea el marco de IU. Si el reproductor modificó estos elementos, también es necesario cambiar los elementos de desollado.
 
 ## Contenedor divs {#section_99B0D598219D4150B57E97D5381B118F}
 
-Estos son los estilos de las divisiones de contenedor:
+Estos son los estilos para los divs de contenedor:
 
 >[!TIP]
 >
->Estos divs se enumeran en el archivo `common-styles.css`.
+>Estos divs se enumeran en el archivo `common-styles.css` .
 
-Estos son los estilos del div principal:
+Estos son los estilos para el div principal:
 
 <table id="table_AC5745DF725543ADBBCD68BA6130DF12"> 
  <thead> 
@@ -64,31 +61,31 @@ Estos son los estilos del div principal:
    <td colname="col2"> <p>Estilo del div en el que se reproduce el vídeo PIP. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> .vista-como-principal-video</span> </td> 
-   <td colname="col2"> <p>Se aplica al PIP inicial cuando se ha intercambiado y se muestra como vídeo principal. </p> </td> 
+   <td colname="col1"><span class="codeph"> .view-as-main-video</span> </td> 
+   <td colname="col2"> <p>Se aplica al PIP inicial cuando se ha intercambiado y se muestra como el vídeo principal. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p><b>Vista de varios vídeos</b> </p> </td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> .ptp-multi-vista-contenedor</span> </td> 
+   <td colname="col1"><span class="codeph"> .ptp-multi-view-container</span> </td> 
    <td colname="col2"> <p>Se utiliza en la vista de varios vídeos. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> .ptp-multi-vista-vista</span> </td> 
-   <td colname="col2"> <p>Estilo css común que se coloca en cada vídeo de la multivivista. </p> </td> 
+   <td colname="col1"><span class="codeph"> .ptp-multi-view-view</span> </td> 
+   <td colname="col2"> <p>Estilo css común que se coloca en cada vídeo de la multiview. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .multiview</span> </td> 
-   <td colname="col2"> <p>Cuando el contenedor que aloja cada uno de los vídeos en multiview está en multiview. </p> </td> 
+   <td colname="col2"> <p>Cuando el contenedor que aloja cada uno de los vídeos en formato multiview está en multiview. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Varios controles {#section_E9E4A8E3AEBF4BDC89840B84B3B0E737}
 
-Estos son los estilos de los controles genéricos del reproductor:
+Estos son los estilos para los controles genéricos del reproductor:
 
 >[!TIP]
 >
@@ -104,7 +101,7 @@ Estos son los estilos de los controles genéricos del reproductor:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-control</span> </td> 
-   <td colname="col2"> <p>Aplicable a todos los controles de la barra de control excepto la barra de desplazamiento y el espacio </p> </td> 
+   <td colname="col2"> <p>Aplicable a todos los controles de la barra de control excepto a la barra de desplazamiento y al espacio </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-input-slider</span> </td> 
@@ -115,8 +112,8 @@ Estos son los estilos de los controles genéricos del reproductor:
    <td colname="col2"> <p>Encabezado de los paneles </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-vertical-lista-menu-item</span> </td> 
-   <td colname="col2"> <p>Lista de menú en estilo vertical </p> </td> 
+   <td colname="col1"><span class="codeph"> ptp-vertical-list-menu-item</span> </td> 
+   <td colname="col2"> <p>Lista de menús en estilo vertical </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-fill-spacer</span> </td> 
@@ -140,7 +137,7 @@ Estos son los estilos de los controles genéricos del reproductor:
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-txt-control</span> </td> 
-   <td colname="col2"> <p>Estilos predeterminados para los controles de texto. </p> </td> 
+   <td colname="col2"> <p>Estilos predeterminados para controles de texto. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -158,13 +155,13 @@ Estos son los estilos de la barra de control:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-control-bar</span> (comportamiento predeterminado)</td>
+   <td colname="col1"><span class="codeph"> ptp-control-bar</span>  (comportamiento predeterminado)</td>
    <td colname="col2"> <p>Aplicable a la barra de control </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Botones de función {#section_57FFD242FF674EA2867BCF6CA7F6B855}
+## Botones de características {#section_57FFD242FF674EA2867BCF6CA7F6B855}
 
 >[!NOTE]
 >
@@ -181,32 +178,32 @@ Estos son los estilos de la barra de desplazamiento:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-scrub-bar</span> </td> 
-   <td colname="col2"> <p>Barra de desplazamiento en la barra de control </p> </td> 
+   <td colname="col1"><span class="codeph"> ptp-purb-bar</span> </td> 
+   <td colname="col2"> <p>Barra de selección de la barra de control </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-scrub-bar.ptp-buffer-progress-bar</span> </td> 
+   <td colname="col1"><span class="codeph"> ptp-purb-bar.ptp-buffer-progress-bar</span> </td> 
    <td colname="col2"> <p>Barra de progreso del búfer en la barra de desplazamiento </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-scrub-bar.ptp-search-to-bar</span> </td> 
+   <td colname="col1"><span class="codeph"> ptp-purb-bar.ptp-seek-to-bar</span> </td> 
    <td colname="col2"> <p>Estado de la barra de desplazamiento cuando el usuario busca en ella </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-scrub-bar.ptp-playback-progress-bar</span> </td> 
-   <td colname="col2"> <p>Estado de la barra de desplazamiento en la reproducción normal </p> </td> 
+   <td colname="col1"><span class="codeph"> ptp-purb-bar.ptp-play-progress-bar</span> </td> 
+   <td colname="col2"> <p>Estado de la barra de desplazamiento en reproducción normal </p> </td> 
   </tr>
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-scrub-bar.ptp-progress-bar-play-head</span> </td>
+   <td colname="col1"><span class="codeph"> ptp-purb-bar.ptp-progress-bar-play-head</span> </td>
    <td colname="col2"> <p>Reproducir la cabeza en la barra de desplazamiento mientras se reproduce </p> </td>
   </tr>
   <tr>
-   <td colname="col1"><span class="codeph"> ptp-scrub-bar.ptp-ad-marker-bar</span> </td>
-   <td colname="col2"> <p>Barra de marcadores de publicidad </p> </td>
+   <td colname="col1"><span class="codeph"> ptp-purb-bar.ptp-ad-marker-bar</span> </td>
+   <td colname="col2"> <p>Barra de marcador de anuncio </p> </td>
   </tr>
   <tr>
-   <td colname="col1"><span class="codeph"> ptp-scrub-bar.ptp-ad-marker</span> </td>
-   <td colname="col2"> <p>Marcador de publicidad </p> </td>
+   <td colname="col1"><span class="codeph"> ptp-eliminarbar.ptp-ad-marker</span> </td>
+   <td colname="col2"> <p>Marcador de anuncio </p> </td>
   </tr>
  </tbody>
 </table>
@@ -241,7 +238,7 @@ Estos son los estilos del botón de reproducción/pausa:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-playpause.pause-state</span> </td> 
-   <td colname="col2"> <p><span class="codeph"> ptp-btn-</span> playpausein en el estado de juego </p> </td>
+   <td colname="col2"> <p><span class="codeph"> ptp-btn-</span> playpausein en el estado play </p> </td>
   </tr>
  </tbody>
 </table>
@@ -263,7 +260,7 @@ Estos son los estilos para configurar el botón de volumen:
   <tr>
    <td colname="col1"> <p><span class="codeph"> .ptp-volume-control</span>
      <ul id="ul_B12ADDFB83EA40FD8B4E92AF418AA4B4">
-      <li id="li_7DA8143A69ED4E7D8A560B9FF75D6BA7"><span class="codeph"> .expanded</span> </li>
+      <li id="li_7DA8143A69ED4E7D8A560B9FF75D6BA7"><span class="codeph"> expandido</span> </li>
       <li id="li_D8CCAD45D81C4850B6903FE261833AE6"><span class="codeph"> .vertical</span> </li>
      </ul> </p> </td>
    <td colname="col2"> <p>Control de volumen en la barra de control
@@ -278,7 +275,7 @@ Estos son los estilos para configurar el botón de volumen:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-volume.min-volume-state</span> </td>
-   <td colname="col2"> <p>Cuando el volumen está en el estado mínimo </p> </td>
+   <td colname="col2"> <p>Cuando el volumen está en estado mínimo </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> ptp-btn-volume.mute-state</span> </td>
@@ -305,7 +302,7 @@ Estos son los estilos del control deslizante del volumen:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-volume-hidden</span> </td>
-   <td colname="col2"> <p>El control deslizante del volumen en estado oculto. </p> </td>
+   <td colname="col2"> <p>El control deslizante del volumen en un estado oculto. </p> </td>
   </tr>
  </tbody>
 </table>
@@ -375,7 +372,7 @@ Este es el estilo del botón de rebobinado rápido:
 
 El comportamiento predeterminado es `fastRewindButtonBehavior`.
 
-## Rebobinado lento {#section_38A22BB8681B430F8C6808C3BD21FB4E}
+## Lento rebobinado {#section_38A22BB8681B430F8C6808C3BD21FB4E}
 
 Este es el estilo del botón de rebobinado lento:
 
@@ -451,12 +448,12 @@ Estos son los estilos para configurar la pista de audio:
  </thead>
  <tbody>
   <tr>
-   <td colname="col1"> <p><b>Botón Pista de audio (K)</b> </p> </td>
+   <td colname="col1"> <p><b>Botón de pista de audio (K)</b> </p> </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-audio-track</span> </td>
-   <td colname="col2"> <p>Botón de pista de audio en la barra de control. </p> </td>
+   <td colname="col2"> <p>Botón de pista de audio de la barra de control. </p> </td>
   </tr>
   <tr>
    <td colname="col1">El comportamiento predeterminado es <span class="codeph"> audioTrackButtonBehavior</span>. </td>
@@ -467,7 +464,7 @@ Estos son los estilos para configurar la pista de audio:
    <td colname="col2"> </td>
   </tr>
   <tr>
-   <td colname="col1"><span class="codeph"> .ptp-audio-track-Selection-panel</span> </td> 
+   <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-panel</span> </td> 
    <td colname="col2"> <p>Panel para seleccionar la pista de audio. </p> </td>
   </tr>
   <tr>
@@ -479,21 +476,21 @@ Estos son los estilos para configurar la pista de audio:
    <td colname="col2"> </td>
   </tr>
   <tr>
-   <td colname="col1"><span class="codeph"> .ptp-audio-track-Selection-header</span> </td>
-   <td colname="col2"> <p>El encabezado para el <span class="codeph"> ptp-audio-track-Selection-panel</span>. </p> </td>
+   <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-header</span> </td>
+   <td colname="col2"> <p>El encabezado del <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> <p><b>Menú Selección de pista de audio (N)</b> </p> </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
-   <td colname="col1"><span class="codeph"> .ptp-audio-track-Selection-menu</span> </td>
-   <td colname="col2"> <p>Los elementos de menú del <span class="codeph"> ptp-audio-track-Selection-panel</span>. </p> </td>
+   <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-menu</span> </td>
+   <td colname="col2"> <p>Los elementos de menú del <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
  </tbody>
 </table>
 
-## Compartir {#section_B2ADC76E76304A68AD648A00A12B676E}
+## Uso compartido {#section_B2ADC76E76304A68AD648A00A12B676E}
 
 Estos son los estilos para configurar el uso compartido:
 
@@ -506,23 +503,23 @@ Estos son los estilos para configurar el uso compartido:
  </thead>
  <tbody>
   <tr>
-   <td colname="col1"> <p><b>Botón para compartir medios sociales (O)</b> </p> </td>
+   <td colname="col1"> <p><b>Botón Compartir en redes sociales (O)</b> </p> </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video</span> </td> 
-   <td colname="col2"> <p>Botón para compartir medios sociales en la barra de control que abrirá <span class="codeph"> ptp-share-video-panel</span>. </p> </td>
+   <td colname="col2"> <p>Botón de uso compartido de medios sociales en la barra de control que abrirá <span class="codeph"> ptp-share-video-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1">El comportamiento predeterminado es <span class="codeph"> shareVideoButtonBehavior</span>. </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
-   <td colname="col1"> <p><b>Compartir panel de vídeo (P)</b> </p> </td>
+   <td colname="col1"> <p><b>Panel de vídeo compartido (P)</b> </p> </td>
    <td colname="col2"> </td>
   </tr>
    <td colname="col1"><span class="codeph"> .ptp-share-video-panel</span> </td>
-   <td colname="col2"> <p>Panel que muestra las opciones de uso compartido en redes sociales. </p> </td>
+   <td colname="col2"> <p>El panel que muestra las opciones de uso compartido en redes sociales. </p> </td>
   </tr>
   <tr>
    <td colname="col1">El comportamiento predeterminado es <span class="codeph"> shareVideoPanelBehavior</span>. </td>
@@ -533,8 +530,8 @@ Estos son los estilos para configurar el uso compartido:
    <td colname="col2"> </td>
   </tr>
   <tr>
-   <td colname="col1"><span class="codeph"> .ptp-audio-track-Selection-header</span> </td>
-   <td colname="col2"> <p>El encabezado para el <span class="codeph"> ptp-audio-track-Selection-panel</span>. </p> </td>
+   <td colname="col1"><span class="codeph"> .ptp-audio-track-selection-header</span> </td>
+   <td colname="col2"> <p>El encabezado del <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .share-video-panel-menu</span> </td>
@@ -542,7 +539,7 @@ Estos son los estilos para configurar el uso compartido:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-share-video-panel-menu-item</span> </td>
-   <td colname="col2"> <p>Elemento de menú en el <span class="codeph"> share-video-panel-menu</span>. </p> </td>
+   <td colname="col2"> <p>El elemento de menú en el <span class="codeph"> share-video-panel-menu</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video-facebook</span> </td>
@@ -554,7 +551,7 @@ Estos son los estilos para configurar el uso compartido:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video-google-plus</span> </td>
-   <td colname="col2"> <p>Elemento de menú que permite compartir contenido en Google Plus. </p> </td>
+   <td colname="col2"> <p>Elemento de menú que le permite compartir contenido en Google Plus. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-share-video-linkedin</span> </td>
@@ -563,9 +560,9 @@ Estos son los estilos para configurar el uso compartido:
  </tbody>
 </table>
 
-## Subtítulos opcionales {#section_A01BA68218564DA0B7D6BF51F045D7AB}
+## Subtítulos {#section_A01BA68218564DA0B7D6BF51F045D7AB}
 
-Estos son los estilos para configurar subtítulos opcionales:
+Estos son los estilos para configurar los subtítulos cerrados:
 
 <table id="table_777C7034C9424F8C841DABD480FFAC47">
  <thead>
@@ -576,12 +573,12 @@ Estos son los estilos para configurar subtítulos opcionales:
  </thead>
  <tbody>
   <tr>
-   <td colname="col1"> <p><b>Botón Subtítulos opcionales (R)</b> </p> </td>
+   <td colname="col1"> <p><b>Botón Subtítulos (R)</b> </p> </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-btn-closed-caption</span> </td>
-   <td colname="col2"> <p>Botón <span class="uicontrol"> Subtítulos opcionales</span> en la barra de control. </p> </td>
+   <td colname="col2"> <p>Botón Subtítulos <span class="uicontrol"> en la barra de control.</span> </p> </td>
   </tr>
   <tr>
    <td colname="col1">El comportamiento predeterminado es <span class="codeph"> closedCaptionButtonBehavior</span>. </td>
@@ -592,44 +589,44 @@ Estos son los estilos para configurar subtítulos opcionales:
    <td colname="col2"> <p>Los subtítulos se han habilitado para un vídeo. </p> </td>
   </tr>
   <tr>
-   <td colname="col1"> <p><b>Panel De Subtítulos Cerrados (S)</b> </p> </td>
+   <td colname="col1"> <p><b>Panel Subtítulos (S)</b> </p> </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-panel</span> </td>
-   <td colname="col2"> <p>Panel para subtítulos optativos. </p> </td>
+   <td colname="col2"> <p>Panel para subtítulos. </p> </td>
   </tr>
   <tr>
    <td colname="col1">El comportamiento predeterminado es <span class="codeph"> closedCaptionLanguagePanelBehavior</span>. </td>
    <td colname="col2"> </td>
 </tr>
   <tr>
-   <td colname="col1"> <p><b>Lenguajes De Subtítulos Cerrados (T)</b> </p> </td>
+   <td colname="col1"> <p><b>Idiomas de subtítulos (T)</b> </p> </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-language-panel:</span> </td>
-   <td colname="col2"> <p>El encabezado para el <span class="codeph"> ptp-audio-track-Selection-panel</span>. </p> </td>
+   <td colname="col2"> <p>El encabezado del <span class="codeph"> ptp-audio-track-selection-panel</span>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-language-menu:  </span> </td>
-   <td colname="col2"> <p>Menú del panel de subtítulos opcionales. </p> </td>
+   <td colname="col2"> <p>Menú del panel de subtítulos. </p> </td>
   </tr>
   <tr>
-   <td colname="col1"> <p><b>Opciones De Subtítulos Cerrados (U)</b> </p> </td>
+   <td colname="col1"> <p><b>Opciones de subtítulos (U)</b> </p> </td>
    <td colname="col2"> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-options-btn</span> </td>
-   <td colname="col2"> <p>El botón <span class="uicontrol"> Opciones</span> del panel de opciones de subtítulos opcionales. </p> </td>
+   <td colname="col2"> <p>El botón <span class="uicontrol"> Opciones</span> del panel de opciones de subtítulos. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-options-panel</span> </td>
-   <td colname="col2"> <p>Panel Opciones del panel de subtítulos opcionales. </p> </td>
+   <td colname="col2"> <p>El panel Opciones del panel de subtítulos. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-menu-item</span> </td>
-   <td colname="col2"> <p>Elemento de menú del panel de subtítulos opcionales. </p> </td>
+   <td colname="col2"> <p>Elemento de menú del panel de subtítulos. </p> </td>
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .selected</span> </td>
@@ -637,47 +634,47 @@ Estos son los estilos para configurar subtítulos opcionales:
   </tr>
   <tr>
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-done-btn</span> </td> 
-   <td colname="col2"> <p>Botón <span class="uicontrol"> Listo</span> en el encabezado del panel de opciones de subtítulos opcionales. </p> </td> 
+   <td colname="col2"> <p>El botón <span class="uicontrol"> Listo</span> en el encabezado del panel de opciones de subtítulos. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-closed-caption-options-menu</span> </td> 
-   <td colname="col2"> <p>Menú Opciones en subtítulos opcionales. </p> </td> 
+   <td colname="col2"> <p>Menú Opciones en subtítulos. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-main-menu</span> </td> 
-   <td colname="col2"> <p>Menú principal para las opciones de subtítulos opcionales. </p> </td> 
+   <td colname="col2"> <p>Menú principal para las opciones de subtítulos. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-closed-caption-options-sub-menu</span> </td> 
-   <td colname="col2"> <p>Submenú de las opciones de subtítulos opcionales. </p> </td> 
+   <td colname="col1"><span class="codeph"> ptp-closed-caption-options-sub-menú</span> </td> 
+   <td colname="col2"> <p>El submenú de las opciones de subtítulos. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-opacity-slider</span> </td> 
-   <td colname="col2"> <p>El control deslizante de opacidad de las opciones de subtítulos opcionales. </p> </td> 
+   <td colname="col2"> <p>El control deslizante de opacidad para las opciones de subtítulos. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-menu-separator</span> </td> 
-   <td colname="col2"> <p>Separador de opciones de subtítulos opcionales. </p> </td> 
+   <td colname="col2"> <p>Separador de opciones de subtítulos. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-menu-item</span> </td> 
-   <td colname="col2"> <p>Elemento de menú de subtítulos opcionales <span class="uicontrol"> Opciones</span>. </p> </td> 
+   <td colname="col2"> <p>El elemento de menú <span class="uicontrol"> Opciones</span> de subtítulos cerrados. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-closed-caption-previsualización-panel</span> </td> 
-   <td colname="col2"> <p>Panel de previsualización de subtítulos opcionales. </p> </td> 
+   <td colname="col1"><span class="codeph"> ptp-closed-caption-preview-panel</span> </td> 
+   <td colname="col2"> <p>El panel de vista previa de subtítulos. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> ptp-closed-caption-options-filename</span> </td> 
-   <td colname="col2"> <p>Pie de página de las opciones de subtítulos opcionales. </p> </td> 
+   <td colname="col1"><span class="codeph"> ptp-closed-caption-options-footer</span> </td> 
+   <td colname="col2"> <p>Pie de página de las opciones de subtítulos. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-reset-button</span> </td> 
-   <td colname="col2"> <p>El botón <span class="uicontrol"> Restablecer</span> en el pie de página del panel de opciones de subtítulos opcionales. </p> </td> 
+   <td colname="col2"> <p>Botón <span class="uicontrol"> Restablecer</span> en el pie de página del panel de opciones de subtítulos. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> ptp-closed-caption-options-apply-button</span> </td> 
-   <td colname="col2"> <p>El botón <span class="uicontrol"> Aplicar</span> en el pie de página del panel de opciones de subtítulos opcionales. </p> </td> 
+   <td colname="col2"> <p>El botón <span class="uicontrol"> Aplicar</span> en el pie de página del panel de opciones de subtítulos. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1">El comportamiento predeterminado es <span class="codeph"> closedCaptionOptionsPanelBehavior</span>. </td> 
@@ -707,15 +704,15 @@ Estos son los estilos para configurar opciones adicionales:
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-more-options-control-panel</span> </td> 
-   <td colname="col2"> <p>Panel de control Más opciones. </p> </td> 
+   <td colname="col2"> <p>El panel de control Más opciones . </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-more-options-control-panel-menu</span> </td> 
-   <td colname="col2"> <p>Menú del panel de control Más opciones. </p> </td> 
+   <td colname="col2"> <p>Menú del panel de control Más opciones . </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-more-options-control-panel-elemento-menú</span> </td> 
-   <td colname="col2"> <p>Elemento de menú del panel de control Más opciones. </p> </td> 
+   <td colname="col2"> <p>El elemento de menú del panel de control Más opciones . </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -736,7 +733,7 @@ Este es el estilo del botón [!UICONTROL PIP<]:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-pip</span> </td> 
-   <td colname="col2"> <p>Botón PIP en la barra de control. </p> </td> 
+   <td colname="col2"> <p>Botón PIP de la barra de control. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1">El comportamiento predeterminado es <span class="codeph"> pipButtonBehavior</span>. </td> 
@@ -759,14 +756,14 @@ Este es el estilo para configurar la pantalla completa:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-btn-fullscreen</span> </td> 
-   <td colname="col2"> <p>El botón <span class="uicontrol"> Pantalla completa</span> en la barra de control. </p> </td> 
+   <td colname="col2"> <p>El botón <span class="uicontrol"> Pantalla completa</span> de la barra de control. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 El comportamiento predeterminado es `fullScreenButtonBehavior`.
 
-## Reproducción de trucos (Y) {#section_AE6F83BB7EE2497FB13CD94A8316192D}
+## Reproducción trucada (Y) {#section_AE6F83BB7EE2497FB13CD94A8316192D}
 
 Este es el estilo para configurar la reproducción mediante trucos:
 
@@ -779,8 +776,8 @@ Este es el estilo para configurar la reproducción mediante trucos:
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"><span class="codeph"> .ptp-control-barra-truco-tasa de reproducción</span> </td> 
-   <td colname="col2"> <p>Componente de visualización de velocidad de trucos en la barra de control. </p> </td> 
+   <td colname="col1"><span class="codeph"> .ptp-control-bar-truco-tasa de reproducción</span> </td> 
+   <td colname="col2"> <p>Componente de visualización de tasa de trucos en la barra de control. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -789,7 +786,7 @@ El comportamiento predeterminado es `trickPlayRateDisplayBehavior`.
 
 ## Multiview (Z) {#section_58EFAE7263BA45D3A4E2AB7309A9CAA7}
 
-Este es el estilo para configurar la visualización múltiple:
+A continuación se muestra el estilo para configurar la multiplicación:
 
 <table id="table_84B37D7410EE40DFA7A8BB8431C6DCF0"> 
  <thead> 
@@ -845,11 +842,11 @@ Este es el estilo para configurar los mensajes de error:
  <tbody> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-error-message-panel</span> </td> 
-   <td colname="col2"> <p>Panel que muestra los mensajes de error del reproductor. </p> </td> 
+   <td colname="col2"> <p>El panel que muestra los mensajes de error del reproductor. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-error-message-panel-icon</span> </td> 
-   <td colname="col2"> <p>Icono que se muestra en el panel cuando hay un mensaje de error. </p> </td> 
+   <td colname="col2"> <p>El icono que se muestra en el panel cuando hay un mensaje de error. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .ptp-error-message-panel-message</span> </td> 
@@ -909,13 +906,13 @@ Este es el estilo del botón de avance rápido:
       <li id="li_901A0186D65A48A1B774DC555CEC5367"><span class="codeph"> .ptp-btn-audio-track</span> </li> 
       <li id="li_2331583C01C2482B8EE72979FBF111DB"><span class="codeph"> .ptp-btn-pip  </span> </li> 
       <li id="li_7BB39BDF5E294AEB8FA3DCD9F9A29468"><span class="codeph"> .ptp-btn-rewind</span> </li> 
-      <li id="li_E4FEF5A7486A40F6A5FE1119BD63AFEF"><span class="codeph"> .ptp-scrub-bar</span> </li> 
-      <li id="li_12153547558A4871842EE0416BCCA8B2"><span class="codeph"> .ptp-search-to-bar</span> </li> 
+      <li id="li_E4FEF5A7486A40F6A5FE1119BD63AFEF"><span class="codeph"> .ptp-underb-bar</span> </li> 
+      <li id="li_12153547558A4871842EE0416BCCA8B2"><span class="codeph"> .ptp-seek-to-bar</span> </li> 
      </ul> </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"><span class="codeph"> .multi-vista</span> </td> 
-   <td colname="col2"> <p>El estado del control mientras está en la multiview. </p> <p>Se aplica a lo siguiente: 
+   <td colname="col1"><span class="codeph"> .multi-view</span> </td> 
+   <td colname="col2"> <p>Estado del control mientras está en estado multiview. </p> <p>Se aplica a lo siguiente: 
      <ul id="ul_A8AC653C30814AC49041F3B58A2106F4"> 
       <li id="li_0407167DA21647A8A6960DFE55A33F42"><span class="codeph"> .ptp-btn-fastforward</span> </li> 
       <li id="li_EA71CAF41CDC41DE859A85CE482BE97C"><span class="codeph"> .ptp-btn-share-video</span> </li> 
@@ -925,7 +922,7 @@ Este es el estilo del botón de avance rápido:
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> .fullscreen-state</span> </td> 
-   <td colname="col2"> <p>El reproductor está en modo de pantalla completa. </p> <p>Se aplica a lo siguiente: 
+   <td colname="col2"> <p>El reproductor se encuentra en modo de pantalla completa. </p> <p>Se aplica a lo siguiente: 
      <ul id="ul_B235C1D339F64B2FAC6BC72F03807616"> 
       <li id="li_6E050EE74C604FDAB4C9C0447F547A9D"><span class="codeph"> .ptp-control-bar  </span> </li> 
       <li id="li_67D54B1A41764B2DA544479CDA1C901C"><span class="codeph"> .ptp-btn-fullscreen</span> </li> 
