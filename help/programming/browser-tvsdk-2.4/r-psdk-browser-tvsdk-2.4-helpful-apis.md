@@ -1,13 +1,10 @@
 ---
 description: Hay algunas API que pueden ayudarle a utilizar el Flash Player de Adobe.
-seo-description: Hay algunas API que pueden ayudarle a utilizar el Flash Player de Adobe.
-seo-title: API útiles para el Flash Player de Adobe
 title: API útiles para el Flash Player de Adobe
-uuid: eae314c0-fd9e-480f-ae1c-9b5f3eb4db4b
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '84'
+source-wordcount: '64'
 ht-degree: 0%
 
 ---
@@ -23,7 +20,7 @@ Hay algunas API que pueden ayudarle a utilizar el Flash Player de Adobe.
 new MediaResource(url, type, metadata, forceFlash)
 ```
 
-Si se admite, puede utilizar el parámetro `forceFlash` para anular la secuencia de determinación de la tecnología de reproducción y forzar la implementación a utilizar el Flash Player.
+Si es compatible, puede utilizar el parámetro `forceFlash` para anular la secuencia de determinación de la tecnología de reproducción y forzar la implementación a utilizar el Flash Player.
 
 <!--<a id="section_FEE3205B532446498771F7DD55B5E79F"></a>-->
 
