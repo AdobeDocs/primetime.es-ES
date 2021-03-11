@@ -1,9 +1,9 @@
 ---
-seo-title: Solicitar un certificado (solicitante)
 title: Solicitar un certificado (solicitante)
-uuid: f0d7f65d-681d-430f-b67b-3bdceb4b6d37
+description: Solicitar un certificado (solicitante)
+copied-description: true
 translation-type: tm+mt
-source-git-commit: b4b50471ab0ba98329862322a61bf73aa9e471d5
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
@@ -21,18 +21,18 @@ ht-degree: 0%
 
    >[!NOTE]
    >
-   >Esta opción no se muestra en las versiones de evaluación y prueba del SDK. Estas versiones del SDK utilizan un certificado.
+   >Esta opción no se muestra para las versiones de evaluación y prueba del SDK. Estas versiones del SDK utilizan un certificado.
 
 1. Realice una de las siguientes acciones:
 
    * Cargue el archivo CSR.
-   * Copie la información CSR del CSR y péguela en el formulario.
+   * Copie la información CSR de la CSR y péguela en el formulario.
 
       >[!NOTE]
       >
-      >Para copiar la información de CSR, seleccione el texto entre la etiqueta inicial `(-----BEGIN CERTIFICATE REQUEST-----)` y la etiqueta final `(-----END CERTIFICATE REQUEST-----)`, sin incluirla.
+      >Para copiar la información de CSR, seleccione el texto entre la etiqueta inicial `(-----BEGIN CERTIFICATE REQUEST-----)` y la etiqueta final `(-----END CERTIFICATE REQUEST-----)`, que no se incluye.
 
 1. Haga clic en el botón **[!UICONTROL Submit Request]**.
 
-   Se envía un correo electrónico a la cuenta y a los administradores secundarios para que lo revisen. El solicitante es CC&#39;d.
+   Se envía un correo electrónico a la cuenta y a los administradores secundarios para que lo revisen. El solicitante es Cc&#39;d.
 
