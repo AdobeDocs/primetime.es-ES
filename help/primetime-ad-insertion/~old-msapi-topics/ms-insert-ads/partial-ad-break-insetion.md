@@ -1,39 +1,36 @@
 ---
-description: La función Inserción parcial de pausa publicitaria (PABI) imita una experiencia similar a la de un televisor, en la que si el usuario se une a un flujo en directo dentro de un salto de rollover, se muestran al usuario anuncios en versión intermedia en lugar de un anuncio previo o una pizarra.
-seo-description: La función Inserción parcial de pausa publicitaria (PABI) imita una experiencia similar a la de un televisor, en la que si el usuario se une a un flujo en directo dentro de un salto de rollover, se muestran al usuario anuncios en versión intermedia en lugar de un anuncio previo o una pizarra.
-seo-title: Inserción parcial de pausa publicitaria
+description: La función Inserción parcial de pausa publicitaria (PABI) imita una experiencia similar a una de TV en la que si el usuario se une a un flujo en directo dentro de una pausa mid-roll, se muestran anuncios mid-roll al usuario, en lugar de un anuncio pre-roll o una pizarra.
 title: Inserción parcial de pausa publicitaria
-uuid: a0c1ae34-0f8d-4401-97fe-45a2ea40d08d
 translation-type: tm+mt
-source-git-commit: e1e33d3ac0aad44859cd49566331524da72ac7e4
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
 
 
-# Inserción parcial de pausa publicitaria {#partial-ad-break-insertion}
+# Inserción parcial de desglose de anuncios {#partial-ad-break-insertion}
 
-La función Inserción parcial de pausa publicitaria (PABI) imita una experiencia similar a la de un televisor, en la que si el usuario se une a un flujo en directo dentro de un salto de rollover, se muestran al usuario anuncios en versión intermedia en lugar de un anuncio previo o una pizarra.
+La función Inserción parcial de pausa publicitaria (PABI) imita una experiencia similar a una de TV en la que si el usuario se une a un flujo en directo dentro de una pausa mid-roll, se muestran anuncios mid-roll al usuario, en lugar de un anuncio pre-roll o una pizarra.
 
-Cuando el servidor de publicidad devuelve anuncios preliminares para un flujo en directo, el servidor de manifiesto inserta el salto de anuncio previo antes del punto de lanzamiento e inserta la etiqueta EXT-X-INICIO con su valor TIMEOFFSET que apunta al inicio de la pausa publicitaria previa. Este comportamiento predeterminado garantiza que se reproduzca toda la pausa publicitaria previa antes del contenido en el punto activo. Si un usuario se une a un flujo cuando el punto de lanzamiento está cerca de una pausa publicitaria media, se le mostrará la pausa publicitaria previa antes de la pausa publicitaria media en el punto de lanzamiento.
+Cuando el servidor de publicidad devuelva anuncios previos a la emisión para un flujo en directo, el servidor de manifiestos inyectará la pausa publicitaria previa a la emisión antes del punto en directo e insertará la etiqueta EXT-X-START con su valor TIMEOFFSET señalando al inicio de la pausa publicitaria pre-roll. Este comportamiento predeterminado garantiza que se reproduzca toda la pausa publicitaria pre-roll antes del contenido en el punto de lanzamiento. Si un usuario se une a un flujo cuando el punto de lanzamiento está cerca de una pausa publicitaria mid-roll, se mostrará al usuario la pausa publicitaria pre-roll antes de la pausa publicitaria mid-roll en el punto de lanzamiento.
 
-La función PABI indica al servidor de manifiesto que ignore la pausa publicitaria previa y defina el valor EXT-X-INICIO:TIMEOFFSET al principio del anuncio intermedio presente en el punto de lanzamiento. Esto garantiza que el usuario vea todo el anuncio intermedio que se está reproduciendo en el punto de lanzamiento sin tener que realizar la vista de la pausa publicitaria previa.
-
->[!NOTE]
->
->Esta funcionalidad solo está disponible para flujos en directo. El servidor de manifiesto inserta el salto de anuncio previo sobre la lista de reproducción de VOD de forma predeterminada.
+La función PABI indica al servidor de manifiesto que ignore la pausa publicitaria pre-roll y que establezca el valor EXT-X-START:TIMEOFFSET al principio del anuncio mid-roll presente en el punto de lanzamiento. Esto garantiza que el usuario vea todo el anuncio mid-roll reproduciendo actualmente en el punto de lanzamiento sin tener que ver la pausa publicitaria pre-roll.
 
 >[!NOTE]
 >
->Para habilitar PABI, deberá especificar [consulta_params](/help/primetime-ad-insertion/~old-msapi-topics/ms-getting-started/ms-api-query-params.md) en la dirección URL de arranque.
+>Esta funcionalidad solo está disponible para transmisiones en directo. El servidor de manifiesto inserta el salto de anuncio previo a la emisión sobre la lista de reproducción de VOD de forma predeterminada.
 
 >[!NOTE]
 >
->El [EXT-X-INICIO](https://tools.ietf.org/html/rfc8216#section-4.3.5.2) es una etiqueta HLS estándar que indica un punto de partida preferido dentro de la lista de reproducción.
+>Para habilitar PABI, deberá especificar [query_params](/help/primetime-ad-insertion/~old-msapi-topics/ms-getting-started/ms-api-query-params.md) en la URL de arranque.
+
+>[!NOTE]
+>
+>El [EXT-X-START](https://tools.ietf.org/html/rfc8216#section-4.3.5.2) es una etiqueta HLS estándar que indica un punto de partida preferido dentro de la lista de reproducción.
 
 ## Recommendations {#section_4CF0733B14504F2A99690310B9F3B130}
 
-* Utilice el seguimiento de cliente porque el cliente tiene más control sobre la activación de las señalizaciones de seguimiento.
-* Los saltos parciales de publicidad solo deben usarse con el modo de seguimiento del lado del servidor si el reproductor admite EXT-X-INICIO.
+* Utilice el seguimiento del lado del cliente porque este tiene más control sobre la activación de señalizaciones de seguimiento.
+* Las pausas publicitarias parciales solo deben usarse con el modo de seguimiento del lado del servidor si el reproductor admite EXT-X-START.
