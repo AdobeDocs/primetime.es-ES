@@ -1,53 +1,50 @@
 ---
-description: TVSDK admite la búsqueda en una posición (hora) específica en la que el flujo es una lista de reproducción de ventana deslizante, tanto en vídeo a petición (VOD) como en flujos en directo.
-seo-description: TVSDK admite la búsqueda en una posición (hora) específica en la que el flujo es una lista de reproducción de ventana deslizante, tanto en vídeo a petición (VOD) como en flujos en directo.
-seo-title: Mostrar una barra de búsqueda con la posición de reproducción actual
-title: Mostrar una barra de búsqueda con la posición de reproducción actual
-uuid: a9f4dd6c-78cf-455c-8c31-b2f7b740d84a
+description: TVSDK admite la búsqueda en una posición específica (hora) en la que el flujo es una lista de reproducción de ventana deslizante, tanto en vídeo bajo demanda (VOD) como en emisiones en directo.
+title: Mostrar una barra de desplazamiento con la posición de reproducción actual
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
 
-# Mostrar una barra de búsqueda con la posición de reproducción actual {#display-a-seek-scrub-bar-with-the-current-playback-position}
+# Mostrar una barra de depuración con la posición de reproducción actual {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
-TVSDK admite la búsqueda en una posición (hora) específica en la que el flujo es una lista de reproducción de ventana deslizante, tanto en vídeo a petición (VOD) como en flujos en directo.
+TVSDK admite la búsqueda en una posición específica (hora) en la que el flujo es una lista de reproducción de ventana deslizante, tanto en vídeo bajo demanda (VOD) como en emisiones en directo.
 
 >[!IMPORTANT]
 >
->La búsqueda en un flujo en directo solo está permitida para DVR.
+>La llamada a otro sitio en directo solo está permitida para DVR.
 
-1. Configure las rellamadas para la búsqueda.
+1. Configure las llamadas de retorno para la búsqueda.
 
-       La búsqueda es asincrónica, por lo que TVSDK distribuye los siguientes eventos relacionados con la búsqueda:
+       La llamada a otro punto del contenido es asíncrona, por lo que TVSDK envía los siguientes eventos relacionados con la búsqueda:
    
-   * `QOSEventListener.onSeekStart` - Buscar inicio.
+   * `QOSEventListener.onSeekStart` - Iniciando la llamada a otro punto del contenido.
    * `QOSEventListener.onSeekComplete` - Busque con éxito.
-   * `QOSEventListener.onOperationFailed` - Error en la búsqueda.
+   * `QOSEventListener.onOperationFailed` - Error de llamada a otro punto del contenido.
 
 1. Espere a que el reproductor esté en un estado válido para la búsqueda.
 
-   Los estados válidos están PREPARADOS, COMPLETADOS, PAUSADOS y REPRODUCIDOS.
+   Los estados válidos son PREPARADO, COMPLETO, PAUSADO y REPRODUCIENDO.
 
-1. Utilice la SeekBar nativa para establecer `OnSeekBarChangeListener` para ver cuándo el usuario está borrando.
-1. Escuche `QOSEventListener.onOperationFailed` y realice las acciones correspondientes.
+1. Utilice la SeekBar nativa para establecer `OnSeekBarChangeListener` para ver cuándo se está borrando el usuario.
+1. Escuche `QOSEventListener.onOperationFailed` y realice las acciones adecuadas.
 
-   Este evento pasa la advertencia adecuada. La aplicación determina cómo continuar, por ejemplo, probando la búsqueda de nuevo o continuando la reproducción desde la posición anterior.
+   Este evento pasa la advertencia adecuada. La aplicación determina cómo continuar, por ejemplo, probando la llamada a otro punto del contenido o continuando la reproducción desde la posición anterior.
 
-1. Espere a que TVSDK llame a la llamada de retorno `QOSEventListener.onSeekComplete`.
-1. Recupere la posición de reproducción ajustada final utilizando el parámetro de posición de la llamada de retorno.
+1. Espere a que TVSDK llame a la rellamada `QOSEventListener.onSeekComplete` .
+1. Recupere la posición de reproducción ajustada final utilizando el parámetro de posición de la rellamada.
 
-   Esto es importante porque la posición de inicio real después de la búsqueda puede ser diferente de la posición solicitada. El comportamiento de reproducción puede verse afectado si una búsqueda u otro cambio de posición termina en medio de una pausa publicitaria o omite los saltos publicitarios.
+   Esto es importante porque la posición de inicio real después de la búsqueda puede ser diferente de la posición solicitada. El comportamiento de reproducción puede verse afectado si una búsqueda u otro cambio de posición termina en medio de una pausa publicitaria o omite las pausas publicitarias.
 
-1. Utilice la información de posición al mostrar una barra de búsqueda.
+1. Utilice la información de posición para mostrar una barra de desplazamiento.
 
 <!--<a id="example_9657AA855B6A4355B0E7D854596FFB54"></a>-->
 
-**Ejemplo de búsqueda**
+**Ejemplo de llamada a otro punto del contenido**
 
 En este ejemplo, el usuario elimina la barra de búsqueda para buscar la posición deseada.
 
