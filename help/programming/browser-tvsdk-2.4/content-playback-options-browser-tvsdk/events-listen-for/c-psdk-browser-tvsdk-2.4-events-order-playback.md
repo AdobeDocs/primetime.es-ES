@@ -1,13 +1,10 @@
 ---
-description: El SDK de TVSDK del explorador distribuye eventos/notificaciones en secuencias esperadas en general. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
-seo-description: El SDK de TVSDK del explorador distribuye eventos/notificaciones en secuencias esperadas en general. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
-seo-title: Orden de los eventos de reproducción
+description: El SDK de TVSDK de explorador envía eventos/notificaciones en secuencias generalmente esperadas. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
 title: Orden de los eventos de reproducción
-uuid: 259a9a2d-3d28-4240-b392-cc81f5c3f0cf
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
@@ -15,22 +12,22 @@ ht-degree: 0%
 
 # Orden de los eventos de reproducción{#order-of-playback-events}
 
-El SDK de TVSDK del explorador distribuye eventos/notificaciones en secuencias esperadas en general. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
+El SDK de TVSDK de explorador envía eventos/notificaciones en secuencias generalmente esperadas. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
 
 <!--<a id="section_D247A5873A854A079EFA6AC2E80AB894"></a>-->
 
 Los siguientes ejemplos muestran el orden de algunos eventos que incluyen eventos de reproducción.
 
-* Cuando se carga correctamente un recurso de medios mediante `replaceCurrentResource`, el orden de los eventos es:
+* Cuando se carga correctamente un recurso de medios a través de `replaceCurrentResource`, el orden de los eventos es:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` con  `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* Al preparar la reproducción mediante `MediaPlayer.prepareToPlay`, el orden de los eventos es:
+* Al prepararse para la reproducción mediante `MediaPlayer.prepareToPlay`, el orden de los eventos es:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` with  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` con  `event.status =`
 
       * `MediaPlayerStatus.PREPARING`
       * `MediaPlayerStatus.PREPARED`
