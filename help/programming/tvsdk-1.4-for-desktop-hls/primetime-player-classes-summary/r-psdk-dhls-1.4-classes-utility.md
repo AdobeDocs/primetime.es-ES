@@ -1,21 +1,18 @@
 ---
-description: Estas clases proporcionan formas de procesar diversos tipos de información.
-seo-description: Estas clases proporcionan formas de procesar diversos tipos de información.
-seo-title: Clases de utilidades
-title: Clases de utilidades
-uuid: ec57aba9-b29b-4bc5-804f-6ab5549a61c1
+description: Estas clases proporcionan formas de procesar distintos tipos de información.
+title: Clases de utilidad
 translation-type: tm+mt
-source-git-commit: 91cea7acb8127e02b82e5242b9ad6ab0d12ce0eb
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '128'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
 
-# Clases de utilidades {#utility-classes}
+# Clases de utilidad {#utility-classes}
 
-Estas clases proporcionan formas de procesar diversos tipos de información.
+Estas clases proporcionan formas de procesar distintos tipos de información.
 
 Paquete: com.adobe.mediacore.utils
 
@@ -26,9 +23,9 @@ Comment Type: draft
 
 -->
 
-| Nombre de clase | Descripción |
+| Nombre de la clase | Descripción |
 |---|---|
-| [AuthorizedFeaturesHelper](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/AuthorizedFeaturesHelper.html) | Clase auxiliar utilizada para cargar y obtener el conjunto authorizedFeatures mediante un token almacenado externamente. |
+| [AuthorizedFeaturesHelper](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/AuthorizedFeaturesHelper.html) | Clase auxiliar utilizada para cargar y obtener el conjunto authorizedFeatures utilizando un token almacenado externamente. |
 | [DateUtils](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/DateUtils.html) | Métodos para procesar fechas. |
 | [NumberUtils](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/NumberUtils.html) | Métodos de ayuda relacionados con los números. |
 | [TimeRange](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/utils/TimeRange.html) | Métodos para crear e interpretar intervalos de tiempo. |
