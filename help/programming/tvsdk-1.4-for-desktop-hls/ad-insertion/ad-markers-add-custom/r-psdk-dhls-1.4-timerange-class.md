@@ -1,13 +1,10 @@
 ---
-description: Los marcadores de publicidad personalizados le permiten pasar un conjunto de especificaciones de TimeRange que representan segmentos de línea de tiempo a TVSDK.
-seo-description: Los marcadores de publicidad personalizados le permiten pasar un conjunto de especificaciones de TimeRange que representan segmentos de línea de tiempo a TVSDK.
-seo-title: Clase TimeRange
+description: Los marcadores de anuncios personalizados le permiten pasar a TVSDK un conjunto de especificaciones de intervalo de tiempo que representan segmentos de cronología.
 title: Clase TimeRange
-uuid: 5d0c979e-cc63-4fdd-becc-b0e3987b0891
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
@@ -15,13 +12,13 @@ ht-degree: 0%
 
 # Clase TimeRange{#timerange-class}
 
-Los marcadores de publicidad personalizados le permiten pasar un conjunto de especificaciones de TimeRange que representan segmentos de línea de tiempo a TVSDK.
+Los marcadores de anuncios personalizados le permiten pasar a TVSDK un conjunto de especificaciones de intervalo de tiempo que representan segmentos de cronología.
 
 <!--<a id="section_42EB6D62627A424ABA250E3246EFEFC3"></a>-->
 
-Cada especificación `TimeRange` del conjunto representa un segmento en la línea de tiempo de reproducción que TVSDK mantiene internamente y que debe marcarse adecuadamente como un período relacionado con la publicidad.
+Cada especificación `TimeRange` del conjunto representa un segmento en la línea de tiempo de reproducción que TVSDK mantiene internamente y que debe marcarse apropiadamente como un periodo relacionado con la publicidad.
 
-La clase `TimeRange` es una estructura de datos sencilla que expone la posición de inicio y la posición final en la línea de tiempo. Estas dos propiedades de sólo lectura abstraen la idea de un intervalo de tiempo en la línea de tiempo de reproducción.
+La clase `TimeRange` es una estructura de datos sencilla que expone la posición de inicio y la posición final en la cronología. Estas dos propiedades de solo lectura abstraen la idea de un intervalo de tiempo en la línea de tiempo de reproducción.
 
 >[!TIP]
 >
