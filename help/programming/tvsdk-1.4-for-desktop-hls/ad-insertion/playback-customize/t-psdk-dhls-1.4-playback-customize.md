@@ -1,13 +1,10 @@
 ---
-description: Puede personalizar o anular los comportamientos de publicidad.
-seo-description: Puede personalizar o anular los comportamientos de publicidad.
-seo-title: Configurar la reproducción personalizada
-title: Configurar la reproducción personalizada
-uuid: 479ca1b0-6b3f-42fa-85e1-31d707da8730
+description: Puede personalizar o anular los comportamientos publicitarios.
+title: Configuración de una reproducción personalizada
 translation-type: tm+mt
-source-git-commit: a21a5fcc819a7bec58ad36e118d04f462ec3fd92
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '180'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
@@ -15,22 +12,22 @@ ht-degree: 0%
 
 # Configurar la reproducción personalizada{#set-up-customized-playback}
 
-Puede personalizar o anular los comportamientos de publicidad.
+Puede personalizar o anular los comportamientos publicitarios.
 
-Antes de poder personalizar o anular los comportamientos de publicidad, registre la instancia de directiva de publicidad con .
-Para personalizar los comportamientos de las publicidades, realice una de las siguientes acciones:
+Para poder personalizar o anular los comportamientos de publicidad, registre la instancia de directiva de publicidad con .
+Para personalizar los comportamientos publicitarios, realice una de las siguientes acciones:
 
-* Implementar la interfaz `AdPolicySelector` y todos sus métodos.
+* Implemente la interfaz `AdPolicySelector` y todos sus métodos.
 
-   Esta opción se recomienda si necesita anular **todos** los comportamientos de publicidad predeterminados.
+   Se recomienda esta opción si necesita anular **todos** los comportamientos publicitarios predeterminados.
 
 * Amplíe la clase `DefaultAdPolicySelector` y proporcione implementaciones solo para los comportamientos que requieren personalización.
 
-   Esta opción se recomienda si necesita anular sólo **algunos** de los comportamientos predeterminados.
+   Esta opción se recomienda si necesita anular solo **algunos** de los comportamientos predeterminados.
 
 Para ambas opciones, complete las siguientes tareas:
 
-1. Implemente su propio selector de directivas de publicidad personalizado.
+1. Implemente su propio selector de políticas de publicidad personalizado.
 
    ```
    public class CustomAdPolicySelector implements AdPolicySelector { 
@@ -58,7 +55,7 @@ Para ambas opciones, complete las siguientes tareas:
    factory->retrieveAdPolicySelector(item, &defaultAdPolicySelector);
    ```
 
-1. Registre la nueva fábrica de contenido que usará TVSDK en el flujo de trabajo de publicidad.
+1. Registre la nueva fábrica de contenido que utilizará TVSDK en el flujo de trabajo de publicidad.
 
    ```
    PSDKConfig.advertisingFactory = new CustomContentFactory();
@@ -66,4 +63,4 @@ Para ambas opciones, complete las siguientes tareas:
 
    >[!TIP]
    >
-   >Si la fábrica de contenido personalizado se registró para un flujo específico a través de la clase `MediaPlayerItemConfig`, se borrará cuando se desasigne la instancia `MediaPlayer`. La aplicación debe registrarla cada vez que se cree una nueva sesión de reproducción.
+   >Si la factoría de contenido personalizado se registró para un flujo específico a través de la clase `MediaPlayerItemConfig`, se borrará cuando se desasigne la instancia `MediaPlayer`. La aplicación debe registrarla cada vez que se crea una nueva sesión de reproducción.
