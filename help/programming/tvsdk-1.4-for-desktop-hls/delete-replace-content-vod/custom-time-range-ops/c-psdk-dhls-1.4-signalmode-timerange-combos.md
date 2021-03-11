@@ -1,13 +1,11 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Modo de señalización e intervalo de tiempo
 title: Modo de señalización e intervalo de tiempo
-uuid: a4d2b0f3-49ce-4a07-a460-9e63bb91b5d3
+description: Modo de señalización e intervalo de tiempo
+copied-description: true
 translation-type: tm+mt
-source-git-commit: adef0bbd52ba043f625f38db69366c6d873c586d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '89'
 ht-degree: 0%
 
 ---
@@ -19,14 +17,14 @@ ht-degree: 0%
  <thead> 
   <tr> 
    <th class="entry"> </th> 
-   <th class="entry"> MARCAR </th> 
+   <th class="entry"> MARCA </th> 
    <th class="entry"> DELETE </th> 
    <th class="entry"> REEMPLAZAR </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> Generador de oportunidades de intervalo personalizado  </span> </td> 
+   <td> <span class="codeph"> Generador de oportunidades de rango personalizado  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -65,7 +63,7 @@ ht-degree: 0%
      &nbsp;&nbsp;&nbsp;&nbsp;range.end&nbsp;-&nbsp;range.begin,&nbsp; 
      &nbsp;&nbsp;&nbsp;&nbsp;PlacementMode.DELETE&nbsp;); 
     </code> </td> 
-   <td> N/D (modo de señalización CustomRange automático) </td> 
+   <td> N/A (modo automático de señalización CustomRange) </td> 
   </tr> 
   <tr> 
    <td> <span class="codeph"> Modo de  </span> señalización ManifestCue </td> 
@@ -89,7 +87,7 @@ ht-degree: 0%
      &nbsp;&nbsp;&nbsp;&nbsp;PlacementMode.DELETE 
      ); 
     </code> </td> 
-   <td> N/D (modo de señalización CustomRange automático) </td> 
+   <td> N/A (modo automático de señalización CustomRange) </td> 
   </tr> 
   <tr> 
    <td> <span class="codeph"> Modo de  </span> señalización CustomRange </td> 
@@ -138,14 +136,14 @@ ht-degree: 0%
  <thead> 
   <tr> 
    <th class="entry"> </th> 
-   <th class="entry"> MARCAR </th> 
+   <th class="entry"> MARCA </th> 
    <th class="entry"> DELETE </th> 
    <th class="entry"> REEMPLAZAR </th> 
   </tr> 
  </thead>
  <tbody> 
   <tr> 
-   <td> <span class="codeph"> AdSignalingMode OpportunityGenerator  </span> </td> 
+   <td> <span class="codeph"> Generador de oportunidades de AdSignalingMode  </span> </td> 
    <td> 
     <code>
       (range.begin,&nbsp; 
@@ -165,7 +163,7 @@ ht-degree: 0%
   </tr> 
   <tr> 
    <td> <span class="codeph"> Modo de  </span> señalización de SeverMap </td> 
-   <td> No está presente (la publicidad está deshabilitada). </td> 
+   <td> No presente (el anuncio está deshabilitado). </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -175,11 +173,11 @@ ht-degree: 0%
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> N/D (modo de señalización automático <span class="codeph"> CustomRange </span>) </td> 
+   <td> N/A (modo de señalización <span class="codeph"> CustomRange </span> automática) </td> 
   </tr> 
   <tr> 
    <td> <span class="codeph"> Modo de  </span> señalización ManifestCue </td> 
-   <td> No está presente (la publicidad está deshabilitada). </td> 
+   <td> No presente (el anuncio está deshabilitado). </td> 
    <td> 
     <code>
       placement&nbsp;=&nbsp; 
@@ -189,13 +187,13 @@ ht-degree: 0%
      Placement.UNKNOWN_DURATION, 
      PlacementMode.DEFAULT); 
     </code> </td> 
-   <td> N/D (modo de señalización automático <span class="codeph"> CustomRange </span>) </td> 
+   <td> N/A (modo de señalización <span class="codeph"> CustomRange </span> automática) </td> 
   </tr> 
   <tr> 
    <td> <span class="codeph"> Modo de  </span> señalización CustomRange </td> 
-   <td> No está presente (la publicidad está deshabilitada). </td> 
-   <td> Ninguno </td> 
-   <td> Ninguno (se ha cuidado en <span class="codeph"> CustomRangeOpportunityGenerator </span>) </td> 
+   <td> No presente (el anuncio está deshabilitado). </td> 
+   <td> Ninguna </td> 
+   <td> Ninguno (se ha cuidado en <span class="codeph"> CustomRangeOportunityGenerator </span>) </td> 
   </tr> 
  </tbody> 
 </table>
