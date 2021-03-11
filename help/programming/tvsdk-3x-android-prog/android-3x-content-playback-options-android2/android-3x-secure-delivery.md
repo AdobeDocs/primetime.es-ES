@@ -1,28 +1,26 @@
 ---
-description: TVSDK introduce un envío seguro sobre HTTPS.
-seo-description: TVSDK introduce un envío seguro sobre HTTPS.
-seo-title: Envío seguro sobre HTTPS
-title: Envío seguro sobre HTTPS
+description: TVSDK introduce un envío seguro a través de HTTPS.
+title: Envío seguro a través de HTTPS
 translation-type: tm+mt
-source-git-commit: 4a2271fc481b37bb0a437091de6efe98fcb348d9
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: '81'
 ht-degree: 0%
 
 ---
 
 
-# Envío seguro sobre HTTPS {#secure-delivery-https}
+# Envío seguro a través de HTTPS {#secure-delivery-https}
 
-Adobe Primetime TVSDK ofrece compatibilidad con el envío HTTPS para todas las llamadas procedentes de TVSDK, que incluyen
+Adobe Primetime TVSDK proporciona compatibilidad con el envío HTTPS para todas las llamadas procedentes de TVSDK, que incluyen
 
-* Llamadas al servidor de publicidad Auditude
-* Solicitudes de CRS
+* Llamadas al servidor de Auditude Ad
+* Solicitudes CRS
 * Llamadas de licencia DRM
-* Analíticos de vídeo ping
+* Anuncios de Video Analytics
 * Anuncios de facturación
 
-Para utilizar esta función, asegúrese de que los servidores configurados para atender las solicitudes anteriores admiten HTTPS.
+Para utilizar esta función, asegúrese de que los servidores configurados para servir las solicitudes anteriores admitan HTTPS.
 
 Este nuevo comportamiento no está habilitado de forma predeterminada. Utilice lo siguiente para habilitar el envío seguro antes de llamar a `MediaPlayer.replaceCurrentResource()`
 
