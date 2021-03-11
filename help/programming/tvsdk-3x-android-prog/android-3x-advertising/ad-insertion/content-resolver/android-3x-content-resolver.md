@@ -1,13 +1,10 @@
 ---
-description: Un generador de oportunidades identifica las oportunidades de colocación mediante etiquetas personalizadas en un flujo, marcadores personalizados del modo de señalización de publicidad, etc. El generador de oportunidades envía estas oportunidades de colocación a la resolución de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y los metadatos de la oportunidad de colocación.
-seo-description: Un generador de oportunidades identifica las oportunidades de colocación mediante etiquetas personalizadas en un flujo, marcadores personalizados del modo de señalización de publicidad, etc. El generador de oportunidades envía estas oportunidades de colocación a la resolución de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y los metadatos de la oportunidad de colocación.
-seo-title: Personalización de los generadores de oportunidades y los solucionadores de contenido
-title: Personalización de los generadores de oportunidades y los solucionadores de contenido
-uuid: 0d4fb0b2-98f3-4245-9bf1-4e968c5d0f36
+description: Un generador de oportunidades identifica las oportunidades de colocación mediante etiquetas personalizadas en un flujo, marcadores personalizados en modo de señalización de anuncios, etc. El generador de oportunidades envía estas oportunidades de colocación al gestor de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y los metadatos de la oportunidad de colocación.
+title: Personalización de generadores de oportunidades y resolución de contenido
 translation-type: tm+mt
-source-git-commit: ed910a60440ae7c0d19d9be56c80c8bdbc62bcf1
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
@@ -15,24 +12,24 @@ ht-degree: 0%
 
 # Información general {#customize-opportunity-generators-and-content-resolvers-overview}
 
-Un generador de oportunidades identifica las oportunidades de colocación mediante etiquetas personalizadas en un flujo, marcadores personalizados del modo de señalización de publicidad, etc. El generador de oportunidades envía estas oportunidades de colocación a la resolución de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y los metadatos de la oportunidad de colocación.
+Un generador de oportunidades identifica las oportunidades de colocación mediante etiquetas personalizadas en un flujo, marcadores personalizados en modo de señalización de anuncios, etc. El generador de oportunidades envía estas oportunidades de colocación al gestor de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y los metadatos de la oportunidad de colocación.
 
 TVSDK incluye los siguientes generadores de oportunidades predeterminados:
 
 * `ManifestCuesOpportunityGenerator` genera oportunidades a partir de las señales de publicidad predeterminadas (  `#EXT-X-CUE`).
 
-* `AdSignalingModeOpportunityGenerator` genera una oportunidad inicial para el modo de señalización de publicidad especificado. Esto ignora cualquier señal o información de metadatos temporizados.
-* `CustomMarkerOpportunityGenerator` genera oportunidades para reemplazar las publicidades C3 incorporadas.
-* `AuditudeResolver`El generador de oportunidades de Omniture genera oportunidades cuando la resolución perezosa de anuncios está activada.
+* `AdSignalingModeOpportunityGenerator` genera una oportunidad inicial para el modo de señalización de anuncio especificado. Esto ignora cualquier señal o información de metadatos temporizados.
+* `CustomMarkerOpportunityGenerator` genera oportunidades para reemplazar anuncios C3 incorporados.
+* `AuditudeResolver`El generador de oportunidades de genera oportunidades cuando la resolución de anuncios perezosos está activada.
 
-TVSDK también incluye los resueltores de contenido predeterminados:
+TVSDK también incluye los solucionadores de contenido predeterminados:
 
 * `CustomRangeResolver`
 * `JSONResolver`
-* `AuditudeResolver`, que pueden comunicarse con Primetime y la toma de decisiones.
+* `AuditudeResolver`, que pueden comunicarse con Primetime y decisioning.
 
-Puede anular los generadores de oportunidades y los solucionadores de contenido predeterminados para personalizar el flujo de trabajo de la publicidad de formas como las siguientes:
+Puede anular los generadores de oportunidades predeterminados y los solucionadores de contenido para personalizar el flujo de trabajo de la publicidad de formas como las siguientes:
 
-* Reconocer etiquetas personalizadas para la inserción de publicidades. Para obtener más información, consulte [Personalización de generadores de oportunidades y solucionadores de contenido](../../../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-content-resolver.md).
+* Reconocer etiquetas personalizadas para la inserción de anuncios. Para obtener más información, consulte [Personalización de los generadores de oportunidades y los solucionadores de contenido](../../../../tvsdk-3x-android-prog/android-3x-advertising/ad-insertion/content-resolver/android-3x-content-resolver.md).
 * Cree un proveedor de publicidad personalizado.
-* Desactivar contenido.
+* Apaguen el contenido.
