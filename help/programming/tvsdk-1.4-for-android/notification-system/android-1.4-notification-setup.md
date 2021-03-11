@@ -1,25 +1,22 @@
 ---
 description: Puede escuchar notificaciones y agregar sus propias notificaciones al historial de notificaciones.
-seo-description: Puede escuchar notificaciones y agregar sus propias notificaciones al historial de notificaciones.
-seo-title: Configurar el sistema de notificaciones
 title: Configurar el sistema de notificaciones
-uuid: caa6a306-dea9-45ee-b0b3-569b5f2527a1
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---
 
 
-# Configure el sistema de notificaciones{#set-up-your-notification-system}
+# Configurar el sistema de notificaciones{#set-up-your-notification-system}
 
 Puede escuchar notificaciones y agregar sus propias notificaciones al historial de notificaciones.
 
-El núcleo del sistema de notificaciones de Primetime Player es la clase `Notification`, que representa una notificación independiente.
+El núcleo del sistema de notificación de Primetime Player es la clase `Notification`, que representa una notificación independiente.
 
-La clase `NotificationHistory` proporciona un mecanismo para la acumulación de notificaciones. Almacena un registro de objetos de notificación (NotificationHistoryItem) que representa una colección de notificaciones.
+La clase `NotificationHistory` proporciona un mecanismo para acumular notificaciones. Almacena un registro de objetos Notification (NotificationHistoryItem) que representa una colección de Notificaciones.
 
 Para recibir notificaciones:
 
@@ -27,8 +24,8 @@ Para recibir notificaciones:
 * Añadir notificaciones al historial de notificaciones
 
 1. Escuche los cambios de estado.
-1. Implemente la devolución de llamada `MediaPlayer.PlaybackEventListener.onStateChanged`.
-1. TVSDK pasa dos parámetros a la llamada de retorno:
+1. Implemente la llamada de retorno `MediaPlayer.PlaybackEventListener.onStateChanged`.
+1. TVSDK pasa dos parámetros a la rellamada:
 
    * El nuevo estado ( `MediaPlayer.PlayerState`)
    * Un objeto `MediaPlayerNotification`
