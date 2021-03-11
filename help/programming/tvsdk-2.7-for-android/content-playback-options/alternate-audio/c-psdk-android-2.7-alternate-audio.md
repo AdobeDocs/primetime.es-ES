@@ -1,13 +1,10 @@
 ---
-description: El audio alternativo permite cambiar entre las pistas de audio disponibles para una pista de vídeo. Los usuarios pueden seleccionar la pista de idioma que prefieran cuando se reproduce el vídeo.
-seo-description: El audio alternativo permite cambiar entre las pistas de audio disponibles para una pista de vídeo. Los usuarios pueden seleccionar la pista de idioma que prefieran cuando se reproduce el vídeo.
-seo-title: Audio alternativo
+description: El audio alternativo le permite conmutar entre las pistas de audio disponibles para una pista de vídeo. Los usuarios pueden seleccionar la pista de idioma que prefieran cuando se reproduce el vídeo.
 title: Audio alternativo
-uuid: 86aa5393-6a9e-49db-807b-7299e6b4ab2b
 translation-type: tm+mt
-source-git-commit: 0eaf0e7e7e61d596a51d1c9c837ad072d703c6a7
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -15,23 +12,23 @@ ht-degree: 0%
 
 # Información general {#alternate-audio-overview}
 
-El audio alternativo permite cambiar entre las pistas de audio disponibles para una pista de vídeo. Los usuarios pueden seleccionar la pista de idioma que prefieran cuando se reproduce el vídeo.
+El audio alternativo le permite conmutar entre las pistas de audio disponibles para una pista de vídeo. Los usuarios pueden seleccionar la pista de idioma que prefieran cuando se reproduce el vídeo.
 
 <!--<a id="section_E4F9DC28A2944BD08B4190A7F98A8365"></a>-->
 
-Cuando TVSDK crea la instancia `MediaPlayerItem` para el vídeo actual, crea un elemento `AudioTrack` para cada pista de audio disponible. El elemento contiene una propiedad `name`, que es una cadena que generalmente contiene una descripción reconocible por el usuario del idioma de esa pista. El elemento también contiene información sobre si se utiliza esa pista de forma predeterminada. Cuando es hora de reproducir el vídeo, puede solicitar una lista de las pistas de audio disponibles, si lo desea, permitir al usuario seleccionar una pista y configurar el vídeo para que se reproduzca con la pista seleccionada.
+Cuando TVSDK crea la instancia `MediaPlayerItem` para el vídeo actual, crea un elemento `AudioTrack` para cada pista de audio disponible. El elemento contiene una propiedad `name`, que es una cadena que generalmente contiene una descripción reconocible por el usuario del idioma de esa pista. El elemento también contiene información sobre si usar esa pista de forma predeterminada. Cuando es hora de reproducir el vídeo, puede solicitar una lista de pistas de audio disponibles, opcionalmente permitir que el usuario seleccione una pista y configurar el vídeo para que se reproduzca con la pista seleccionada.
 
 >[!TIP]
 >
->Aunque no es habitual, si hay disponible una pista de audio adicional después de que TVSDK cree el `MediaPlayerItem`, TVSDK activa un evento `MediaPlayerItem.AUDIO_TRACK_UPDATED`.
+>Aunque no es habitual, si hay disponible una pista de audio adicional después de que TVSDK cree el `MediaPlayerItem`, TVSDK activa un evento `MediaPlayerItem.AUDIO_TRACK_UPDATED` .
 
-## API añadidas {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
+## API agregadas {#section_87C42C30BA8C4F58A2DAB7CE07FCD3DE}
 
-Se han agregado las siguientes API para admitir audio alternativo:
+Se han añadido las siguientes API para admitir audio alternativo:
 
 `hasAlternateAudio`
 
-Si el medio especificado tiene una pista de audio alternativa, distinta de la pista predeterminada, esta función booleana devuelve `true`. Si no hay una pista de audio alternativa, la función devuelve `false`.
+Si el medio especificado tiene una pista de audio alternativa distinta de la predeterminada, esta función booleana devuelve `true`. Si no hay ninguna pista de audio alternativa, la función devuelve `false`.
 
 ```java
 boolean hasAlternateAudio();
@@ -39,7 +36,7 @@ boolean hasAlternateAudio();
 
 ** `getAudioTracks`**
 
-Esta función devuelve la lista de todas las pistas de audio disponibles en un medio especificado.
+Esta función devuelve la lista de todas las pistas de audio disponibles actualmente en un medio especificado.
 
 ```java
 List<AudioTrack> getAudioTracks();
@@ -47,7 +44,7 @@ List<AudioTrack> getAudioTracks();
 
 `getSelectedAudioTrack`
 
-Esta función devuelve la pista de audio alternativa seleccionada y propiedades como idioma. También se puede extraer la selección automática de la pista.
+Esta función devuelve la pista de audio alternativa seleccionada actualmente y propiedades como idioma. También se puede extraer la selección automática de la pista.
 
 ```java
 AudioTrack getSelectedAudioTrack();
