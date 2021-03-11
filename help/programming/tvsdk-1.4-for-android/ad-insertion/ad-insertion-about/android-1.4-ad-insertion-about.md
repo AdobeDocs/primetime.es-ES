@@ -1,13 +1,10 @@
 ---
-description: La inserción de anuncios resuelve los anuncios para vídeo a petición (VOD), para flujo continuo en directo y para flujo continuo lineal con seguimiento de anuncios y reproducción de anuncios. TVSDK realiza las solicitudes necesarias al servidor de publicidad, recibe información sobre las publicidades del contenido especificado y coloca las publicidades en el contenido en fases.
-seo-description: La inserción de anuncios resuelve los anuncios para vídeo a petición (VOD), para flujo continuo en directo y para flujo continuo lineal con seguimiento de anuncios y reproducción de anuncios. TVSDK realiza las solicitudes necesarias al servidor de publicidad, recibe información sobre las publicidades del contenido especificado y coloca las publicidades en el contenido en fases.
-seo-title: Inserción de publicidades
-title: Inserción de publicidades
-uuid: 555ef6af-5ae3-4d8d-9b35-9bbfc68e393e
+description: La inserción de publicidad resuelve los anuncios para vídeo bajo demanda (VOD), para flujo continuo en directo y para flujo lineal con seguimiento de anuncios y reproducción de anuncios. TVSDK realiza las solicitudes necesarias al servidor de publicidad, recibe información sobre las publicidades del contenido especificado y coloca las publicidades en el contenido por fases.
+title: Inserción de anuncios
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '131'
 ht-degree: 0%
 
 ---
@@ -15,10 +12,10 @@ ht-degree: 0%
 
 # Información general {#insert-ads-overview}
 
-La inserción de anuncios resuelve los anuncios para vídeo a petición (VOD), para flujo continuo en directo y para flujo continuo lineal con seguimiento de anuncios y reproducción de anuncios. TVSDK realiza las solicitudes necesarias al servidor de publicidad, recibe información sobre las publicidades del contenido especificado y coloca las publicidades en el contenido en fases.
+La inserción de publicidad resuelve los anuncios para vídeo bajo demanda (VOD), para flujo continuo en directo y para flujo lineal con seguimiento de anuncios y reproducción de anuncios. TVSDK realiza las solicitudes necesarias al servidor de publicidad, recibe información sobre las publicidades del contenido especificado y coloca las publicidades en el contenido por fases.
 
-Una pausa publicitaria contiene una o más publicidades que se reproducen en secuencia. TVSDK inserta las publicidades en el contenido principal como miembros de uno o varios saltos de publicidad.
+Una pausa publicitaria contiene uno o más anuncios que se reproducen en secuencia. TVSDK inserta anuncios en el contenido principal como miembros de una o más pausas publicitarias.
 
 >[!TIP]
 >
->Si la publicidad tiene errores, TVSDK la ignora.
+>Si el anuncio tiene errores, TVSDK ignora el anuncio.
