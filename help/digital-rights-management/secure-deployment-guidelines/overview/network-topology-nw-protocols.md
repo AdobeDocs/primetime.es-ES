@@ -1,13 +1,10 @@
 ---
 description: Al configurar una arquitectura de red segura, se requieren protocolos de red para la interacción entre Adobe Primetime DRM y otros sistemas de la red empresarial.
-seo-description: Al configurar una arquitectura de red segura, se requieren protocolos de red para la interacción entre Adobe Primetime DRM y otros sistemas de la red empresarial.
-seo-title: Protocolos de red Adobe Primetime DRM
 title: Protocolos de red Adobe Primetime DRM
-uuid: 8954e33c-83ac-4b40-9e45-005d4954b44e
 translation-type: tm+mt
-source-git-commit: c78d3c87848943a0be3433b2b6a543822a7e1c15
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '255'
+source-wordcount: '226'
 ht-degree: 0%
 
 ---
@@ -23,7 +20,7 @@ Al configurar una arquitectura de red segura, se requieren los siguientes protoc
  <thead class="- topic/thead "> 
   <tr rowsep="1" class="- topic/row "> 
    <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">Protocolo </p> </th> 
-   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Usar </p> </th> 
+   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Uso </p> </th> 
   </tr> 
  </thead>
  <tbody class="- topic/tbody "> 
@@ -42,10 +39,10 @@ Al configurar una arquitectura de red segura, se requieren los siguientes protoc
 
 Puede configurar el servidor de licencias DRM de Adobe Primetime para que utilice cualquier puerto de red.
 
-Estos puertos deben habilitarse o deshabilitarse en el servidor de seguridad interno, según la funcionalidad de red que desee permitir a los clientes que se conecten al servidor de aplicaciones que ejecuta Primetime DRM.
+Estos puertos deben habilitarse o deshabilitarse en el cortafuegos interno, según la funcionalidad de red que desee permitir a los clientes que se conecten al servidor de aplicaciones que ejecuta Primetime DRM.
 
 ## Configuración de SSL {#configuring-ssl}
 
-La capa de sockets seguros (SSL) solo es necesaria si necesita compatibilidad con los clientes de Flash Media Rights Management Server 1.x.
+Secure Sockets Layer (SSL) solo es necesario si necesita soporte para clientes de Flash Media Rights Management Server 1.x.
 
-Se requiere SSL con autenticación de cliente para Adobe Primetime DRM Key Server. Para obtener más información, consulte [Uso del servidor de claves DRM de Adobe Primetime](../../using-the-drm-key-server/requirements.md).
+Se requiere SSL con autenticación de cliente para el servidor de claves DRM de Adobe Primetime. Para obtener más información, consulte [Uso del servidor de claves DRM de Adobe Primetime](../../using-the-drm-key-server/requirements.md).
