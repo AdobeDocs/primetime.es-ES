@@ -1,41 +1,38 @@
 ---
-description: Puede proporcionar información de estilo para las pistas de subtítulos opcionales mediante la clase ClosedCaptionStyles. Esto establece el estilo de cualquier subtítulo cerrado que muestre el reproductor.
-seo-description: Puede proporcionar información de estilo para las pistas de subtítulos opcionales mediante la clase ClosedCaptionStyles. Esto establece el estilo de cualquier subtítulo cerrado que muestre el reproductor.
-seo-title: Control del estilo de los subtítulos opcionales
-title: Control del estilo de los subtítulos opcionales
-uuid: 506c06d3-8fe0-46c9-9ed6-5b35d21c021c
+description: Puede proporcionar información de estilo para las pistas de subtítulos mediante la clase ClosedCaptionStyles. Esto establece el estilo de cualquier subtítulo cerrado que muestre el reproductor.
+title: Control del estilo de los subtítulos
 translation-type: tm+mt
-source-git-commit: b67a9dcb0abb07f4fdff4e03d9d6c0b07ff45127
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
 
 
-# Control del estilo de los subtítulos cerrados{#control-closed-caption-styling}
+# Control del estilo de los subtítulos {#control-closed-caption-styling}
 
-Puede proporcionar información de estilo para las pistas de subtítulos opcionales mediante la clase ClosedCaptionStyles. Esto establece el estilo de cualquier subtítulo cerrado que muestre el reproductor.
+Puede proporcionar información de estilo para las pistas de subtítulos mediante la clase ClosedCaptionStyles. Esto establece el estilo de cualquier subtítulo cerrado que muestre el reproductor.
 
-Esta clase encapsula información de estilo de subtítulos opcionales, como el tipo de fuente, el tamaño, el color y la opacidad de fondo. Una clase auxiliar asociada, `ClosedCaptionStylesBuilder`, facilita el trabajo con la configuración de estilo de subtítulos opcionales.
+Esta clase encapsula información de estilo de subtítulos cerrados como el tipo de fuente, el tamaño, el color y la opacidad del fondo. Una clase de ayuda asociada, `ClosedCaptionStylesBuilder`, facilita el trabajo con la configuración de estilo de subtítulos.
 
-## Establecer estilos de subtítulos opcionales {#section_DAE84659D1964DB1B518F91B59AF29D9}
+## Establecer estilos de subtítulos {#section_DAE84659D1964DB1B518F91B59AF29D9}
 
-Puede aplicar estilo al texto de subtítulos opcionales con métodos TVSDK.
+Puede aplicar estilo al texto de los subtítulos con métodos TVSDK.
 
-1. Espere a que MediaPlayer tenga al menos el estado PREPARADO (consulte [Espere a que se muestre un estado válido](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
-1. Para cambiar la configuración de estilo, realice una de las siguientes acciones:
+1. Espere a que MediaPlayer tenga al menos el estado PREPARADO (consulte [Espera a un estado válido](../../../tvsdk-1.4-for-desktop-hls/t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
+1. Para cambiar la configuración del estilo, realice una de las siguientes acciones:
 
-   * Utilice la clase auxiliar `ClosedCaptionStylesBuilder` (funciona con `ClosedCaptionStyles` entre bastidores).
+   * Utilice la clase de ayuda `ClosedCaptionStylesBuilder` (funciona en `ClosedCaptionStyles` entre bastidores).
    * Utilice la clase `ClosedCaptionStyles` directamente.
 
 >[!NOTE]
 >
->La configuración del estilo de subtítulos opcionales es una operación asincrónica, por lo que los cambios pueden tardar hasta unos segundos en aparecer en la pantalla.
+>La configuración del estilo de subtítulos es una operación asincrónica, por lo que los cambios pueden tardar hasta unos segundos en aparecer en la pantalla.
 
-## Opciones de estilo de subtítulos opcionales {#section_D28F50B98C0D48CF89C4FB6DC81C5185}
+## Opciones de estilo de subtítulos {#section_D28F50B98C0D48CF89C4FB6DC81C5185}
 
-Puede proporcionar información de estilo para las pistas de subtítulos opcionales mediante la clase `ClosedCaptionStyles`. Esto establece el estilo de cualquier subtítulo cerrado que muestre el reproductor.
+Puede proporcionar información de estilo para las pistas de subtítulos mediante la clase `ClosedCaptionStyles`. Esto establece el estilo de cualquier subtítulo cerrado que muestre el reproductor.
 
 ```
 public function TextFormat( 
@@ -65,7 +62,7 @@ public function TextFormat(
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"> Fuente </td> 
-   <td colname="2"> <p>Tipo de fuente. </p> <p>Sólo se puede establecer en un valor definido por la matriz <span class="codeph"> ClosedCaptionStyles.FONT </span> y que represente, por ejemplo, un solo espacio con o sin serifs. 
+   <td colname="2"> <p>Tipo de fuente. </p> <p>Solo se puede establecer en un valor que esté definido por la matriz <span class="codeph"> ClosedCaptionStyles.FONT </span> y que represente, por ejemplo, espaciado con o sin serifs. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;FONT&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;AVCaptionStyle.DEFAULT, 
@@ -77,21 +74,21 @@ public function TextFormat(
       &nbsp;AVCaptionStyle.CURSIVE, 
       &nbsp;AVCaptionStyle.SMALL_CAPITALS 
       &nbsp;]; 
-     </code> </p> <p>Sugerencia:  Las fuentes disponibles en un dispositivo pueden variar y se utilizan sustituciones cuando es necesario. Monospace con serifs se utiliza generalmente como sustituto, aunque esta sustitución puede ser específica del sistema. </p> </td> 
+     </code> </p> <p>Sugerencia:  Las fuentes disponibles en un dispositivo pueden variar y se utilizan sustituciones cuando es necesario. Monospace con serifs se suele utilizar como sustituto, aunque esta sustitución puede ser específica del sistema. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Tamaño </td> 
-   <td colname="2"> <p>Tamaño del rótulo. </p> <p> Sólo se puede establecer en un valor definido por la matriz <span class="codeph"> ClosedCaptionStyles.FONT_SIZE </span>: 
+   <td colname="2"> <p>El tamaño del rótulo. </p> <p> Solo se puede establecer en un valor definido por la matriz <span class="codeph"> ClosedCaptionStyles.FONT_SIZE </span>: 
      <ul compact="yes" id="ul_544BFC7A46474A74839477108F1AB1E9"> 
       <li id="li_A592ED46B8DF4D8FAD7AF3BD931A712B"> <span class="codeph"> MEDIO  </span> - Tamaño estándar </li> 
-      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE  </span> - Aproximadamente 30% mayor que medio </li> 
+      <li id="li_4F8CEDE54965430EB707DD3D5B2E3F87"> <span class="codeph"> GRANDE  </span> - Aproximadamente un 30% mayor que medio </li> 
       <li id="li_D78D823883F54D869118BAB58257E377"> <span class="codeph"> PEQUEÑO  </span> - Aproximadamente un 30% menor que medio </li> 
-      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PREDETERMINADO  </span> - El tamaño predeterminado del rótulo; igual que medium </li> 
-     </ul> </p> <p>Sugerencia:  Puede cambiar el tamaño de fuente de los rótulos WebVTT cambiando el parámetro size para la función <span class="codeph"> predeterminadaMediaPlayer.ccStyles </span> del definidor. </p> </td> 
+      <li id="li_9299C13408584A38835F8D91BD048083"> <span class="codeph"> PREDETERMINADO:  </span> el tamaño predeterminado del rótulo; igual que medium </li> 
+     </ul> </p> <p>Sugerencia:  Puede cambiar el tamaño de fuente de los subtítulos WebVTT cambiando el parámetro de tamaño de la función <span class="codeph"> predeterminadaMediaPlayer.ccStyles </span> del establecedor. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Borde de fuente </td> 
-   <td colname="2"> <p>Efecto utilizado para el borde de la fuente, como elevado o ninguno. </p> <p>Solo se puede establecer en un valor definido por la matriz <span class="codeph"> ClosedCaptionStyles.FONT_EDGE </span>. 
+   <td colname="2"> <p>El efecto utilizado para el borde de la fuente, como elevado o ninguno. </p> <p>Solo se puede establecer en un valor definido por la matriz <span class="codeph"> ClosedCaptionStyles.FONT_EDGE </span>. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;FONT_EDGE&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;&nbsp;&nbsp;&nbsp;AVCaptionStyle.DEFAULT, 
@@ -106,7 +103,7 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Color de fuente </td> 
-   <td colname="2"> <p>Color de fuente. </p> <p>Sólo se puede establecer en un valor definido por la matriz <span class="codeph"> ClosedCaptionStyles.COLOR </span>. 
+   <td colname="2"> <p>El color de la fuente. </p> <p>Solo se puede establecer en un valor definido por la matriz <span class="codeph"> ClosedCaptionStyles.COLOR </span>. 
      <code class="syntax actionscript">
        public&nbsp;static&nbsp;const&nbsp;COLOR&nbsp;:Array&nbsp;=&nbsp;[ 
       &nbsp;&nbsp;&nbsp;&nbsp;AVCaptionStyle.DEFAULT, 
@@ -140,32 +137,32 @@ public function TextFormat(
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Color de fondo </td> 
-   <td colname="2"> <p>Color de celda de carácter de fondo. </p> <p>Solo se puede establecer en valores disponibles para el color de fuente. </p> </td> 
+   <td colname="2"> <p>El color de la celda del carácter de fondo. </p> <p>Solo se puede establecer en valores disponibles para el color de fuente. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Color de relleno </td> 
-   <td colname="2"> <p>Color del fondo de la ventana en la que se encuentra el texto. </p> <p>Se puede establecer en cualquiera de los valores disponibles para el color de fuente. </p> <p>Importante:  Esto no se aplica a los subtítulos WebVTT porque WebVTT no utiliza esta función. </p> </td> 
+   <td colname="2"> <p>Color del fondo de la ventana en la que se encuentra el texto. </p> <p>Se puede establecer en cualquiera de los valores disponibles para el color de fuente. </p> <p>Importante:  Esto no se aplica a los subtítulos WebVTT, ya que WebVTT no utiliza esta función. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacidad de fuente </td> 
-   <td colname="2"> <p>La opacidad del texto. </p> <p>Expresado como porcentaje de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> para la fuente es 100. </p> </td> 
+   <td colname="2"> <p>La opacidad del texto. </p> <p>Se expresa como porcentaje de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> para la fuente es 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacidad del fondo </td> 
-   <td colname="2"> <p>La opacidad de la celda de caracteres de fondo. </p> <p>Expresado como porcentaje de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> para el fondo es 100. </p> </td> 
+   <td colname="2"> <p>La opacidad de la celda del carácter de fondo. </p> <p>Se expresa como porcentaje de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> para el fondo es 100. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> Opacidad de relleno </td> 
-   <td colname="2"> <p>La opacidad del fondo de la ventana de rótulo. </p> <p>Expresado como porcentaje de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> para relleno es 0. </p> </td> 
+   <td colname="2"> <p>La opacidad del fondo de la ventana del rótulo. </p> <p>Se expresa como porcentaje de 0 (totalmente transparente) a 100 (totalmente opaco). <span class="codeph"> DEFAULT_OPACITY  </span> para rellenar es 0. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Ejemplos: Formato del rótulo {#section_63E33840B7A14D26990046E2ACF2ECA1}
+## Ejemplos: Formato de rótulo {#section_63E33840B7A14D26990046E2ACF2ECA1}
 
-Puede especificar el formato de los subtítulos opcionales.
+Puede especificar el formato de subtítulos.
 
-## Ejemplo 1: Especifique los valores de formato explícitamente {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
+## Ejemplo 1: Especificar valores de formato explícitamente {#section_BD7B48F3B66D4E9290E1CB2F464E08E4}
 
 ```
 private function onStatusChanged(event:MediaPlayerStatusChangeEvent):void { 
@@ -184,7 +181,7 @@ private function onStatusChanged(event:MediaPlayerStatusChangeEvent):void {
 } 
 ```
 
-## Ejemplo 2: Especificar valores de formato en parámetros {#section_147036D7C31C4010A5A7DF49997014A9}
+## Ejemplo 2: Especificar valores de formato en los parámetros {#section_147036D7C31C4010A5A7DF49997014A9}
 
 ```
 /** 
