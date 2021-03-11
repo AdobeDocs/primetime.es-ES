@@ -1,21 +1,18 @@
 ---
-description: De forma predeterminada, cuando la reproducción es inicio, VOD media inicio en 0 y inicios de medios en directo en el punto activo del cliente (MediaPlayer.LIVE_POINT). Puede anular el comportamiento predeterminado.
-seo-description: De forma predeterminada, cuando la reproducción es inicio, VOD media inicio en 0 y inicios de medios en directo en el punto activo del cliente (MediaPlayer.LIVE_POINT). Puede anular el comportamiento predeterminado.
-seo-title: Escriba una secuencia a una hora específica
-title: Escriba una secuencia a una hora específica
-uuid: 5db73b50-0629-4fb1-8f12-6c88e4cd7109
+description: De forma predeterminada, cuando se inicia la reproducción, el contenido de VOD comienza en 0 y el contenido se inicia en el punto activo del cliente (MediaPlayer.LIVE_POINT). Puede anular el comportamiento predeterminado.
+title: Introduzca una emisión a una hora específica
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '103'
 ht-degree: 1%
 
 ---
 
 
-# Escriba un flujo a una hora específica{#enter-a-stream-at-a-specific-time}
+# Introduzca un flujo a una hora específica{#enter-a-stream-at-a-specific-time}
 
-De forma predeterminada, cuando la reproducción es inicio, VOD media inicio en 0 y inicios de medios en directo en el punto activo del cliente (MediaPlayer.LIVE_POINT). Puede anular el comportamiento predeterminado.
+De forma predeterminada, cuando se inicia la reproducción, el contenido de VOD comienza en 0 y el contenido se inicia en el punto activo del cliente (MediaPlayer.LIVE_POINT). Puede anular el comportamiento predeterminado.
 
 1. Pase una posición a `MediaPlayer.prepareToPlay`.
 1. El SDK del explorador utiliza esta posición como punto de partida para el recurso.
@@ -24,7 +21,7 @@ De forma predeterminada, cuando la reproducción es inicio, VOD media inicio en 
    >
    >No se requiere ninguna operación de búsqueda.
 
-1. Si la posición no está dentro del rango buscable, se utilizan las posiciones predeterminadas.
+1. Si la posición no se encuentra dentro del rango buscable, se utilizan las posiciones predeterminadas.
 
    Por ejemplo:
 
