@@ -1,36 +1,34 @@
 ---
-description: 'null'
-seo-description: 'null'
-seo-title: Prácticas recomendadas para anuncios en titulares complementarios
-title: Prácticas recomendadas para anuncios en titulares complementarios
-uuid: d844babb-20ab-4380-9487-eb1c24b58877
+title: Prácticas recomendadas para anuncios tipo titular complementarios
+description: Prácticas recomendadas para anuncios tipo titular complementarios
+copied-description: true
 translation-type: tm+mt
-source-git-commit: a33e1f290fcf78e6f131910f6037f4803f7be98d
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
 
 
-# Publicidades tipo titular complementarias {#companion-banner-ads}
+# Anuncios del banner Companion {#companion-banner-ads}
 
-TVSDK es compatible con las publicidades tipo titular complementarias, que son publicidades que acompañan un anuncio lineal y que a menudo permanecen en la página después de que finaliza el anuncio lineal. La aplicación es responsable de mostrar los letreros adjuntos que se proporcionan con un anuncio lineal.
+TVSDK admite anuncios tipo titular adjuntos, que son anuncios que acompañan un anuncio lineal y que a menudo permanecen en la página después de que finaliza el anuncio lineal. La aplicación es responsable de mostrar los banners adjuntos que se proporcionan con un anuncio lineal.
 
 ## Prácticas recomendadas para anuncios tipo titular adjuntos {#best-practices-for-companion-banner-ads}
 
-Al mostrar publicidades complementarias, siga estas recomendaciones:
+Cuando muestre anuncios complementarios, siga estas recomendaciones:
 
-* Intente presentar tantos anuncios de letreros adjuntos de un anuncio de vídeo como se adapten al diseño del reproductor.
-* Presente una pancarta complementaria solo si tiene una ubicación que coincida con la altura y la anchura especificadas para la publicidad.
+* Intente presentar tantos anuncios de banner de acompañamiento de un anuncio de vídeo como se ajuste al diseño del reproductor.
+* Presente un banner complementario solo si tiene una ubicación que coincida con la altura y la anchura especificadas para el anuncio.
 
    >[!IMPORTANT]
    >
    >No cambie el tamaño de la publicidad.
 
-* Empiece a presentar los letreros adjuntos lo antes posible después de que comience el anuncio.
-* No superponga el contenedor principal de anuncios/vídeos con pancartas complementarias.
-* Puede mostrar las pancartas complementarias una vez finalizada la publicidad.
+* Empiece a presentar los banners adjuntos lo antes posible después de que comience el anuncio.
+* No superponga el contenedor principal de anuncios/vídeos con banners complementarios.
+* Puede mostrar banners complementarios una vez finalizada la publicidad.
 
-   La práctica estándar consiste en mostrar cada pancarta adjunta hasta que tenga un reemplazo para la publicidad.
+   La práctica estándar es mostrar cada banner complementario hasta que tenga un reemplazo para la publicidad.
 
