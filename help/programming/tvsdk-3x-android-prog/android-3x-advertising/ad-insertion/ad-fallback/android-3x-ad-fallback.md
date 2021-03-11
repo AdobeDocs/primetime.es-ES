@@ -1,14 +1,11 @@
 ---
-description: Para las publicidades (o elementos creativos) de plantilla de servicio de publicidad de vídeo digital (VAST) que tienen habilitada la regla de reserva, TVSDK trata a una publicidad con un tipo de medio no válido como una publicidad vacía e intenta utilizar las publicidades de reserva en su lugar. Puede configurar algunos aspectos del comportamiento de reserva.
-keywords: zero length ad;empty ad
-seo-description: Para las publicidades (o elementos creativos) de plantilla de servicio de publicidad de vídeo digital (VAST) que tienen habilitada la regla de reserva, TVSDK trata a una publicidad con un tipo de medio no válido como una publicidad vacía e intenta utilizar las publicidades de reserva en su lugar. Puede configurar algunos aspectos del comportamiento de reserva.
-seo-title: Devolución de anuncios para anuncios VAST y VMAP
+description: En el caso de los anuncios (o creativos) de plantilla de servicio de publicidad de vídeo digital (VAST) que tengan habilitada la regla de reserva, TVSDK trata un anuncio con un tipo de medio no válido como un anuncio vacío e intenta usar anuncios de reserva en su lugar. Puede configurar algunos aspectos del comportamiento de reserva.
+keywords: anuncio de longitud cero;anuncio vacío
 title: Devolución de anuncios para anuncios VAST y VMAP
-uuid: 688f0b67-9f5b-4c21-ab33-86d21580fbe9
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
@@ -16,12 +13,12 @@ ht-degree: 0%
 
 # Devolución de anuncios para anuncios VAST y VMAP {#ad-fallback-for-vast-and-vmap-ads}
 
-Para las publicidades (o elementos creativos) de plantilla de servicio de publicidad de vídeo digital (VAST) que tienen habilitada la regla de reserva, TVSDK trata a una publicidad con un tipo de medio no válido como una publicidad vacía e intenta utilizar las publicidades de reserva en su lugar. Puede configurar algunos aspectos del comportamiento de reserva.
+En el caso de los anuncios (o creativos) de plantilla de servicio de publicidad de vídeo digital (VAST) que tengan habilitada la regla de reserva, TVSDK trata un anuncio con un tipo de medio no válido como un anuncio vacío e intenta usar anuncios de reserva en su lugar. Puede configurar algunos aspectos del comportamiento de reserva.
 
-La especificación VAST/Digital Video Multiple Ad Playlist (VMAP) establece que para las publicidades que tienen habilitada la opción de reserva VAST, las publicidades vacías activan automáticamente el uso de publicidades de reserva. Cuando un anuncio VAST está vacío, TVSDK busca un reemplazo válido de tipo de medio HLS entre las publicidades de reserva. Cuando un anuncio VAST en un contenedor tiene un tipo de medio no válido, TVSDK lo considera vacío. Puede configurar si TVSDK debe hacer lo mismo con las publicidades en línea en un VMAP. Para obtener más información sobre la función VAST `fallbackOnNoAd`, consulte [Plantilla de servicio de publicidad de vídeo digital (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
+La especificación VAST/Digital Video Multiple Ad Playlist (VMAP) indica que, para los anuncios que tienen habilitada la alternativa VAST, los anuncios vacíos déclencheur automáticamente el uso de anuncios de reserva. Cuando un anuncio VAST está vacío, TVSDK busca un reemplazo de tipo de medio HLS válido entre los anuncios de reserva. Cuando un anuncio VAST en un contenedor tiene un tipo de medio no válido, TVSDK lo considera vacío. Puede configurar si TVSDK debe hacer lo mismo con los anuncios en línea en un VMAP. Para obtener más información sobre la función VAST `fallbackOnNoAd`, consulte [Plantilla de servicio de publicidad de vídeo digital (VAST) 3.0](https://www.iab.net/guidelines/508676/digitalvideo/vsuite/vast).
 
 >[!NOTE]
 >
->**Anuncios**  de longitud cero: cuando TVSDK encuentra una respuesta VAST que contiene un anuncio de duración cero, o una pausa publicitaria sin anuncios, activa eventos AD_BREAK_INICIO / AD_BREAK_COMPLETE para esas pausas publicitarias de longitud cero. *Este comportamiento solo se aplica a flujos VOD.* TVSDK activa estos eventos incluso cuando la aplicación utiliza la directiva de anuncios SKIP.
+>**Anuncios de longitud cero** : cuando TVSDK encuentra una respuesta VAST que contiene un anuncio de duración cero o una pausa publicitaria sin anuncios, activa eventos AD_BREAK_START / AD_BREAK_COMPLETE para esas pausas publicitarias de longitud cero. *Este comportamiento solo se aplica a los flujos de VOD.* TVSDK activa estos eventos incluso cuando la aplicación utiliza la directiva de publicidad SKIP.
 >
->TVSDK *no* activa los eventos AD_BREAK_INICIO / AD_BREAK_COMPLETE para flujos en directo, o cuando un usuario emplea trickplay o intenta superar el anuncio de longitud cero.
+>TVSDK desencadena eventos *not* AD_BREAK_START / AD_BREAK_COMPLETE para transmisiones en directo, o cuando un usuario utiliza trickplay o busca pasar el anuncio de longitud cero.
