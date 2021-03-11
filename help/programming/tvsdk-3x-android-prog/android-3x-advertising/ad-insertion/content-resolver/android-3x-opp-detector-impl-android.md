@@ -1,23 +1,20 @@
 ---
-description: Puede implementar sus propios generadores de oportunidades implementando la clase OpportunityGenerator.
-seo-description: Puede implementar sus propios generadores de oportunidades implementando la clase OpportunityGenerator.
-seo-title: Implementar un generador de oportunidades personalizado
+description: Puede implementar sus propios generadores de oportunidades implementando la clase OportunityGenerator .
 title: Implementar un generador de oportunidades personalizado
-uuid: 6a6a6aa4-51f8-4e3c-9255-d87b488b820d
 translation-type: tm+mt
-source-git-commit: bc35da8b258056809ceaf18e33bed631047bc81b
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 3%
+source-wordcount: '100'
+ht-degree: 4%
 
 ---
 
 
 # Implementar un generador de oportunidades personalizado {#implement-a-custom-opportunity-generator}
 
-Puede implementar sus propios generadores de oportunidades implementando la clase OpportunityGenerator.
+Puede implementar sus propios generadores de oportunidades implementando la clase OportunityGenerator .
 
-1. Implemente su `ContentFactory` personalizada implementando la interfaz `ContentFactory` y anulando `retrieveGenerators`.
+1. Implemente su `ContentFactory` personalizado implementando la interfaz `ContentFactory` y anulando `retrieveGenerators`.
 
    Por ejemplo:
 
@@ -57,7 +54,7 @@ Puede implementar sus propios generadores de oportunidades implementando la clas
    {...}
    ```
 
-   1. En el generador de oportunidades personalizado, omita `doConfigure`, `doUpdate` y `doCleanup`:
+   1. En el generador de oportunidades personalizado, anule `doConfigure`, `doUpdate` y `doCleanup`:
 
       ```java
       @Override 
@@ -78,7 +75,7 @@ Puede implementar sus propios generadores de oportunidades implementando la clas
       List<TimedMetadata> tList = getItem().getTimedMetadata(); 
       ```
 
-   1. Para cada `TimedMetadata` o grupo de `TimedMetadata`, cree una oportunidad con los atributos siguientes:
+   1. Para cada `TimedMetadata` o grupo de `TimedMetadata`, cree una oportunidad con los siguientes atributos:
 
       ```java
       Opportunity( 
@@ -93,7 +90,7 @@ Puede implementar sus propios generadores de oportunidades implementando la clas
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
-Éste es un detector de oportunidad de colocación personalizado de muestra:
+Este es un detector de oportunidades de colocación personalizado de ejemplo:
 
 ```java
 public class MyOpportunityGenerator implements OpportunityGenerator {
