@@ -1,23 +1,20 @@
 ---
-description: Puede generar tokens de Expressplay para su contenido cifrado enviando solicitudes de token al servidor de autentificador de Expressplay adecuado.
-seo-description: Puede generar tokens de Expressplay para su contenido cifrado enviando solicitudes de token al servidor de autentificador de Expressplay adecuado.
-seo-title: Tokens de Expressplay
-title: Tokens de Expressplay
-uuid: 6103e1b2-127d-4758-a589-15f0f3c73db1
+description: Puede generar tokens de Expressplay para su contenido cifrado enviando solicitudes de token al servidor de token de Expressplay adecuado.
+title: Expresiones de tokens
 translation-type: tm+mt
-source-git-commit: d0ba1f98b16f6350ae842ca2ce1261bf49dd8a66
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '131'
 ht-degree: 0%
 
 ---
 
 
-# Tokens de Expressplay {#expressplay-tokens}
+# Expresiones de tokens {#expressplay-tokens}
 
-Puede generar tokens de Expressplay para su contenido cifrado enviando solicitudes de token al servidor de autentificador de Expressplay adecuado.
+Puede generar tokens de Expressplay para su contenido cifrado enviando solicitudes de token al servidor de token de Expressplay adecuado.
 
-Un ejemplo es la siguiente dirección URL:
+Por ejemplo, la siguiente URL:
 
 ```
 https://wv-gen.service.expressplay.com/hms/wv/
@@ -28,7 +25,7 @@ token?customerAuthenticator=<your expressplay customer authenticator>
 &hdcpOutputControl=0
 ```
 
-El ID de almacenamiento de clave de cifrado de contenido o CEKSID otorgado al parámetro `kid` y la clave de cifrado de contenido o CEK otorgado al parámetro `contentKey` deben coincidir con el ID de almacenamiento de clave de cifrado de contenido y la clave de cifrado de contenido utilizado para el empaquetado. El siguiente texto es un ejemplo de la respuesta del servidor de tokens:
+El ID de almacenamiento de la clave de cifrado de contenido o CEKSID proporcionado al parámetro `kid` y la clave de cifrado de contenido o CEK proporcionada al parámetro `contentKey` deben coincidir con el ID de almacenamiento de la clave de cifrado de contenido y la clave de cifrado de contenido utilizada para el empaquetado. El siguiente texto es un ejemplo de la respuesta del servidor token:
 
 ```
 https://wv.service.expressplay.com/hms/wv/rights/
@@ -37,7 +34,7 @@ https://wv.service.expressplay.com/hms/wv/rights/
  SJ4o-d8teAkUZUtW3Od5V-SHsCLnAlbFW84K71h2xNUiMAvRcUFBG3bjxMQ
 ```
 
-A continuación, puede
+Entonces puede:
 
 * utilice la URL y la consulta devueltas como URL del servidor de licencias, o
-* extraer la consulta de la dirección URL y pasar ExpressPlayToken por separado como encabezado de POST HTTP
+* extraer la consulta de la dirección URL y pasar el ExpressPlayToken por separado como encabezado de POST HTTP
