@@ -1,9 +1,9 @@
 ---
-seo-title: Información general
 title: Información general
-uuid: c6f54867-d0a3-43fd-9493-6496f1b7831a
+description: Información general
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -13,8 +13,8 @@ ht-degree: 0%
 
 # Información general{#overview}
 
-Es posible que deba revocar las credenciales de un cliente o comprobar si un conjunto determinado de credenciales ya se ha revocado bajo determinadas condiciones. Las credenciales se pueden revocar si están comprometidas. Cuando se producen estos problemas, las licencias ya no se otorgan a clientes comprometidos.
+Es posible que deba revocar las credenciales de un cliente o comprobar si un conjunto determinado de credenciales ya se ha revocado en determinadas condiciones. Las credenciales pueden revocarse si se encuentran en peligro. Cuando se producen estos problemas, ya no se emiten licencias para clientes comprometidos.
 
-Adobe mantiene Listas de revocación de certificados (CRL) para revocar clientes comprometidos. El SDK aplica automáticamente estas CRL. Los servidores de licencias pueden restringir aún más a los clientes al rechazar determinadas credenciales de equipo o versiones particulares de DRM y credenciales de tiempo de ejecución. Se puede crear un `RevocationList` y pasarlo al SDK para revocar las credenciales del equipo. Las versiones de DRM/tiempo de ejecución específicas se pueden revocar en el nivel de directiva DRM estableciendo restricciones de módulos en la derecha de reproducción o globalmente estableciendo restricciones de módulos en `HandlerConfiguration`.
+Adobe mantiene listas de revocación de certificados (CRL) para revocar clientes comprometidos. El SDK aplica automáticamente estas CRL. Los servidores de licencias pueden restringir aún más a los clientes al rechazar credenciales de equipo concretas o versiones particulares de DRM y credenciales de tiempo de ejecución. Se puede crear un `RevocationList` que se puede pasar al SDK para revocar las credenciales del equipo. Las versiones específicas de DRM/tiempo de ejecución se pueden revocar en el nivel de directiva de DRM estableciendo restricciones de módulo en la derecha de reproducción o globalmente estableciendo restricciones de módulo en `HandlerConfiguration`.
 
-La discusión se centra en revocar las credenciales de cliente.
+La discusión se centra en revocar las credenciales del cliente.
