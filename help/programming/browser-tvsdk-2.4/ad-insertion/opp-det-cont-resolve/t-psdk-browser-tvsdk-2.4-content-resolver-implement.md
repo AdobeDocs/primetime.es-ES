@@ -1,27 +1,24 @@
 ---
-description: Puede implementar sus propios resueltores de contenido en función de los resueltores predeterminados.
-seo-description: Puede implementar sus propios resueltores de contenido en función de los resueltores predeterminados.
-seo-title: Implementar una resolución de contenido personalizada
-title: Implementar una resolución de contenido personalizada
-uuid: cf85dd90-242e-4f9e-9785-158ca0fc9465
+description: Puede implementar sus propios resolvedores de contenido en función de los resolvedores predeterminados.
+title: Implementación de una resolución de contenido personalizado
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 0%
+source-wordcount: '191'
+ht-degree: 1%
 
 ---
 
 
 # Implementar una resolución de contenido personalizada{#implement-a-custom-content-resolver}
 
-Puede implementar sus propios resueltores de contenido en función de los resueltores predeterminados.
+Puede implementar sus propios resolvedores de contenido en función de los resolvedores predeterminados.
 
-Cuando el TVSDK del explorador detecta una nueva oportunidad, se repite a través de los resueltores de contenido registrados que buscan una que sea capaz de resolver esa oportunidad mediante el método `canResolve`. El primero que devuelve true se selecciona para resolver la oportunidad. Si no se puede resolver ningún contenido, se omitirá esa oportunidad. Dado que el proceso de resolución de contenido suele ser asíncrono, la resolución de contenido es responsable de notificar al SDK de TVSDK del explorador cuando se ha completado el proceso.
+Cuando el TVSDK del explorador detecta una nueva oportunidad, se repite a través de los solucionadores de contenido registrados que buscan uno que sea capaz de resolver esa oportunidad usando el método `canResolve`. El primero que devuelve true se selecciona para resolver la oportunidad. Si no se puede resolver ningún contenido, se omite esa oportunidad. Dado que el proceso de resolución de contenido suele ser asíncrono, la resolución de contenido es responsable de notificar al TVSDK del explorador cuando el proceso ha finalizado.
 
 Recuerde la siguiente información:
 
-* La resolución de contenido llama a `client.process` para especificar la operación de línea de tiempo que debe ejecutar TVSDK.
+* La resolución de contenido llama a `client.process` para especificar qué operación de cronología debe ejecutar TVSDK.
 
    La operación suele ser una colocación de pausa publicitaria.
 
@@ -111,7 +108,7 @@ Recuerde la siguiente información:
 
 1. Registre la fábrica de contenido personalizado para la reproducción del flujo de medios.
 
-   En el reproductor de interfaz de usuario de Framework, puede especificar la fábrica de contenido personalizado de la siguiente manera:
+   En el reproductor de UI Framework, puede especificar la fábrica de contenido personalizado de la siguiente manera:
 
    ```js
    var advertisingFactory = new CustomContentFactory(); 
