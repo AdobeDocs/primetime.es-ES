@@ -1,13 +1,10 @@
 ---
-description: Puede proporcionar metadatos personalizados sobre el contenido, las publicidades y las llamadas de seguimiento de capítulos mediante las funciones de llamada de retorno.
-seo-description: Puede proporcionar metadatos personalizados sobre el contenido, las publicidades y las llamadas de seguimiento de capítulos mediante las funciones de llamada de retorno.
-seo-title: Implementar compatibilidad con metadatos personalizados
+description: Puede proporcionar metadatos personalizados sobre el contenido, los anuncios y las llamadas de seguimiento de capítulos mediante funciones de llamada de retorno.
 title: Implementar compatibilidad con metadatos personalizados
-uuid: 068ef0b9-79a2-4e44-8a0a-01e9deb8e4a6
 translation-type: tm+mt
-source-git-commit: 5908e5a3521966496aeec0ef730e4a704fddfb68
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '94'
+source-wordcount: '74'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Implementar compatibilidad con metadatos personalizados {#implement-custom-metadata-support}
 
-Puede proporcionar metadatos personalizados sobre el contenido, las publicidades y las llamadas de seguimiento de capítulos mediante las funciones de llamada de retorno.
+Puede proporcionar metadatos personalizados sobre el contenido, los anuncios y las llamadas de seguimiento de capítulos mediante funciones de llamada de retorno.
 
-Las funciones de llamada de retorno se invocan justo antes de que se realice la llamada de seguimiento, de modo que la aplicación puede adjuntar los metadatos específicos de un anuncio o capítulo.
+Las funciones de llamada de retorno se invocan justo antes de que se realice la llamada de seguimiento, por lo que la aplicación puede adjuntar los metadatos específicos de un anuncio o capítulo.
 
-Invocar funciones de llamada de retorno para contenido, anuncios y capítulos.
+Invoque funciones de llamada de retorno para contenido, anuncios y capítulos.
 
 ```java
 // Video Metadata Block 
