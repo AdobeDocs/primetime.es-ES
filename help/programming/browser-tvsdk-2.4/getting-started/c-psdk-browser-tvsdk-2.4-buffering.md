@@ -1,21 +1,18 @@
 ---
-description: Puede configurar imágenes para notificar al usuario que el contenido se está almacenando en búfer.
-seo-description: Puede configurar imágenes para notificar al usuario que el contenido se está almacenando en búfer.
-seo-title: Almacenamiento en búfer
+description: Puede configurar elementos visuales para notificar al usuario que el contenido se almacena en búfer.
 title: Almacenamiento en búfer
-uuid: da9498ee-c736-4093-97a2-250d3ad56d49
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '56'
+ht-degree: 3%
 
 ---
 
 
 # Almacenamiento en búfer{#buffering}
 
-Puede configurar imágenes para notificar al usuario que el contenido se está almacenando en búfer.
+Puede configurar elementos visuales para notificar al usuario que el contenido se almacena en búfer.
 
 Escuche los eventos `AdobePSDK.PSDKEventType.BUFFERING_BEGIN` y `AdobePSDK.PSDKEventType.BUFFERING_END`. Por ejemplo:
 
@@ -33,7 +30,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.BUFFERING_END,
                         });
 ```
 
-El marco de interfaz de usuario proporciona una implementación de comportamiento de superposición de almacenamiento en búfer predeterminada, que se puede ampliar como se muestra a continuación:
+El marco de IU proporciona una implementación de comportamiento de superposición de almacenamiento en búfer predeterminada, que se puede ampliar como se muestra a continuación:
 
 ```js
 // Using UI Framework 
@@ -52,7 +49,7 @@ var playerWrapper = ptp.videoPlayer('.videoDiv', {
 }); 
 ```
 
-Así es como se ve el DOM de resultado:
+Este es el aspecto del DOM de resultado:
 
 ```
 <div id=" videoDiv" class="ptp-root-element"> 
