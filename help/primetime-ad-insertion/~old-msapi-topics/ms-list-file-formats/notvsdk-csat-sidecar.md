@@ -1,13 +1,10 @@
 ---
 description: Si el cliente solicita información de seguimiento en formato JSON, el servidor de manifiesto devuelve un archivo en uno de los formatos JSON.
-seo-description: Si el cliente solicita información de seguimiento en formato JSON, el servidor de manifiesto devuelve un archivo en uno de los formatos JSON.
-seo-title: Formatos JSON para rastrear direcciones URL
-title: Formatos JSON para rastrear direcciones URL
-uuid: 4b17639b-c0de-4ef4-931b-aa7c4c036c0a
+title: Formatos JSON para el seguimiento de direcciones URL
 translation-type: tm+mt
-source-git-commit: e437f4143fb939f46d106c64efc391137c33fe17
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
@@ -37,9 +34,9 @@ El archivo JSON que envía el servidor de manifiesto si `pttrackingversion=v1` t
 
 ## Formato JSON para el seguimiento de la versión 2 {#json_v2}
 
-El archivo JSON que envía el servidor de manifiesto si `pttrackingversion=v2` tiene el formato del siguiente ejemplo, que procede de un bloque JSON típico.
+El archivo JSON que envía el servidor de manifiesto si `pttrackingversion=v2` tiene el formato del siguiente ejemplo, que proviene de un bloque JSON típico.
 
-Se ha abreviado para evitar repeticiones innecesarias, de modo que la estructura sea más clara. Una elipsis (tres puntos, separados por espacios) indica información omitida dentro de algunas direcciones URL y entre algunos bloques de código. Las direcciones URL no abreviadas aparecen en varias líneas, aunque en una sola línea del archivo JSON.
+Se ha abreviado para evitar repeticiones innecesarias, de modo que la estructura sea más clara. Los puntos suspensivos (tres puntos, separados por espacios) indican información omitida dentro de algunas direcciones URL y entre algunos bloques de código. Las direcciones URL no abreviadas aparecen en varias líneas, aunque aparecen en una sola línea del archivo JSON.
 
 ```
 { 
@@ -367,7 +364,7 @@ Se ha abreviado para evitar repeticiones innecesarias, de modo que la estructura
 
 >[!NOTE]
 >
->El valor `offset` del atributo `scte35` extraído de `ad breaks` podría ser negativo. Esto se debe a que el sidecar JSON V2 contiene información sobre los saltos de publicidad que están parcialmente en la ventana de reproducción actual. Por lo tanto, el atributo `scte35` también contiene información sobre dichos saltos de publicidad.
+>El valor `offset` del atributo `scte35` extraído de `ad breaks` podría ser negativo. Esto se debe a que el sidecar JSON V2 contiene información sobre las pausas publicitarias que están parcialmente en la ventana de reproducción actual. Por lo tanto, el atributo `scte35` también contiene información sobre esas pausas publicitarias.
 
 ## Formato JSON para el seguimiento de la versión 3 {#json_v3}
 
