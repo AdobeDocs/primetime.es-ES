@@ -1,29 +1,26 @@
 ---
-description: La interfaz PTMediaPlayer encapsula la funcionalidad y el comportamiento de un objeto de reproductor de medios.
-seo-description: La interfaz PTMediaPlayer encapsula la funcionalidad y el comportamiento de un objeto de reproductor de medios.
-seo-title: Configuración de PTMediaPlayer
+description: La interfaz de PTMediaPlayer encapsula la funcionalidad y el comportamiento de un objeto de reproductor multimedia.
 title: Configuración de PTMediaPlayer
-uuid: 698034d3-1260-416f-83b0-6b7d058750a0
 translation-type: tm+mt
-source-git-commit: 557f42cd9a6f356aa99e13386d9e8d65e043a6af
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '181'
 ht-degree: 0%
 
 ---
 
 
-# Configure PTMediaPlayer {#set-up-the-ptmediaplayer}
+# Configuración de PTMediaPlayer {#set-up-the-ptmediaplayer}
 
-TVSDK proporciona herramientas para crear una aplicación de reproductor de vídeo avanzada (el reproductor Primetime), que se puede integrar con otros componentes de Primetime.
+TVSDK proporciona herramientas para crear una aplicación de reproductor de vídeo avanzada (su reproductor Primetime), que puede integrar con otros componentes de Primetime.
 
-Utilice las herramientas de la plataforma para crear un reproductor y conectarlo a la vista del reproductor de medios en TVSDK, que dispone de métodos para reproducir y administrar vídeos. Por ejemplo, TVSDK proporciona métodos de reproducción y pausa. Puede crear botones de interfaz de usuario en la plataforma y definir los botones para llamar a esos métodos de TVSDK.
+Utilice las herramientas de su plataforma para crear un reproductor y conectarlo a la vista del reproductor de medios en TVSDK, que tiene métodos para reproducir y administrar vídeos. Por ejemplo, TVSDK proporciona métodos de reproducción y pausa. Puede crear botones de interfaz de usuario en la plataforma y establecer los botones para llamar a esos métodos de TVSDK.
 
-La interfaz PTMediaPlayer encapsula la funcionalidad y el comportamiento de un objeto de reproductor de medios.
+La interfaz de PTMediaPlayer encapsula la funcionalidad y el comportamiento de un objeto de reproductor multimedia.
 
 Para configurar su `PTMediaPlayer`:
 
-1. Obtenga la URL del medio desde la interfaz de usuario, por ejemplo, en un campo de texto.
+1. Busque la URL del medio en la interfaz de usuario, por ejemplo, en un campo de texto.
 
    ```
    NSURL *url = [NSURL URLWithString:textFieldURL.text];
@@ -37,14 +34,14 @@ Para configurar su `PTMediaPlayer`:
    PTMetadata *metadata = [self createMetadata]
    ```
 
-1. Cree `PTMediaPlayerItem` mediante la instancia `PTMetadata`.
+1. Cree `PTMediaPlayerItem` usando la instancia `PTMetadata`.
 
    ```
    PTMediaPlayerItem *item = [[[PTMediaPlayerItem alloc] 
           initWithUrl:url mediaId:yourMediaID metadata:metadata] autorelease];
    ```
 
-1. Añada observadores a las notificaciones que TVSDK distribuye.
+1. Agregue observadores a las notificaciones que envía TVSDK.
 
    ```
    [self addObservers]
@@ -56,7 +53,7 @@ Para configurar su `PTMediaPlayer`:
    PTMediaPlayer *player = [PTMediaPlayer playerWithMediaPlayerItem:item];
    ```
 
-1. Configure las propiedades en el reproductor.
+1. Establezca propiedades en el reproductor.
 
    Estas son algunas de las propiedades `PTMediaPlayer` disponibles:
 
@@ -67,7 +64,7 @@ Para configurar su `PTMediaPlayer`:
    player.allowsAirPlayVideo          = YES;
    ```
 
-1. Establezca la propiedad de vista del reproductor.
+1. Establezca la propiedad view del reproductor.
 
    ```
    CGRect playerRect = self.adPlayerView.frame;  
@@ -80,14 +77,14 @@ Para configurar su `PTMediaPlayer`:
          ( UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight )];
    ```
 
-1. Añada la vista del reproductor en la subvista de la vista actual.
+1. Agregue la vista del reproductor en la subvista de la vista actual.
 
    ```
    [self.adPlayerView  setAutoresizesSubviews:YES];  
    [self.adPlayerView addSubview:(UIView *)player.view];
    ```
 
-1. Llame a `play` para reproducir medios de inicio.
+1. Invoque `play` para iniciar la reproducción del contenido.
 
    ```
    [player play];
