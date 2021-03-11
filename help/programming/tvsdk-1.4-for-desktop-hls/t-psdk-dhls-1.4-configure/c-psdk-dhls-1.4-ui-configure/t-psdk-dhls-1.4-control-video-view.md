@@ -1,13 +1,10 @@
 ---
-description: Puede controlar la posición y el tamaño de la vista de vídeo mediante el objeto MediaPlayerView.
-seo-description: Puede controlar la posición y el tamaño de la vista de vídeo mediante el objeto MediaPlayerView.
-seo-title: Controlar la posición y el tamaño de la vista de vídeo
+description: Puede controlar la posición y el tamaño de la vista de vídeo mediante el objeto MediaPlayerView .
 title: Controlar la posición y el tamaño de la vista de vídeo
-uuid: 2231c574-03cd-45a8-ab00-4a42f8e044f0
 translation-type: tm+mt
-source-git-commit: 5df9a8b98baaf1cd1803581d2b60c7ed4261a0e8
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -15,11 +12,11 @@ ht-degree: 0%
 
 # Controlar la posición y el tamaño de la vista de vídeo{#control-the-position-and-size-of-the-video-view}
 
-Puede controlar la posición y el tamaño de la vista de vídeo mediante el objeto MediaPlayerView.
+Puede controlar la posición y el tamaño de la vista de vídeo mediante el objeto MediaPlayerView .
 
-De forma predeterminada, TVSDK intenta mantener la proporción de aspecto de la vista de vídeo cada vez que cambia el tamaño o la posición del vídeo (debido a un cambio realizado por la aplicación, un cambio de perfil, un cambio de contenido, etc.).
+De forma predeterminada, TVSDK intenta mantener la proporción de aspecto de la vista de vídeo siempre que cambie el tamaño o la posición del vídeo (debido a un cambio realizado por la aplicación, o por un conmutador de perfil, o un conmutador de contenido, etc.).
 
-Puede anular el comportamiento predeterminado de la relación de aspecto especificando una directiva *de escala* diferente. Especifique la directiva de escala mediante la propiedad `MediaPlayerView` del objeto `scalePolicy`. La directiva de escala predeterminada de `MediaPlayerView` se establece con una instancia de la clase `MaintainAspectRatioScalePolicy`. Para restablecer la directiva de escala, reemplace la instancia predeterminada de `MaintainAspectRatioScalePolicy` en `MediaPlayerView.scalePolicy` por su propia directiva. (No se puede establecer la propiedad `scalePolicy` en un valor nulo).
+Puede anular el comportamiento predeterminado de relación de aspecto especificando una *directiva de escala* diferente. Especifique la directiva de escala utilizando la propiedad `MediaPlayerView` del objeto `scalePolicy`. La directiva de escala predeterminada de `MediaPlayerView` se establece con una instancia de la clase `MaintainAspectRatioScalePolicy`. Para restablecer la directiva de escala, sustituya la instancia predeterminada de `MaintainAspectRatioScalePolicy` en `MediaPlayerView.scalePolicy` por su propia directiva. (No se puede establecer la propiedad `scalePolicy` en un valor nulo).
 
 1. Implemente la interfaz `MediaPlayerViewScalePolicy` para crear su propia directiva de escala.
 
@@ -61,14 +58,14 @@ Puede anular el comportamiento predeterminado de la relación de aspecto especif
    >}
    >```
 
-1. Asigne la implementación a la propiedad `MediaPlayerView`.
+1. Asigne la implementación a la propiedad `MediaPlayerView` .
 
    ```
    var view:MediaPlayerView = MediaPlayerView.create(stage.stageVideos[0]); 
    view.scalePolicy = new CustomScalePolicy();
    ```
 
-1. Añada la vista a la propiedad `view` de Media Player.
+1. Agregue la vista a la propiedad `view` del reproductor de medios.
 
    ```
    addChild(view); 
@@ -78,7 +75,7 @@ Puede anular el comportamiento predeterminado de la relación de aspecto especif
 
 <!--<a id="example_7B08ECCDA17B4DD191FC672BD1F4C850"></a>-->
 
-**Por ejemplo: Ajuste la escala del vídeo para rellenar toda la vista del vídeo sin mantener la proporción de aspecto:**
+**Por ejemplo: Escale el vídeo para rellenar toda la vista de vídeo, sin mantener la relación de aspecto:**
 
 ```
 package com.adobe.mediacore.samples.utils { 
