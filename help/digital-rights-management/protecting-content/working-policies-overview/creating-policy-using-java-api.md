@@ -1,9 +1,9 @@
 ---
-seo-title: Creación de una directiva DRM con la API de Java
 title: Creación de una directiva DRM con la API de Java
-uuid: 1672a6d0-e38c-4330-97b0-02147f99db47
+description: Creación de una directiva DRM con la API de Java
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 29bc8323460d9be0fce66cbea7c6fce46df20d61
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Para crear una directiva DRM con la API de Java:
 
-1. Configure el entorno de desarrollo e incluya en el proyecto todos los archivos JAR enumerados en [Configure el entorno de desarrollo.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Configure su entorno de desarrollo e incluya en su proyecto todos los archivos JAR enumerados en [Configure su entorno de desarrollo.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
 1. Cree un objeto `com.adobe.flashaccess.sdk.policy.Policy` y especifique sus propiedades, incluidos los derechos, la duración del almacenamiento en caché de licencias y la fecha de finalización de la directiva DRM.
 
    ```java
@@ -65,4 +65,4 @@ Para crear una directiva DRM con la API de Java:
    out.close(); 
    ```
 
-Consulte [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] en el directorio Reference Implementation Command Line Tools [!DNL samples] para obtener la fuente completa de este código de muestra.
+Consulte [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] en el directorio Herramientas de la línea de comandos de implementación de referencia [!DNL samples] para obtener el origen completo de este código de ejemplo.
