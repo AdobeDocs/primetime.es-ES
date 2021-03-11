@@ -1,13 +1,10 @@
 ---
-description: Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookies para la administración de sesiones, el acceso a puerta, etc.
-seo-description: Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookies para la administración de sesiones, el acceso a puerta, etc.
-seo-title: Trabajar con cookies
+description: Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookie para la administración de sesiones, el acceso a la puerta, etc.
 title: Trabajar con cookies
-uuid: 7586a5a7-9914-403b-86a9-fbdd28664b07
 translation-type: tm+mt
-source-git-commit: 040655d8ba5f91c98ed0584c08db226ffe1e0f4e
+source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -15,18 +12,18 @@ ht-degree: 0%
 
 # Trabajar con cookies{#work-with-cookies}
 
-Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookies para la administración de sesiones, el acceso a puerta, etc.
+Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookie para la administración de sesiones, el acceso a la puerta, etc.
 
-A continuación se muestra un ejemplo con algún tipo de autenticación al realizar solicitudes al servidor de claves:
+A continuación, se muestra un ejemplo con algún tipo de autenticación al realizar solicitudes al servidor de claves:
 
-1. El cliente inicia sesión en el sitio web en un navegador y su inicio de sesión muestra que puede realizar vistas de contenido.
-1. La aplicación genera un autentificador, basado en lo que espera del servidor de licencias. Pase ese valor a TVSDK.
+1. El cliente inicia sesión en el sitio web en un explorador y su inicio de sesión muestra que puede ver el contenido.
+1. La aplicación genera un token de autenticación, en función de lo que espera el servidor de licencias. Pase ese valor a TVSDK.
 1. TVSDK establece ese valor en el encabezado de la cookie.
-1. Cuando TVSDK realiza una solicitud al servidor de claves para obtener una clave para descifrar el contenido, esa solicitud contiene el valor de autenticación en el encabezado de la cookie, de modo que el servidor de claves sabe que la solicitud es válida.
+1. Cuando TVSDK realiza una solicitud al servidor de claves para obtener una clave para descifrar el contenido, esa solicitud contiene el valor de autenticación en el encabezado de la cookie, por lo que el servidor de claves sabe que la solicitud es válida.
 
 Para trabajar con cookies:
 
-1. Utilice la propiedad `cookieHeaders` de `NetworkConfiguration` para establecer una cookie. La propiedad `cookieHeaders` es un objeto Metadata y puede agregar pares de valor clave a este objeto para incluirlos en el encabezado de la cookie.
+1. Utilice la propiedad `cookieHeaders` en `NetworkConfiguration` para establecer una cookie. La propiedad `cookieHeaders` es un objeto de metadatos y puede agregar pares de clave-valor a este objeto para incluirlos en el encabezado de la cookie.
 
    Por ejemplo:
 
@@ -38,7 +35,7 @@ Para trabajar con cookies:
    networkConfiguration.cookieHeaders = metadata;
    ```
 
-   De forma predeterminada, los encabezados de cookie se envían solo con solicitudes de clave. Para enviar encabezados de cookie con todas las solicitudes, establezca la propiedad `NetworkConfiguration` `useCookieHeadersForAllRequests` en true.
+   De forma predeterminada, los encabezados de cookie se envían solo con solicitudes clave. Para enviar encabezados de cookie con todas las solicitudes, establezca la propiedad `NetworkConfiguration` `useCookieHeadersForAllRequests` en true.
 
 1. Para asegurarse de que `NetworkConfiguration` funciona, configúrelo como metadatos:
 
@@ -52,7 +49,7 @@ Para trabajar con cookies:
 
 1. Proporcione los metadatos del paso anterior cuando cree un `MediaResource`.
 
-   Por ejemplo, si utiliza el método `createFromURL`, introduzca la siguiente información:
+   Por ejemplo, si utiliza el método `createFromURL` , introduzca la siguiente información:
 
    ```
    var resource:MediaResource = MediaResource.createFromURL(url, resourceMetadata);
