@@ -5,7 +5,7 @@ audience: end-user
 user-guide-title: Notas de la versión de Primetime
 user-guide-description: Proporciona información específica de la versión, requisitos del sistema, limitaciones, problemas solucionados y problemas conocidos.
 translation-type: tm+mt
-source-git-commit: a42c5b4478967822c920d96b05d5f04a6dec8c25
+source-git-commit: d1cf8a05172c04655c8a7c76ce116c8f7be61ec9
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 14%
@@ -16,12 +16,12 @@ ht-degree: 14%
 # Notas de la versión de Primetime  {#release-notes}
 
 + [Información general sobre las notas de la versión](home.md)
-+ Inserción de publicidad de Primetime {#ptai}
++ Ad Insertion de Primetime {#ptai}
    + [Notas de la versión PTAI 21.2.2](ptai-21x-release-notes.md)
    + [Notas de la versión PTAI 20.12.1](ptai-20x-release-notes.md)
    + [Notas de la versión 19.11.1 de PTAI](ptai-19x-release-notes.md)
 + TVSDK para iOS {#tvsdk-ios}
-   + [Notas de la versión de TVSDK 3.12 para iOS](tvsdk-3x-ios.md)
+   + [Notas de la versión de TVSDK 3.13 para iOS](tvsdk-3x-ios.md)
    + [Notas de la versión de TVSDK 1.4 para iOS](tvsdk-1-4-ios.md)
 + TVSDK para Android {#tvsdk-android}
    + [Notas de la versión de TVSDK 3.13 para Android](tvsdk-3x-android.md)
@@ -38,5 +38,5 @@ ht-degree: 14%
    + [Versiones de la versión 1 de Primetime Streaming Server](primetime-streaming-server-1x.md)
 + TVSDK para Playstation 4 {#tvsdk-playstation}
    + [Notas de la versión de TVSDK 2.1 PlayStation 4](tvsdk-21-ps4.md)
-+ Administración de derechos digitales {#drm}
++ Digital Rights Management {#drm}
    + [Notas de la versión de DRM 5.3.1](drm-531-release-notes.md)
