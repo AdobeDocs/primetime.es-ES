@@ -2,9 +2,9 @@
 description: Puede insertar anuncios en su VOD y contenido en directo/lineal mediante la interfaz de Adobe Primetime ad decisioning .
 title: Requisitos de publicidad
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: 944bfb0f3bd0050a9d2974a37f4fabddaaac8a93
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,4 @@ Para incorporar publicidades al contenido del vídeo, asegúrese de que la publi
 * Si el contenido principal contiene un flujo de solo audio, el contenido publicitario también debe contener un flujo de solo audio.
 * Si el contenido principal contiene secuencias de subtítulos, el contenido publicitario debe estar sin encriptar.
 * Si el contenido principal es una tasa de bits múltiple (MBR), el contenido publicitario también debe ser MBR.
-* Si el contenido principal tiene pistas de audio alternativas, cada anuncio debe tener al menos un flujo de solo audio.
-
-Si el anuncio no tiene al menos un flujo de solo audio, se omite el anuncio.
+* Si el contenido principal tiene pistas de audio alternativas, cada anuncio debe tener al menos un flujo de solo audio o los anuncios deben ser desactivados. Si el anuncio no tiene al menos un flujo de solo audio ni está desactivado, se omite el anuncio.
