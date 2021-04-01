@@ -1,11 +1,10 @@
 ---
-cloud: experience-cloud
 product: adobe primetime
 audience: end-user
 user-guide-title: Ayuda de Primetime Digital Rights Management
 user-guide-description: Ayuda a conocer mejor los distintos casos de usuario en Digital Rights Management (DRM).
 translation-type: tm+mt
-source-git-commit: 23a48208ac1d3625ae7d925ab6bfba8f2a980766
+source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '2215'
 ht-degree: 0%
@@ -42,11 +41,11 @@ ht-degree: 0%
    + Flujo de trabajo de distribución de contenido {#content-distribution-workflow}
       + [Preparación de contenido](drm-sdk-overview/content-distribution-workflow/content-preparation.md)
       + [Adquisición de contenido](drm-sdk-overview/content-distribution-workflow/content-acquisition.md)
-   + Componentes de DRM de Adobe Primetime {#adobe-access-components}
+   + Componentes DRM de Adobe Primetime {#adobe-access-components}
       + [Información general](drm-sdk-overview/adobe-access-components/adobe-access-sdk.md)
       + [SDK de Adobe Primetime DRM](drm-sdk-overview/adobe-access-components/drm-sdk.md)
-      + [Servidor DRM de Adobe Primetime para transmisión protegida](drm-sdk-overview/adobe-access-components/protected-streaming.md)
-      + [Adobe Flash Player](drm-sdk-overview/adobe-access-components/adobe-flash-player.md)
+      + [Servidor Adobe Primetime DRM para transmisión protegida](drm-sdk-overview/adobe-access-components/protected-streaming.md)
+      + [Flash Player de Adobe](drm-sdk-overview/adobe-access-components/adobe-flash-player.md)
       + [Adobe AIR](drm-sdk-overview/adobe-access-components/adobe-air.md)
       + [Aplicaciones nativas de iOS y Android](drm-sdk-overview/adobe-access-components/native-ios-and-android-apps.md)
    + [Implementación de Adobe Primetime DRM](drm-sdk-overview/adobe-access-components/deploy-adobe-access/configure-adobe-access.md)
@@ -58,7 +57,7 @@ ht-degree: 0%
    + [Instalar Tomcat](quick-start/install-tomcat.md)
    + [Configuración e implementación del servidor para la transmisión protegida](quick-start/setup-deploy-drm-server-ps.md)
    + [Empaquetar contenido cifrado](quick-start/package-content.md)
-   + [Instalación de Flash Player y contenido de prueba de reproducción](quick-start/install-fp-playback-test.md)
+   + [Instalación del contenido de prueba de Flash Player y reproducción](quick-start/install-fp-playback-test.md)
    + [Reproducir un vídeo empaquetado localmente](quick-start/playback-locally-pkgd-video.md)
    + [Pasos siguientes](quick-start/next-steps.md)
 + Guía de inicio rápido de Adobe Primetime Cloud DRM {#cloud-drm-quickstart}
@@ -68,7 +67,7 @@ ht-degree: 0%
    + Opciones de paquete {#packaging-options}
       + [Usar el Primetime Offline Packager incluido](cloud-quick-start/packaging-options/use-offline-packager.md)
       + [Uso de un codificador de terceros](cloud-quick-start/packaging-options/use-third-party-encoder.md)
-      + [Usar Adobe Media Server](cloud-quick-start/packaging-options/use-adobe-media-server.md)
+      + [Usar el servidor de Adobes Medium](cloud-quick-start/packaging-options/use-adobe-media-server.md)
    + [Probar el contenido empaquetado](cloud-quick-start/test-packaged-content.md)
    + [Prueba de errores](cloud-quick-start/triaging-errors/client-error-triaging.md)
    + Autenticación/asignación personalizada {#custom-auth-ent}
@@ -92,7 +91,7 @@ ht-degree: 0%
       + [Información general](secure-deployment-guidelines/overview/network-topology.md)
       + [Seguridad de capa de red](secure-deployment-guidelines/overview/network-topology-network-layer-sec.md)
       + [Reglas de firewall](secure-deployment-guidelines/overview/network-topology-firewall-rules.md)
-      + [Protocolos de red DRM de Adobe Primetime](secure-deployment-guidelines/overview/network-topology-nw-protocols.md)
+      + [Protocolos de red Adobe Primetime DRM](secure-deployment-guidelines/overview/network-topology-nw-protocols.md)
       + [Puertos para servidores de aplicaciones](secure-deployment-guidelines/overview/network-topology-ports-for-app-srvs.md)
       + [Configuración de SSL](secure-deployment-guidelines/overview/network-topology-configuring-ssl.md)
    + [Información de seguridad específica del proveedor](secure-deployment-guidelines/vendor-specific-sec-info.md)
@@ -118,7 +117,7 @@ ht-degree: 0%
       + [Flujo de trabajo Multi-DRM para FairPlay](multi-drm-workflows/p-l-and-p/fairplay-workflow.md)
       + [Flujo de trabajo Multi-DRM para Widevine y PlayReady](multi-drm-workflows/p-l-and-p/widevine-workflow.md)
       + [Empaquete su contenido con Bento4](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-bento.md)
-      + [Empaquete su contenido con Adobe Offline Packager](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-aop.md)
+      + [Empaquete el contenido con Adobe Offline Packager](multi-drm-workflows/p-l-and-p/package-for-widevine/package-for-widevine-with-aop.md)
       + [Uso de directivas de protección de salida](multi-drm-workflows/p-l-and-p/setting-policies-widevine.md)
       + [Resumen del flujo de trabajo de solicitud de clave de cliente](multi-drm-workflows/p-l-and-p/licensing-widevine-client-key-request/licensing-widevine-client-key-overview.md)
       + [Expresiones de tokens](multi-drm-workflows/p-l-and-p/licensing-widevine-client-key-request/licensing-widevine-client-key-expressplay-tokens.md)
@@ -140,7 +139,7 @@ ht-degree: 0%
       + [Solicitud de token de licencia de Widevine/respuesta](multi-drm-workflows/license-token-req-resp-ref/widevine-license-token-request.md)
    + [Migración de Access a Multi-DRM](multi-drm-workflows/access-vs-multi.md)
    + [Glosario](multi-drm-workflows/glossary/glossary-cek.md)
-+ Guía del servidor de individualización local de Adobe Primetime DRM {#individualization-server}
++ Guía del servidor de individualización de Adobe Primetime DRM On Premies {#individualization-server}
    + [Requisitos de software](on-premises-i15n-server/title-page/sw-requirements.md)
    + Propiedades de configuración del servidor {#configuration-properties}
       + [Aplicar propiedades a entornos de servidor](on-premises-i15n-server/server-configuration-section/server-properties/apply-props-to-envs.md)
@@ -160,13 +159,13 @@ ht-degree: 0%
    + [Ejemplos de solicitudes de cliente](on-premises-i15n-server/server-configuration-section/sample-client-requests.md)
    + [Preguntas frecuentes](on-premises-i15n-server/server-configuration-section/faq.md)
 + Servidor de Primetime DRM para transmisión protegida 5.3.1 {#server-for-protected-streaming}
-   + [Acerca del servidor DRM de Adobe Primetime para la transmisión protegida](protected-streaming/about-drm-for-protected-streaming.md)
+   + [Acerca del servidor Adobe Primetime DRM para flujo continuo protegido](protected-streaming/about-drm-for-protected-streaming.md)
    + [Acerca de las reglas de uso](protected-streaming/usage-rules.md)
    + [Requisitos](protected-streaming/requirements.md)
    + Explicación de la implementación {#understanding-deployment}
-      + [Implementación del servidor DRM de Adobe Primetime para la transmisión protegida](protected-streaming/understanding-deployment/deplying-drm-for-protected-streaming.md)
+      + [Implementación del servidor Adobe Primetime DRM para transmisión protegida](protected-streaming/understanding-deployment/deplying-drm-for-protected-streaming.md)
       + [Propiedades del sistema Java](protected-streaming/understanding-deployment/java-system-properties.md)
-      + [Acerca de las credenciales de DRM de Adobe Primetime](protected-streaming/understanding-deployment/drm-credentials.md)
+      + [Acerca de las credenciales DRM de Adobe Primetime](protected-streaming/understanding-deployment/drm-credentials.md)
       + [Configuración de HSM](protected-streaming/understanding-deployment/hsm-configuration.md)
       + Configuración de los archivos de configuración del servidor de licencias {#configuration-files}
          + [Archivos de configuración del servidor de licencias](protected-streaming/understanding-deployment/set-drm-license-server-config/drm-license-server-config-files.md)
@@ -176,24 +175,24 @@ ht-degree: 0%
       + [Archivo de directiva DRM de dominio cruzado](protected-streaming/understanding-deployment/drm-crossdomain-policy-file.md)
       + [Extensiones de autorización personalizadas](protected-streaming/understanding-deployment/custom-authorization-extensions.md)
       + [Ajuste del rendimiento](protected-streaming/understanding-deployment/performance-tuning/global-configuration-file.md)
-      + [Actualización del servidor DRM de Adobe Primetime para la transmisión protegida](protected-streaming/understanding-deployment/upgrading-the-license-server.md)
+      + [Actualización del servidor Adobe Primetime DRM para la transmisión protegida](protected-streaming/understanding-deployment/upgrading-the-license-server.md)
       + [Ejecución del servidor DRM para la transmisión protegida](protected-streaming/understanding-deployment/setting-the-license-server/running-the-license-server.md)
       + [Contenido del paquete](protected-streaming/understanding-deployment/packaging-content.md)
       + Servidor DRM para utilidades de transmisión protegidas {#drm-for-protected-streaming-utilities}
          + [Validador de configuración](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/configuration-validator.md)
          + [Desencadenador de contraseña](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/password-scrambler.md)
          + [Calculadora de hash SWF](protected-streaming/understanding-deployment/drm-for-protected-streaming-utilities/swf-hash-calculator.md)
-+ Uso del SDK de DRM de Adobe Primetime para la protección de contenido - 5.3.1 {#using-drm-sdk}
++ Uso del SDK de Adobe Primetime DRM para la protección de contenido - 5.3.1 {#using-drm-sdk}
    + [Novedades de Adobe Primetime DRM](protecting-content/introduction/whats-new.md)
    + Reglas de uso y autenticación {#usage-rules-authentication}
       + [Reglas de uso y autenticación](protecting-content/introduction/usage-rules/authentication/user-authentication.md)
       + [Reglas basadas en el tiempo](protecting-content/introduction/usage-rules/authentication/time-based-rules.md)
       + [Requisitos para la sincronización](protecting-content/introduction/usage-rules/authentication/synchronization.md)
    + Restricciones de tiempo de ejecución y aplicación {#runtime-application-restrictions}
-      + [Permitir lista para aplicaciones DRM de Primetime permitidas para reproducir contenido protegido...](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
-      + [Lista de permitidos para los SWF de Adobe® Flash® Player](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
-      + [Bloquear lista de clientes de DRM restringidos para acceder a contenido protegido](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md)
-      + [Lista de bloqueos de tiempos de ejecución de aplicaciones](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-app-runtimes.md)
+      + [Lista de permitidos para aplicaciones DRM de Primetime permitidas para reproducir contenido protegido...](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-air.md)
+      + [Lista de permitidos para archivos SWF del reproductor Adobe® Flash®](protecting-content/introduction/usage-rules/runtime-application-restrictions/allowlist-flash.md)
+      + [Lista de bloqueados de clientes DRM restringida del acceso a contenido protegido](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md)
+      + [Lista de bloqueados de los tiempos de ejecución de la aplicación](protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-app-runtimes.md)
       + [Nivel mínimo de seguridad para DRM y tiempos de ejecución](protecting-content/introduction/usage-rules/runtime-application-restrictions/min-sec-level-for-drm.md)
       + [Capacidades del dispositivo necesarias para reproducir contenido protegido](protecting-content/introduction/usage-rules/runtime-application-restrictions/device-capabilities.md)
       + [Aplicación de Jailbreak (requiere Adobe Primetime DRM)](protecting-content/introduction/usage-rules/runtime-application-restrictions/jailbreak-enforcement.md)
@@ -215,7 +214,7 @@ ht-degree: 0%
       + [Varias directivas de DRM](protecting-content/introduction/packaging-options/multiple-policies.md)
    + Configuración del SDK {#setting-up-the-sdk}
       + [Configuración del entorno de desarrollo](protecting-content/setting-up-the-sdk/setup-dev-env.md)
-      + [Credenciales de DRM de Adobe Primetime](protecting-content/setting-up-the-sdk/drm-credentials.md)
+      + [Credenciales de Adobe Primetime DRM](protecting-content/setting-up-the-sdk/drm-credentials.md)
       + [Solicitud de certificados](protecting-content/setting-up-the-sdk/requesting-certs.md)
       + [Almacenamiento de credenciales](protecting-content/setting-up-the-sdk/storing-credentials.md)
    + Trabajar con políticas de DRM {#working-policies}
@@ -235,7 +234,7 @@ ht-degree: 0%
    + Implementar un servidor de licencias {#implementing-the-license-server}
       + [Información general](protecting-content/implementing-the-license-server/implementing-license-overview.md)
       + [Opciones de implementación del servidor de licencias](protecting-content/implementing-the-license-server/license-server-deployment-options.md)
-      + [Procesamiento de solicitudes de DRM de Adobe Primetime](protecting-content/implementing-the-license-server/processing-drm-requests.md)
+      + [Procesamiento de solicitudes de Adobe Primetime DRM](protecting-content/implementing-the-license-server/processing-drm-requests.md)
       + [Gestionar las solicitudes Get Server Version](protecting-content/implementing-the-license-server/handling-get-server-version-reqs.md)
       + [Gestión de solicitudes de registro de dominio](protecting-content/implementing-the-license-server/handling-domain-registration-reqs.md)
       + [Gestión de solicitudes de anulación de registro de dominios](protecting-content/implementing-the-license-server/handling-domain-de-registration-reqs.md)
@@ -321,7 +320,7 @@ ht-degree: 0%
    + Actualizar implementaciones existentes {#upgrade-existing-deploys}
       + [Información general sobre la actualización de implementaciones existentes](drm-reference-implementations/upgrading-existing-deplys/upgrading-existing-deplys.md)
       + [Configuración de un servidor de dominio](drm-reference-implementations/upgrading-existing-deplys/upgrading-existing-deplys-setup-ds.md)
-+ Flujo de trabajo de Adobe Primetime TVSDK-DRM {#workflow}
++ Flujo de trabajo TVSDK-DRM de Adobe Primetime {#workflow}
    + [Resumen del flujo de trabajo del lado del cliente de TVSDK-DRM](tvsdk-drm-workflow/overview.md)
    + [Opciones de protección de contenido de DRM de Primetime](tvsdk-drm-workflow/content-protection-options.md)
    + [DRM de Primetime en el cliente](tvsdk-drm-workflow/drm-on-client.md)
@@ -341,19 +340,19 @@ ht-degree: 0%
    + [Vista previa de licencia](tvsdk-drm-workflow/license-preview.md)
    + [Entrega de contenido](tvsdk-drm-workflow/delivering-content.md)
 + [Referencia de mensajes de error de cliente DRM](client-error-message-reference.md)
-+ Uso de Adobe Access DRM con un sistema externo de administración de claves {#external-cek}
-   + [Información general del CEK externo de Adobe Access DRM](aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)
++ Uso de DRM de Acceso a Adobe con un Sistema de Administración de Claves Externas {#external-cek}
+   + [Información general del CEK externo de DRM de acceso al Adobe](aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek-overview.md)
    + [Flujo de trabajo DRM AAXS estándar](aaxs-drm-xkey-mgmt/aaxs-drm-standard-workflow.md)
    + [Flujo de trabajo CEK externo de AAXS DRM](aaxs-drm-xkey-mgmt/aaxs-drm-external-cek-workflow.md)
    + [Uso de CEK externo para otorgar y empaquetar licencias](aaxs-drm-xkey-mgmt/aaxs-drm-using-external-cek.md)
-+ Usar el servidor de Adobe Access para la transmisión protegida {#adobe-access-server}
-   + [Acerca del servidor de Adobe Access para la transmisión protegida](aaxs-protected-streaming/about-aaxs-protect-stream.md)
++ Usar Adobe Access Server para transmisión protegida {#adobe-access-server}
+   + [Acerca de Adobe Access Server para flujos protegidos](aaxs-protected-streaming/about-aaxs-protect-stream.md)
    + [Reglas de uso](aaxs-protected-streaming/usage-rules.md)
    + [Requisitos](aaxs-protected-streaming/requirements.md)
-   + Implementación del servidor de Adobe Access para la transmisión protegida {#deploying-aaxs-protect-stream}
-      + [Información general sobre la implementación del servidor de Adobe Access para la transmisión protegida](aaxs-protected-streaming/deplying-aaxs-protect-stream/deplying-aaxs-protect-stream-overview.md)
+   + Implementación de Adobe Access Server para transmisión protegida {#deploying-aaxs-protect-stream}
+      + [Información general sobre la implementación de Adobe Access Server para transmisión protegida](aaxs-protected-streaming/deplying-aaxs-protect-stream/deplying-aaxs-protect-stream-overview.md)
       + [Propiedades del sistema Java](aaxs-protected-streaming/deplying-aaxs-protect-stream/java-system-properties.md)
-      + [Credenciales de Adobe Access](aaxs-protected-streaming/deplying-aaxs-protect-stream/aaxs-credentials.md)
+      + [Credenciales de acceso al Adobe](aaxs-protected-streaming/deplying-aaxs-protect-stream/aaxs-credentials.md)
       + [Configuración de HSM](aaxs-protected-streaming/deplying-aaxs-protect-stream/hsm-configuration.md)
    + Archivos de configuración del servidor de licencias {#aaxs-license-server-config-files}
       + [Estructura del directorio de configuración](aaxs-protected-streaming/aaxs-license-server-config-files/aaxs-configuration-directory-structure.md)
@@ -363,8 +362,8 @@ ht-degree: 0%
    + [Extensiones de autorización personalizadas](aaxs-protected-streaming/custom-authorization-extensions.md)
    + Ajuste del rendimiento {#performance-tuning}
       + [Archivo de configuración global](aaxs-protected-streaming/performance-tuning/global-configuration-file.md)
-   + Actualización del servidor de Adobe Access para la transmisión protegida {#upgrading-the-license-server}
-      + [Ejecución del servidor de Adobe Access para la transmisión protegida](aaxs-protected-streaming/upgrading-the-license-server/running-the-license-server.md)
+   + Actualización de Adobe Access Server para transmisión protegida {#upgrading-the-license-server}
+      + [Ejecución de Adobe Access Server para transmisión protegida](aaxs-protected-streaming/upgrading-the-license-server/running-the-license-server.md)
       + [Archivos de registro](aaxs-protected-streaming/upgrading-the-license-server/log-files.md)
       + [Estructura del directorio de registros](aaxs-protected-streaming/upgrading-the-license-server/log-directory-structure.md)
       + [Archivo de registro global](aaxs-protected-streaming/upgrading-the-license-server/global-log-file.md)
@@ -375,16 +374,16 @@ ht-degree: 0%
       + [Actualización del archivo de configuración global](aaxs-protected-streaming/updating-configuration-files/updating-global-configuration.md)
       + [Actualización del archivo de configuración del inquilino](aaxs-protected-streaming/updating-configuration-files/updating-tenant-configuration.md)
    + [Contenido del paquete](aaxs-protected-streaming/packaging-content.md)
-   + Servidor de Adobe Access para utilidades de transmisión protegidas {#aaxs-protected-streaming-utilities}
+   + Adobe Access Server para utilidades de transmisión protegidas {#aaxs-protected-streaming-utilities}
       + [Validador de configuración](aaxs-protected-streaming/aaxs-protected-streaming-utilities/configuration-validator.md)
       + [Contraseña Scrambler](aaxs-protected-streaming/aaxs-protected-streaming-utilities/password-scrambler.md)
       + [Calculadora de hash SWF](aaxs-protected-streaming/aaxs-protected-streaming-utilities/swf-hash-calculator.md)
-+ Directrices de implementación segura de Adobe Access {#adobe-access-secure-deployment-guidelines}
++ Directrices de implementación segura de acceso a Adobe {#adobe-access-secure-deployment-guidelines}
    + Introducción a la topología de red {#overview}
       + [Información general sobre la topología de red](aaxs-secure-deployment-guidelines/overview/network-topology.md)
       + [Seguridad de capa de red](aaxs-secure-deployment-guidelines/overview/network-topology-network-layer-sec.md)
       + [Reglas de firewall](aaxs-secure-deployment-guidelines/overview/network-topology-firewall-rules.md)
-      + [Protocolos de red utilizados por Adobe Access](aaxs-secure-deployment-guidelines/overview/network-topology-nw-protocols.md)
+      + [Protocolos de red utilizados por el acceso a Adobe](aaxs-secure-deployment-guidelines/overview/network-topology-nw-protocols.md)
       + [Puertos para servidores de aplicaciones](aaxs-secure-deployment-guidelines/overview/network-topology-ports-for-app-srvs.md)
       + [Configuración de SSL](aaxs-secure-deployment-guidelines/overview/network-topology-configuring-ssl.md)
    + [Información de seguridad específica del proveedor](aaxs-secure-deployment-guidelines/vendor-specific-sec-info.md)
@@ -395,40 +394,40 @@ ht-degree: 0%
       + [Almacenamiento seguro de políticas](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-secure-storing-policies.md)
       + [Cifrado de claves asimétricas](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-ake.md)
       + [Garantizar la compatibilidad con Flash Media Rights Management Server 1.x](aaxs-secure-deployment-guidelines/pkging-and-protecting-content/pkging-and-protecting-content-ensure-compat-fmrms.md)
-   + Proteja y emita licencias {#issuing-licenses}
+   + Protect y licencias de emisión {#issuing-licenses}
       + [Consumo de listas CRL generadas localmente](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-local-crls.md)
-      + [Consumo de CRL publicadas por Adobe](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-crls-by-adobe.md)
+      + [Consumo de listas CRL publicadas por Adobe](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-consume-crls-by-adobe.md)
       + [Generación de listas CRL para complementar las publicadas por Adobe](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-gen-crls-to-supplement-adobe.md)
       + [Detección de reversión](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection.md)
       + [Recuento de máquinas al expedir licencias](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-rollback-detection-machine-count.md)
       + [Protección contra repetición](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-replay-detection.md)
-      + [Mantener una lista de permitidos de los paquetes de contenido de confianza](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-allowlist.md)
+      + [Mantener una lista de permitidos de paquetes de contenido de confianza](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-maintain-allowlist.md)
       + [Tiempo de espera para los tokens de autenticación](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-timeout-for-authn-tokens.md)
       + [Anulación de opciones de directiva](aaxs-secure-deployment-guidelines/issuing-licenses/protect-license-server-override-policy-options.md)
       + [Licencias de pregeneración](aaxs-secure-deployment-guidelines/issuing-licenses/pre-gen-licenses.md)
       + [Administración de dominios](aaxs-secure-deployment-guidelines/issuing-licenses/managing-domains.md)
-+ Información general sobre el SDK de Adobe Access {#overview}
-   + [Información general sobre el SDK de Adobe Access](aaxs-sdk-overview/overview.md)
-   + [Acerca de Adobe Access](aaxs-sdk-overview/about-adobe-access.md)
++ Información general sobre el SDK de acceso al Adobe {#overview}
+   + [Información general sobre el SDK de acceso a Adobe](aaxs-sdk-overview/overview.md)
+   + [Acerca del acceso al Adobe](aaxs-sdk-overview/about-adobe-access.md)
    + [Funciones principales](aaxs-sdk-overview/key-features.md)
    + [Terminología y conceptos básicos](aaxs-sdk-overview/terminology-and-core-concepts.md)
    + Flujo de trabajo de distribución de contenido {#content-distribution-workflow}
       + [Preparación de contenido](aaxs-sdk-overview/content-distribution-workflow/content-preparation.md)
       + [Adquisición de contenido](aaxs-sdk-overview/content-distribution-workflow/content-acquisition.md)
-   + [Componentes de Adobe Access](aaxs-sdk-overview/adobe-access-components/adobe-access-sdk.md)
-   + [Implementación de Adobe Access](aaxs-sdk-overview/deploying-adobe-access/configure-adobe-access.md)
+   + [Adobe Componentes de acceso](aaxs-sdk-overview/adobe-access-components/adobe-access-sdk.md)
+   + [Implementación del acceso al Adobe](aaxs-sdk-overview/deploying-adobe-access/configure-adobe-access.md)
    + Escenarios de implementación adicionales {#additional-scenarios}
-      + [Medios UltraViolet y Adobe Access](aaxs-sdk-overview/deploying-adobe-access/additional-deployment-scenarios/ultra-violet-media-adobe-access.md)
-      + [Adobe Pass y Adobe Access](aaxs-sdk-overview/deploying-adobe-access/additional-deployment-scenarios/adobe-pass-and-adobe-access.md)
-+ Uso del SDK de Adobe Access para la protección de contenido {#using-adobe-access-sdk}
+      + [Acceso a medios y Adobes UltraViolet](aaxs-sdk-overview/deploying-adobe-access/additional-deployment-scenarios/ultra-violet-media-adobe-access.md)
+      + [Acceso a Adobe Pass y Adobe](aaxs-sdk-overview/deploying-adobe-access/additional-deployment-scenarios/adobe-pass-and-adobe-access.md)
++ Uso del SDK de acceso a Adobe para la protección de contenido {#using-adobe-access-sdk}
    + [Introducción](aaxs-protecting-content/content-introduction/content-whats-new.md)
    + [Autenticación de usuarios](aaxs-protecting-content/content-introduction/content-usage-rules/content-authentication/content-user-authentication.md)
    + [Reglas basadas en el tiempo](aaxs-protecting-content/content-introduction/content-usage-rules/content-time-based-rules/content-time-based-rules-defining.md)
    + Restricciones de tiempo de ejecución y aplicación {#runtime-and-application-restrictions}
-      + [Permitir lista de aplicaciones Adobe® Primetime permitidas para reproducir contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)
-      + [Permitir lista de los SWF de Adobe® Flash® Player para los que se permite reproducir contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-flash.md)
-      + [Bloquear lista de clientes de DRM restringidos para acceder a contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-drm-clients.md)
-      + [Bloquear lista de tiempos de ejecución de aplicaciones restringidos para acceder a contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-app-runtimes.md)
+      + [Lista de permitidos para aplicaciones Adobe® Primetime permitidas para reproducir contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-air.md)
+      + [Lista de permitidos para los SWF del reproductor Adobe® Flash® que pueden reproducir contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-allowlist-flash.md)
+      + [Lista de bloqueados de clientes DRM restringida del acceso a contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-drm-clients.md)
+      + [Lista de bloqueados de los tiempos de ejecución de la aplicación restringidos para acceder a contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-blocklist-app-runtimes.md)
       + [Nivel mínimo de seguridad para DRM y tiempos de ejecución](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-min-sec-level-for-drm.md)
       + [Capacidades del dispositivo necesarias para reproducir contenido protegido](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-device-capabilities.md)
       + [Aplicación de la fuga de prisión (requiere Adobe Primetime)](aaxs-protecting-content/content-introduction/content-usage-rules/content-runtime-application-restrictions/content-jailbreak-enforcement.md)
@@ -449,7 +448,7 @@ ht-degree: 0%
       + [Varias políticas](aaxs-protecting-content/content-introduction/packaging-options/content-multiple-policies.md)
    + Configuración del SDK {#setting-up-the-sdk}
       + [Configuración del entorno de desarrollo](aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md)
-      + [Credenciales de Adobe Access](aaxs-protecting-content/content-setting-up-the-sdk/content-aaxs-credentials.md)
+      + [Credenciales de acceso al Adobe](aaxs-protecting-content/content-setting-up-the-sdk/content-aaxs-credentials.md)
       + [Solicitud de certificados](aaxs-protecting-content/content-setting-up-the-sdk/content-requesting-certs.md)
       + [Almacenamiento de credenciales](aaxs-protecting-content/content-setting-up-the-sdk/content-storing-credentials.md)
    + Uso de directivas {#working-with-policies}
@@ -470,8 +469,8 @@ ht-degree: 0%
    + Implementación del servidor de licencias {#implementing-license-server}
       + [Implementación del servidor de licencias](aaxs-protecting-content/content-implementing-the-license-server/content-implementing-license-server-overview.md)
       + [Opciones de implementación del servidor de licencias](aaxs-protecting-content/content-implementing-the-license-server/content-license-server-deployment-options.md)
-   + Procesamiento de solicitudes de Adobe Access {#processing-adobe-access-requests}
-      + [Procesamiento de solicitudes de Adobe Access](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-processing-aaxs-requests-overview.md)
+   + Procesamiento de solicitudes de acceso al Adobe {#processing-adobe-access-requests}
+      + [Procesamiento de solicitudes de acceso a Adobes](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-processing-aaxs-requests-overview.md)
       + [Uso de identificadores de máquina](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-using-machine-ids.md)
       + [Autenticación de usuarios](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-licenses-user-authentication.md)
       + [Protección contra repetición](aaxs-protecting-content/content-implementing-the-license-server/content-processing-aaxs-requests/content-replay-protection.md)
@@ -500,7 +499,7 @@ ht-degree: 0%
             + [Información general](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-handling-fmrms-compatibility-overview.md)
             + [Actualización de clientes](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-upgrading-clients.md)
             + [Actualización de metadatos](aaxs-protecting-content/content-implementing-the-license-server/content-handling-fmrms-compatibility/content-upgrading-metadata.md)
-         + [Gestión de actualizaciones de certificados cuando expiren los certificados emitidos por Adobe](aaxs-protecting-content/content-implementing-the-license-server/content-handling-cert-updates.md)
+         + [Gestión de actualizaciones de certificados cuando expiren los certificados emitidos por el Adobe](aaxs-protecting-content/content-implementing-the-license-server/content-handling-cert-updates.md)
          + [Ajuste del rendimiento](aaxs-protecting-content/content-implementing-the-license-server/content-performance-tuning.md)
          + [Generación de números aleatorios](aaxs-protecting-content/content-implementing-the-license-server/content-generating-random-nos.md)
    + Revocando las credenciales del cliente {#revoking-client-credentials}
@@ -508,7 +507,7 @@ ht-degree: 0%
       + [Revocación de las credenciales de tiempo de ejecución y cliente de DRM](aaxs-protecting-content/content-revoking-client-creds/content-revoking-drm-client-and-runtime-creds.md)
       + [Revocación de credenciales de máquina](aaxs-protecting-content/content-revoking-client-creds/content-revoking-machine-creds.md)
    + [Creación de reproductores de vídeo](aaxs-protecting-content/content-creating-video-players.md)
-+ Implementaciones de referencia de Adobe Access {#reference-implementation}
++ Implementaciones de referencia de acceso a Adobe {#reference-implementation}
    + [Información general: Uso de las implementaciones de referencia](aaxs-reference-implementations/overview.md)
    + [Herramientas de la línea de comandos para empaquetar contenido y crear listas de revocaciones  ](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
    + Administrador de políticas {#policy-manager}
@@ -567,12 +566,12 @@ ht-degree: 0%
    + [Migración de FMRMS 1.0 o 1.5 a Adobe Access 2.0 y posterior](aaxs-reference-implementations/license-server-migrating-fmrms-aaxs.md)
    + [Actualización de implementaciones existentes](aaxs-reference-implementations/license-server-upgrading-existing-deplys.md)
    + [Configuración de un servidor de dominio](aaxs-reference-implementations/license-server-upgrading-existing-deplys-setup-ds.md)
-   + Uso de aplicación de AIR de Flash Access Manager {#flash-access-manager-air-app-usage}
-      + Componentes de Flash Access Manager {#flash-manager-components}
+   + Uso de la aplicación de AIR del Administrador de Flashes Access {#flash-access-manager-air-app-usage}
+      + Componentes del Administrador de Flashes Access {#flash-manager-components}
          + [Creación de la aplicación de AIR y del servidor de Packager](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-overview.md)
          + [Creación del servidor de Packager](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-bld-pkg-srv.md)
-         + [Creación de la aplicación de AIR de Flash Access Manager](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-bld-fam-air-app.md)
-      + [Configuración inicial de Flash Access Manager](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup.md)
+         + [Creación de la aplicación de AIR del Administrador de Flashes Access](aaxs-reference-implementations/fam-air-app-usage/build-fam-air-app-usage/fam-air-app-usage-bld-fam-air-app.md)
+      + [Configuración inicial del Administrador de Flashes Access](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup.md)
       + Configuración de preferencias {#setting-preferences}
          + [Información general sobre la configuración de preferencias](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-set-prefs-overview.md)
          + [Preferencias de paquetes](aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pkg-prefs.md)
