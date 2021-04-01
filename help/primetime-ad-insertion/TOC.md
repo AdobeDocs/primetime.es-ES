@@ -1,10 +1,9 @@
 ---
-cloud: experience-cloud
 product: adobe primetime
 audience: end-user
 user-guide-title: Ayuda de Primetime Ad Insertion
 translation-type: tm+mt
-source-git-commit: bde82bd062a7980e08cdf2642c9e64be8f074a6e
+source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 4%
@@ -14,13 +13,13 @@ ht-degree: 4%
 
 # Ayuda de Primetime Ad Insertion {#ad-insertion}
 
-+ [Inserción de publicidad de Adobe Primetime](home.md)
-+ Anuncios de inserción de anuncios de Primetime{#announcements}
++ [Ad Insertion de Adobe Primetime](home.md)
++ Anuncios del Ad Insertion de Primetime{#announcements}
    + [Anuncios](announcements/overview.md)
    + [Notas de la versión](/help/release-notes/ptai-21x-release-notes.md)
 + Introducción a Primetime Ad Insertion{#get-started}
    + [Información general](getting-started/get-started-overview.md)
-   + [Preparación para el uso de la inserción de publicidad de Primetime](getting-started/setup-ptai.md)
+   + [Preparación para el uso de Primetime Ad Insertion](getting-started/setup-ptai.md)
    + [Integración del servidor de publicidad](getting-started/integrate-ad-server.md)
    + [Integración de su CDN](getting-started/integrate-cdn.md)
    + [Uso de la inserción de anuncios en flujos en directo/lineales](getting-started/ad-insertion-live-linear-stream.md)
