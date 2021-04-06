@@ -1,23 +1,24 @@
 ---
-title: Optimizar las experiencias de publicidad
-description: null
+title: Optimizar experiencias de publicidad
+description: Optimizar experiencias de publicidad
+copied-description: true
+exl-id: 0cdfbfe5-95f2-4509-8a67-623b77febbc8
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
 
+# Optimizar experiencias de publicidad {#optimizing-ad-experiences}
 
-# Optimizar las experiencias de publicidad {#optimizing-ad-experiences}
+Al decidir qué anuncio servir a un espectador es el dominio del servidor de publicidad, el Ad Insertion de Primetime también incluye un avanzado motor de decisión de publicidad que puede optimizar la experiencia de publicidad general para cada visualizador. Por ejemplo, las cargas de publicidad podrían reducirse para los visualizadores que se considere que tienen un valor de duración elevado o que han estado viendo en grupo durante más de 3 horas.
 
-Al decidir qué publicidad se proporciona a un visor es el dominio del servidor de publicidad, Primetime Ad Insertion también cuenta con un motor de decisión de publicidad avanzado que puede optimizar la experiencia de publicidad general para cada visor. Por ejemplo, las cargas de publicidad se pueden reducir para los visores que se considere que tienen un valor de duración elevado o que han estado observando de forma desmesurada durante más de 3 horas.
+En situaciones en las que las cargas de anuncios no se han predefinido (por ejemplo, en la programación de VOD), los clientes pueden utilizar el Ad Insertion de Primetime para personalizar las cargas de anuncios del visor en función de la información sobre el visor, su sesión de visualización, el contenido u otros factores.
 
-En situaciones en las que las cargas de anuncios no se han predefinido (por ejemplo, en la programación de VOD), los clientes pueden utilizar Primetime Ad Insertion para personalizar las cargas de anuncios del visor en función de la información sobre el visor, su sesión de visualización, el contenido u otros factores.
+La configuración de carga de publicidad se puede configurar en la sección Reglas de publicidad de sesión (en la pestaña Administración ) de la consola del Ad Insertion de Primetime.
 
-La configuración de carga de publicidad se puede configurar en la sección Reglas de publicidad de sesión (en la ficha Administración) de la consola de Primetime Ad Insertion.
+![Configuración de la carga de publicidad en la sección Reglas de publicidad de sesión de la consola del Ad Insertion](/help/primetime-ad-insertion/assets/ad-insertion-console.png)
 
-![Configuración de la carga de publicidad en la sección Reglas de publicidad de sesión de la consola Ad Insertion](/help/primetime-ad-insertion/assets/ad-insertion-console.png)
-
-*Figura: Consola de Ad Insertion Primetime*
+*Figura: Consola de Ad Insertion de Primetime*
