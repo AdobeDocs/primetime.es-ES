@@ -1,15 +1,16 @@
 ---
-title: Monitorear, depurar e informar
-description: null
+title: Monitorizar, depurar e informar
+description: Monitorizar, depurar e informar
+copied-description: true
+exl-id: 4ad8baa2-f112-4efc-956b-6557cbf079ae
 translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
 workflow-type: tm+mt
-source-wordcount: '37'
+source-wordcount: '41'
 ht-degree: 0%
 
 ---
 
+# Monitorizar, depurar e informar {#monitoring-debugging-and-reporting}
 
-# Monitorear, depurar e informar {#monitoring-debugging-and-reporting}
-
-Primetime Ad Insertion proporciona una consola que incluye paneles para monitorear el rendimiento de inserción y varias herramientas para la resolución de problemas y la depuración. En esta sección se proporciona información general sobre estas herramientas.
+El Ad Insertion de Primetime proporciona una consola que incluye paneles para monitorizar el rendimiento de la inserción y varias herramientas para solucionar problemas y depurar. En esta sección se ofrece una descripción general de esas herramientas.
