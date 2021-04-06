@@ -1,10 +1,11 @@
 ---
 title: Formatos admitidos
-description: null
+description: Formatos admitidos
+copied-description: true
 translation-type: tm+mt
-source-git-commit: 126a5129ee4102802173f3203ec4fb829ad0b08d
+source-git-commit: f0e58c59e5f71ff79861dc634d9c9b3364e49db6
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '54'
 ht-degree: 0%
 
 ---
@@ -12,17 +13,17 @@ ht-degree: 0%
 
 # Formatos admitidos {#supported-formats}
 
-Primetime Ad Insertion intercepta y admite la inserción de anuncios en los siguientes flujos de medios:
+El Ad Insertion de Primetime intercepta y admite la inserción de anuncios en los siguientes flujos de medios:
 
 ## HLS {#hls}
 
-- Listas de reproducción de fragmentos de audio y vídeo mixtos
-- Listas de reproducción de audio y vídeo CMAF y desactivadas, incluidas las listas de reproducción solo de audio
+- Listas de reproducción de fragmentos de audio/vídeo mixtos
+- CMAF y listas de reproducción de audio/vídeo desactivadas, incluidas las listas de reproducción de solo audio
 - WebVTT
 - Listas de reproducción de flujo I-Frame (#EXT-X-I-FRAME-STREAM-INF)
 - Listas de reproducción de imágenes de Thubmanil (#EXT-X-IMAGE-STREAM-INF)
 
 ## DASH {#dash}
 
-- Listas de reproducción de audio y vídeo CMAF y desactivadas, incluidas las listas de reproducción solo de audio
+- CMAF y listas de reproducción de audio/vídeo desactivadas, incluidas las listas de reproducción de solo audio
 - WebVTT
