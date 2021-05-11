@@ -1,14 +1,14 @@
 ---
 description: Puede configurar el reproductor para rastrear y analizar el uso de vídeo.
 title: Inicializar y configurar Video Analytics
+exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
 translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+source-git-commit: d884836a2a585bd3540b085de1098cf6ae3de46b
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%
 
 ---
-
 
 # Inicializar y configurar Video Analytics {#initialize-and-configure-video-analytics}
 
@@ -133,6 +133,7 @@ Antes de comenzar una nueva sesión de reproducción de contenido, elimine la in
           videoAnalyticsProvider.detachMediaPlayer();
           videoAnalyticsProvider = null;
       ```
+
    4. Marca de forma manual como completado el flujo en directo/lineal.
 Si tiene varios episodios en una emisión en directo, puede marcar manualmente un episodio como completo mediante la API completa. Esto finaliza la sesión de seguimiento de vídeo del episodio de vídeo actual y puede iniciar una nueva sesión de seguimiento para el episodio siguiente.
       >[!TIP]
@@ -146,5 +147,5 @@ Si tiene varios episodios en una emisión en directo, puede marcar manualmente u
       videoAnalyticsProvider.detachMediaPlayer();
       videoAnalyticsProvider = null;
       // Create a new instance of VideoAnalyticsProvider to continue tracking.
-      } 
+      }
       ```
