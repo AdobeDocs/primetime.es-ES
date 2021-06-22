@@ -1,14 +1,13 @@
 ---
 description: La aplicación puede supervisar la actividad del reproductor y el estado cambiante del reproductor escuchando los eventos que envía TVSDK.
 title: Resumen de eventos del reproductor de Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3912f140-1600-41fb-9dc4-306646b7cd85
+source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
-
 
 # Resumen de eventos del reproductor Primetime {#primetime-player-events-summary}
 
@@ -109,7 +108,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 * **Código de evento** `BUFFERING_END`
 
-`BufferPreparedEventListener&#39;
+`BufferPreparedEventListener`
 
 * **** Significa que el búfer está preparado.
 
