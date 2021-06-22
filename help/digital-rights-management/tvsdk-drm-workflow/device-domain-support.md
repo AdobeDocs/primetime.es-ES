@@ -1,14 +1,13 @@
 ---
 description: Normalmente, todas las licencias de DRM de Primetime, en el momento de la creación, están vinculadas a un dispositivo único. Este enlace impide que los usuarios compartan licencias entre distintos dispositivos sin autorización. Además del enlace por dispositivo, Primetime DRM proporciona la capacidad de enlazar licencias a un dominio de dispositivo o a un grupo de dispositivos.
 title: Reproducción de contenido cifrado mediante compatibilidad con dominios
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3c9badfc-046b-4c56-bde1-7b3b708bfaa2
+source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
 
 ---
-
 
 # Compatibilidad con el dominio del dispositivo {#device-domain-support}
 
@@ -32,6 +31,6 @@ Para reproducir contenido cifrado mediante Primetime DRM , realice los siguiente
    1. Invocar `DRMManager.addToDeviceGroup()`
 1. Obtenga la licencia para el contenido realizando una de las siguientes tareas:
    1. Utilice el método `DRMManager.loadVoucher()`.
-   1. Obtenga la licencia de un dispositivo diferente registrado en el mismo grupo de dispositivos y proporcione la licencia a ` DRMManager` mediante el método `DRMManager.storeVoucher()`.
+   1. Obtenga la licencia de un dispositivo diferente registrado en el mismo grupo de dispositivos y proporcione la licencia a `DRMManager` mediante el método `DRMManager.storeVoucher()`.
 1. Reproducir el contenido cifrado con el método `Primetime.play()`.
 Para exportar la licencia del contenido, cualquiera de los dispositivos puede proporcionar los bytes sin procesar de la licencia mediante el método `DRMVoucher.toByteArray()` después de obtener la licencia del servidor de licencias DRM de Primetime. Los proveedores de contenido suelen limitar el número de dispositivos de un grupo de dispositivos. Si se alcanza el límite, es posible que tenga que llamar al método `DRMManager.removeFromDeviceGroup()` en un dispositivo no utilizado antes de registrar el dispositivo actual.
