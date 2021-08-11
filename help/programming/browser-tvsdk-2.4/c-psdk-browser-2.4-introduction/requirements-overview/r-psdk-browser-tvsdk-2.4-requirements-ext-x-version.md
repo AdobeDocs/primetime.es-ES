@@ -1,16 +1,15 @@
 ---
-description: 'La versión de #EXT-X-VERSION en el archivo .m3u8 afecta a las características disponibles para su aplicación y a las etiquetas EXT válidas en su lista de reproducción/manifiesto.'
-title: '#EXT-X-VERSION requisitos'
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La versión de `#`EXT-X-VERSION en el archivo .m3u8 afecta a las funciones disponibles para la aplicación y a las etiquetas EXT válidas en la lista de reproducción/manifiesto.
+title: '`#`EXT-X-VERSION'
+exl-id: 1b7c205b-c6b1-416f-885a-d1cd23d8e803
+source-git-commit: 8610792a7410dab59d42ab7771b534c2c1670ad2
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
 
 ---
 
-
-# #EXT-X-VERSION requirements{#ext-x-version-requirements}
+# `#`Requisitos de EXT-X-VERSION{#ext-x-version-requirements}
 
 La versión de #EXT-X-VERSION en el archivo .m3u8 afecta a las características disponibles para su aplicación y a las etiquetas EXT válidas en su lista de reproducción/manifiesto.
 
@@ -48,4 +47,3 @@ Aquí puede encontrar más información sobre la etiqueta `#EXT-X-VERSION` , que
   </tr> 
  </tbody> 
 </table>
-
