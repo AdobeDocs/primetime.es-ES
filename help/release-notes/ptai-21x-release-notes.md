@@ -1,27 +1,56 @@
 ---
-title: Notas de la versión de PTAI 21.5.1
+title: Notas de la versión de PTAI 21.8.1
 description: Las notas de la versión de PTAI describen las novedades o los cambios, los problemas resueltos y conocidos de Primetime Ad Insertion en el año 2021.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
+source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
 
-# Notas de la versión de Primetime Ad Insertion 21.5.1
+# Notas de la versión de Primetime Ad Insertion 21.8.1
 
-Las notas de la versión de Primetime Ad Insertion 21.x.x describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en Primetime Ad Insertion en el año 2021.
+Las notas de la versión de Primetime Ad Insertion 21.x.x describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en Primetime Ad Insertion en el año 2021
 
-## Novedades de PTAI 21.5.1
+<!---
+Primetime Ad Insertion 21.9.1
+When: Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM EASTERN
+
+
+
+
+
+
+
+
+
+What:  Primetime Ad Insertion 21.9.1
+
+When:  Tuesday, September 7, 2021 from 02:30 AM to 05:30 AM Eastern Time
+
+Changes:
+
+* Updates to infrastructure components behind PTAI’s mediation and reporting components (Primetime Ads GUI)
+-->
+
+## Novedades de PTAI 21.8.1
+
+Cuando: Martes, 24 de agosto de 2021 de las 2 a las 5 horas, hora del este
+
+* Se ha añadido compatibilidad con flujos en directo/lineales de DASH (VOD ya es compatible).
+
+## Mejoras y correcciones en versiones anteriores
+
+### Versión 21.5.1
 
 Cuando:  Miércoles, 26 de mayo de 2021 de las 3:30 a.m. a las 06:30 a.m. hora del Este
+
+**Cambios**
 
 * Se ha agregado compatibilidad con el tipo de segmentación obsoleta 0x01 (UPID) para formatos de referencia basados en SCTE.
 
 * Se ha añadido una nueva telemetría para los próximos cambios en el tablero.
-
-## Mejoras y correcciones en versiones anteriores
 
 ### Versión 21.4.1
 

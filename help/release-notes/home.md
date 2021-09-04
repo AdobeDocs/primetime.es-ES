@@ -3,10 +3,10 @@ title: Notas de la versión de Primetime
 description: Notas de la versión de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: fe0f5f3399d2e2ab3e07713fbcd29ede47888d98
+source-git-commit: 97a192ed1d0ddc034f72a836a70293acfcca9881
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 31%
+source-wordcount: '340'
+ht-degree: 32%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 31%
 
 Le damos la bienvenida a las notas de la versión de Adobe Primetime. Los documentos enumerados en la navegación de la izquierda proporcionan información específica sobre la versión, requisitos del sistema, limitaciones, problemas corregidos y problemas conocidos.
 
-## Mejoras y correcciones en PTAI 21.5.1
+## Mejoras y correcciones en PTAI 21.8.1
 
-La versión incluye nueva telemetría para los próximos cambios en el tablero, y compatibilidad con el tipo de segmentación obsoleta 0x01 (UPID) para formatos de referencia basados en SCTE.
+La versión incluye compatibilidad con flujos en directo/lineales de DASH.
 
 Para obtener más correcciones y detalles, consulte [Notas de la versión del Ad Insertion](/help/release-notes/ptai-21x-release-notes.md)
 
