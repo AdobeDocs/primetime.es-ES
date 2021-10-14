@@ -2,14 +2,13 @@
 title: Inicializar y configurar Video Analytics
 description: Inicializar y configurar Video Analytics
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 26bdc11e-b8f6-414f-a3e9-53bc895d25ce
+source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 0%
 
 ---
-
 
 # Inicializar y configurar Video Analytics {#initialize-and-configure-video-analytics}
 
@@ -33,7 +32,7 @@ Antes de activar el seguimiento de vídeo (latidos de vídeo), asegúrese de que
   </tr> 
   <tr> 
    <td colname="col1"> Punto final del servidor de seguimiento de Video Analytics </td> 
-   <td colname="col2"> Dirección URL del extremo de recopilación back-end de video analytics. Aquí es donde se envían todas las llamadas de seguimiento de Video Heartbeat. <p>Sugerencia:  La dirección URL del servidor de seguimiento de visitantes es la misma que la dirección URL del servidor de seguimiento de Analytics. Para obtener información sobre la implementación del servicio de ID de visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementación del servicio de ID </a>. </p> </td> 
+   <td colname="col2"> Dirección URL del extremo de recopilación back-end de video analytics. Aquí es donde se envían todas las llamadas de seguimiento de Video Heartbeat. <p>Sugerencia:  La dirección URL del servidor de seguimiento de visitantes es la misma que la dirección URL del servidor de seguimiento de Analytics. Para obtener información sobre la implementación del servicio de ID de visitante, consulte <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementación del servicio de ID </a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Nombre de la cuenta </td> 
@@ -90,7 +89,7 @@ Para configurar el seguimiento de vídeo en el reproductor:
    1. Compile y cree la aplicación.
    1. Implemente y ejecute la aplicación agrupada.
 
-      Para obtener más información sobre esta configuración de AppMeasurement, consulte [Medición de vídeo en Adobe Analytics](https://marketing.adobe.com/resources/help/en_US/sc/appmeasurement/video/).
+      Para obtener más información sobre esta configuración de AppMeasurement, consulte [Medición de vídeo en Adobe Analytics](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en).
 
 1. Inicialice y configure metadatos de seguimiento de Video Heartbeat.
 

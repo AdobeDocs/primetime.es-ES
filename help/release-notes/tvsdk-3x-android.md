@@ -1,20 +1,19 @@
 ---
-title: Notas de la versión de TVSDK 3.13 para Android
-description: Las notas de la versión de TVSDK 3.13 para Android describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de los dispositivos en TVSDK Android 3.13
+title: Notas de la versión de TVSDK 3.14 para Android
+description: Las notas de la versión de TVSDK 3.14 para Android describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de los dispositivos en TVSDK Android 3.14
 products: SG_PRIMETIME
 topic-tags: release-notes
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+exl-id: cd2c64ef-dd42-4dc2-805f-eeb64a8a53d9
+source-git-commit: 988bcf8cbc0175e15bcc899a6f6954cc31c5e127
 workflow-type: tm+mt
-source-wordcount: '5443'
+source-wordcount: '5480'
 ht-degree: 0%
 
 ---
 
+# Notas de la versión de TVSDK 3.14 para Android {#tvsdk-for-android-release-notes}
 
-# Notas de la versión de TVSDK 3.13 para Android {#tvsdk-for-android-release-notes}
-
-Las notas de la versión de TVSDK 3.13 para Android describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de dispositivo en TVSDK Android 3.13.
+Las notas de la versión de TVSDK 3.14 para Android describen las novedades o los cambios, los problemas resueltos y conocidos y los problemas de dispositivos en TVSDK Android 3.14.
 
 El reproductor de referencia de Android se incluye con Android TVSDK en el directorio samples/ de su distribución. El archivo README.md que lo acompaña explica cómo crear el reproductor de referencia.
 
@@ -30,17 +29,21 @@ TVSDK para Android proporciona muchas mejoras de rendimiento con respecto a las 
 
 El conjunto completo de funciones compatibles y no compatibles se presenta en la sección [Matriz de funciones](#feature-matrix) de las notas de la versión.
 
-## Android TVSDK 3.13
+## Android TVSDK 3.14
+
+Esta versión corrige el problema en el que la aplicación se bloquea cuando el nodo [!UICONTROL CDATA] está vacío para cualquiera de los elementos [!UICONTROL ClickTracking], [!UICONTROL CustomClick] o [!UICONTROL CompanionClickTracking] en la respuesta VAST.
+
+### Nuevas funciones y mejoras de las versiones anteriores
+
+**Android TVSDK 3.13**
 
 El flujo Widevine DRM congela o muestra marcos negros en el conmutador ABR en dispositivos FireTV, que incluyen dispositivos de 1ª y 2ª generación de Fire TV Pendant y Fire TV Cube.
 
 Para resolver el problema, establezca la API `MediaPlayer.flushVideoDecoderOnHeaderChange(true)` para los dispositivos Fire TV especificados antes de iniciar la reproducción. El valor predeterminado es false.
 
-### Nuevas funciones y mejoras de las versiones anteriores
+**Android TVSDK 3.12**
 
-## Android TVSDK 3.12
-
-La versión de gradle de la aplicación de referencia de Primetime ahora se actualiza a la versión 5.6.4.
+Se ha actualizado la versión de gradle de la aplicación de referencia de Primetime a la versión 5.6.4.
 
 Para configurar y ejecutar la aplicación de referencia mediante Android Studio, siga las instrucciones del archivo Léame disponible con TVSDK zip en `TVSDK_Android_x.x.x.x/samples/PrimetimeReference/src/README.md`.
 
@@ -307,7 +310,7 @@ Cuando TVSDK abre una conexión, solicita al servidor una conexión *keep-live*.
 
    * **Integración de moat:** compatibilidad con la medición de la capacidad de visualización de anuncios de Moat.
 
-   * **Titulares Companion:** los banners Companion se muestran junto a un anuncio lineal y a menudo se siguen mostrando en la vista una vez finalizado el anuncio. Estos banners pueden ser de tipo html (un fragmento HTML) o iframe de tipo (una dirección URL a una página de iframe).
+   * **Titulares Companion:** los banners Companion se muestran junto a un anuncio lineal y a menudo se siguen mostrando en la vista una vez finalizado el anuncio. Estos banners pueden ser de tipo html (un fragmento de HTML) o iframe de tipo (una dirección URL a una página de iframe).
 
 * **Analytics**
 
@@ -423,13 +426,19 @@ En las tablas de características siguientes, una &quot;Y&quot; indica que la fu
 
 Cuando la resolución está asociada a un problema registrado, se muestra una referencia de Zendesk, por ejemplo ZD#xxxxx.
 
-**Android TVSDK 3.12**
 
-En esta sección se ofrece un resumen del problema resuelto en la versión de Android TVSDK 3.12.
 
-* ZD#40584 - La aplicación de referencia de Primetime no se genera con la versión de último grado.
+**Android TVSDK 3.14**
+
+En esta sección se ofrece un resumen del problema resuelto en la versión de Android TVSDK 3.14.
+
+* ZD#46903 - La aplicación se bloquea cuando el nodo [!UICONTROL CDATA] está vacío para cualquiera de los elementos [!UICONTROL ClickTracking], [!UICONTROL CustomClick] o [!UICONTROL CompanionClickTracking] en la respuesta [!UICONTROL VAST].
 
 ### Problemas resueltos en versiones anteriores
+
+**Android TVSDK 3.12**
+
+* ZD#40584 - La aplicación de referencia de Primetime no se genera con la versión de último grado.
 
 **Android TVSDK 3.11**
 
@@ -657,7 +666,7 @@ WebViewDebuging está establecido en False de forma predeterminada. Para habilit
 
 * Bloqueo específico del dispositivo (Samsung Galaxy Tab 4); VOD DRM LBA con Auditude y haga clic en los anuncios.
 * VHL: se envían llamadas de Heartbeat incorrectas al iniciar contenido desde un desplazamiento.
-* Cuando se reproducen publicidades VPAID, falta el latido VHL invoca event:type:play y .
+* Cuando se reproducen anuncios VPAID, falta el monitoreo de VHL llama a event:type:play ad .
 * Después de entrar en el estado COMPLETE , el reproductor vuelve al estado PLAYING con SKIP adBreakPolicy para anuncios posteriores a la emisión.
 * Las cookies no se adjuntan a las llamadas de retorno de anuncios salientes.
 * Los puntos de referencia de anuncios no están visibles.

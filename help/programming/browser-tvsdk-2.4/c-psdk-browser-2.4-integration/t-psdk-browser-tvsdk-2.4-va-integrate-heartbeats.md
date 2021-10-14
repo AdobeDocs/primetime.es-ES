@@ -2,10 +2,9 @@
 description: Puede configurar el reproductor para rastrear y analizar el uso de vídeo.
 title: Inicializar y configurar Video Analytics
 exl-id: e0bf461b-a431-4fba-bd3d-c38be307a92f
-translation-type: tm+mt
-source-git-commit: d884836a2a585bd3540b085de1098cf6ae3de46b
+source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '689'
 ht-degree: 0%
 
 ---
@@ -26,7 +25,7 @@ Antes de activar el seguimiento de vídeo (latidos de vídeo), asegúrese de que
   </tr>
   <tr>
    <td colname="col1"> Punto final del servidor de seguimiento de Video Analytics </td>
-   <td colname="col2"> Dirección URL del extremo de recopilación back-end de video analytics. Aquí es donde se envían todas las llamadas de seguimiento de Video Heartbeat. <p>Sugerencia:  La dirección URL del servidor de seguimiento de visitantes es la misma que la dirección URL del servidor de seguimiento de Analytics. Para obtener información sobre la implementación del servicio de ID de visitante, consulte <a href="https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html" format="html" scope="external"> Implementación del servicio de ID </a>. </p> </td>
+   <td colname="col2"> Dirección URL del extremo de recopilación back-end de video analytics. Aquí es donde se envían todas las llamadas de seguimiento de Video Heartbeat. <p>Sugerencia:  La dirección URL del servidor de seguimiento de visitantes es la misma que la dirección URL del servidor de seguimiento de Analytics. Para obtener información sobre la implementación del servicio de ID de visitante, consulte <a href="https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en" format="html" scope="external"> Implementación del servicio de ID </a>. </p> </td>
   </tr>
   <tr>
    <td colname="col1"> Nombre de la cuenta </td>
@@ -59,7 +58,7 @@ Para configurar el seguimiento de vídeo en el reproductor:
    * La única opción de configuración para la biblioteca VisitorAPI es la URL del extremo back-end que proporciona el identificador único para el usuario actual.
    * La dirección URL del servidor de seguimiento de visitantes es la misma que la dirección URL del servidor de seguimiento de Analytics.
 
-      Para obtener información sobre la implementación del servicio de ID de visitante, consulte [Implementación del servicio de ID de visitante](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-setup-target.html).
+      Para obtener información sobre la implementación del servicio de ID de visitante, consulte [Implementación del servicio de ID de visitante](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=en).
 
    ```js
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID");
