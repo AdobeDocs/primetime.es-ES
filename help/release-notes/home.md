@@ -3,7 +3,7 @@ title: Notas de la versión de Primetime
 description: Notas de la versión de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 9b91bbc92a613a60233a73cded542a04efd61148
+source-git-commit: 6621a42d859cb872569123c175764e577bb46b9a
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 37%
@@ -13,6 +13,12 @@ ht-degree: 37%
 # Notas de la versión de Primetime
 
 Le damos la bienvenida a las notas de la versión de Adobe Primetime. Los documentos enumerados en la navegación de la izquierda proporcionan información específica sobre la versión, requisitos del sistema, limitaciones, problemas corregidos y problemas conocidos.
+
+## Correcciones en TVSDK 3.14 para Android
+
+Esta versión proporciona solución a un problema en el que la aplicación se bloquea cuando el nodo [!UICONTROL CDATA] está vacío para cualquiera de los elementos [!UICONTROL ClickTracking], [!UICONTROL CustomClick] o [!UICONTROL CompanionClickTracking] en la respuesta [!UICONTROL VAST].
+
+Consulte las [Notas de la versión de TVSDK para Android](../release-notes/tvsdk-3x-android.md) para obtener más información.
 
 ## Mejoras y correcciones en PTAI 21.8.1
 
@@ -25,12 +31,6 @@ Para obtener más correcciones y detalles, consulte [Notas de la versión del Ad
 La versión incorpora compatibilidad con los anuncios DEMUXED &#39;HLS/CMAF&#39; (preroll, midroll y postroll) para emisiones en directo, VOD y FER.
 
 Para obtener más correcciones y detalles, consulte [TVSDK para las notas de la versión de iOS](../release-notes/tvsdk-3x-ios.md)
-
-## Correcciones en TVSDK 3.14 para Android
-
-Esta versión proporciona solución a un problema en el que la aplicación se bloquea cuando el nodo [!UICONTROL CDATA] está vacío para cualquiera de los elementos [!UICONTROL ClickTracking], [!UICONTROL CustomClick] o [!UICONTROL CompanionClickTracking] en la respuesta [!UICONTROL VAST].
-
-Consulte las [Notas de la versión de TVSDK para Android](../release-notes/tvsdk-3x-android.md) para obtener más información.
 
 ## Consulte también
 
