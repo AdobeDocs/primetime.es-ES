@@ -3,10 +3,10 @@ title: Notas de la versión de Primetime
 description: Notas de la versión de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 6621a42d859cb872569123c175764e577bb46b9a
+source-git-commit: 21695ad15f1dcbbfa33211efd0fb3ab282fefbeb
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 37%
+source-wordcount: '306'
+ht-degree: 36%
 
 ---
 
@@ -20,17 +20,17 @@ Esta versión proporciona solución a un problema en el que la aplicación se bl
 
 Consulte las [Notas de la versión de TVSDK para Android](../release-notes/tvsdk-3x-android.md) para obtener más información.
 
-## Mejoras y correcciones en PTAI 21.8.1
+## Mejoras y correcciones en PTAI 21.10.1
 
-La versión incluye compatibilidad con flujos en directo/lineales de DASH.
+La versión se centra en la consolidación de servidores, la eliminación de servidores que no sean de producción y no sean útiles.
 
-Para obtener más correcciones y detalles, consulte [Notas de la versión del Ad Insertion](/help/release-notes/ptai-21x-release-notes.md)
+Para obtener más correcciones y detalles, consulte [Notas de la versión del Ad Insertion](/help/release-notes/ptai-21x-release-notes.md).
 
 ## Mejoras y correcciones en TVSDK 3.13 iOS
 
 La versión incorpora compatibilidad con los anuncios DEMUXED &#39;HLS/CMAF&#39; (preroll, midroll y postroll) para emisiones en directo, VOD y FER.
 
-Para obtener más correcciones y detalles, consulte [TVSDK para las notas de la versión de iOS](../release-notes/tvsdk-3x-ios.md)
+Para obtener más información y correcciones, consulte [TVSDK for iOS Release Notes](../release-notes/tvsdk-3x-ios.md).
 
 ## Consulte también
 
