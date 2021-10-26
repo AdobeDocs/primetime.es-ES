@@ -2,8 +2,7 @@
 product: adobe primetime
 audience: end-user
 user-guide-title: Ayuda de Primetime Ad Insertion
-translation-type: tm+mt
-source-git-commit: 9cf1312024ee755e0c99213899c89c015731b66f
+source-git-commit: 98882f0e36919635d99b0cd95f87f9736b692f73
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 4%
@@ -38,7 +37,7 @@ ht-degree: 4%
    + [Segmentación y creación de informes contextuales](advanced-features/contextual-reporting-and-targeting.md)
 + Rendimiento: supervisión, depuración y creación de informes{#performance}
    + [Información general](performance-monitoring-debugging-reporting/performance-overview.md)
-   + Monitorizar y depurar{#monitor-debug}
+   + Monitorización y depuración{#monitor-debug}
       + [Monitorización del rendimiento](performance-monitoring-debugging-reporting/performance-monitoring.md)
       + [Resolución de problemas y depuración](performance-monitoring-debugging-reporting/troubleshoot-and-debug.md)
    + [Informes y facturación](performance-monitoring-debugging-reporting/reporting-and-billing.md)
@@ -47,7 +46,8 @@ ht-degree: 4%
    + [Métricas clave y dimensiones de datos](advanced-telemetry/key-metrics.md)
 + [Supervisión de eventos en directo](live-event-monitoring.md)
 + Referencia {#technical-reference}
-   + [Referencia de API/API de Bootstrap](technical-reference/bootstrap-api.md)
+   + [API de Bootstrap](technical-reference/bootstrap-api.md)
+   + [API de informes](assets/auditude-report-api.pdf)
    + Prácticas recomendadas{#best-practices}
       + [Información general](best-practices/best-practices-overview.md)
       + [Optimizar los tiempos de inicio de vídeo](best-practices/optimize-video-startup-time.md)

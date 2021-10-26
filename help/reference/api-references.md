@@ -2,19 +2,19 @@
 title: Referencias de la API de Adobe Primetime
 description: Las API le ayudan a crear una aplicación o integración funcional de forma rápida y sencilla.
 topic-tags: API-references
-translation-type: tm+mt
-source-git-commit: d8fde0d03bea85b3fefcfa5dcbfddee76b17de03
+exl-id: 6862764e-c1d8-413a-a0c0-66b31eac8e53
+source-git-commit: bf9adba0bace7e1327446d936c4bfe27f66fb2ac
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Referencias de la API de Adobe Primetime {#api-references}
 
 + Ad Insertion dinámico de Primetime {#server-side}
    + [Referencia de la API del Bootstrap](../primetime-ad-insertion/technical-reference/bootstrap-api.md)
+   + [Referencia de la API de informes](../primetime-ad-insertion/assets/auditude-report-api.pdf)
 
 + TVSDK 3.12 {#tvsdk-312}
    + [TVSDK 3.12 para Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.12/index.html)
