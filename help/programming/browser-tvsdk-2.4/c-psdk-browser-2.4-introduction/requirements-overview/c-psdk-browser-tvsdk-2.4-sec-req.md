@@ -1,14 +1,13 @@
 ---
 description: Hay que tener en cuenta algunas consideraciones de seguridad para el TVSDK del explorador.
 title: Consideraciones de seguridad
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: bc98890a-082a-4e2d-b927-ecb3bd878de9
+source-git-commit: 78be1575cc7bd6630a7bf85faa061327e5c414d7
 workflow-type: tm+mt
 source-wordcount: '233'
 ht-degree: 0%
 
 ---
-
 
 # Consideraciones de seguridad{#security-considerations}
 
@@ -35,4 +34,3 @@ Hay que tener en cuenta algunas consideraciones de seguridad para el TVSDK del e
       >[!IMPORTANT]
       >
       >A partir de la versión 2.4.5, si el reproductor está alojado a través de HTTPS, el SDK de explorador convierte las llamadas HTTP a HTTPS cuando se utiliza la tecnología MSE.
-
