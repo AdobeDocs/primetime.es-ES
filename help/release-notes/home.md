@@ -3,9 +3,9 @@ title: Notas de la versión de Primetime
 description: Notas de la versión de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 21695ad15f1dcbbfa33211efd0fb3ab282fefbeb
+source-git-commit: 3b2495960cb4f5c625069415977596b5f6632bc4
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '305'
 ht-degree: 36%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 36%
 
 Le damos la bienvenida a las notas de la versión de Adobe Primetime. Los documentos enumerados en la navegación de la izquierda proporcionan información específica sobre la versión, requisitos del sistema, limitaciones, problemas corregidos y problemas conocidos.
 
-## Correcciones en TVSDK 3.14 para Android
+## Correcciones en TVSDK 3.15 para Android
 
-Esta versión proporciona solución a un problema en el que la aplicación se bloquea cuando el nodo [!UICONTROL CDATA] está vacío para cualquiera de los elementos [!UICONTROL ClickTracking], [!UICONTROL CustomClick] o [!UICONTROL CompanionClickTracking] en la respuesta [!UICONTROL VAST].
+Esta versión proporciona solución a un problema en el que la aplicación se bloquea cuando falta una etiqueta creativa o cuando [!UICONTROL url CDATA] está vacío en [!UICONTROL VAST] respuesta.
 
-Consulte las [Notas de la versión de TVSDK para Android](../release-notes/tvsdk-3x-android.md) para obtener más información.
+Consulte la [Notas de la versión de TVSDK para Android](../release-notes/tvsdk-3x-android.md) para obtener más información.
 
 ## Mejoras y correcciones en PTAI 21.10.1
 
@@ -30,7 +30,7 @@ Para obtener más correcciones y detalles, consulte [Notas de la versión del Ad
 
 La versión incorpora compatibilidad con los anuncios DEMUXED &#39;HLS/CMAF&#39; (preroll, midroll y postroll) para emisiones en directo, VOD y FER.
 
-Para obtener más información y correcciones, consulte [TVSDK for iOS Release Notes](../release-notes/tvsdk-3x-ios.md).
+Para obtener más correcciones y detalles, consulte [Notas de la versión de TVSDK para iOS](../release-notes/tvsdk-3x-ios.md).
 
 ## Consulte también
 
