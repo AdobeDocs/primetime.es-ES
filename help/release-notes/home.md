@@ -3,10 +3,10 @@ title: Notas de la versión de Primetime
 description: Notas de la versión de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
+source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 39%
+source-wordcount: '291'
+ht-degree: 38%
 
 ---
 
@@ -16,7 +16,7 @@ Le damos la bienvenida a las notas de la versión de Adobe Primetime. Los docume
 
 ## Mejoras y correcciones en PTAI 21.11.1
 
-La variable [!UICONTROL EXT-X-IMAGE-STREAM-INF] ahora se puede configurar por zona.
+La variable [!UICONTROL EXT-X-IMAGE-STREAM-INF] ahora se puede configurar por zona y [!UICONTROL Roku Trick] play es totalmente compatible.
 
 ## Correcciones en TVSDK 3.15 para Android
 

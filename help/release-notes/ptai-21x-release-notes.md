@@ -2,9 +2,9 @@
 title: Notas de la versión de PTAI 21.11.1
 description: Las notas de la versión de PTAI describen las novedades o los cambios, los problemas resueltos y conocidos de Primetime Ad Insertion en el año 2021.
 exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: b58fea35be528c4c030eab39fde9dd642d90cb58
+source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,8 @@ Las notas de la versión de Primetime Ad Insertion 21.xx.x describen las novedad
 Cuando: Martes 9 de noviembre de 2021 de la 1:30 a las 04:30 a.m., hora del este
 
 * [!UICONTROL EXT-X-IMAGE-STREAM-INF] ahora se puede configurar por zona.
+
+* Roku Trick Play es totalmente compatible.
 
 ## Mejoras y correcciones en versiones anteriores
 
