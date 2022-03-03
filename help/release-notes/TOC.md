@@ -3,9 +3,9 @@ product: adobe primetime
 audience: end-user
 user-guide-title: Notas de la versión de Primetime
 user-guide-description: Proporciona información específica de la versión, requisitos del sistema, limitaciones, problemas solucionados y problemas conocidos.
-source-git-commit: c0e5d435ded98fa9b359c3887ed0aafd1b39b33d
+source-git-commit: d549c83b50683ed3f803226eaa414179896a29b0
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '116'
 ht-degree: 16%
 
 ---
@@ -15,6 +15,8 @@ ht-degree: 16%
 
 + [Notas de la versión Información general](home.md)
 + Ad Insertion de Primetime {#ptai}
+
+   + [Notas de la versión PTAI 22.2.2](ptai-22x-release-notes.md)
    + [Notas de la versión PTAI 21.11.1](ptai-21x-release-notes.md)
    + [Notas de la versión PTAI 20.12.1](ptai-20x-release-notes.md)
    + [Notas de la versión 19.11.1 de PTAI](ptai-19x-release-notes.md)
