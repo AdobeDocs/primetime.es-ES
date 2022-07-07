@@ -3,10 +3,10 @@ title: Notas de la versión de Primetime
 description: Notas de la versión de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: d549c83b50683ed3f803226eaa414179896a29b0
+source-git-commit: 9f218bddddeab52480bbdcd41e8f0e6fd0fab0f8
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 35%
+source-wordcount: '301'
+ht-degree: 37%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 35%
 
 Le damos la bienvenida a las notas de la versión de Adobe Primetime. Los documentos enumerados en la navegación de la izquierda proporcionan información específica sobre la versión, requisitos del sistema, limitaciones, problemas corregidos y problemas conocidos.
 
-## Mejoras y correcciones en PTAI 22.2.2
+## Mejoras y correcciones en PTAI 22.6.2
 
-Esta versión se centra en capturar nuevos eventos de rendimiento de publicidad, como llamadas creativas de publicidad, llamadas al servidor de publicidad y eventos de resolución de avail. Estos eventos se expondrán a través de la nueva interfaz gráfica de usuario de Primetime Ad Insertion en una próxima versión.
+Esta versión se centra en las mejoras en el registro del rendimiento de la publicidad con más detalles sobre la pérdida de disponibilidad y los orígenes de almacenamiento de información neto adicionales para CRS.
 
 ## Correcciones en TVSDK 3.15 para Android
 

@@ -1,27 +1,56 @@
 ---
-title: Notas de la versión de PTAI 22.2.2
+title: Notas de la versión de PTAI 22.6.2
 description: Las notas de la versión de PTAI describen las novedades o los cambios, los problemas resueltos y conocidos de Primetime Ad Insertion en el año 2022.
 exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
-source-git-commit: 899b8dc98b79d531c7f13bfe26d12806e90d5685
+source-git-commit: 9f218bddddeab52480bbdcd41e8f0e6fd0fab0f8
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '276'
 ht-degree: 0%
 
 ---
 
-# Notas de la versión de Primetime Ad Insertion 22.2.2
+# Notas de la versión de Primetime Ad Insertion 22.6.2
 
 Las notas de la versión de Primetime Ad Insertion 22.xx.x describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en Primetime Ad Insertion en el año 2022.
 
-## Novedades de PTAI 22.4.4
+## Novedades de PTAI 22.6.2
 
-Cuando: Miércoles, 20 de abril de 2022 de 3:00 a.m. a 6:00 a.m. hora del este
+Cuando: Miércoles, 29 de junio de 2022, de 3:00 a 6:00 a. m. hora del este
+
+* Mejora del registro del rendimiento de los anuncios con más detalles sobre la pérdida de avail.
+
+* Orígenes de almacenamiento de red adicionales para CRS.
+
+## Mejoras y correcciones en versiones anteriores
+
+### Versión 22.6.1
+
+**Cuando:** Martes 14 de junio de 2022, de las 3 a las 6 de la mañana, hora del este
+
+**Cambios**
+
+* Compatibilidad con VOD/FER DASH de varios períodos
+* Corrección de tipo DASH Mime para HLS
+* Consolas heredadas integradas en la IU unificada
+* Se están pasando al servicio nuevos valores de dimensión de impresión
+
+### Versión 22.5.2
+
+**Cuando:** Miércoles, 25 de mayo de 2022, de 3:00 a 6:00 a. m. hora del este
+
+**Cambios**
+
+* Mejoras en la funcionalidad, el uso y la fiabilidad de las consolas heredadas de SSAI y CRS.
+
+### Versión 22.4.4
+
+**Cuando:** Miércoles, 20 de abril de 2022 de 3:00 a.m. a 6:00 a.m. hora del este
+
+**Cambios**
 
 * Una actualización para capturar nuevos eventos de rendimiento de publicidad alrededor de las llamadas de publicidad.
 
 * Una actualización para capturar nuevas dimensiones de impresión para enriquecer la interfaz de informes, la facturación interna y las iniciativas de rendimiento de publicidad.
-
-## Mejoras y correcciones en versiones anteriores
 
 ### Versión 22.3.2
 
