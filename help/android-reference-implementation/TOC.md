@@ -3,11 +3,10 @@ product: primetime
 audience: end-user
 user-guide-title: Ayuda para la implementación de referencia de Primetime
 user-guide-description: Ayuda a comprender el SDK de TVSDK y a modificar los administradores de funciones para personalizar su reproductor personal.
-translation-type: tm+mt
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,12 +17,12 @@ ht-degree: 7%
 + Implementación de referencia de Primetime {#reference}
    + [Cómo utilizar la implementación de referencia de Primetime](ref-implementation/how-to-use-ref-player.md)
    + [Estructura de implementación de referencia](ref-implementation/ref-player-structure.md)
-   + Cómo usar los administradores de funciones {#feature-managers}
+   + Cómo utilizar los administradores de funciones {#feature-managers}
       + [Cómo utilizar los administradores de funciones](ref-implementation/using-feature-managers/how-to-use-feature-managers.md)
       + [Creando administradores de funciones pasando información de configuración a MediaPlayer...](ref-implementation/using-feature-managers/creating-feature-managers.md)
       + [Activar o desactivar las funciones mediante ManagerFactory](ref-implementation/using-feature-managers/turning-features-on-off.md)
       + [Gestión de eventos](ref-implementation/using-feature-managers/handling-events.md)
-   + Configure el entorno de desarrollo {#setup-dev}
+   + Configuración del entorno de desarrollo {#setup-dev}
       + [Configuración del entorno de desarrollo](set-up-dev-environment/set-up-dev-environment-overview.md)
       + [Descargar y configurar software de requisitos previos](set-up-dev-environment/download-prereqs-android.md)
       + [Generar la implementación de referencia de Primetime](set-up-dev-environment/install-the-ref-player-project.md)
@@ -43,13 +42,13 @@ ht-degree: 7%
       + [Habilitar la reproducción de vídeo](implement-video-playback/enable-video-playback.md)
       + [Protección de contenido DRM](implement-video-playback/content-protection.md)
    + [Varias tasas de bits](implement-video-playback/mbr.md)
-   + Configurar un reproductor para la reproducción de DVR con anuncios {#dvr}
+   + Configuración de un reproductor para la reproducción de DVR con anuncios {#dvr}
       + [DVR sin inserción de anuncio](implement-video-playback/dvr/dvr-without-ad-insertion.md)
       + [DVR con inserción de anuncios](implement-video-playback/dvr/dvr-with-ad-insertion.md)
       + [Elección de un punto de partida personalizado para DVR](implement-video-playback/dvr/dvr-custom-start-point.md)
       + [Establecer una hora de inicio personalizada en la implementación de referencia](implement-video-playback/dvr/set-custom-start-time-dvr.md)
    + [Mostrar las estadísticas de dispositivo y reproducción de QoS](implement-video-playback/qos-statistics.md)
-   + Insertar anuncios {#insert-ads}
+   + Insertar publicidades {#insert-ads}
       + [Inserción de publicidad](insert-ads/ad-insertion.md)
       + [Tipos de inserción de publicidad](insert-ads/ad-insertion-types.md)
       + [Agregar publicidad](insert-ads/add-advertising.md)
