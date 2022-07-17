@@ -4,9 +4,9 @@ description: Las notas de la versión de TVSDK 3.15 para Android describen las n
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: cd2c64ef-dd42-4dc2-805f-eeb64a8a53d9
-source-git-commit: f266b93281a290a8c2f19ac6869287d6480f49e5
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
-source-wordcount: '5540'
+source-wordcount: '5516'
 ht-degree: 0%
 
 ---
@@ -538,7 +538,7 @@ En esta sección se ofrece un resumen del problema resuelto en la versión de An
 
 **Android TVSDK 2.5.5**
 
-* ZD #21647 - Android TVSDK notifica 640x368 cuando el tamaño real del vídeo es 640x360.
+* ZD #21647 : Android TVSDK notifica 640x368 cuando el tamaño real del vídeo es 640x360.
 
    * Debido a que la variable m_nOutputHeight (dentro de AndroidMCVideoDecoder) se actualiza con la altura del marco en lugar de con la altura de salida real. Se han realizado cambios importantes en la función getVideoFrame para calcular m_nOutputHeight correctamente.
 
@@ -772,8 +772,8 @@ Esta versión de TVSDK tiene los siguientes problemas:
 
 ## Recursos útiles {#helpful-resources}
 
-* [Requisitos del sistema](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-requirements.html)
-* [Guía del programador de TVSDK 3.10 para Android](https://docs.adobe.com/content/help/en/primetime/programming/tvsdk-3x-android-prog/introduction/android-3x-overview-prod-audience-guide.html)
+* [Requisitos del sistema](/help/programming/tvsdk-3x-android-prog/android-3x-introduction/android-3x-requirements.md)
+* [Guía del programador de TVSDK 3.10 para Android](/help/programming/tvsdk-3x-android-prog/android-3x-introduction/overview-prod-audience-guide/android-3x-overview-prod-audience-guide.md)
 * [TVSDK Android Javadoc para referencia de API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.5/index.html)
 * [Documento de la API de TVSDK para Android C++](https://help.adobe.com/en_US/primetime/api/psdk/cpp_3.5/namespaces.html) - Cada clase Java tiene una clase C++ correspondiente, y la documentación de C++ contiene material más explicativo que los Javadocs, por lo que consulte la documentación de C++ para conocer mejor la API de Java.
 * [Guía de migración de TVSDK 1.4 a 2.5 para Android (Java)](https://helpx.adobe.com/primetime/migration-guides/tvsdk-14-25-android.html)

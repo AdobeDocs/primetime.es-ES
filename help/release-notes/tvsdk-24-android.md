@@ -3,14 +3,13 @@ title: Notas de la versión de TVSDK 2.4.1 para Android
 description: Las notas de la versión de TVSDK 2.4.1 para Android describen las funciones nuevas y compatibles, así como los problemas y limitaciones conocidos de TVSDK Android 2.4.1.
 topic-tags: release-notes
 products: SG_PRIMETIME
-translation-type: tm+mt
-source-git-commit: b33240bf1b42b80389cd95a7ae4d3f85185a2d32
+exl-id: 3de09048-ae32-43b4-a019-34b217931a4c
+source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
 workflow-type: tm+mt
-source-wordcount: '1963'
+source-wordcount: '1962'
 ht-degree: 0%
 
 ---
-
 
 # Notas de la versión de TVSDK 2.4.1 para Android {#tvsdk-for-android-release-notes}
 
@@ -30,11 +29,11 @@ Aquí puede encontrar documentación:
 
 Los javadocs son la máxima autoridad, ya que se generan automáticamente directamente a partir del código fuente de TVSDK.
 
-・ Documentación de la API de [C++ TVSDK 2.4 para la API de Android C++](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.4/namespaces.html)
+・ [Documentación de la API de C++ TVSDK 2.4 para la API de Android C+++](https://help.adobe.com/en_US/primetime/api/psdk/cpp_2.4/namespaces.html)
 
 Cada clase Java tiene una clase C++ correspondiente, y la documentación de C++ contiene material más explicativo que los JavaScript, por lo que consulte la documentación de C++ para obtener una comprensión más profunda de la API de Java.
 
-・ Guía de migración ([TVSDK 2.4 para la guía de migración a Android](../migration-guides/tvsdk-14-25-android.md))
+・ Guía de migración ([Guía de migración de TVSDK 2.4 para Android](../migration-guides/tvsdk-14-25-android.md))
 
 Esta guía explica lo que debe modificar para migrar una aplicación basada en TVSDK 1.4 a una basada en TVSDK 2.4.
 
@@ -48,12 +47,12 @@ Estas son las nuevas funciones clave de la versión 2.4.1:
 
 * Funciones de la versión 4 de HLS
 
-   * **Reproducción de vídeo**  (reproducción, pausa, búsqueda) con control del reproductor para emisiones en directo, lineales y VOD.
+   * **Reproducción de vídeo** (reproducir, pausar, buscar) con control de reproductor para flujos en directo, lineales y VOD.
    * **Subtítulos.** TVSDK puede mostrar subtítulos cerrados 608/708 con una selección de fuentes, tamaños de fuente, colores y fondo. También puede admitir vídeos con subtítulos resumidos y cambiar entre pistas de idioma si están disponibles.
-   * **El** modelado Trick play admite el avance y rebobinado rápidos para flujos HLS que utilizan I-Frames. Todos los controles de reproducción de vídeo funcionan en el contenido. El movimiento lento (hacia adelante) está disponible para el modo de reproducción de vídeo externo con velocidades entre 0 y 1.
-   * **La velocidad de bits adaptable (ABR)**  permite al reproductor seleccionar dinámicamente cuál de las versiones múltiples del mismo flujo de contenido reproducir, en función de la red y otras condiciones. Puede establecer parámetros de forma dinámica o en el archivo de manifiesto para seleccionarlos entre directivas de selección agresivas, moderadas y conservadoras.
-   * **Los rangos de** bytes permiten que un solo archivo TS contenga varios segmentos TS.
-   * **Alterne la** representación del audio, permita que el reproductor cambie entre las pistas de audio disponibles.
+   * **Modo de reproducción de trucos** admite el avance y el rebobinado rápidos para flujos HLS que utilizan I-Frames. Todos los controles de reproducción de vídeo funcionan en el contenido. El movimiento lento (hacia adelante) está disponible para el modo de reproducción de vídeo externo con velocidades entre 0 y 1.
+   * **Velocidad de bits adaptable (ABR)** permite al reproductor seleccionar dinámicamente cuál de las versiones múltiples del mismo flujo de contenido reproducir, en función de la red y otras condiciones. Puede establecer parámetros de forma dinámica o en el archivo de manifiesto para seleccionarlos entre directivas de selección agresivas, moderadas y conservadoras.
+   * **Intervalos de bytes** habilite un solo archivo TS para que contenga varios segmentos TS.
+   * **Representaciones de audio alternativas** permite al reproductor cambiar entre las pistas de audio disponibles.
    * **Compatibilidad con ID3.** TVSDK puede reproducir flujos de audio y vídeo HLS que contengan metadatos de audio ID3, como el nombre del artista, el título y el álbum.
    * **Failover. **TVSDK utiliza estrategias para continuar con la reproducción ininterrumpida, a pesar de los errores de los servidores host, los archivos de lista de reproducción y los segmentos.
    * **Transmisión de audio multicanal (DD+).** TVSDK puede pasar datos de audio Dolby Digital Plus (E-AC3) al hardware compatible.
@@ -69,26 +68,26 @@ Estas son las nuevas funciones clave de la versión 2.4.1:
       * Rotación IV
 
 * **Reproducción de AES 128.** TVSDK puede reproducir contenido HLS estándar de cifrado avanzado (AES) con un tamaño clave de 128 bits.
-* **HLS protegido (PHLS)** proporciona un conjunto limitado de políticas DRM prediseñadas, un subconjunto de lo que proporciona el acceso a Adobe, para permitir DRM ligero sobre HLS para flujos en vivo y VOD.
+* **HLS protegido (PHLS)** proporciona un conjunto limitado de políticas DRM prediseñadas, un subconjunto de lo que proporciona Adobe Access, para permitir DRM ligero sobre HLS para flujos en vivo y VOD.
 
 * Funciones de publicidad/contenido alternativo y monetización
 
    * **Seguimiento de anuncios insertados en el lado del servidor.** TVSDK puede rastrear anuncios insertados por el servicio de inserción de anuncios de Adobe Cloud. Admite anuncios lineales en los formatos VAST2, VAST3 y VMAP para transmisiones VOD y en directo/lineal.
-   * **Etiquetas HLS personalizadas.** TVSDK utiliza su  `MediaPlayerConfig` clase para permitir la notificación a la aplicación del reproductor cuando aparecen etiquetas HLS personalizadas en el flujo.
+   * **Etiquetas HLS personalizadas.** TVSDK utiliza su `MediaPlayerConfig` para permitir la notificación a la aplicación del reproductor cuando aparecen etiquetas HLS personalizadas en el flujo.
    * **Inserción de publicidad en el lado del cliente.** La biblioteca de inserción de anuncios de Auditude funciona con servidores de Adobe Auditude para resolver anuncios que se insertan de forma dinámica en contenido en directo, lineal y VOD, en posiciones pre-roll, mid-roll o post-roll.
-   * **Resolvedores de anuncios personalizados.** Las  `ContentResolver, OpportunityGenerator,` interfaces  `MediaPlayerClientFactory` y permiten implementar una resolución de contenido alternativo o de anuncio personalizada y registrar un detector de oportunidades personalizado para trabajar con TVSDK. Las clases `TestAdResolver` y `AuditudeResolver` proporcionan ejemplos C++ de implementación de una resolución de contenido. Puede encontrar un ejemplo de Javascript en `samples/jspsdk/testapp/psdk.js`.
-   * **Comportamiento de publicidad coherente.** Utilice la  `AdPolicySelector` interfaz para permitir un comportamiento coherente en todos los reproductores para operaciones como la búsqueda y la reproducción mediante trucos cuando hay anuncios presentes en el contenido. Si no implementa el suyo propio, TVSDK utiliza `DefaultAdPolicySelector`.
+   * **Resolvedores de anuncios personalizados.** La variable `ContentResolver, OpportunityGenerator,` y `MediaPlayerClientFactory` las interfaces le permiten implementar una resolución de contenido alternativo o de anuncio personalizada y registrar un detector de oportunidades personalizado para trabajar con TVSDK. La variable `TestAdResolver` y `AuditudeResolver` ofrecen ejemplos C++ de implementación de una resolución de contenido. Puede encontrar un ejemplo de Javascript en `samples/jspsdk/testapp/psdk.js`.
+   * **Comportamiento de publicidad coherente.** Utilice la variable `AdPolicySelector` para permitir un comportamiento coherente en todos los reproductores para operaciones como buscar y engañar cuando hay anuncios presentes en el contenido. Si no implementa la suya propia, TVSDK utiliza `DefaultAdPolicySelector`.
    * **Desmonte/sustituya los anuncios C3.** Utilice la API de TVSDK adecuada para eliminar intervalos de contenido personalizados e insertar de forma dinámica nuevos anuncios sin necesidad de realizar trabajos previos adicionales. Esto resulta útil cuando se emite contenido en directo/lineal y luego se pone a disposición inmediatamente bajo demanda sin limpieza.
 
 Estas son las nuevas funciones clave de la versión 2.4:
 
-* **Instantáneo para VOD y** liveCuando activa instantáneamente, TVSDK inicializa y almacena en el búfer los medios antes de que se inicie la reproducción. Dado que puede iniciar varias `MediaPlayerItemLoader` instancias simultáneamente en segundo plano, puede almacenar en búfer varios flujos. Cuando un usuario cambia el canal y el flujo se almacena en el búfer correctamente, la reproducción en el nuevo canal se inicia inmediatamente. TVSDK 2.4 también es compatible con Instant On para emisiones en directo. Las emisiones en directo se vuelven a almacenar en búfer cuando se mueve la ventana en directo.
+* **Instantáneo para VOD y live** Cuando activa instantáneamente, el TVSDK inicializa y almacena en el búfer los medios antes de que se inicie la reproducción. Como puede iniciar varias `MediaPlayerItemLoader` instancias simultáneamente en segundo plano, puede almacenar en búfer varias secuencias. Cuando un usuario cambia el canal y el flujo se almacena en el búfer correctamente, la reproducción en el nuevo canal se inicia inmediatamente. TVSDK 2.4 también es compatible con Instant On para emisiones en directo. Las emisiones en directo se vuelven a almacenar en búfer cuando se mueve la ventana en directo.
 
 * **Mejoras de rendimiento **La nueva arquitectura TVSDK 2.4 ofrece varias mejoras de rendimiento:
 
    * **Subsegmentación** : TVSDK reduce aún más el tamaño de cada fragmento para iniciar la reproducción lo antes posible.
-   * **Descargas de anuncios paralelas** : TVSDK recupera previamente los anuncios en paralelo a la reproducción del contenido antes de llegar a las pausas publicitarias, lo que permite una reproducción perfecta de los anuncios y el contenido.
-   * **Resolución de anuncios diferida** : Con esta función, no esperamos a la resolución de los anuncios no previos al inicio de la reproducción, lo que reduce el tiempo de inicio. Las API como la búsqueda y el truco siguen sin estar permitidas hasta que se resuelvan todos los anuncios.
+   * **Descargas de anuncios en paralelo** : TVSDK recupera previamente los anuncios en paralelo a la reproducción del contenido antes de llegar a las pausas publicitarias, lo que permite una reproducción perfecta de los anuncios y el contenido.
+   * **Resolución de anuncios diferidos** - Con esta función, no esperamos la resolución de los anuncios no previos al inicio de la reproducción, lo que reduce el tiempo de inicio. Las API como la búsqueda y el truco siguen sin estar permitidas hasta que se resuelvan todos los anuncios.
 
 * **Reproducción de contenido MP4**
 
@@ -236,7 +235,7 @@ TVSDK para Android 2.4 es compatible con varias funciones que puede implementar 
  </tbody>
 </table>
 
-### Características del Ad Insertion principal (CSAI) {#core-ad-insertion-features-csai}
+### Funciones principales del Ad Insertion (CSAI) {#core-ad-insertion-features-csai}
 
 | **Función** | **Tipo de contenido** | **HLS** | **DASH** |
 |---|---|---|---|
@@ -247,7 +246,7 @@ TVSDK para Android 2.4 es compatible con varias funciones que puede implementar 
 | VMAP 1.0 | VOD + Activo | Ø | ✓ (Solo VOD Pre-rolls) |
 | Anuncios de MP4 | VOD + Activo | ✓ (de CRS) | ✓ (de CRS, solo de pre-roll) |
 
-### Funciones de Ad Insertion avanzadas (CSAI) {#advanced-ad-insertion-features-csai}
+### Funciones avanzadas de Ad Insertion (CSAI) {#advanced-ad-insertion-features-csai}
 
 <table> 
  <tbody>
@@ -399,7 +398,7 @@ Esta versión de TVSDK tiene los siguientes problemas:
 * Establecer el subtítulo en idiomas CJK no funciona.
 * El vídeo puede salir del modo de truco automáticamente entre VOD y en directo.
 * VHL: se envían llamadas de Heartbeat incorrectas cuando iniciamos un contenido desde un desplazamiento.
-* Cuando los anuncios VPAID se reproducen, faltan las llamadas de Heartbeat VHL para event:type:play y .
+* Cuando se reproducen anuncios VPAID, las llamadas de Heartbeat para eventos de VHL:type:falta el anuncio de reproducción.
 * El anuncio previo a la emisión se reproduce incluso cuando se elige adBreakPolicy SKIP .
 * Después de entrar en el reproductor de estado completo, vuelve al estado de reproducción con SKIP adBreakPolicy para anuncios posteriores a la emisión.
 
@@ -407,4 +406,4 @@ Sin vídeo, no hay ninguna dimensión de ventanilla móvil y sin una dimensión 
 
 ## Recursos útiles {#helpful-resources}
 
-* Consulte la documentación de ayuda completa en la página [Aprendizaje y asistencia de Adobe Primetime](https://helpx.adobe.com/support/primetime.html).
+* Consulte la documentación de ayuda completa en [Información y asistencia de Adobe Primetime](https://experienceleague.adobe.com/docs/primetime.html) página.
