@@ -2,7 +2,7 @@
 title: Panel de Attribution IQ
 description: El panel ayuda a identificar las instancias de uso compartido de contraseñas analizando una amplia gama de datos de suscriptores.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 2ae03c61344b878c9cac268ad6e7e91b08810488
+source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -28,8 +28,6 @@ Los valores le ayudan a comprender la magnitud del uso compartido de credenciale
 
 
 *Figura: Panel Puntuación media de uso compartido: agregado para el segmento actual*
-
-![](assets/aggregate-sharing-score.svg)
 
 Las tres métricas siguientes son componentes de la puntuación media de uso compartido.
 
