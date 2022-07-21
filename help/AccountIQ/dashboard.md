@@ -1,13 +1,13 @@
 ---
 title: Panel de Attribution IQ
-description: 'El panel ayuda a identificar las instancias de uso compartido de contraseñas analizando una amplia gama de datos de suscriptores.  '
-source-git-commit: f6f1769d86a98d3a545bf986e41e9ba2252a36ff
+description: El panel ayuda a identificar las instancias de uso compartido de contraseñas analizando una amplia gama de datos de suscriptores.
+exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
+source-git-commit: 8e041e6bb3b0f607eb421be002904e3a8a447f52
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
-
 
 # El tablero {#dashboard}
 
@@ -15,13 +15,15 @@ El panel resume y agrega datos en una colección de gráficos e informes diseña
 
 ![tablero de cuentas IQ](assets/dashboard-capture.png)
 
-## Puntuación de uso compartido agregada {#aggregated-sharing}
+## Puntuación media de uso compartido: agregada para el segmento actual {#aggregated-sharing}
 
 El panel Puntuación de uso compartido agregada proporciona una lectura de primera línea que resume la cantidad y el impacto del uso compartido en términos de cuentas y volumen de flujo continuo.
 
 Los valores le ayudan a comprender la magnitud del uso compartido de credenciales por parte de sus suscriptores, lo que le proporciona una medida de la necesidad de actuar en consecuencia.
 
 ![](assets/aggregate-sharing-score.png)
+
+![](assets/aggregate-sharing-score.svg)
 
 Las tres métricas siguientes son componentes de la puntuación de uso compartido agregada.
 
