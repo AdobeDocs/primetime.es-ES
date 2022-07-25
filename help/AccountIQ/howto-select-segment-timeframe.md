@@ -2,9 +2,9 @@
 title: Definir un segmento y un lapso de tiempo
 description: Definir un segmento y un lapso de tiempo
 exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
-source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
+source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
 workflow-type: tm+mt
-source-wordcount: '562'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -55,8 +55,10 @@ Para seleccionar los canales de programador que desee en el **Canales en el segm
 
    Los elementos de lista de nivel superior de la variable **Canales en el segmento** are [programador](/help/AccountIQ/product-concepts.md#programmer-def) las compañías y los elementos de la lista bajo nombres de programadores son sus [canales](/help/AccountIQ/product-concepts.md#channel-def). Puede seleccionar canales individuales en programadores, o seleccionar programadores y todas las actividades de los canales bajo ese programador se incluyen en los resultados de informes y gráficos.
 
-   <!--![](assets/programmer-channels.png)
-   *Figure: Programmers and channels listed in channels selector*-->
+   ![](assets/programmer-channels.png)
+
+
+   *Figura: Programadores y canales enumerados en el selector de canales*
 
    >[!IMPORTANT]
    >
@@ -95,7 +97,10 @@ Para seleccionar un período de tiempo de evaluación:
 
 1. Seleccione: **Semana** o **Mes** from **Agregar por** para establecer la granularidad en la evaluación.
 
-   <!--![](assets/granularity-timeframe-weekwise.png)   *Figure: Date picker to select Granularity and time frame*-->
+   ![](assets/granularity-timeframe-weekwise.png)
+
+
+   *Figura: Selector de fecha para seleccionar Granularidad y lapso de tiempo*
 
 1. Una vez seleccionada la granularidad, puede utilizar flechas hacia adelante o hacia atrás para avanzar o retroceder en el tiempo.
 
