@@ -2,7 +2,7 @@
 title: Panel de Attribution IQ
 description: El panel ayuda a identificar las instancias de uso compartido de contraseñas analizando una amplia gama de datos de suscriptores.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: cc8b34705d9ede95c5e5f25cab1b86a772abec02
+source-git-commit: 32ba300ce729eab7a6906d8fb0875e8f2bbe2d1d
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -110,7 +110,7 @@ Este gráfico divide las cuentas en intervalos de quintiles de probabilidad de u
 
 ### Número de cuentas y uso por nivel de probabilidad de uso compartido {#number-of-accounts-usage-sharing-probability}
 
-Este panel proporciona una vista tabular de las cuentas divididas en rangos de quintiles de probabilidad de uso compartido de muy baja (0-20%) a muy alta (80=100%) con el uso asociado de cada quintil de cuentas compartidas.
+Este panel proporciona una vista tabular de las cuentas divididas en rangos de quintiles de probabilidad de uso compartido de muy baja (0-20%) a muy alta (80-100%) con el uso asociado de cada quintil de cuentas compartidas.
 
 ![](assets/no-acc-usage-prob-level.png)
 
