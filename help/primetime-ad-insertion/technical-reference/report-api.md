@@ -1,19 +1,21 @@
 ---
 title: API de informe
 description: API de informe de audiencia
-source-git-commit: 7f958c83a4dd481221feb4a266440b920ac7d195
+exl-id: 50eb4869-3765-4591-8c41-794b29d50044
+source-git-commit: 628544e38616715e83e0274ba26cf93302ce0e61
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1042'
+ht-degree: 1%
 
 ---
-
 
 # API de informe {#report-api}
 
 La interfaz de usuario tiene funciones administradas para los clientes y para el equipo de habilitación (Adobe). Los clientes pueden acceder al portal y luego crear y editar sus configuraciones. También pueden ver los informes de las impresiones de sus publicidades en la interfaz de usuario.
 
 Las API funcionan entre bastidores para facilitar a los clientes y administradores la comunicación con la infraestructura back-end.
+
+Para explorar el [!DNL Primetime Ad Insertion] API consulte [Puntos finales de API de Ad Insertion en la interfaz de usuario intercambiada](https://adconfigservice-va6.cloud.adobe.io/swagger-ui/index.html#/).
 
 ## Punto de conexión de API {#report-api-endpoint}
 
