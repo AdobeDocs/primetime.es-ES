@@ -2,7 +2,7 @@
 title: Operaciones en IQ de cuenta
 description: Las operaciones en Account IQ implican realizar acciones para realizar automatizaciones y operaciones masivas en cuentas de suscriptores y rastrear sus efectos.
 exl-id: ba6bceca-221c-42db-b207-804e4b9f6d54
-source-git-commit: 40239b6715d8eab95bc2564fb19eb6832387ad3e
+source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Puede analizar el impacto de una operación consultando su informe. Para ver el 
 
 1. Seleccione el nombre de la operación en la página principal Operaciones.
 
-   El informe se muestra en forma de gráfico de barras apiladas.
+   El informe se muestra en forma de gráfico de columnas apiladas.
 
    ![](assets/operation-impact-report.png)
 

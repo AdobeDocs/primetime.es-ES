@@ -2,9 +2,9 @@
 title: Panel de Attribution IQ
 description: El panel ayuda a identificar las instancias de uso compartido de contraseñas analizando una amplia gama de datos de suscriptores.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 7706d5fcafdcfb9c0d4cc69936681c6223b0739d
+source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -12,10 +12,6 @@ ht-degree: 0%
 # El tablero {#dashboard}
 
 El panel resume y agrega datos en una colección de gráficos e informes diseñados para ofrecer una visión general de alto nivel del alcance y el impacto del uso compartido de cuentas. Proporciona una sola página que contiene los principales informes y métricas de Account IQ.
-
-<table><tr><th>
-
-+++Panel para programadores
 
 ![tablero de cuentas IQ](assets/dashboard-capture.png)
 
@@ -121,29 +117,7 @@ Este panel proporciona una vista tabular de las cuentas divididas en rangos de q
 
 *Figura: Número de cuentas, tendencias y usos incluidos en varios intervalos de probabilidad*
 
-+++
 
-</th><th>
-
-+++Tablero para MVPD El tablero para los usuarios de MVPD es ligeramente diferente al de los usuarios programadores.
-
-![](assets/dashboard-mvpd.png)
-
-
-*Figura: Panel de MVPD*
-
-## Principales programadores en el segmento según la puntuación de uso compartido general {#}
-
-![](assets/top-programmers-panel.png)
-
-
-*Figura: Panel que muestra los programadores principales en un segmento*
-+++
-
-</th>
-</tr>
-
-</table>
 
 <!--
 +++Dashboard for programmers
