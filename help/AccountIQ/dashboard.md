@@ -2,9 +2,9 @@
 title: Panel de Attribution IQ
 description: El panel ayuda a identificar las instancias de uso compartido de contraseñas analizando una amplia gama de datos de suscriptores.
 exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: 5b34fbe26078ae761d61179975366505c5628c9c
+source-git-commit: a015cf059c599c043f03b981eed640fbdbffc27b
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '563'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ It is a table of risk indices and accounts totals for the top MVPDs ranked by ov
 
 ![](assets/mvpds-in-segment.png)-->
 
-### Puntuaciones generales de uso compartido en toda la industria para MVPD {#top-mvpds}
+## Puntuaciones generales de uso compartido en toda la industria para MVPD {#top-mvpds}
 
 Esta tabla proporciona una vista comparativa de las diferentes puntuaciones de uso compartido agregadas para los MVPD en el segmento.
 
@@ -85,7 +85,7 @@ Esta tabla proporciona una vista comparativa de las diferentes puntuaciones de u
 
 *Figura: Principales MVPD en el segmento según la puntuación general*
 
-### Puntuación de uso compartido por canales y MVPD {#sharin-score-by-channels-and-mvpds}
+## Puntuación de uso compartido por canales y MVPD {#sharin-score-by-channels-and-mvpds}
 
 Esta tabla proporciona una vista comparativa del uso compartido de puntuaciones de los canales seleccionados para los MVPD en el segmento actual.
 
@@ -94,7 +94,7 @@ Esta tabla proporciona una vista comparativa del uso compartido de puntuaciones 
 
 *Figura: Uso compartido de puntuaciones por canales y MVPD*
 
-### Probabilidad de uso compartido de cuentas {#accounts-sharing-probability}
+## Probabilidad de uso compartido de cuentas {#accounts-sharing-probability}
 
 Este gráfico divide las cuentas en intervalos de quintiles de probabilidad de uso compartido de muy baja (0-20%) a muy alta (80=100%).
 
@@ -108,7 +108,7 @@ Este gráfico divide las cuentas en intervalos de quintiles de probabilidad de u
 
 *Figura: Números y porcentajes de cuentas de suscriptor en diferentes intervalos de probabilidad de uso compartido*
 
-### Número de cuentas y uso por nivel de probabilidad de uso compartido {#number-of-accounts-usage-sharing-probability}
+## Número de cuentas y uso por nivel de probabilidad de uso compartido {#number-of-accounts-usage-sharing-probability}
 
 Este panel proporciona una vista tabular de las cuentas divididas en rangos de quintiles de probabilidad de uso compartido de muy baja (0-20%) a muy alta (80-100%) con el uso asociado de cada quintil de cuentas compartidas.
 
