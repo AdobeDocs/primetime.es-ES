@@ -1,27 +1,45 @@
 ---
-title: Notas de la versión de PTAI 22.7.1
+title: Notas de la versión de PTAI 22.9.2
 description: Las notas de la versión de PTAI describen las novedades o los cambios, los problemas resueltos y conocidos de Primetime Ad Insertion en el año 2022.
 exl-id: 58b254b8-18b9-48ba-bd4e-378785e56af5
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-# Notas de la versión de Primetime Ad Insertion 22.7.1
+# Notas de la versión de Primetime Ad Insertion 22.9.2
 
 Las notas de la versión de Primetime Ad Insertion 22.xx.x describen las novedades o los cambios, los problemas resueltos y los problemas conocidos en Primetime Ad Insertion en el año 2022.
 
-## Novedades de PTAI 22.7.1
+## Novedades de PTAI 22.9.2
 
-Cuando: Miércoles, 20 de julio de 2022, de las 3:00 a las 6:00 a.m., hora del este
+**Cuando:** Miércoles, 7 de septiembre de 2022, de las 3:00 a las 6:00 a. m. hora del este
+
+* Mejoras en los datos de telemetría de Rendimiento del anuncio en el Ad Insertion de Primetime para incluir datos de registro de Anuncio y Avail adicionales.
+
+## Mejoras y correcciones en versiones anteriores
+
+### Versión PTAI 22.9.1
+
+**Cuando:** Martes 6 de septiembre de 2022, de las 3 a las 6 de la mañana, hora del Este
+
+**Cambios:**
+
+* Mejoras en la autenticación back-end del servicio de reempaquetado de contenido (CRS).
+
+* Actualizaciones de los gráficos de telemetría del Servicio de reempaquetado de contenido (CRS) en la interfaz de usuario del Ad Insertion de Primetime.
+
+### Versión 22.7.1
+
+**Cuando:** Miércoles, 20 de julio de 2022, de las 3:00 a las 6:00 a.m., hora del este
+
+**Cambios:**
 
 * Mejoras en el registro del rendimiento de la publicidad, con la introducción de métricas relacionadas con los flujos de trabajo DASH.
 
 * Migración de la base de datos.
-
-## Mejoras y correcciones en versiones anteriores
 
 ### Versión 22.6.2
 

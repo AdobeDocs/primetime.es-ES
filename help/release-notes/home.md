@@ -3,10 +3,10 @@ title: Notas de la versión de Primetime
 description: Notas de la versión de Primetime
 copied-description: true
 exl-id: 29087a3e-f16e-4510-8d3a-ed2229700899
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: 1782a6b1d5f1c56d39648d73616bdefddd8a51bc
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 37%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -14,15 +14,17 @@ ht-degree: 37%
 
 Le damos la bienvenida a las notas de la versión de Adobe Primetime. Los documentos enumerados en la navegación de la izquierda proporcionan información específica sobre la versión, requisitos del sistema, limitaciones, problemas corregidos y problemas conocidos.
 
-## Mejoras y correcciones en PTAI 22.7.1
+## Mejoras y correcciones en PTAI 22.9.2
 
-Esta versión se centra en las mejoras en el registro del rendimiento de los anuncios con la introducción de métricas relacionadas con los flujos de trabajo DASH.
+Esta versión se centra en las mejoras en los datos de telemetría de rendimiento de publicidad para incluir los datos de registro de llamadas de publicidad y Avail.
+
+Para obtener más correcciones y detalles, consulte [Notas de la versión del Ad Insertion](/help/release-notes/ptai-22x-release-notes.md).
 
 ## Correcciones en TVSDK 3.15 para Android
 
 Esta versión proporciona solución a un problema en el que la aplicación se bloquea cuando falta una etiqueta creativa o cuando [!UICONTROL url CDATA] está vacío en [!UICONTROL VAST] respuesta.
 
-Para obtener más correcciones y detalles, consulte [Notas de la versión del Ad Insertion](/help/release-notes/ptai-21x-release-notes.md).
+Para obtener más correcciones y detalles, consulte [Notas de la versión de TVSDK para Android](/help/release-notes/tvsdk-3x-android.md)
 
 ## Mejoras y correcciones en TVSDK 3.13 iOS
 
