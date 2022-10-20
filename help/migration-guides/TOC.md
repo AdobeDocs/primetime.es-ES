@@ -5,8 +5,8 @@ user-guide-title: Ayuda de migración de Primetime
 user-guide-description: Explica el proceso de conversión y migración para pasar de su grupo de TVSDK de Primetime existente al grupo de próxima generación.
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '37'
+ht-degree: 64%
 
 ---
 

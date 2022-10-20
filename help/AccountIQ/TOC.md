@@ -1,11 +1,11 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-description: 'La ayuda de Primetime Account IQ proporciona información sobre los componentes de Account IQ y le acompaña a través de los recorridos de usuario para utilizar los distintos componentes. '
+user-guide-description: La ayuda de Primetime Account IQ proporciona información sobre los componentes de Account IQ y le acompaña a través de los recorridos de usuario para utilizar los distintos componentes.
 source-git-commit: 6ae9c8651a47e2f458d69c078ba1f314a0227c00
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '111'
+ht-degree: 20%
 
 ---
 
