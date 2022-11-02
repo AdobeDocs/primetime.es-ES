@@ -1,35 +1,34 @@
 ---
 description: Puede obtener una descripción de la línea de tiempo asociada con el elemento seleccionado que está reproduciendo TVSDK. Esto resulta muy útil cuando la aplicación muestra un control de barra de desplazamiento personalizado en el que se identifican las secciones de contenido que se corresponden con el contenido de la publicidad.
 title: Inspect de la cronología de reproducción
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 95792354-76f6-44fd-9207-73e862b434e1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
-
-# Inspect de la línea de tiempo de reproducción {#inspect-the-playback-timeline}
+# Inspect de la cronología de reproducción {#inspect-the-playback-timeline}
 
 Puede obtener una descripción de la línea de tiempo asociada con el elemento seleccionado que está reproduciendo TVSDK. Esto resulta muy útil cuando la aplicación muestra un control de barra de desplazamiento personalizado en el que se identifican las secciones de contenido que se corresponden con el contenido de la publicidad.
 
-A continuación se muestra un ejemplo de implementación, tal como se ve en la siguiente captura de pantalla.  ![](assets/inspect-playback.jpg){width=&quot;368.641pt&quot;}
+A continuación se muestra un ejemplo de implementación, tal como se ve en la siguiente captura de pantalla.  ![](assets/inspect-playback.jpg){width="368.641pt"}
 
-1. Acceda al objeto `Timeline` en `MediaPlayer` utilizando el método `getTimeline()`.
+1. Acceda a la `Timeline` en el `MediaPlayer` usando la variable `getTimeline()` método.
 
-   La clase `Timeline` encapsula la información relacionada con el contenido de la cronología asociada con el elemento de medios que está cargado actualmente por la instancia `MediaPlayer`. La clase `Timeline` proporciona acceso a una vista de solo lectura de la cronología subyacente. La clase `Timeline` proporciona un método de captador que proporciona un iterador a través de una lista de objetos `TimelineMarker`.
+   La variable `Timeline` encapsula la información relacionada con el contenido de la cronología asociada con el elemento multimedia que está cargado actualmente por el `MediaPlayer` instancia. La variable `Timeline` proporciona acceso a una vista de solo lectura de la línea de tiempo subyacente. La variable `Timeline` class proporciona un método de captador que proporciona un iterador a través de una lista de `TimelineMarker` objetos.
 
-1. Repita la lista de `TimelineMarkers` y utilice la información devuelta para implementar la cronología.
+1. Iterar por la lista de `TimelineMarkers` y utilice la información devuelta para implementar su línea de tiempo.
 
        Un objeto &quot;TimelineMarker&quot; contiene dos fragmentos de información:
    
    * Posición del marcador en la cronología (en milisegundos)
    * Duración del marcador en la cronología (en milisegundos)
 
-1. Escuche el evento `MediaPlayerEvent.TIMELINE_UPDATED` en la instancia `MediaPlayer` e implemente la llamada de retorno `TimelineUpdatedEventListener.onTimelineUpdated()`.
+1. Escuche el `MediaPlayerEvent.TIMELINE_UPDATED` en la variable `MediaPlayer` instancia de e implemente la variable `TimelineUpdatedEventListener.onTimelineUpdated()` llamada de retorno.
 
-   El objeto `Timeline` puede informar a la aplicación de los cambios que podrían producirse en la cronología de reproducción llamando al oyente `OnTimelineUpdated`.
+   La variable `Timeline` puede informar a la aplicación de los cambios que podrían producirse en la línea de tiempo de reproducción llamando a su `OnTimelineUpdated` listener.
 
 ```java
 // access the timeline object 

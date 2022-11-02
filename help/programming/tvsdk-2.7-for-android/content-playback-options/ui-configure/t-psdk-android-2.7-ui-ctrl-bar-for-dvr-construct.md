@@ -1,14 +1,13 @@
 ---
 description: Puede implementar una barra de control con soporte DVR para VOD y transmisión en vivo. La compatibilidad con DVR incluye el concepto de una ventana que se puede buscar y el punto activo del cliente.
 title: Construya una barra de control mejorada para DVR
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8a764417-4425-44c0-9551-3077c8c0a323
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '325'
+source-wordcount: '324'
 ht-degree: 0%
 
 ---
-
 
 # Construya una barra de control mejorada para DVR {#construct-a-control-bar-enhanced-for-dvr}
 
@@ -27,9 +26,9 @@ Puede implementar una barra de control con soporte DVR para VOD y transmisión e
 
 <!--<a id="fig_37A39A28BA714BA5A2C461357ED5BD41"></a>-->
 
-![](assets/dvr-window.PNG){width=&quot;684&quot;}
+![](assets/dvr-window.PNG){width="684"}
 
-1. Para implementar una barra de control con soporte DVR, siga los pasos en [Mostrar una barra de depuración con la posición de reproducción actual...](../../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md) con las siguientes diferencias:
+1. Para implementar una barra de control con soporte DVR, siga los pasos indicados en [Mostrar una barra de depuración con la posición de reproducción actual...](../../../tvsdk-2.7-for-android/content-playback-options/ui-configure/t-psdk-android-2.7-ui-seek-scrub-bar-display.md) con las siguientes diferencias:
 
    * Puede implementar una barra de control que esté asignada únicamente para el rango que se puede buscar, en lugar de para el rango de reproducción.
 
@@ -38,7 +37,7 @@ Puede implementar una barra de control con soporte DVR para VOD y transmisión e
 
       Para una barra de control:
    1. Agregue una superposición a la barra de control que represente el intervalo de reproducción.
-   1. Cuando el usuario empiece a buscar, compruebe si la posición de búsqueda deseada está dentro del rango que se puede buscar utilizando `MediaPlayer.getSeekableRange`.
+   1. Cuando el usuario empiece a buscar, compruebe si la posición de búsqueda deseada se encuentra dentro del rango que se puede buscar utilizando `MediaPlayer.getSeekableRange`.
 
       Por ejemplo:
 
@@ -49,10 +48,8 @@ Puede implementar una barra de control con soporte DVR para VOD y transmisión e
       }
       ```
 
-      También puede optar por buscar en el punto activo del cliente mediante la constante `MediaPlayer.LIVE_POINT` .
+      También puede optar por buscar en el punto activo del cliente utilizando la variable `MediaPlayer.LIVE_POINT` constante.
 
       ```
       mediaPlayer.seek(MediaPlayer.LIVE_POINT);
       ```
-
-
