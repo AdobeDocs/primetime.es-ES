@@ -2,9 +2,9 @@
 title: Definir un segmento y un lapso de tiempo
 description: Definir un segmento y un lapso de tiempo
 exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
-source-git-commit: 037c65b28d3c4d7f09bde89e3a9d4bae86f6f867
+source-git-commit: c17fb003d8c8103aac36696f696c9e3c7bb83c4f
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '569'
 ht-degree: 0%
 
 ---
@@ -80,10 +80,6 @@ Además de cambiar la selección en el **MVPD en el segmento** y **Canales en el
 * Al seleccionar la variable **Eliminar** icono (![icono quitar](assets/remove-icon.png)) en los nombres de estos MVPD y canales seleccionados que se muestran debajo del selector de segmentos.
 
 * También puede utilizar **Borrar selección** para eliminar todos los MVPD o canales seleccionados previamente.
-
-![](assets/segment-panel-selection1.png)
-
-*Figura: MVPD y canales seleccionados en el panel de segmentos y marcos de tiempo*
 
 ![](assets/segment-panel-selection.png)
 

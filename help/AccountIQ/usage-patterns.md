@@ -1,23 +1,23 @@
 ---
 title: Patrones de uso
 description: Ver el comportamiento de uso compartido de cuentas para diferentes tipologías de usuario.
-source-git-commit: dd9b8edfd00bb97d01c6478ae0be6944e7e57535
+exl-id: 2faa7e75-b3a1-491b-bb7d-bd3a149cbe79
+source-git-commit: 560611f2af2605ba399e4cf5ddfd331b6e8e0231
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
-
 # Patrones de uso {#usage-patterns}
 
-Account IQ clasifica a los usuarios de cuentas de suscriptor en varias categorías en términos de su comportamiento social, como Viajero o viajero, Gran familia y Compartir en la comunidad. La variable **Patrones de uso** muestra varios análisis e informes diferentes para estas tipologías de usuario. Por ejemplo, **Distribución de patrones de uso: Usuarios en segmentos vs. sector** compara el comportamiento de uso del segmento actual con el sector completo.
+Account IQ clasifica a los usuarios de cuentas de suscriptores en varias categorías en términos de su comportamiento social, como viajero o viajero, familia grande y uso compartido en la comunidad. La variable **Patrones de uso** muestra varios análisis e informes diferentes para estas tipologías de usuario. Por ejemplo, **Distribución de patrones de uso: Usuarios en el segmento frente al total** compara el comportamiento de uso del segmento actual con el sector completo.
 
 Al igual que las demás páginas de la aplicación, los análisis y los informes aquí basados en el segmento actual tal como se define en la variable [panel de segmentos](/help/AccountIQ/segments-timeframe.md).
 
 ## Distribución de patrones de uso {#usage-pattern-dis}
 
-El gráfico de barras de **Distribución de patrones de uso: Usuarios en el segmento frente al sector** representa el número y los porcentajes de suscriptores de cada comportamiento social o patrón de uso. Además de comparar cada patrón de uso en el segmento actual con todo el sector, también los compara con un segmento que contiene todos los canales.
+El gráfico de barras de **Distribución de patrones de uso: Usuarios en el segmento frente al total** muestra el número y los porcentajes de suscriptores por cada comportamiento social o patrón de uso. Además de comparar cada patrón de uso en el segmento actual con todo el sector, también los compara con un segmento que contiene todos los canales.
 
 ![](assets/segment-users-industry.png)
 
@@ -39,8 +39,20 @@ Por ejemplo, en la imagen anterior:
 
 * Y el 15,7% (24,073,311) del total de solicitudes de juego (153,076,350) son hechas por usuarios regulares.
 
-## Distribución del patrón de uso para MVPD {#usage-pattern-dis-mvpd}
+## Distribución del patrón de uso por socio de segmento {#usage-pattern-dis-mvpd}
 
-La variable **Distribución del patrón de uso para MVPD** proporciona una comparación de la distribución del patrón de uso para los MVPD en el segmento actual.
++++Programador: distribución de patrones de uso para segmentos totales y socios de segmentos
+
+La variable **Distribución del patrón de uso** proporciona una comparación de la distribución del patrón de uso para los MVPD en el segmento actual.
 
 ![](assets/usage-patterns-mvpdwise.png)
+
++++
+
++++MVPD: distribución del patrón de uso para los segmentos totales y los socios de segmentos
+
+La variable **Distribución del patrón de uso** proporciona una comparación de la distribución de patrones de uso para los canales de programadores en el segmento actual.
+
+![](assets/usage-patterns-programmerwise.png)
+
++++

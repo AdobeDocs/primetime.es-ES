@@ -1,15 +1,15 @@
 ---
 title: Cómo ver los informes de los 10 MVPD principales por persona programadora.
 description: Ver informes de los 10 principales MVPD.
-source-git-commit: e61cca77bad4f01de871e300dc99d7368c283f2a
+exl-id: 76fd1af8-dd96-426b-b9c8-a356b53b491d
+source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
 
 ---
 
-
-# Visualización de informes de los 10 principales MVPD <!--and Programmers--> {#view-top-10-mvpd-reports}
+# Ver informes de uso compartido de cuentas de los 10 principales MVPD <!--and Programmers--> {#view-top-10-mvpd-reports}
 
 Account IQ tiene funcionalidades que le ayudan a ver y analizar las estadísticas de uso compartido de cuentas de los 10 principales MVPD (en un [segmento](/help/AccountIQ/product-concepts.md#segmet-def)) que:
 

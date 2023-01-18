@@ -1,9 +1,10 @@
 ---
 title: Glosario de Account IQ
-description: 'Glosario de terminologías de productos.  '
-source-git-commit: 8d8aa00d693b1ca7f960a71b40053e47249c63e4
+description: Glosario de terminologías de productos.
+exl-id: 2ee54442-9538-4c30-b999-265310b3935f
+source-git-commit: 4eb5ba53fb3e0a0c314695fcd30cf15c7242b53c
 workflow-type: tm+mt
-source-wordcount: '1455'
+source-wordcount: '1456'
 ht-degree: 0%
 
 ---

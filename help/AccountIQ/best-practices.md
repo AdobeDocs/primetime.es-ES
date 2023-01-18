@@ -1,13 +1,13 @@
 ---
 title: Prácticas recomendadas
 description: Siga leyendo para comprender cómo utilizar mejor la herramienta Account IQ.
-source-git-commit: 3ee1620dad552c76545f5441ea8530a45143fc4b
+exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
+source-git-commit: dcd89849937f4893705423465be4003948739eeb
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
 
 ---
-
 
 # Prácticas recomendadas {#aiq-best-practices}
 
@@ -28,6 +28,7 @@ Para comprender la naturaleza y el impacto del uso compartido en su negocio:
 ## Realice una acción incremental dirigida {#incremental-targeted-action}
 
 Con un segmento de destino definido, realice una acción. Al comenzar pequeño con un segmento bien definido, disminuye el riesgo de consecuencias no intencionales y puede comprender mejor el resultado. Independientemente de dónde esté a lo largo de la ruta, siempre puede refinar o expandir el objetivo de la operación.
+
 Comenzar a pequeña y a mayor velocidad es un enfoque prudente. Utilice segmentos identificados previamente y realice acciones (como experimentos) con objetivos específicos.
 
 Utilice la herramienta Operación para definir el segmento de destino y un lapso de tiempo operativo. Esto le permitirá realizar un seguimiento de los efectos en la siguiente fase.
@@ -98,7 +99,7 @@ How many additional ads were viewed?
 
 Did the number of borrowers decrease?
 
-Account IQ’s sophisticated machine learning based models help you analyze and measure the impacts of your experiments (or actions).
+Account IQ's sophisticated machine learning based models help you analyze and measure the impacts of your experiments (or actions).
 
 Improve and repeat
 Based on the outcomes of your experiments and targeted actions on small groups of users, you can expand the reach of your strategies to rest of the user segment or reset the strategy and audience to act on.

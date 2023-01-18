@@ -1,17 +1,17 @@
 ---
 title: Exportar información de cuentas con una puntuación de uso compartido alta
 description: Exportar información para cuentas con una puntuación de uso compartido alta.
-source-git-commit: 17a44bde5cf320f519cc537d37df0fe823cf51a6
+exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
+source-git-commit: dcd89849937f4893705423465be4003948739eeb
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '727'
 ht-degree: 1%
 
 ---
 
-
 # Exportar información de cuentas con una puntuación de uso compartido alta {#export-account-info-high-score}
 
-Account IQ le da la opción de exportar los detalles de uso compartido de la cuenta para las 1000 principales cuentas de suscriptor en función de sus [compartir probabilidades](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Los datos del archivo CSV exportado se ordenan en el orden decreciente de las probabilidades de uso compartido de las cuentas de suscriptor (de los MVPD seleccionados en la variable [segmento](/help/AccountIQ/product-concepts.md#segment-def), para [lapso de tiempo especificado](/help/AccountIQ/product-concepts.md#time-frame-def).
+Account IQ le da la opción de exportar los detalles de uso compartido de la cuenta para las 1000 principales cuentas de suscriptor en función de sus [compartir probabilidades](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Los datos del archivo CSV exportado se ordenan en el orden decreciente de las probabilidades de uso compartido de las cuentas de suscriptor en la variable [segmento](/help/AccountIQ/product-concepts.md#segment-def), para [lapso de tiempo especificado](/help/AccountIQ/product-concepts.md#time-frame-def).
 
 La opción para exportar la información de uso compartido de la cuenta está disponible en [Informes de uso generales](/help/AccountIQ/general-usage-reports.md) y [Informes de cuentas compartidas](/help/AccountIQ/shared-acc-reports.md) páginas.
 
@@ -23,13 +23,7 @@ La opción para exportar la información de uso compartido de la cuenta está di
 
 Para exportar la información de uso compartido de la cuenta de los suscriptores:
 
-1. Especifique un segmento desde el selector de segmentos. Para seleccionar un segmento:
-
-   1. Seleccione los MVPD deseados de **MVPD en el segmento** .
-
-   1. Seleccione los canales que desee en **Canales en el segmento** .
-
-   1. Seleccionar un intervalo de tiempo de **Granularidad y lapso de tiempo** para ver los informes correspondientes.
+1. Defina un segmento que desee siguiendo los pasos indicados en [Cómo definir el segmento y seleccionar el intervalo de tiempo](/help/AccountIQ/howto-select-segment-timeframe.md) para evaluación de [segmento y marco de tiempo](/help/AccountIQ/segments-timeframe.md) panel.
 
 1. Seleccione el **Exportar las principales 1000 cuentas** para exportar la información de cuenta de 1000 suscriptores con mayor probabilidad de uso compartido.
 
@@ -105,13 +99,13 @@ El número de veces que los usuarios iniciaron sesión durante el periodo, usand
 
 Número de veces que un MVPD ha autorizado un flujo o concedido acceso (al contenido) a esa cuenta.
 
->[!NOTE]
->
->La variable **# AuthZ OK** está relacionado con el **# Reproducir solicitudes**; es más pequeño que el **# Reproducir solicitudes** porque Adobe almacena en caché las autorizaciones que vienen para MVPD normalmente durante 24 horas.
-
 **# Reproducir solicitudes**
 
 Número real de emisiones durante el período de tiempo.
+
+>[!NOTE]
+>
+>**# AuthZ OK** normalmente es menor que **# Reproducir solicitudes** porque Adobe almacena en caché las autorizaciones procedentes de MVPD durante un máximo de 24 horas. Esta columna no está disponible para los MVPD.
 
 **# Canales**
 

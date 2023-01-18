@@ -1,13 +1,13 @@
 ---
-title: 'Crear una operación en un segmento de usuario y realizar un seguimiento del efecto '
+title: Crear una operación en un segmento de usuario y realizar un seguimiento del efecto
 description: Cómo crear una operación que afecte y rastree el efecto en un segmento definido de usuarios.
-source-git-commit: 1d6beb69470fcf6a3193b4d2f508c503d4f957f1
+exl-id: ab74f857-e178-4120-8f9c-655ec921d096
+source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
-
 
 # Creación de una operación en un segmento de usuario {#operation-to-track-segment}
 
@@ -34,10 +34,21 @@ Para crear una operación:
 
 ## Detalles de la operación {#operation-details}
 
++++Programador: detalles de operación
+
 Asigne un nombre a la nueva operación en **Nombre de la operación** en Detalles de la operación. Por ejemplo, &quot;*Pruebe el efecto de la autenticación multifactor en los suscriptores de MVPD X&quot; o &quot;Limite el número de emisiones en la monitorización de concurrencia&quot; o &quot;Limita los suscriptores de MVPD que ven el canal &#39;N&#39; de más de 20 dispositivos*&quot;.
 
++++
+
++++MVPD: detalles de la operación
+
+Asigne un nombre a la nueva operación en **Nombre de la operación** en Detalles de la operación. Por ejemplo, &quot;*Pruebe el efecto de la autenticación multifactor en los visores del canal N&quot; o &quot;Limite el número de emisiones en la supervisión de concurrencia&quot; o &quot;Limite los suscriptores que ven el canal &quot;N&quot; de más de 20 dispositivos*&quot;.
+
++++
 
 ## Segmento de destino {#segment}
+
++++Programador- Segmento de destino
 
 La variable **Segmento** define a los usuarios a los que se aplicará esta operación; o el grupo de muestra para la operación. El segmento predeterminado es el **segmento** ha seleccionado mediante [panel de segmento y marco de tiempo](/help/AccountIQ/howto-select-segment-timeframe.md) en la página de informes o tableros principales del paso 1 anterior.
 
@@ -47,7 +58,22 @@ La variable **Segmento** define a los usuarios a los que se aplicará esta opera
 ![](assets/operations-segment-selection.png)
 *Figure: Segment and timeframe selection on the main page*-->
 
-Este segmento define los suscriptores de los MVPD y los canales que se verán afectados por la operación que se está creando. Por ejemplo, su segmento (predeterminado) incluye *todas las cuentas de suscriptor de MVPD denominadas &#39;C&#39; que ven el canal &#39;N Sports&#39;*.
+Este segmento define los suscriptores que se verán afectados por la operación que se está creando. Por ejemplo, el segmento seleccionado puede especificar *todas las cuentas de suscriptor de MVPD denominadas &#39;C&#39; que ven el canal &#39;N Sports&#39;*.
+
++++
+
++++MVPD: segmento de Target
+
+La variable **Segmento** define a los usuarios a los que se aplicará esta operación; o el grupo de muestra para la operación. El segmento predeterminado es el **segmento** ha seleccionado mediante [panel de segmento y marco de tiempo](/help/AccountIQ/howto-select-segment-timeframe.md) en la página de informes o tableros principales del paso 1 anterior.
+
+<!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
+
+* The **segment evaluation period** is the time period of analysis you selected in step 1 from **Granularity and Timeframe** option.
+![](assets/operations-segment-selection.png)
+*Figure: Segment and timeframe selection on the main page*-->
+
+Este segmento define sus suscriptores (que son visualizadores de canales específicos) que se verán afectados por la operación que se está creando. Por ejemplo, su segmento (predeterminado) incluye *todas las cuentas de suscriptor que ven el canal &quot;N Sports&quot;*.
++++
 
 ### Segmentación adicional {#additional-segmentation}
 

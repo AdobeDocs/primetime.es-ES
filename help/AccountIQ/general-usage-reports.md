@@ -1,13 +1,13 @@
 ---
 title: Informes generales de uso
 description: Informes generales de uso
-source-git-commit: 683b5a5c1dc8dde3f546bbf4b7a09406bc018d78
+exl-id: 1272073a-61fe-47ec-aced-2e8055b6b11e
+source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1281'
 ht-degree: 0%
 
 ---
-
 
 # Informes generales de uso {#general-usage-reports}
 
@@ -41,7 +41,26 @@ Todos los informes se basan en el segmento actual seleccionado mediante [Segment
 
 Los gráficos de líneas aquí proporcionan una vista de los cambios que se han producido a lo largo del tiempo en los valores de AuthN OK, AuthZ OK, Play Requests y Unique Subscribers en un lapso de tiempo seleccionado para el segmento definido.
 
-![](assets/line-graph-gu.png)
++++Programador- **AuthN OK / AuthZ OK / Play Requests / Unique Subscribers**
+
+![](assets/progr-line-graph-gu.png)
+
+
+*Figura: AuthN OK / AuthZ OK / Play Requests / Unique Subscribers para el usuario programador*
+
+
++++
+
+
++ + + MVPD- **AuthN OK / AuthZ OK / Suscriptores únicos**
+
+![](assets/mvpd-line-graph-gu.png)
+
+
+*Figura: AuthN OK / AuthZ OK / Suscriptores únicos para el usuario MVPD*
+
+
++++
 
 El eje x presenta las unidades dentro del lapso de tiempo actual y el eje y representa las métricas básicas de actividad del suscriptor durante ese periodo. Los gráficos de líneas le permiten comparar los siguientes valores para los suscriptores de MVPD y los canales seleccionados en el panel de selección de segmentos:
 
@@ -56,6 +75,11 @@ El eje x presenta las unidades dentro del lapso de tiempo actual y el eje y repr
 * **Reproducir solicitudes**
 
    Las solicitudes de reproducción son el número de solicitudes de reproducción. Para obtener más información y definición, consulte [Conceptos del producto: Reproducir solicitudes](/help/AccountIQ/product-concepts.md#play-requests-def)
+
+   >[!NOTE]
+   >
+   >El gráfico de líneas de solicitudes de reproducción no está disponible para los usuarios de MVPD.
+
 
 * **Suscriptores únicos**
 
@@ -105,7 +129,7 @@ El gráfico muestra lo siguiente:
 
 ## Dispositivos por semana (o mes) por cuenta {#devices-week-account}
 
-La variable **gráfico de barras** proporciona información sobre el comportamiento de uso en términos de cómo los suscriptores de sus MVPD utilizan sus dispositivos para acceder al contenido desde su canal.
+La variable **gráfico de barras** proporciona perspectivas sobre el comportamiento de uso en términos de cómo los suscriptores utilizan sus dispositivos para acceder al contenido.
 
 El eje x representa Número de cuentas y el eje y representa Número de dispositivos. Según el umbral establecido para la cantidad de dispositivos por cuenta, marca la cantidad absoluta de cuentas de suscriptor que consumen contenido de una cantidad específica de dispositivos durante una semana.
 
@@ -135,7 +159,7 @@ Resultados de esta métrica combinados con el número de [Dispositivos por seman
 
 ![](assets/graph-loc-week-acc.png)
 
-Una vez definido un segmento (seleccionando MVPD y canales) y establecido el umbral para la cantidad de ubicaciones, puede identificar a partir del gráfico:
+Una vez definido un segmento y establecido el umbral para la cantidad de ubicaciones, puede identificarse desde el gráfico:
 
 * Número (y porcentaje) de suscriptores que consumen contenido desde (un específico) x número de ubicaciones en una semana.
 
@@ -179,5 +203,5 @@ El gráfico de barras de vista histórica le ayuda a comparar las métricas de u
 
 >[!MORELIKETHIS]
 >
->* Obtenga información sobre cómo exportar informes para los 1000 suscriptores principales de MVPD seleccionados mediante filtros en el Informe de uso general usando [Exportar las principales 1000 cuentas](/help/AccountIQ/export-acc-information.md) .
+>* Obtenga información sobre cómo exportar informes para los 1000 suscriptores principales del segmento seleccionado mediante filtros en Informe de uso general usando [Exportar las principales 1000 cuentas](/help/AccountIQ/export-acc-information.md) .
 

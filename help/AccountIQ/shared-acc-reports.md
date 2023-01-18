@@ -1,13 +1,13 @@
 ---
-title: 'Informes de cuentas compartidas '
+title: Informes de cuentas compartidas
 description: Informes de cuentas compartidas
-source-git-commit: ead505dfa3e6569b7e349fa63170e5f8d90d759b
+exl-id: 16c5ded1-2a95-4373-8b90-b445131f333a
+source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
-
 
 # Informes de cuentas compartidas {#shared-accounts-reports}
 
@@ -53,7 +53,7 @@ Este panel le permite seleccionar un intervalo entre el siguiente umbral como um
 
 ![](assets/threshold-selector-shared-accounts.png)
 
-Una vez que seleccione el umbral, el panel muestra el porcentaje (y el número) de cuentas de todas las cuentas de suscriptor de los MVPD seleccionados en el segmento.
+Una vez que seleccione el umbral, el panel muestra el porcentaje (y el número) de cuentas de todas las cuentas de suscriptor del segmento seleccionado.
 
 ## Segmento: Reproducir solicitudes del total {#play-request-out-total}
 
