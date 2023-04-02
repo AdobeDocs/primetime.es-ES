@@ -1,10 +1,13 @@
 ---
-source-git-commit: 1093480a994ee30969f3bca9b9740097bb9b41d0
+source-git-commit: 9844742419f1ddd6904cbad39bb0271abc822cf6
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '55'
 ht-degree: 0%
 
 ---
+
+# Acerca de la carpeta zip {#about-zipfiles}
+
 Los archivos y carpetas de esta carpeta llamados archivos zip (https://git.corp.adobe.com/AdobeDocs/primetime.en/tree/main/zipfiles) son documentación de versiones anteriores en formato XML, para las siguientes áreas:
 * DRM (Digital Rights Management)
 * TVSDK
