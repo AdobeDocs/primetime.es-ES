@@ -1,0 +1,286 @@
+---
+title: API de registro de cliente dinámico
+description: API de registro de cliente dinámico
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+workflow-type: tm+mt
+source-wordcount: '927'
+ht-degree: 0%
+
+---
+
+
+# API de registro de cliente dinámico {#dynamic-client-registration-api}
+
+>[!NOTE]
+>
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+
+## Información general {#overview}
+
+Actualmente, existen dos maneras en las que la autenticación de Primetime identifica y registra las aplicaciones:
+
+* los clientes basados en navegador se registran mediante [lista de dominios](/help/authentication/programmer-overview.md)
+* los clientes de aplicaciones nativas, como las aplicaciones de iOS y Android, se registran mediante el mecanismo de solicitud firmado.
+
+La autenticación de Adobe Primetime propone un nuevo mecanismo para registrar aplicaciones. Este mecanismo se describe en los párrafos siguientes.
+
+## El mecanismo de registro de solicitudes {#appRegistrationMechanism}
+
+### Motivos técnicos {#reasons}
+
+El mecanismo de autenticación en la autenticación de Adobe Primetime dependía de cookies de sesión, pero debido a [Pestañas personalizadas de Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari View Controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}, este objetivo ya no se puede lograr.
+
+Dadas estas limitaciones, el Adobe introduce un nuevo mecanismo de registro para todos sus clientes. Se basa en el RFC de OAuth 2.0 y consta de los siguientes pasos:
+
+1. Recuperación de la instrucción de software desde el panel de control de Televisión
+1. Obtención de credenciales de cliente
+1. Obtención del token de acceso
+
+### Recuperación de la declaración de software desde el panel de control de Televisión {#softwareStatement}
+
+Para cada aplicación que publique, debe obtener una declaración de software. Todas las instrucciones de software se proporcionan a través del panel TVE, una vez que se crean las aplicaciones. La instrucción de software debe implementarse junto con la aplicación en el dispositivo del usuario.
+
+>[!IMPORTANT]
+>
+>Al utilizar una instrucción de software, ya no se necesitará el mecanismo de identificación del solicitante firmado.
+
+Para obtener más información sobre cómo crear instrucciones de software, visite [Registro de clientes en el panel de control de Televisión](/help/authentication/dynamic-client-registration.md).
+
+### Obtención de credenciales de cliente {#clientCredentials}
+
+Después de recuperar una instrucción de software desde TVE Dashboard, debe registrar la aplicación en el servidor de autorización de Adobe Primetime. Para ello, realice una llamada /register y recupere su identificador de cliente único.
+
+**Solicitud**
+
+| Llamada HTTP |  |
+|-----------|--------------------|
+| ruta | /o/client/register |
+| method | POST |
+
+| campos |  |  |
+|--------------------|---------------------------------------------------------------------------|-----------|
+| software_statement | La instrucción de software creada en TVE Dashboard. | mandatory |
+| redirect_uri | El URI que utiliza la aplicación para completar el flujo de autenticación. | opcional |
+
+| encabezados de solicitud |  |  |
+|-----------------|--------------------------------------------------------------------------------|-----------|
+| Content-Type | application/json | mandatory |
+| X-Device-Info | La información del dispositivo tal como se define en Pasar información del dispositivo y de conexión | mandatory |
+| User-Agent | El agente de usuario | mandatory |
+
+**Respuesta**
+
+| encabezados de respuesta |  |  |
+|------------------|------------------|-----------|
+| Content-Type | application/json | mandatory |
+
+| campos de respuesta |  |  |
+|---------------------|-----------------|----------------------------|
+| client_id | Cadena | mandatory |
+| client_secret | Cadena | mandatory |
+| client_id_issu_at | long | mandatory |
+| redirect_uris | lista de cadenas | mandatory |
+| grant_types | lista de cadenas<br/> **valor aceptado**<br/> `client_credentials`: Utilizado por clientes inseguros, como el SDK para Android. | mandatory |
+| error | **valores aceptados**<ul><li>invalid_request</li><li>invalid_redirect_uri</li><li>invalid_software_statement</li><li>unapproved_software_statement</li></ul> | obligatorio en un flujo de error |
+
+
+#### Respuesta de error {#error-response}
+
+En caso de error, el servidor de registro responde con un código de estado HTTP 400 (solicitud incorrecta) e incluye los siguientes parámetros dentro de la respuesta:
+
+| código de estado | cuerpo de respuesta | descripción |
+| --- | --- | --- |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_request&quot;} | A la solicitud le falta un parámetro obligatorio, incluye un valor de parámetro no admitido, repite un parámetro o su formato no es correcto. |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_redirect_uri&quot;} | El redirect_uri no está permitido para este cliente en función de su aplicación registrada. |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_software_statement&quot;} | La instrucción de software no es válida. |
+| HTTP 400 | {&quot;error&quot;: &quot;unapproved_software_statement&quot;} | No se encuentra el software_id en la configuración. |
+
+#### Ejemplo de credenciales de cliente {#client-credentials-example}
+
+**Solicitud:**
+
+```HTTPS
+POST /o/client/register HTTP/1.1
+    User-Agent: Android
+    X-Device-Info: ew0KICAibW9kZWwiOiAiVFYiLA0KICAidmVuZG9yIjogIkFwcGxlIiwNCiAgIm1hbnVmYWN0dXJlciI6ICJBcHBsZSIsDQogICJvc05hbWUiOiAidHZPUyIsDQogICJvc1ZlbmRvciI6ICJBcHBsZSIsDQogICJvc1ZlcnNpb24iOiAiMTAuMiIsDQogICJicm93c2VyVmVuZG9yIjogIkFwcGxlIiwNCiAgImJyb3dzZXJOYW1lIjogIlNhZmFyaSINCn0
+    Content-Type: application/json
+    Accept: application/json
+    Host: sp.auth.adobe.com
+ {
+        "software_statement": "eyJhbGciOiJSUzI1NiJ9.
+    eyJzb2Z0d2FyZV9pZCI6IjROUkIxLTBYWkFCWkk5RTYtNVNNM1IiLCJjbGll
+    bnRfbmFtZSI6IkV4YW1wbGUgU3RhdGVtZW50LWJhc2VkIENsaWVudCIsImNs
+    aWVudF91cmkiOiJodHRwczovL2NsaWVudC5leGFtcGxlLm5ldC8ifQ.
+    GHfL4QNIrQwL18BSRdE595T9jbzqa06R9BT8w409x9oIcKaZo_mt15riEXHa
+    zdISUvDIZhtiyNrSHQ8K4TvqWxH6uJgcmoodZdPwmWRIEYbQDLqPNxREtYn0
+    5X3AR7ia4FRjQ2ojZjk5fJqJdQ-JcfxyhK-P8BAWBd6I2LLA77IG32xtbhxY
+    fHX7VhuU5ProJO8uvu3Ayv4XRhLZJY4yKfmyjiiKiPNe-Ia4SMy_d_QSWxsk
+    U5XIQl5Sa2YRPMbDRXttm2TfnZM1xx70DoYi8g6czz-CPGRi4SW_S2RKHIJf
+    IjoI3zTJ0Y2oe0_EJAiXbL6OyF9S5tKxDXV8JIndSA",
+  "redirect_uri": "adobepass://com.programmer"  }
+```
+
+**Respuesta:**
+
+```HTTPS
+HTTP/1.1 201 Created
+Content-Type: application/json
+Cache-Control: no-store
+Pragma: no-cache
+    
+{
+ "client_id": "s6BhdRkqt3",
+ "client_secret": "t7AkePiru4",
+ "client_id_issued_at": 2893256800,
+ "redirect_uris": [
+   "app://com.programmer.adobe#sdasdsadas"],
+ "grant_types": ["client_credentials"]
+}
+```
+
+**Respuesta de error:**
+
+```HTTPS
+HTTP/1.1 400 Bad Request
+Content-Type: application/json;charset=UTF-8
+Cache-Control: no-store
+Pragma: no-cache
+    
+{ "error": "invalid_request" }
+```
+
+### Obtención del token de acceso {#accessToken}
+
+Después de recuperar el identificador de cliente único (ID de cliente y secreto de cliente) para la aplicación, debe obtener un token de acceso. El token de acceso es un token OAuth 2.0 obligatorio, que se utiliza para llamar a las API de autenticación de Primetime.
+
+>[!NOTE]
+>
+>Actualmente, los tokens de acceso tienen un tiempo de vida de 24 horas.
+
+**Solicitud**
+
+
+| **Llamada HTTP** |  |
+| --- | --- |
+| ruta | `/o/client/token` |
+| method | POST |
+
+| **parámetros de solicitud** |  |
+| --- | --- |
+| `grant_type` | Recibido en el proceso de registro de cliente.<br/> **Valor aceptado**<br/>`client_credentials`: Se utiliza para clientes inseguros, como el SDK para Android. |
+| `client_id` | Identificador de cliente obtenido en el proceso de registro de cliente. |
+| `client_secret` | Identificador de cliente obtenido en el proceso de registro de cliente. |
+
+**Respuesta**
+
+| campos de respuesta |  |  |
+| --- | --- | --- |
+| `access_token` | El valor del token de acceso que debe utilizar para llamar a las API de Primetime | mandatory |
+| `expires_in` | Tiempo en segundos hasta que caduca el token de acceso | mandatory |
+| `token_type` | Tipo del token **portador** | mandatory |
+| `created_at` | Hora de emisión del token | mandatory |
+| **encabezados de respuesta** |  |  |
+| `Content-Type` | application/json | mandatory |
+
+**Respuesta de error**
+
+En caso de error, el servidor de autorización responde con un código de estado HTTP 400 (solicitud incorrecta) e incluye los siguientes parámetros dentro de la respuesta:
+
+| código de estado | cuerpo de respuesta | descripción |
+| --- | --- | --- |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_request&quot;} | A la solicitud le falta un parámetro requerido, incluye un valor de parámetro no admitido (que no sea el tipo de concesión), repite un parámetro, incluye varias credenciales, utiliza más de un mecanismo para autenticar al cliente o tiene un formato incorrecto. |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_client&quot;} | Error de autenticación de cliente porque se desconoce el cliente. El SDK DEBE registrarse de nuevo con el servidor de autorización. |
+| HTTP 400 | {&quot;error&quot;: &quot;no autorizado_client&quot;} | El cliente autenticado no está autorizado a utilizar este tipo de concesión de autorización. |
+
+#### Ejemplo de obtención del token de acceso: {#obt-access-token}
+
+**Solicitud:**
+
+```HTTPS
+POST o/client/token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+    
+grant_type=client_credentials&client_id=AAA&client_secret=SSS
+```
+
+**Respuesta:**
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Cache-Control: no-store
+Pragma: no-cache
+    
+{
+  "access_token":"2YotnFZFEjr1zCsicMWpAA",
+  "token_type":"bearer",
+  "expires_in":3600,
+  "created_at":123456789
+}
+```
+
+**Respuesta de error:**
+
+```JSON
+HTTP/1.1 400 Bad Request
+Content-Type: application/json;charset=UTF-8
+Cache-Control: no-store
+Pragma: no-cache
+    
+{ "error": "invalid_request" }
+```
+
+## Realización de solicitudes de autenticación {#autheticationRequests}
+
+Usar el token de acceso para realizar Adobe Primetime [Llamadas de API de autenticación](/help/authentication/initiate-authentication.md). Para ello, es necesario añadir el token de acceso a la solicitud de API de una de las siguientes maneras:
+
+* añadiendo un nuevo parámetro de consulta a la solicitud. El nuevo parámetro se llama **access_token**.
+
+* añadiendo un nuevo encabezado HTTP a la solicitud: Autorización: Portador. Se recomienda utilizar el encabezado HTTP, ya que las cadenas de consulta tienden a ser visibles en los registros del servidor.
+
+En caso de error, podrían devolverse las siguientes respuestas de error:
+
+| Respuestas de error |  |  |
+|-----------------|-----|--------------------------------------------------------------------------------------------------------|
+| invalid_request | 400 | El formato de la solicitud es incorrecto. |
+| invalid_client | 403 | Ya no se permite que el ID de cliente realice solicitudes. Se deben generar nuevas credenciales de cliente. |
+| access_deny | 401 | El access_token no es válido (caducado o no válido). El cliente DEBE solicitar un nuevo access_token. |
+
+### Realización de solicitudes de autenticación Ejemplos:
+
+**Envío del token de acceso como parámetro de solicitud:**
+
+```HTTPS
+GET adobe-services/config?access_token=<access_token>&requestor_id=... HTTP/1.1
+    
+Host: sp.auth.adobe.com
+```
+
+**Envío del token de acceso como encabezado HTTP:**
+
+```HTTPS
+POST adobe-services/sessionDevice?device_id=platformDeviceId HTTP/1.1
+    
+Authorization: Bearer <access_token>
+    
+Host: sp.auth.adobe.com
+```
+
+**Respuestas de error como cuerpo de respuesta:**
+
+```HTTPS
+HTTP/1.1 401 Unauthorized
+Content-Type: application/json;charset=UTF-8
+Cache-Control: no-store
+Pragma: no-cache
+    
+{ "error":"invalid_client" }
+```
+
+**Respuestas de error como parámetros de URL:**
+
+```HTTPS
+HTTP/1.1 302 Found
+    
+Location: adobepass://com.programmer.adobe?error=access_denied
+```

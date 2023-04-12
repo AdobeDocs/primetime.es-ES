@@ -2,16 +2,16 @@
 title: Exportar información de cuentas con una puntuación de uso compartido alta
 description: Exportar información para cuentas con una puntuación de uso compartido alta.
 exl-id: df41ddd2-fde3-4861-abd4-6e32f0be9ea5
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '728'
 ht-degree: 1%
 
 ---
 
 # Exportar información de cuentas con una puntuación de uso compartido alta {#export-account-info-high-score}
 
-Account IQ le da la opción de exportar los detalles de uso compartido de la cuenta para las 1000 principales cuentas de suscriptor en función de sus [compartir probabilidades](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Los datos del archivo CSV exportado se ordenan en el orden decreciente de las probabilidades de uso compartido de las cuentas de suscriptor en la variable [segmento](/help/AccountIQ/product-concepts.md#segment-def), para [lapso de tiempo especificado](/help/AccountIQ/product-concepts.md#time-frame-def).
+Account IQ le da la opción de exportar los detalles de uso compartido de la cuenta para las 1000 principales cuentas de suscriptor en función de sus [compartir probabilidades](/help/AccountIQ/product-concepts.md#account-sharing-probability-def). Los datos del archivo CSV exportado se ordenan en el orden decreciente de las probabilidades de uso compartido de las cuentas de suscriptor (de los MVPD seleccionados en la variable [segmento](/help/AccountIQ/product-concepts.md#segment-def), para [lapso de tiempo especificado](/help/AccountIQ/product-concepts.md#time-frame-def).
 
 La opción para exportar la información de uso compartido de la cuenta está disponible en [Informes de uso generales](/help/AccountIQ/general-usage-reports.md) y [Informes de cuentas compartidas](/help/AccountIQ/shared-acc-reports.md) páginas.
 
@@ -99,13 +99,13 @@ El número de veces que los usuarios iniciaron sesión durante el periodo, usand
 
 Número de veces que un MVPD ha autorizado un flujo o concedido acceso (al contenido) a esa cuenta.
 
+>[!NOTE]
+>
+>La variable **# AuthZ OK** está relacionado con el **# Reproducir solicitudes**; es más pequeño que el **# Reproducir solicitudes** porque Adobe almacena en caché las autorizaciones que vienen para MVPD normalmente durante 24 horas.
+
 **# Reproducir solicitudes**
 
 Número real de emisiones durante el período de tiempo.
-
->[!NOTE]
->
->**# AuthZ OK** normalmente es menor que **# Reproducir solicitudes** porque Adobe almacena en caché las autorizaciones procedentes de MVPD durante un máximo de 24 horas. Esta columna no está disponible para los MVPD.
 
 **# Canales**
 
@@ -127,7 +127,7 @@ Los números de esta columna son identificadores que se asignan a uno de los 14 
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | Patrones de uso | Usuario normal | Viajero o viajero al trabajo | Familia grande | Familiares y amigos cercanos | Uso compartido de grupos sociales | Gran grupo de amigos | Flujo continuo | Uso compartido en la comunidad | Comportamiento incierto | Familia pequeña | Segundo hogar | Uso anormal |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 **Probabilidad de uso compartido**
 

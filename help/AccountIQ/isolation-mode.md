@@ -1,13 +1,13 @@
 ---
 title: Ver informes en modo de aislamiento
-description: 'Ver informes en modo de aislamiento para Xfinity. '
-source-git-commit: afa77dd0d7ffe38d353fed21dc9591b994b11193
+description: Ver informes en modo de aislamiento para Xfinity.
+exl-id: e7cf24c5-9bfa-48f6-b5c8-20443a976891
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
 
 ---
-
 
 # Ver informes de uso compartido en modo de aislamiento {#report-isolation-mode}
 

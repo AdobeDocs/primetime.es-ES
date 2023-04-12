@@ -2,7 +2,7 @@
 title: Prácticas recomendadas
 description: Siga leyendo para comprender cómo utilizar mejor la herramienta Account IQ.
 exl-id: 55901f5d-d9c1-4ee5-9349-afa28445b324
-source-git-commit: dcd89849937f4893705423465be4003948739eeb
+source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
 source-wordcount: '538'
 ht-degree: 0%
@@ -28,7 +28,6 @@ Para comprender la naturaleza y el impacto del uso compartido en su negocio:
 ## Realice una acción incremental dirigida {#incremental-targeted-action}
 
 Con un segmento de destino definido, realice una acción. Al comenzar pequeño con un segmento bien definido, disminuye el riesgo de consecuencias no intencionales y puede comprender mejor el resultado. Independientemente de dónde esté a lo largo de la ruta, siempre puede refinar o expandir el objetivo de la operación.
-
 Comenzar a pequeña y a mayor velocidad es un enfoque prudente. Utilice segmentos identificados previamente y realice acciones (como experimentos) con objetivos específicos.
 
 Utilice la herramienta Operación para definir el segmento de destino y un lapso de tiempo operativo. Esto le permitirá realizar un seguimiento de los efectos en la siguiente fase.
