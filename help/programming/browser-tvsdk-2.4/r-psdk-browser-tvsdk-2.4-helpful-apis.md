@@ -1,14 +1,13 @@
 ---
 description: Hay algunas API que pueden ayudarle a utilizar el Flash Player de Adobe.
 title: API útiles para el Flash Player de Adobe
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3a80088b-382e-4624-bbaa-6d7e9f0126e2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%
 
 ---
-
 
 # API útiles para el Flash Player de Adobe{#helpful-apis-for-the-adobe-flash-player}
 
@@ -20,7 +19,7 @@ Hay algunas API que pueden ayudarle a utilizar el Flash Player de Adobe.
 new MediaResource(url, type, metadata, forceFlash)
 ```
 
-Si es compatible, puede utilizar el parámetro `forceFlash` para anular la secuencia de determinación de la tecnología de reproducción y forzar la implementación a utilizar el Flash Player.
+Si se admite, puede utilizar el complemento `forceFlash` para anular la secuencia de determinación de la tecnología de reproducción y forzar la implementación para que utilice el Flash Player.
 
 <!--<a id="section_FEE3205B532446498771F7DD55B5E79F"></a>-->
 
@@ -69,4 +68,3 @@ AdobePSDK.setAuthorizationTokenFilename(authorizationTokenFilename);
 */ 
 AdobePSDK.setAuthorizationTokenType(authorizationTokenType);
 ```
-

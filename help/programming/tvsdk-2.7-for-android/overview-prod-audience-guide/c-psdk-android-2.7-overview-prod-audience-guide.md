@@ -1,41 +1,40 @@
 ---
 description: Esta guía proporciona información sobre cómo desarrollar aplicaciones de reproductor de vídeo mediante TVSDK para Android, que se implementa en Java.
 title: Información general del producto, audiencia y esta guía
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3dfef60a-5547-494b-9bbe-74eb0440ec92
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '259'
 ht-degree: 0%
 
 ---
 
-
-# Resumen del producto, audiencia y esta guía {#product-overview-audience-and-this-guide}
+# Información general del producto, audiencia y esta guía {#product-overview-audience-and-this-guide}
 
 Esta guía proporciona información sobre cómo desarrollar aplicaciones de reproductor de vídeo mediante TVSDK para Android, que se implementa en Java.
 
 <!--<a id="section_FC24E86A2E6442B8A3769160769BBDFA"></a>-->
 
-* Para obtener una lista de las funciones compatibles con TVSDK, consulte [Funciones de Primetime TVSDK](../../tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md).
+* Para obtener una lista de las funciones compatibles con TVSDK, consulte [Funciones de TVSDK de Primetime](../../tvsdk-2.7-for-android/overview-prod-audience-guide/c-psdk-android-2.7-overview-of-the-player.md).
 * Para conocer los requisitos específicos de hardware y software para utilizar TVSDK, consulte [Requisitos](../../tvsdk-2.7-for-android/c-psdk-android-2.7-requirements.md).
-* Para obtener una lista de las API disponibles, consulte [API de Android de TVSDK](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/).
+* Para ver una lista de las API disponibles, consulte [API de TVSDK para Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.7/).
 
 ## Información general del producto {#section_9664959F25C948878F2F7EF3D360CA95}
 
-TVSDK incluye descripciones de API y ejemplos de código para ayudarle a integrar funciones de vídeo avanzadas, protección de contenido y publicidad en su reproductor. Java se utiliza para crear una interfaz de usuario del reproductor de vídeo. TVSDK le ayuda a conectar esa interfaz de usuario a su reproductor de medios. Esto le permite reproducir vídeos y anuncios basados en manifiestos de medios. También puede utilizar TVSDK para recuperar información sobre el vídeo, gestionar la seguridad y controlar y supervisar la reproducción.
+TVSDK incluye descripciones de API y ejemplos de código para ayudarle a integrar en su reproductor funciones avanzadas de vídeo, protección de contenido y publicidad. Java se utiliza para crear una interfaz de usuario de reproductor de vídeo. TVSDK le ayuda a conectar esa interfaz de usuario a su reproductor de contenidos. Esto le permite reproducir vídeos y publicidad basados en manifiestos multimedia. También puede utilizar TVSDK para recuperar información sobre el vídeo, gestionar la seguridad y controlar y monitorizar la reproducción.
 
 ## Audiencia {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
-En esta guía se asume que se entiende cómo desarrollar aplicaciones y reproductores de vídeo utilizando Java. Implemente la interfaz de usuario del reproductor de vídeo en Java e incorpore las funciones de TVSDK que necesite.
+En esta guía se da por hecho que sabe cómo desarrollar aplicaciones y reproductores de vídeo mediante Java. Implementa la interfaz de usuario del reproductor de vídeo en Java e incorpora las funciones de TVSDK que necesita.
 
 ## Acerca de esta guía {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 
-Esta guía proporciona información que le permite incorporar funciones de TVSDK en un reproductor de vídeo usando Java en dispositivos Android.
+Esta guía proporciona información que le permite incorporar funciones de TVSDK en un reproductor de vídeo mediante Java en dispositivos Android.
 
 ## Notación de área de nombres en esta guía {#section_8B866054E9ED4B5F99DCA7A681404632}
 
 >[!TIP]
 >
->El prefijo [!DNL com.adobe.mediacore] del espacio de nombres de la API de TVSDK se suele omitir para la brevedad.
+>El prefijo del área de nombres TVSDK API [!DNL com.adobe.mediacore] a menudo se omite por brevedad.
 >
->Se hace referencia a muchos elementos de API sin su indicador de clase principal si el contexto es claro.
+>Se hace referencia a muchos elementos de API sin el designador de clase principal si el contexto está claro.

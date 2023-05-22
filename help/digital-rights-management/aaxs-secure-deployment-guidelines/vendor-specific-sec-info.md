@@ -2,31 +2,30 @@
 title: Información de seguridad específica del proveedor
 description: Información de seguridad específica del proveedor
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 668321c5-b2c7-4bb3-9f68-2dba622a54de
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
 
 ---
 
-
 # Información de seguridad específica del proveedor{#vendor-specific-security-information}
 
-Esta sección contiene información relacionada con la seguridad sobre los sistemas operativos y los servidores de aplicaciones que se incorporan a su solución de acceso a Adobe.
+Esta sección contiene información relacionada con la seguridad de los sistemas operativos y los servidores de aplicaciones que se incorporan a la solución de acceso de Adobe.
 
-Utilice los vínculos proporcionados en esta sección para encontrar información de seguridad específica del proveedor para su sistema operativo y servidor de aplicaciones.
+Utilice los vínculos proporcionados en esta sección para buscar información de seguridad específica del proveedor para el sistema operativo y el servidor de aplicaciones.
 
 ## Información de seguridad del sistema operativo {#section-B6D9D6CEA7CC42A8A20346600EFB5E4E}
 
-Al proteger el sistema operativo, implemente cuidadosamente las medidas que describe el proveedor del sistema operativo, incluidas las siguientes:
+A la hora de proteger el sistema operativo, implemente cuidadosamente las medidas que describa el proveedor del sistema operativo, entre las que se incluyen las siguientes:
 
 * Definición y control de usuarios, funciones y privilegios
 * Monitorización de registros y pistas de auditoría
 * Eliminación de servicios y aplicaciones innecesarios
 * Copia de seguridad de archivos
 
-Para obtener información de seguridad sobre los sistemas operativos compatibles con Adobe Access, consulte los recursos de esta tabla.
+Para obtener información de seguridad acerca de los sistemas operativos compatibles con el Adobe de Access, vea los recursos de esta tabla.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table-ugl-kjz-n4"> 
  <thead class="- topic/thead "> 
@@ -47,7 +46,7 @@ Para obtener información de seguridad sobre los sistemas operativos compatibles
  </tbody> 
 </table>
 
-En la tabla siguiente se describen algunos enfoques posibles para minimizar las vulnerabilidades de seguridad que se encuentran en el sistema operativo.
+En la tabla siguiente se describen algunos de los enfoques posibles para minimizar las vulnerabilidades de seguridad que se encuentran en el sistema operativo.
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table-whl-kjz-n4"> 
  <thead class="- topic/thead "> 
@@ -58,23 +57,23 @@ En la tabla siguiente se describen algunos enfoques posibles para minimizar las 
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Revisiones de seguridad </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Existe un mayor riesgo de que un usuario no autorizado obtenga acceso al servidor de aplicaciones si los parches y las actualizaciones de seguridad del proveedor no se aplican de manera oportuna. Pruebe parches de seguridad antes de aplicarlos a los servidores de producción. </p> <p class="- topic/p ">Además, cree políticas y procedimientos para buscar e instalar parches de forma regular. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Parches de seguridad </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">El riesgo de que un usuario no autorizado obtenga acceso al servidor de aplicaciones aumenta si los parches y las actualizaciones de seguridad del proveedor no se aplican de forma oportuna. Pruebe los parches de seguridad antes de aplicarlos a los servidores de producción. </p> <p class="- topic/p ">Asimismo, cree políticas y procedimientos para buscar e instalar parches de forma regular. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Software de protección antivirus </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Los analizadores de virus pueden identificar los archivos infectados mediante la búsqueda de una firma o la observación de comportamientos inusuales. Los escáneres guardan sus firmas de virus en un archivo, que generalmente se almacena en el disco duro local. Debido a que se descubren nuevos virus con frecuencia, debe actualizar este archivo para que el analizador de virus identifique todos los virus actuales. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Los analizadores de virus pueden identificar los archivos infectados mediante la búsqueda de una firma o la observación de comportamientos inusuales. Los analizadores guardan sus firmas de virus en un archivo que suele almacenarse en el disco duro local. Dado que se descubren virus nuevos con frecuencia, debe actualizar este archivo para que el analizador de virus identifique todos los virus actuales. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Protocolo de tiempo de red (NTP) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para realizar el correcto funcionamiento y realizar análisis forenses, mantenga un tiempo preciso en los servidores de acceso al Adobe y en los paquetes de acceso al Adobe. Utilice una versión segura de NTP para sincronizar la hora en todos los sistemas conectados a Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para un funcionamiento adecuado y un análisis forense, mantenga una hora precisa en los servidores de acceso de Adobe y en los empaquetadores de acceso de Adobe. Utilice una versión segura de NTP para sincronizar la hora en todos los sistemas conectados a Internet. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Información de seguridad del servidor de aplicaciones {#section-EBB4EF371CFF4A848694CC240B23D404}
 
-Al proteger el servidor de aplicaciones, debe implementar las medidas que describe el proveedor del servidor, entre ellas:
+A la hora de proteger el servidor de aplicaciones, debe implementar las medidas descritas por el proveedor del servidor, entre las que se incluyen las siguientes:
 
 * Uso de nombres de usuario de administrador no obvios
 * Desactivación de servicios innecesarios
@@ -83,4 +82,3 @@ Al proteger el servidor de aplicaciones, debe implementar las medidas que descri
 * Cierre de puertos innecesarios
 * Limitación de interfaces administrativas por direcciones IP o dominios
 * Uso del Administrador de seguridad de Java™
-

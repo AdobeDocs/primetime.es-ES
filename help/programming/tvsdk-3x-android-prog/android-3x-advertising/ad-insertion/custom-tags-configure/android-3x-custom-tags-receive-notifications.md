@@ -1,22 +1,21 @@
 ---
-description: Para recibir notificaciones sobre etiquetas en el manifiesto, debe implementar los oyentes de eventos adecuados.
-title: Agregar oyentes para notificaciones de metadatos temporizados
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Para recibir notificaciones sobre etiquetas en el manifiesto, debe implementar los detectores de eventos adecuados.
+title: Añadir oyentes para notificaciones de metadatos cronometradas
+exl-id: e4be34b6-0f29-45b8-a089-b79b41daeada
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
+# Añadir oyentes para notificaciones de metadatos cronometradas {#add-listeners-for-timed-metadata-notifications}
 
-# Agregar oyentes para notificaciones de metadatos temporizadas {#add-listeners-for-timed-metadata-notifications}
+Para recibir notificaciones sobre etiquetas en el manifiesto, debe implementar los detectores de eventos adecuados.
 
-Para recibir notificaciones sobre etiquetas en el manifiesto, debe implementar los oyentes de eventos adecuados.
+Puede monitorizar los metadatos cronometrados si escucha `onTimedMetadata`, que notifican a la aplicación de la actividad relacionada. Cada vez que se identifica una etiqueta suscrita única durante el análisis del contenido, TVSDK prepara una nueva `TimedMetadata` y distribuye este evento. El objeto contiene el nombre de la etiqueta a la que se ha suscrito, la hora local de la reproducción en la que aparecerá esta etiqueta y otros datos.
 
-Puede monitorizar los metadatos temporizados escuchando `onTimedMetadata`, que notifica a la aplicación de la actividad relacionada. Cada vez que se identifica una etiqueta suscrita única durante el análisis del contenido, TVSDK prepara un nuevo objeto `TimedMetadata` y envía este evento. El objeto contiene el nombre de la etiqueta a la que se ha suscrito, la hora local de la reproducción en la que aparecerá esta etiqueta y otros datos.
-
-Escuche los eventos.
+Escuchar eventos.
 
 ```java
 private final TimedMetadataEventListener timedMetadataEventListener = new TimedMetadataEventListener() { 
@@ -38,4 +37,4 @@ private final TimedMetadataEventListener timedMetadataEventListener = new TimedM
 }; 
 ```
 
-Los metadatos ID3 utilizan el mismo `onTimedMetadata` oyente para indicar la presencia de una etiqueta ID3. Sin embargo, esto no debe causar ninguna confusión, ya que puede utilizar la propiedad `TimedMetadata` `type` para diferenciar entre TAG e ID3. Para obtener más información sobre las etiquetas ID3, consulte [ID3 tags](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-id3-metadata-retrieve.md).
+Los metadatos ID3 utilizan el mismo `onTimedMetadata` para indicar la presencia de una etiqueta ID3. Sin embargo, esto no debería causar ninguna confusión, ya que puede usar el complemento `TimedMetadata` `type` para diferenciar entre TAG e ID3. Para obtener más información sobre las etiquetas ID3, consulte [Etiquetas ID3](../../../../tvsdk-3x-android-prog/android-3x-content-playback-options-android2/android-3x-id3-metadata-retrieve.md).

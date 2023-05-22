@@ -1,16 +1,15 @@
 ---
 description: Este procedimiento es un ejemplo de cómo crear un botón que permita al usuario seleccionar un seguimiento de subtítulos.
-title: Permitir que los usuarios cambien el seguimiento de rótulos
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Permitir a los usuarios cambiar el seguimiento de los subtítulos
+exl-id: cf273f06-ae0d-458c-aeef-7f70dad6106f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
-
-# Permitir que los usuarios cambien el seguimiento de rótulo {#allow-users-to-change-the-caption-track}
+# Permitir a los usuarios cambiar el seguimiento de los subtítulos {#allow-users-to-change-the-caption-track}
 
 Este procedimiento es un ejemplo de cómo crear un botón que permita al usuario seleccionar un seguimiento de subtítulos.
 
@@ -30,7 +29,7 @@ Este procedimiento es un ejemplo de cómo crear un botón que permita al usuario
 
 1. Convierta la lista de pistas de subtítulos cerrados disponibles en una matriz de cadenas.
 
-   Las pistas de subtítulos cerrados que tienen actividad, es decir, los canales para los que TVSDK ha descubierto datos, se marcan según corresponda.
+   Los seguimientos de subtítulos cerrados que tienen actividad, es decir, canales para los que TVSDK ha detectado datos, se marcan como corresponde.
 
    ```java
    /** 
@@ -58,7 +57,7 @@ Este procedimiento es un ejemplo de cómo crear un botón que permita al usuario
    } 
    ```
 
-1. Cuando el usuario haga clic en el botón , muestre un cuadro de diálogo que enumere todas las pistas de subtítulos opcionales predeterminadas.
+1. Cuando el usuario haga clic en el botón, mostrar un cuadro de diálogo que enumere todas las pistas predeterminadas de subtítulos.
 
    ```java
    public void selectClosedCaptioningClick(View view) { 

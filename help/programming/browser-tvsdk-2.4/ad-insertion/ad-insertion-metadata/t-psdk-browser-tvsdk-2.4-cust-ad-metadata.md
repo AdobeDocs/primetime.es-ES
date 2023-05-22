@@ -1,40 +1,38 @@
 ---
-description: Puede personalizar los metadatos de inserción de anuncios.
+description: Puede personalizar los metadatos de inserción de publicidad.
 title: Personalizar metadatos de inserción de publicidad
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4881ace6-e97b-448d-8fb4-64e7b69517f1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
-
 # Personalizar metadatos de inserción de publicidad{#customize-ad-insertion-metadata}
 
-Puede personalizar los metadatos de inserción de anuncios.
+Puede personalizar los metadatos de inserción de publicidad.
 
-1. Establezca un tiempo de espera en los metadatos publicitarios para las oportunidades no resueltas.
+1. Establezca un tiempo de espera en los metadatos de publicidad para las oportunidades sin resolver.
 
-   El valor predeterminado de este tiempo de espera es de 20 segundos.
-1. Para cambiar el valor a 10 segundos, escriba lo siguiente:
+   El valor predeterminado para este tiempo de espera es 20 segundos.
+1. Para cambiar el valor a 10 segundos, introduzca lo siguiente:
 
    ```js
    auditudeSettings.timeout = 10000; //this value is specified in milliseconds
    ```
 
-   La propiedad `timeout` se define en la clase `AdvertisingMetadata` y este tiempo de espera se puede establecer para cualquier configuración de publicidad personalizada que se derive de la clase `AdvertisingMetadata`. Por ejemplo, si los usuarios definen la configuración personalizada para una resolución de FreeWheel, pueden establecer un tiempo de espera predeterminado mediante esta configuración.
+   El `timeout` La propiedad se define en `AdvertisingMetadata` y este tiempo de espera se puede establecer para cualquier configuración de publicidad personalizada que se derive de la `AdvertisingMetadata` clase. Por ejemplo, si los usuarios definen una configuración personalizada para una resolución de FreeWheel, pueden establecer un tiempo de espera predeterminado usando esta configuración.
 
-1. Cree `MediaPlayerItemConfig` con la configuración de publicidad en el paso 2.
+1. Crear `MediaPlayerItemConfig` con la configuración de publicidad del paso 2.
 
    ```js
    var config = new AdobePSDK.MediaPlayerItemConfig(); 
    config.advertisingMetadata = auditudeSettings;
    ```
 
-1. Utilice esta configuración cuando llame a `replaceCurrentResource` en `MediaPlayer`.
+1. Utilice esta configuración al llamar a `replaceCurrentResource` el `MediaPlayer`.
 
    ```js
    player.replaceCurrentResource(mediaResource, config);
    ```
-

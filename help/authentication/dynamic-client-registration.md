@@ -1,34 +1,34 @@
 ---
-title: Registro de cliente dinámico
-description: Registro de cliente dinámico
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Registro dinámico de clientes
+description: Registro dinámico de clientes
+exl-id: 9bc2597d-b634-4542-849b-8e91a76cb8da
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
 
 ---
 
-
-# Registro de cliente dinámico {#dynamic-client-registration}
+# Registro dinámico de clientes {#dynamic-client-registration}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 ## Contexto {#context}
 
-Para alinearse con las prácticas de seguridad modernas, los requisitos mejorados de los propietarios de experiencia de usuario y plataforma, el SDK para Android de Adobe Primetime Authentication y el SDK para iOS se están moviendo en la dirección de adoptar [Pestañas personalizadas de Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari view controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}.
+Para cumplir con las prácticas de seguridad modernas, los requisitos mejorados de UX y de los propietarios de plataformas, el SDK de Android de autenticación de Adobe Primetime y el SDK de iOS avanzan hacia la adopción de [Fichas personalizadas de Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari view controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}.
 
-La implementación actual de AdobePass utiliza vistas web específicas de la plataforma, para proporcionar el entorno web para mostrar la página de inicio de sesión de MVPD. Estas vistas web no comparten la administración de credenciales con exploradores de plataforma, por lo que el usuario no puede utilizar una contraseña guardada por navegador al utilizar una aplicación de autenticación de Adobe Primetime. Además, por motivos de seguridad, algunas plataformas se están moviendo para eliminar los controladores WebView para las tareas de autenticación. Tanto Google como Apple ofrecen opciones alternativas como &quot;Chrome Custom Tabs&quot; y &quot;Safari View Controller&quot;. Básicamente son pestañas de un solo uso de sus respectivos navegadores. La autenticación de Adobe Primetime adoptará estos nuevos componentes en 2018.
+La implementación actual de AdobePass utiliza vistas web específicas de la plataforma, a fin de proporcionar el entorno web para mostrar la página de inicio de sesión de MVPD. Estas vistas web no comparten la administración de credenciales con los exploradores de la plataforma, por lo que el usuario no puede utilizar una contraseña guardada del explorador al utilizar una aplicación de autenticación de Adobe Primetime. Además, por motivos de seguridad, algunas plataformas se están moviendo para dejar de utilizar los controladores WebView para las tareas de autenticación. Tanto Google como Apple ofrecen opciones alternativas como &quot;Chrome Custom Tabs&quot; y &quot;Safari View Controller&quot;. Básicamente son pestañas de un solo uso de sus respectivos navegadores. La autenticación de Adobe Primetime adoptará estos nuevos componentes en 2018.
 
 ## Detalles {#details}
 
-Actualmente, existen dos maneras en las que la autenticación de Adobe Pass identifica y registra las aplicaciones:
+Actualmente, la autenticación de Adobe Pass identifica y registra las aplicaciones de dos formas:
 
-* los clientes basados en navegador se registran mediante la lista de dominios permitidos
-* los clientes de aplicaciones nativas, como las aplicaciones iOS y Android, se registran mediante el mecanismo de solicitud firmado
+* los clientes basados en el explorador se registran mediante la lista de dominios permitidos
+* los clientes de aplicaciones nativas, como las aplicaciones de iOS y Android, se registran mediante el mecanismo de solicitante firmado
 
-Para abordar los nuevos flujos para Chrome Custom Tabs &amp; Safari View Controller, Adobe Pass propone un nuevo mecanismo de registro de clientes para registrar nuevas aplicaciones. Este mecanismo permitirá un control más seguro y granular de sus aplicaciones y puede utilizarse para registrar aplicaciones en todas las plataformas.
+Para abordar los nuevos flujos para Chrome Custom Tabs y Safari View Controller, Adobe Pass propone un nuevo mecanismo de registro de clientes para registrar nuevas aplicaciones. Este mecanismo permitirá un control más seguro y granular de sus aplicaciones y se puede utilizar para registrar aplicaciones en todas las plataformas.
 
 <!--
 ## Related Information

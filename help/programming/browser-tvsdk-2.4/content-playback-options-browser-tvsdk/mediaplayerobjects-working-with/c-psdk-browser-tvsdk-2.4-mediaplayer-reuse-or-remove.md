@@ -1,63 +1,62 @@
 ---
 description: Puede restablecer, reutilizar o liberar una instancia de MediaPlayer que ya no necesite.
-title: Reutilizar o quitar una instancia de MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Reutilización o eliminación de una instancia de MediaPlayer
+exl-id: 2403e6dd-74c4-43fb-913a-d04e61041628
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '288'
 ht-degree: 0%
 
 ---
 
-
-# Reutilizar o quitar una instancia de MediaPlayer{#reuse-or-remove-a-mediaplayer-instance}
+# Reutilización o eliminación de una instancia de MediaPlayer{#reuse-or-remove-a-mediaplayer-instance}
 
 Puede restablecer, reutilizar o liberar una instancia de MediaPlayer que ya no necesite.
 
 ## Restablecer o reutilizar una instancia de MediaPlayer {#section_C183E6164C184C3CBC5321FC6A2528EA}
 
-Puede restablecer una instancia `MediaPlayer` para devolverla a su estado IDLE no inicializado definido en `MediaPlayerStatus`. También puede reemplazar el elemento de medios actual o establecer uno nuevo mediante un recurso de medios cargado previamente.
+Puede restablecer un `MediaPlayer` para devolverla a su estado IDLE sin inicializar, tal como se define en `MediaPlayerStatus`. También puede reemplazar el elemento de medios actual o establecer uno nuevo mediante un recurso de medios cargado anteriormente.
 
 Esta operación resulta útil en los siguientes casos:
 
-* Desea reutilizar una instancia `MediaPlayer` pero debe cargar un nuevo `MediaResource` (contenido de vídeo) y reemplazar la instancia anterior.
+* Desea volver a utilizar un `MediaPlayer` instancia, pero debe cargar una nueva `MediaResource` (contenido de vídeo) y reemplace la instancia anterior.
 
-   El restablecimiento le permite reutilizar la instancia `MediaPlayer` sin necesidad de liberar recursos, volver a crear `MediaPlayer` y reasignar recursos. El método `replaceCurrentItem` realiza automáticamente estos pasos.
+   El restablecimiento le permite reutilizar el `MediaPlayer` instancia sin los gastos generales de liberación de recursos, recreando la `MediaPlayer`y la reasignación de recursos. El `replaceCurrentItem` El método de realiza automáticamente estos pasos por usted.
 
-* Cuando el `MediaPlayer` está en estado ERROR y debe borrarse.
+* Si la variable `MediaPlayer` está en estado ERROR y debe borrarse.
 
    >[!IMPORTANT]
    >
    >Esta es la única manera de recuperarse del estado ERROR.
 
-1. Llame a `MediaPlayer.reset()` para devolver la instancia `MediaPlayer` a su estado no inicializado:
+1. Llamada `MediaPlayer.reset()` para devolver el `MediaPlayer` a su estado sin inicializar:
 
    ```js
    reset(); // returns AdobePSDK.PSDKErrorCode.SUCCESS 
             // on successful reset
    ```
 
-1. Llame a `MediaPlayer.replaceCurrentItem()` para cargar otro `MediaResource`
+1. Llamada `MediaPlayer.replaceCurrentItem()` para cargar otro `MediaResource`
 
    >[!TIP]
    >
    >Para borrar un error, cargue el mismo `MediaResource`.
 
-1. Llame al método `prepareToPlay()` .
+1. Llame a `prepareToPlay()` método.
 
    >[!NOTE]
    >
-   >Cuando reciba el evento `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` con el estado PREPARADO, puede iniciar la reproducción.
+   >Cuando reciba la `MediaPlaybackStatusChangeEvent.STATUS_CHANGED` con el estado PREPARADO, puede iniciar la reproducción.
 
-## Liberar una instancia y recursos de MediaPlayer {#section_2D159975C82245098E7078FE0B1578CE}
+## Lanzamiento de una instancia de MediaPlayer y recursos {#section_2D159975C82245098E7078FE0B1578CE}
 
-Debe liberar una instancia y recursos `MediaPlayer` cuando ya no necesite MediaResource.
+Debe publicar un `MediaPlayer` y recursos cuando ya no necesite el MediaResource.
 
 Estas son algunas razones para publicar un `MediaPlayer`:
 
 * Mantener recursos innecesarios puede afectar al rendimiento.
-* Dejar un objeto `MediaPlayer` innecesario puede llevar a un consumo continuo de batería para dispositivos móviles.
-* Si en un dispositivo no se admiten varias instancias del mismo códec de vídeo, puede ocurrir un error de reproducción en otras aplicaciones.
+* Dejando un elemento innecesario `MediaPlayer` Este objeto puede consumir continuamente baterías para dispositivos móviles.
+* Si no se admiten varias instancias del mismo códec de vídeo en un dispositivo, puede producirse un error de reproducción en otras aplicaciones.
 
 * Suelte el `MediaPlayer`.
 
@@ -67,5 +66,4 @@ Estas son algunas razones para publicar un `MediaPlayer`:
 
    >[!NOTE]
    >
-   >Una vez lanzada la instancia `MediaPlayer`, ya no puede usarla. Si se llama a algún método de la interfaz `MediaPlayer` después de su lanzamiento, se genera un `IllegalStateException`.
-
+   >Después del `MediaPlayer` Una vez liberada, ya no puede utilizarla. Si hay algún método del `MediaPlayer` se llama a la interfaz de después de su lanzamiento, y `IllegalStateException` se ha lanzado.

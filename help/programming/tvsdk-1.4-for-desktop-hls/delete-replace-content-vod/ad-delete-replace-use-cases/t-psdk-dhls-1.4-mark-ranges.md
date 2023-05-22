@@ -1,21 +1,20 @@
 ---
-title: Marcar rangos
-description: Marcar rangos
+title: Marcar intervalos
+description: Marcar intervalos
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 173769cd-6580-4461-9dbc-5bb2fed346d2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '24'
 ht-degree: 0%
 
 ---
 
+# Marcar intervalos{#mark-ranges}
 
-# Marcar rangos{#mark-ranges}
+Marcar `TimeRanges` entre los `begin` y `end` in `localTime` como un `AdBreak` en la cronología. Se ignoran otras configuraciones de publicidad.
 
-Marque `TimeRanges` entre `begin` y `end` en `localTime` como `AdBreak` desde la cronología. Otras configuraciones de publicidad se ignoran.
-
-1. Marque intervalos de tiempo.
+1. Marcar intervalos de tiempo.
 
    ```
    {   
@@ -58,4 +57,3 @@ Marque `TimeRanges` entre `begin` y `end` en `localTime` como `AdBreak` desde la
        "id": "vod_004"
    }
    ```
-

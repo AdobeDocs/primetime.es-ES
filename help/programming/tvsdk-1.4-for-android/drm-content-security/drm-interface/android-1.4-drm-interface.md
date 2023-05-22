@@ -1,32 +1,31 @@
 ---
-description: Puede utilizar las funciones del sistema de Digital Rights Management Primetime (DRM) para proporcionar acceso seguro al contenido de vídeo. Alternativamente, puede utilizar soluciones DRM de terceros como una alternativa a la solución DRM integrada de Primetime de Adobe.
-title: Información general sobre la interfaz de DRM de Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede utilizar las funciones del sistema de Digital Rights Management de Primetime (DRM) para proporcionar acceso seguro al contenido de vídeo. Como alternativa, puede utilizar soluciones de DRM de terceros como alternativa a la solución de DRM de Primetime integrada de Adobe.
+title: Información general sobre la interfaz DRM Primetime
+exl-id: 2f6e50e6-39f0-4939-bb9b-6c46e34bab7e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
 
 ---
 
-
 # Información general {#primetime-drm-interface-overview}
 
-Puede utilizar las funciones del sistema de Digital Rights Management Primetime (DRM) para proporcionar acceso seguro al contenido de vídeo. Alternativamente, puede utilizar soluciones DRM de terceros como una alternativa a la solución DRM integrada de Primetime de Adobe.
+Puede utilizar las funciones del sistema de Digital Rights Management de Primetime (DRM) para proporcionar acceso seguro al contenido de vídeo. Como alternativa, puede utilizar soluciones de DRM de terceros como alternativa a la solución de DRM de Primetime integrada de Adobe.
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
-Consulte con su representante de Adobe para obtener la información más actualizada sobre la disponibilidad de soluciones DRM de terceros.
+Consulte con su representante de Adobes la información más actualizada sobre la disponibilidad de soluciones de DRM de terceros.
 
-El elemento clave del lado del cliente del sistema de administración de derechos digitales (DRM) de Primetime es el administrador de DRM. La aplicación de ejemplo incluida con el SDK para Android incluye una clase `DRMHelper` que muestra cómo facilitar la implementación de determinadas operaciones DRM.
+El elemento clave del lado del cliente del sistema de administración de derechos digitales (DRM) de Primetime es el Administrador de DRM. La aplicación de ejemplo incluida con el SDK para Android incluye una `DRMHelper` que muestra cómo hacer que ciertas operaciones de DRM sean más fáciles de implementar.
 
-Primetime DRM proporciona un flujo de trabajo escalable y eficiente para implementar la protección de contenido en aplicaciones TVSDK. Para proteger y administrar los derechos del contenido de vídeo, debe crear una licencia para cada archivo multimedia digital.
+Primetime DRM proporciona un flujo de trabajo escalable y eficaz para implementar la protección de contenido en aplicaciones TVSDK. Protege y administra los derechos del contenido de vídeo creando una licencia para cada archivo multimedia digital.
 
-Consulte el código del reproductor de muestra de DRM incluido en el paquete TVSDK.
+Consulte el código del reproductor de muestras DRM incluido en el paquete TVSDK.
 
-Estos son los elementos API más importantes para trabajar con DRM:
+Estos son los elementos de API más importantes para trabajar con DRM:
 
-* Referencia en el reproductor de medios al objeto de administrador de DRM que implementa el subsistema DRM:
+* Referencia en el reproductor de contenido al objeto del administrador de DRM que implementa el subsistema de DRM:
 
    ```java
    MediaPlayer.getDRMManager();
@@ -34,13 +33,13 @@ Estos son los elementos API más importantes para trabajar con DRM:
 
    >[!TIP]
    >
-   >Esta API devolverá un objeto `DRMManager` válido solo después de activar `MediaPlayerEvent.DRM_METADATA`. Si llama a `getDRMManager()` antes de que se active este evento, es posible que devuelva NULL.
+   >Esta API devolverá un válido `DRMManager` objeto solo después de `MediaPlayerEvent.DRM_METADATA` está despedido. Si llama a `getDRMManager()` antes de que se active este evento, podría devolver NULL.
 
-* La clase de ayuda `DRMHelper`, que resulta útil al implementar flujos de trabajo de DRM.
+* El `DRMHelper` clase auxiliar, que resulta útil al implementar flujos de trabajo de DRM.
 
-   Puede ver `DRMHelper` en `ReferencePlayer`.
+   Puede ver `DRMHelper` in `ReferencePlayer`.
 
-* Un método de carga de metadatos `DRMHelper`, que carga los metadatos DRM cuando se encuentran en una dirección URL independiente del contenido.
+* A `DRMHelper` método de cargador de metadatos, que carga metadatos DRM cuando se encuentran en una dirección URL independiente del contenido.
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -48,7 +47,7 @@ Estos son los elementos API más importantes para trabajar con DRM:
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* Un método `DRMHelper` para comprobar los metadatos de DRM para determinar si se necesita autenticación.
+* A `DRMHelper` para comprobar los metadatos DRM y determinar si es necesaria la autenticación.
 
    ```java
    /** 
@@ -62,7 +61,7 @@ Estos son los elementos API más importantes para trabajar con DRM:
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
    ```
 
-* `DRMHelper` para realizar la autenticación.
+* `DRMHelper` método para realizar la autenticación.
 
    ```java
    /** 
@@ -87,17 +86,17 @@ Estos son los elementos API más importantes para trabajar con DRM:
    final DRMAuthenticationListener authenticationListener);
    ```
 
-* Eventos que notifican a la aplicación sobre varias actividades y estados de DRM.
+* Eventos que notifican a la aplicación sobre diversas actividades y estados de DRM.
 
 <!--<a id="section_899BD9061D484E1BBA46E84617C36867"></a>-->
 
-Elementos de API relevantes adicionales:
+Elementos de API adicionales relevantes:
 
-* [com.adobe.ave.drm.DRMManager](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMManager.html)
+* [com.adobe.ave.drm.DRManager](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMManager.html)
 * [com.adobe.ave.drm.DRMMetdata](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMMetadata.html)
 * [com.adobe.ave.drm.DRMPolicy](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMPolicy.html)
-* [com.adobe.ave.drm.DRMAuthauthenticationMethod](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMAuthenticationMethod.html)
-* [com.adobe.ave.drm.DRMAuthauthenticationCompleteCallback](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMAuthenticationCompleteCallback.html)
+* [com.adobe.ave.drm.DRMAuthenticationMethod](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMAuthenticationMethod.html)
+* [com.adobe.ave.drm.DRMAuthenticationCompleteCallback](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMAuthenticationCompleteCallback.html)
 * [com.adobe.ave.drm.DRMOperationErrorCallback](https://help.adobe.com/en_US/primetime/api/drm/com/adobe/ave/drm/DRMOperationErrorCallback.html)
 * com.adobe.mediacore.drm.DRMAuthenticateListener
 
@@ -108,4 +107,4 @@ Comment Type: draft
 -->
 <!--<a id="section_F58941D68EB94A5EBD1C7454D2A1B17A"></a>-->
 
-Para obtener más información sobre DRM, consulte la [documentación de Adobe Primetime DRM](https://helpx.adobe.com/primetime/user-guide.html).
+Para obtener más información sobre DRM, consulte la [Documentación de Adobe Primetime DRM](https://helpx.adobe.com/primetime/user-guide.html).

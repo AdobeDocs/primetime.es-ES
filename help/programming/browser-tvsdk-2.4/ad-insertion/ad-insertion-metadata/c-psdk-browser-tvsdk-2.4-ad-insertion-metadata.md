@@ -1,37 +1,36 @@
 ---
-description: Para permitir que funcione la resolución de anuncios, los proveedores de anuncios, como Adobe Primetime y la toma de decisiones, requieren valores de configuración para habilitar la conexión con el proveedor.
+description: Para permitir que funcione la resolución de anuncios, los proveedores de publicidad, como Adobe Primetime y Decisioning, requieren valores de configuración para habilitar la conexión con el proveedor.
 title: Metadatos de inserción de publicidad
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8d6cb371-8666-4b55-b828-0f1d495e7fb7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%
 
 ---
 
-
 # Información general {#ad-insertion-metadata-overview}
 
-Para permitir que funcione la resolución de anuncios, los proveedores de anuncios, como Adobe Primetime y la toma de decisiones, requieren valores de configuración para habilitar la conexión con el proveedor.
+Para permitir que funcione la resolución de anuncios, los proveedores de publicidad, como Adobe Primetime y Decisioning, requieren valores de configuración para habilitar la conexión con el proveedor.
 
-El SDK de explorador incluye la biblioteca de Adobe Primetime y decisiones. Para que el contenido incluya publicidad del servidor de Adobe Primetime y decisiones, la aplicación debe proporcionar la siguiente información requerida de AudidtudeSettings:
+El TVSDK del explorador incluye la biblioteca de Adobe Primetime y Decisioning. Para que el contenido incluya publicidad del servidor de Adobe Primetime ad Decisioning, la aplicación debe proporcionar la siguiente información requerida de AudienceSettings:
 
-* `mediaID`, que es un identificador único para el vídeo que se reproducirá.
+* `mediaID`, que es un identificador único para el vídeo que se va a reproducir.
 
-   El editor asigna el mediaID al enviar contenido de vídeo e información de publicidad al servidor de Adobe Primetime ad decisioning. Adobe Primetime utiliza este ID para la toma de decisiones de anuncios con el fin de recuperar información de publicidad relacionada para el vídeo desde el servidor.
+   El publicador asigna el ID de medios al enviar contenido de vídeo e información de publicidad al servidor de Adobe Primetime ad Decisioning. Adobe Primetime ad Decisioning utiliza este ID para recuperar del servidor información publicitaria relacionada para el vídeo.
 
-* (Opcional) `defaultMediaId`, que especifica las publicidades que se proporcionan cuando se cumplen las siguientes condiciones:
+* (Opcional) `defaultMediaId`, que especifica los anuncios que se muestran cuando se cumplen las siguientes condiciones:
 
    * La solicitud al servidor de publicidad no es válida o el contenido está configurado incorrectamente.
-   * La toma de decisiones de anuncios de Adobe Primetime está experimentando retrasos en la propagación de los datos.
-   * Uno de los procesos del back-end de la toma de decisiones de anuncios de Adobe Primetime está funcionando mal o no está disponible.
+   * Adobe Primetime Ad Decisioning está experimentando retrasos en la propagación de los datos.
+   * Uno de los procesos back-end de Adobe Primetime y Decisioning no funciona correctamente o no está disponible.
 
    >[!TIP]
    >
    >Adobe recomienda utilizar `defaultMediaId`.
 
-* El `zoneID`, que se asigna por Adobe, identifica a su empresa o sitio web.
-* Dominio del servidor de publicidad asignado.
+* Su `zoneID`, que se asigna por Adobe, identifica su empresa o sitio web.
+* El dominio del servidor de publicidad asignado.
 * Otros parámetros de segmentación.
 
-   Puede incluir estos parámetros en función de sus necesidades y las necesidades del proveedor de publicidad.
+   Puede incluir estos parámetros según sus necesidades y las necesidades del proveedor de publicidad.

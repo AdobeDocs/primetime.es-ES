@@ -1,18 +1,17 @@
 ---
-title: Objeto JSON para el ID de recurso de derecho
-description: El siguiente bloque de código proporciona un ejemplo de objeto JSON cuando el ID del recurso de asignación de derechos es una cadena de texto simple.
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Objeto JSON para ID de recurso de derecho
+description: El siguiente bloque de código proporciona un ejemplo de un objeto JSON cuando el ID del recurso de derecho es una cadena de texto simple.
+exl-id: 396c43e7-404a-40f5-8113-a720e2c834e7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
 
 ---
 
+# Objeto JSON para ID de recurso de derecho {#json-object-for-entitlement-resource-id}
 
-# Objeto JSON para el ID de recurso de asignación {#json-object-for-entitlement-resource-id}
-
-El siguiente bloque de código proporciona un ejemplo de objeto JSON cuando el ID del recurso de asignación de derechos es una cadena de texto simple. En este caso, el ID de recurso es la cadena &quot;recurso&quot;.
+El siguiente bloque de código proporciona un ejemplo de un objeto JSON cuando el ID del recurso de derecho es una cadena de texto simple. En este caso, el ID del recurso es la cadena &quot;resource&quot;.
 
 ```
 "metadata" : { 
@@ -22,7 +21,7 @@ El siguiente bloque de código proporciona un ejemplo de objeto JSON cuando el I
 }
 ```
 
-El siguiente bloque de código proporciona un ejemplo de objeto JSON cuando el ID del recurso de derechos es una cadena mRSS con codificación HTML.
+El siguiente bloque de código proporciona un ejemplo de un objeto JSON cuando el ID del recurso de derecho es una cadena mRSS con codificación de HTML.
 
 ```
 <rss version="2.0" xmlns:media="https://search.yahoo.com/mrss/"> 

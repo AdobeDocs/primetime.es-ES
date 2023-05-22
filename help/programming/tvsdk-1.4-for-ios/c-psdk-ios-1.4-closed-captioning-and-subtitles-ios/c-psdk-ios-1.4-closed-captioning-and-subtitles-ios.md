@@ -1,43 +1,41 @@
 ---
-description: Los subtítulos y subtítulos tienen algunas diferencias únicas y las habilita de diferentes maneras.
-title: Subtítulos y subtítulos
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Los subtítulos y subtítulos tienen algunas diferencias únicas y se habilitan de diferentes maneras.
+title: Subtítulos y subtítulos opcionales
+exl-id: 6602e9cf-d1e8-405b-83b7-bdd7d93b88f1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%
 
 ---
 
-
 # Requisitos para subtítulos y subtítulos {#requirements-for-subtitles-and-closed-captions}
 
-Los subtítulos y subtítulos tienen algunas diferencias únicas y las habilita de diferentes maneras.
+Los subtítulos y subtítulos tienen algunas diferencias únicas y se habilitan de diferentes maneras.
 
-Las secuencias de subtítulos se ejecutan en paralelo con el contenido principal. Los subtítulos forman parte de los paquetes de datos de los flujos de vídeo MPEG-2.
+Las secuencias de subtítulos se ejecutan en paralelo con el contenido principal. Los subtítulos opcionales forman parte de los paquetes de datos de las transmisiones de vídeo MPEG-2.
 
-Debe tener en cuenta los siguientes requisitos para subtítulos y subtítulos cerrados:
+Debe tener en cuenta los siguientes requisitos para los subtítulos y subtítulos cerrados:
+
+* **Subtítulos opcionales**
+
+   * Los subtítulos opcionales suelen estar en el mismo idioma que el audio y también representan sonidos de fondo como texto.
+   * Los subtítulos opcionales forman parte de los paquetes de datos de los flujos de vídeo MPEG-2 en el flujo de transmisión de vídeo.
+   * Los subtítulos opcionales son compatibles en la medida en que lo permita el marco de trabajo de AV Foundation.
 
 * **Subtítulos**
 
-   * Los subtítulos están normalmente en el mismo idioma que el audio y también representan sonidos de fondo como texto.
-   * Los subtítulos son parte de los paquetes de datos de los flujos de vídeo MPEG-2 en el flujo de transmisión de vídeo.
-   * Los subtítulos se admiten en la medida en que lo proporcione el marco de AV Foundation.
+   * Los subtítulos suelen estar en un idioma diferente y no incluyen sonidos de fondo.
+   * Los subtítulos se encuentran en secuencias que se ejecutan en paralelo con el contenido principal.
 
-* **Subtítulos**
+      El `PTMediaPlayer` reproduce el contenido principal y los anuncios, donde el contenido principal puede ser en directo/lineal o VOD, y los anuncios pueden ser previos a la emisión, durante la emisión o después de la emisión.
+   Estos son algunos requisitos adicionales para los subtítulos en iOS:
 
-   * Los subtítulos suelen estar en un idioma distinto y no incluyen sonidos de fondo.
-   * Los subtítulos se encuentran en flujos que se ejecutan en paralelo con el contenido principal.
-
-      El `PTMediaPlayer` reproduce el contenido principal y los anuncios, donde el contenido principal puede ser en directo/lineal o VOD, y los anuncios pueden ser pre-roll, mid-roll o post-roll.
-   Estos son algunos requisitos adicionales para subtítulos en iOS:
-
-   * Para las marcas de tiempo, el valor `X-TIMESTAMP-MAP`, que se especifica en la sección del encabezado del archivo `WebVTT`, debe coincidir con la marca de tiempo del vídeo.
+   * Para las marcas de tiempo, la variable `X-TIMESTAMP-MAP` , que se especifica en la sección de encabezado del `WebVTT` , debe coincidir con la marca de tiempo del vídeo.
 
    * Para el sistema, debe utilizar iOS 6.1 o posterior.
 
 
 >[!IMPORTANT]
 >
->Los requisitos para subtítulos no se aplican a subtítulos cerrados.
-
+>Los requisitos para los subtítulos no se aplican a los subtítulos cerrados.

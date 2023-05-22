@@ -1,17 +1,16 @@
 ---
-description: Secure Sockets Layer (SSL) solo es necesario si necesita soporte para clientes de Flash Media Rights Management Server 1.x.
+description: La Capa de sockets seguros (SSL) sólo es necesaria si necesita compatibilidad con clientes de Flash Media Rights Management Server 1.x.
 title: Configuración de SSL
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f22520dd-65df-4bcb-b966-ff605f25bfbf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%
 
 ---
 
-
 # Configuración de SSL {#configuring-ssl}
 
-Secure Sockets Layer (SSL) solo es necesario si necesita soporte para clientes de Flash Media Rights Management Server 1.x.
+La Capa de sockets seguros (SSL) sólo es necesaria si necesita compatibilidad con clientes de Flash Media Rights Management Server 1.x.
 
 Se requiere SSL con autenticación de cliente para el servidor de claves DRM de Adobe Primetime. Para obtener más información, consulte [Uso del servidor de claves DRM de Adobe Primetime](../../using-the-drm-key-server/requirements.md).

@@ -1,19 +1,19 @@
 ---
-title: Evite utilizar "&'reg_code en la solicitud /authentication
-description: Evite utilizar "&'reg_code en la solicitud /authentication
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Evite utilizar '&'reg_code en la solicitud /authentication
+description: Evite utilizar '&'reg_code en la solicitud /authentication
+exl-id: c0ecb6f9-2167-498c-8a2d-a692425b31c5
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
 
 ---
 
-
-# Evite utilizar &quot;&amp;&#39;reg_code en la solicitud /authentication {#clientless-avoid-using-reg_code-in-authenticate-request}
+# Evite utilizar &#39;&amp;&#39;reg_code en la solicitud /authentication {#clientless-avoid-using-reg_code-in-authenticate-request}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 </br>
 
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 ## Problema
 
-El navegador IE 9 interpreta &#39;\®&#39; como un comando especial y lo convierte a ®. 
+El explorador IE 9 interpreta &#39;\®&#39; como un comando especial y lo convierte a ®. 
 
 ## Explicación
 
-Si la variable `/authenticate` se compone de la siguiente manera:
+Si la variable `/authenticate` La solicitud se compone de la siguiente manera...
 
  
 
@@ -34,7 +34,7 @@ Si la variable `/authenticate` se compone de la siguiente manera:
 ```
  
 
-...el explorador IE lo interpretará como se muestra a continuación y se enviará a Adobe en este formato:
+... lo interpretará el navegador IE como se muestra a continuación y se enviará al Adobe en este formato:
 
  
 
@@ -43,23 +43,22 @@ Si la variable `/authenticate` se compone de la siguiente manera:
 ```
  
 
-El solicitante\_id se interpretará como univision®\_code=EKAFIFM, ya que no hay &quot;&amp;&quot; y el Adobe no encontrará `regCode` para asociar el token.  Existe la posibilidad de que el token AuthN no se cree, en cuyo caso `/checkauthn` Las llamadas de no encontrarán tokens.
+El solicitante\_id se interpretará como univision®\_code=EKAFMFI, ya que no hay &quot;&amp;&quot;, y el Adobe no encuentra un `regCode` parámetro con el que se asociará el token.  Existe la posibilidad de que el token de AuthN no se cree en absoluto, en cuyo caso `/checkauthn` las llamadas de no encontrarán ningún token.
 
 
 
 ## Solución
 
-Una de las siguientes opciones debería resolver este problema:
+Una de las siguientes opciones debe resolver este problema:
 
-1. Evite utilizar la variable `&reg_code` parámetro entre los demás parámetros de cadena de consulta.  En su lugar, muévala al primer parámetro de cadena de consulta en la dirección URL de la solicitud, por lo que la dirección URL de la solicitud es la siguiente:\
+1. Evite utilizar el `&reg_code` parámetro entre los demás parámetros de cadena de consulta.  En su lugar, muévalo al primer parámetro de cadena de consulta de la dirección URL de solicitud, haciendo que la dirección URL sea la siguiente:\
     
 
-       &lt;fqdn>authentication?reg_code =EKAFMI&amp;requestor_id=someRequestor&amp;domain_name=someRequestor.com&amp;noflash=true&amp;mso_id=someMvpd&amp;redirect_url=someRequestor.redirect.url.html
+       &lt;fqdn>authentication?reg_code =EKAFMFI&amp;requestor_id=someRequestor&amp;domain_name=someRequestor.com&amp;noflash=true&amp;mso_id=someMvpd&amp;redirect_url=someRequestor.redirect.url.html
    
 
    De este modo, la variable `&reg` param no se interpretará incorrectamente.
 
-1. Normalizar `&reg_code` como `&amp;reg_code`.
+1. Normalizar `&reg_code` como usando `&amp;reg_code`.
 
-1. Adobe podría introducir una nueva función para enviar un código de error de vuelta a la segunda pantalla en respuesta a una llamada de autenticación, si la creación del token AuthN falla.
-
+1. El Adobe podría introducir una nueva función para enviar un código de error de nuevo a la segunda pantalla en respuesta a una llamada de autenticación, si fallaba la creación del token de AuthN.

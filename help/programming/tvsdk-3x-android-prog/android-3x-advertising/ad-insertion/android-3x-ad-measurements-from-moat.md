@@ -1,22 +1,21 @@
 ---
-description: TVSDK toma información de FreeWheel y otros servidores de publicidad que proporcionan respuestas VAST. FreeWheel proporciona, dentro de las respuestas VAST, información del servicio Moat. El servicio Moat cuenta las impresiones de los anuncios con una precisión que muestra mejor si los creativos capturan o descuidan los intereses de la audiencia.
+description: TVSDK toma información de FreeWheel y otros servidores de publicidad que proporcionan respuestas VAST. FreeWheel proporciona, dentro de las respuestas VAST, información del servicio Moat. El servicio Moat cuenta las impresiones de los anuncios con una precisión que muestra mejor si los creativos capturan o descuidan los intereses de una audiencia.
 title: Mediciones de anuncios de Moat
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c480f152-c09c-49fe-a8fb-d199bbfb0393
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '240'
 ht-degree: 0%
 
 ---
 
-
 # Mediciones de anuncios de Moat {#ad-measurements-from-moat}
 
-TVSDK toma información de FreeWheel y otros servidores de publicidad que proporcionan respuestas VAST. FreeWheel proporciona, dentro de las respuestas VAST, información del servicio Moat. El servicio Moat cuenta las impresiones de los anuncios con una precisión que muestra mejor si los creativos capturan o descuidan los intereses de la audiencia.
+TVSDK toma información de FreeWheel y otros servidores de publicidad que proporcionan respuestas VAST. FreeWheel proporciona, dentro de las respuestas VAST, información del servicio Moat. El servicio Moat cuenta las impresiones de los anuncios con una precisión que muestra mejor si los creativos capturan o descuidan los intereses de una audiencia.
 
-Moat es un servicio que mide la visualización de anuncios en muchos usos, desde exploradores hasta aplicaciones. Moat genera datos de análisis de marketing en tiempo real en varias plataformas.
+Moat es un servicio que mide y visualiza muchos usos, desde navegadores hasta aplicaciones. Moat genera datos de análisis de marketing en tiempo real en varias plataformas.
 
-El XML de respuesta VAST tiene una propiedad y un elemento que el código puede leer, la propiedad `Ad id` más externa y el elemento `Extension` más externo. De cualquier manera, el código puede utilizar TVSDK para guardar tanto la información `Ad id` como la información `Extension` y, a continuación, organizar la información en una estructura de árbol. Con esta organización, su código puede recoger los datos de cualquier nivel y pasarlos a donde quiera que deban ir. El valor de la propiedad `Ad id` externa permite que el código coordine la información de la campaña asociada.
+El XML de respuesta VAST tiene una propiedad y un elemento que el código puede leer, el extremo `Ad id` la propiedad y el exterior `Extension` Elemento. En cualquier caso, su código puede utilizar TVSDK para guardar tanto la variable `Ad id` información y la `Extension` información y, a continuación, organice la información en una estructura de árbol. Con esta organización, el código puede recoger los datos de cualquier nivel y pasarlos a donde quiera que tengan que ir. El valor del extremo `Ad id` permite al código coordinar la información de la campaña asociada.
 
 Por ejemplo, FreeWheel puede devolver datos en un elemento Extensions. A continuación se muestra un elemento de muestra.
 
@@ -36,7 +35,7 @@ Por ejemplo, FreeWheel puede devolver datos en un elemento Extensions. A continu
 </Extensions> 
 ```
 
-La rueda libre también puede establecer la propiedad `id` en el elemento `Ad`, como se muestra en el ejemplo siguiente.
+Freewheel también puede configurar el `id` propiedad en el `Ad` , como se muestra en el ejemplo siguiente.
 
 ```xml
 <Ad id="118566" sequence="1">

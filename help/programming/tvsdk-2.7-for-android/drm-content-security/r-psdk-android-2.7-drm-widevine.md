@@ -1,20 +1,19 @@
 ---
-description: Puede utilizar el DRM nativo de Android Widevine con flujos DASH.
-title: DRM Widevine
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede utilizar la DRM nativa de Android Widevine con flujos DASH.
+title: DRM de Widevine
+exl-id: 6a011cd7-446a-4f3a-ae36-110618001bf3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%
 
 ---
 
+# DRM de Widevine {#widevine-drm}
 
-# DRM {#widevine-drm} Widevine
+Puede utilizar la DRM nativa de Android Widevine con flujos DASH.
 
-Puede utilizar el DRM nativo de Android Widevine con flujos DASH.
-
-Llame a la siguiente API `com.adobe.mediacore.drm.DRMManager` antes de comenzar la reproducción:
+Realice una llamada a lo siguiente `com.adobe.mediacore.drm.DRMManager` API antes de iniciar la reproducción:
 
 ```java
 public static void setProtectionData( 
@@ -25,10 +24,10 @@ public static void setProtectionData(
 
 Argumentos:
 
-* `drm` -  `"com.widevine.alpha"` para Widevine.
+* `drm` - `"com.widevine.alpha"` para Widevine.
 
-* `licenseServerURL` - La URL del servidor de licencias Widevine que recibe solicitudes de licencia.
-* `requestProperties` - Contiene encabezados adicionales para incluirlos en la solicitud de licencia saliente.
+* `licenseServerURL` : URL del servidor de licencias de Widevine que recibe las solicitudes de licencia.
+* `requestProperties` : contiene encabezados adicionales para incluirlos en la solicitud de licencia saliente.
 
 Por ejemplo, cuando utilice contenido empaquetado para Expressplay DRM, utilice el siguiente código antes de reproducir:
 
@@ -39,4 +38,3 @@ DRMManager.setProtectionData(
 <i>token</i>",  
   null); 
 ```
-

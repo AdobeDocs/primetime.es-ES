@@ -1,25 +1,24 @@
 ---
-title: Seleccionar las pistas de audio
-description: Seleccionar las pistas de audio
+title: Selección de las pistas de audio
+description: Selección de las pistas de audio
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d4a7260a-82dd-4b57-8037-b91815d9b954
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%
 
 ---
 
+# Selección de las pistas de audio{#select-the-audio-tracks}
 
-# Seleccione las pistas de audio{#select-the-audio-tracks}
+Para seleccionar pistas de audio para enlazar audio en tiempo de ejecución, implemente [IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html).
 
-Para seleccionar pistas de audio para audio de enlace tardío, implemente [IAAConfig](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/config/IAAConfig.html).
-
-| A... | Llamar... |
+| Para... | Llamar a... |
 |---|---|
-| Obtener una lista de las pistas AA disponibles | [getAudioTracks()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getAudioTracks()) |
-| Obtener la pista seleccionada actual | [getSelectedAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getSelectedAudioTrack()) |
-| Selección de una pista AA | [selectAlternateAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#selectAlternateAudioTrack(int)) |
+| Obtener una lista de las pistas de AA disponibles | [getAudioTracks()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getAudioTracks()) |
+| Obtener la pista seleccionada actualmente | [getSelectedAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#getSelectedAudioTrack()) |
+| Seleccionar una pista AA | [selectAlternateAudioTrack()](https://help.adobe.com/en_US/primetime/api/reference_implementation/android/javadoc/com/adobe/primetime/reference/manager/AAManager.html#selectAlternateAudioTrack(int)) |
 
 El siguiente ejemplo de código ilustra cómo la implementación de referencia obtiene las pistas de audio del TVSDK y asigna la pista seleccionada al elemento de medios asociado:
 

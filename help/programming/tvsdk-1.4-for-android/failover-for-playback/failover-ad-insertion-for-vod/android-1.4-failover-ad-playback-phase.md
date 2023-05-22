@@ -1,33 +1,32 @@
 ---
-description: TVSDK descarga los segmentos de anuncio y los procesa en la pantalla del dispositivo.
+description: TVSDK descarga los segmentos de publicidad y los procesa en la pantalla del dispositivo.
 title: Fase de reproducción del anuncio
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c12dcf84-0daa-4bc2-8e17-fdf47a760296
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
+# Fase de reproducción del anuncio{#ad-playback-phase}
 
-# Fase de reproducción de anuncio{#ad-playback-phase}
+TVSDK descarga los segmentos de publicidad y los procesa en la pantalla del dispositivo.
 
-TVSDK descarga los segmentos de anuncio y los procesa en la pantalla del dispositivo.
-
-En este punto, TVSDK ha resuelto anuncios, los ha colocado en la cronología e intenta renderizar el contenido en la pantalla.
+En este punto, TVSDK ha resuelto anuncios, los ha colocado en la cronología e intenta reproducir el contenido en la pantalla.
 
 En esta fase pueden producirse las siguientes clases principales de errores:
 
-* Errores al conectarse al servidor host
+* Errores al conectar con el servidor host
 * Errores al descargar el archivo de manifiesto
 * Errores al descargar los segmentos de medios
 
-Para las tres clases de error, TVSDK reenvía a su aplicación eventos activados, incluidos:
+Para las tres clases de error, TVSDK reenvía eventos activados a la aplicación, incluidos los siguientes:
 
 * Eventos de notificación activados cuando se produce una conmutación por error.
-* Eventos de notificación cuando se cambia el perfil debido al algoritmo de conmutación por error.
-* Los eventos de notificación se activan cuando se tienen en cuenta todas las opciones de conmutación por error y no se puede realizar ninguna acción adicional automáticamente.
+* Eventos de notificación cuando se cambia el perfil debido al algoritmo de failover.
+* Los eventos de notificación se activan cuando se han tenido en cuenta todas las opciones de conmutación por error y no se puede realizar ninguna acción adicional de forma automática.
 
    La aplicación debe realizar la acción adecuada.
 
-Tanto si se producen errores como si no, TVSDK llama a onAdBreakComplete para cada `onAdBreakStart` y `onAdComplete` para cada `onAdStart`. Sin embargo, si no se pueden descargar los segmentos, es posible que haya espacios en la cronología. Cuando los espacios son lo suficientemente grandes, los valores en la posición del cabezal de reproducción y el progreso del anuncio registrado pueden mostrar interrupciones.
+Independientemente de si se producen errores o no, TVSDK llama a onAdBreakComplete para cada uno `onAdBreakStart` y `onAdComplete` para cada `onAdStart`. Sin embargo, si no se pueden descargar los segmentos, puede haber espacios en la cronología. Cuando los huecos son lo suficientemente grandes, los valores de la posición del cabezal de reproducción y el progreso del anuncio notificado pueden mostrar discontinuidades.

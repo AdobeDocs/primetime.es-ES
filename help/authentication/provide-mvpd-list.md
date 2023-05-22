@@ -1,21 +1,21 @@
 ---
-title: Proporcionar lista MVPD
-description: Proporcionar lista MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Proporcionar lista de MVPD
+description: Proporcionar lista de MVPD
+exl-id: db2d8f19-d0b9-4195-bf0b-f9de0d96062b
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
-
-# Proporcionar lista MVPD {#provide-mvpd-list}
+# Proporcionar lista de MVPD {#provide-mvpd-list}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-## Puntos finales de API de REST {#clientless-endpoints}
+## Extremos de API de REST {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -31,30 +31,30 @@ ht-degree: 0%
 
 ## Descripción {#description}
 
-Devuelve la lista de MVPD configurados para el solicitante.
+Devuelve la lista de MVPD configuradas para el solicitante.
 
-| Punto final | Llamada  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
+| Extremo | Llamado  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/config/{requestorId}</br></br>Por ejemplo:</br></br>&lt;sp_fqdn>/api/v1/config/sampleRequestorId | Autenticación de Primetime | 1. Solicitante</br>    (Componente Ruta)</br>_2.  deviceType (desaprobada)_ | GET | XML o JSON que contienen una lista de MVPD. | 200 |
+| &lt;sp_fqdn>/api/v1/config/{requestorId}</br></br>Por ejemplo:</br></br>&lt;sp_fqdn>/api/v1/config/sampleRequestorId | Autenticación de Primetime | 1. Solicitante</br>    (Componente Ruta)</br>_2.  deviceType (obsoleto)_ | GET | XML o JSON que contienen la lista de MVPD. | 200 |
 
 {style="table-layout:auto"}
 
 
 | Parámetro de entrada | Descripción |
 | --------------- | ------------------------------------------------------------- |
-| requestor | El RequestorId del programador para el que esta operación es válida. |
+| solicitante | Identificador de solicitante del programador para el que es válida esta operación. |
 | *deviceType* | Tipo de dispositivo. |
 
 {style="table-layout:auto"}
 
 ### Respuesta de ejemplo {#sample-response}
 
-Igual que la respuesta XML MVPD existente al servlet /config
+Igual que la respuesta XML de MVPD existente al servlet /config
 
-Nota: Todos los MVPD configurados para utilizar el SSO de plataforma tendrán las siguientes propiedades adicionales dentro de su nodo correspondiente (JSON/XML):
+Nota: Todas las MVPD configuradas para utilizar el SSO de Platform tendrán las siguientes propiedades adicionales dentro de su nodo correspondiente (JSON/XML):
 
-* **enablePlatformServices (booleano):** indicador que indica si este MVPD se integra mediante Platform SSO
-* **boardingStatus (cadena):** Indicador que indica si el MVPD es totalmente compatible con el SSO de plataforma (compatible) o si el MVPD solo aparece en el selector de plataformas (PICKER)
+* **enablePlatformServices (booleano):** indicador que indica si este MVPD está integrado mediante el SSO de la plataforma
+* **boardingStatus (cadena):** Indicador que indica si la MVPD es totalmente compatible con el SSO de la plataforma (COMPATIBLE) o si la MVPD solo aparece en el selector de plataformas (SELECTOR)
 * **displayInPlatformPicker (booleano):** si este MVPD aparece en el selector de plataformas
-* **platformMappingId (cadena):** el identificador de este MVPD conocido por la plataforma
-* **requiredMetadataFields (matriz de cadenas):** los campos de metadatos de usuario que se espera que estén disponibles en un inicio de sesión exitoso
+* **platformMappingId (cadena):** el identificador de esta MVPD conocido por la plataforma
+* **requiredMetadataFields (matriz de cadenas):** se espera que los campos de metadatos del usuario estén disponibles cuando el inicio de sesión se realice correctamente

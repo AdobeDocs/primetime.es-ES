@@ -1,22 +1,21 @@
 ---
-description: Puede implementar sus propios resolvedores de contenido en función de los resolvedores predeterminados.
-title: Implementación de una resolución de contenido personalizado
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede implementar sus propias resoluciones de contenido en función de las resoluciones predeterminadas.
+title: Implementación de un solucionador de contenido personalizado
+exl-id: 96468f6d-80ad-4721-8ed3-4dbfa2a64b9e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '241'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Implementación de un solucionador de contenido personalizado {#implement-a-custom-content-resolver}
 
-# Implementar una resolución de contenido personalizada {#implement-a-custom-content-resolver}
+Puede implementar sus propias resoluciones de contenido en función de las resoluciones predeterminadas.
 
-Puede implementar sus propios resolvedores de contenido en función de los resolvedores predeterminados.
+Cuando TVSDK detecta una nueva oportunidad, se repite a través de los solucionadores de contenido registrados que buscan uno que sea capaz de resolver esa oportunidad. El primero que devuelve el valor &quot;True&quot; se selecciona para resolver la oportunidad. Si no hay ningún solucionador de contenido capaz, esa oportunidad se omite. Dado que el proceso de resolución de contenido suele ser asincrónico, el solucionador de contenido es responsable de notificar cuando el proceso se haya completado.
 
-Cuando TVSDK detecta una nueva oportunidad, se repite a través de los solucionadores de contenido registrados buscando una que sea capaz de resolver esa oportunidad. El primero que devuelve true se selecciona para resolver la oportunidad. Si no se puede resolver ningún contenido, se omite esa oportunidad. Dado que el proceso de resolución de contenido suele ser asíncrono, el gestor de contenido es responsable de notificar cuándo se ha completado el proceso.
-
-1. Cree una instancia personalizada `AdvertisingFactory` y reemplace `createContentResolver`.
+1. Crear un personalizado `AdvertisingFactory` instancia y anulación `createContentResolver`.
 
    Por ejemplo:
 
@@ -53,9 +52,9 @@ Cuando TVSDK detecta una nueva oportunidad, se repite a través de los soluciona
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. Pase un objeto `AdvertisingMetadata` a TVSDK de la siguiente manera:
-   1. Cree un objeto `AdvertisingMetadata` y un objeto `MetadataNode`.
-   1. Guarde el objeto `AdvertisingMetadata` en `MetadataNode`.
+1. Pase un `AdvertisingMetadata` para TVSDK como se indica a continuación:
+   1. Crear un `AdvertisingMetadata` objeto y `MetadataNode` objeto.
+   1. Guarde el `AdvertisingMetadata` objeto a `MetadataNode`.
 
    ```java
    MetadataNode result = new MetadataNode(); 
@@ -63,21 +62,21 @@ Cuando TVSDK detecta una nueva oportunidad, se repite a través de los soluciona
                   advertisingMetadata);
    ```
 
-1. Cree una clase de resolución de anuncios personalizada que amplíe la clase `ContentResolver`.
-   1. En la resolución de anuncios personalizada, anule esta función protegida:
+1. Cree una clase personalizada de resolución de anuncios que extienda el `ContentResolver` clase.
+   1. En el solucionador de anuncios personalizado, anule esta función protegida:
 
       ```java
       void doResolveAds(Metadata metadata,  
                         PlacementOpportunity placementOpportunity)
       ```
 
-      Los metadatos contienen su `AdvertisingMetada`. Utilícelo para la siguiente generación de vectores `TimelineOperation`.
+      Los metadatos contienen su `AdvertisingMetada`. Utilícelo para lo siguiente `TimelineOperation` generación de vectores.
 
-   1. Para cada oportunidad de colocación, cree un `Vector<TimelineOperation>`.
+   1. Para cada oportunidad de ubicación, cree un `Vector<TimelineOperation>`.
 
-      El vector puede estar vacío, pero no nulo.
+      El vector puede estar vacío, pero no ser nulo.
 
-      Este ejemplo `TimelineOperation` proporciona una estructura para `AdBreakPlacement`:
+      Esta muestra `TimelineOperation` proporciona una estructura para `AdBreakPlacement`:
 
       ```java
       AdBreakPlacement(AdBreak.createAdBreak( 
@@ -90,10 +89,10 @@ Cuando TVSDK detecta una nueva oportunidad, se repite a través de los soluciona
       )
       ```
 
-   1. Una vez resueltos los anuncios, llame a una de las siguientes funciones:
+   1. Una vez resueltos los anuncios, invoque una de las siguientes funciones:
 
       * Si la resolución del anuncio se realiza correctamente: `notifyResolveComplete(Vector<TimelineOperation> proposals)`
-      * Si la resolución del anuncio falla: `notifyResolveError(Error error)`
+      * Si falla la resolución del anuncio: `notifyResolveError(Error error)`
 
       Por ejemplo, si falla:
 
@@ -106,7 +105,7 @@ Cuando TVSDK detecta una nueva oportunidad, se repite a través de los soluciona
 
 <!--<a id="example_4F0D7692A92E480A835D6FDBEDBE75E7"></a>-->
 
-Este solucionador de anuncios personalizado de ejemplo realiza una solicitud HTTP al servidor de publicidad y recibe una respuesta JSON.
+Este solucionador de anuncios personalizado de muestra realiza una solicitud HTTP al servidor de publicidad y recibe una respuesta JSON.
 
 ```java
 public class CustomAdResolver extends ContentResolver { 
@@ -162,7 +161,7 @@ Ejemplo de respuesta del servidor de publicidad JSON para un flujo en directo:
 } 
 ```
 
-Ejemplo de respuesta de servidor de publicidad JSON para VOD:
+Ejemplo de respuesta del servidor de publicidad JSON para VOD:
 
 ```
 {     
@@ -223,4 +222,3 @@ Ejemplo de respuesta de servidor de publicidad JSON para VOD:
     } 
 } 
 ```
-

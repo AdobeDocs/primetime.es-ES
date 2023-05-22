@@ -1,22 +1,21 @@
 ---
-description: TVSDK proporciona API y código de muestra para la gestión de periodos de interrupción.
-title: Implementación de la gestión de bloqueos
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK proporciona API y código de ejemplo para gestionar períodos de interrupción.
+title: Implementación de gestión de interrupciones
+exl-id: 9b23674d-76d5-4879-b595-3a6e368c45cd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
 
 ---
 
+# Implementación de gestión de interrupciones{#implement-blackout-handling}
 
-# Implementar la gestión de bloqueos{#implement-blackout-handling}
+TVSDK proporciona API y código de ejemplo para gestionar períodos de interrupción.
 
-TVSDK proporciona API y código de muestra para la gestión de periodos de interrupción.
+Para implementar la gestión de interrupciones, incluido el suministro de contenido alternativo durante la interrupción:
 
-Para implementar la gestión de bloqueos, incluido el suministro de contenido alternativo durante la interrupción:
-
-1. Configure la aplicación para detectar etiquetas de bloqueo en un manifiesto de flujo en directo.
+1. Configure la aplicación para detectar etiquetas de interrupción en un manifiesto de flujo en directo.
 
    ```java
    public void createMediaPlayer { 
@@ -27,7 +26,7 @@ Para implementar la gestión de bloqueos, incluido el suministro de contenido al
    }
    ```
 
-1. Cree oyentes de eventos para eventos de metadatos temporizados en flujos en primer y segundo plano.
+1. Cree detectores de eventos para eventos de metadatos cronometrados en flujos en primer y segundo plano.
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -36,7 +35,7 @@ Para implementar la gestión de bloqueos, incluido el suministro de contenido al
    }
    ```
 
-1. Implemente controladores de eventos de metadatos temporizados para flujos en primer y segundo plano.
+1. Implemente controladores de eventos de metadatos cronometrados para las secuencias en primer y segundo plano.
 
    Primer plano:
 
@@ -75,7 +74,7 @@ Para implementar la gestión de bloqueos, incluido el suministro de contenido al
    }; 
    ```
 
-1. Gestione los objetos `TimedMetadata` cuando se ejecute el tiempo `MediaPlayer` .
+1. Handle `TimedMetadata` objetos cuando `MediaPlayer` el tiempo corre.
 
    ```java
    _playbackClockEventListener = new Clock.ClockEventListener() { 
@@ -98,7 +97,7 @@ Para implementar la gestión de bloqueos, incluido el suministro de contenido al
    };
    ```
 
-1. Cree métodos para cambiar contenido al principio y al final del periodo de interrupción.
+1. Cree métodos para cambiar el contenido al principio y al final del período de interrupción.
 
    ```java
    private void handleTimedMetadataList(long currentTime) { 
@@ -150,7 +149,7 @@ Para implementar la gestión de bloqueos, incluido el suministro de contenido al
    }
    ```
 
-1. Actualice rangos no buscables si el rango de interrupción está en DVR en el flujo de reproducción.
+1. Actualice los rangos no buscables si el rango de interrupción está en DVR en el flujo de reproducción.
 
    ```java
    // prepare and update blackout nonSeekable ranges 
@@ -183,7 +182,7 @@ Para implementar la gestión de bloqueos, incluido el suministro de contenido al
 
    >[!NOTE]
    >
-   >Actualmente, para varios flujos en directo de velocidad de bits, ocasionalmente los perfiles de velocidad de bits ajustable (ABR) pueden no estar sincronizados. Esto provoca objetos `timedMetadata` duplicados para la misma etiqueta suscrita. Para evitar cálculos incorrectos que no se pueden buscar, es muy recomendable comprobar si hay intervalos que no se pueden buscar superpuestos después de los cálculos, como en el siguiente ejemplo:
+   >Actualmente, para varios flujos en directo de velocidad de bits, ocasionalmente los perfiles de velocidad de bits ajustable (ABR) pueden no estar sincronizados. Esto causa un duplicado `timedMetadata` objetos para la misma etiqueta suscrita. Para evitar cálculos incorrectos que no se puedan buscar, se recomienda encarecidamente comprobar si hay intervalos no buscables superpuestos después de los cálculos, como en el siguiente ejemplo:
 
    ```java
    List<TimeRange> rangesToRemove = new ArrayList<TimeRange>(); 
@@ -209,4 +208,3 @@ Para implementar la gestión de bloqueos, incluido el suministro de contenido al
        nonSeekableRanges.removeAll(rangesToRemove); 
    }
    ```
-

@@ -2,24 +2,23 @@
 title: Habilitar audio de fondo
 description: Habilitar audio de fondo
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: db494969-ef63-46ad-9f08-a95f58c8b27b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%
 
 ---
 
-
 # Habilitar audio de fondo {#enable-background-audio}
 
-Para activar la reproducción de audio cuando la aplicación está en segundo plano, la aplicación debe llamar a la API `enableAudioPlaybackInBackground` de MediaPlayer con true como argumento cuando el reproductor está en estado PREPARADO.
+Para habilitar la reproducción de audio cuando la aplicación está en segundo plano, la aplicación debe llamar a `enableAudioPlaybackInBackground` API de MediaPlayer con true como argumento cuando el reproductor está en estado PREPARED.
 
 ```
 _mediaPlayer.enableAudioPlaybackInBackground(true);
 ```
 
-La aplicación debe pausar la reproducción cuando pierda la retención en el foco del audio durante eventos como responder al teléfono, etc. El siguiente fragmento de código muestra cómo implementar `OnAudioFocusChangeListener`:
+La aplicación debe pausar la reproducción cuando pierde la retención del enfoque del audio durante eventos como responder al teléfono, etc. El siguiente fragmento de código muestra cómo implementar la variable `OnAudioFocusChangeListener`:
 
 ```
 /** 
@@ -46,4 +45,3 @@ La aplicación debe pausar la reproducción cuando pierda la retención en el fo
 AudioManager audioManager = (AudioManager) getActivity().getApplicationContext().getSystemService(Context.AUDIO_SERVICE); 
 audioManager.requestAudioFocus(onAudioFocusChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
 ```
-

@@ -1,37 +1,36 @@
 ---
-description: El término instantáneo en hace referencia a la precarga de uno o más canales, de modo que un usuario que selecciona un canal o cambia de canal ve que el contenido se reproduce inmediatamente. El almacenamiento en búfer ya se ha realizado cuando el usuario empieza a ver.
-title: Instantáneo activado
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: El término instantáneo hace referencia a la precarga de uno o más canales para que un usuario que selecciona uno o cambia de canal vea que el contenido se reproduce inmediatamente. El almacenamiento en búfer ya está hecho para cuando el usuario empieza a ver.
+title: Instantáneo en
+exl-id: f640f208-d1b3-467a-be97-38690e10b7ed
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
 
 ---
 
-
 # Instantáneo en {#instant-on}
 
-El término instantáneo en hace referencia a la precarga de uno o más canales, de modo que un usuario que selecciona un canal o cambia de canal ve que el contenido se reproduce inmediatamente. El almacenamiento en búfer ya se ha realizado cuando el usuario empieza a ver.
+El término instantáneo hace referencia a la precarga de uno o más canales para que un usuario que selecciona uno o cambia de canal vea que el contenido se reproduce inmediatamente. El almacenamiento en búfer ya está hecho para cuando el usuario empieza a ver.
 
-Sin conexión instantánea, TVSDK inicializa el contenido que se va a reproducir, pero no comienza a almacenar en búfer el flujo hasta que la aplicación llama a `play`. El usuario no ve ningún contenido hasta que se completa el almacenamiento en búfer. Con la activación instantánea, puede iniciar varias instancias del reproductor de contenidos (o del cargador de elementos del reproductor de contenidos) y TVSDK empezará a almacenar en búfer las emisiones inmediatamente.
+Sin la activación instantánea, TVSDK inicializa el medio que se va a reproducir, pero no comienza a almacenar en búfer el flujo hasta que la aplicación llama a `play`. El usuario no ve ningún contenido hasta que se completa el almacenamiento en búfer. Con la función instantánea activada, puede iniciar varias instancias del reproductor de contenidos (o del cargador de elementos del reproductor de contenidos) y TVSDK comienza a almacenar en búfer los flujos inmediatamente.
 
-Cuando un usuario cambia el canal y el flujo se almacena en búfer correctamente, la llamada `play` en el nuevo canal inicia la reproducción inmediatamente.
+Cuando un usuario cambia el canal y el flujo se ha almacenado en búfer correctamente, llamando a `play` en el nuevo canal, la reproducción se inicia inmediatamente.
 
-Aunque no hay límites al número de instancias `MediaPlayer` que TVSDK puede ejecutar, la ejecución de más instancias consume más recursos. El rendimiento de la aplicación puede verse afectado por el número de instancias que se ejecutan. Para obtener más información sobre estas instancias, consulte [Carga de un recurso de medios mediante MediaPlayerItemLoader](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md).
+Aunque no hay límites en la cantidad de `MediaPlayer` Las instancias que TVSDK puede ejecutar, al ejecutar más instancias, consumen más recursos. El rendimiento de la aplicación puede verse afectado por el número de instancias que se ejecutan. Para obtener más información sobre estas instancias, consulte [Cargar un recurso multimedia mediante MediaPlayerItemLoader](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md).
 
-## Configurar el almacenamiento en búfer para la reproducción instantánea {#configure-buffering-for-instant-on-playback}
+## Configuración del almacenamiento en búfer para la reproducción instantánea {#configure-buffering-for-instant-on-playback}
 
-Con la activación instantánea, los usuarios pueden cambiar de canal y la reproducción comienza inmediatamente sin esperar tiempo. Cuando activa instantáneamente, TVSDK almacena en búfer uno o varios canales antes de que comience la reproducción.
+Con la activación instantánea, los usuarios pueden cambiar de canal y la reproducción se inicia inmediatamente sin tener que esperar. Cuando se activa el inicio instantáneo, TVSDK almacena en búfer uno o más canales antes de que comience la reproducción.
 
-1. Confirme que el recurso se ha cargado y está listo para reproducirse. Para ello, compruebe que el estado esté PREPARADO.
-1. Antes de llamar a `play`, llame a `prepareBuffer` para cada instancia `MediaPlayer`.
+1. Confirme que el recurso se ha cargado y está listo para reproducirse comprobando que el estado es PREPARADO.
+1. Antes de llamar `play`, llame a `prepareBuffer` para cada `MediaPlayer` ejemplo.
 
-   Esto activa instantáneamente, lo que significa que TVSDK comienza a almacenar en búfer sin reproducir realmente el recurso de medios. TVSDK distribuye el evento `BUFFERING_COMPLETED` cuando el búfer está lleno.
+   Esto habilita el inicio instantáneo, lo que significa que TVSDK inicia el almacenamiento en búfer sin reproducir realmente el recurso de medios. TVSDK distribuye el `BUFFERING_COMPLETED` cuando el búfer está lleno.
 
    >[!NOTE]
    >
-   >De forma predeterminada, `prepareBuffer` y `prepareToPlay` configuran el flujo de medios para que se inicie la reproducción desde el principio. Para comenzar en otra posición, pase la posición (en milisegundos) a `prepareToPlay`.
+   >De forma predeterminada, `prepareBuffer` y `prepareToPlay` configure el flujo de medios para que comience a reproducirse desde el principio. Para empezar en otra posición, pase la posición (en milisegundos) a `prepareToPlay`.
 
    ```java
    @Override 
@@ -54,7 +53,7 @@ Con la activación instantánea, los usuarios pueden cambiar de canal y la repro
    }
    ```
 
-1. Cuando reciba el evento `BUFFERING_COMPLETE`, empiece a reproducir el elemento o muestre comentarios visuales para indicar que el contenido está completamente almacenado en búfer.
+1. Cuando reciba la `BUFFERING_COMPLETE` , empiece a reproducir el elemento o muestre comentarios visuales para indicar que el contenido está completamente almacenado en búfer.
 
    Si llama a `play`, la reproducción debe comenzar inmediatamente.
 

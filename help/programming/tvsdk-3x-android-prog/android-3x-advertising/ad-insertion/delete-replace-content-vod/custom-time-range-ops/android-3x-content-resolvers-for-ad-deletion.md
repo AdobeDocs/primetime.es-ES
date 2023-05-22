@@ -1,18 +1,17 @@
 ---
-description: Puede utilizar varios resolvedores de contenido para gestionar diferentes operaciones de cronología.
-title: Resolución de contenido para eliminación/reemplazo de anuncios
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede utilizar varias resoluciones de contenido para gestionar distintas operaciones de cronología.
+title: Resoluciones de contenido para la eliminación/sustitución de anuncios
+exl-id: e215ae64-894a-41db-a407-6be0e7464a82
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
 
 ---
 
+# Resoluciones de contenido para la eliminación/sustitución de anuncios {#content-resolvers-for-ad-deletion-replacement}
 
-# Resuelven el contenido para la eliminación/reemplazo de anuncios {#content-resolvers-for-ad-deletion-replacement}
-
-Puede utilizar varios resolvedores de contenido para gestionar diferentes operaciones de cronología.
+Puede utilizar varias resoluciones de contenido para gestionar distintas operaciones de cronología.
 
 ```java
 public List<ContentResolver> retrieveResolvers(MediaPlayerItem item) { 

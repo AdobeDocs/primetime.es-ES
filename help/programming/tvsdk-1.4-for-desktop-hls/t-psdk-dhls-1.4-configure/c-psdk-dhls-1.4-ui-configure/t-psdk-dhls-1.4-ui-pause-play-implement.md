@@ -1,33 +1,32 @@
 ---
-description: Puede añadir el comportamiento de TVSDK para pausar y reproducir botones.
+description: Puede añadir el comportamiento de TVSDK a los botones de pausa y reproducción.
 title: Reproducir y pausar un vídeo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c1c259a4-edb8-475b-96a2-7fa0903804c3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%
 
 ---
 
-
 # Reproducir y pausar un vídeo{#play-and-pause-a-video}
 
-Puede añadir el comportamiento de TVSDK para pausar y reproducir botones.
+Puede añadir el comportamiento de TVSDK a los botones de pausa y reproducción.
 
 1. Cree un botón de pausa/reproducción que haga lo siguiente.
-   1. Espere a que el reproductor esté en al menos el estado PREPARADO .
-   1. Para iniciar la reproducción, llame al método TVSDK play :
+   1. Espere a que su reproductor esté en al menos el estado PREPARADO.
+   1. Para iniciar la reproducción, invoque el método de reproducción TVSDK:
 
       ```
       function play():void;
       ```
 
-   1. Para pausar la reproducción, llame al método TVSDK pause:
+   1. Para pausar la reproducción, llame al método pause de TVSDK:
 
       ```
       function pause():void;
       ```
 
-1. Utilice la rellamada para el evento `MediaPlayerStatusChangeEvent.STATUS_CHANGED` para comprobar si hay errores o para realizar otras acciones adecuadas.
+1. Utilice la llamada de retorno para `MediaPlayerStatusChangeEvent.STATUS_CHANGED` para comprobar si hay errores o realizar otras acciones apropiadas.
 
-   TVSDK llama a esta rellamada cuando se llama al método de pausa o reproducción. TVSDK pasa información sobre el cambio de estado en la rellamada, incluido el nuevo estado, como PAUSA o REPRODUCCIÓN.
+   TVSDK llama a esta llamada de retorno cuando se llama al método de pausa o reproducción. TVSDK pasa información sobre el cambio de estado en la llamada de retorno, incluido el nuevo estado, como PAUSADO o EN REPRODUCCIÓN.

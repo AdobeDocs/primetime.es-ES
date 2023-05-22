@@ -1,37 +1,36 @@
 ---
-description: Otra forma de resolver un recurso multimedia es con MediaPlayerItemLoader. Esto resulta útil cuando desea obtener información sobre un flujo de medios concreto sin crear una instancia de MediaPlayer.
-title: Carga de un recurso multimedia mediante MediaPlayerItemLoader
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Otra forma de resolver un recurso multimedia es con MediaPlayerItemLoader. Esto resulta útil cuando desea obtener información sobre un flujo de medios determinado sin crear una instancia de MediaPlayer.
+title: Cargar un recurso multimedia mediante MediaPlayerItemLoader
+exl-id: 9d129497-8a71-433a-a542-f49be519893b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
 
 ---
 
+# Cargar un recurso multimedia mediante MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}
 
-# Carga de un recurso multimedia mediante MediaPlayerItemLoader {#load-a-media-resource-using-mediaplayeritemloader}
+Otra forma de resolver un recurso multimedia es con MediaPlayerItemLoader. Esto resulta útil cuando desea obtener información sobre un flujo de medios determinado sin crear una instancia de MediaPlayer.
 
-Otra forma de resolver un recurso multimedia es con MediaPlayerItemLoader. Esto resulta útil cuando desea obtener información sobre un flujo de medios concreto sin crear una instancia de MediaPlayer.
+A través de `MediaPlayerItemLoader` , puede intercambiar un recurso multimedia por el recurso correspondiente `MediaPlayerItem` sin adjuntar una vista a `MediaPlayer` , lo que llevaría a la asignación de los recursos de hardware de descodificación de vídeo. El proceso de obtención de la `MediaPlayerItem` La instancia de es asíncrona.
 
-A través de la clase `MediaPlayerItemLoader`, puede intercambiar un recurso de medios para el `MediaPlayerItem` correspondiente sin adjuntar una vista a una instancia `MediaPlayer`, lo que llevaría a la asignación de los recursos de hardware de descodificación de vídeo. El proceso para obtener la instancia `MediaPlayerItem` es asíncrono.
-
-1. Implemente la interfaz de llamada de retorno `MediaPlayerItemLoader.LoaderListener` .
+1. Implementación de `MediaPlayerItemLoader.LoaderListener` interfaz de devolución de llamada.
 
        Esta interfaz define dos métodos:
    
    * `LoaderListener.onError` función callback
 
-      TVSDK lo utiliza para informar a la aplicación de que se ha producido un error. TVSDK proporciona un código de error como parámetros y una cadena de descripción que contiene información de diagnóstico.
+      TVSDK utiliza esto para informar a la aplicación de que se ha producido un error. TVSDK proporciona un código de error como parámetros y una cadena de descripción que contiene información de diagnóstico.
 
    * `LoaderListener.onError` función callback
 
-      TVSDK lo utiliza para informar a su aplicación de que la información solicitada está disponible en forma de instancia `MediaPlayerItem` que se pasa como parámetro a la rellamada.
+      TVSDK utiliza esto para informar a su aplicación de que la información solicitada está disponible en forma de `MediaPlayerItem` instancia de que se pasa como parámetro a la llamada de retorno.
 
-1. Registre esta instancia en TVSDK pasándola como parámetro al constructor del `MediaPlayerItemLoader`.
-1. Llame a `MediaPlayerItemLoader.load`, pasando una instancia de un objeto `MediaResource`.
+1. Registre esta instancia en TVSDK pasándola como un parámetro al constructor del `MediaPlayerItemLoader`.
+1. Llamada `MediaPlayerItemLoader.load`, pasando una instancia de `MediaResource` objeto.
 
-   La dirección URL del objeto `MediaResource` debe señalar a la secuencia para la que desea obtener información. Por ejemplo:
+   La dirección URL del `MediaResource` debe apuntar a la secuencia de la que desea obtener información. Por ejemplo:
 
    ```java
    // instantiate the listener interface 
@@ -57,4 +56,3 @@ A través de la clase `MediaPlayerItemLoader`, puede intercambiar un recurso de 
    // load the media resource 
    itemLoader.load(mediaResource); 
    ```
-

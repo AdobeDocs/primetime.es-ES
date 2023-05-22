@@ -1,7 +1,6 @@
 ---
 description: Si el cliente solicita información de seguimiento, el servidor de manifiesto devuelve un archivo con formato. Su formato y contenido dependen del valor del parámetro de consulta pttrackingversion
-title: Formato VMAP para rastrear direcciones URL
-translation-type: tm+mt
+title: Formato VMAP para el seguimiento de direcciones URL
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '138'
@@ -10,13 +9,13 @@ ht-degree: 0%
 ---
 
 
-# Formato VMAP para rastrear direcciones URL {#vmap-format-for-tracking-urls}
+# Formato VMAP para el seguimiento de direcciones URL {#vmap-format-for-tracking-urls}
 
 Si el cliente solicita información de seguimiento, el servidor de manifiesto devuelve un archivo con formato. Su formato y contenido dependen del valor del parámetro de consulta `pttrackingversion`
 
 ## Formato VMAP único {#vmap}
 
-El archivo VMAP que envía el servidor de manifiesto si `pttrackingversion=vmap` tiene el formato del siguiente ejemplo, que proviene de un bloque VMAP típico. Se ha abreviado para evitar repeticiones innecesarias, de modo que la estructura sea más clara. Los puntos suspensivos (tres puntos, separados por espacios) indican información omitida dentro de algunas direcciones URL y entre algunos bloques de código. Las direcciones URL no abreviadas aparecen en varias líneas, aunque aparecen en una sola línea en el archivo VMAP.
+El archivo VMAP que envía el servidor de manifiesto si `pttrackingversion=vmap` tiene el formato del siguiente ejemplo, que proviene de un bloque VMAP típico. Se ha abreviado para evitar repeticiones innecesarias, de modo que la estructura sea más clara. Los puntos suspensivos (tres puntos separados por espacios) indican información omitida en algunas direcciones URL y entre algunos bloques de código. Las direcciones URL sin abreviar aparecen en varias líneas, aunque en una sola línea del archivo VMAP.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?> 

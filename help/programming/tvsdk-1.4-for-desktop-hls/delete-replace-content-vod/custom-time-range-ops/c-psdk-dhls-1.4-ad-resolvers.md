@@ -1,17 +1,16 @@
 ---
-title: Resolvidores de anuncios
-description: Resolvidores de anuncios
+title: Resoluciones de anuncios
+description: Resoluciones de anuncios
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0df17e35-5c2d-46cd-bab2-c240ab8320c1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '6'
 ht-degree: 0%
 
 ---
 
-
-# Resolvidores de anuncios {#ad-resolvers}
+# Resoluciones de anuncios {#ad-resolvers}
 
 ```
 if (resource.metadata != null) { 

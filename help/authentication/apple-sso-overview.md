@@ -1,28 +1,27 @@
 ---
-title: Información general de Apple SSO
-description: Información general de Apple SSO
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Información general sobre Apple SSO
+description: Información general sobre Apple SSO
+exl-id: 7cf47d01-a35a-4c85-b562-e5ebb6945693
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '1452'
 ht-degree: 0%
 
 ---
 
-
-
-# Información general de Apple SSO {#apple-sso-overview}
+# Información general sobre Apple SSO {#apple-sso-overview}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 ## Introducción {#Introduction}
 
-Apple proporciona una API que permite a las personas iniciar sesión en su cuenta de proveedor de TV a nivel de sistema de dispositivo, lo que elimina la necesidad de autenticarse en cada aplicación.
+Apple proporciona una API que permite a las personas iniciar sesión en su cuenta de proveedor de TV en el nivel de sistema del dispositivo, lo que elimina la necesidad de autenticarse aplicación por aplicación.
 
-Por lo tanto, Apple y Adobe Primetime Authentication se asociaron para crear la experiencia de usuario de Single Sign-On (SSO) de la plataforma en el ecosistema de TV en todas partes para propietarios de iPhone, iPad y Apple TV.
+Por lo tanto, Apple y Autenticación de Adobe Primetime se asociaron para crear la experiencia de usuario de inicio de sesión único (SSO) de plataforma en el ecosistema de TV en todas partes para propietarios de iPhone, iPad y Apple TV.
 
-Para beneficiarse de la experiencia de usuario del inicio de sesión único (SSO) en un dispositivo Apple, hay una lista de requisitos previos que deben completarse.
+Para beneficiarse de la experiencia de usuario de inicio de sesión único (SSO) en un dispositivo Apple, existe una lista de requisitos previos que deben completarse.
 
 </br>
 
@@ -34,89 +33,89 @@ Los requisitos previos pueden aplicarse a una o varias entidades involucradas en
 
 ### Programador {#Programmer}
 
-Para beneficiarse de la experiencia de usuario del Registro único (SSO), un programador debe:
+Para beneficiarse de la experiencia de usuario de inicio de sesión único (SSO), un programador debe:
 
-1. Utilice al menos Xcode versión 8 y iOS/tvOS versión 10.
+1. Utilice al menos la versión 8 de Xcode y la versión 10 de iOS/tvOS.
 
-1. Tenga la variable [Derecho de inicio de sesión único del suscriptor de vídeo](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_video-subscriber-single-sign-on) configurado en su cuenta de desarrollador de Apple. Póngase en contacto con Apple para habilitar [Marco de cuentas de suscriptor de vídeo](https://developer.apple.com/documentation/videosubscriberaccount) para su ID de equipo de Apple.
+1. Tener el [Derecho de inicio de sesión único de suscriptor de vídeo](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_video-subscriber-single-sign-on) configurado en su cuenta de desarrollador de Apple. Póngase en contacto con Apple para habilitar [Marco de cuenta de suscriptor de vídeo](https://developer.apple.com/documentation/videosubscriberaccount) para su ID de equipo de Apple.
 
-1. Habilite el inicio de sesión único (YES) para cada integración deseada (Canal x MVPD) y la plataforma deseada (iOS / tvOS) a través del [TVE Dashboard de Adobe Primetime](https://console.auth.adobe.com/).
+1. Habilite el inicio de sesión único (SÍ) para cada integración deseada (Canal x MVPD) y plataforma deseada (iOS/tvOS) a través del [Tablero de Adobe Primetime TVE](https://console.auth.adobe.com/).
 
-1. Integre los flujos de trabajo SSO de Apple mediante una de las dos soluciones siguientes que ofrece el equipo de autenticación de Adobe Primetime:
+1. Integre los flujos de trabajo de SSO de Apple con una de las dos soluciones siguientes que ofrece el equipo de autenticación de Adobe Primetime:
 
-   - La API de REST de autenticación de Adobe Primetime puede admitir la autenticación de inicio de sesión único (SSO) de plataforma para usuarios finales de aplicaciones cliente que se ejecuten en iOS, iPadOS o tvOS. Consulte también [Guía de Apple SSO (API de REST)](/help/authentication/apple-sso-cookbook-rest-api.md).
+   - La API de REST de autenticación de Adobe Primetime puede admitir la autenticación de inicio de sesión único (SSO) de plataforma para los usuarios finales de aplicaciones cliente que se ejecuten en iOS, iPadOS o tvOS. Consulte también [Guía de Apple SSO (API de REST)](/help/authentication/apple-sso-cookbook-rest-api.md).
 
-   - El SDK de Adobe Primetime Authentication AccessEnabler iOS/tvOS puede admitir la autenticación de plataforma Single Sign-On (SSO) para usuarios finales de aplicaciones cliente que se ejecuten en iOS, iPadOS o tvOS. Consulte también [Guía de Apple SSO (SDK de iOS/tvOS)](/help/authentication/apple-sso-cookbook-iostvos-sdk.md).
+   - El SDK de Adobe Primetime Authentication AccessEnabler de iOS/tvOS puede admitir la autenticación de inicio de sesión único (SSO) de la plataforma para los usuarios finales de aplicaciones cliente que se ejecuten en iOS, iPadOS o tvOS. Consulte también [Guía de Apple SSO (SDK de iOS/tvOS)](/help/authentication/apple-sso-cookbook-iostvos-sdk.md).
 
-   - **<u>Consejo de Pro:</u>** Para tener acceso a la información de suscripción del usuario, el usuario debe dar permiso a la aplicación para continuar, de forma similar a proporcionar acceso a la cámara o el micrófono del dispositivo. Este permiso debe solicitarse por aplicación y el dispositivo guardará la selección del usuario. Tenga en cuenta que el usuario puede cambiar su decisión accediendo a la configuración de la aplicación (acceso de permiso del proveedor de TV) o a la sección desde *`Settings -> TV Provider`* en iOS/iPadOS o *`Settings -> Accounts -> TV Provider`* en tvOS.
+   - **<u>Sugerencia profesional:</u>** Para tener acceso a la información de suscripción del usuario, el usuario debe dar permiso a la aplicación para continuar, de forma similar a proporcionar acceso a la cámara o al micrófono del dispositivo. Este permiso debe solicitarse por aplicación y el dispositivo guardará la selección del usuario. Tenga en cuenta que el usuario puede cambiar su decisión en la configuración de la aplicación (acceso al permiso del proveedor de TV) o en la sección de *`Settings -> TV Provider`* en iOS/iPadOS o *`Settings -> Accounts -> TV Provider`* en tvOS.
 
-   - **<u>Consejo de Pro:</u>** Se recomienda solicitar el permiso del usuario cuando la aplicación entre en estado de primer plano, pero es solo una sugerencia, ya que la aplicación puede comprobar [permiso de acceso](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) la información de suscripción del usuario en cualquier momento antes de requerir la autenticación del usuario. Además, las API del SDK de iOS/tvOS de AccessEnabler solicitarán automáticamente el permiso del usuario cuando lo necesite.
+   - **<u>Sugerencia profesional:</u>** Se recomienda solicitar el permiso del usuario cuando la aplicación entre en el estado en primer plano, pero es solo una sugerencia, ya que la aplicación puede buscar [permiso para acceder a](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus) la información de suscripción del usuario en cualquier momento antes de requerir la autenticación del usuario. Además, las API del SDK de iOS/tvOS de AccessEnabler solicitarán automáticamente el permiso del usuario cuando lo necesite.
 
-   - **<u>Consejo de Pro:</u>** Recomendamos incentivar a los usuarios que se nieguen a dar permiso para acceder a la información de suscripción explicando las ventajas de la experiencia de usuario del inicio de sesión único (SSO). Tenga en cuenta que el usuario puede cambiar su decisión accediendo a la configuración de la aplicación (acceso de permiso del proveedor de TV) o a la sección desde *`Settings -> TV Provider`* en iOS/iPadOS o *`Settings -> Accounts -> TV Provider`* en tvOS.
+   - **<u>Sugerencia profesional:</u>** Recomendamos incentivar a los usuarios que se nieguen a dar permiso para acceder a la información de suscripción explicando las ventajas de la experiencia del usuario de inicio de sesión único (SSO). Tenga en cuenta que el usuario puede cambiar su decisión en la configuración de la aplicación (acceso al permiso del proveedor de TV) o en la sección de *`Settings -> TV Provider`* en iOS/iPadOS o *`Settings -> Accounts -> TV Provider`* en tvOS.
 
-El resultado debe crear una experiencia en línea con los siguientes flujos de usuario, que le sugerimos consultar antes de comenzar a desarrollar la aplicación:
+El resultado debe crear una experiencia en línea con los siguientes flujos de usuarios, que le sugerimos consultar antes de comenzar a desarrollar su aplicación o aplicaciones:
 
-- [iPhone/iPad](http://tve.zendesk.com/hc/article_attachments/205624966/User_flows_AppleSSO_iOS_v2.pdf) flujos de usuario
-- [Apple TV](http://tve.zendesk.com/hc/article_attachments/206669126/User_flows_tvOS.pdf) flujos de usuario
-
-
->[!IMPORTANT]
->
-> Cuando la función Inicio de sesión único está **enabled** para iOS/tvOS **y** en el caso de Apple **ya incorporado (compatible) o selector** MVPD Los flujos de autenticación/cierre de sesión procedentes de los flujos de trabajo de SSO de Apple implicarán las soluciones de autenticación de Apple y Adobe Primetime, mientras que todos los demás flujos (autorización, preautorización, metadatos, etc.) solo recibirá el servicio de autenticación de Adobe Primetime.
+- [iPhone/iPad](http://tve.zendesk.com/hc/article_attachments/205624966/User_flows_AppleSSO_iOS_v2.pdf) flujos de usuarios
+- [APPLE TV](http://tve.zendesk.com/hc/article_attachments/206669126/User_flows_tvOS.pdf) flujos de usuarios
 
 
 >[!IMPORTANT]
 >
-> Cuando la función Inicio de sesión único está **disabled** para iOS/tvOS **o** en el caso de Apple **no integrado (no compatible)** MVPD Los flujos de autenticación/cierre de sesión se devolverán de los flujos de trabajo de SSO de Apple a los normales a los que solo presta servicio la autenticación de Adobe Primetime.
+> Cuando la característica de inicio de sesión único es **activado** para iOS/tvOS **y** en el caso de Apple **incorporado (compatible) o selector** MVPD: los flujos de autenticación/cierre de sesión de los flujos de trabajo de SSO de Apple implicarán soluciones de autenticación de Apple y Adobe Primetime, mientras que el resto de flujos (autorización, preautorización, metadatos, etc.) será atendido únicamente por Autenticación de Adobe Primetime.
 
 
 >[!IMPORTANT]
 >
-> Una de las principales ventajas del flujo de trabajo de Apple SSO es el flujo de usuario de autenticación de una pantalla, que también se puede entregar en Apple TV cuando la función Inicio de sesión único está **enabled** para tvOS **y** en el caso de Apple **Incorporado (compatible)** MVPD.
+> Cuando la característica de inicio de sesión único es **inhabilitado** para iOS/tvOS **o** en el caso de Apple **no incorporado (no compatible)** MVPD: los flujos de autenticación/cierre de sesión se revertirán de los flujos de trabajo de SSO de Apple a los regulares a los que solo sirve la autenticación de Adobe Primetime.
+
+
+>[!IMPORTANT]
+>
+> Una ganancia principal del flujo de trabajo de SSO de Apple se representa mediante el flujo de usuario de autenticación en una pantalla, que también se puede entregar en Apple TV cuando la función de inicio de sesión único está **activado** para tvOS **y** en el caso de Apple **Integrado (compatible)** MVPD.
 
 
 ### MVPD {#MVPD}
 
-Para beneficiarse de la experiencia de usuario del Registro único (SSO), un MVPD debe:
+Para beneficiarse de la experiencia del usuario de inicio de sesión único (SSO), una MVPD debe:
 
  
 
-1. Se debe incorporar al flujo de trabajo de Apple SSO en Apple. Póngase en contacto con Apple para facilitar el proceso de incorporación.
+1. Incorpórese al flujo de trabajo de SSO de Apple del lado de Apple. Póngase en contacto con Apple para facilitar el proceso de incorporación.
 1. Proporcionar una aplicación TVML de JavaScript capaz de gestionar el formulario de inicio de sesión del usuario. Póngase en contacto con Apple para recibir la documentación adecuada.
-1. Proporcione un valor de cadena que represente el identificador de proveedor asignado por Apple durante el proceso de incorporación. Póngase en contacto con la autenticación de Adobe Primetime para realizar cambios en la configuración.
+1. Proporcione un valor de cadena que represente el identificador de proveedor asignado por Apple durante el proceso de incorporación. Póngase en contacto con Autenticación de Adobe Primetime para realizar cambios en la configuración.
 
 </br>
 
-## Preguntas frecuentes {#FAQ}
+## FAQ {#FAQ}
 
-1. En caso de que algo salga mal en el flujo de trabajo de SSO de Apple, ¿puede la aplicación que utiliza el SDK de AccessEnabler iOS/tvOS tener la capacidad de realizar un seguimiento del flujo de autenticación normal?
-   - Esto es posible, pero requiere que se realice un cambio de configuración en la variable [TVE Dashboard de Adobe Primetime](https://console.auth.adobe.com/). La variable *Habilitar el inicio de sesión único* debe estar activado *NO* para la integración deseada (Canal x MVPD) y la plataforma deseada (iOS/tvOS).
-   - La aplicación solo reconocería el cambio de configuración después de llamar a [setRequestor](/help/authentication/iostvos-sdk-api-reference.md#setReqV3) en caso de que utilice el SDK de AccessEnabler iOS/tvOS.
-1. ¿Sabe la aplicación cuándo se ha producido una autenticación como resultado de un inicio de sesión a través del SSO de la plataforma en otro dispositivo u otra aplicación?
+1. En caso de que algo salga mal con el flujo de trabajo de SSO de Apple, ¿puede la aplicación que utiliza el SDK de AccessEnabler para iOS/tvOS tener la capacidad de volver al flujo de autenticación normal?
+   - Esto es posible, pero requiere que se realice un cambio de configuración en [Tablero de Adobe Primetime TVE](https://console.auth.adobe.com/). El *Habilitar inicio de sesión único* debe estar configurado en *NO* para la integración deseada (Canal x MVPD) y la plataforma deseada (iOS/tvOS).
+   - La aplicación reconocería el cambio de configuración solo después de llamar a [setRequestor](/help/authentication/iostvos-sdk-api-reference.md#setReqV3) API en caso de que utilice el SDK de AccessEnabler para iOS/tvOS.
+1. ¿Sabrá la aplicación cuándo se ha producido una autenticación como resultado de un inicio de sesión a través del SSO de la plataforma en otro dispositivo u otra aplicación?
    - Esta información no estará disponible.
-1. ¿Sabe la aplicación cuándo se ha producido una autenticación como resultado de un inicio de sesión a través del SSO de la plataforma en el mismo dispositivo? 
-   - Esta información está disponible como parte de la clave de metadatos del usuario: *tokenSource*, que debería devolver el valor de la cadena: &quot;Apple&quot; en este caso.
-1. ¿Qué sucede si un usuario inicia sesión yendo a la *`Settings -> TV Provider`* en iOS/iPadOS o *`Settings -> Accounts -> TV Provider`* en la sección tvOS utilizando un MVPD que no está integrado con la aplicación?
-   - Cuando el usuario inicia la aplicación, este no se autentica mediante el flujo de trabajo de Apple SSO. Por lo tanto, la aplicación tendría que recurrir al flujo de autenticación regular y presentar su propio selector de MVPD.
-1. ¿Qué sucede si un usuario inicia sesión yendo a la *`Settings -> TV Provider`* en iOS/iPadOS o *`Settings -> Accounts -> TV Provider`* en la sección tvOS usando un MVPD que tiene el *Habilitar el inicio de sesión único* configurado *NO* en el [TVE Dashboard de Adobe Primetime](https://console.auth.adobe.com/) para la plataforma iOS/tvOS?
-   - Cuando el usuario inicia la aplicación, este no se autentica mediante el flujo de trabajo de Apple SSO. Por lo tanto, la aplicación tendría que recurrir al flujo de autenticación regular y presentar su propio selector de MVPD.
-1. ¿Qué sucede si un usuario tiene un MVPD que Apple no ha incorporado (no admite), pero que está presente en el selector de Apple?
-   - Cuando el usuario inicia la aplicación, solo selecciona el MVPD mediante el flujo de trabajo de Apple SSO sin completar el flujo de autenticación. Por lo tanto, la aplicación tendría que recurrir al flujo de autenticación regular, pero podría utilizar el MVPD ya seleccionado.
-1. ¿Qué sucede si un usuario tiene un MVPD que Apple no incorpora (no admite)?
-   - Cuando el usuario inicia la aplicación, selecciona la opción de selector &quot;Otros proveedores de TV&quot; a través del flujo de trabajo de Apple SSO. Por lo tanto, la aplicación tendría que recurrir al flujo de autenticación regular y presentar su propio selector de MVPD.
-1. Qué sucede si un usuario tiene un MVPD degradado a través del medio de [TVE Dashboard de Adobe Primetime](https://console.auth.adobe.com/)?
-   - Cuando el usuario inicia la aplicación, se autentica mediante el mecanismo de degradación y no mediante el flujo de trabajo de Apple SSO.
-   - La experiencia debe ser perfecta para el usuario, mientras que la aplicación se informará a través del *N010* código de advertencia en caso de que utilice el SDK de AccessEnabler iOS/tvOS.
-1. ¿Cambiará el ID de usuario de MVPD entre Apple SSO y el flujo de autenticación SSO que no sea de Apple?
-   - La expectativa es que el ID de usuario no cambie, pero debe verificarse para cada proveedor seleccionado. 
+1. ¿Sabrá la aplicación cuándo se ha producido una autenticación como resultado de un inicio de sesión a través del SSO de plataforma en el mismo dispositivo? 
+   - Esta información está disponible como parte de la clave de metadatos del usuario: *tokenSource*, que debería devolver el valor de cadena: &quot;Apple&quot; en este caso.
+1. Qué sucede si un usuario inicia sesión en yendo a *`Settings -> TV Provider`* en iOS/iPadOS o *`Settings -> Accounts -> TV Provider`* en la sección tvOS que utiliza una MVPD que no está integrada con la aplicación?
+   - Cuando el usuario inicia la aplicación, no se autentica mediante el flujo de trabajo de SSO de Apple. Por lo tanto, la aplicación tendría que volver al flujo de autenticación normal y presentar su propio selector de MVPD.
+1. Qué sucede si un usuario inicia sesión en yendo a *`Settings -> TV Provider`* en iOS/iPadOS o *`Settings -> Accounts -> TV Provider`* en la sección de tvOS que utiliza una MVPD que tiene el *Habilitar inicio de sesión único* establecer en *NO* en el [Tablero de Adobe Primetime TVE](https://console.auth.adobe.com/) para la plataforma iOS/tvOS?
+   - Cuando el usuario inicia la aplicación, no se autentica mediante el flujo de trabajo de SSO de Apple. Por lo tanto, la aplicación tendría que volver al flujo de autenticación normal y presentar su propio selector de MVPD.
+1. ¿Qué sucede si un usuario tiene una MVPD que no está integrada (no es compatible) en Apple, pero está presente en el selector de Apple?
+   - Cuando el usuario inicia la aplicación, solo selecciona la MVPD mediante el flujo de trabajo de SSO de Apple sin completar el flujo de autenticación. Por lo tanto, la aplicación tendría que volver al flujo de autenticación normal, pero podría utilizar la MVPD ya seleccionada.
+1. ¿Qué sucede si un usuario tiene una MVPD que no está integrada (no es compatible) en Apple?
+   - Cuando el usuario inicia la aplicación, selecciona la opción de selector &quot;Otros proveedores de TV&quot; mediante el flujo de trabajo de SSO de Apple. Por lo tanto, la aplicación tendría que volver al flujo de autenticación normal y presentar su propio selector de MVPD.
+1. Qué sucede si un usuario tiene una MVPD que se degrada a través del medio de [Tablero de Adobe Primetime TVE](https://console.auth.adobe.com/)?
+   - Cuando el usuario inicia la aplicación, se autentica mediante el mecanismo de degradación y no mediante el flujo de trabajo de SSO de Apple.
+   - La experiencia debe ser perfecta para el usuario, mientras que la aplicación será informada a través de la *N010* código de advertencia en caso de que utilice el SDK de AccessEnabler para iOS/tvOS.
+1. ¿Cambiará el ID de usuario de MVPD entre el SSO de Apple y el flujo de autenticación SSO que no es de Apple?
+   - Se espera que el ID de usuario no cambie, pero debe verificarse para cada proveedor seleccionado. 
 1. ¿Habrá algún cambio en los TTL de autenticación?
    - La autenticación de Adobe Primetime seguirá respetando los TTL requeridos por los programadores para su integración con cada MVPD.
-   - Cuando se navega de una aplicación Programer a otra aplicación Programador a través de Apple SSO, la segunda aplicación tendrá el TTL de su integración correspondiente Programer x MVPD (no compartirá el TTL de la primera aplicación que se autentique)
+   - Al navegar de una aplicación de Programador a otra aplicación de Programador a través de Apple SSO, la segunda aplicación tendrá el TTL de su integración correspondiente de Programador x MVPD (no compartirá el TTL de la primera aplicación que se autentica)
 
 |  | TTL de autenticación de Adobe Primetime caducado | TTL de autenticación de Adobe Primetime válido |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| **El TTL del token del dispositivo Apple expiró** | El usuario NO está autenticado (debería aparecer el selector de MVPD) | El usuario está autenticado y el TTL es el tiempo restante de su token de autenticación de Adobe Primetime |
-| **TTL del token del dispositivo Apple válido** | El usuario se autentica silenciosamente y obtiene otro token de autenticación de Adobe Primetime con el TTL especificado en el panel de control de Televisión | El usuario está autenticado y el TTL es el tiempo restante de su token de autenticación de Adobe Primetime |
+| **TTL de token de dispositivo de Apple caducado** | el usuario NO está autenticado (debería aparecer el selector de MVPD) | El usuario se autentica y el TTL es el tiempo restante de su token de autenticación de Adobe Primetime |
+| **TTL de token de dispositivo de Apple válido** | El usuario de se autentica de forma silenciosa y obtiene otro token de autenticación de Adobe Primetime con el TTL especificado en el Tablero de TVE | El usuario se autentica y el TTL es el tiempo restante de su token de autenticación de Adobe Primetime |
 
 <!--
 

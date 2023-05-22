@@ -1,27 +1,26 @@
 ---
-description: Puede implementar varias soluciones DRM para sus aplicaciones TVSDK mediante Primetime DRM Cloud, con tecnología ExpressPlay. Las soluciones DRM incluyen FairPlay de Apple, Widevine de Google, PlayReady de Microsoft y Primetime Access desde el Adobe.
-title: Información general de Multi-DRM
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede implementar varias soluciones DRM para sus aplicaciones TVSDK mediante Primetime DRM Cloud, con tecnología ExpressPlay. Las soluciones de DRM incluyen FairPlay de Apple, Widevine de Google, PlayReady de Microsoft y Acceso desde el Adobe a Primetime.
+title: Información general sobre Multi-DRM
+exl-id: 27614bb6-bfa6-445a-8fb5-a1b8af080bcc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
 
 ---
 
+# Flujos de trabajo de varias DRM {#multi-drm-workflows}
 
-# Flujos de trabajo de varios DRM {#multi-drm-workflows}
+Puede implementar varias soluciones DRM para sus aplicaciones TVSDK mediante Primetime DRM Cloud, con tecnología ExpressPlay. Las soluciones de DRM incluyen FairPlay de Apple, Widevine de Google, PlayReady de Microsoft y Acceso desde el Adobe a Primetime.
 
-Puede implementar varias soluciones DRM para sus aplicaciones TVSDK mediante Primetime DRM Cloud, con tecnología ExpressPlay. Las soluciones DRM incluyen FairPlay de Apple, Widevine de Google, PlayReady de Microsoft y Primetime Access desde el Adobe.
+## Información general sobre Multi-DRM {#multi-drm-overview}
 
-## Información general de Multi-DRM {#multi-drm-overview}
+Adobe TVSDK admite la protección DRM mediante varios esquemas DRM. ofertas de Adobe *Primetime DRM Cloud, con tecnología ExpressPlay* para proporcionar el empaquetado, las licencias y la reproducción del contenido de vídeo en varias plataformas.
 
-Adobe TVSDK admite la protección DRM mediante varios esquemas DRM. Adobe ofrece *Primetime DRM Cloud, con tecnología ExpressPlay* para proporcionar paquetes, licencias y reproducción del contenido de vídeo en varias plataformas.
+Los esquemas DRM admitidos incluyen los de Adobe *Acceso a Primetime* DRM (AAXS), así como DRM nativos en varios dispositivos, incluidos [Widevine](https://www.widevine.com) en Chrome y Android, [FairPlay](https://developer.apple.com/streaming/fps/) en Safari y iOS, y [PlayReady](https://www.microsoft.com/playready/) en Edge y XboxOne. Consulte con un representante del Adobe la información sobre los esquemas DRM disponibles actualmente en estas plataformas, así como las fechas programadas de futuras versiones.
 
-Los esquemas de DRM admitidos incluyen el *Acceso de Primetime* DRM (AAXS) del Adobe, así como los DRM nativos en varios dispositivos, incluidos [Widevine](https://www.widevine.com) en Chrome y Android, [FairPlay](https://developer.apple.com/streaming/fps/) en Safari e iOS y [PlayReady](https://www.microsoft.com/playready/) en Edge y XboxOne. Consulte con un representante de Adobes para obtener información sobre los esquemas DRM que están disponibles actualmente en estas plataformas, así como las fechas programadas de futuras versiones.
+TVSDK admite licencias DRM emitidas por cualquier servidor de licencias que utilice estos protocolos. Además de admitir varias soluciones DRM, Adobe ofrece *Primetime DRM Cloud, con tecnología ExpressPlay* como una solución en la que ExpressPlay opera los servidores de licencias para cada solución. Esto puede simplificar la configuración y el mantenimiento para sus necesidades de emisión de licencias DRM.
 
-TVSDK admite licencias DRM emitidas por cualquier servidor de licencias que utilice estos protocolos. Además de la compatibilidad con varias soluciones DRM, Adobe ofrece *Primetime DRM Cloud, con tecnología ExpressPlay* como solución en la que ExpressPlay opera los servidores de licencias para cada solución. Esto puede simplificar la configuración y el mantenimiento de sus necesidades de emisión de licencias DRM.
+Para usar *Primetime DRM Cloud, con tecnología ExpressPlay* para implementar sus necesidades de DRM en aplicaciones de TVSDK, primero debe obtener un [ExpressPlay.com](https://www.expressplay.com) cuenta. ExpressPlay proporciona la capacidad de licencia para varios esquemas de protección de DRM diferentes, y también proporciona otros servicios, incluyendo el empaquetado y la administración de claves.
 
-Para utilizar *Primetime DRM Cloud, con tecnología ExpressPlay* para implementar sus necesidades de DRM en aplicaciones TVSDK, primero debe obtener una cuenta [ExpressPlay.com](https://www.expressplay.com). ExpressPlay proporciona la capacidad de licencia para varios esquemas de protección DRM diferentes, y también proporciona otros servicios, incluyendo empaquetado y administración de claves.
-
-Su representante de Adobe configurará inicialmente su cuenta de ExpressPlay. A continuación, puede configurar su cuenta y obtener los *autenticadores de cliente* que utilizará en las solicitudes de token de licencia a los servidores de ExpressPlay.
+Tu representante de Adobe configurará inicialmente tu cuenta de ExpressPlay. A continuación, puede configurar su cuenta de y obtener la *autenticadores de cliente* que utilizará en las solicitudes de token de licencia a los servidores de ExpressPlay.

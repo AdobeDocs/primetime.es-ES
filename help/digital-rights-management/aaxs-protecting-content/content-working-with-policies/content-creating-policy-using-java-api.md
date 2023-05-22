@@ -2,21 +2,20 @@
 title: Creación de una directiva mediante la API de Java
 description: Creación de una directiva mediante la API de Java
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 60e26fd6-1b72-413c-a35b-b317389cd9ed
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
-
 # Creación de una directiva mediante la API de Java {#creating-a-policy-using-the-java-api}
 
-Para crear una directiva utilizando la API de Java, siga estos pasos:
+Para crear una directiva mediante la API de Java, realice los siguientes pasos:
 
 1. Configure su entorno de desarrollo e incluya todos los archivos JAR mencionados en [Configuración del entorno de desarrollo](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) dentro del proyecto.
-1. Cree un objeto `com.adobe.flashaccess.sdk.policy.Policy` y especifique sus propiedades, como los derechos, la duración del almacenamiento en caché de licencias y la fecha de finalización de la directiva.
+1. Crear un `com.adobe.flashaccess.sdk.policy.Policy` y especifique sus propiedades, como los derechos, la duración del almacenamiento en caché de licencias y la fecha de finalización de la directiva.
 
    ```java
      // Create a new Policy object.  
@@ -52,7 +51,7 @@ Para crear una directiva utilizando la API de Java, siga estos pasos:
      }
    ```
 
-1. Serialice el objeto `Policy` y guárdelo en un archivo o base de datos.
+1. Serialice el `Policy` y almacenarlo en un archivo o base de datos.
 
    ```java
      // Serialize the policy  
@@ -66,4 +65,4 @@ Para crear una directiva utilizando la API de Java, siga estos pasos:
      out.close();
    ```
 
-Para obtener la fuente completa de este código de ejemplo, consulte *com.adobe.flashaccess.samples.policy.CreatePolicy* en el directorio Herramientas de la línea de comandos de implementación de referencia &quot;[!DNL samples]&quot;.
+Para ver el origen completo de este código de ejemplo, consulte *com.adobe.flashaccess.samples.policy.CreatePolicy* en las Herramientas de línea de comandos de implementación de referencia &quot; [!DNL samples]&quot;.

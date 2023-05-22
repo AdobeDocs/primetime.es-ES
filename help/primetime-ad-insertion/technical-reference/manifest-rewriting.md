@@ -1,36 +1,35 @@
 ---
-title: Reglas de reescritura y búsqueda de anuncios de manifiesto
-description: 'Reglas de reescritura y búsqueda de anuncios de manifiesto '
-translation-type: tm+mt
-source-git-commit: d5e948992d7c59e80b530c8f4619adbffc3c03d8
+title: Reglas de reescritura de manifiestos y recuperación de anuncios
+description: Reglas de reescritura de manifiestos y recuperación de anuncios
+exl-id: 3750abc1-da60-4faf-ba85-37914f33641f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
 
 ---
 
+# Reglas de reescritura de manifiestos y recuperación de anuncios {#manifest-rewriting}
 
-# Reglas de reescritura y captura de anuncios de manifiesto {#manifest-rewriting}
+El Ad Insertion de Primetime puede volver a escribir fragmentos y recuperar recursos mediante reglas sencillas de búsqueda y sustitución.  Esto se puede utilizar para convertir https en solicitudes http, lo que aumentaría el rendimiento al eliminar los protocolos de enlace TLS.  Esto también se puede utilizar para enviar recursos de publicidad y de red de distribución de contenido (cdn) desde la misma CDN.
 
-Primetime Ad Insertion puede reescribir fragmentos y recuperar recursos con reglas de búsqueda y reemplazo sencillas.  Esto se puede usar para convertir https en solicitudes http, lo que aumentaría el rendimiento eliminando los apretones de manos TLS.  Esto también se puede usar para enviar recursos de publicidad y recursos de cdn desde la misma CDN.
+Las reglas se definen como búsqueda/sustitución de expresiones regulares y se pueden utilizar para transformar las direcciones URL antes de enviarlas, así como después de insertarlas en un manifiesto.
 
-Las reglas se definen como búsqueda/reemplazo de expresión normal y se pueden utilizar para transformar las direcciones URL antes de enviarlas, así como después de insertarlas en un manifiesto.
-
-Esta regla de ejemplo convertirá todas las solicitudes de publicidad en domain.com de https a http.
+Esta regla de ejemplo convertirá todas las solicitudes de publicidad a domain.com de https a http.
 
 ```
 find: "https://domain.com/(.*)"
 replace: "http://domain.com/$1"
 ```
 
-La regla siguiente utilizará la CDN de contenido para enviar publicidades que se encuentran en la CDN de Adobe y almacenamiento.
+La siguiente regla utilizará la CDN de contenido para enviar anuncios que se encuentren en la CDN de almacenamiento de anuncios de Adobe.
 
 ```
 find: "https?://primetime-a.akamaihd.net/(.*)"
 replace: "http://mycdn.com/ad-mapping-pathname/$1"
 ```
 
-Las reglas pueden nombrarse y habilitarse o deshabilitarse modificando el parámetro `ptprotoswitch` en la API de Bootstrap, que es una lista de reglas separadas por coma que se van a ejecutar.  Por ejemplo: estas dos reglas se pueden ejecutar configurando `ptprotoswitch=adfetch_rule1,adfetch_rule2`:
+Las reglas se pueden nombrar y habilitar/deshabilitar modificando la variable `ptprotoswitch` en la API de Bootstrap, que es una lista de reglas separadas por coma que se van a ejecutar.  Por ejemplo, estas dos reglas se pueden ejecutar al establecer `ptprotoswitch=adfetch_rule1,adfetch_rule2`:
 
 ```
 <ruleSet>

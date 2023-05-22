@@ -1,32 +1,31 @@
 ---
-description: La compatibilidad con el atributo withCredentials en XMLHttpRequests permite que las solicitudes de uso compartido de recursos de origen diverso (CORS) incluyan las cookies del dominio de destino para varios tipos de solicitud.
-keywords: CORS;origen cruzado;uso compartido de recursos;cookies;conCredentials
-title: Uso compartido de recursos de origen diverso
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La compatibilidad con el atributo withCredentials en XMLHttpRequests permite que las solicitudes de uso compartido de recursos de origen cruzado (CORS) incluyan las cookies del dominio de destino para una variedad de tipos de solicitud.
+keywords: CORS;origen cruzado;uso compartido de recursos;cookies;con credenciales
+title: Uso compartido de recursos de origen cruzado
+exl-id: 02826c87-b0c6-495b-a17d-67c5693a9772
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 0%
 
 ---
 
+# Uso compartido de recursos de origen cruzado {#cross-origin-resource-sharing}
 
-# Uso compartido de recursos de origen diverso {#cross-origin-resource-sharing}
+La compatibilidad con el atributo withCredentials en XMLHttpRequests permite que las solicitudes de uso compartido de recursos de origen cruzado (CORS) incluyan las cookies del dominio de destino para una variedad de tipos de solicitud.
 
-La compatibilidad con el atributo withCredentials en XMLHttpRequests permite que las solicitudes de uso compartido de recursos de origen diverso (CORS) incluyan las cookies del dominio de destino para varios tipos de solicitud.
+Cuando el cliente solicita un manifiesto, segmento o clave, el servidor puede establecer una cookie que el cliente debe pasar para las solicitudes posteriores. Para permitir la lectura y escritura de cookies, el cliente debe establecer el `withCredentials` atribuir a `true` para solicitudes de origen cruzado.
 
-Cuando el cliente solicita un manifiesto, segmento o clave, el servidor puede establecer una cookie que el cliente debe pasar para solicitudes posteriores. Para permitir la lectura y escritura de cookies, el cliente debe establecer el atributo `withCredentials` en `true` para las solicitudes de origen cruzado.
+Para habilitar `withCredentials` compatibilidad con la mayoría de los tipos de solicitudes al reproducir un recurso de medios determinado:
 
-Para habilitar la compatibilidad con `withCredentials` para la mayoría de los tipos de solicitudes al reproducir un recurso de medios determinado:
-
-1. Cree el objeto `CORSConfig`.
+1. Cree el `CORSConfig` objeto.
 
    ```js
    var corsConfig = new AdobePSDK.CORSConfig();  
    corsConfig.enableEncryptionRequest = true; 
    ```
 
-1. Adjunte `corsConfig` al objeto `NetworkConfiguration` y establezca `useCookieHeaderForAllRequests` en `true`.
+1. Adjunte el `corsConfig` a la `NetworkConfiguration` objeto y conjunto `useCookieHeaderForAllRequests` hasta `true`.
 
    ```js
    var networkConfig = new AdobePSDK.NetworkConfiguration();  
@@ -34,14 +33,14 @@ Para habilitar la compatibilidad con `withCredentials` para la mayoría de los t
    networkConfiguration.useCookieHeaderForAllRequests= true;
    ```
 
-1. Establezca `networkConfig` en el objeto `MediaPlayerItemConfig`.
+1. Establecer `networkConfig` en el `MediaPlayerItemConfig` objeto.
 
    ```js
    var mediaPlayerItemConfig = new AdobePSDK.MediaPlayerItemConfig();  
    mediaPlayerItemConfig.networkConfiguration = networkConfig; 
    ```
 
-1. Pase `MediaPlayerItemConfig` al método `MediaPlayer.replaceCurrentResource`.
+1. Aprobado `MediaPlayerItemConfig` a la `MediaPlayer.replaceCurrentResource` método.
 
    ```js
    var player = new AdobePSDK.MediaPlayer(); 
@@ -52,7 +51,7 @@ Para habilitar la compatibilidad con `withCredentials` para la mayoría de los t
 
 >[!IMPORTANT]
 >
->El indicador `useCookieHeaderForAllRequests` no afecta a las solicitudes de licencia. Para establecer el atributo `withCredentials` en `true` para una solicitud de licencia, debe establecer el atributo `withCredentials` en los datos de protección o especificar una clave de autorización en el `httpRequestHeaders` de los datos de protección. Por ejemplo:
+>El `useCookieHeaderForAllRequests` El indicador no afecta a las solicitudes de licencia. Para establecer la variable `withCredentials` atribuir a `true` para una solicitud de licencia, debe configurar la variable `withCredentials` en sus datos de protección o especifique una clave de autorización en la variable `httpRequestHeaders` de sus datos de protección. Por ejemplo:
 
 ```
 # Example 1 
@@ -75,9 +74,9 @@ Para habilitar la compatibilidad con `withCredentials` para la mayoría de los t
 }
 ```
 
-El indicador no afecta a una solicitud de licencia porque algunos servidores establecen el campo `Access-Control-Allow-Origin` como comodín (&#39;*&#39;) en su respuesta. Sin embargo, cuando el indicador de credenciales está establecido en `true`, el comodín no se puede usar en `Access-Control-Allow-Origin`. Si establece `useCookieHeaderForAllRequests` en `true` para todos los tipos de solicitudes, puede que vea el siguiente error para una solicitud de licencia:
+El indicador no afecta a una solicitud de licencia porque algunos servidores establecen el `Access-Control-Allow-Origin` de campo a comodín (&#39;&#42;&#39;) en su respuesta. Sin embargo, cuando el indicador de credenciales está establecido en `true`, el comodín no se puede usar en `Access-Control-Allow-Origin`. Si establece `useCookieHeaderForAllRequests` hasta `true` para todos los tipos de solicitudes, es posible que vea el siguiente error en una solicitud de licencia:
 
 Recuerde la siguiente información:
 
-* Cuando falla una llamada con `withCredentials=true`, el SDK de TVSDK del explorador vuelve a intentar la llamada sin `withCredentials`.
-* Cuando se realiza una llamada con `networkConfiguration.useCookieHeaderForAllRequests=false`, las solicitudes XHR se realizan sin el atributo `withCredentials`.
+* Cuando una llamada con `withCredentials=true` falla, TVSDK del explorador reintenta la llamada sin `withCredentials`.
+* Cuando se realiza una llamada con `networkConfiguration.useCookieHeaderForAllRequests=false`, las solicitudes XHR se realizan sin el `withCredentials` atributo.

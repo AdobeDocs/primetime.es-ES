@@ -1,23 +1,22 @@
 ---
-description: Puede seleccionar una pista de una lista de pistas de subtítulos cerrados disponibles actualmente. Se convierte en la pista actual, que se muestra cuando la visibilidad está activada. Es posible que algunas pistas no estén disponibles inicialmente, por lo que debe prestar atención al evento que indique que hay más disponibles.
+description: Puede seleccionar una pista de una lista de pistas de subtítulos cerrados disponibles actualmente. Esta se convierte en la pista actual, que se muestra cuando la visibilidad está activada. Es posible que algunas pistas no estén disponibles inicialmente, por lo que debe escuchar el evento que indica que hay más pistas disponibles.
 title: Seleccionar una pista de rótulo actual entre las pistas disponibles
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d604dedc-f3c3-4c97-9b0f-84da326c0678
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '198'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-
 # Seleccionar una pista de rótulo actual entre las pistas disponibles {#select-a-current-caption-track-from-among-available-tracks}
 
-Puede seleccionar una pista de una lista de pistas de subtítulos cerrados disponibles actualmente. Se convierte en la pista actual, que se muestra cuando la visibilidad está activada. Es posible que algunas pistas no estén disponibles inicialmente, por lo que debe prestar atención al evento que indique que hay más disponibles.
+Puede seleccionar una pista de una lista de pistas de subtítulos cerrados disponibles actualmente. Esta se convierte en la pista actual, que se muestra cuando la visibilidad está activada. Es posible que algunas pistas no estén disponibles inicialmente, por lo que debe escuchar el evento que indica que hay más pistas disponibles.
 
-1. Espere a que el reproductor de contenidos esté en al menos el estado `PREPARED` .
+1. Espere a que el reproductor de contenidos esté, al menos, en el `PREPARED` estado.
 1. Escuche estos eventos:
 
-   * `MediaPlayerEvent.STATUS_CHANGED` con estado  `MediaPlayerStatus.INITIALIZED`: Está disponible la lista inicial de pistas de subtítulos.
+   * `MediaPlayerEvent.STATUS_CHANGED` con estado `MediaPlayerStatus.INITIALIZED`: la lista inicial de pistas de subtítulos está disponible.
 
 1. Obtenga una lista de todas las pistas de subtítulos cerrados disponibles actualmente.
 
@@ -43,6 +42,6 @@ Puede seleccionar una pista de una lista de pistas de subtítulos cerrados dispo
    }
    ```
 
-1. Implemente un oyente para el evento que indique que hay más pistas disponibles. Cuando TVSDK envíe el evento, recupere la lista actual de pistas disponibles.
+1. Implemente un detector para el evento que indique que hay más pistas disponibles. Cuando TVSDK envíe el evento, recupere la lista actual de pistas disponibles.
 
-   Recupere la lista cada vez que se produzca el evento para asegurarse de que siempre tiene la lista más actual.
+   Recupere la lista cada vez que se produce el evento para asegurarse de que siempre tiene la lista más actual.

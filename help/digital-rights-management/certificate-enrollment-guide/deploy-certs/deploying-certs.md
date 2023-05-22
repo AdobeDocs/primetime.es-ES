@@ -1,18 +1,17 @@
 ---
-title: Implementar certificados
-description: Implementar certificados
+title: Implementación de certificados
+description: Implementación de certificados
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 649c4f24-f74e-4529-84a2-65bcd6d7677c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%
 
 ---
 
+# Implementación de certificados{#deploy-certificates}
 
-# Implementar certificados{#deploy-certificates}
+Para evitar que la contraseña PFX esté disponible en texto no cifrado en el servidor de licencias, la Implementación de referencia y el Servidor DRM de Adobe Primetime para transmisión protegida requieren que la contraseña se cifre cuando se especifica en el archivo de configuración. Consulte *Uso de las implementaciones de referencia de DRM de Primetime* o *Uso del servidor DRM de Primetime* para Flujo protegido, para obtener instrucciones sobre cómo ejecutar las utilidades de codificado. Cada uno de ellos incluye su propia utilidad de descifrado, y las contraseñas cifradas no son intercambiables entre estas dos implementaciones del servidor de licencias.
 
-Para evitar que la contraseña de PFX esté disponible en texto claro en el servidor de licencias, la implementación de referencia y el servidor de Adobe Primetime DRM para transmisión protegida requieren que la contraseña se cifre cuando se especifica en el archivo de configuración. Consulte *Uso de las implementaciones de referencia de DRM de Primetime* o *Uso del servidor de DRM de Primetime* para flujo protegido para obtener instrucciones sobre cómo ejecutar las utilidades de reasignación. Cada una de ellas incluye su propia utilidad de secuencias de comandos, y las contraseñas cifradas no son intercambiables entre estas dos implementaciones de servidor de licencias.
-
-Para implementar los certificados y la contraseña codificada en el servidor de licencias, consulte *Uso de las implementaciones de referencia de DRM de Primetime* o *Uso del servidor de DRM de Primetime para la transmisión protegida*.
+Para implementar los certificados y las contraseñas codificadas en el servidor de licencias, consulte *Uso de las implementaciones de referencia de DRM de Primetime* o *Uso del servidor DRM de Primetime para flujo protegido*.

@@ -1,18 +1,17 @@
 ---
-description: Si utiliza la configuración predeterminada, no hay nada más que hacer para habilitar o configurar la facturación. Si ha obtenido parámetros de configuración diferentes de su representante de habilitación de Adobe, utilice la clase BillingMetricsConfiguration para establecer estos parámetros antes de inicializar el reproductor de medios.
+description: Si utiliza la configuración predeterminada, no tiene que hacer nada más para habilitar o configurar la facturación. Si ha obtenido parámetros de configuración diferentes de su representante de habilitación de Adobe, utilice la clase BillingMetricsConfiguration para configurar estos parámetros antes de inicializar el reproductor de medios.
 title: Configurar métricas de facturación
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: e3b97de6-8442-463f-b5b0-0dec34aa7735
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
-
 # Configurar métricas de facturación {#configure-billing-metrics}
 
-Si utiliza la configuración predeterminada, no hay nada más que hacer para habilitar o configurar la facturación. Si ha obtenido parámetros de configuración diferentes de su representante de habilitación de Adobe, utilice la clase BillingMetricsConfiguration para establecer estos parámetros antes de inicializar el reproductor de medios.
+Si utiliza la configuración predeterminada, no tiene que hacer nada más para habilitar o configurar la facturación. Si ha obtenido parámetros de configuración diferentes de su representante de habilitación de Adobe, utilice la clase BillingMetricsConfiguration para configurar estos parámetros antes de inicializar el reproductor de medios.
 
 >[!TIP]
 >
@@ -20,9 +19,9 @@ Si utiliza la configuración predeterminada, no hay nada más que hacer para hab
 
 >[!IMPORTANT]
 >
->La configuración que establezca permanecerá en vigor durante toda la vida útil del reproductor de contenidos. Una vez que inicialice el reproductor de contenidos, no podrá cambiar la configuración.
+>La configuración que establezca permanecerá vigente durante toda la vida útil del reproductor de contenidos. Una vez inicializado el reproductor de contenido, no se puede cambiar la configuración.
 
-Para configurar las métricas de facturación:
+Para configurar métricas de facturación:
 
 Introduzca el siguiente ejemplo de código.
 

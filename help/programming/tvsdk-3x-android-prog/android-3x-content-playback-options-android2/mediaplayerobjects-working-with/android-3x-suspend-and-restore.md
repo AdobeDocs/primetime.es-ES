@@ -1,25 +1,24 @@
 ---
-description: Suspender y restaurar el MediaPlayer de TVSDK cuando una pantalla del dispositivo está desactivada y activada debe ser gestionada por la aplicación.
+description: La aplicación debe controlar la suspensión y restauración del MediaPlayer de TVSDK cuando la pantalla de un dispositivo está desactivada y activada.
 keywords: SurfaceView;Suspender;Restaurar;BroadcastReceiver
 title: Suspender y restaurar MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: edbc8fc2-4754-44ed-b8ed-c50b3f2fd124
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
 
 ---
 
-
 # Suspender y restaurar MediaPlayer {#suspend-and-restore-mediaplayer}
 
-Suspender y restaurar el MediaPlayer de TVSDK cuando una pantalla del dispositivo está desactivada y activada debe ser gestionada por la aplicación.
+La aplicación debe controlar la suspensión y restauración del MediaPlayer de TVSDK cuando la pantalla de un dispositivo está desactivada y activada.
 
-Puede controlar las operaciones de suspensión y restauración en `MediaPlayer` dentro del receptor de difusión de Android para la activación o desactivación de la pantalla.
+Puede gestionar las operaciones de suspensión y restauración en `MediaPlayer` dentro del receptor de difusión de Android para activar o desactivar la pantalla.
 
-TVSDK no puede determinar si un fragmento (o actividad) está en primer o segundo plano. Además, Android `SurfaceView` no se destruye cuando la pantalla del dispositivo está desactivada (pero la actividad está en pausa). Sin embargo, `SurfaceView` *sí* se destruye cuando el dispositivo pone la aplicación en segundo plano. TVSDK no puede detectar ninguno de estos cambios, por lo que su aplicación debe gestionarlos.
+TVSDK no puede determinar cuándo un fragmento (o actividad) está en segundo plano o en primer plano. Además, el Android `SurfaceView` no se destruye cuando la pantalla del dispositivo está desactivada (pero la actividad está en pausa). Sin embargo, `SurfaceView` *hace* se destruyen cuando el dispositivo pone la aplicación en segundo plano. TVSDK no puede detectar ninguno de estos cambios, por lo que su aplicación debe gestionarlos.
 
-El siguiente código de ejemplo muestra cómo su aplicación puede gestionar la suspensión y restauración del `MediaPlayer` cuando la pantalla del dispositivo está activada y desactivada en el nivel de aplicación:
+El siguiente código de ejemplo muestra cómo la aplicación puede controlar la suspensión y restauración del `MediaPlayer` cuando la pantalla del dispositivo está encendida y apagada en el nivel de aplicación:
 
 ```java
 // Track the state of a fragment to determine if it is PAUSED or RESUMED 

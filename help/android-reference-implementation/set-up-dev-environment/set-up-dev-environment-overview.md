@@ -1,15 +1,14 @@
 ---
 title: Información general
-description: El proyecto Android de referencia de TVSDK Primetime está configurado de forma que sea compatible con Eclipse sin ningún cambio importante de configuración o IDE.
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: El proyecto de TVSDK Primetime Reference para Android está configurado de tal manera que es compatible con Eclipse sin ninguna configuración importante ni cambios en el IDE.
+exl-id: 6a5c6387-d8f0-4723-b465-fe020188b94c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%
 
 ---
 
-
 # Información general {#overview}
 
-El proyecto Android de referencia de TVSDK Primetime está configurado de forma que sea compatible con Eclipse sin ningún cambio importante de configuración o IDE. Para configurar el proyecto de referencia de Primetime, primero siga las instrucciones para configurar Eclipse y luego siga los pasos para crear el proyecto.
+El proyecto de TVSDK Primetime Reference para Android está configurado de tal manera que es compatible con Eclipse sin ninguna configuración importante ni cambios en el IDE. Para configurar el proyecto de referencia de Primetime, primero siga las instrucciones para configurar Eclipse y luego siga los pasos para crear el proyecto.

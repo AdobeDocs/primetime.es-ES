@@ -1,16 +1,15 @@
 ---
 description: Estas clases proporcionan información sobre los medios.
-title: Clases de información
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Clases Info
+exl-id: bc84a265-5bad-44f2-80da-4a2e0d6fc53e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
-
-# Clases de información {#info-classes}
+# Clases Info {#info-classes}
 
 Estas clases proporcionan información sobre los medios.
 
@@ -26,20 +25,20 @@ Paquete: [com.adobe.mediacore.info](https://help.adobe.com/en_US/primetime/api/p
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/AudioTrack.html" format="html" scope="external"> AudioTrack</a></span></td> 
-   <td colname="2">Clase que extiende <span class="codeph"> Track</span> para definir la abstracción de la pista de audio. </td> 
+   <td colname="2">Clase que extiende <span class="codeph"> Seguimiento</span> para definir la abstracción de la pista de audio. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/ClosedCaptionsTrack.html" format="html" scope="external"> </a> 
-   ClosedCaptionsTrackClosedCaptionsTrack</span> </td> 
-   <td colname="2">Clase que extiende <span class="codeph"> Track</span> para definir la abstracción de los subtítulos. Clase que define la abstracción <span class="codeph"> ClosedCaptions</span>. Una pista de subtítulos cerrados se define exclusivamente por su nombre Y su tipo de servicio. Los distintos tipos de servicio pueden compartir el mismo nombre.</td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/ClosedCaptionsTrack.html" format="html" scope="external"> ClosedCaptionsTrack</a> 
+   ClosedCaptionsTrack</span> </td> 
+   <td colname="2">Clase que extiende <span class="codeph"> Seguimiento</span> para definir la abstracción de subtítulos. Clase que define la variable <span class="codeph"> Subtítulos</span> abstracción. Un seguimiento de subtítulos opcionales se define de forma exclusiva mediante su nombre Y su tipo de servicio. Diferentes tipos de servicios pueden compartir el mismo nombre.</td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Profile.html" format="html" scope="external"> Perfil</a> </span></td> 
-   <td colname="2"> Clase que contiene información de perfil de medios, como la altura, la anchura y la velocidad de bits. </td> 
+   <td colname="2"> Clase que contiene información de perfil multimedia, como la altura, la anchura y la velocidad de bits. </td> 
   </tr> 
   <tr rowsep="0"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Track.html" format="html" scope="external"> Track</a> </span></td> 
-   <td colname="2">Clase que define la abstracción de la pista que se utilizará para definir <span class="codeph"> AudioTrack</span> y <span class="codeph"> ClosedCaptionsTrack</span>. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/info/Track.html" format="html" scope="external"> Seguimiento</a> </span></td> 
+   <td colname="2">Clase que define la abstracción de seguimiento que se utilizará para definir <span class="codeph"> AudioTrack</span> y <span class="codeph"> ClosedCaptionsTrack</span>. </td> 
   </tr>
  </tbody>
 </table>

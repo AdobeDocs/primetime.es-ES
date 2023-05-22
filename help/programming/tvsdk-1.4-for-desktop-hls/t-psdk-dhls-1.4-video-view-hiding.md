@@ -1,27 +1,26 @@
 ---
-description: Una vez que se ha utilizado una vista de MediaPlayer para reproducir vídeo, puede ocultarlo y mostrarlo de nuevo mediante un método TVSDK o manualmente.
+description: Una vez que se ha utilizado una vista de MediaPlayer para reproducir vídeo, puede ocultarla y mostrarla de nuevo mediante un método TVSDK o manualmente.
 title: Ocultar una vista de vídeo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 92354cd3-f0ed-4434-a7af-a3545e0e2460
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '156'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Ocultar una vista de vídeo{#hide-a-video-view}
 
-Una vez que se ha utilizado una vista de MediaPlayer para reproducir vídeo, puede ocultarlo y mostrarlo de nuevo mediante un método TVSDK o manualmente.
+Una vez que se ha utilizado una vista de MediaPlayer para reproducir vídeo, puede ocultarla y mostrarla de nuevo mediante un método TVSDK o manualmente.
 
-Debe pausar un vídeo antes de borrarlo o moverlo desde la pantalla.
-* Opción 1: Borre el marco de vídeo con `MediaPlayer.clearVideo` &#x200B; y sustituya el marco más adelante.
-   * Pause el vídeo que desee ocultar.
+Debe pausar un vídeo antes de borrarlo o moverlo de la pantalla.
+* Opción 1: borrar el fotograma de vídeo con `MediaPlayer.clearVideo`y reemplace el cuadro más tarde.
+   * Ponga en pausa el vídeo que desee ocultar.
    * Elimine el fotograma de vídeo mostrado llamando a `MediaPlayer.clearVideo`.
    * Para restablecer el `MediaPlayer` para que se pueda reproducir de nuevo, llame a `replaceCurrentResource` o `replaceCurrentItem`.
-* Opción 2: Desplace la vista `MediaPlayer` de la pantalla y muévala más tarde sin tener que reemplazarla.
-   * Pause el vídeo que desee ocultar.
-   * Saque la vista del escenario. Por ejemplo:
+* Opción 2: Mover el `MediaPlayer` vea la pantalla y vuelva a moverla más tarde sin tener que reemplazarla.
+   * Ponga en pausa el vídeo que desee ocultar.
+   * Mueva la vista fuera del escenario. Por ejemplo:
 
       ```
       view.x = -300; 

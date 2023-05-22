@@ -1,20 +1,19 @@
 ---
-description: Puede configurar un lugar en la aplicación para realizar la gestión de errores en respuesta al estado ERROR.
+description: Puede configurar un lugar en la aplicación para realizar el control de errores en respuesta al estado ERROR.
 title: Configuración de la gestión de errores
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c0ce1d80-85d5-4344-9ab0-bd56906421cb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '122'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
+# Configuración de la gestión de errores{#set-up-error-handling}
 
-# Configurar la gestión de errores{#set-up-error-handling}
+Puede configurar un lugar en la aplicación para realizar el control de errores en respuesta al estado ERROR.
 
-Puede configurar un lugar en la aplicación para realizar la gestión de errores en respuesta al estado ERROR.
-
-1. Agregue un detector de eventos para `AdobePSDK.MediaPlayerStatusChangeEvent`.
+1. Agregar un detector de eventos para `AdobePSDK.MediaPlayerStatusChangeEvent`.
 
    Por ejemplo:
 
@@ -23,13 +22,13 @@ Puede configurar un lugar en la aplicación para realizar la gestión de errores
                            onStatusChange);
    ```
 
-1. En el detector de eventos, cuando `event.status` es `AdobePSDK.MediaPlayerStatus.ERROR`, proporcione la lógica para gestionar todos los errores.
-1. Una vez que se haya manejado el error, restablezca el objeto `MediaPlayer` o cargue un nuevo recurso de medios.
+1. En el oyente de eventos, cuando la variable `event.status` es `AdobePSDK.MediaPlayerStatus.ERROR`, proporcione la lógica para gestionar todos los errores.
+1. Una vez gestionado el error, restablezca el `MediaPlayer` o cargar un nuevo recurso de medios.
 
-       Cuando el objeto MediaPlayer está en estado ERROR, no puede salir de este estado hasta que complete una de las siguientes tareas:
+       Cuando el objeto MediaPlayer se encuentra en el estado ERROR, no puede salir de este estado hasta que complete una de las siguientes tareas:
    
-   * Restablezca el objeto MediaPlayer utilizando el método `MediaPlayer.reset`.
-   * Cargue un nuevo recurso de medios utilizando el método `MediaPlayer.replaceCurrentResource` .
+   * Restablezca el objeto MediaPlayer mediante el `MediaPlayer.reset` método.
+   * Cargar un nuevo recurso de medios utilizando `MediaPlayer.replaceCurrentResource` método.
 
 <!--<a id="example_342CA5A8CD7C45BD88233C5BDBB17220"></a>-->
 
@@ -45,4 +44,3 @@ onStatusChange = function (event) {
     } 
 } 
 ```
-

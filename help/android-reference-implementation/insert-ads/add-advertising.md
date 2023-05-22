@@ -1,19 +1,18 @@
 ---
-title: Agregar publicidad
-description: Agregar publicidad
+title: Añadir publicidad
+description: Añadir publicidad
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9400b762-4f49-44ac-8d6f-1f6a62cb4334
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '34'
 ht-degree: 0%
 
 ---
 
+# Añadir publicidad {#add-advertising}
 
-# Agregar publicidad {#add-advertising}
-
-Puede agregar la capacidad publicitaria al reproductor mediante la creación de un `AdsManager` o utilizando la fábrica del administrador.
+Puede añadir capacidad de publicidad al reproductor creando un `AdsManager` o utilizando la fábrica de gerentes.
 
 * Para crear un `AdsManager`:
-* Para utilizar un `ManagerFactory` para habilitar o deshabilitar anuncios
+* Para utilizar un `ManagerFactory` para activar o desactivar anuncios

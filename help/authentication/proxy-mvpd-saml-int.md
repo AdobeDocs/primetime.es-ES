@@ -1,51 +1,51 @@
 ---
-title: Integración de Proxy MVPD SAML
-description: Integración de Proxy MVPD SAML
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Integración de SAML de MVPD proxy
+description: Integración de SAML de MVPD proxy
+exl-id: 6c83e703-d8cd-476b-8514-05b8230902be
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '711'
 ht-degree: 1%
 
 ---
 
-
-# Integración de Proxy MVPD SAML
+# Integración de SAML de MVPD proxy
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 ## Información general {#overview-proxy-mvpd-saml-int}
 
-Este documento describe el flujo de autenticación SAML para integraciones de proxy.  Estos flujos dependen de que los datos de configuración del proxy estén presentes en la configuración del servidor de autenticación de Adobe Primetime. El proxy MVPD envía sus datos de configuración proxy al servidor de autenticación de Adobe Primetime mediante el servicio web proxy de autenticación de Adobe Primetime.
+Este documento describe el flujo de autenticación SAML para integraciones de proxy.  Estos flujos dependen de que los datos de configuración proxy estén presentes en la configuración del servidor de autenticación de Adobe Primetime. La MVPD proxy envía sus datos de configuración proxy al servidor de autenticación de Adobe Primetime a través del servicio web proxy de autenticación de Adobe Primetime.
 
 ## Datos de configuración de proxy {#proxy-config-data}
 
-Cada proxy MVPD proporciona datos de configuración proxy para sus MVPD Proxied al servicio web proxy de autenticación de Adobe Primetime.  Los detalles de que se tratan en la documentación del servicio web proxy.   Para que funcione el flujo SAML AuthN, los datos de configuración del proxy deben incluir las siguientes propiedades:
+Cada proxy MVPD proporciona datos de configuración proxy para sus MVPD proxy al servicio web proxy de autenticación de Adobe Primetime.  Los detalles de que se tratan en la documentación del servicio web proxy.   Para que funcione el flujo SAML AuthN, los datos de configuración de proxy deben incluir las siguientes propiedades:
 
 | Propiedad | Descripción |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ID de MVPD | Cadena que representa el MVPD Proxied internamente a la autenticación de Adobe Primetime.  Para ser confirmado por Adobe como único en el contexto de la autenticación de Adobe Primetime. |
-| URL del logotipo predeterminado de MVPD | Dirección URL de un logotipo que se pueda mostrar en una experiencia de Selector de MVPD para el usuario.  Debe utilizar un fondo transparente. |
-| Nombre para mostrar de MVPD | Cadena que se utilizará como texto del nombre para mostrar que se podría mostrar con el logotipo, potencialmente como texto alternativo. |
+| ID de MVPD | Cadena que representa el MVPD proxy internamente a la autenticación de Adobe Primetime.  El Adobe debe confirmarlo como único en el contexto de la autenticación de Adobe Primetime. |
+| URL de logotipo predeterminado de MVPD | URL de un logotipo que se puede mostrar en una experiencia de Selector de MVPD para el usuario.  Debe utilizar un fondo transparente. |
+| Nombre para mostrar de MVPD | Cadena que se utilizará como texto del nombre para mostrar que podría mostrarse con el logotipo, posiblemente como texto alternativo. |
 
 
 
 ## Flujos de integración de SAML {#saml-int-flows}
 
-Cuando un suscriptor de MVPD visita un sitio o aplicación del programador, la autenticación de Adobe Primetime responde a una llamada de API del sitio o aplicación con una lista de MVPD activados para ese programador.  La integración puede ser directa o proxy; no hay distinción entre ellos y el Programador. Esto permite a los programadores presentar la lista de MVPD activos de cualquier manera que consideren conveniente. El suscriptor elige su MVPD y la autenticación de Adobe Primetime redirige al suscriptor al proveedor de identidad específico de la MVPD.
+Cuando un suscriptor de MVPD visita el sitio o la aplicación de un programador, la autenticación de Adobe Primetime responde a una llamada de API desde el sitio o la aplicación con una lista de MVPD activadas para ese programador.  La integración puede ser directa o proxy; no hay distinción entre ellos y el Programador. Esto permite a los programadores presentar la lista de MVPD activas de la manera que consideren adecuada. El suscriptor elige su MVPD y la autenticación de Adobe Primetime redirige al suscriptor al proveedor de identidad específico de la MVPD.
 
-En el caso de un proxy MVPD integrado, la integración se realiza entre la autenticación de Adobe Primetime y el proxy MVPD. La autenticación de Adobe Primetime envía la solicitud de autenticación de usuario al proxy MVPD, y el proxy MVPD gestiona la redirección. Para que el proxy MVPD sepa dónde redirigir la solicitud de autenticación de usuario, la autenticación de Adobe Primetime envía un identificador MVPD en la solicitud de autenticación SAML.  Este identificador es el ID de MVPD especificado por el proveedor de proxy a través del servicio web de proxy como se especifica arriba.
+En el caso de un proxy MVPD integrado, la integración se realiza entre la autenticación de Adobe Primetime y el proxy MVPD. La autenticación de Adobe Primetime envía la solicitud de autenticación del usuario al proxy MVPD, y este se encarga de la redirección. Para que el proxy MVPD sepa dónde redirigir la solicitud de autenticación del usuario, la autenticación de Adobe Primetime envía un identificador MVPD en la solicitud de autenticación SAML.  Este identificador es el ID de MVPD especificado por el proveedor de proxy mediante el servicio web de proxy como se ha especificado anteriormente.
 
 ### Autenticación {#authn-saml-int}
 
-Para que la autenticación de Adobe Primetime se integre con un MVPD de proxy, se necesitará lo siguiente:
+Para que la autenticación de Adobe Primetime se integre con una MVPD proxy se necesitará lo siguiente:
 
-* Una lista MVPD de proxy proporcionada de MVPD Proxied, insertados en el servicio web proxy de Adobe
+* Una MVPD proxy proporcionó una lista de MVPD proxy, insertadas en el servicio web proxy de Adobe
 
 * Metadatos SAML para el proxy MVPD principal
 
-* (Recomendado): El MVPD proxy gestiona redirección adicional a la URL de la página de inicio de sesión del MVPD Proxied
+* (Recomendado): la MVPD proxy gestiona la redirección adicional a la URL de la página de inicio de sesión de la MVPD proxy
 
 * El proxy MVPD debe abrir los puertos 443 y 80 para las siguientes IP:
    * 192.150.4.5
@@ -61,21 +61,21 @@ Para que la autenticación de Adobe Primetime se integre con un MVPD de proxy, s
    * 66.235.139.168
 
 
-#### Solicitud y respuesta SAML de autenticación {#authn-saml-req-resp}
+#### Solicitud y respuesta de SAML de autenticación {#authn-saml-req-resp}
 
-En la solicitud SAML AuthN, las integraciones de proxy incluyen la siguiente propiedad adicional que debe ser manejada por el proxy MVPD.  Esta propiedad es necesaria para procesar correctamente el solicitante en nombre del MVPD Proxied y para presentar la experiencia de inicio de sesión correcta. (Esta propiedad se resalta en la solicitud de ejemplo que se muestra a continuación).
+En la solicitud de AUTHn de SAML, las integraciones de proxy incluyen la siguiente propiedad adicional que debe gestionar el proxy MVPD.  Esta propiedad es necesaria para procesar correctamente el solicitante en nombre de la MVPD de proxy y para procesar la experiencia de inicio de sesión correcta. (Esta propiedad se resalta en la solicitud de ejemplo que aparece a continuación).
 
-**Propiedad de creación de ámbitos** - Incluye un elemento IDPEntry que incluye el MVPD_ID y el nombre MVPD específicos.  Representa el MVPD que el usuario seleccionó realmente del selector del programador y coincide con el MVPD_ID especificado en el servicio web proxy.
+**Propiedad Scoping** : incluye un elemento IDPEntry que incluye el MVPD_ID y el nombre de MVPD específicos.  Representa el MVPD que el usuario seleccionó realmente del selector del programador y coincide con el MVPD_ID especificado en el servicio web proxy.
 
-Hay una propiedad adicional de creación de ámbitos para RequestorID que se puede utilizar para personalizar el inicio de sesión con la marca particular del programador (si es necesario). O bien, se puede utilizar simplemente para realizar análisis sobre el origen de la solicitud.
+Hay una propiedad de ámbito adicional para RequestorID que se puede utilizar para personalizar el inicio de sesión a la marca concreta del programador (si es necesario). O bien, se puede utilizar simplemente para análisis sobre el origen de la solicitud.
 
-En la respuesta SAML AuthN, el MVPD de proxy debe especificar el MVPD Proxied como la entidad IdP en las siguientes propiedades:
+En la respuesta de SAML AuthN, la MVPD proxy debe especificar la MVPD proxy como la entidad IdP en las siguientes propiedades:
 
-* Emisor SAML
+* Emisor de SAML
 * Calificador de nombres
 
 
-**Ejemplo de solicitud AuthN**
+**Solicitud AuthN de muestra**
 
 ```XML
 <samlp:AuthnRequest
@@ -111,7 +111,7 @@ En la respuesta SAML AuthN, el MVPD de proxy debe especificar el MVPD Proxied co
 ```
 
 
-**Respuesta AuthN de ejemplo**
+**Respuesta AuthN de muestra**
 
 ```XML
 <samlp:Response Destination="https://sp.auth-staging.adobe.com/sp/saml/SAMLAssertionConsumer"
@@ -164,13 +164,13 @@ En la respuesta SAML AuthN, el MVPD de proxy debe especificar el MVPD Proxied co
 
 ### Autorización {#authz-proxy-mvpd-saml-int}
 
-Para la parte de autorización, la MVPD tendría que aceptar para la autorización el recurso especificado por el Programador.  En la mayoría de los casos, se trata de un identificador de cadena para la red del canal, como TBS o TNT.
+Para la parte de autorización, el MVPD tendría que aceptar para autorización el recurso especificado por el Programador.  En la mayoría de los casos, se trata de un identificador de cadena para la red de canal, como TBS o TNT.
 
-#### Solicitud y respuesta SAML de autorización {#authz-saml-req-resp}
+#### Solicitud y respuesta de SAML de autorización {#authz-saml-req-resp}
 
-En la respuesta AuthZ, el EMISOR debe coincidir con el EMISOR de la respuesta SAML que debe ser el identificador MVPD Proxied.
+En la respuesta AuthZ, el EMISOR debe coincidir con el EMISOR de la respuesta SAML, que debe ser el identificador de MVPD por proxy.
 
-**Ejemplo de solicitud XACML de AuthZ**
+**Solicitud XACML de AuthZ de muestra**
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -247,7 +247,7 @@ En la respuesta AuthZ, el EMISOR debe coincidir con el EMISOR de la respuesta SA
 </soap11:Envelope>
 ```
 
-**Ejemplo de respuesta de AuthZ XACML (autorización concedida)**
+**Respuesta XACML de AuthZ de muestra (autorización concedida)**
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -303,7 +303,7 @@ En la respuesta AuthZ, el EMISOR debe coincidir con el EMISOR de la respuesta SA
 </soap-env:Envelope>
 ```
 
-**Ejemplo de respuesta de AuthZ XACML (autorización denegada)**
+**Respuesta XACML de AuthZ de muestra (autorización denegada)**
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>

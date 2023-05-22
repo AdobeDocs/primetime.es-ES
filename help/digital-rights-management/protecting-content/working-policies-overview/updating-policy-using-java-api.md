@@ -2,27 +2,26 @@
 title: Actualización de una directiva DRM con la API de Java
 description: Actualización de una directiva DRM con la API de Java
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 00bb9b64-30f7-4900-b6bd-57604295b44d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
-
 # Actualización de una directiva DRM con la API de Java {#updating-a-drm-policy-with-the-java-api}
 
 Para actualizar una directiva DRM con la API de Java:
 
 1. Configure su entorno de desarrollo e incluya en su proyecto todos los archivos JAR enumerados en [Configuración del entorno de desarrollo](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-1. Cree una instancia de DRM `Policy` y lea la política de DRM desde un archivo o base de datos.
+1. Creación de una DRM `Policy` y leer la directiva DRM desde un archivo o base de datos.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Actualice el objeto DRM `Policy` estableciendo sus propiedades, como su nombre y reglas de uso.
+1. Actualización del DRM `Policy` estableciendo sus propiedades, como el nombre y las reglas de uso.
 
    ```java
    // Change the DRM policy name.  
@@ -47,7 +46,7 @@ Para actualizar una directiva DRM con la API de Java:
    }
    ```
 
-1. Serialice el objeto DRM `Policy` actualizado y guárdelo en un archivo o base de datos.
+1. Serialización del DRM actualizado `Policy` y almacenarlo en un archivo o base de datos.
 
    ```java
    // Serialize the DRM policy.  
@@ -61,4 +60,4 @@ Para actualizar una directiva DRM con la API de Java:
    out.close();
    ```
 
-Consulte `com.adobe.flashaccess.samples.policy.UpdatePolicy` en el directorio Herramientas de la línea de comandos de implementación de referencia [!DNL samples] para obtener el origen de este código de ejemplo.
+Consulte `com.adobe.flashaccess.samples.policy.UpdatePolicy` en las herramientas de línea de comandos de implementación de referencia [!DNL samples] para el origen de este código de ejemplo.

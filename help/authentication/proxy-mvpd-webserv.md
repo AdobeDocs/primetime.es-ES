@@ -1,41 +1,41 @@
 ---
-title: Servicio web proxy MVPD
-description: Servicio web proxy MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Servicio web de MVPD proxy
+description: Servicio web de MVPD proxy
+exl-id: f75cbc4d-4132-4ce8-a81c-1561a69d1d3a
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 0%
 
 ---
 
-
-# Servicio web Proxy MVPD {#proxy-mvpd-wbservice}
+# Servicio web de MVPD proxy {#proxy-mvpd-wbservice}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 ## Información general {#overview-proxy-mvpd-webserv}
 
-Un &quot;MVPD proxy&quot; es un MVPD que, además de administrar su propia integración con la autenticación de Adobe Primetime, también gestiona el proceso de asignación de derechos en nombre de un grupo de &quot;MVPD Proxied&quot; asociados. Este arreglo es transparente para los programadores.
+Una &quot;MVPD proxy&quot; es una MVPD que, además de gestionar su propia integración con la autenticación de Adobe Primetime, también gestiona el proceso de asignación de derechos en nombre de un grupo de &quot;MVPD proxy&quot; asociadas. Esta disposición es transparente para los programadores.
 
-Para implementar la función ProxyMVPD, la autenticación de Adobe Primetime proporciona servicios web RESTful, con los que los ProxyMVPD pueden enviar y recuperar listas de ProxiedMVPD. El protocolo utilizado para esta API pública es REST HTTP, con los siguientes supuestos:
+Para implementar la función ProxyMVPD, la autenticación de Adobe Primetime proporciona servicios web RESTful, con los cuales ProxyMVPD puede enviar y recuperar listas de ProxiedMVPD. El protocolo utilizado para esta API pública es REST HTTP, con las siguientes suposiciones:
 
-* El MVPD de proxy utiliza el método de GET HTTP para recuperar la lista de los MVPD integrados actuales.
-* El MVPD de proxy utiliza el método de POST HTTP para actualizar la lista de los MVPD admitidos.
+* La MVPD proxy utiliza el método de GET HTTP para recuperar la lista de las MVPD integradas actuales.
+* La MVPD proxy utiliza el método del POST HTTP para actualizar la lista de las MVPD admitidas.
 
-## Servicios MVPD de proxy {#proxy-mvpd-services}
+## Servicios de MVPD proxy {#proxy-mvpd-services}
 
 * [Recuperar MVPD proxy](#retriev-proxied-mvpds)
-* [Envío de MVPD procesados como proxy](#submit-proxied-mvpds)
+* [Envío de MVPD proxy](#submit-proxied-mvpds)
 
 ### Recuperar MVPD proxy {#retriev-proxied-mvpds}
 
-Recupera la lista actual de MVPD Proxied para el ProxyMVPD identificado por el parámetro apikey.
+Recupera la lista actual de MVPD proxy para el ProxyMVPD identificado por el parámetro apikey.
 
-| Punto final | Llamado por | Solicitar encabezados | Método HTTP | Respuesta HTTP |
+| Extremo | Llamado por | Encabezados de solicitud | Método HTTP | Respuesta HTTP |
 |---|---|---|---|---|
-| &lt;fqdn>/control/v1/proxyMvpds | ProxyMVPD | apikey (obligatorio) | GET | <ul><li> 200 (ok) - La solicitud se procesó correctamente, y la respuesta contiene una lista de ProxiedMVPD en formato XML</li><li>401 (no autorizado) - Se requiere autenticación de usuario o no se concede autorización para las credenciales proporcionadas.  Indica una de las siguientes opciones:<ul><li>El token apikey no está presente en el encabezado de la solicitud</li><li>La solicitud proviene de una dirección IP que no está presente en la lista de permitidos</li><li>El token no es válido</li></ul></li><li>403 (prohibido) : indica que la operación no es compatible con los parámetros proporcionados, o que el MVPD proxy no está configurado como proxy o que falta</li><li>405 (método no permitido): se ha utilizado un método HTTP que no sea GET o POST. Normalmente, el método HTTP no es compatible o no lo es para este extremo específico.</li><li>500 (error interno del servidor): Se ha producido un error en el servidor durante el proceso de solicitud.</li></ul> |
+| &lt;fqdn>/control/v1/proxyMvpds | ProxyMVPD | apikey (obligatorio) | GET | <ul><li> 200 (ok): la solicitud se procesó correctamente y la respuesta contiene una lista de ProxiedMVPD en formato XML</li><li>401 (sin autorización): Se requiere autenticación de usuario o no se concede autorización para las credenciales proporcionadas.  Indica una de las siguientes opciones:<ul><li>El token de apikey no está presente en el encabezado de la solicitud</li><li>La solicitud se origina desde una dirección IP que no está presente en la lista de permitidos</li><li>El token no es válido</li></ul></li><li>403 (prohibido): indica que la operación no es compatible con los parámetros proporcionados o que el MVPD proxy no está configurado como proxy o que falta</li><li>405 (método no permitido): se ha utilizado un método HTTP distinto del GET o el POST. El método HTTP no es compatible en general o no es compatible con este extremo específico.</li><li>500 (error interno del servidor): se ha producido un error en el lado del servidor durante el proceso de solicitud.</li></ul> |
 
 Ejemplo de curl:
 
@@ -76,13 +76,13 @@ Ejemplo de respuesta XML:
 </proxiedMvpds>
 ```
 
-### Envío de MVPD procesados como proxy {#submit-proxied-mvpds}
+### Envío de MVPD proxy {#submit-proxied-mvpds}
 
-Inserta una matriz de MVPD integrados con el MVPD de Proxy identificado por el parámetro apikey.
+Inserta una matriz de MVPD integradas con la MVPD proxy identificada por el parámetro apikey.
 
-| Punto final | Llamado por | Solicitar encabezados | Método HTTP | Respuesta HTTP |
+| Extremo | Llamado por | Encabezados de solicitud | Método HTTP | Respuesta HTTP |
 |:------------------------------:|:---------:|:--------------------------------------------:|:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| &lt;fqdn>/control/v1/proxyMvpds | ProxyMVPD | apikey (obligatorio) proxy-mvpds (obligatorio) | POST | <ul><li>201 (creado): La notificación push se procesó correctamente</li><li>400 (solicitud incorrecta): El servidor no sabe cómo procesar la solicitud:<ul><li>El XML entrante no se adhiere al esquema publicado en esta especificación</li><li>Los mvpds procesados como proxy no tienen id únicos</li><li>Los requestorIds insertados no existen Otros motivos del contenedor Servlet para el código de respuesta 400</li></ul><li>401 (no autorizado) - El apikey no es válido o la IP del llamador no está en la lista de permitidos</li><li>403 (prohibido) : indica que la operación no es compatible con los parámetros proporcionados, o que el MVPD proxy no está configurado como proxy o que falta</li><li>405 (método no permitido): se ha utilizado un método HTTP que no sea GET o POST. Normalmente, el método HTTP no es compatible o no lo es para este extremo específico.</li><li>500 (error interno del servidor): Se ha producido un error en el servidor durante el proceso de solicitud.</li></ul> |
+| &lt;fqdn>/control/v1/proxyMvpds | ProxyMVPD | apikey (obligatorio) proxy-mvpds (obligatorio) | POST | <ul><li>201 (creado): la inserción se procesó correctamente</li><li>400 (solicitud incorrecta): El servidor no sabe cómo procesar la solicitud:<ul><li>El XML entrante no cumple el esquema publicado en esta especificación</li><li>Los mvpd proxy no tienen ID únicos</li><li>Los requestorIds insertados no existen como la razón del contenedor de otro servlet para el código de respuesta 400</li></ul><li>401 (sin autorización): la clave API no es válida o la dirección IP del llamador no está en la lista de permitidos</li><li>403 (prohibido): indica que la operación no es compatible con los parámetros proporcionados o que el MVPD proxy no está configurado como proxy o que falta</li><li>405 (método no permitido): se ha utilizado un método HTTP distinto del GET o el POST. El método HTTP no es compatible en general o no es compatible con este extremo específico.</li><li>500 (error interno del servidor): se ha producido un error en el lado del servidor durante el proceso de solicitud.</li></ul> |
 
 Ejemplo de curl:
 
@@ -127,17 +127,17 @@ Ejemplo XML:
 
 ### Frecuencia de contabilización {#posting-frequency}
 
-La autenticación de Adobe Primetime recomienda que los ProxyMVPD inserten su lista de ProxiedMVPD solo cuando haya un cambio con respecto a la notificación push anterior.
+La autenticación de Adobe Primetime recomienda que las MVPD de proxy inserten su lista de MVPD de proxy solo cuando haya un cambio con respecto a la inserción anterior.
 
-### Eliminación de MVPD Proxied {#delete-proxied-freqency}
+### Eliminación de MVPD proxy {#delete-proxied-freqency}
 
-Si ProxyMVPD inserta un registro XML con una lista ProxiedMVPD vacía, esa lista vacía se almacenará en nuestro sistema como cualquier lista, eliminando así efectivamente la lista anterior.
+Si ProxyMVPD inserta un registro XML con una lista de ProxiedMVPD vacía, esa lista vacía se almacenará en el sistema como cualquier lista, con lo que se eliminará de forma efectiva la lista anterior.
 
 
 
 ## Formato XSD {#xsd-format}
 
-Adobe ha definido el siguiente formato aceptado para publicar/recuperar MVPD proxy desde/hacia nuestro servicio web público:
+El Adobe ha definido el siguiente formato aceptado para publicar/recuperar MVPD proxy desde/hacia nuestro servicio web público:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -206,37 +206,37 @@ Adobe ha definido el siguiente formato aceptado para publicar/recuperar MVPD pro
 
 **Notas sobre los elementos:**
 
-* `id` (obligatorio): El ID de MVPD Proxied debe ser una cadena relevante para el nombre del MVPD, utilizando cualquiera de los siguientes caracteres (ya que se expondrá a los programadores con fines de seguimiento):
-   * Cualquier carácter alfanumérico, guión bajo (&quot;_&quot;) y guión (&quot;-&quot;).
-   * El idID debe cumplir la siguiente expresión regular:
+* `id` (obligatorio): el ID de MVPD proxy debe ser una cadena relevante para el nombre de la MVPD, con cualquiera de los siguientes caracteres (ya que se expondrá a los programadores con fines de seguimiento):
+   * Cualquier carácter alfanumérico, guion bajo (&quot;_&quot;) y guion (&quot;-&quot;).
+   * El idID debe ajustarse a la siguiente expresión regular:
       `(a-zA-Z0-9((-)|_)*)`
 
-      Por lo tanto, debe tener al menos un carácter, comenzar con una letra y continuar con cualquier letra, dígito, guión o guión bajo.
+      Por lo tanto, debe tener al menos un carácter, comenzar con una letra y continuar con cualquier letra, dígito, guión o guion bajo.
 
-* `iframeSize` (opcional): El elemento iframeSize es opcional y define el tamaño del iFrame si la página de autenticación de MVPD se supone que está en un iFrame. De lo contrario, si el elemento iframeSize no está presente, la autenticación se producirá en una página de redirección completa del explorador.
-* `requestorIds` (opcional) - El Adobe proporcionará los valores requestorIds. Un requisito es que un MVPD procesado como proxy se integre con al menos un requestorId. Si la etiqueta &quot;requestorIds&quot; no está presente en el elemento MVPD proxy, ese MVPD reenviado se integrará con todos los solicitantes disponibles integrados en el MVPD proxy.
-* `ProviderID` (opcional) - Cuando el atributo ProviderID está presente en el elemento id, el valor de ProviderID se enviará en la solicitud de autenticación SAML al MVPD proxy como el ID MVPD/SubMVPD Proxied (en lugar del valor id). En este caso, el valor de id se utilizará únicamente en el selector de MVPD presentado en la página Programador e internamente mediante la autenticación de Adobe Primetime. La longitud del atributo ProviderID debe estar entre 1 y 128 caracteres.
+* `iframeSize` (opcional): el elemento iframeSize es opcional y define el tamaño del iFrame si la página de autenticación MVPD debe estar en un iFrame. De lo contrario, si el elemento iframeSize no está presente, la autenticación se producirá en una página de redirección de explorador completa.
+* `requestorIds` (opcional): El Adobe proporcionará los valores de requestorIds. Un requisito es que una MVPD proxy debe integrarse con al menos un requestorId. Si la etiqueta &quot;requestorIds&quot; no está presente en el elemento MVPD proxy, entonces ese MVPD proxy se integrará con todos los solicitantes disponibles integrados en el MVPD proxy.
+* `ProviderID` (opcional): cuando el atributo ProviderID está presente en el elemento id, el valor de ProviderID se enviará en la solicitud de autenticación de SAML a la MVPD proxy como ID de MVPD / SubMVPD proxy (en lugar del valor id). En este caso, el valor de id solo se utilizará en el selector de MVPD presentado en la página Programador e internamente mediante la autenticación de Adobe Primetime. La longitud del atributo ProviderID debe estar entre 1 y 128 caracteres.
 
 ## Seguridad {#security}
 
 Para que una solicitud se considere válida, debe respetar las siguientes reglas:
 
-* El encabezado de la solicitud debe contener el parámetro de clave de seguridad api. (Se trata de una clave de aplicación que identificará de forma exclusiva las llamadas de MVPD del proxy).
-* La solicitud debe proceder de una dirección IP específica permitida.
+* El encabezado de la solicitud debe contener el parámetro apikey de seguridad. (Se trata de una clave de aplicación que identificará de forma exclusiva las llamadas de la MVPD proxy.)
+* La solicitud debe proceder de una dirección IP específica que se haya permitido.
 * La solicitud debe enviarse a través del protocolo SSL.
 
-Adobe proporcionará el valor (estático) del token. Este valor se utiliza en el proceso de autenticación y autorización.  Se ignorará cualquier parámetro presente en el encabezado de la solicitud que no aparezca en la lista anterior.
+El Adobe proporcionará el valor (estático) del token. Este valor se utiliza en el proceso de autenticación y autorización.  Se ignorará cualquier parámetro presente en el encabezado de la solicitud que no esté enumerado anteriormente.
 
 Ejemplo de curl:
 
 `curl -X GET -H "apikey: ???provided-by-adobe???" "https://mgmt-prequal.auth-staging.adobe.com/control/v1/proxiedMvpds"`
 
-## Puntos finales del servicio web MVPD de proxy para los entornos de autenticación de Adobe Primetime {#proxy-mvpd-wevserv-endpoints}
+## Puntos finales de servicio web de MVPD proxy para los entornos de autenticación de Adobe Primetime {#proxy-mvpd-wevserv-endpoints}
 
 * **URL de producción:** https://mgmt.auth.adobe.com/control/v1/proxiedMvpds
-* **Dirección URL de ensayo:** https://mgmt.auth-staging.adobe.com/control/v1/proxiedMvpds
-* **URL de preproducción:** https://mgmt-prequal.auth.adobe.com/control/v1/proxiedMvpds
-* **URL de PreQual-Staging:** https://mgmt-prequal.auth-staging.adobe.com/control/v1/proxiedMvpds
+* **URL de ensayo:** https://mgmt.auth-staging.adobe.com/control/v1/proxiedMvpds
+* **URL de preproducción de calidad:** https://mgmt-prequal.auth.adobe.com/control/v1/proxiedMvpds
+* **URL de ensayo previo a la calidad:** https://mgmt-prequal.auth-staging.adobe.com/control/v1/proxiedMvpds
 
 <!--
 >[!RELATEDINFORMATION]

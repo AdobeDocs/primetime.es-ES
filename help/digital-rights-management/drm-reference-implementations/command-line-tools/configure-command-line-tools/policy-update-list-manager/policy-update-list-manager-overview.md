@@ -2,20 +2,19 @@
 title: Información general
 description: Información general
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1e06bead-4b45-4bf0-8bcf-1ea376af6bd8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
 
+# Administrador de listas de actualización de directivas DRM {#policy-update-list-manager}
 
-# Administrador de lista de actualización de directivas de DRM {#policy-update-list-manager}
+Utilice la herramienta de línea de comandos del Administrador de listas de actualización de directivas DRM de Primetime ( [!DNL AdobePolicyUpdateListManager.jar]) para crear y gestionar listas de actualización de directivas DRM y para comprobar si las directivas se han actualizado o revocado.
 
-Utilice la herramienta de línea de comandos del Administrador de actualización de directivas de DRM de Primetime ( [!DNL AdobePolicyUpdateListManager.jar]) para crear y administrar listas de actualización de directivas de DRM y para comprobar si las directivas se han actualizado o revocado.
-
-Antes de ejecutar la herramienta de línea de comandos del Administrador de listas de actualizaciones de directivas, debe establecer las propiedades en la sección *Administrador de listas de actualizaciones de directivas y Propiedades del Administrador de listas de revocaciones* del archivo de configuración.
+Antes de ejecutar la herramienta de línea de comandos del Administrador de listas de actualización de directivas, debe establecer las propiedades en la variable *Propiedades del Administrador de listas de actualización de directivas y del Administrador de listas de revocación* del archivo de configuración.
 
 >[!NOTE]
 >
@@ -35,7 +34,7 @@ java -jar AdobePolicyUpdateListManager.jar
 </i class="+ topic>
 ```
 
-* `destfile` indica el nombre del archivo en el que se escribe la lista de actualización de directivas de DRM.
+* `destfile` indica el nombre del fichero en el que se escribe la lista de actualización de directivas DRM.
 
 **Ver una lista de actualización de directivas existente:**
 
@@ -59,47 +58,47 @@ java -jar AdobePolicyUpdateListManager.jar -d
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -c configfile  </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica el nombre y la ubicación del archivo de configuración. </p> <p class="- topic/p ">Si no especifica un nombre o una ubicación, el Administrador de listas de actualización de directivas de DRM busca <span class="filepath"> flashaccesstools.properties </span> en el directorio de trabajo actual. </p> <p>Nota:  Las opciones que especifique en la línea de comandos tienen prioridad sobre las opciones que especifique en el archivo de configuración. </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -c archivoDeConfiguración </span> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Especifica el nombre y la ubicación del archivo de configuración. </p> <p class="- topic/p ">Si no se especifica un nombre o una ubicación, el Administrador de listas de actualización de directivas DRM buscará <span class="filepath"> flashaccesstools.properties </span> en el directorio de trabajo actual. </p> <p>Nota: Las opciones que especifique en la línea de comandos tienen prioridad sobre las opciones especificadas en el fichero de configuración. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -d nombre de archivo  </span> </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Muestra información sobre la lista de actualización de directivas de DRM. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p "> <span class="+ topic/ph pr-d/codeph codeph"> -d nombre de archivo </span> </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Muestra información sobre la lista de actualización de directivas DRM. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -e fecha  </span> </td> 
-   <td colname="2" class="- topic/entry "> <p>(Opcional) La fecha de caducidad de la lista de actualización de directivas de DRM. </p> <p>Utilice el formato <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd </span> o <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd-h24:min:sec </span> (por ejemplo, 2009-01-31-14:30:00 representa el 31 de enero a las 2:30 p. m). </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -e fecha </span> </td> 
+   <td colname="2" class="- topic/entry "> <p>(Opcional) Fecha de caducidad de la lista de actualización de la directiva DRM. </p> <p>Usar el formato <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd </span> o <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd-h24:min:s </span> (por ejemplo, 2009-01-31-14:30:00 representa el 31 de enero a las 2:30 p.m.). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -f nombre de archivo [certfile]  </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Agrega todas las entradas de la lista de actualización de directivas de DRM existente. Solo puede especificar un archivo existente. </p> <p class="- topic/p ">Si la lista existente se ha firmado con una credencial distinta de la que se está utilizando para firmar la nueva lista, debe especificar su archivo de certificado para verificar su firma. </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -f nombreDeArchivo [certfile] </span> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Añade todas las entradas de la lista de actualización de directivas DRM existente. Solo se puede especificar un archivo existente. </p> <p class="- topic/p ">Si la lista existente se ha firmado con una credencial distinta a la que se utiliza para firmar la nueva lista, debe especificar su archivo de certificado para comprobar su firma. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -noprompt  </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">No pregunte si el archivo de destino debe sobrescribirse. Si el archivo de destino ya existe y <span class="codeph"> -o </span> no está configurado, se produce un error. </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -noprompt </span> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">No pregunte si el archivo de destino debe sobrescribirse. Si el archivo de destino ya existe y <span class="codeph"> -o </span> no se ha configurado, se produce un error. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -o  </span> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -o </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">Si el archivo de destino ya existe, sobrescribirlo sin preguntar. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -r policyID  </span> <span class="+ topic/ph pr-d/codeph codeph"> date  </span> "  <span class="+ topic/ph pr-d/codeph codeph"> reasonCode  </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonText  </span>" "  <span class="+ topic/ph pr-d/codeph codeph"> reasonURL  </span>" </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Opcional) Revoca el ID de la política de DRM en la fecha especificada. Puede proporcionar código de motivo opcional, texto de motivo y URL de motivo. Debe especificar una cadena vacía "" para indicar que no se proporciona ningún valor para los parámetros opcionales. Puede especificar la fecha en <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd </span> o <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd-h24:min:sec </span> en estos formatos. Por ejemplo, 2008-12-1 o 2008-12-1-00:00:00 representa la medianoche del 1 de diciembre de 2008). Si no especifica una fecha, se aplica automáticamente la fecha actual. Por lo tanto, el código de motivo debe ser bueno o igual a 0. También puede especificar varias opciones -r. </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -r idDeDirectiva </span> <span class="+ topic/ph pr-d/codeph codeph"> fecha </span> " <span class="+ topic/ph pr-d/codeph codeph"> reasonCode </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonText </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonURL </span>" </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Opcional) Revoca el ID de la directiva DRM en la fecha especificada. Puede proporcionar un código de motivo, un texto de motivo y una URL de motivo opcionales. Debe especificar una cadena vacía "" para indicar que no se proporciona ningún valor para los parámetros opcionales. Puede especificar la fecha en <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd </span> o <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd-h24:min:s </span> en estos formatos. Por ejemplo, 2008-12-1 o 2008-12-1-00:00:00 representa la medianoche del 1 de diciembre de 2008). Si no especifica una fecha, se aplica automáticamente la fecha actual. Por lo tanto, el código de razón debe ser bueno o igual a 0. También puede especificar varias opciones -r. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-rf <span class="+ topic/ph pr-d/codeph codeph"> policyFilename </span> <span class="+ topic/ph pr-d/codeph codeph"> date </span> " <span class="+ topic/ph pr-d/codeph codeph"> reasonCode </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonText </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonURL </span>" </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Realiza la misma acción que la opción <span class="codeph"> -r </span>. Sin embargo, extrae el identificador de la directiva DRM de un archivo especificado. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">-rf <span class="+ topic/ph pr-d/codeph codeph"> policyFilename </span> <span class="+ topic/ph pr-d/codeph codeph"> fecha </span> " <span class="+ topic/ph pr-d/codeph codeph"> reasonCode </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonText </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonURL </span>" </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Realiza la misma acción que el <span class="codeph"> -r </span> opción. Sin embargo, extrae el identificador de la política DRM de un archivo especificado. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <span class="codeph"> -u policyFilename " reasonCode" " reasonText" " reasonURL"  </span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Reemplaza cualquier política DRM coincidente en una solicitud de licencia con esta directiva DRM utilizando el código de motivo dado (opcional), el texto del motivo (opcional) y la URL del motivo (opcional). </p> <p>Una cadena vacía "" indica que no se ha proporcionado ningún valor para los parámetros opcionales. </p> <p>El código de motivo debe ser bueno o igual a <span class="codeph"> 0 </span>. Puede especificar varias opciones <span class="codeph"> -u </span>. </p> </td> 
+   <td colname="1" class="- topic/entry "> <span class="codeph"> -u nombreDeArchivo " códigoDeRazón " " textoDeRazón " " URLDeRazón" </span> </td> 
+   <td colname="2" class="- topic/entry "> <p>Reemplaza cualquier política DRM coincidente en una solicitud de licencia por esta política DRM mediante el código de motivo dado (opcional), el texto de motivo (opcional) y la URL de motivo (opcional). </p> <p>Una cadena vacía "" indica que no ha proporcionado ningún valor para los parámetros opcionales. </p> <p>El código de motivo debe ser bueno o igual a <span class="codeph"> 0 </span>. Puede especificar varias <span class="codeph"> -u </span> opciones. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Propiedades de configuración {#configuration-properties}
 
-Las siguientes propiedades del Administrador de listas de actualización de directivas de DRM de Primetime especifican un archivo PKCS12 que incluye credenciales para firmar listas de revocación (Certificado de servidor de licencias), junto con una contraseña.
+Las siguientes propiedades del Administrador de listas de actualización de directivas DRM de Primetime especifican un archivo PKCS12 que incluye credenciales para firmar listas de revocación (Certificado de servidor de licencias), junto con una contraseña.
 
 * `revocation.sign.certfile=license-server-credentials.pfx`
 * `revocation.sign.certpass=password`

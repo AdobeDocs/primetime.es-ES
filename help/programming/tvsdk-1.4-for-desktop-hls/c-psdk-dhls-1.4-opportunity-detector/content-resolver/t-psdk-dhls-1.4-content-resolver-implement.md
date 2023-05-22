@@ -1,25 +1,24 @@
 ---
-description: Puede implementar sus propios resolvedores de contenido en función de los resolvedores predeterminados.
-title: Implementación de una resolución de contenido personalizado
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede implementar sus propias resoluciones de contenido en función de las resoluciones predeterminadas.
+title: Implementación de un solucionador de contenido personalizado
+exl-id: abe967a5-ced3-4e23-8671-065e256974d3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '169'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Implementación de un solucionador de contenido personalizado{#implement-a-custom-content-resolver}
 
-# Implementar una resolución de contenido personalizada{#implement-a-custom-content-resolver}
+Puede implementar sus propias resoluciones de contenido en función de las resoluciones predeterminadas.
 
-Puede implementar sus propios resolvedores de contenido en función de los resolvedores predeterminados.
+Cuando TVSDK detecta una nueva oportunidad, itera a través de los solucionadores de contenido registrados buscando uno que sea capaz de resolver esa oportunidad utilizando `canResolve` método . El primero que devuelve el valor &quot;True&quot; se selecciona para resolver la oportunidad. Si no hay ningún solucionador de contenido capaz, esa oportunidad se omite. Dado que el proceso de resolución de contenido suele ser asincrónico, el gestor de contenido es responsable de notificar a TVSDK cuando el proceso se haya completado.
 
-Cuando TVSDK detecta una nueva oportunidad, se repite a través de los solucionadores de contenido registrados que buscan uno que sea capaz de resolver esa oportunidad usando el método `canResolve` . El primero que devuelve true se selecciona para resolver la oportunidad. Si no se puede resolver ningún contenido, se omite esa oportunidad. Dado que el proceso de resolución de contenido suele ser asíncrono, la resolución de contenido es responsable de notificar a TVSDK cuando el proceso ha finalizado.
+* El solucionador de contenido llama a `client.place` para especificar qué operación de cronología debe ejecutar TVSDK (normalmente una ubicación de pausa publicitaria).
+* El solucionador de contenido llama a `client.notifyCompleted` si el proceso de resolución se ha realizado correctamente, o `client.notifyFailed` si el proceso falla.
 
-* La resolución de contenido llama a `client.place` para especificar qué operación de cronología debe ejecutar TVSDK (normalmente, una colocación de pausa publicitaria).
-* La resolución de contenido llama a `client.notifyCompleted` si el proceso de resolución es exitoso o `client.notifyFailed` si falla el proceso.
-
-1. Cree una resolución de oportunidad personalizada.
+1. Cree una resolución de oportunidades personalizada.
 
    ```
    public class CustomResolver extends ContentResolver { 
@@ -90,7 +89,7 @@ Cuando TVSDK detecta una nueva oportunidad, se repite a través de los soluciona
    }
    ```
 
-1. Cree la fábrica de contenido personalizado, que utiliza la resolución de contenido personalizado.
+1. Cree la fábrica de contenido personalizado, que utiliza la resolución de contenido personalizada.
 
    Por ejemplo:
 
@@ -119,7 +118,7 @@ Cuando TVSDK detecta una nueva oportunidad, se repite a través de los soluciona
    }
    ```
 
-1. Registre la fábrica de contenido personalizado para la reproducción del flujo de medios.
+1. Registre la fábrica de contenido personalizado para el flujo de medios que se va a reproducir.
 
    Por ejemplo:
 
@@ -138,4 +137,3 @@ Cuando TVSDK detecta una nueva oportunidad, se repite a través de los soluciona
    
    player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
    ```
-

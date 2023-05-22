@@ -1,35 +1,34 @@
 ---
-description: Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookie para la administración de sesiones, el acceso a la puerta, etc.
-title: Trabajar con cookies
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookies para la administración de sesiones, el acceso a puertas, etc.
+title: Trabajo con cookies
+exl-id: 7482777a-c338-4e0d-b123-ce2712657b8d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 0%
 
 ---
 
+# Trabajo con cookies{#work-with-cookies}
 
-# Trabajar con cookies{#work-with-cookies}
+Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookies para la administración de sesiones, el acceso a puertas, etc.
 
-Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookie para la administración de sesiones, el acceso a la puerta, etc.
+Este es un ejemplo con algún tipo de autenticación al realizar solicitudes al servidor de claves:
 
-A continuación, se muestra un ejemplo con algún tipo de autenticación al realizar solicitudes al servidor de claves:
-
-1. El cliente inicia sesión en el sitio web en un explorador y su inicio de sesión muestra que puede ver el contenido.
-1. La aplicación genera un token de autenticación, en función de lo que espera el servidor de licencias. Pase ese valor a TVSDK.
+1. El cliente inicia sesión en el sitio web en un explorador y su inicio de sesión muestra que puede ver contenido.
+1. La aplicación genera un token de autenticación basado en lo que espera el servidor de licencias. Pase ese valor a TVSDK.
 1. TVSDK establece ese valor en el encabezado de la cookie.
-1. Cuando TVSDK realiza una solicitud al servidor de claves para obtener una clave para descifrar el contenido, esa solicitud contiene el valor de autenticación en el encabezado de la cookie, por lo que el servidor de claves sabe que la solicitud es válida.
+1. Cuando TVSDK realiza una solicitud al servidor de claves para obtener una clave para descifrar el contenido, esa solicitud contiene el valor de autenticación en el encabezado de la cookie, de modo que el servidor de claves sabe que la solicitud es válida.
 
 Para trabajar con cookies:
 
-1. Cree un `cookieManager` y añada las cookies para los URI a su `cookieStore`.
+1. Crear un `cookieManager` y añada sus cookies para los URI a su `cookieStore`.
 
    Por ejemplo:
 
    >[!IMPORTANT]
    >
-   >Cuando se habilita el redireccionamiento 302, la solicitud de publicidad puede redirigirse a un dominio diferente del dominio al que pertenece la cookie.
+   >Cuando la redirección 302 está habilitada, la solicitud de publicidad se puede redirigir a un dominio diferente del dominio al que pertenece la cookie.
 
    ```java
    CookieManager cookieManager= new CookieManager(); 
@@ -41,9 +40,9 @@ Para trabajar con cookies:
    cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
    ```
 
-   TVSDK consulta este cookieManager durante la ejecución, comprueba si hay cookies asociadas con la dirección URL y las utiliza automáticamente.
+   TVSDK consulta este cookieManager durante la ejecución, comprueba si hay cookies asociadas a la dirección URL y las utiliza automáticamente.
 
-   Otra opción es utilizar `cookieHeaders` en `NetworkConfiguration` para establecer una cadena de encabezado de cookie arbitraria que se utilizará para las solicitudes. De forma predeterminada, este encabezado de cookie se envía solo con solicitudes clave. Para enviar el encabezado de la cookie con todas las solicitudes, utilice el método `NetworkConfiguration` `setUseCookieHeadersForAllRequests`:
+   Otra opción es utilizar `cookieHeaders` in `NetworkConfiguration` para establecer una cadena de encabezado de cookie arbitraria para usarla en las solicitudes. De forma predeterminada, este encabezado de cookie se envía solo con solicitudes de clave. Para enviar el encabezado de la cookie con todas las solicitudes, utilice el `NetworkConfiguration` método `setUseCookieHeadersForAllRequests`:
 
 ```java
    NetworkConfiguration networkConfiguration = new NetworkConfiguration(); 

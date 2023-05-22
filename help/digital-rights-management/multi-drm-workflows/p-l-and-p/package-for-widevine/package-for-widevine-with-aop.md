@@ -1,34 +1,33 @@
 ---
-description: Adobe de paquetes sin conexión toma como entrada contenido mp4 sin encriptar.
-title: Empaquete el contenido con Adobe Offline Packager
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: El empaquetador sin conexión de Adobe toma como entrada contenido mp4 sin cifrar.
+title: Empaquetar el contenido con Adobe Offline Packager
+exl-id: 4433d76a-57c0-41e6-b358-5408b0fe87e7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
+# Empaquetar el contenido con Adobe Offline Packager{#package-your-content-with-adobe-offline-packager}
 
-# Empaquete el contenido con Adobe Offline Packager{#package-your-content-with-adobe-offline-packager}
+El empaquetador sin conexión de Adobe toma como entrada contenido mp4 sin cifrar.
 
-Adobe de paquetes sin conexión toma como entrada contenido mp4 sin encriptar.
+**Llamando al empaquetador sin conexión de Adobe**
 
-**Llamada a Adobe Offline Packager**
-
-Una invocación típica de adobe offline packager sería como la llamada a continuación:
+Una invocación típica del empaquetador sin conexión de Adobe tendría el siguiente aspecto:
 
     java -jar OfflinePackager.jar -conf_path Content_PR_WV.xml -in_path &quot;Jaigo.mp4&quot;
     -out_path &quot;Jaigo_DASH&quot;
     -key_file_path &quot;Jaigo_DASH/_info/key.B64.random&quot;
-    -widevine_key_id c595f214d84dc7f3 1a8ebf1b7ddda5
-    -widevine_provider intertrust
-    -playready_LA_
-    URLhttp://pr.test.expressplay.com/playready/RightsManager.asmx
+    -widevine_key_id c595f214d84dc7ecf31a8ebf1b7ddda5
+    interconfianza -widevine_provider
+    -playready_LA_URL
+    http://pr.test.expressplay.com/playready/RightsManager.asmx
     -playready_keyid c595f214d84dc7ecf31a8ebf1b7ddda5
-    -content_id c595f214d d84dc7ecf31a8ebf1b7ddda5
+    -content_id c595f214d84dc7ecf31a8ebf1b7ddda5
 
-En este caso concreto, el empaquetador sin conexión agrega tanto la protección de contenido Widevine como los datos de inicialización de protección de contenido PlayReady al contenido DASH de salida. El valor de `-key_file_path` es para una clave codificada base64. El valor de `-playready_LA_URL` es para la adquisición de licencias PlayReady.
+En este caso particular, el empaquetador sin conexión agrega los datos de inicialización de la protección de contenido Widevine y de la protección de contenido PlayReady al contenido DASH de salida. El valor de `-key_file_path` es para una clave codificada en base64. El valor de `-playready_LA_URL` es para la adquisición de licencias PlayReady.
 
 El argumento conf_path apunta al archivo de configuración que contendría lo siguiente:
 
@@ -38,4 +37,4 @@ El argumento conf_path apunta al archivo de configuración que contendría lo si
     &lt;encrypt_audio>false&lt;/encrypt_audio>
     &lt;/config>
 
-Como algunos dispositivos Android, principalmente Amazon Fire TV, no admiten el descifrado de audio, el cifrado de audio es opcional.
+Debido a que algunos dispositivos Android, principalmente Amazon Fire TV, no admiten el descifrado de audio, el cifrado de audio es opcional.

@@ -1,22 +1,21 @@
 ---
-description: Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con la hora de inicio.
-title: Usar metadatos temporizados
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con el tiempo de inicio.
+title: Usar metadatos cronometrados
+exl-id: 19375158-3647-4d6e-a2fb-6b06a2fd23c5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Usar metadatos cronometrados{#use-timed-metadata}
 
-# Usar metadatos temporizados{#use-timed-metadata}
+Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con el tiempo de inicio.
 
-Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con la hora de inicio.
+Para utilizar estos elementos guardados `PTTimedMetadata` durante la reproducción, utilice el diccionario guardado de [Almacenar objetos de metadatos cronometrados a medida que se envían](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
 
-Para utilizar estos `PTTimedMetadata` objetos guardados durante la reproducción, utilice el diccionario guardado de [Almacene los objetos de metadatos temporizados a medida que se envían](../../../tvsdk-1.4-for-ios/ad-insertion/c-psdk-ios-1.4-custom-tags-configure/t-psdk-ios-1.4-timed-metadata-store.md).
-
-1. Extraiga y actualice el tiempo de reproducción actual desde esta notificación y busque todos los objetos `PTTimedMetadata` con tiempos de inicio que coincidan con el tiempo de reproducción actual.
+1. Extraiga y actualice el tiempo de reproducción actual de esta notificación y busque todos los `PTTimedMetadata` objetos con tiempos de inicio que coinciden con el tiempo de reproducción actual.
 
    Puede utilizar estos objetos para completar varias acciones.
 
@@ -57,4 +56,4 @@ Para utilizar estos `PTTimedMetadata` objetos guardados durante la reproducción
    }
    ```
 
-1. Elimine periódicamente instancias `PTTimedMetadata` obsoletas de la lista para evitar que la memoria crezca continuamente.
+1. Vaciar periódicamente objetos antiguos `PTTimedMetadata` instancias de la lista para evitar que la memoria crezca continuamente.

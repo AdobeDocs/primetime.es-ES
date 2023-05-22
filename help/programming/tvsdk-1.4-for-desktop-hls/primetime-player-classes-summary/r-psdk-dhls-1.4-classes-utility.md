@@ -1,14 +1,13 @@
 ---
 description: Estas clases proporcionan formas de procesar distintos tipos de información.
 title: Clases de utilidad
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 561a8eef-30a3-4b17-bb82-72d31d0848e3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
 
 ---
-
 
 # Clases de utilidad {#utility-classes}
 
@@ -23,10 +22,9 @@ Comment Type: draft
 
 -->
 
-| Nombre de la clase | Descripción |
+| Nombre de clase | Descripción |
 |---|---|
-| [AuthorizedFeaturesHelper](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/AuthorizedFeaturesHelper.html) | Clase auxiliar utilizada para cargar y obtener el conjunto authorizedFeatures utilizando un token almacenado externamente. |
+| [AuthorizedFeaturesHelper](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/AuthorizedFeaturesHelper.html) | Clase auxiliar utilizada para cargar y obtener el conjunto authorizedFeatures mediante un token almacenado externamente. |
 | [DateUtils](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/DateUtils.html) | Métodos para procesar fechas. |
 | [NumberUtils](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/utils/NumberUtils.html) | Métodos de ayuda relacionados con los números. |
 | [TimeRange](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/utils/TimeRange.html) | Métodos para crear e interpretar intervalos de tiempo. |
-

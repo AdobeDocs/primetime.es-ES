@@ -1,20 +1,19 @@
 ---
-description: Preguntas frecuentes sobre el uso de protección de salida basada en resolución.
+description: Preguntas frecuentes sobre el uso de la protección de salida basada en la resolución.
 title: Preguntas frecuentes sobre RBOP
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 16b95db4-43a9-4458-b7f4-94033a36542e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 0%
 
 ---
 
-
 # Preguntas frecuentes sobre RBOP {#rbop-faq}
 
-Preguntas frecuentes sobre el uso de protección de salida basada en resolución.
+Preguntas frecuentes sobre el uso de la protección de salida basada en la resolución.
 
-* **P.** *Al definir un requisito de salida digital para una restricción de píxeles, obtengo errores de análisis/formato cuando dejo la versión HDCP fuera, pero no tengo ningún requisito de HDCP. ¿Cómo debo configurar mi requisito de salida digital en este caso?* **R.** Dado que la comprobación de versiones de HDCP no es compatible con el cliente actual, Adobe recomienda configurar la versión de HDCP en  `1.0`. Esto garantizará que la configuración tenga el formato correcto y que sea semánticamente coherente en el futuro cuando se admita la comprobación de versiones de HDCP. El siguiente fragmento ilustra una configuración con este valor HDCP.
+* **P.** *Al definir un requisito de salida digital para una restricción de píxeles, se producen errores de análisis/formato al dejar de lado la versión de HDCP, pero no tengo ningún requisito de HDCP. ¿Cómo debo configurar mi requisito de salida digital en este caso?* **A.** Dado que la comprobación de la versión de HDCP no es compatible actualmente con el cliente, Adobe recomienda establecer la versión de HDCP en `1.0`. Esto garantizará que la configuración tenga el formato correcto y sea semánticamente coherente en el futuro cuando se admita la comprobación de versiones de HDCP. El siguiente fragmento ilustra una configuración con este valor HDCP.
 
    ```
    { "pixelConstraints":  
@@ -30,27 +29,27 @@ Preguntas frecuentes sobre el uso de protección de salida basada en resolución
    }
    ```
 
-* **P.** *¿Las restricciones de píxeles de RBOP son discretas o están basadas en rangos?* **A.** Las restricciones de píxeles de RBOP se ordenan según su rango. Cada recuento de píxeles define los requisitos para todos los recuentos de píxeles menores o iguales que el recuento dado o hasta el recuento más grande menor que ese valor si existe más de una restricción de píxeles. En pocas palabras, los valores se aplican como umbrales máximos para cada recuento de píxeles vertical.
+* **P.** *¿Las restricciones de píxeles RBOP son discretas o se basan en intervalos?* **A.** Las restricciones de píxeles RBOP se basan en rangos. Cada recuento de píxeles define los requisitos para todos los recuentos de píxeles inferiores o iguales al recuento dado o hasta el recuento más grande menor que ese valor si existe más de una restricción de píxeles. En pocas palabras, los valores se aplican como umbrales máximos para cada recuento de píxeles verticales.
 
-   Supongamos que se pasa un flujo MBR con resoluciones verticales de 240, 480, 600, 720 y 1080 a su reproductor con la siguiente configuración de RBOP.
+   Supongamos que se pasa a su reproductor un flujo MBR con resoluciones verticales de 240, 480, 600, 720 y 1080 con la siguiente configuración RBOP.
 
    **Configuración de directiva RBOP:**
 
-   * 720P - Se requiere HDCP
-   * 480P - Sin OP
+   * 720P: se requiere HDCP
+   * 480P: sin OP
 
-   Se aplican las siguientes reglas a cada variante.
+   Se aplicarán las siguientes reglas a cada variante.
 
-   **Emisiones:**
+   **Transmisiones:**
 
    * 240, 480: Ambos son &lt;= 480; no se requerirá OP y los flujos se cargarán con o sin HDCP presente.
-   * 600, 720: Ambos son &lt;= 720; El HDCP es necesario para la reproducción
-   * 1080: > 720; el flujo se incluye en la lista de bloqueados (error devuelto) ya que no se encuentra en las reglas anteriores.
+   * 600, 720: Ambos son &lt;= 720; se requiere HDCP para la reproducción
+   * 1080: > 720; la secuencia está en la lista de bloqueados (error devuelto), ya que no se encuentra en las reglas anteriores.
 
 
-* **P.** En algunos de mis dispositivos Android, las restricciones de recuento de píxeles que he definido no se aplican exactamente como se define. ¿Qué está pasando?
+* **P.** En algunos de mis dispositivos Android, las restricciones de recuento de píxeles que he definido no se aplican exactamente como están definidas. ¿Qué está pasando?
 
-   **R.** Algunos dispositivos Android informan de tamaños de fotogramas ligeramente superiores al tamaño normal. Para solucionar esta situación, ajuste sus tamaños de fotograma ( `maxPixel` y `pixelCount`) hacia arriba en 20 píxeles. Por ejemplo, ajuste la configuración del tamaño del marco hacia arriba, desde:
+   **A.** Algunos dispositivos Android informan de que el tamaño de los fotogramas es ligeramente superior al tamaño normal. Para solucionar esta situación, ajuste el tamaño de los marcos ( `maxPixel` y `pixelCount` configuración) 20 píxeles hacia arriba. Por ejemplo, ajuste la configuración del tamaño del marco hacia arriba, desde:
 
    ```
    { 
@@ -63,7 +62,7 @@ Preguntas frecuentes sobre el uso de protección de salida basada en resolución
    ... 
    ```
 
-   a:
+   hasta:
 
    ```
    { 
@@ -76,5 +75,4 @@ Preguntas frecuentes sobre el uso de protección de salida basada en resolución
    ... 
    ```
 
-   en todas las instancias de `maxPixel` y `pixelCount`.
-
+   en, para todas las instancias de `maxPixel` y `pixelCount`.

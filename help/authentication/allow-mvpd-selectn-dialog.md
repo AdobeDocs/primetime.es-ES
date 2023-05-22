@@ -1,31 +1,31 @@
 ---
 title: Permitir MVPD en el cuadro de diálogo de selección
 description: Permitir MVPD en el cuadro de diálogo de selección
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 2c0e0f06-ddc6-4bea-90dc-d7ef8e78d27e
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
 
 ---
 
-
 # Permitir MVPD en el cuadro de diálogo de selección {#allow-mvpds-selection-dialog}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 ## Problema {#issue}
 
-Es posible que el programador desee probar o comprobar la experiencia del usuario con las nuevas integraciones de MVPD antes de publicarla entre los usuarios finales.
+Es posible que el programador desee probar o comprobar la experiencia del usuario con las nuevas integraciones de MVPD antes de hacerlas públicas a los usuarios finales.
 
 ## Solución {#solution}
 
-En el `displayProviderDialog()` llamada de retorno, la autenticación de Adobe Primetime devuelve todos los MVPD integrados con el programador seleccionado (ID del solicitante). Sin embargo, el Programador puede aplicar un filtro a la matriz de MVPD que se devuelve y mostrar solamente aquellos que están en ambas listas.
+En el `displayProviderDialog()` llamada de retorno, la autenticación de Adobe Primetime devuelve todas las MVPD integradas con el programador seleccionado (ID del solicitante). Sin embargo, el programador puede aplicar un filtro en la matriz de retorno de MVPD y mostrar solo las que están en ambas listas.
 
 ## Ejemplo {#example}
 
-En este ejemplo se muestra cómo mostrar solo CableCompany_1 y CableCompany_2 dentro del cuadro de diálogo de selección de MVPD y no mostrar CableCompany_NewIntegration.
+En este ejemplo se muestra cómo mostrar sólo CableCompany_1 y CableCompany_2 dentro del cuadro de diálogo selector de MVPD y cómo no mostrar CableCompany_NewIntegration.
 
 ```C
 function displayProviderDialog(mvpdList) {

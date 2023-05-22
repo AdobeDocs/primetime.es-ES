@@ -1,26 +1,25 @@
 ---
-title: encadenamiento de licencias mejorado
-description: encadenamiento de licencias mejorado
+title: Encadenamiento de licencias mejorado
+description: Encadenamiento de licencias mejorado
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5553f055-903f-4140-a425-08f21e8bce87
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%
 
 ---
 
+# Encadenamiento de licencias mejorado {#enhanced-license-chaining}
 
-# encadenado de licencias mejorado {#enhanced-license-chaining}
+Permite actualizar una licencia mediante una licencia raíz principal para la actualización por lotes de licencias.
 
-Permite actualizar una licencia utilizando una licencia raíz principal para la actualización por lotes de licencias.
+Adobe Access 2.0 admite el encadenamiento de licencias en el que las licencias hoja y raíz están enlazadas a un equipo específico. Adobe Access 3.0 es compatible con el encadenamiento de licencias mejorado, en el que una hoja está enlazada a una licencia raíz y sólo la licencia raíz está enlazada a un equipo o dominio específico. La cadena de licencias mejorada admite la incrustación de una licencia hoja con el contenido y el cliente solo necesita adquirir la licencia raíz del servidor de licencias para consumir el contenido protegido.
 
-Adobe Access 2.0 admite la encadenación de licencias en la que tanto las licencias de hoja como las de raíz están vinculadas a un equipo específico. Adobe Access 3.0 es compatible con la encadenación de licencias mejorada, en la que una hoja está enlazada a una licencia raíz, y solo la licencia raíz está enlazada a un equipo o dominio específico. La cadena de licencias mejorada admite la incrustación de licencias de hoja con el contenido y el cliente solo necesita adquirir la licencia raíz del servidor de licencias para consumir el contenido protegido.
-
-Para habilitar la cadena de licencia mejorada, se asigna una clave de cifrado raíz a la directiva. La clave de cifrado raíz se utiliza para enlazar criptográficamente la licencia de hoja a la licencia raíz.
+Para habilitar el encadenamiento de licencias mejorado, se asigna una clave de cifrado raíz a la directiva. La clave de cifrado raíz se utiliza para enlazar criptográficamente la licencia hoja a la licencia raíz.
 
 >[!NOTE]
 >
->La encadenación de licencias mejorada es compatible con los clientes de acceso a Adobe versión 3.0 y posteriores. Si un cliente anterior solicita una licencia para contenido que admita la encadenación de licencias mejorada, el servidor de licencias aún puede emitir una licencia a este cliente mediante la encadenación de licencias admitida por Adobe Access 2.0.
+>La encadenamiento de licencias mejorado es compatible con la versión 3.0 y posteriores de los clientes de Adobe Access. Si un cliente antiguo solicita una licencia para un contenido compatible con el encadenamiento de licencias mejorado, el servidor de licencias aún puede emitir una licencia para este cliente mediante el encadenamiento de licencias compatible con Adobe Access 2.0.
 
-Ejemplo de caso de uso: Utilice esta opción para actualizar las licencias vinculadas descargando una licencia raíz única. Por ejemplo, implemente modelos de suscripción en los que el contenido se pueda reproducir mientras el usuario renueve la suscripción mensualmente. La ventaja de este enfoque es que los usuarios solo tienen que realizar una adquisición de licencia única para actualizar todas sus licencias de suscripción.
+Ejemplo de caso de uso: utilice esta opción para actualizar cualquier licencia vinculada descargando una sola licencia raíz. Por ejemplo, implemente modelos de suscripción en los que el contenido se pueda reproducir siempre y cuando el usuario renueve la suscripción mensualmente. La ventaja de este enfoque es que los usuarios solo tienen que realizar una única adquisición de licencia para actualizar todas las licencias de suscripción.

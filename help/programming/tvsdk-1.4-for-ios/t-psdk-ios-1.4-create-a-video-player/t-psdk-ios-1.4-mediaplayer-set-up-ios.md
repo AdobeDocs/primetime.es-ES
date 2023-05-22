@@ -1,26 +1,25 @@
 ---
-description: La interfaz de PTMediaPlayer encapsula la funcionalidad y el comportamiento de un objeto de reproductor multimedia.
+description: La interfaz PTMediaPlayer encapsula la funcionalidad y el comportamiento de un objeto de reproductor de contenidos.
 title: Configuración de PTMediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: cf8f46c8-c52a-4f44-b493-965ce1b50c68
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
 
 ---
 
-
 # Configuración de PTMediaPlayer {#set-up-the-ptmediaplayer}
 
-TVSDK proporciona herramientas para crear una aplicación de reproductor de vídeo avanzada (su reproductor Primetime), que puede integrar con otros componentes de Primetime.
+TVSDK proporciona herramientas para crear una aplicación de reproductor de vídeo avanzada (su reproductor Primetime) que puede integrar con otros componentes de Primetime.
 
 Utilice las herramientas de su plataforma para crear un reproductor y conectarlo a la vista del reproductor de medios en TVSDK, que tiene métodos para reproducir y administrar vídeos. Por ejemplo, TVSDK proporciona métodos de reproducción y pausa. Puede crear botones de interfaz de usuario en la plataforma y establecer los botones para llamar a esos métodos de TVSDK.
 
-La interfaz de PTMediaPlayer encapsula la funcionalidad y el comportamiento de un objeto de reproductor multimedia.
+La interfaz PTMediaPlayer encapsula la funcionalidad y el comportamiento de un objeto de reproductor de contenidos.
 
 Para configurar su `PTMediaPlayer`:
 
-1. Busque la URL del medio en la interfaz de usuario, por ejemplo, en un campo de texto.
+1. Recupere la URL del contenido desde la interfaz de usuario, por ejemplo, en un campo de texto.
 
    ```
    NSURL *url = [NSURL URLWithString:textFieldURL.text];
@@ -28,34 +27,34 @@ Para configurar su `PTMediaPlayer`:
 
 1. Crear `PTMetadata`.
 
-   Supongamos que el método `createMetada` prepara metadatos (consulte [Publicidad](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)).
+   Supongamos que su método `createMetada` prepara los metadatos (consulte [Publicidad](../ad-insertion/r-psdk-ios-1.4-advertising-requirements.md)).
 
    ```
    PTMetadata *metadata = [self createMetadata]
    ```
 
-1. Cree `PTMediaPlayerItem` usando la instancia `PTMetadata`.
+1. Crear `PTMediaPlayerItem` mediante el uso de `PTMetadata` ejemplo.
 
    ```
    PTMediaPlayerItem *item = [[[PTMediaPlayerItem alloc] 
           initWithUrl:url mediaId:yourMediaID metadata:metadata] autorelease];
    ```
 
-1. Agregue observadores a las notificaciones que envía TVSDK.
+1. Añada observadores a las notificaciones que envía TVSDK.
 
    ```
    [self addObservers]
    ```
 
-1. Cree `PTMediaPlayer` con su nuevo `PTMediaPlayerItem`.
+1. Crear `PTMediaPlayer` uso del nuevo `PTMediaPlayerItem`.
 
    ```
    PTMediaPlayer *player = [PTMediaPlayer playerWithMediaPlayerItem:item];
    ```
 
-1. Establezca propiedades en el reproductor.
+1. Establezca las propiedades en el reproductor.
 
-   Estas son algunas de las propiedades `PTMediaPlayer` disponibles:
+   Estas son algunas de las disponibles `PTMediaPlayer` propiedades:
 
    ```
    player.autoPlay                    = YES;  
@@ -64,7 +63,7 @@ Para configurar su `PTMediaPlayer`:
    player.allowsAirPlayVideo          = YES;
    ```
 
-1. Establezca la propiedad view del reproductor.
+1. Establezca la propiedad de vista del reproductor.
 
    ```
    CGRect playerRect = self.adPlayerView.frame;  
@@ -77,16 +76,15 @@ Para configurar su `PTMediaPlayer`:
          ( UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight )];
    ```
 
-1. Agregue la vista del reproductor en la subvista de la vista actual.
+1. Agregar la vista del reproductor en la vista secundaria de la vista actual.
 
    ```
    [self.adPlayerView  setAutoresizesSubviews:YES];  
    [self.adPlayerView addSubview:(UIView *)player.view];
    ```
 
-1. Invoque `play` para iniciar la reproducción del contenido.
+1. Llamada `play` para iniciar la reproducción de contenido.
 
    ```
    [player play];
    ```
-

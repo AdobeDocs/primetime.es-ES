@@ -1,20 +1,19 @@
 ---
 description: Puede completar flujos de trabajo específicos del Digital Rights Management (DRM).
 title: Digital Rights Management
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5a40252b-2917-4341-bc64-8642432ddda9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
-
 # Digital Rights Management {#digital-rights-management}
 
 Puede completar flujos de trabajo específicos del Digital Rights Management (DRM).
 
-Puede escuchar el evento `AdobePSDK.DRMMetadataInfoEvent` para gestionar los flujos de trabajo de DRM:
+Puede escuchar el `AdobePSDK.DRMMetadataInfoEvent` evento para gestionar flujos de trabajo de DRM:
 
 ```js
 ... 
@@ -22,15 +21,15 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 ...
 ```
 
-## Agregar Digital Rights Management {#add-digital-rights-management}
+## Añadir Digital Rights Management {#add-digital-rights-management}
 
-1. Agregue `DRMMetadataInfoAvailableEvent` para obtener el `DRMMetadata`.
+1. Añada el `DRMMetadataInfoAvailableEvent` para obtener la `DRMMetadata`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onDRMMetadataInfoAvaialble);
    ```
 
-1. Implemente la sección `onDRMMetadataInfoAvailable` encima de la línea en el paso 1.
+1. Implementación de `onDRMMetadataInfoAvailable` sección sobre la línea del paso 1.
 
    ```js
    var onDRMMetadataInfoAvaialble = function(event) { 
@@ -45,7 +44,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    };
    ```
 
-1. Cree DRMManager en el método setupVideo .
+1. Cree el Administrador de segmentos en el método setupVideo.
 
    ```js
    var drmManager = player.drmManager;
@@ -69,7 +68,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
    };
    ```
 
-1. Agregue los datos de protección a drmManager.
+1. Añada los datos de protección a drmManager.
 
    ```js
    drmManager.setProtectionData(protectionData);
@@ -79,7 +78,7 @@ player.addEventListener(AdobePSDK.PSDKEventType.DRM_METADATA_INFO_AVAILABLE, onD
 
    >[!TIP]
    >
-   >Asegúrese de actualizar el tipo de recurso, ya que ahora es DASH.
+   >Asegúrese de actualizar el tipo de recurso, ya que ahora es GUIÓN.
 
    ```js
    var resourceUrl = "https://ptdemos.com/videos/dashdrm/stream.mpd"; 

@@ -22,119 +22,119 @@ Estos son los problemas resueltos para TVSDK 2.1 para PlayStation 4:
 
 **Versión 2.1.0.638**
 
-* **PTPLAY-10439:**
-Cuando se rompió el enlace de anuncio de envoltorio VMAP, el reproductor se quedaba atascado en el estado de preparación (no enviaba 
+* **PLAY-10439:**
+Cuando el enlace del anuncio envoltorio de VMAP se rompió, el reproductor se quedaba atascado en el estado de preparación (no se enviaba) 
 `onComplete` a su llamador).
 
-* **PTPLAY-10179:**
+* **PLAY-10179:**
 
-   `creativeRepackaging` y `fallbackOnInvalidCreative` ahora están desactivados de forma predeterminada. Además, cuando la variable `creativeRepackaging` se estableció el indicador pero no `creativeRepackaging` se proporcionó, la variable `onRepackagingComplete` se llamaba tantas veces como había anuncios en la pausa publicitaria, lo que provocaba que las pausas publicitarias se crearan varias veces.
+   `creativeRepackaging` y `fallbackOnInvalidCreative` Los valores de ahora están desactivados de forma predeterminada. Además, cuando la variable `creativeRepackaging` se ha establecido el indicador, pero no `creativeRepackaging` se ha proporcionado, la variable `onRepackagingComplete` recibía llamadas tantas veces como anuncios en la pausa publicitaria, lo que provocaba que las pausas publicitarias se crearan varias veces.
 
-* **Zendesk #10304**: No se inicializó la variable de activación/desactivación de perdón de publicidad. Ahora inicializamos la variable desde `DataSetEntry's` ctor.
+* **#10304 de Zendesk**: no se inicializó la variable de activación/desactivación de cancelación de publicidad. Ahora inicializamos la variable desde `DataSetEntry's` Actor.
 
-* **PTPLAY-10318:**
-Se ha introducido la compatibilidad con el modo en segundo plano.
-* **Zendesk #17409:**
-Al entrar en el modo de reproducción de trucos, volver al modo de reproducción normal y, a continuación, volver al modo de reproducción de trucos, la posición de reproducción estaba saltando.
-* **PTPLAY-9552:**
-Después de analizar los archivos XML de respuesta, el código de error 1108 ahora se pica siempre que no hay anuncios presentes.
-* **PTPLAY-9551:**
-Cuando no hay pausa publicitaria después del procesamiento de Auditude, las llamadas CRS 
-**onPrefetchComplete** que reduce el valor de groupCount. Dado que no hay pausa publicitaria, el **groupCount** es 0 y se reduce en 1. Anteriormente, la variable **groupCount** was **uint32_t** debido a lo cual solía cambiar al valor máximo. Esto es ahora **int32_t**.
+* **PLAY-10318:**
+Se ha introducido compatibilidad con el modo de fondo.
+* **Zendesk # 17409:**
+Al entrar en el modo de reproducción con trucos, volver al modo de reproducción normal y volver al modo de reproducción con trucos, la posición de reproducción saltaba.
+* **PTPLAY-9552**
+Después de analizar los archivos XML de respuesta, el código de error 1108 ahora se ping siempre que no haya anuncios presentes.
+* **PTPLAY-9551**
+Cuando no hay ninguna pausa publicitaria después del procesamiento de la audiencia, el CRS llama a 
+**onPrefetchComplete** lo que reduce groupCount. Dado que no hay pausa publicitaria, la variable **groupCount** es 0 y se reduce en 1. Anteriormente, el **groupCount** era **uint32_t** debido a lo cual se utilizaba para cambiar al valor máximo. Esto es ahora **int32_t**.
 
 **Versión 2.1.0.621**
 
-* **Zendesk #4555**
-Problemas con Instant on Memory que generan errores de carga: 
-`MediaItemLoader` Corrección de un bloqueo que se produce al soltarlo `mediaitemloader`
+* **#4555 de Zendesk**
+Problemas instantáneos de memoria que generan errores de carga - 
+`MediaItemLoader` Corrección de que se produzca un bloqueo durante la liberación `mediaitemloader`
 
-* **Zendesk #17223**
-2.x CSAI: No todas las URL de seguimiento de anuncios se activan
-   * Algunos anuncios VAST que, a su vez, apuntaban a un anuncio en línea faltaban direcciones url de seguimiento.
-   * Cuando hay varias etiquetas de impresión en un anuncio en VAST XML, solo se guardó la primera URL de impresión y se omitieron los demás. Ahora, todas las direcciones URL de impresión se guardarán y anidarán más adelante.
-* **Zendesk #17224**
-El agente de usuario de PS4 mueve la información de horario primario hasta el final de UAString
-* **Zendesk #17226**
-2.x CSAI: No todos los anuncios están vinculados.
+* **#17223 de Zendesk**
+CSAI 2.x: No se activan todas las direcciones URL de seguimiento de anuncios
+   * Algunos anuncios VAST que a su vez apuntaban a un anuncio en línea faltaban direcciones URL de seguimiento.
+   * Cuando hay varias etiquetas de impresión en un anuncio en XML VAST, solo se guardó la primera URL de impresión y el resto se ignoró. Ahora todas las direcciones URL de impresión se guardarán y se hará ping más adelante.
+* **#17224 de Zendesk**
+El agente de usuario de PS4 mueve la información de primetime al final de UAString
+* **#17226 de Zendesk**
+CSAI 2.x: No todos los anuncios se vinculan en.
 \
-   La corrección es indicar que la línea de tiempo ha cambiado debido a las operaciones insertBy o eraseBy, y realizar el cambio de período correspondiente.
+   La corrección indica que la escala de tiempo ha cambiado debido a las operaciones insertBy o eraseBy, y realiza el cambio de punto en consecuencia.
 
-* **Zendesk #17284**
-   [Todas las plataformas] Los subtítulos no aparecen.\
+* **#17284 de Zendesk**
+   [Todas las plataformas] Los subtítulos opcionales no aparecen.\
    HLS: compatibilidad con `EXT-X-MEDIA-TIME` para archivos de subtítulos VTT.
 
-* **Zendesk #17889**
-Reproducción &quot;Láctea&quot; en PS4
+* **#17889 de Zendesk**
+Reproducción &quot;Milky&quot; en PS4
 \
-   se ha aplicado un desplazamiento correcto (para conversión de color)
+   se aplicó el desplazamiento correcto (para la conversión de color)
 
-* **Zendesk #17954**
-Lógica de reserva de anuncio + administración de vastas vacías
+* **#17954 de Zendesk**
+Lógica de reserva de publicidad + administración de contenido vasto vacío
 \
-   Se ha corregido el problema si uno de los contenedores Vast estaba vacío, el analizador Vast solía seguir procesando el envoltorio.
+   Se ha corregido el problema de que si uno de los contenedores de Vast estaba vacío, el analizador de Vast solía seguir procesando el contenedor.
 
-* **Zendesk #17807**
-No se puede pasar del vasto vacío Igual que Zendesk #3103
+* **#17807 de Zendesk**
+No se puede pasar de la vasta y vacía Igual que Zendesk #3103
 
-* **Zendesk #17865**
-Lógica de reserva en PS4 y XBox One
+* **#17865 de Zendesk**
+Lógica alternativa en PS4 y XBox One
 \
    Igual que Zendesk #3103
 
 **Versión 2.1.0.591**
 
-* **Zendesk #3767**
-Fragmento de código de anuncio PS4, la resolución de anuncios falla al procesar redirecciones VMAP.
-* **Zendesk #4096**
-PS4 CSAI: Error de segmentación Se ha corregido un bloqueo cuando TVSDK genera un error de segmentación cuando la biblioteca de publicidad está procesando una respuesta VMAP.
+* **#3767 de Zendesk**
+Fragmento de código de anuncio PS4, la resolución de anuncios falla al procesar las redirecciones de VMAP.
+* **#4096 de Zendesk**
+PS4 CSAI: Error de segmentación Se ha corregido un bloqueo cuando TVSDK generaba un error de segmentación cuando una biblioteca de anuncios estaba procesando una respuesta VMAP.
 
-* **Zendesk #4161**
-Trickplay 16x al final de la película bloquea Se produce un bloqueo fijo cuando trickplay vuelve a la reproducción normal
+* **#4161 de Zendesk**
+Trickplay 16x al final de la película se congela Se produce un interbloqueo corregido cuando trickplay vuelve a la reproducción normal
 
-* **Zendesk #4208**
-Bloqueo aleatorio cuando los subtítulos están activados Fuga de memoria fija cuando los subtítulos están habilitados
+* **#4208 de Zendesk**
+Bloqueo aleatorio cuando se activan los subtítulos opcionales Se ha corregido una fuga de memoria al activar los subtítulos opcionales
 
-* **Zendesk #4213**
-PS4 CSAI: Cambiar la cadena predeterminada de usuario-agente para todas las llamadas relacionadas con anuncios La cadena de usuario-agente se crea con la misma cadena de UA que utiliza el explorador + añadir cadena de Primetime
+* **#4213 de Zendesk**
+CSAI de PS4: cambiar la cadena predeterminada de usuario-agente para todas las llamadas relacionadas con el anuncio. La cadena de usuario-agente se crea con la misma cadena de UA que utiliza el explorador + agregar cadena de Primetime
 
-* **PTPLAY-7675** (interno) Los anuncios transcodificados no están reproduciendo Creative Repackaging estaba fallando cuando se llamaba dentro de una respuesta VMAP o VAST. La corrección es leer el archivo multimedia de un anuncio en lugar de leer del recurso en caso de anuncios extensos.
+* **PTPLAY-7675** (interno) Los anuncios transcodificados no se reproducen porque Creative Repacking estaba fallando cuando llamó dentro de una respuesta VMAP o VAST. La corrección es solo leer el archivo multimedia del anuncio en lugar de leer el recurso en caso de anuncios grandes.
 
-* **PTPLAY-7895** (interno) al `allowMultipleAds=false`, sin anuncios reproducidos Se ha corregido un error en el que `allowMultipleAds` no se estaba siguiendo correctamente.
+* **PTPLAY-7895** (interno) Cuándo `allowMultipleAds=false`, no se reproducen anuncios Error corregido donde `allowMultipleAds` El parámetro no se seguía correctamente.
 
-* **PTPLAY-7896** (interno) Los anuncios se están mostrando fuera del orden de secuencia en PS4 Se ha corregido un problema en el que los anuncios no estaban en el orden en el que aparecían en las respuestas XML.
+* **PTPLAY-7896** (interno) Los anuncios se reproducen sin orden de secuencia en PS4 Problema corregido en el que los anuncios no estaban en el orden en el que aparecían en las respuestas XML.
 
-* PS4 TVSDK se volvió a probar dentro de una miniaplicación en lugar de en un juego.
+* El SDK de TVSDK de PS4 volvió a probarse en una miniaplicación en lugar de en un juego.
 
 **Versión 2.1.0.563**
 
-* **Zendesk #3868**
-¿TVSDK es compatible con Playstation SDK 2.5? El TVSDK se ha creado con el SDK 2.5 Playstation.
+* **#3868 de Zendesk**
+¿TVSDK es compatible con Playstation SDK 2.5? El TVSDK ahora se crea con el SDK 2.5 de Playstation.
 
-* **Zendesk #4093**
-pares clave-valor de targetingInfo en la solicitud de Pt Ads.
+* **#4093 de Zendesk**
+targetingInfo pares de clave-valor en la solicitud de Pt Ads.
 \
-   Se ha añadido un carácter de nueva línea que separa los pares clave/valor.
+   Se agregó un carácter de nueva línea que separa los pares clave/valor.
 
 ## Funciones compatibles {#supported-features}
 
-TVSDK 2.1 para PlayStation 4 admite las siguientes funciones:
+TVSDK 2.1 admite las siguientes funciones para PlayStation 4:
 
 **Versión 2.1.0.621**
 
-* Abandono de anuncios, encadenamiento de margaritas en la lógica de selección de anuncios (Zendesk #3103) Para anuncios VAST (creativos) con la regla de reserva activada, TVSDK trata una publicidad con un tipo MIME no válido como un anuncio vacío e intenta usar anuncios de reserva en su lugar.Puede configurar algunos aspectos del comportamiento de reserva
+* Reserva de anuncios, encadenamiento de margaritas en la lógica de selección de anuncios (Zendesk #3103) Para los anuncios VAST (creativos) con la regla de reserva habilitada, el TVSDK trata un anuncio con un tipo MIME no válido como un anuncio vacío e intenta usar anuncios de reserva en su lugar. Puede configurar algunos aspectos del comportamiento de reserva
 
 **Versión 2.1.0.538**
 
-* Reproducción de VOD de HLS, incluida la reproducción, la pausa, la búsqueda
-* Flujo continuo de velocidad de bits adaptable
-* Reproducción de contenido cifrado con contenido protegido con AES de vainilla y DRM de Primetime
-* Inserción de publicidad del lado del cliente con comportamientos de publicidad predeterminados y perdón de publicidad
-* Nuevo embalaje
-* Subtítulos cerrados de WebVTT
-* Instantáneo con posición de inicio personalizada
-* Juego travieso con avance rápido y rebobinado rápido
-* 302 redireccionamiento
+* Reproducción de VOD de HLS, incluida la reproducción, la pausa y la búsqueda
+* Flujo de velocidad de bits adaptable
+* Reproducción de contenido cifrado con DRM de Primetime y contenido protegido por AES convencional
+* Inserción de publicidad del lado del cliente con comportamientos de publicidad predeterminados y perdón por la publicidad
+* Reempaquetado creativo
+* Subtítulos opcionales de WebVTT
+* Inicio instantáneo con posición de inicio personalizada
+* Juego de trucos con avance rápido y rebobinado rápido
+* Redirección 302
 
 ## Recursos útiles {#helpful-resources}
 
-* Consulte la documentación de ayuda completa en [Información y asistencia de Adobe Primetime](https://experienceleague.adobe.com/docs/primetime.html) página.
+* Consulte la documentación de ayuda completa en [Formación y asistencia de Adobe Primetime](https://experienceleague.adobe.com/docs/primetime.html) página.

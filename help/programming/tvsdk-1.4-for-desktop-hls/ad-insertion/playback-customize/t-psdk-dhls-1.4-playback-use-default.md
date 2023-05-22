@@ -1,22 +1,21 @@
 ---
-description: Puede elegir usar comportamientos de publicidad predeterminados.
-title: Uso del comportamiento de reproducción predeterminado
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede elegir utilizar comportamientos de anuncio predeterminados.
+title: Usar el comportamiento de reproducción predeterminado
+exl-id: 8d25e076-4335-49c8-b6b8-f2694b1b9074
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
+# Usar el comportamiento de reproducción predeterminado{#use-the-default-playback-behavior}
 
-# Utilizar el comportamiento de reproducción predeterminado{#use-the-default-playback-behavior}
-
-Puede elegir usar comportamientos de publicidad predeterminados.
+Puede elegir utilizar comportamientos de anuncio predeterminados.
 
 Para utilizar comportamientos predeterminados:
 
-* Si implementa su propia clase `ContentFactory`, devuelva una nueva instancia de `DefaultAdPolicySelector` en la implementación de `doRetrieveAdPolicySelector`.
+* Si implementa los suyos propios `ContentFactory` clase, devuelva una nueva instancia de `DefaultAdPolicySelector` en la implementación de `doRetrieveAdPolicySelector`.
 
    ```
    public class CustomContentFactory extends ContentFactory { 
@@ -35,4 +34,4 @@ Para utilizar comportamientos predeterminados:
    }
    ```
 
-* Si no tiene una implementación personalizada para la clase `ContentFactory`, TVSDK utiliza `DefaultAdPolicySelector`.
+* Si no tiene una implementación personalizada para el `ContentFactory` clase, TVSDK utiliza `DefaultAdPolicySelector`.

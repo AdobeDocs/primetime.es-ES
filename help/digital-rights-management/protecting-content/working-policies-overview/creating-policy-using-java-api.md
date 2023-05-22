@@ -2,21 +2,20 @@
 title: Creación de una directiva DRM con la API de Java
 description: Creación de una directiva DRM con la API de Java
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fcae76c3-4e51-449d-b6d5-2138bf1c583e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
-
 # Creación de una directiva DRM con la API de Java {#creating-a-drm-policy-with-the-java-api}
 
 Para crear una directiva DRM con la API de Java:
 
-1. Configure su entorno de desarrollo e incluya en su proyecto todos los archivos JAR enumerados en [Configure su entorno de desarrollo.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
-1. Cree un objeto `com.adobe.flashaccess.sdk.policy.Policy` y especifique sus propiedades, incluidos los derechos, la duración del almacenamiento en caché de licencias y la fecha de finalización de la directiva DRM.
+1. Configure su entorno de desarrollo e incluya en su proyecto todos los archivos JAR enumerados en [Configure su entorno de desarrollo de.](../../protecting-content/setting-up-the-sdk/setup-dev-env.md).
+1. Crear un `com.adobe.flashaccess.sdk.policy.Policy` y especifique sus propiedades, incluidos los derechos, la duración del almacenamiento en caché de licencias y la fecha de finalización de la política de DRM.
 
    ```java
    // Create a new DRM policy object.  
@@ -51,7 +50,7 @@ Para crear una directiva DRM con la API de Java:
    } 
    ```
 
-1. Serialice el objeto DRM `Policy` y guárdelo en un archivo o base de datos.
+1. Serialización del DRM `Policy` y almacenarlo en un archivo o base de datos.
 
    ```java
    // Serialize the DRM policy  
@@ -65,4 +64,4 @@ Para crear una directiva DRM con la API de Java:
    out.close(); 
    ```
 
-Consulte [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] en el directorio Herramientas de la línea de comandos de implementación de referencia [!DNL samples] para obtener el origen completo de este código de ejemplo.
+Consulte [!DNL com.adobe.flashaccess.samples.policy.CreatePolicy] en las herramientas de línea de comandos de implementación de referencia [!DNL samples] para el origen completo de este código de ejemplo.

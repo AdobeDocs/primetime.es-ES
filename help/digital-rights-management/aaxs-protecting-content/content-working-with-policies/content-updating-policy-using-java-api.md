@@ -2,27 +2,26 @@
 title: Actualización de una directiva mediante la API de Java
 description: Actualización de una directiva mediante la API de Java
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1b03f033-0d29-46cc-ae14-d6fef96fe970
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
-
 # Actualización de una directiva mediante la API de Java {#updating-a-policy-using-the-java-api}
 
-Para actualizar una directiva mediante la API de Java, realice los pasos siguientes:
+Para actualizar una directiva mediante la API de Java, realice los siguientes pasos:
 
 1. Configure su entorno de desarrollo e incluya todos los archivos JAR mencionados en [Configuración del entorno de desarrollo](../../aaxs-protecting-content/content-setting-up-the-sdk/content-setting-up-the-dev-env.md) dentro del proyecto.
-1. Cree una instancia `Policy` y lea la política desde un archivo o base de datos.
+1. Crear un `Policy` y leer en la directiva desde un archivo o base de datos.
 
    ```
    Policy policy = new Policy(policyBytes);
    ```
 
-1. Actualice el objeto `Policy` estableciendo sus propiedades, como su nombre y reglas de uso.
+1. Actualice el `Policy` estableciendo sus propiedades, como el nombre y las reglas de uso.
 
    ```java
      // Change the policy name.  
@@ -47,7 +46,7 @@ Para actualizar una directiva mediante la API de Java, realice los pasos siguien
      }
    ```
 
-1. Serialice el objeto `Policy` actualizado y guárdelo en un archivo o base de datos.
+1. Serialice el actualizado `Policy` y almacenarlo en un archivo o base de datos.
 
    ```java
       // Serialize the policy.  
@@ -61,4 +60,4 @@ Para actualizar una directiva mediante la API de Java, realice los pasos siguien
       out.close(); 
    ```
 
-Para obtener la fuente completa de este código de ejemplo, consulte `com.adobe.flashaccess.samples.policy.UpdatePolicy` en el directorio Ejemplos de las herramientas de la línea de comandos de implementación de referencia.
+Para ver el origen completo de este código de ejemplo, consulte `com.adobe.flashaccess.samples.policy.UpdatePolicy` en el directorio &quot;samples&quot; de Herramientas de línea de comandos de implementación de referencia.

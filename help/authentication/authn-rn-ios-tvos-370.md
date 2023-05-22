@@ -1,36 +1,36 @@
 ---
-title: Notas de la versión iOS/tvOS 3.7.0 de autenticación
-description: Notas de la versión iOS/tvOS 3.7.0 de autenticación
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Autenticación Notas de la versión de iOS/tvOS 3.7.0
+description: Autenticación Notas de la versión de iOS/tvOS 3.7.0
+exl-id: 19c1179e-16b1-4608-954f-25b0980d7ad9
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
 
 ---
 
-
-# Notas de la versión iOS/tvOS 3.7.0 de autenticación {#ios-tvos-sdk-370-release-notes}
+# Autenticación Notas de la versión de iOS/tvOS 3.7.0 {#ios-tvos-sdk-370-release-notes}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-Esta página describe nuevas funciones, cambios y problemas conocidos con esta versión:
+En esta página se describen las nuevas funciones, los cambios y los problemas conocidos de esta versión:
 
 ## Número de compilación {#build-no-ios-tvos-sdk-370}
 
-Autenticación de Adobe Primetime: iOS / tvOS 3.7.0
+Autenticación de Adobe Primetime: iOS/tvOS 3.7.0
 
-Fecha de versión: 3/9/2021
+Fecha de versión: 03/09/2021
 
 
 
-## Información general de la versión {#overview-ios-tvos-sdk-370}
+## Información general de versión {#overview-ios-tvos-sdk-370}
 
-Agrega mejoras para el uso del marco de trabajo de AccessEnabler permitiendo operaciones de almacenamiento de llaveros cuando la aplicación está en segundo plano o cuando el dispositivo está bloqueado. Esto puede facilitar, por ejemplo, la implementación de AirPlay.
+Agrega mejoras para el uso del marco AccessEnabler al permitir operaciones de almacenamiento de llavero cuando la aplicación está en segundo plano o cuando el dispositivo está bloqueado. Esto puede facilitar, por ejemplo, la implementación de AirPlay.
 
-## Paquete de versiones {#rel=pkg-iostvos370}
+## Liberar paquete {#rel=pkg-iostvos370}
 
-Puede descargar iOS/tvOS SDK v3.7.0 desde aquí.
+Puede descargar el SDK v3.7.0 de iOS/tvOS desde aquí.
 
-Antes de actualizar a esta versión, consulte esta nota técnica.
+Antes de actualizar a esta versión, compruebe esta nota técnica.

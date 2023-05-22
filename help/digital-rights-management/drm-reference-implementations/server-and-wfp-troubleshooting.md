@@ -1,15 +1,14 @@
 ---
-title: Resolución de problemas
-description: Resolución de problemas
+title: Solución de problemas
+description: Solución de problemas
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6c4f15b6-507e-496e-ad1c-702ce77dd069
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
-
 
 # Solución de problemas{#troubleshooting}
 
@@ -22,7 +21,7 @@ A continuación se indican algunos problemas y soluciones que puede encontrar du
        javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
    ```
 
-   Asegúrese de que la contraseña se haya cifrado con la clase `ScrambleUtil`.
+   Asegúrese de que la contraseña se haya cifrado con `ScrambleUtil` clase.
 
 * Si se muestra el siguiente mensaje de error:
 
@@ -38,5 +37,4 @@ A continuación se indican algunos problemas y soluciones que puede encontrar du
    "javax.crypto.BadPaddingException: Given final block not properly padded"
    ```
 
-   Asegúrese de utilizar la clase *de codificador de contraseña que se ha proporcionado con la Implementación de referencia*. Esta utilidad de agitador es diferente de la que se proporciona con el servidor Adobe Primetime DRM para transmisión protegida.
-
+   Asegúrese de utilizar la clase codificador de contraseñas *que se ha proporcionado con la Implementación de referencia*. Esta utilidad de codificador es diferente de la que se ha proporcionado con el servidor DRM de Adobe Primetime para flujo protegido.

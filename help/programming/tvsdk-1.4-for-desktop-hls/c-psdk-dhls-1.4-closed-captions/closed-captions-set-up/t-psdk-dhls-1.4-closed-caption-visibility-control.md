@@ -1,26 +1,25 @@
 ---
-description: Puede controlar la visibilidad de los subtítulos cerrados. Cuando la visibilidad está activada, se muestra la pista seleccionada actualmente. Si cambia la pista que está actualizada, la configuración de visibilidad seguirá siendo la misma.
-title: Control de la visibilidad de los subtítulos
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede controlar la visibilidad de los subtítulos. Cuando la visibilidad está activada, se muestra la pista seleccionada actualmente. Si cambia qué pista es la actual, el ajuste de visibilidad sigue siendo el mismo.
+title: Control de la visibilidad de subtítulos
+exl-id: fac24d97-b83e-4bc4-a824-8a1692509519
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
 
 ---
 
+# Control de la visibilidad de subtítulos{#control-closed-caption-visibility}
 
-# Control de la visibilidad de los subtítulos {#control-closed-caption-visibility}
-
-Puede controlar la visibilidad de los subtítulos cerrados. Cuando la visibilidad está activada, se muestra la pista seleccionada actualmente. Si cambia la pista que está actualizada, la configuración de visibilidad seguirá siendo la misma.
+Puede controlar la visibilidad de los subtítulos. Cuando la visibilidad está activada, se muestra la pista seleccionada actualmente. Si cambia qué pista es la actual, el ajuste de visibilidad sigue siendo el mismo.
 
 >[!TIP]
 >
->Si se muestra texto de rótulo cerrado cuando el reproductor entra en el modo de búsqueda, el texto ya no se muestra una vez finalizada la búsqueda. En su lugar, después de unos segundos, TVSDK muestra el siguiente texto de subtítulo cerrado en el vídeo después de la posición de búsqueda final.
+>Si se muestra texto de rótulo cerrado cuando el reproductor entra en modo de búsqueda, el texto ya no se mostrará una vez finalizada la búsqueda. En su lugar, después de unos segundos, TVSDK muestra el siguiente texto de subtítulo cerrado en el vídeo después de la posición de búsqueda final.
 
 >[!NOTE]
 >
->Los valores de visibilidad para los subtítulos cerrados se definen en `ClosedCaptionsVisibility`.
+>Los valores de visibilidad de los subtítulos opcionales se definen en `ClosedCaptionsVisibility`.
 >
 >
 ```
@@ -28,14 +27,14 @@ Puede controlar la visibilidad de los subtítulos cerrados. Cuando la visibilida
 >public static const VISIBLE:String = visible;
 >```
 
-1. Espere a que `MediaPlayer` tenga al menos el estado PREPARADO (consulte [Espera de un estado válido](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
-1. Para obtener la configuración de visibilidad actual para los subtítulos cerrados, utilice el método getter en `MediaPlayer`, que devuelve un valor de visibilidad.
+1. Espere a que `MediaPlayer` para tener al menos el estado PREPARADO (consulte [Esperar a un estado válido](../../t-psdk-dhls-1.4-configure/c-psdk-dhls-1.4-ui-configure/t-psdk-dhls-1.4-ui-state-prepared-wait-for.md)).
+1. Para obtener la configuración de visibilidad actual de los subtítulos opcionales, utilice el método de captador en `MediaPlayer`, que devuelve un valor de visibilidad.
 
    ```
    public function get ccVisibility():String
    ```
 
-1. Para cambiar la visibilidad de los subtítulos cerrados, utilice el método setter, pasando un valor de visibilidad de `ClosedCaptionsVisibility`.
+1. Para cambiar la visibilidad de los subtítulos opcionales, utilice el método setter y pase un valor de visibilidad de `ClosedCaptionsVisibility`.
 
    Por ejemplo:
 
@@ -66,14 +65,14 @@ Puede controlar la visibilidad de los subtítulos cerrados. Cuando la visibilida
    player.addEventListener(MediaPlayerItemEvent.CAPTIONS_UPDATED, onCaptionUpdated);
    ```
 
-   Para eliminar los oyentes de su código de destrucción:
+   Para eliminar los agentes de escucha del código de destrucción:
 
    ```
    player.removeEventListener(MediaPlayerItemEvent.ITEM_CREATED, onItemCreated); 
    player.removeEventListener(MediaPlayerItemEvent.CAPTIONS_UPDATED, onCaptionUpdated);
    ```
 
-1. Cree y actualice la lista cuando un usuario elija una opción de la lista.
+1. Crear y actualizar la lista cuando un usuario realice una elección en ella.
 
    ```
    private function onCCTrackChange(event:IndexChangeEvent):void { 
@@ -146,4 +145,3 @@ Puede controlar la visibilidad de los subtítulos cerrados. Cuando la visibilida
        ccTracksList.selectedIndex = selectedIndex; 
    } 
    ```
-

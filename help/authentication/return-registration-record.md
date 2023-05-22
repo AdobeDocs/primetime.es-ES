@@ -1,22 +1,22 @@
 ---
-title: Registro de devoluciones
-description: Registro de devoluciones
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Devolver registro de registro
+description: Devolver registro de registro
+exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
 
 ---
 
-
-# Registro de devoluciones {#return-registration-record}
+# Devolver registro de registro {#return-registration-record}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 
-## Puntos finales de API de REST {#clientless-endpoints}
+## Extremos de API de REST {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -33,16 +33,16 @@ ht-degree: 0%
 
 ## Descripción {#description}
 
-Devuelve el registro de código de registro que contiene el código de registro UUID, el código de registro y el ID de dispositivo con hash. 
+Devuelve el registro del código de registro que contiene el UUID del código de registro, el código de registro y el ID del dispositivo con hash. 
 
  
 
 <div>
 
 
-| Punto final | Llamada  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
+| Extremo | Llamado  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Por ejemplo:</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJCFK?format=xml | Aplicación de flujo continuo</br></br>o</br></br>Servicio de programación | 1. requestor  </br>    (Componente Ruta)</br>2.  código de registro  </br>    (Componente Ruta) | GET | XML o JSON que contienen un código de registro e información. Consulte esquema y ejemplo a continuación. | 200 |
+| &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Por ejemplo:</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJCFK?format=xml | Aplicación de streaming</br></br>o</br></br>Servicio de programador | 1. solicitante  </br>    (Componente Ruta)</br>2.  código de registro  </br>    (Componente Ruta) | GET | XML o JSON que contienen un código de registro e información. Consulte esquema y ejemplo a continuación. | 200 |
 
 {style="table-layout:auto"}
 
@@ -50,8 +50,8 @@ Devuelve el registro de código de registro que contiene el código de registro 
 
 | Parámetro de entrada | Descripción |
 | --- | --- |
-| requestor | El RequestorId del programador para el que esta operación es válida. |
-| código de registro | El valor del código de registro que se mostraría en el dispositivo de transmisión (que se introduciría en el flujo de autenticación). |
+| solicitante | Identificador de solicitante del programador para el que es válida esta operación. |
+| código de registro | El valor del código de registro que se mostrará en el dispositivo de streaming (para introducirlo en el flujo de autenticación). |
 
 </br>
 
@@ -91,19 +91,19 @@ Devuelve el registro de código de registro que contiene el código de registro 
     </xs:schema>
 ```
 
-| Nombre del elemento | Descripción |
+| Nombre de elemento | Descripción |
 | --- | --- |
-| id | UUID generado por el Servicio de códigos de registro |
-| code | Código de registro generado por el Servicio de códigos de registro |
-| requestor | ID del solicitante |
+| id | UUID generado por el servicio de código de registro |
+| código | Código de registro generado por el servicio de código de registro |
+| solicitante | ID de solicitante |
 | mvpd | ID de MVPD |
-| generado | Marca de fecha y hora de creación del código de registro (en milisegundos desde el 1 de enero de 1970 GMT) |
+| generado | Marca de tiempo de creación del código de registro (en milisegundos desde el 1 de enero de 1970 GMT) |
 | caduca | Marca de tiempo cuando caduca el código de registro (en milisegundos desde el 1 de enero de 1970 GMT) |
 | deviceId | ID de dispositivo único (o token XSTS) |
 | deviceType | Tipo de dispositivo |
-| deviceUser | Usuario que ha iniciado sesión en el dispositivo |
+| deviceUser | El usuario ha iniciado sesión en el dispositivo |
 | appId | ID de aplicación |
-| appVersion | Versión de la aplicación |
+| appVersion | Versión de aplicación |
 | registrationURL | URL de la aplicación web de inicio de sesión que se mostrará al usuario final |
 
 {style="table-layout:auto"}

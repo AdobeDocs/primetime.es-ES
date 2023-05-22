@@ -1,21 +1,21 @@
 ---
 title: Recuperar lista de recursos preautorizados por aplicación web de segunda pantalla
 description: Recuperar lista de recursos preautorizados por aplicación web de segunda pantalla
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 78eeaf24-4cc1-4523-8298-999c9effdb7a
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
 
 ---
 
-
 # Recuperar lista de recursos preautorizados por aplicación web de segunda pantalla {#retrieve-list-of-preauthorized-resources-by-second-screen-web-app}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-## Puntos finales de API de REST {#clientless-endpoints}
+## Extremos de API de REST {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -31,20 +31,20 @@ ht-degree: 0%
 
 ## Descripción {#description}
 
-Una solicitud de autenticación de Adobe Primetime para obtener la lista de recursos preautorizados.
+Una solicitud a la autenticación de Adobe Primetime para obtener la lista de recursos autorizados previamente.
 
-Existen dos conjuntos de API: un conjunto para la aplicación de flujo continuo o el servicio de programación y otro para la aplicación web de segunda pantalla. Esta página describe la API para la aplicación AuthN.
+Existen dos conjuntos de API: un conjunto para la aplicación de streaming o el servicio de programador y otro para la aplicación web de segunda pantalla. Esta página describe la API para la aplicación AuthN.
 
  \
-| Punto final | Llamado  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta | | — | — | — | — | — | — | | &lt;sp_fqdn>/api/v1/preauthorization/{código de registro} | Módulo AuthN | 1.  código de registro  </br>    (Componente Ruta)</br>2.  solicitante (obligatorio)</br>3.  lista de recursos (obligatorio) | GET | XML o JSON que contienen decisiones individuales de preautorización o detalles de error. Consulte los ejemplos siguientes. | 200 - Éxito</br></br>400 - Solicitud incorrecta</br></br>401 - No autorizado</br></br>405 - Método no permitido  </br></br>412 - Error en la precondición</br></br>500 - Error interno del servidor |
+| Punto final | Llamado  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta | | — | — | — | — | — | — | | &lt;sp_fqdn>/api/v1/preauthorize/{código de registro} | Módulo AuthN | 1.  código de registro  </br>    (Componente Ruta)</br>2.  solicitante (obligatorio)</br>3.  lista de recursos (obligatorio) | GET | XML o JSON que contiene decisiones individuales de preautorización o detalles de error. Consulte los ejemplos siguientes. | 200 - Éxito</br></br>400: Solicitud incorrecta</br></br>401 - No autorizado</br></br>405: método no permitido  </br></br>412: error de condición previa</br></br>500 - Error interno del servidor |
 
 
 
 | Parámetro de entrada | Descripción |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | código de registro | El valor del código de registro proporcionado por el usuario al principio del flujo de autenticación. |
-| requestor | El RequestorId del programador para el que esta operación es válida. |
-| lista de recursos | Cadena que contiene una lista delimitada por comas de resourceIds que identifica el contenido al que podría acceder un usuario y que es reconocido por los puntos finales de autorización de MVPD. |
+| solicitante | Identificador de solicitante del programador para el que es válida esta operación. |
+| lista de recursos | Cadena que contiene una lista delimitada por comas de resourceIds que identifica el contenido al que un usuario podría tener acceso y que los extremos de autorización de MVPD reconocen. |
 
 
 ### Respuesta de ejemplo {#sample-response}
@@ -108,4 +108,3 @@ Content-Type: application/json; charset=utf-8
     ]
 }
 ```
-

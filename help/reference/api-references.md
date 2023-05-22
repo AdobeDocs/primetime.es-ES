@@ -1,5 +1,5 @@
 ---
-title: Referencias de la API de Adobe Primetime
+title: Referencias de API de Adobe Primetime
 description: Las API le ayudan a crear una aplicación o integración funcional de forma rápida y sencilla.
 topic-tags: API-references
 exl-id: 6862764e-c1d8-413a-a0c0-66b31eac8e53
@@ -10,11 +10,11 @@ ht-degree: 0%
 
 ---
 
-# Referencias de la API de Adobe Primetime {#api-references}
+# Referencias de API de Adobe Primetime {#api-references}
 
 + Ad Insertion dinámico de Primetime {#server-side}
-   + [Referencia de la API del Bootstrap](../primetime-ad-insertion/technical-reference/bootstrap-api.md)
-   + [Referencia de la API de informes](../primetime-ad-insertion/technical-reference/report-api.md)
+   + [Referencia de API de Bootstrap](../primetime-ad-insertion/technical-reference/bootstrap-api.md)
+   + [Referencia de API de informe](../primetime-ad-insertion/technical-reference/report-api.md)
 
 + TVSDK 3.12 {#tvsdk-312}
    + [TVSDK 3.12 para Android](https://help.adobe.com/en_US/primetime/api/psdk/javadoc3.12/index.html)
@@ -49,12 +49,12 @@ ht-degree: 0%
    + [TVSDK 1.4 para iOS](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/index.html)
 
 + API de DRM {#drm-apis}
-   + [API de cliente DRM para Android](https://help.adobe.com/en_US/primetime/api/drm-apis/client/android/index.html)
-   + [API de cliente DRM para iOS](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/index.html)
-   + [API del servidor SDK de DRM](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/)
+   + [API de cliente de DRM para Android](https://help.adobe.com/en_US/primetime/api/drm-apis/client/android/index.html)
+   + [API de cliente de DRM para iOS](https://help.adobe.com/en_US/primetime/api/drm-apis/client/ios/index.html)
+   + [API de servidor de SDK de DRM](https://help.adobe.com/en_US/primetime/api/drm-apis/server/javadocs-flashaccess-pro/)
 
 + Varios {#miscellaneous}
-   + [Video Heartbeat Library](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/index.html)
+   + [Biblioteca de Video Heartbeat](https://help.adobe.com/en_US/primetime/api/psdk/vhl_tvsdk_ios/index.html)
    + [DHPK 2.0 C++](https://help.adobe.com/en_US/primetime/api/psdk/psdk_doxygen/index.html)
-   + [Marco de IU para TVSDK de navegadores 2.4](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
+   + [Marco de interfaz de usuario para TVSDK del explorador 2.4](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/index.html)
    + [API públicas de PSDK FlashRuntime](https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls/)

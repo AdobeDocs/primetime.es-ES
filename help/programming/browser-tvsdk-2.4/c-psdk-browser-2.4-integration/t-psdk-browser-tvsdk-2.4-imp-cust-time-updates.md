@@ -1,24 +1,23 @@
 ---
-description: En algunas implementaciones de analytics, es posible que la aplicación cliente desee proporcionar una posición de cabezal de reproducción diferente a la registrada en el valor localTime del SDK de TVSDK del explorador.
-title: Implementar actualizaciones de tiempo personalizadas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: En algunas implementaciones de Analytics, es posible que la aplicación cliente desee proporcionar una posición de cabezal de reproducción diferente a la indicada por el valor de tiempo local de TVSDK del explorador.
+title: Implementación de actualizaciones de tiempo personalizadas
+exl-id: 4d045c4d-298a-42ae-af61-0463a76bc872
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
+# Implementación de actualizaciones de tiempo personalizadas{#implement-custom-time-updates}
 
-# Implementar actualizaciones de tiempo personalizadas{#implement-custom-time-updates}
+En algunas implementaciones de Analytics, es posible que la aplicación cliente desee proporcionar una posición de cabezal de reproducción diferente a la indicada por el valor de tiempo local de TVSDK del explorador.
 
-En algunas implementaciones de analytics, es posible que la aplicación cliente desee proporcionar una posición de cabezal de reproducción diferente a la registrada en el valor localTime del SDK de TVSDK del explorador.
-
-Por ejemplo, durante una reproducción de flujo lineal, se puede proporcionar el cabezal de reproducción de cada programa en relación con su tiempo de inicio.
+Por ejemplo, durante una reproducción de flujo lineal, se puede proporcionar el cabezal de reproducción de cada programa en relación con su hora de inicio.
 
 >[!TIP]
 >
->Anule este método solo si desea proporcionar una posición del cabezal de reproducción distinta de la predeterminada.
+>Anule este método solo si desea proporcionar una posición del cabezal de reproducción distinta a la posición predeterminada.
 
 Para anular la posición predeterminada del cabezal de reproducción:
 
@@ -30,5 +29,4 @@ vaMetadata.currentTimeUpdateBlock = function() {
 
 >[!IMPORTANT]
 >
->Los valores de este fragmento de código son solo muestras. Debe utilizar valores diferentes para la posición del cabezal de reproducción personalizado.
-
+>Los valores de este fragmento de código son solo ejemplos. Debe utilizar valores diferentes para la posición personalizada del cabezal de reproducción.

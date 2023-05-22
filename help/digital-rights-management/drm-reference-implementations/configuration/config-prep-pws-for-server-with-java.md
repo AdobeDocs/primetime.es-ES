@@ -1,17 +1,16 @@
 ---
-title: Preparación de contraseñas con Java
-description: Preparación de contraseñas con Java
+title: Preparación de contraseñas mediante Java
+description: Preparación de contraseñas mediante Java
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 69d551c4-e13b-473a-86ed-36b5ba24f6b8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '22'
 ht-degree: 0%
 
 ---
 
-
-# Preparación de contraseñas con Java{#prepare-passwords-using-java}
+# Preparación de contraseñas mediante Java{#prepare-passwords-using-java}
 
 Ejecute el `ScrambleUtil.class` con Java:
 
@@ -22,4 +21,3 @@ Ejecute el `ScrambleUtil.class` con Java:
    java -classpath [DRM SDK DVD]/SDK/adobe-flashaccess-sdk.jar;  
        com.adobe.flashaccess.refimpl.util.ScrambleUtil your_pfx_password
    ```
-

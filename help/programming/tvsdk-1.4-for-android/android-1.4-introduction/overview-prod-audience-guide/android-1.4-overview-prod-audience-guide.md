@@ -1,14 +1,13 @@
 ---
 description: Esta guía proporciona información sobre cómo desarrollar aplicaciones de reproductor de vídeo mediante TVSDK para Android, que se implementa en Java.
 title: Información general
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 21d224fe-a843-4200-ad13-9b8eba52d74f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 0%
 
 ---
-
 
 # Información general {#overview}
 
@@ -16,13 +15,13 @@ Esta guía proporciona información sobre cómo desarrollar aplicaciones de repr
 
 ## Información general del producto {#section_9664959F25C948878F2F7EF3D360CA95}
 
-TVSDK incluye descripciones de API y ejemplos de código para ayudarle a integrar funciones de vídeo avanzadas, protección de contenido y publicidad en su reproductor. Java se utiliza para crear una interfaz de usuario del reproductor de vídeo. TVSDK le ayuda a conectar esa interfaz de usuario a su reproductor de medios. Esto le permite reproducir vídeos y anuncios basados en manifiestos de medios. También puede utilizar TVSDK para recuperar información sobre el vídeo, gestionar la seguridad y controlar y supervisar la reproducción.
+TVSDK incluye descripciones de API y ejemplos de código para ayudarle a integrar en su reproductor funciones avanzadas de vídeo, protección de contenido y publicidad. Java se utiliza para crear una interfaz de usuario de reproductor de vídeo. TVSDK le ayuda a conectar esa interfaz de usuario a su reproductor de contenidos. Esto le permite reproducir vídeos y publicidad basados en manifiestos multimedia. También puede utilizar TVSDK para recuperar información sobre el vídeo, gestionar la seguridad y controlar y monitorizar la reproducción.
 
-Para conocer los requisitos específicos de hardware y software para usar TVSDK, consulte [Requisitos.](../../android-1.4-introduction/overview-prod-audience-guide/android-1.4-requirements.md)
+Para conocer los requisitos específicos de hardware y software para utilizar TVSDK, consulte [Requisitos.](../../android-1.4-introduction/overview-prod-audience-guide/android-1.4-requirements.md)
 
 ## Audiencia {#section_527860B373734D3BA89FCF5EC1F6DC37}
 
-En esta guía se asume que se entiende cómo desarrollar aplicaciones y reproductores de vídeo utilizando Java. Se implementa una interfaz de usuario del reproductor de vídeo utilizando ese idioma e incorporando las funciones de TVSDK.
+En esta guía se da por hecho que sabe cómo desarrollar aplicaciones y reproductores de vídeo mediante Java. La implementación de una interfaz de usuario de reproductor de vídeo se realiza utilizando ese idioma e incorporando las funciones de TVSDK.
 
 ## Acerca de esta guía {#section_9A5B2FC506B34B5DB71CA827B307A4D0}
 
@@ -32,7 +31,6 @@ Esta guía proporciona información que le permite incorporar funciones de TVSDK
 
 >[!TIP]
 >
->El prefijo `com.adobe.mediacore` del espacio de nombres de la API de TVSDK se omite para la brevedad.
+>El prefijo del área de nombres TVSDK API `com.adobe.mediacore` se omite para la brevedad.
 >
->Se hace referencia a muchos elementos de API sin su indicador de clase principal si el contexto es claro.
-
+>Se hace referencia a muchos elementos de API sin el designador de clase principal si el contexto está claro.

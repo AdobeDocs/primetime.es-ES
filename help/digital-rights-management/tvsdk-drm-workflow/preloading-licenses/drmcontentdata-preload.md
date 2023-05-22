@@ -2,7 +2,6 @@
 title: Uso de DRMContentData para precargar licencias
 description: Uso de DRMContentData para precargar licencias
 copied-description: true
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '130'
@@ -13,12 +12,12 @@ ht-degree: 0%
 
 # Uso de DRMContentData para precargar licencias{#using-drmcontentdata-to-pre-load-licenses}
 
-Los siguientes pasos describen el flujo de trabajo para precargar la licencia de un archivo multimedia protegido mediante un objeto `DRMContentData`.
+Los siguientes pasos describen el flujo de trabajo para precargar la licencia de un archivo de medios protegido mediante una `DRMContentData` objeto.
 
 1. Obtenga los metadatos DRM binarios para el contenido empaquetado.
 
-   Si se utiliza el paquete de implementación de referencia de Java de Primetime DRM, este archivo de metadatos se genera automáticamente con una extensión [!DNL .metadata]. Por ejemplo, puede descargar estos metadatos utilizando la clase `URLLoader` . Si se utiliza contenido HLS o HDS, se hace referencia a los metadatos en el archivo de manifiesto de contenido ( [!DNL .m3u8] o [!DNL .f4m]) o incluidos *dentro de* el archivo de manifiesto como una cadena codificada Base64 (que debe estar descodificada Base64 antes del consumo).
-1. Cree un objeto `DRMContentData` pasando los metadatos a la función constructora:
+   Si se utiliza el empaquetador de implementaciones de referencia de Java de DRM de Primetime, este archivo de metadatos se genera automáticamente con una variable [!DNL .metadata] extensión. Por ejemplo, puede descargar estos metadatos utilizando la variable `URLLoader` clase. Si se utiliza contenido HLS o HDS, se hace referencia a los metadatos en el archivo de manifiesto de contenido ( [!DNL .m3u8] o [!DNL .f4m]) o incluidos *dentro* el archivo de manifiesto como una cadena codificada en Base64 (que debe estar descodificada en Base64 antes del consumo).
+1. Crear un `DRMContentData` , pasando los metadatos a la función constructora:
 
    ```
    var drmData:DRMContentData = new DRMContentData( metadata );

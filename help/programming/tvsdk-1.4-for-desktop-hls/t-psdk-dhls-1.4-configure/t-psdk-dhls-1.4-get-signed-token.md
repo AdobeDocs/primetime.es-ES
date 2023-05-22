@@ -1,43 +1,42 @@
 ---
-description: El SDK de tiempo de ejecución de Flash necesita un token firmado para validar que tiene derecho a llamar a la API de TVSDK en el dominio en el que reside la aplicación.
-title: Cargar el token firmado
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: El TVSDK de tiempo de ejecución de Flash necesita un token firmado para validar que tiene derecho a llamar a la API de TVSDK en el dominio en el que reside la aplicación.
+title: Cargue el token firmado
+exl-id: fef6b764-dc65-412e-a990-3f0b1fef94dd
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
-
 # Cargue el token firmado {#load-your-signed-token}
 
-El SDK de tiempo de ejecución de Flash necesita un token firmado para validar que tiene derecho a llamar a la API de TVSDK en el dominio en el que reside la aplicación.
+El TVSDK de tiempo de ejecución de Flash necesita un token firmado para validar que tiene derecho a llamar a la API de TVSDK en el dominio en el que reside la aplicación.
 
-1. Obtenga un token firmado del representante de su Adobe para cada uno de sus dominios (donde cada dominio podría ser un dominio específico o un dominio comodín).
+1. Obtenga un token firmado de su representante de Adobe para cada uno de sus dominios (donde cada dominio puede ser un dominio específico o un dominio comodín).
 
-       Para obtener un token, proporcione el Adobe del dominio en el que se almacenará o cargará la aplicación o, preferiblemente, el dominio como hash SHA256. A cambio, Adobe le proporciona un token firmado para cada dominio. Estos tokens adoptan una de estas formas:
+       Para obtener un token, proporcione Adobe con el dominio donde se almacenará o cargará la aplicación o, preferiblemente, el dominio como un hash SHA256. A cambio, el Adobe le proporciona un token firmado para cada dominio. Estos tokens adoptan una de estas formas:
    
-   * Un archivo [!DNL .xml] que actúa como token para un dominio único o comodín.
+   * Un [!DNL .xml] archivo que actúa como token para un único dominio o dominio comodín.
 
       >[!NOTE]
       >
-      >Un token para un dominio comodín cubre ese dominio y todos sus subdominios. Por ejemplo, un token comodín para el dominio [!DNL mycompany.com] también cubriría [!DNL vids.mycompany.com] y [!DNL private.vids.mycompany.com]; un token comodín para [!DNL vids.mycompany.com] también cubriría [!DNL private.vids.mycompany.com]. *Los tokens de dominio comodín solo se admiten para determinadas versiones de Flash Player.*
+      >Un token para un dominio comodín cubre ese dominio y todos sus subdominios. Por ejemplo, un token comodín para el dominio [!DNL mycompany.com] también cubriría [!DNL vids.mycompany.com] y [!DNL private.vids.mycompany.com]; un token comodín para [!DNL vids.mycompany.com] también cubriría [!DNL private.vids.mycompany.com]. *Los tokens de dominio comodín solo son compatibles con determinadas versiones de Flash Player.*
 
-   * Archivo [!DNL .swf] que contiene información de token para varios dominios (sin incluir caracteres comodín) (único o comodín), que la aplicación puede cargar dinámicamente.
+   * A [!DNL .swf] archivo que contiene información de token para varios dominios (sin incluir caracteres comodín) (único o comodín), que la aplicación puede cargar dinámicamente.
 
-1. Almacene el archivo token en la misma ubicación o dominio que la aplicación.
+1. Almacene el archivo de tokens en la misma ubicación o dominio que la aplicación.
 
-   De forma predeterminada, TVSDK busca el token en esta ubicación. Como alternativa, puede especificar el nombre y la ubicación del token en `flash_vars` en el archivo HTML.
-1. Si el archivo token es un único archivo XML:
-   1. Utilice `utils.AuthorizedFeaturesHelper.loadFrom` para descargar los datos almacenados en la dirección URL especificada (el archivo token) y extraer la información `authorizedFeatures` de él.
+   De forma predeterminada, TVSDK busca el token en esta ubicación. También puede especificar el nombre y la ubicación del token en `flash_vars` en el archivo de HTML.
+1. Si el archivo de token es un solo archivo XML:
+   1. Uso `utils.AuthorizedFeaturesHelper.loadFrom` para descargar los datos almacenados en la dirección URL especificada (el archivo de token) y extraer `authorizedFeatures` información de la misma.
 
       Este paso puede variar. Por ejemplo, es posible que desee realizar la autenticación antes de iniciar la aplicación o que reciba el token directamente desde el sistema de administración de contenido (CMS).
 
-   1. TVSDK envía un evento `COMPLETED` si la carga se realiza correctamente o un evento `FAILED` en caso contrario. Realice las acciones adecuadas cuando detecte uno de los eventos.
+   1. TVSDK envía un `COMPLETED` evento si la carga se realiza correctamente o un `FAILED` de lo contrario. Tome las medidas adecuadas cuando detecte cualquiera de estos eventos.
 
-      Esto debe ser correcto para que la aplicación proporcione los objetos `authorizedFeatures` necesarios a TVSDK en forma de `MediaPlayerContext`.
-   Este ejemplo muestra cómo puede utilizar un archivo [!DNL .xml] de un solo token.
+      Esto debe tener éxito para que la aplicación proporcione los datos necesarios `authorizedFeatures` objetos a TVSDK en forma de `MediaPlayerContext`.
+   Este ejemplo muestra cómo puede utilizar un token único [!DNL .xml] archivo.
 
    ```
    private function loadDirectTokenURL():void { 
@@ -52,21 +51,21 @@ El SDK de tiempo de ejecución de Flash necesita un token firmado para validar q
     }
    ```
 
-1. Si el token es un archivo [!DNL .swf]:
-   1. Defina una clase `Loader` para cargar dinámicamente el archivo [!DNL .swf].
-   1. Establezca `LoaderContext` para especificar la carga que debe estar en el dominio de aplicación actual, lo que permite que TVSDK elija el token correcto dentro del archivo [!DNL .swf]. Si no se especifica `LoaderContext`, la acción predeterminada de `Loader.load` es cargar el .swf en el dominio secundario del dominio actual.
-   1. Escuche el evento COMPLETE que envía TVSDK si la carga se realiza correctamente.
+1. Si el token es un [!DNL .swf] archivo:
+   1. Defina un `Loader` para cargar dinámicamente el objeto [!DNL .swf] archivo.
+   1. Configure las variables `LoaderContext` para especificar la carga que se va a realizar en el dominio de aplicación actual, lo que permite a TVSDK elegir el token correcto dentro de [!DNL .swf] archivo. If `LoaderContext` no se ha especificado, la acción predeterminada de `Loader.load` es para cargar el .swf en el dominio secundario del dominio actual.
+   1. Escuche el evento COMPLETE, que TVSDK envía si la carga se realiza correctamente.
 
       Escuche también el evento ERROR y tome las medidas adecuadas.
-   1. Si la carga se realiza correctamente, utilice `AuthorizedFeaturesHelper` para obtener un `ByteArray` que contenga los datos de seguridad codificados con PCKS-7.
+   1. Si la carga se realiza correctamente, utilice el `AuthorizedFeaturesHelper` para obtener una `ByteArray` que contiene los datos de seguridad codificados PCKS-7.
 
-      Estos datos se utilizan a través de la API AVE V11 para obtener el reconocimiento de autorización de Flash Runtime Player. Si la matriz de bytes no tiene contenido, utilice el procedimiento para buscar un archivo token de un solo dominio.
-   1. Utilice `AuthorizedFeatureHelper.loadFeatureFromData` para obtener los datos necesarios de la matriz de bytes.
-   1. Descarga el archivo [!DNL .swf].
+      Estos datos se utilizan a través de la API AVE V11 para obtener el reconocimiento de autorización del reproductor de Flash Runtime. Si la matriz de bytes no tiene contenido, utilice en su lugar el procedimiento para buscar un archivo de token de un solo dominio.
+   1. Uso `AuthorizedFeatureHelper.loadFeatureFromData` para obtener los datos necesarios de la matriz de bytes.
+   1. Descargue el [!DNL .swf] archivo.
 
-   Los siguientes ejemplos muestran cómo puede utilizar un archivo [!DNL .swf] de varios tokens.
+   Los siguientes ejemplos muestran cómo se puede utilizar un token múltiple [!DNL .swf] archivo.
 
-   **Ejemplo 1 de varios tokens:**
+   **Ejemplo 1 de token múltiple:**
 
    ```
    private function onApplicationComplete(event:FlexEvent):void { 
@@ -110,7 +109,7 @@ El SDK de tiempo de ejecución de Flash necesita un token firmado para validar q
    } 
    ```
 
-   **Ejemplo 2 de varios tokens:**
+   **Ejemplo 2 de token múltiple:**
 
    ```
    private function tokenSwfLoadedHandler(e:Event):void { 
@@ -156,4 +155,3 @@ El SDK de tiempo de ejecución de Flash necesita un token firmado para validar q
        authorizedFeatureHelper.loadFrom(tokenUrl); 
    }
    ```
-

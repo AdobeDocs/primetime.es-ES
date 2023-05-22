@@ -12,13 +12,13 @@ ht-degree: 0%
 
 # Utilidad AIR Publisher ID {#air-publisher-id-utility}
 
-Al crear un archivo de AIR, la herramienta para desarrolladores de AIR (ADT) genera automáticamente un ID de editor. La utilidad AIR Publisher ID ( [!DNL AdobePublisherIDUtility.jar]) calcula el ID de editor de una aplicación de AIR.
+Al generar un archivo de AIR, la Herramienta de desarrollo de AIR (ADT) genera automáticamente un ID de publicador. La utilidad AIR Publisher ID ( [!DNL AdobePublisherIDUtility.jar]) calcula el ID de publicador de una aplicación de AIR.
 
-El ID de editor es único para el certificado que se utiliza para crear un archivo AIR. Si vuelve a utilizar el mismo certificado para varias aplicaciones de AIR, todas las aplicaciones de AIR tienen el mismo ID de editor. Una versión de AIR posterior a la versión 1.5.2 no agrega el ID de editor generado a un archivo. Por lo tanto, si planea utilizar una lista de permitidos de aplicación de AIR, utilice esta herramienta para determinar el ID de editor.
+El identificador de publicador es exclusivo del certificado que se utiliza para generar un archivo AIR. Si vuelve a utilizar el mismo certificado para varias aplicaciones de AIR, todas las aplicaciones de AIR tienen el mismo ID de publicador. Una versión de AIR posterior a la versión 1.5.2 no agrega el ID de publicador generado a un archivo. Por lo tanto, si planea utilizar una lista de permitidos de aplicación de AIR, utilice esta herramienta para determinar el ID del publicador.
 
 >[!NOTE]
 >
->El ID de editor que se utiliza para la aplicación de listas de permitidos de AIR no es el mismo que el ID de editor que especifica el editor de la aplicación en la [!DNL application.xml] archivo.
+>El identificador de publicador que se utiliza para la aplicación de listas de permitidos de AIR no es el mismo que el identificador de publicador que el publicador de la aplicación especifica en el [!DNL application.xml] archivo.
 
 ## Uso de la línea de comandos de la utilidad AIR Publisher ID {#air-publisher-id-utility-command-line-usage}
 
@@ -35,10 +35,10 @@ java -jar AdobePublisherIDUtility.jar
 </i class="+ topic>
 ```
 
-* `signaturefile` especifica una ruta a la aplicación de AIR [!DNL signatures.xml] archivo, ubicado en las aplicaciones [!DNL META-INF] directory
+* `signaturefile` especifica una ruta al de la aplicación AIR [!DNL signatures.xml] , ubicado en las aplicaciones [!DNL META-INF] directorio
 
-* `signingcert` especifica el certificado que se usa para firmar una aplicación de AIR
+* `signingcert` especifica el certificado que se utiliza para firmar una aplicación de AIR
 
 >[!NOTE]
 >
->Para determinar el ID del editor para una aplicación de Android, debe usar la variable `-s` para especificar el certificado utilizado para firmar el paquete de aplicaciones de Android (APK). Primetime DRM es necesario para crear aplicaciones Android que puedan reproducir contenido protegido por DRM de Primetime.
+>Para determinar el ID del editor de una aplicación de Android, debe utilizar el `-s` para especificar el certificado utilizado para firmar el paquete de la aplicación de Android (APK). Se requiere DRM de Primetime para crear aplicaciones de Android que puedan reproducir contenido protegido por DRM de Primetime.

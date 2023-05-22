@@ -1,33 +1,32 @@
 ---
 description: Puede implementar su propio sistema de registro.
 title: Registro personalizado
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7e10e2bd-24cc-4fe7-ad95-d466cb4baa42
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '275'
 ht-degree: 0%
 
 ---
 
-
 # Registro personalizado {#customized-logging}
 
 Puede implementar su propio sistema de registro.
 
-Además de iniciar sesión mediante notificaciones predefinidas, puede implementar un sistema de registro que utilice los mensajes de registro y los mensajes generados por TVSDK. Para obtener más información sobre las notificaciones predefinidas, consulte [El sistema de notificaciones](../c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md). Puede utilizar estos registros para solucionar problemas en las aplicaciones del reproductor y para comprender mejor el flujo de trabajo de reproducción y publicidad.
+Además de registrar mediante notificaciones predefinidas, puede implementar un sistema de registro que utilice sus mensajes de registro y los mensajes generados por TVSDK. Para obtener más información sobre las notificaciones predefinidas, consulte [El sistema de notificación](../c-psdk-ios-1.4-notification-system/c-psdk-ios-1.4-notification-system.md). Puede utilizar estos registros para solucionar los problemas de las aplicaciones de reproducción y proporcionar una mejor comprensión del flujo de trabajo de reproducción y publicidad.
 
-El registro personalizado utiliza una instancia singleton compartida de `PSDKPTLogFactory`, que proporciona un mecanismo para registrar mensajes en varios registros. Puede definir y agregar (registrar) uno o más registros a `PTLogFactory`. Esto le permite definir varios registros con implementaciones personalizadas, como un registrador de consola, un registrador web o un registrador de historial de consola.
+El registro personalizado utiliza una instancia singleton compartida del `PSDKPTLogFactory`, que proporciona un mecanismo para registrar mensajes en varios registradores. Puede definir y agregar (registrar) uno o más registradores al `PTLogFactory`. Esto le permite definir varios registradores con implementaciones personalizadas, como un registrador de consola, un registrador web o un registrador del historial de la consola.
 
-TVSDK genera mensajes de registro para muchas de sus actividades, que el `PTLogFactory` reenvía a todos los registros registrados. La aplicación también puede generar mensajes de registro personalizados, que se reenvían a todos los registros registrados. Cada registrador puede filtrar los mensajes y tomar las medidas adecuadas.
+TVSDK genera mensajes de registro para muchas de sus actividades, que el `PTLogFactory` reenvía a todos los registradores registrados. Su aplicación también puede generar mensajes de registro personalizados, que se reenvían a todos los registradores registrados. Cada registrador puede filtrar los mensajes y realizar las acciones adecuadas.
 
-Existen dos implementaciones para `PTLogFactory`:
+Hay dos implementaciones para `PTLogFactory`:
 
 * Para escuchar registros.
-* Para agregar registros a un `PTLogFactory`.
+* Para agregar registros a `PTLogFactory`.
 
 ## Escuchar registros {#listen-to-logs}
 
-Para registrarse para escuchar registros:
+Para registrarse y escuchar registros:
 1. Implemente una clase personalizada que siga el protocolo `PTLogger`:
 
    ```
@@ -45,7 +44,7 @@ Para registrarse para escuchar registros:
    @end
    ```
 
-1. Para registrar la instancia para recibir entradas de registro, añada una instancia de `PTLogger` al `PTLoggerFactory`:
+1. Para registrar la instancia para recibir entradas de registro, agregue una instancia de `PTLogger` a la `PTLoggerFactory`:
 
    ```
    PTConsoleLogger *logger = [PTConsoleLogger consoleLogger]; 
@@ -58,7 +57,7 @@ Para registrarse para escuchar registros:
 
 <!--<a id="example_3738B5A8B4C048D28695E62297CF39E3"></a>-->
 
-Este es un ejemplo de filtrado de registros mediante el tipo `PTLogEntry` :
+A continuación, se muestra un ejemplo de filtrado de registros utilizando `PTLogEntry` tipo:
 
 ```
 @implementation PTConsoleLogger 
@@ -92,11 +91,11 @@ Este es un ejemplo de filtrado de registros mediante el tipo `PTLogEntry` :
 ## Añadir nuevos mensajes de registro {#add-new-log-messages}
 
 Para registrarse y escuchar registros:
-1. Cree un nuevo `PTLogEntry` y agréguelo a `thePTLogFactory`:
+1. Crear un nuevo `PTLogEntry` y añadirlo a `thePTLogFactory`:
 
-   Puede crear una instancia `PTLogEntry` manualmente y agregarla a la instancia compartida `PTLogFactory` o utilizar una de las macros para realizar la misma tarea.
+   Puede crear manualmente una instancia de `PTLogEntry` y agréguelo a la `PTLogFactory` instancia compartida o utilice una de las macros para realizar la misma tarea.
 
-   Este es un ejemplo de registro con la macro `PTLogDebug` :
+   Este es un ejemplo de registro con `PTLogDebug` macro:
 
 <!--<a id="example_F014436E1686468F941F4EBD1A21B18E"></a>-->
 

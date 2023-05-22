@@ -1,5 +1,5 @@
 ---
-description: 'Debe configurar las propiedades del servidor para que reflejen su entorno. Puede hacerlo utilizando cualquiera de los siguientes métodos: '
+description: Debe configurar las propiedades del servidor para que reflejen su entorno. Puede hacerlo mediante cualquiera de las siguientes opciones
 title: Aplicar propiedades a entornos de servidor
 exl-id: 0c78011a-e8c8-43a8-8c2d-a5c4ed54a8d7
 source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
@@ -13,18 +13,18 @@ ht-degree: 0%
 
 Debe configurar las propiedades del servidor para que reflejen su entorno. Puede hacerlo mediante cualquiera de las siguientes opciones:
 
-* [!DNL flashaccess-i15n.properties] - Muestras incluidas en cada una de las [!DNL .war] files
+* [!DNL flashaccess-i15n.properties] - Muestras incluidas en cada una de las [!DNL .war] archivos
 
-* [!DNL AdobeInitial.properties] - Muestra ubicada en la variable [!DNL /shared] carpeta en el DVD
+* [!DNL AdobeInitial.properties] - Muestra ubicada en el [!DNL /shared] carpeta en el DVD
 
    Puede utilizar este archivo para anular las propiedades establecidas en el archivo WAR de la siguiente manera:
 
-   1. Establezca los valores de propiedad principales en [!DNL AdobeInitial.properties]
+   1. Establezca los valores de propiedad de anulación en [!DNL AdobeInitial.properties]
    1. Lugar [!DNL AdobeInitial.properties] en la ruta de clase.
 
    >[!NOTE]
    >
-   >Adobe recomienda que use el [!DNL AdobeInitial.properties] , ya que esto le permite actualizar su aplicación archivos WAR sin correr el riesgo de perder cualquier configuración de propiedad anterior que haya hecho en la [!DNL flashaccess-i15n.properties] archivo.
+   >El Adobe recomienda que utilice el [!DNL AdobeInitial.properties] , ya que esto le permite actualizar los archivos WAR de la aplicación sin correr el riesgo de perder ninguna configuración de propiedad anterior que haya realizado en el [!DNL flashaccess-i15n.properties] archivo.
 
 * Mecanismo de propiedad del sistema Java.
 
@@ -34,7 +34,7 @@ Puede aplicar propiedades individuales a estos entornos de servidor específicos
 * *Ensayo*
 * *Producción*
 
-Con esta capacidad, puede utilizar el mismo archivo WAR para todos los entornos de servidor. Para aplicar propiedades a entornos específicos, añada dos caracteres de guion bajo ( `__`&#39;) más uno de los siguientes códigos de entorno a la propiedad *name*:
+Con esta capacidad, puede utilizar el mismo archivo WAR para todos los entornos de servidor. Para aplicar propiedades a entornos específicos, añada dos caracteres de guion bajo (&#39; `__`&#39;) más uno de los siguientes códigos de entorno a la propiedad *name*:
 
 * `DEV`
 * `STAGE`
@@ -49,20 +49,20 @@ log.Level=INFO
 log.Level__DEV=DEBUG 
 ```
 
-El servidor emplea este orden de búsqueda para propiedades:
+El servidor emplea este orden de búsqueda para las propiedades:
 
-1. `propertyname_environment` en [!DNL AdobeInitial.properties]
+1. `propertyname_environment` in [!DNL AdobeInitial.properties]
 
-1. `propertyname_environment` en [!DNL flashaccess-15n.properties]
+1. `propertyname_environment` in [!DNL flashaccess-15n.properties]
 
 1. `propertyname_environment` en propiedades del sistema Java
-1. `propertyname` en [!DNL AdobeInitial.properties]
+1. `propertyname` in [!DNL AdobeInitial.properties]
 
-1. `propertyname` en [!DNL flashaccess-15n.properties]
+1. `propertyname` in [!DNL flashaccess-15n.properties]
 
 1. `propertyname` en propiedades del sistema Java
 
 >[!NOTE]
 >
->Debe especificar el nombre de entorno del servidor como una propiedad de sistema Java al iniciar el servidor. Por ejemplo, al iniciar Tomcat con [!DNL catalina.bat], establezca la variable `CATALINA_OPTS` variable de entorno como se indica a continuación:
->-DENVIRONMENT_NAME=[ DEV | STAGE | PROD ]
+>Debe especificar el nombre de entorno del servidor como una propiedad del sistema Java al iniciar el servidor. Por ejemplo, al iniciar Tomcat con [!DNL catalina.bat], configure el `CATALINA_OPTS` como se indica a continuación:
+>-DENVIRONMENT_NAME=[ DEV | FASE | PROD ]

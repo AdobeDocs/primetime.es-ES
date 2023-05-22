@@ -1,20 +1,19 @@
 ---
-description: Para agregar compatibilidad con VPAID 2.0, agregue una vista de anuncio personalizada y oyentes adecuados.
+description: Para añadir compatibilidad con VPAID 2.0, agregue una vista de anuncio personalizada y los oyentes adecuados.
 title: Implementación de la integración con VPAID 2.0
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a0d9a370-8fb6-4246-b59d-3b7c0b043bed
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '165'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Implementación de la integración con VPAID 2.0 {#implement-vpaid-integration}
 
-# Implementación de la integración de VPAID 2.0 {#implement-vpaid-integration}
+Para añadir compatibilidad con VPAID 2.0, agregue una vista de anuncio personalizada y los oyentes adecuados.
 
-Para agregar compatibilidad con VPAID 2.0, agregue una vista de anuncio personalizada y oyentes adecuados.
-
-1. Agregue la vista de anuncio personalizada a la interfaz del reproductor cuando el reproductor esté en estado PREPARADO.
+1. Añada la vista de anuncio personalizada a la interfaz del reproductor cuando el reproductor esté en el estado PREPARADO.
 
    ```java
    ... 
@@ -31,17 +30,17 @@ Para agregar compatibilidad con VPAID 2.0, agregue una vista de anuncio personal
        _playerFrame.addView(view);
    ```
 
-1. Cree oyentes y procese los eventos descritos en [Events](../../../../tvsdk-3x-android-prog/android-3x-events-notifications/events-summary/android-3x-events-summary.md).
+1. Cree oyentes y procese los eventos descritos en [Eventos](../../../../tvsdk-3x-android-prog/android-3x-events-notifications/events-summary/android-3x-events-summary.md).
 
    >[!IMPORTANT]
    >
-   >En un flujo de trabajo de VPAID 2.0, para las vistas de anuncios personalizadas es muy importante mantener la instancia `CustomAdView` entre `AdBreak` inicios (evento `AD_BREAK_START`) y `AdBreak` finalizaciones (evento `AD_BREAK_COMPLETE`), desde el momento en que crea la vista de anuncios personalizada hasta el momento en que la elimina. Es decir, no cree una vista de anuncio personalizada en cada inicio de pausa publicitaria y elimínela en cada finalización de pausa publicitaria.
+   >En un flujo de trabajo VPAID 2.0, para las vistas de anuncios personalizadas es muy importante mantener su `CustomAdView` instancia entre `AdBreak` comienza (evento) `AD_BREAK_START`) y `AdBreak` completa (evento) `AD_BREAK_COMPLETE`), desde el momento en que crea la vista de publicidad personalizada hasta el momento en que la elimina. Es decir, no cree una vista de anuncio personalizada en cada inicio de pausa publicitaria y deséchela en cada finalización.
    >
    >
    >Además, solo debe crear la vista de anuncio personalizada cuando el reproductor esté en estado PREPARADO,
    >
    >
-   >Elimine solo la vista de publicidad personalizada cuando se llama a restablecer . Por ejemplo:
+   >Deseche únicamente la vista de anuncio personalizada cuando se invoque el restablecimiento. Por ejemplo:
    >
    >
    ```
@@ -53,7 +52,7 @@ Para agregar compatibilidad con VPAID 2.0, agregue una vista de anuncio personal
    >
    >```
    >
-   >Finalmente, antes de eliminar la vista de publicidad personalizada, debe eliminarla de `FrameLayout`. Por ejemplo:
+   >Por último, antes de eliminar la vista de anuncios personalizada, debe eliminarla de `FrameLayout`. Por ejemplo:
    >
    >
    ```

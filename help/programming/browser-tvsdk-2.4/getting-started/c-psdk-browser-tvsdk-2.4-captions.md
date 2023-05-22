@@ -1,20 +1,19 @@
 ---
-description: Los subtítulos se pueden mostrar al reproducir contenido de vídeo.
+description: Puede mostrar subtítulos al reproducir contenido de vídeo.
 title: Subtítulos
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2144a6b2-0b9a-49ea-ad44-997adf36cbe6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '55'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
-
 # Subtítulos{#captions}
 
-Los subtítulos se pueden mostrar al reproducir contenido de vídeo.
+Puede mostrar subtítulos al reproducir contenido de vídeo.
 
-Para gestionar los rótulos, debe añadir el detector de eventos `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED`:
+Para gestionar subtítulos, debe añadir la variable `AdobePSDK.PSDKEventType.CAPTIONS_UPDATED` detector de eventos:
 
 ```js
 ... 
@@ -34,7 +33,7 @@ function onCaptionsUpdateEvent (event) {
 </pre>
 ```
 
-El marco de la interfaz de usuario proporciona una implementación de comportamientos de subtítulos predeterminada, que se puede modificar. Los comportamientos de los subtítulos también se pueden modificar ampliando los comportamientos predeterminados de los subtítulos. Por ejemplo:
+El marco de trabajo de la interfaz de usuario proporciona una implementación de comportamientos de subtítulos predeterminada que se puede modificar. Los comportamientos de subtítulos cerrados también se pueden modificar ampliando los comportamientos de subtítulos cerrados predeterminados. Por ejemplo:
 
 ```js
 // Using UI Framework 

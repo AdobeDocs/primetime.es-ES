@@ -1,52 +1,51 @@
 ---
-description: TVSDK admite la búsqueda en una posición específica (hora) en la que el flujo es una lista de reproducción de ventana deslizante, tanto en vídeo bajo demanda (VOD) como en emisiones en directo.
-title: Mostrar una barra de desplazamiento con la posición de reproducción actual
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK admite la búsqueda en una posición específica (tiempo) en la que el flujo es una lista de reproducción de ventana deslizante, tanto en vídeo bajo demanda (VOD) como en flujos en directo.
+title: Mostrar una barra de desplazamiento de búsqueda con la posición de reproducción actual
+exl-id: 8076521b-579d-491f-97de-c7b57daa9b2e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
+# Mostrar una barra de desplazamiento de búsqueda con la posición de reproducción actual {#display-a-seek-scrub-bar-with-the-current-playback-position}
 
-# Mostrar una barra de depuración con la posición de reproducción actual {#display-a-seek-scrub-bar-with-the-current-playback-position}
-
-TVSDK admite la búsqueda en una posición específica (hora) en la que el flujo es una lista de reproducción de ventana deslizante, tanto en vídeo bajo demanda (VOD) como en emisiones en directo.
+TVSDK admite la búsqueda en una posición específica (tiempo) en la que el flujo es una lista de reproducción de ventana deslizante, tanto en vídeo bajo demanda (VOD) como en flujos en directo.
 
 >[!IMPORTANT]
 >
->La llamada a otro sitio en directo solo está permitida para DVR.
+>La búsqueda en un flujo en vivo solo está permitida para DVR.
 
 1. Configure las llamadas de retorno para la búsqueda.
 
-       La llamada a otro punto del contenido es asíncrona, por lo que TVSDK envía los siguientes eventos relacionados con la búsqueda:
+       La búsqueda es asíncrona, por lo que TVSDK envía los siguientes eventos relacionados con la búsqueda:
    
-   * `QOSEventListener.onSeekStart` - Iniciando la llamada a otro punto del contenido.
-   * `QOSEventListener.onSeekComplete` - Busque con éxito.
-   * `QOSEventListener.onOperationFailed` - Error de llamada a otro punto del contenido.
+   * `QOSEventListener.onSeekStart` - Busca empezar.
+   * `QOSEventListener.onSeekComplete` - Búsqueda correcta.
+   * `QOSEventListener.onOperationFailed` - Error de búsqueda.
 
 1. Espere a que el reproductor esté en un estado válido para la búsqueda.
 
-   Los estados válidos son PREPARADO, COMPLETO, PAUSADO y REPRODUCIENDO.
+   Los estados válidos son PREPARED, COMPLETE, PAUSED y PLAYING.
 
-1. Utilice la SeekBar nativa para establecer `OnSeekBarChangeListener` para ver cuándo se está borrando el usuario.
-1. Escuche `QOSEventListener.onOperationFailed` y realice las acciones adecuadas.
+1. Utilice el SeekBar nativo para establecer `OnSeekBarChangeListener` para ver cuándo está borrando el usuario.
+1. Escuchar para `QOSEventListener.onOperationFailed` y tome las medidas adecuadas.
 
-   Este evento pasa la advertencia adecuada. La aplicación determina cómo continuar, por ejemplo, probando la llamada a otro punto del contenido o continuando la reproducción desde la posición anterior.
+   Este evento pasa la advertencia adecuada. La aplicación determina cómo proceder, por ejemplo, intentando la búsqueda de nuevo o continuando la reproducción desde la posición anterior.
 
-1. Espere a que TVSDK llame a la rellamada `QOSEventListener.onSeekComplete` .
-1. Recupere la posición de reproducción ajustada final utilizando el parámetro de posición de la rellamada.
+1. Espere a que TVSDK llame a `QOSEventListener.onSeekComplete` devolución de llamada.
+1. Recupere la posición de reproducción ajustada final utilizando el parámetro de posición de la llamada de retorno.
 
-   Esto es importante porque la posición de inicio real después de la búsqueda puede ser diferente de la posición solicitada. El comportamiento de reproducción puede verse afectado si una búsqueda u otro cambio de posición termina en medio de una pausa publicitaria o omite las pausas publicitarias.
+   Esto es importante porque la posición de inicio real después de la búsqueda puede ser diferente de la posición solicitada. El comportamiento de reproducción puede verse afectado si una búsqueda u otra reposición termina en mitad de una pausa publicitaria o omite las pausas publicitarias.
 
-1. Utilice la información de posición para mostrar una barra de desplazamiento.
+1. Utilice la información de posición cuando se muestre una barra de desplazamiento de búsqueda.
 
 <!--<a id="example_9657AA855B6A4355B0E7D854596FFB54"></a>-->
 
-**Ejemplo de llamada a otro punto del contenido**
+**Ejemplo de llamada**
 
-En este ejemplo, el usuario elimina la barra de búsqueda para buscar la posición deseada.
+En este ejemplo, el usuario borra la barra de búsqueda para buscar en la posición deseada.
 
 ```java
 // Use the native SeekBar to set OnSeekBarChangeListener to  
@@ -79,4 +78,3 @@ seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
     } 
 }; 
 ```
-

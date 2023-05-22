@@ -1,26 +1,25 @@
 ---
-description: Los controladores de eventos permiten que el TVSDK del explorador responda a los eventos.
+description: Los controladores de eventos permiten que el TVSDK del explorador responda a eventos.
 title: Implementación de oyentes de eventos y llamadas de retorno
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2ab33c03-4df6-48e5-825c-95aeef8855d2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '170'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Implementación de oyentes de eventos y llamadas de retorno{#implement-event-listeners-and-callbacks}
 
-# Implemente los oyentes de eventos y las llamadas de retorno{#implement-event-listeners-and-callbacks}
+Los controladores de eventos permiten que el TVSDK del explorador responda a eventos.
 
-Los controladores de eventos permiten que el TVSDK del explorador responda a los eventos.
-
-Cuando se produce un evento, el mecanismo de eventos del TVSDK del explorador llama al controlador de eventos registrado y pasa la información del evento al controlador.
+Cuando se produce un evento, el mecanismo de eventos de TVSDK del explorador llama al controlador de eventos registrado y pasa la información de eventos al controlador.
 
 La aplicación debe implementar detectores de eventos para los eventos TVSDK del explorador que afecten a la aplicación.
 
-1. Determine qué eventos debe escuchar la aplicación.
+1. Determine para qué eventos debe escuchar la aplicación.
 
-   * **Eventos** necesarios: Escuche todos los eventos de reproducción.
+   * **Eventos obligatorios**: escucha todos los eventos de reproducción.
 
       >[!IMPORTANT]
       >
@@ -28,16 +27,16 @@ La aplicación debe implementar detectores de eventos para los eventos TVSDK del
 
    * **Otros eventos**: Opcional, según la aplicación.
 
-      Por ejemplo, si incorpora publicidad en la reproducción, escuche todos los eventos `AdBreakPlaybackEvent` y `AdPlaybackEvent`.
+      Por ejemplo, si incorpora publicidad en la reproducción, escuche todas las `AdBreakPlaybackEvent` y `AdPlaybackEvent` eventos.
 
 1. Implemente detectores de eventos para cada evento.
 
-   El SDK de explorador devuelve valores de parámetro a las llamadas de retorno de event-listener. Estos valores proporcionan información relevante sobre el evento que se puede usar en los oyentes para realizar las acciones adecuadas.
+   El TVSDK del explorador devuelve valores de parámetro a las llamadas de retorno del oyente de eventos. Estos valores proporcionan información relevante sobre el evento que puede utilizar en los oyentes para realizar las acciones adecuadas.
 
    Por ejemplo:
 
    * Tipo de evento: `AdobePSDK.PSDKEventType.STATUS_CHANGED`
-   * Propiedad de evento: `MediaPlayerStatus.<event>` usado de esta manera:
+   * Propiedad de evento: `MediaPlayerStatus.<event>` se usa de esta manera:
 
 ```js
 player.addEventListener( 
@@ -52,7 +51,7 @@ onStatusChange = function (event) {
             break;
 ```
 
-1. Registre los oyentes de llamada de retorno con el objeto `MediaPlayer` utilizando `MediaPlayer.addEventListener`.
+1. Registre los oyentes de devolución de llamada con `MediaPlayer` mediante `MediaPlayer.addEventListener`.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  

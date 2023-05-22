@@ -1,43 +1,41 @@
 ---
-description: TVSDK gestiona los errores de intervalo de tiempo según el problema específico combinando o reordenando los intervalos de tiempo incorrectamente definidos.
-title: Gestión de errores de reemplazo y eliminación de publicidad
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK gestiona los errores de intervalo de tiempo según el problema específico combinando o reordenando los intervalos de tiempo definidos incorrectamente.
+title: Gestión de errores de eliminación y sustitución de anuncios
+exl-id: 0d70bb63-bdc5-4741-81db-1408216234c2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
 
 ---
 
-
 # Información general {#ad-deletion-and-replacement-error-handling-overview}
 
-TVSDK gestiona los errores de intervalo de tiempo según el problema específico combinando o reordenando los intervalos de tiempo incorrectamente definidos.
+TVSDK gestiona los errores de intervalo de tiempo según el problema específico combinando o reordenando los intervalos de tiempo definidos incorrectamente.
 
-TVSDK administra los errores `timeRanges` mediante procesos de combinación y reordenación predeterminados. En primer lugar, el reproductor ordena los intervalos de tiempo definidos por el cliente por la *hora de inicio*. En función de este orden de clasificación, si hay subconjuntos e intersecciones entre los intervalos, TVSDK combina intervalos adyacentes y los une.
+TVSDK administra `timeRanges` errores mediante los procesos de combinación y reordenación predeterminados. En primer lugar, el reproductor ordena los intervalos de tiempo definidos por el cliente según el *comenzar* hora. En función de este orden de clasificación, si hay subconjuntos e intersecciones entre los intervalos, TVSDK combina intervalos adyacentes y combina estos intervalos.
 
 TVSDK gestiona los errores de intervalo de tiempo con las siguientes opciones:
 
-* **Fuera de** ordenTVSDK reordena los intervalos de tiempo.
+* **Fuera de servicio** TVSDK reordena los intervalos de tiempo.
 
-* **** SubsetTVSDK combina los subconjuntos de intervalo de tiempo.
+* **Subconjunto** TVSDK combina los subconjuntos de intervalo de tiempo.
 
-* **** IntersectionTVSDK combina los intervalos de tiempo que se intersectan.
+* **Intersect** TVSDK combina los intervalos de tiempo de intersección.
 
-* **Reemplazar rangos** conflictTVSDK selecciona la duración de reemplazo de la más temprana  `timeRange` que aparezca en el grupo en conflicto.
+* **Conflicto de intervalos de reemplazo** TVSDK selecciona la duración de reemplazo de la primera `timeRange` que aparece en el grupo en conflicto.
 
-TVSDK gestiona los conflictos del modo de señalización con los metadatos de publicidad de las siguientes maneras:
+TVSDK controla los conflictos del modo de señalización con los metadatos de publicidad de las siguientes maneras:
 
-* Si el modo de señalización de anuncio entra en conflicto con los metadatos del intervalo de tiempo, estos siempre tienen prioridad.
+* Si el modo de señalización de publicidad entra en conflicto con los metadatos de intervalo de tiempo, estos siempre tienen prioridad.
 
-   Por ejemplo, si el modo de señalización de publicidad está establecido como mapa del servidor o señal de manifiesto y también hay intervalos de tiempo MARK en los metadatos de publicidad, el comportamiento resultante es que los intervalos están marcados y no se insertan anuncios.
-* En los intervalos REPLACE, si el modo de señalización está definido como mapa del servidor o como señales de manifiesto, los intervalos se sustituyen según se especifica en los intervalos REPLACE y no hay inserción de anuncios a través del mapa del servidor o las indicaciones de manifiesto.
+   Por ejemplo, si el modo de señalización de publicidad se establece como mapa del servidor o señales de manifiesto y también hay intervalos de tiempo MARK en los metadatos de publicidad, el comportamiento resultante es que los intervalos se marcan y no se insertan anuncios.
+* En el caso de los intervalos REPLACE, si el modo de señalización está configurado como mapa del servidor o señales de manifiesto, los intervalos se sustituyen como se especifica en los intervalos REPLACE y no hay inserción de anuncios a través de las señales de mapa del servidor o de manifiesto.
 
-   Para obtener más información, consulte la tabla *Signaling Mode / Metadata Combination Behaviors* en [Effect on ad insertion and delete from ad signal mode...](../../../../tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/c-psdk-android-2.7-signaling-mode-metadata-combos-android.md#c_psdk_signaling-mode-metadata-combos-android).
+   Para obtener más información, consulte la *Comportamientos de combinación de metadatos/modo de señalización* tabla en [Efecto en la inserción y eliminación de anuncios desde el modo de señalización de anuncios...](../../../../tvsdk-2.7-for-android/ad-insertion/delete-replace-content-vod/c-psdk-android-2.7-signaling-mode-metadata-combos-android.md#c_psdk_signaling-mode-metadata-combos-android).
 
 Recuerde lo siguiente:
 
-* Cuando el servidor no devuelve un valor `AdBreaks` válido, TVSDK genera y procesa un valor `NOPTimelineOperation` para el AdBreak vacío y no se reproduce ningún anuncio.
+* Cuando el servidor no devuelve datos válidos `AdBreaks`, TVSDK genera y procesa un `NOPTimelineOperation` para el AdBreak vacío y no se reproduce ningún anuncio.
 
-* Aunque la eliminación/sustitución de anuncios C3 está pensada para que solo sea compatible con VOD, si se especifica en los metadatos de los anuncios, también se procesan intervalos de tiempo para emisiones en directo.
-
+* Aunque la eliminación/sustitución de anuncios C3 está pensada para ser compatible únicamente con VOD, si se especifica en los metadatos de la publicidad, los intervalos de tiempo también se procesan para emisiones en directo.

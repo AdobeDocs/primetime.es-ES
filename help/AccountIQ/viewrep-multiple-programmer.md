@@ -1,7 +1,8 @@
 ---
 title: Ver informes de uso compartido de cuentas de varios programadores y canales
 description: Ver informes de uso compartido de cuentas de varios programadores y canales
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 8afa9e45-f0e3-43a3-970f-05a11adc0e42
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -10,23 +11,23 @@ ht-degree: 0%
 
 # Ver informes de uso compartido de cuentas de varios programadores y canales {#viewreport-multiple-programmer-channel}
 
-El hecho de que Account IQ sea una herramienta de análisis sólida y escalable le permite ver, analizar y comparar las estadísticas de uso compartido de cuentas de suscriptores no solo para uno, dos o tres, sino para más programadores a la vez.
+El hecho de que Account IQ sea una herramienta de análisis sólida y escalable le permite ver, analizar y comparar estadísticas de cuentas de suscriptores que comparten no solo para uno, dos o tres, sino para más programadores a la vez.
 
 >[!NOTE]
 >
->Sin embargo, a partir de ahora puede seleccionar como máximo 10 canales individuales (o programadores) en el panel de segmentos y marcos de tiempo para ver las estadísticas de uso compartido de suscriptores.
+>Sin embargo, a partir de ahora puede seleccionar un máximo de 10 canales individuales (o programadores) desde el panel de segmentos y lapso de tiempo para ver las estadísticas de uso compartido de los suscriptores.
 
 Para ver las estadísticas de uso compartido de cuentas de suscriptor de varios canales:
 
-1. Defina un segmento que desee siguiendo los pasos indicados en [Cómo definir el segmento y seleccionar el intervalo de tiempo](/help/AccountIQ/howto-select-segment-timeframe.md) para evaluación de [panel de segmento y marco de tiempo](/help/AccountIQ/segments-timeframe.md).
+1. Defina el segmento que desee siguiendo los pasos de [Cómo definir el segmento y seleccionar el periodo de tiempo](/help/AccountIQ/howto-select-segment-timeframe.md) para evaluación desde [panel de segmento y periodo de tiempo](/help/AccountIQ/segments-timeframe.md).
 
-1. Seleccione una página de informes que desee en el panel de navegación izquierdo:
+1. Seleccione una página de informes en el panel de navegación izquierdo:
 
-* [Panel](/help/AccountIQ/dashboard.md) (el tablero proporciona una visión de los gráficos seleccionados de diferentes páginas de informes).
+* [Tablero](/help/AccountIQ/dashboard.md) (el tablero ofrece una visión de los gráficos seleccionados de las diferentes páginas de informes).
 
    ![](assets/mult-prog-dashboard.png)
 
-   *Figura: Informe de tablero para varios programadores*
+   *Imagen: informe de panel para varios programadores*
 
 * [Uso general](/help/AccountIQ/general-usage-reports.md)
 

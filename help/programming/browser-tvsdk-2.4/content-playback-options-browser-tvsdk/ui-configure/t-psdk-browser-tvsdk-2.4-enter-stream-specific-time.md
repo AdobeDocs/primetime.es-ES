@@ -1,27 +1,26 @@
 ---
-description: De forma predeterminada, cuando se inicia la reproducción, el contenido de VOD comienza en 0 y el contenido se inicia en el punto activo del cliente (MediaPlayer.LIVE_POINT). Puede anular el comportamiento predeterminado.
-title: Introduzca una emisión a una hora específica
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: De forma predeterminada, cuando se inicia la reproducción, los medios de VOD comienzan en 0 y los medios en directo se inician en el punto en directo del cliente (MediaPlayer.LIVE_POINT). Puede anular el comportamiento predeterminado.
+title: Introducir un flujo a una hora específica
+exl-id: 2fb361c1-7133-4e17-a12b-e11f6f7c5479
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '103'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Introducir un flujo a una hora específica{#enter-a-stream-at-a-specific-time}
 
-# Introduzca un flujo a una hora específica{#enter-a-stream-at-a-specific-time}
+De forma predeterminada, cuando se inicia la reproducción, los medios de VOD comienzan en 0 y los medios en directo se inician en el punto en directo del cliente (MediaPlayer.LIVE_POINT). Puede anular el comportamiento predeterminado.
 
-De forma predeterminada, cuando se inicia la reproducción, el contenido de VOD comienza en 0 y el contenido se inicia en el punto activo del cliente (MediaPlayer.LIVE_POINT). Puede anular el comportamiento predeterminado.
-
-1. Pase una posición a `MediaPlayer.prepareToPlay`.
-1. El SDK del explorador utiliza esta posición como punto de partida para el recurso.
+1. Pasar una posición a `MediaPlayer.prepareToPlay`.
+1. El TVSDK del explorador utiliza esta posición como punto de partida para el recurso.
 
    >[!NOTE]
    >
    >No se requiere ninguna operación de búsqueda.
 
-1. Si la posición no se encuentra dentro del rango buscable, se utilizan las posiciones predeterminadas.
+1. Si la posición no se encuentra dentro del rango en el que se puede buscar, se utilizan las posiciones predeterminadas.
 
    Por ejemplo:
 
@@ -34,4 +33,3 @@ De forma predeterminada, cuando se inicia la reproducción, el contenido de VOD 
            break; 
    } 
    ```
-

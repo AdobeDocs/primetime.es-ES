@@ -1,14 +1,13 @@
 ---
 description: Cuando la reproducción incluye publicidad, TVSDK envía eventos/notificaciones en secuencias generalmente esperadas. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
 title: Orden de los eventos publicitarios
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 131b1dc1-3a59-4276-b639-d004ab7394ea
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
 
 ---
-
 
 # Orden de los eventos publicitarios{#order-of-advertising-events}
 
@@ -19,11 +18,11 @@ Cuando la reproducción incluye publicidad, TVSDK envía eventos/notificaciones 
 Al reproducir anuncios, el orden de los eventos es:
 
 * `AdBreakPlaybackEvent.AD_BREAK_STARTED`
-* Se envían los siguientes datos para cada anuncio de la pausa publicitaria:
+* Se envían los siguientes elementos por cada anuncio de la pausa publicitaria:
 
    * `AdPlaybackEvent.AD_STARTED`
    * `AdPlaybackEvent.AD_PROGRESS` (varias veces durante la reproducción de un anuncio)
-   * `AdClickEvent.AD_CLICK` (para cada clic)
+   * `AdClickEvent.AD_CLICK` (por cada clic)
    * `AdPlaybackEvent.AD_COMPLETED`
 
 * `AdBreakPlaybackEvent.AD_BREAK_COMPLETED`
@@ -68,4 +67,3 @@ private function onAdClick(event:AdClickThroughEvent):void {
     ... 
 } 
 ```
-

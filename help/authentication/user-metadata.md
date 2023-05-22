@@ -1,21 +1,21 @@
 ---
-title: Metadatos de usuario
-description: Metadatos de usuario
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Metadatos del usuario
+description: Metadatos del usuario
+exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 0%
 
 ---
 
-
-# Metadatos de usuario {#user-metadata}
+# Metadatos del usuario {#user-metadata}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-## Puntos finales de API de REST {#clientless-endpoints}
+## Extremos de API de REST {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -31,34 +31,34 @@ ht-degree: 0%
 
 ## Descripción {#description}
 
-Recupere metadatos que MVPD compartió sobre el usuario autenticado.
+Recuperar metadatos que MVPD compartió sobre el usuario autenticado.
 
 <div>
 
 
-| Punto final | Llamada  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
+| Extremo | Llamado  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/tokens/usermetadata | Aplicación de flujo continuo</br></br>o</br></br>Servicio de programación | 1. requestor</br>2.  deviceId (obligatorio)</br>3.  device_info/X-Device-Info (obligatorio)</br>4.  deviceType</br>5.  deviceUser (desaprobada)</br>6.  appId (obsoleto) | GET | XML o JSON que contienen metadatos de usuario o detalles de error si no se realiza correctamente. | 200 - Éxito</br></br>404 - No se encontraron metadatos</br></br>412 - Token AuthN no válido (por ejemplo, token caducado) |
+| &lt;sp_fqdn>/api/v1/tokens/usermetadata | Aplicación de streaming</br></br>o</br></br>Servicio de programador | 1. solicitante</br>2.  deviceId (obligatorio)</br>3.  device_info/X-Device-Info (obligatorio)</br>4.  deviceType</br>5.  deviceUser (Obsoleto)</br>6.  appId (obsoleto) | GET | XML o JSON que contienen metadatos de usuario o detalles del error si no se ha realizado correctamente. | 200 - Éxito</br></br>404 - No se han encontrado metadatos</br></br>412 - Token de AuthN no válido (por ejemplo, token caducado) |
 
 
 | Parámetro de entrada | Descripción |
 | --- | --- |
-| requestor | El RequestorId del programador para el que esta operación es válida. |
-| deviceId | Los bytes de identificación del dispositivo. |
-| device_info/</br></br>X-Device-Info | Información del dispositivo de transmisión.</br></br>**Nota**: Esto PUEDE pasarse device_info como parámetro de URL, pero debido al tamaño potencial de este parámetro y a las limitaciones en la longitud de una URL de GET, DEBE pasarse como X-Device-Info en el encabezado http. </br></br>Consulte los detalles completos en **Pasar información de dispositivo y conexión** <!--http://tve.helpdocsonline.com/passing-device-information-->. |
-| _deviceType_ | El tipo de dispositivo (por ejemplo, Roku, PC).</br></br>Si este parámetro está configurado correctamente, ESM ofrece métricas que [desglosado por tipo de dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) al usar Clientless, de modo que se puedan realizar diferentes tipos de análisis para, por ejemplo, Roku, Apple TV, Xbox, etc.</br></br>Consulte [Ventajas del uso del parámetro de tipo de dispositivo sin cliente en las métricas Pass ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota:** La variable `device_info` reemplaza este parámetro. </br> |
-| _deviceUser_ | El identificador de usuario del dispositivo.</br></br>**Nota:**Si se utiliza, `deviceUser` debe tener los mismos valores que en la variable [Crear código de registro](/help/authentication/registration-code-request.md) solicitud. |
-| _appId_ | El id/nombre de la aplicación. </br></br>**Nota:**El `device_info` reemplaza este parámetro. Si se usa, `appId` debe tener los mismos valores que en la variable **Crear código de registro** solicitud. |
+| solicitante | Identificador de solicitante del programador para el que es válida esta operación. |
+| deviceId | El ID de dispositivo bytes. |
+| device_info/</br></br>X-Device-Info | Información del dispositivo de streaming.</br></br>**Nota**: Esto PUEDE pasarse a device_info como parámetro de URL, pero debido al tamaño potencial de este parámetro y a las limitaciones en la longitud de una URL de GET, DEBE pasarse como X-Device-Info en el encabezado http. </br></br>Consulte todos los detalles en **Pasar la información de dispositivo y conexión** <!--http://tve.helpdocsonline.com/passing-device-information-->. |
+| _deviceType_ | El tipo de dispositivo (por ejemplo, Roku, PC).</br></br>Si este parámetro está configurado correctamente, ESM ofrece métricas que [desglosado por tipo de dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) cuando se utiliza sin cliente, de modo que se puedan realizar distintos tipos de análisis para, por ejemplo, Roku, AppleTV, Xbox, etc.</br></br>Consulte [Ventajas de utilizar el parámetro de tipo de dispositivo sin cliente en Métricas de pase ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota:** El `device_info` reemplaza este parámetro. </br> |
+| _deviceUser_ | El identificador de usuario del dispositivo.</br></br>**Nota:**Si se usa, `deviceUser` debe tener los mismos valores que en la variable [Crear código de registro](/help/authentication/registration-code-request.md) solicitud. |
+| _appId_ | El nombre o ID de la aplicación. </br></br>**Nota:**El `device_info` reemplaza este parámetro. Si se usa, `appId` debe tener los mismos valores que en la variable **Crear código de registro** solicitud. |
 
 >[!NOTE]
 > 
->La información de metadatos del usuario debe estar disponible una vez finalizado el flujo de autenticación, pero puede actualizarse en el flujo de autorización, según el MVPD y el tipo de metadatos.
+>La información de metadatos del usuario debe estar disponible una vez completado el flujo de autenticación, pero puede actualizarse en el flujo de autorización, según la MVPD y el tipo de metadatos.
 
 </br>
 
 ## Respuesta de ejemplo {#sample-response}
 
-Después de una llamada correcta, el servidor responderá con un objeto XML (predeterminado) o JSON con una estructura similar a la que se muestra a continuación:
+Después de una llamada correcta, el servidor responderá con un objeto XML (predeterminado) o JSON con una estructura similar a la presentada a continuación:
 
 ```JSON
     {
@@ -79,14 +79,14 @@ Después de una llamada correcta, el servidor responderá con un objeto XML (pre
 
 En la raíz del objeto habrá tres nodos:
 
-* **actualizado**: especifica una marca de tiempo UNIX que representa la última vez que se actualizaron los metadatos. Esta propiedad la establecerá inicialmente el servidor al generar los metadatos durante la fase de autenticación. Las llamadas posteriores (una vez actualizados los metadatos) resultarán en un aumento de la marca de tiempo.
+* **actualizado**: especifica una marca de tiempo UNIX que representa la última vez que se actualizaron los metadatos. El servidor establecerá esta propiedad inicialmente al generar los metadatos durante la fase de autenticación. Las llamadas posteriores (después de actualizar los metadatos) producirán un incremento en la marca de tiempo.
 
-* **data**: contiene los valores de metadatos reales.
+* **datos**: contiene los valores de metadatos reales.
 
-* **cifrados**: una matriz que enumera las propiedades cifradas. Para descifrar un valor de metadatos específico, el programador debe realizar un decodificador Base64 en los metadatos y, a continuación, aplicar un descifrado RSA en el valor resultante, utilizando su propia clave privada (el Adobe cifra los metadatos en el servidor utilizando el certificado público del programador).
+* **cifrado**: una matriz que enumera las propiedades cifradas. Para descifrar un valor de metadatos específico, el programador debe realizar una descodificación Base64 de los metadatos y, a continuación, aplicar una descodificación RSA en el valor resultante, utilizando su propia clave privada (el Adobe cifra los metadatos en el servidor utilizando el certificado público del programador).
 
 En caso de error, el servidor devolverá un objeto XML o JSON que especifica un mensaje de error detallado.
 
-Para obtener más información, consulte [Metadatos de usuario](/help/authentication/user-metadata.md).
+Para obtener más información, consulte [Metadatos del usuario](/help/authentication/user-metadata.md).
 
 ### [Volver a la referencia de la API de REST](/help/authentication/rest-api-reference.md).

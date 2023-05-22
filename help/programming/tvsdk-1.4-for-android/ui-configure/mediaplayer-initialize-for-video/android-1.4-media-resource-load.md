@@ -1,46 +1,44 @@
 ---
-description: Cargue un recurso creando una instancia de MediaResource directamente y cargando el contenido del vídeo que desea reproducir. Esta es una forma de cargar un recurso de medios.
-title: Carga de un recurso de medios en MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Cargue un recurso creando directamente una instancia de MediaResource y cargando el contenido de vídeo que desea reproducir. Esta es una forma de cargar un recurso multimedia.
+title: Cargar un recurso multimedia en MediaPlayer
+exl-id: 2d5e95bc-3962-4356-b90f-e550066f7a70
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
 
 ---
 
+# Cargar un recurso multimedia en MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
 
-# Cargar un recurso de medios en MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
+Cargue un recurso creando directamente una instancia de MediaResource y cargando el contenido de vídeo que desea reproducir. Esta es una forma de cargar un recurso multimedia.
 
-Cargue un recurso creando una instancia de MediaResource directamente y cargando el contenido del vídeo que desea reproducir. Esta es una forma de cargar un recurso de medios.
+1. Configure el elemento reproducible del MediaPlayer con el nuevo recurso que se va a reproducir.
 
-1. Establezca el elemento que se puede reproducir en MediaPlayer con el nuevo recurso que se va a reproducir.
+   Reemplaza el elemento que se puede reproducir actualmente de MediaPlayer llamando a `MediaPlayer.replaceCurrentItem` y pasar un existente `MediaResource` ejemplo.
 
-   Reemplace el elemento que MediaPlayer puede reproducir actualmente llamando a `MediaPlayer.replaceCurrentItem` y pasando una instancia `MediaResource` existente.
-
-1. Registre una implementación de la interfaz `MediaPlayer.PlaybackEventListener` con la instancia `MediaPlayer`.
+1. Registre una implementación de `MediaPlayer.PlaybackEventListener` interfaz con el `MediaPlayer` ejemplo.
 
    * `onPrepared`
-   * `onStateChanged`, y compruebe si hay INICIALIZADO y ERROR.
+   * `onStateChanged`y compruebe si hay INITIALIZED y ERROR.
 
-1. Cuando el estado del reproductor de contenidos cambia a INITIALIZADO, puede llamar a `MediaPlayer.prepareToPlay`
+1. Cuando el estado del reproductor de contenidos cambie a INITIALIZED, puede llamar a `MediaPlayer.prepareToPlay`
 
-   El estado INITIALIZED indica que el medio se ha cargado correctamente. Al llamar a `prepareToPlay` se inicia el proceso de resolución y colocación de publicidad, si existe.
+   El estado INITIALIZED indica que el medio se ha cargado correctamente. Llamando `prepareToPlay` inicia el proceso de resolución y colocación de la publicidad, si lo hay.
 
-1. Cuando TVSDK llama a la llamada de retorno `onPrepared` , el flujo de medios se ha cargado correctamente y está preparado para la reproducción.
+1. Cuando TVSDK llama a `onPrepared` llamada de retorno, el flujo de medios se ha cargado correctamente y está preparado para la reproducción.
 
-   Cuando se carga el flujo de medios, se crea un `MediaPlayerItem`.
+   Cuando se carga el flujo de medios, una `MediaPlayerItem` se ha creado.
 
->Si se produce un error, el `MediaPlayer` cambia al estado ERROR. También notifica a la aplicación llamando a la llamada de retorno `PlaybackEventListener.onStateChanged`.
+>Si se produce un error, la variable `MediaPlayer` cambia al estado ERROR. También notifica a la aplicación llamando a su `PlaybackEventListener.onStateChanged`devolución de llamada.
 >
 >Esto pasa varios parámetros:
->* Un parámetro `state` de tipo `MediaPlayer.PlayerState` con el valor `MediaPlayer.PlayerState.ERROR`.
-   >
-   >
-* Un parámetro `notification` de tipo `MediaPlayerNotification` que contiene información de diagnóstico sobre el evento de error.
+>* A `state` parámetro de tipo `MediaPlayer.PlayerState` con el valor de `MediaPlayer.PlayerState.ERROR`.
+>
+>* A `notification` parámetro de tipo `MediaPlayerNotification` que contiene información de diagnóstico sobre el evento de error.
 
 
-El siguiente código de ejemplo simplificado ilustra el proceso de carga de un recurso de medios:
+El siguiente código de ejemplo simplificado ilustra el proceso de carga de un recurso multimedia:
 
 ```java
 // mediaResource is a properly configured MediaResource instance 

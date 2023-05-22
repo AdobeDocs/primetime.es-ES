@@ -1,14 +1,13 @@
 ---
 description: Los métodos de la clase MediaPlayerItem permiten obtener información sobre el flujo de contenido representado por un MediaResource cargado.
 title: Métodos de MediaPlayer para acceder a la información de MediaResource
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8849411a-e94b-43a9-9fa1-143725264304
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
 
 ---
-
 
 # Métodos de MediaPlayer para acceder a la información de MediaResource{#mediaplayer-methods-for-accessing-mediaresource-information}
 
@@ -27,112 +26,111 @@ Los métodos de la clase MediaPlayerItem permiten obtener información sobre el 
    <td colname="3"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> &lt;string&gt; ListgetAdTags()  </span> </td> 
-   <td colname="3"> <p>Proporciona la lista de etiquetas de publicidad que se usan en el proceso de colocación de publicidad. </p> </td> 
+   <td colname="2"> <span class="codeph"> Lista&lt;string&gt; getAdTags() </span> </td> 
+   <td colname="3"> <p>Proporciona la lista de etiquetas de anuncio que se utilizan en el proceso de colocación de anuncios. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>Emisión en directo</b> </td> 
    <td colname="3"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean isLive();  </span> </td> 
-   <td colname="3"> <p>True si el flujo está activo; false si es VOD. </p> </td> 
+   <td colname="2"> <span class="codeph"> booleano isLive(); </span> </td> 
+   <td colname="3"> <p>True si el flujo está activo; False si es VOD. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>Protegido por DRM</b> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean isProtection();  </span> </td> 
-   <td colname="3"> <p>True si el flujo está protegido por DRM. </p> </td> 
+   <td colname="2"> <span class="codeph"> booleano isProtected(); </span> </td> 
+   <td colname="3"> <p>True si el flujo está protegido mediante DRM. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> &lt;drmmetadatainfo&gt; ListgetDRMMetadataInfos();  </span> </td> 
-   <td colname="3"> <p>Enumera todos los objetos de metadatos DRM descubiertos en el manifiesto. </p> </td> 
+   <td colname="2"> <span class="codeph"> Lista&lt;drmmetadatainfo&gt; getDRMetadataInfos(); </span> </td> 
+   <td colname="3"> <p>Enumera todos los objetos de metadatos DRM detectados en el manifiesto. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <b>Subtítulos</b> </td> 
+   <td colname="1"> <b>Subtítulos opcionales</b> </td> 
    <td colname="3"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> booleano hasClosedCaptions();  </span> </td> 
-   <td colname="3"> <p>True si hay disponibles pistas de subtítulos. </p> </td> 
+   <td colname="2"> <span class="codeph"> booleano hasClosedCaptions(); </span> </td> 
+   <td colname="3"> <p>True si están disponibles las pistas de subtítulos. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> &lt;closedcaptionstrack&gt; ListgetClosedCationsTracks();  </span> </td> 
-   <td colname="3"> <p>Proporciona una lista de las pistas de subtítulos cerrados disponibles. </p> </td> 
+   <td colname="2"> <span class="codeph"> Lista&lt;closedcaptionstrack&gt; getClosedActionsTracks(); </span> </td> 
+   <td colname="3"> <p>Proporciona una lista de las pistas de subtítulos opcionales disponibles. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> ClosedCaptionsTrack get SelectedClosedCaptionsTrack();  </span> </td> 
-   <td colname="3"> <p>Recupera la pista de subtítulos cerrados actual seleccionada con <span class="codeph"> SelectClosedCaptionsTrack </span>. </p> </td> 
+   <td colname="2"> <span class="codeph"> ClosedCaptionsTrack get SelectedCaptionsTrack(); </span> </td> 
+   <td colname="3"> <p>Recupera la pista de subtítulos seleccionados actualmente con <span class="codeph"> SelectClosedCaptionsTrack </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectClosedCaptionsTrack ( ClosedCaptionsTrack closedCaptionsTrack )  </span> </td> 
-   <td colname="3"> <p>Define una pista de subtítulos para que sea la pista de subtítulos actual. </p> </td> 
+   <td colname="2"> <span class="codeph"> selectClosedCaptionsTrack ( ClosedCaptionsTrack closedCaptionsTrack) </span> </td> 
+   <td colname="3"> <p>Define una pista de subtítulos para que sea la pista de subtítulos cerrados actual. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>Pistas de audio alternativas</b> </td> 
    <td colname="3"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean hasAlternateAudio();  </span> </td> 
-   <td colname="3"> <p>True si el flujo tiene pistas de audio alternativas. </p> <p>Sugerencia:  La pista de audio principal (predeterminada) también forma parte de la lista de pistas de audio alternativas. </p> <p>TVSDK para Android considera que la pista de audio principal es uno de los elementos de la lista de pistas de audio alternativas. Debido a esto, el único caso en el que <span class="codeph"> MediaPlayerItem.hasAlternateAudio </span> devuelve false es cuando el flujo no tiene audio. Si el contenido tiene una sola pista de audio, este método devuelve el valor "True" y <span class="codeph"> MediaPlayerItem.getAudioTracks </span> devuelve una lista con un solo elemento (la pista de audio predeterminada). </p> </td> 
+   <td colname="2"> <span class="codeph"> booleano hasAlternateAudio(); </span> </td> 
+   <td colname="3"> <p>True si el flujo tiene pistas de audio alternativas. </p> <p>Sugerencia: La pista de audio principal (predeterminada) también forma parte de la lista de pistas de audio alternativas. </p> <p>TVSDK para Android considera que la pista de audio principal es uno de los elementos de la lista de pistas de audio alternativas. Debido a esto, el único caso donde <span class="codeph"> MediaPlayerItem.hasAlternateAudio </span> devuelve "false" cuando el flujo no tiene audio. Si el contenido solo tiene una pista de audio, este método devuelve true y <span class="codeph"> MediaPlayerItem.getAudioTracks </span> devuelve una lista con un solo elemento (la pista de audio predeterminada). </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> &lt;audiotrack&gt; ListgetAudioTracks();  </span> </td> 
+   <td colname="2"> <span class="codeph"> Lista&lt;audiotrack&gt; getAudioTracks(); </span> </td> 
    <td colname="3"> Proporciona una lista de pistas de audio alternativas disponibles. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> &lt;audiotrack&gt; ListgetAudioTracks();  </span> </td> 
+   <td colname="2"> <span class="codeph"> Lista&lt;audiotrack&gt; getAudioTracks(); </span> </td> 
    <td colname="3"> <p>Proporciona una lista de pistas de audio alternativas disponibles. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> AudioTrack getSelectedAudioTrack();  </span> </td> 
+   <td colname="2"> <span class="codeph"> AudioTrack getSelectedAudioTrack(); </span> </td> 
    <td colname="3"> <p>Recupera la pista de audio seleccionada con <span class="codeph"> selectAudioTrack </span>. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> selectAudioTrack ( AudioTrack audioTrack )  </span> </td> 
+   <td colname="2"> <span class="codeph"> selectAudioTrack ( AudioTrack audioTrack ) </span> </td> 
    <td colname="3"> <p>Selecciona una pista de audio para que sea la pista de audio actual. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <b>Metadatos temporizados</b> </td> 
+   <td colname="1"> <b>Metadatos cronometrados</b> </td> 
    <td colname="3"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean hasTimedMetadata();  </span> </td> 
-   <td colname="3"> <p>True si el flujo tiene metadatos temporizados asociados. </p> </td> 
+   <td colname="2"> <span class="codeph"> booleano hasTimedMetadata(); </span> </td> 
+   <td colname="3"> <p>True si el flujo tiene metadatos sincronizados asociados. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> &lt;timedmetadata&gt; ListgetTimedMetadata();  </span> </td> 
-   <td colname="3"> <p>Proporciona una lista de los objetos de metadatos temporizados asociados al flujo. </p> </td> 
+   <td colname="2"> <span class="codeph"> Lista&lt;timedmetadata&gt; getTimedMetadata(); </span> </td> 
+   <td colname="3"> <p>Proporciona una lista de los objetos de metadatos cronometrados asociados a la secuencia. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> boolean isDynamic();  </span> </td> 
+   <td colname="2"> <span class="codeph"> booleano isDynamic(); </span> </td> 
    <td colname="3"> <p>True si el flujo es un flujo de velocidad de bits múltiple (MBR). </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> &lt;profile&gt; ListgetProfiles();  </span> </td> 
+   <td colname="2"> <span class="codeph"> Lista&lt;profile&gt; getProfiles(); </span> </td> 
    <td colname="3"> <p>Proporciona una lista de los perfiles de velocidad de bits asociados. Para cada perfil, puede recuperar su velocidad de bits y la altura y anchura del perfil. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"> <b>Reproducción complicada</b> </td> 
+   <td colname="1"> <b>Juego de trucos</b> </td> 
    <td colname="3"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> booleano isTrickPlaySupported();  </span> </td> 
-   <td colname="3"> <p>True si el reproductor admite el avance rápido, el rebobinado y la reanudación. </p> </td> 
+   <td colname="2"> <span class="codeph"> booleano isTrickPlaySupported(); </span> </td> 
+   <td colname="3"> <p>True si el reproductor admite avance rápido, rebobinado y reanudación. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> &lt; Float=""&gt; ListgetAvailablePlaybackRates  </span> </td> 
-   <td colname="3"> <p>Proporciona la lista de tasas de reproducción disponibles en el contexto de la función de reproducción mediante trucos. </p> </td> 
+   <td colname="2"> <span class="codeph"> List&lt; Float&gt; getAvailablePlaybackRates </span> </td> 
+   <td colname="3"> <p>Proporciona la lista de velocidades de reproducción disponibles en el contexto de la función de truco. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"> <b>Recurso de medios</b> </td> 
    <td colname="3"> </td>
   </tr> 
   <tr rowsep="1"> 
-   <td colname="2"> <span class="codeph"> MediaResource getResource();  </span> </td> 
-   <td colname="3"> <p>Devuelve el recurso de medios asociado a este elemento. </p> </td> 
+   <td colname="2"> <span class="codeph"> MediaResource.getResource(); </span> </td> 
+   <td colname="3"> <p>Devuelve el recurso multimedia asociado a este elemento. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

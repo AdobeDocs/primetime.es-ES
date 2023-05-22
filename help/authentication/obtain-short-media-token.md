@@ -1,21 +1,21 @@
 ---
-title: Obtener token de medio corto
-description: obtener token de medio corto
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Obtener token de medios corto
+description: obtener token de medios corto
+exl-id: 667eaaba-423e-4d54-9dbe-084b3c049e1f
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
 
 ---
 
-
-# Obtener token de medio corto {#obtain-short-media-token}
+# Obtener token de medios corto {#obtain-short-media-token}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-## Puntos finales de API de REST {#clientless-endpoints}
+## Extremos de API de REST {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -31,11 +31,11 @@ ht-degree: 0%
 
 ## Descripción {#description}
 
-Obtiene Un Token De Medio Corto.  
+Obtiene El Token De Medios Cortos.  
 
-| Punto final | Llamada  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
+| Extremo | Llamado  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/mediatoken</br></br>  o</br></br>&lt;sp_fqdn>/api/v1/tokens/media</br></br>Por ejemplo:</br></br>&lt;sp_fqdn>/api/v1/tokens/media | Aplicación de flujo continuo</br></br>o</br></br>Servicio de programación | 1. solicitante (obligatorio)</br>2.  deviceId (obligatorio)</br>3.  recurso (obligatorio)</br>4.  device_info/X-Device-Info (obligatorio)</br>5.  _deviceType_</br> 6.  _deviceUser_ (obsoleto)</br>7.  _appId_ (obsoleto) | GET | XML o JSON que contienen un token multimedia codificado Base64 o detalles de error si no se realiza correctamente. | 200 - Éxito  </br>403 - Sin éxito |
+| &lt;sp_fqdn>/api/v1/mediatoken</br></br>  o</br></br>&lt;sp_fqdn>/api/v1/tokens/media</br></br>Por ejemplo:</br></br>&lt;sp_fqdn>/api/v1/tokens/media | Aplicación de streaming</br></br>o</br></br>Servicio de programador | 1. solicitante (obligatorio)</br>2.  deviceId (obligatorio)</br>3.  recurso (obligatorio)</br>4.  device_info/X-Device-Info (obligatorio)</br>5.  _deviceType_</br> 6.  _deviceUser_ (Obsoleto)</br>7.  _appId_ (Obsoleto) | GET | XML o JSON que contienen un token de medios codificado Base64 o detalles de error si no se consigue. | 200 - Éxito  </br>403 - Sin éxito |
 
 {style="table-layout:auto"}
 
@@ -49,13 +49,13 @@ Obtiene Un Token De Medio Corto.  
 
 | Parámetro de entrada | Descripción |
 | --- | --- |
-| requestor | El RequestorId del programador para el que esta operación es válida. |
-| deviceId | Los bytes de identificación del dispositivo. |
-| recurso | Una cadena que contiene un resourceId (o fragmento MRSS), identifica el contenido solicitado por un usuario y es reconocida por los extremos de autorización de MVPD. |
-| device_info/</br></br>X-Device-Info | Información del dispositivo de transmisión.</br></br>**Nota**: Esto PUEDE pasarse device_info como parámetro de URL, pero debido al tamaño potencial de este parámetro y a las limitaciones en la longitud de una URL de GET, DEBE pasarse como X-Device-Info en el encabezado http. </br></br>Consulte los detalles completos en [Pasar información de dispositivo y conexión](/help/authentication/passing-client-information-device-connection-and-application.md). |
-| _deviceType_ | El tipo de dispositivo (por ejemplo, Roku, PC).</br></br>Si este parámetro está configurado correctamente, ESM ofrece métricas que [desglosado por tipo de dispositivo]/(help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) al utilizar Clientless, para que se puedan realizar distintos tipos de análisis. Por ejemplo, Roku, Apple TV y Xbox.</br></br>Consulte [Ventajas del uso del parámetro clientless deviceType ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota**: device_info reemplazará este parámetro. |
-| _deviceUser_ | El identificador de usuario del dispositivo.</br></br>**Nota**: Si se utiliza, deviceUser debe tener los mismos valores que en la variable [Crear código de registro](/help/authentication/registration-code-request.md) solicitud. |
-| _appId_ | El id/nombre de la aplicación. </br></br>**Nota**: device_info reemplaza este parámetro. Si se usa, `appId` debe tener los mismos valores que en la variable [Crear código de registro](/help/authentication/registration-code-request.md) solicitud. |
+| solicitante | Identificador de solicitante del programador para el que es válida esta operación. |
+| deviceId | El ID de dispositivo bytes. |
+| resource | Cadena que contiene un resourceId (o fragmento MRSS), identifica el contenido solicitado por un usuario y es reconocido por los extremos de autorización de MVPD. |
+| device_info/</br></br>X-Device-Info | Información del dispositivo de streaming.</br></br>**Nota**: Esto PUEDE pasarse a device_info como parámetro de URL, pero debido al tamaño potencial de este parámetro y a las limitaciones en la longitud de una URL de GET, DEBE pasarse como X-Device-Info en el encabezado http. </br></br>Consulte todos los detalles en [Pasar la información de dispositivo y conexión](/help/authentication/passing-client-information-device-connection-and-application.md). |
+| _deviceType_ | El tipo de dispositivo (por ejemplo, Roku, PC).</br></br>Si este parámetro está configurado correctamente, ESM ofrece métricas que [desglosado por tipo de dispositivo]/(help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) cuando se utiliza sin cliente, de modo que se puedan realizar diferentes tipos de análisis para. Por ejemplo, Roku, AppleTV y Xbox.</br></br>Consulte [Ventajas de utilizar el parámetro devicetype sin cliente ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota**: device_info reemplaza este parámetro. |
+| _deviceUser_ | El identificador de usuario del dispositivo.</br></br>**Nota**: si se utiliza, deviceUser debe tener los mismos valores que en la variable [Crear código de registro](/help/authentication/registration-code-request.md) solicitud. |
+| _appId_ | El nombre o ID de la aplicación. </br></br>**Nota**: device_info reemplaza este parámetro. Si se usa, `appId` debe tener los mismos valores que en la variable [Crear código de registro](/help/authentication/registration-code-request.md) solicitud. |
 
 {style="table-layout:auto"}
 
@@ -92,6 +92,6 @@ Obtiene Un Token De Medio Corto.  
 
  
 
-### Compatibilidad con la biblioteca de verificación de medios
+### Compatibilidad con Media Verification Library
 
-El campo `serializedToken` desde la llamada &quot;Obtener token de medios cortos&quot; es un token codificado Base64 que se puede comprobar con la biblioteca de verificación de Adobes Medium.
+El campo `serializedToken` de la llamada &quot;Obtener token de medio corto&quot; es un token codificado en Base64 que se puede comprobar con la biblioteca de verificación de Adobes Medium.

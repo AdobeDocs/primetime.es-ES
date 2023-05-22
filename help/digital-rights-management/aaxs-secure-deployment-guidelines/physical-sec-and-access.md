@@ -2,21 +2,20 @@
 title: Seguridad física y acceso
 description: Seguridad física y acceso
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: be4d278e-9e87-405c-8478-b3ad8515398f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
 
 ---
 
-
 # Seguridad física y acceso {#physical-security-and-access}
 
-La seguridad física de su entorno de acceso al Adobe puede abarcar desde el servidor que se coloca en una habitación segura bajo llave y llave, junto con otros equipos, hasta estar en una jaula alarmada segura, aislada de otros equipos, con autenticación en dos partes, como distintivo y huella digital, supervisada continuamente por la Televisión de circuito cerrado (CCTV). El grado de seguridad que implemente dependerá de las políticas de sus organizaciones, el riesgo involucrado (potencial de pérdida y gravedad si se pierde) y otros requisitos de cumplimiento legal.
+La seguridad física para su entorno de acceso a Adobe puede abarcar desde el servidor que se coloca en una habitación segura bajo llave, junto con otro equipo, hasta estar en una jaula de alarma segura, aislada de otros equipos, con autenticación en dos partes, como placa y huella digital, monitoreada continuamente por circuito cerrado de televisión (CCTV). El grado de seguridad que implemente depende de las políticas de su organización, el riesgo involucrado (potencial de pérdida y gravedad si se pierde) y otros requisitos de cumplimiento legal.
 
-Como regla general, se recomienda que su entorno de acceso al Adobe esté ubicado en una sala de servidores segura donde el acceso esté controlado electrónicamente (con un lector de tarjetas como mínimo), alarmado y vigilado por la seguridad o por alguien que responda rápidamente a cualquier infracción o incidente, con acceso registrado continuamente en la CCTV. El objetivo de esta recomendación de seguridad es que su equipo de seguridad sepa quién está en la sala y cuándo ingresaron. Si la sala de servidores es grande y tiene una larga lista de personas con acceso, el servidor también debe estar en una jaula segura o en un rack para limitar más acceso.
+Como regla general, se recomienda que su entorno de acceso al Adobe esté ubicado en una sala de servidores segura donde el acceso esté controlado electrónicamente (con un lector de tarjetas como mínimo), alarmado y controlado por la seguridad o por alguien que responda rápidamente a cualquier infracción o incidente, con acceso grabado continuamente en CCTV. El objetivo de esta recomendación de seguridad es que el equipo de seguridad sepa quién está en la sala y cuándo entró. Si la sala del servidor es grande y tiene una larga lista de personas con acceso, el servidor también debe estar en una jaula o rack seguro para limitar el acceso.
 
-Para implementar un nivel de seguridad extremadamente alto, la protección debe extenderse a la fuente de alimentación, la fuente de alimentación ininterrumpida (UPS), el equipo de red y otros equipos relacionados. Cualquier interrupción en estos elementos afecta al servidor, especialmente si debe estar en funcionamiento en todo momento. El acceso debe ser de dos partes, como distintivo y PIN o distintivo y huella digital. Además, se deben instalar dispositivos antideslizantes en la puerta para evitar que personas autorizadas traigan consigo personas no autorizadas.
+Para implementar un nivel extremadamente alto de seguridad, la protección debe extenderse al suministro de energía, el sistema de alimentación ininterrumpida (UPS), el equipo de red y otros equipos relacionados. Cualquier interrupción en estos elementos afecta al servidor, especialmente si debe estar en funcionamiento en todo momento. El acceso debe ser en dos partes, como distintivo y PIN o distintivo y huella digital. Además, deben instalarse dispositivos antideslizantes en la puerta para evitar que personas autorizadas traigan consigo personas no autorizadas.
 
-Para obtener información general y recomendaciones sobre los estándares de seguridad física, consulte el sitio de preguntas frecuentes de ISO.
+Para obtener información general y recomendaciones acerca de las normas de seguridad física, consulte el sitio de preguntas más frecuentes sobre ISO.

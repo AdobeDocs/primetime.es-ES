@@ -1,39 +1,38 @@
 ---
-description: Para mostrar anuncios de tipo titular, debe crear instancias de banner y permitir que el SDK de TVSDK del explorador escuche eventos relacionados con anuncios.
-title: Mostrar anuncios de tipo titular
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Para mostrar anuncios de banner, debe crear instancias de banner y permitir que el TVSDK del explorador detecte eventos relacionados con el anuncio.
+title: Mostrar anuncios de banner
+exl-id: 331c10a4-ae31-4d3b-aaca-9497e2970ecf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
+# Mostrar anuncios de banner {#display-banner-ads}
 
-# Mostrar anuncios de tipo titular {#display-banner-ads}
+Para mostrar anuncios de banner, debe crear instancias de banner y permitir que el TVSDK del explorador detecte eventos relacionados con el anuncio.
 
-Para mostrar anuncios de tipo titular, debe crear instancias de banner y permitir que el SDK de TVSDK del explorador escuche eventos relacionados con anuncios.
+TVSDK del explorador proporciona una lista de anuncios de banner complementarios asociados a un anuncio lineal a través del `AdobePSDK.PSDKEventType.AD_STARTED` evento.
 
-El TVSDK del explorador proporciona una lista de anuncios de banners complementarios asociados a un anuncio lineal a través del evento `AdobePSDK.PSDKEventType.AD_STARTED` .
+Los manifiestos pueden especificar anuncios de banner complementarios mediante:
 
-Los manifiestos pueden especificar anuncios de banners complementarios mediante:
+* Un fragmento de HTML
+* La dirección URL de una página iFrame
+* La URL de una imagen estática o un archivo del SWF del Flash de Adobe
 
-* Un fragmento HTML
-* La dirección URL de una página de iFrame
-* La URL de una imagen estática o un archivo SWF de Flash de Adobe
+Para cada anuncio complementario, TVSDK del explorador indica qué tipos están disponibles para su aplicación.
 
-Para cada anuncio complementario, el SDK de explorador indica qué tipos están disponibles para su aplicación.
-
-Agregue un oyente para el evento `AdobePSDK.PSDKEventType.AD_STARTED` que haga lo siguiente:
-1. Borra los anuncios existentes en la instancia del banner.
+Agregar un oyente para el evento `AdobePSDK.PSDKEventType.AD_STARTED` que hace lo siguiente:
+1. Borra los anuncios existentes en la instancia de banner.
 1. Obtiene la lista de anuncios complementarios de `Ad.getCompanionAssets`.
-1. Si la lista de anuncios complementarios no está vacía, repita la lista para las instancias de banner.
+1. Si la lista de anuncios complementarios no está vacía, itere en la lista de instancias de banner.
 
-   Cada instancia de banner (un `AdBannerAsset`) contiene información, como ancho, alto, tipo de recurso (html, iframe o static) y datos necesarios para mostrar el banner complementario.
-1. Si una publicidad de vídeo no tiene anuncios complementarios reservados con ella, la lista de recursos complementarios no contiene datos para esa publicidad de vídeo.
-1. Envía la información del banner a una función de la página que muestra los banners en una ubicación adecuada.
+   Cada instancia de banner (un `AdBannerAsset`) contiene información, como anchura, altura, tipo de recurso (html, iframe o estático) y datos necesarios para mostrar el banner complementario.
+1. Si un anuncio de vídeo no tiene anuncios complementarios reservados con él, la lista de recursos complementarios no contiene datos para ese anuncio de vídeo.
+1. Envía la información del titular a una función de la página que muestra los titulares en una ubicación adecuada.
 
-   Normalmente es `div` y su función utiliza el `div ID` para mostrar el banner. Por ejemplo:
+   Esto suele ser un `div`, y la función utiliza el `div ID` para mostrar el titular. Por ejemplo:
 
    Añada el detector de eventos:
 
@@ -75,4 +74,3 @@ Agregue un oyente para el evento `AdobePSDK.PSDKEventType.AD_STARTED` que haga l
        } 
    }
    ```
-

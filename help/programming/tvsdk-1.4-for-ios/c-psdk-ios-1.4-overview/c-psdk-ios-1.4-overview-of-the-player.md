@@ -1,27 +1,26 @@
 ---
-description: TVSDK para iOS incluye una serie de funciones.
+description: TVSDK para iOS incluye una variedad de funciones.
 title: Funciones de TVSDK de Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 1968c072-2651-442d-9e4c-412f7959bcab
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-
 # Funciones de TVSDK de Primetime {#primetime-tvsdk-features}
 
-TVSDK para iOS incluye una serie de funciones y proporciona las siguientes capacidades principales:
+TVSDK para iOS incluye una variedad de funciones y proporciona las siguientes funciones principales:
 
-* Reproducción de VOD y de directo/lineal
+* Reproducción de VOD y en directo/lineal
 
-   * Administración de la ventana de reproducción, incluidos los métodos que reproducen, detienen, ponen en pausa, buscan y recuperan la posición del cabezal de reproducción
+   * Gestión de la ventana de reproducción, incluidos los métodos de reproducción, detención, pausa, búsqueda y recuperación de la posición del cabezal de reproducción
    * Compatibilidad con la reproducción de eventos completos
-   * Subtítulos (608, WebVTT) y formas de audio alternativas para aumentar la accesibilidad
+   * Subtítulos (608, WebVTT) y formas alternativas de audio para una mayor accesibilidad
    * Capacidad DVR
    * Lógica de velocidad de bits adaptable (ABR) y configuración inicial de los controles ABR
-   * Suscripción a etiquetas que no sean HLS y HLS
+   * Suscripción a etiquetas que no son HLS y HLS
    * Compatibilidad con failover de manifiesto activo
 
 * Publicidad
@@ -29,24 +28,23 @@ TVSDK para iOS incluye una serie de funciones y proporciona las siguientes capac
    * VPAID 2.0
    * Vinculación de anuncios del lado del cliente
 
-      * Inserción de publicidad perfecta, incluida la compatibilidad con VAST/VMAP
+      * Inserción de anuncios sin problemas, incluida la compatibilidad con VAST/VMAP
       * Compatibilidad con etiquetas de referencia personalizadas para anuncios
-      * Compatibilidad para marcar, reemplazar y eliminar anuncios C3
-      * Flujo de trabajo personalizable de contenido/inserción de publicidad, incluida la señalización de bloqueo
+      * Compatibilidad para marcar, reemplazar y eliminar anuncios de C3
+      * Flujo de trabajo personalizable de inserción de contenido/publicidad, incluida la señalización de interrupción
 
 * Protección de contenido
 
-   * Acceso a servicios relacionados con la administración de derechos digitales (DRM)
-   * Reproducción de transmisiones HLS sin encriptar o con transmisión en directo HTTP protegida (PHLS)
-   * Control de salida basado en resolución, basado en la directiva DRM
+   * Acceso a servicios relacionados con la gestión de derechos digitales (DRM)
+   * Reproducción de flujos HLS sin cifrar o con flujo HTTP en directo protegido (PHLS)
+   * Control de salida basado en resolución, basado en la política de DRM
 
-* Seguimiento de anuncios y vídeos
+* Seguimiento de vídeos y anuncios
 
    * Seguimiento de eventos de QoS
-   * Notificaciones que ayudan a TVSDK y a su aplicación a comunicarse de forma asíncrona sobre el estado de los vídeos, anuncios y otros elementos, así como sobre la actividad de registro
-   * Integración con Adobe Analytics y compatibilidad con Heartbeat
+   * Notificaciones que ayudan a TVSDK y a su aplicación a comunicarse de forma asíncrona sobre el estado de los vídeos, los anuncios y otros elementos, y también sobre la actividad de registro
+   * Integración con la compatibilidad con Adobe Analytics y Heartbeat
 
 * Registro
 
    * Registro de Debug
-

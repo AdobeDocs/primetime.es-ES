@@ -1,31 +1,29 @@
 ---
-description: Puede personalizar o anular los comportamientos publicitarios.
-title: Configuración de una reproducción personalizada
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede personalizar o anular los comportamientos de los anuncios.
+title: Configuración de la reproducción personalizada
+exl-id: aaa4d1c2-c425-4a2e-8377-0a3072f3fb18
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '159'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Configuración de la reproducción personalizada {#cset-up-customized-playback}
 
-# Configuración de reproducción personalizada {#cset-up-customized-playback}
+Puede personalizar o anular el comportamiento del anuncio registrando la instancia de directiva de publicidad con TVSDK.
 
-Puede personalizar o anular el comportamiento de la publicidad registrando la instancia de directiva de publicidad con TVSDK.
+Para personalizar los comportamientos de los anuncios, realice una de las siguientes acciones:
 
-Para personalizar los comportamientos publicitarios, realice una de las siguientes acciones:
+* Implementación de `AdPolicySelector` y todos sus métodos.
+Esta opción se recomienda si necesita anular todos los comportamientos de publicidad predeterminados.
 
-* Implemente la interfaz `AdPolicySelector` y todos sus métodos.
-Se recomienda esta opción si necesita anular todos los comportamientos de publicidad predeterminados.
-
-* Amplíe la clase `DefaultAdPolicySelector` y proporcione implementaciones solo para los comportamientos que requieren
-personalización.
-Esta opción se recomienda si necesita anular solo algunos de los comportamientos predeterminados.
+* Ampliación de la `DefaultAdPolicySelector` y proporcionan implementaciones solo para los comportamientos que requieren personalización.
+Esta opción se recomienda si solo necesita anular algunos de los comportamientos predeterminados.
 
 Para ambas opciones, complete las siguientes tareas:
 
-Para personalizar el comportamiento de los anuncios:
+Para personalizar los comportamientos de los anuncios:
 
 1. Implemente la interfaz AdPolicySelector y todos sus métodos.
 
@@ -33,7 +31,7 @@ Para personalizar el comportamiento de los anuncios:
 
 >[!IMPORTANT]
 >
->Las políticas de publicidad personalizadas que se registran al principio de >reproducción se borran cuando la instancia de MediaPlayer está >desasignada.La aplicación debe registrar una instancia de directiva >selector cada vez que se cree una nueva sesión de reproducción.
+>Las políticas de publicidad personalizadas que se registran al principio de >reproducción se borran cuando se >desasigna la instancia de MediaPlayer. La aplicación debe registrar una instancia de directiva >selector cada vez que se cree una nueva sesión de reproducción.
 
 Por ejemplo:
 
@@ -54,4 +52,4 @@ Por ejemplo:
     mediaPlayer.replaceCurrentResource(resource, config);
 ```
 
-1. Implemente sus personalizaciones.
+1. Implementar las personalizaciones.

@@ -1,26 +1,25 @@
 ---
-description: Puede insertar anuncios en contenido de VOD.
-title: Reemplazar intervalos de tiempo por una publicidad
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede insertar anuncios en el contenido de VOD.
+title: Reemplazo de intervalos de tiempo por un anuncio
+exl-id: f6675108-07a7-4d30-8a95-6029afe06ac5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%
 
 ---
 
+# Reemplazo de intervalos de tiempo por un anuncio {#replace-time-ranges-with-an-ad}
 
-# Reemplazar intervalos de tiempo por un anuncio {#replace-time-ranges-with-an-ad}
+Puede insertar anuncios en el contenido de VOD.
 
-Puede insertar anuncios en contenido de VOD.
-
-Los `TimeRanges` entre `begin` y `end` en `localTime` se eliminan de la cronología. Estos intervalos se sustituyen por un `AdBreak` de `begin` a `begin+replaceDuration`. Si el `replacement-duration` no existe como parámetro, el servidor realiza la determinación en el `Adbreak` devuelto.
+El `TimeRanges` entre los `begin` y `end` in `localTime` se eliminan de la cronología. Estos intervalos se sustituyen por una `AdBreak` de `begin` hasta `begin+replaceDuration`. Si la variable `replacement-duration` no existe como parámetro, el servidor realiza la determinación en el parámetro devuelto `Adbreak`.
 
 >[!TIP]
 >
->Siempre debe proporcionar un `replacement-duration` para intervalos personalizados. Si no hay anuncios que vayan a reemplazar este intervalo personalizado, proporcione un `replacement-duration` de 0.
+>Siempre debe proporcionar un `replacement-duration` para intervalos personalizados. Si no hay anuncios destinados a reemplazar este intervalo personalizado, proporcione un `replacement-duration` de 0.
 
-1. Para reemplazar los intervalos con anuncios de Primetime y decisioningads:
+1. Para reemplazar los intervalos por Primetime y decisioningads:
 
    ```
    {   
@@ -80,4 +79,3 @@ Los `TimeRanges` entre `begin` y `end` en `localTime` se eliminan de la cronolog
        "id": "vod_003"
    }
    ```
-

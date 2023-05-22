@@ -2,19 +2,18 @@
 title: Solicitud de certificados
 description: Solicitud de certificados
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 49021dba-c6e3-4d11-ab11-061c824b30df
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
 
 ---
 
+# Solicitud de certificados{#requesting-certificates}
 
-# Solicitando certificados{#requesting-certificates}
+La inscripción es el proceso de solicitar un certificado al Adobe. Puede generar las claves y crear una solicitud que se envíe al Adobe. A continuación, el Adobe genera el certificado y se lo devuelve. El Adobe no conocerá el contenido de la clave privada. Por lo tanto, debe tener una forma de realizar una copia de seguridad de la clave para poder recuperarla en caso de que se produzca un error de hardware.
 
-La inscripción es el proceso de solicitud de un certificado de Adobe. Puede generar las claves y crear una solicitud que se envíe a Adobe. A continuación, Adobe genera el certificado y se lo devuelve a usted. Adobe no sabrá el contenido de la clave privada. Por lo tanto, debe tener una forma de realizar una copia de seguridad de la clave para poder recuperarla en caso de que se produzca una falla en el hardware.
+A diferencia del servidor de licencias, el empaquetador o el certificado de transporte, el certificado de CA de dominio no se emite por Adobe. Puede obtener este certificado de una entidad emisora de certificados o generar un certificado autofirmado.
 
-A diferencia del certificado de servidor de licencias, paquete o transporte, el certificado de CA de dominio no se emite por Adobe. Puede obtener este certificado de una entidad emisora de certificados o generar un certificado autofirmado.
-
-Para obtener instrucciones sobre cómo obtener las credenciales de acceso a Adobe, consulte la *Guía de inscripción de certificados de acceso a Adobe*.
+Para obtener instrucciones sobre cómo obtener las credenciales de acceso a la Adobe, consulte la *Guía de inscripción de certificados de acceso de Adobe*.

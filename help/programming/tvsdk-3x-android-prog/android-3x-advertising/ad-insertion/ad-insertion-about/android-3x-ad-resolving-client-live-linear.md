@@ -1,27 +1,26 @@
 ---
-description: Para el contenido en directo/lineal, TVSDK reemplaza un fragmento del contenido del flujo principal con una pausa publicitaria de la misma duración, de modo que la duración de la línea de tiempo sea la misma.
-title: Resolver e insertar publicidad en directo/lineal
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Para el contenido en directo/lineal, TVSDK reemplaza una parte del contenido del flujo principal con una pausa publicitaria de la misma duración, de modo que la duración de la cronología sigue siendo la misma.
+title: Resolución e inserción de un anuncio en directo/lineal
+exl-id: 2097520f-283b-4839-af5e-b1cfb0f3f359
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
 
 ---
 
+# Resolución e inserción de anuncios en directo/lineales {#resolve-and-insert-live-linear-ad}
 
-# Resuelva e inserte anuncios en directo/lineal {#resolve-and-insert-live-linear-ad}
-
-Para el contenido en directo/lineal, TVSDK reemplaza un fragmento del contenido del flujo principal con una pausa publicitaria de la misma duración, de modo que la duración de la línea de tiempo sea la misma.
+Para el contenido en directo/lineal, TVSDK reemplaza una parte del contenido del flujo principal con una pausa publicitaria de la misma duración, de modo que la duración de la cronología sigue siendo la misma.
 
 Antes y durante la reproducción, TVSDK resuelve los anuncios conocidos, reemplaza partes del contenido principal por pausas publicitarias de la misma duración y vuelve a calcular la cronología virtual, si es necesario. Las posiciones de las pausas publicitarias se especifican mediante puntos de referencia definidos por el manifiesto.
 
 TVSDK inserta anuncios de las siguientes maneras:
 
-* **Anuncio previo a la emisión**, que se coloca antes del contenido.
+* **Pre-roll**, que se coloca antes del contenido.
 * **Mid-roll**, que se coloca en medio del contenido.
 
-TVSDK acepta la pausa publicitaria incluso si la duración es mayor o menor que la duración de sustitución de puntos de referencia. De forma predeterminada, TVSDK admite el `#EXT-X-CUE` cue como marcador de anuncio válido al resolver y colocar anuncios. Este marcador requiere que el valor del campo de metadatos `DURATION` se exprese en segundos y el ID exclusivo del cue. Por ejemplo:
+TVSDK acepta la pausa publicitaria incluso si la duración es mayor o menor que la duración de sustitución del punto de referencia. De forma predeterminada, TVSDK admite `#EXT-X-CUE` Indicar como marcador de anuncio válido al resolver y colocar anuncios. Este marcador requiere el campo de metadatos. `DURATION` valor que se expresará en segundos y el ID único de la señal. Por ejemplo:
 
 ```
 #EXT-X-CUE:DURATION=27,ID="..."
@@ -29,4 +28,4 @@ TVSDK acepta la pausa publicitaria incluso si la duración es mayor o menor que 
 
 Puede definir y suscribirse a indicaciones adicionales (etiquetas).
 
-Una vez iniciada la reproducción, el motor de vídeo actualiza periódicamente el archivo de manifiesto. TVSDK resuelve cualquier anuncio nuevo e inserta los anuncios cuando se encuentra un punto de referencia en el flujo en directo o lineal definido en el manifiesto. Después de resolver e insertar los anuncios, TVSDK vuelve a calcular la cronología virtual y envía un evento `TimelineItemsUpdatedEventListener.onTimelineUpdated`.
+Una vez iniciada la reproducción, el motor de vídeo actualiza periódicamente el archivo de manifiesto. TVSDK resuelve cualquier anuncio nuevo e inserta los anuncios cuando se encuentra un punto de referencia en el flujo en directo o lineal definido en el manifiesto. Una vez resueltos e insertados los anuncios, TVSDK vuelve a calcular la cronología virtual y envía un `TimelineItemsUpdatedEventListener.onTimelineUpdated` evento.

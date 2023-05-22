@@ -1,27 +1,26 @@
 ---
-description: Puede habilitar o deshabilitar la función de resolución de anuncios diferidos mediante el mecanismo de carga de anuncios diferidos existente (la resolución de anuncios diferidos está habilitada de forma predeterminada).
-keywords: Aceite;resolución de publicidad;carga de publicidad;delayLoading
+description: Puede activar o desactivar la función de resolución de anuncios diferidos mediante el mecanismo de carga de anuncios diferidos existente (la resolución de anuncios diferidos está activada de forma predeterminada).
+keywords: Diferido;Resolución de publicidad;Carga de publicidad;delayLoading
 title: Habilitar la resolución de anuncios diferidos
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4cd53ace-b0f5-4eef-93c3-644c2f48ce49
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%
 
 ---
 
-
 # Habilitar la resolución de anuncios diferidos {#enable-lazy-ad-resolving}
 
-Puede habilitar o deshabilitar la función de resolución de anuncios diferidos mediante el mecanismo de carga de anuncios diferidos existente (la resolución de anuncios diferidos está habilitada de forma predeterminada).
+Puede activar o desactivar la función de resolución de anuncios diferidos mediante el mecanismo de carga de anuncios diferidos existente (la resolución de anuncios diferidos está activada de forma predeterminada).
 
-Puede habilitar o deshabilitar la resolución de publicidad diferida llamando a [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) con `true` o `false`.
+Puede habilitar o deshabilitar la resolución de anuncios diferidos llamando a [AdvertisingMetadata.setDelayLoading](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_2.4/com/adobe/mediacore/metadata/AdvertisingMetadata.html#setDelayAdLoading-boolean-) con `true` o `false`.
 
-1. Utilice los métodos booleanos `hasDelayAdLoading` y `setDelayAdLoading` de `AdvertisingMetadata` para controlar la temporización de la resolución de la publicidad y la colocación de la publicidad en la cronología:
+1. Utilice el valor booleano `hasDelayAdLoading` y `setDelayAdLoading` métodos en `AdvertisingMetadata` para controlar el tiempo de resolución de anuncios y la ubicación de los anuncios en la cronología:
 
-   * Si `hasDelayAdLoading` devuelve el valor false, TVSDK espera hasta que se resuelvan y se coloquen todos los anuncios antes de pasar al estado PREPARADO.
-   * Si `hasDelayAdLoading` devuelve el valor &quot;True&quot;, TVSDK solo resuelve los anuncios iniciales y las transiciones al estado PREPARADO. Los anuncios restantes se resuelven y se colocan durante la reproducción.
-   * Cuando `hasPreroll` o `hasLivePreroll` devuelven false, TVSDK supone que no hay anuncios previos a la publicación e inicia la reproducción del contenido inmediatamente. Estos valores predeterminados son true.
+   * If `hasDelayAdLoading` devuelve false, TVSDK espera hasta que todos los anuncios se resuelvan y se coloquen antes de pasar al estado PREPARED.
+   * If `hasDelayAdLoading` devuelve true, TVSDK resuelve solo los anuncios iniciales y las transiciones al estado PREPARED. Los anuncios restantes se resuelven y se colocan durante la reproducción.
+   * Cuándo `hasPreroll` o `hasLivePreroll` devuelve false, TVSDK supone que no hay ningún anuncio preroll e inicia la reproducción del contenido inmediatamente. El valor predeterminado es true.
 
       API relevantes para la resolución de anuncios diferidos:
 
@@ -40,11 +39,11 @@ Puede habilitar o deshabilitar la resolución de publicidad diferida llamando a 
       […]
       ```
 
-1. Para reflejar con precisión los anuncios como señales en una barra de desplazamiento, escuche el evento `TimelineEvent` y vuelva a dibujar la barra de desplazamiento cada vez que reciba este evento.
+1. Para reflejar los anuncios con precisión como indicaciones en una barra de desplazamiento, escuche la `TimelineEvent` y vuelva a dibujar la barra de desplazamiento cada vez que reciba este evento.
 
-   Cuando la resolución de publicidad diferida está habilitada para las emisiones de VOD, no todos los anuncios se colocan en la cronología cuando el reproductor entra en el estado PREPARADO, por lo que el reproductor debe volver a dibujar explícitamente la barra de desplazamiento.
+   Cuando la resolución de anuncios diferidos está habilitada para flujos de VOD, no todos los anuncios se colocan en la cronología cuando el reproductor entra en el estado PREPARADO, por lo que el reproductor debe volver a dibujar explícitamente la barra de desplazamiento.
 
-   TVSDK optimiza el envío de este evento para minimizar el número de veces que debe volver a dibujar la barra de desplazamiento; por lo tanto, el número de eventos de cronología no está relacionado con el número de pausas publicitarias que se deben colocar en la cronología. Por ejemplo, si tiene cinco pausas publicitarias, es posible que no reciba exactamente cinco eventos.
+   TVSDK optimiza el envío de este evento para minimizar el número de veces que debe volver a dibujar la barra de desplazamiento; por lo tanto, el número de eventos de cronología no está relacionado con el número de pausas publicitarias que se colocan en la cronología. Por ejemplo, si tiene cinco pausas publicitarias, es posible que no reciba exactamente cinco eventos.
 
    ```java
    mediaPlayer.addEventListener 
@@ -60,5 +59,4 @@ Puede habilitar o deshabilitar la resolución de publicidad diferida llamando a 
    } 
    ```
 
->Para verificar si la función de resolución de anuncios diferidos está habilitada o deshabilitada, llame a `AdvertisingMetadata.hasDelayAdLoading`. Un valor devuelto de `true` significa que la resolución de publicidad diferida está habilitada; `false` significa que la función está deshabilitada.
-
+>Para comprobar si la función de resolución de anuncios diferidos está habilitada o deshabilitada, llame a `AdvertisingMetadata.hasDelayAdLoading`. Un valor devuelto de `true` significa que la resolución de anuncios diferidos está habilitada; `false` significa que la función está deshabilitada.

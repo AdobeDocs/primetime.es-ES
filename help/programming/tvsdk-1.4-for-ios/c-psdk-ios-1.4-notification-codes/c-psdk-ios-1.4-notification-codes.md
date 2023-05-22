@@ -1,20 +1,19 @@
 ---
-description: El sistema de notificación TVSDK genera varios avisos de error, advertencia e información que proporcionan metadatos de diagnóstico.
+description: El sistema de notificación de TVSDK produce varios avisos de error, advertencia e información que proporcionan metadatos de diagnóstico.
 title: Códigos de notificación
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 6cbc85d7-c197-448b-aa90-554c70af6557
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%
 
 ---
 
+# Sistema de notificación de TVSDK {#tvsdk-notification-system}
 
-# Sistema de notificación TVSDK {#tvsdk-notification-system}
+El sistema de notificación de TVSDK produce varios avisos de error, advertencia e información que proporcionan metadatos de diagnóstico.
 
-El sistema de notificación TVSDK genera varios avisos de error, advertencia e información que proporcionan metadatos de diagnóstico.
-
-Los objetos de notificación proporcionan información relacionada con el estado del reproductor. TVSDK proporciona una lista ordenada cronológicamente de objetos de notificación, y cada notificación contiene los siguientes metadatos:
+Los objetos de notificación proporcionan información relacionada con el estado del reproductor. TVSDK proporciona una lista ordenada cronológicamente de objetos de notificación y cada notificación contiene los siguientes metadatos:
 
 <table frame="all" colsep="1" rowsep="1" id="table_DBA8CACF02DB4AF2B053E560850B49CE"> 
  <thead> 
@@ -26,32 +25,31 @@ Los objetos de notificación proporcionan información relacionada con el estado
  <tbody> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> type</span></td> 
-   <td colname="2">El tipo de notificación. En función de la plataforma, esta propiedad hace referencia a un tipo enumerado con posibles valores de 
+   <td colname="2">El tipo de notificación. Según la plataforma, esta propiedad hace referencia a un tipo enumerado con posibles valores de 
     <pre>
-      INFO, WARN o ERROR. Es la agrupación de nivel superior para las notificaciones.
+      INFO, WARN o ERROR. Esta es la agrupación de nivel superior para notificaciones.
     </pre> </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> code</span></td> 
+   <td colname="1"><span class="codeph"> código</span></td> 
    <td colname="2">La representación numérica asignada a la notificación. 
     <ul id="ul_31AB497C6FFA452496DD09B0D78687B9"> 
-     <li id="li_53E75022C50246E0982E315D04EFD8B3">Eventos de notificación de errores, de 10000 a 19999 </li> 
-     <li id="li_11AE91D1325E4F718228E662C9C55F9A">Eventos de notificación de advertencia, de 20000 a 299999 </li> 
-     <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Eventos de notificación de información, de 30000 a 399999 </li> 
-    </ul> <p>Cada rango de nivel superior, como los errores, se divide en subintervalos, como 101000 a 101999, que representan errores de reproducción. </p> </td> 
+     <li id="li_53E75022C50246E0982E315D04EFD8B3">Eventos de notificación de error, de 100000 a 199999 </li> 
+     <li id="li_11AE91D1325E4F718228E662C9C55F9A">Eventos de notificación de advertencia, de 200000 a 299999 </li> 
+     <li id="li_6D3EA03845294DC2BAD1ACF507639E51">Eventos de notificación de información, de 300000 a 399999 </li> 
+    </ul> <p>Cada rango de nivel superior, como los errores, se divide en subrangos, como los 101000, a través de 101999 que representan errores de reproducción. </p> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"> name</span></td> 
-   <td colname="2">Cadena que contiene una descripción del código legible en lenguaje natural, como <span class="codeph"> SEEK_ERROR</span>. </td> 
+   <td colname="2">Una cadena que contiene una descripción del código legible en lenguaje natural, como <span class="codeph"> SEEK_ERROR</span>. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"> metadata</span> </td> 
-   <td colname="2">Pares clave/valor que contienen información relevante adicional sobre la notificación. Por ejemplo, una clave llamada <span class="codeph"> URL</span> estaría emparejada con un valor que es una URL relacionada con la notificación, como una URL no válida que provocó un error. </td> 
+   <td colname="1"><span class="codeph"> metadatos</span> </td> 
+   <td colname="2">Pares de clave/valor que contienen información relevante adicional acerca de la notificación. Por ejemplo, una clave denominada <span class="codeph"> URL</span> estaría emparejado con un valor que es una URL relacionada con la notificación, como una URL no válida que provocó un error. </td> 
   </tr> 
   <tr rowsep="0"> 
    <td colname="1"><span class="codeph"> innerNotification</span></td> 
-   <td colname="2">Una referencia a otro objeto <span class="codeph"> PTNotification</span> que afectó directamente a esta notificación. Un ejemplo podría ser una notificación sobre un error de inserción de publicidad que corresponda directamente a un conflicto de inserción de línea temporal. No todas las notificaciones proporcionan una notificación interna. </td> 
+   <td colname="2">Una referencia a otra <span class="codeph"> PTNotification</span> objeto que afectó directamente a esta notificación. Un ejemplo podría ser una notificación sobre un error de inserción de publicidad que corresponde directamente a un conflicto de inserción de cronología. No todas las notificaciones proporcionan una notificación interna. </td> 
   </tr> 
  </tbody> 
 </table>
-

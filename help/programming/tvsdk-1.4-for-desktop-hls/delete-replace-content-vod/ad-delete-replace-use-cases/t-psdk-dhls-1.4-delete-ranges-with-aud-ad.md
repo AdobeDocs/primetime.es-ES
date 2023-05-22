@@ -1,20 +1,19 @@
 ---
-description: Elimine los intervalos de tiempo entre el inicio y el final en localTime de la cronología.
-title: Eliminar intervalos con anuncios de Primetime y decisioning
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Elimine intervalos de tiempo entre inicio y final en localTime de la cronología.
+title: Eliminar intervalos con el anuncio de Primetime y Decisioning
+exl-id: e097f92e-b4ce-4e33-9a71-213cf19188fb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%
 
 ---
 
+# Eliminar intervalos con el anuncio de Primetime y Decisioning{#delete-ranges-with-primetime-ad-decisioning-ad}
 
-# Eliminar intervalos con anuncios de Primetime y decisioning{#delete-ranges-with-primetime-ad-decisioning-ad}
+Elimine intervalos de tiempo entre inicio y final en localTime de la cronología.
 
-Elimine los intervalos de tiempo entre el inicio y el final en localTime de la cronología.
-
-Eliminar intervalos con un anuncio de Frase.
+Eliminar intervalos con un anuncio de frase.
 
 ```
 {   
@@ -66,4 +65,3 @@ Eliminar intervalos con un anuncio de Frase.
     "id": "vod_003"
 }
 ```
-

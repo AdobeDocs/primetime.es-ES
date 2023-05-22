@@ -1,21 +1,20 @@
 ---
-title: Creación de un reproductor básico mediante el marco de IU
-description: Creación de un reproductor básico mediante el marco de IU
+title: Creación de un reproductor básico con el marco de IU
+description: Creación de un reproductor básico con el marco de IU
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 78629042-fd87-406b-af42-229e34d48162
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Creación de un reproductor básico con el marco de IU{#create-a-basic-player-using-the-ui-framework}
 
-# Crear un reproductor básico con la interfaz de usuario Framework{#create-a-basic-player-using-the-ui-framework}
+Para crear un reproductor básico con el marco de trabajo de IU:
 
-Para crear un reproductor básico con el marco de IU:
-
-1. Cree un `<div>` para la instancia del reproductor.
+1. Crear un `<div>` para la instancia de reproductor.
 
    Por ejemplo:
 
@@ -34,7 +33,7 @@ Para crear un reproductor básico con el marco de IU:
    </script>
    ```
 
-   Cuando se crea el reproductor, el elemento `<div>` especificado recibe una clase CSS de `ptp-main-video-div-style`. El DOM resultante se muestra de esta manera:
+   Cuando se crea el reproductor, el especificado `<div>` recibe una clase CSS de `ptp-main-video-div-style`. El DOM resultante aparece de esta manera:
 
    ```
    <div id="video1" class="ptp-main-video-div-style"> 
@@ -42,9 +41,9 @@ Para crear un reproductor básico con el marco de IU:
    </div>
    ```
 
-1. Agregue un control de interfaz de usuario.
+1. Agregue un control UI.
 
-   Por ejemplo, agregue una barra de control que aparezca cuando el ratón se sitúa sobre el reproductor:
+   Por ejemplo, añada una barra de control que aparezca cuando el ratón pase el ratón sobre el reproductor:
 
    ```js
    <script> 
@@ -71,7 +70,7 @@ Para crear un reproductor básico con el marco de IU:
    </div>
    ```
 
-El objeto devuelto al llamar a `ptp.videoPlayer()` proporciona un comportamiento que ajusta la API del reproductor de medios TVSDK y permite el control programático de la reproducción. Cuando realiza llamadas en la instancia del reproductor de contenidos, la interfaz de usuario se actualiza a sí misma en función de los eventos activados por el reproductor de contenidos:
+El objeto devuelto al llamar a `ptp.videoPlayer()` proporciona un comportamiento que envuelve la API del reproductor de contenidos de TVSDK y permite un control programático de la reproducción. Cuando realiza llamadas en la instancia del reproductor de contenido, la interfaz de usuario se actualiza a sí misma en función de los eventos activados por el reproductor de contenido:
 
 ```js
 <script> 

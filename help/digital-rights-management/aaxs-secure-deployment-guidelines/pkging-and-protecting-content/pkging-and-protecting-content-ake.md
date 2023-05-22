@@ -1,22 +1,21 @@
 ---
-title: Cifrado de claves asimétricas
-description: Cifrado de claves asimétricas
+title: Cifrado de clave asimétrica
+description: Cifrado de clave asimétrica
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 5962176e-07ec-4606-b1d8-39946ba59127
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
 
 ---
 
+# Cifrado de clave asimétrica{#asymmetric-key-encryption}
 
-# Cifrado de claves asimétricas{#asymmetric-key-encryption}
+El cifrado de clave asimétrica (también denominado cifrado de clave pública) utiliza pares de claves. Una clave se utiliza para el cifrado y la otra para el descifrado. La clave de descifrado se mantiene en secreto y se denomina *clave privada*. La clave de cifrado, denominada *clave pública*, se pone a disposición de cualquier persona autorizada para cifrar contenido. Cualquier persona con acceso a la clave pública puede cifrar el contenido, pero solamente alguien con acceso a la clave privada puede descifrarlo. La clave privada no se puede reconstruir a partir de la clave pública.
 
-El cifrado de claves asimétricas (también denominado cifrado de claves públicas) utiliza pares de claves. Se utiliza una clave para el cifrado; el otro para el descifrado. La clave de descifrado se mantiene en secreto y se denomina *clave privada*. La clave de cifrado, denominada *clave pública*, está disponible para cualquier persona autorizada para cifrar contenido. Cualquier persona con acceso a la clave pública puede cifrar el contenido, pero solo alguien con acceso a la clave privada puede descifrarlo. La clave privada no se puede reconstruir a partir de la clave pública.
+Al empaquetar contenido, se utiliza la clave pública del servidor de licencias para cifrar la clave de cifrado de contenido (CEK) en los metadatos DRM. Debe asegurarse de que solo el servidor de licencias tiene acceso a la clave privada del servidor de licencias; si otra persona tiene la clave, puede descifrar y ver el contenido.
 
-Al empaquetar contenido, la clave pública del servidor de licencias se utiliza para cifrar la clave de cifrado de contenido (CEK) en los metadatos de DRM. Debe asegurarse de que solo el servidor de licencias tenga acceso a la clave privada del servidor de licencias; si otra persona tiene la clave, puede descifrar y ver el contenido.
+***Precaución:**Asegúrese de obtener el certificado del servidor de licencias (que contiene la clave pública) de una fuente de confianza para poder estar seguro de que es la clave del servidor de licencias y no una clave pública no fiable. Si un atacante sustituyera la clave pública por la del servidor de licencias, podría descifrar el contenido.*
 
-***Precaución:**asegúrese de obtener el certificado del servidor de licencias (que contiene la clave pública) de una fuente de confianza, de modo que pueda estar seguro de que es la clave del servidor de licencias y no una clave pública no fiable. Si un atacante reemplazara su clave pública por la clave del servidor de licencias, podría descifrar su contenido.*
-
-Para obtener más información sobre el contenido del paquete, consulte *Uso del SDK de acceso a Adobe para la protección de contenido*.
+Para obtener más información sobre el contenido de los paquetes, consulte *Uso del SDK de acceso a Adobe para proteger el contenido*.

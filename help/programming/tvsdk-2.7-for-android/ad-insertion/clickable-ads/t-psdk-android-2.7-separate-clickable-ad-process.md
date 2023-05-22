@@ -1,22 +1,21 @@
 ---
-description: Debe separar la lógica de IU del reproductor del proceso que administra los clics en publicidad. Una forma de hacerlo es implementar varios fragmentos para una actividad.
-title: Separe el proceso de publicidad en el que se puede hacer clic
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Debe separar la lógica de la interfaz de usuario del reproductor del proceso que administra los clics en los anuncios. Una forma de hacerlo es implementar varios fragmentos para una actividad.
+title: Separar el proceso de publicidad en el que se puede hacer clic
+exl-id: 9b6fad9b-d46d-4965-8770-0bb85c052e0e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
 
 ---
 
+# Separar el proceso de publicidad en el que se puede hacer clic {#separate-the-clickable-ad-process}
 
-# Separe el proceso de publicidad en el que se puede hacer clic {#separate-the-clickable-ad-process}
+Debe separar la lógica de la interfaz de usuario del reproductor del proceso que administra los clics en los anuncios. Una forma de hacerlo es implementar varios fragmentos para una actividad.
 
-Debe separar la lógica de IU del reproductor del proceso que administra los clics en publicidad. Una forma de hacerlo es implementar varios fragmentos para una actividad.
+1. Implementar un fragmento para contener el `MediaPlayer`.
 
-1. Implemente un fragmento para contener `MediaPlayer`.
-
-   Este fragmento debe llamar a `notifyClick()` y será responsable de la reproducción del vídeo.
+   Este fragmento debería llamar a `notifyClick()` y será responsable de la reproducción del vídeo.
 
    ```java
    public class PlayerFragment extends SherlockFragment { 
@@ -28,9 +27,9 @@ Debe separar la lógica de IU del reproductor del proceso que administra los cli
    } 
    ```
 
-1. Implemente un fragmento diferente para mostrar un elemento de interfaz de usuario que indique que se puede hacer clic en un anuncio, supervise ese elemento de interfaz de usuario y comunique los clics del usuario con el fragmento que contiene el `MediaPlayer`.
+1. Implemente un fragmento diferente para mostrar un elemento de la interfaz de usuario que indique que se puede hacer clic en un anuncio, supervise ese elemento de la interfaz de usuario y comunique los clics del usuario al fragmento que contiene el fragmento `MediaPlayer`.
 
-   Este fragmento debe declarar una interfaz para la comunicación de fragmentos. El fragmento captura la implementación de la interfaz durante su método de ciclo de vida `onAttach()` y puede llamar a los métodos de interfaz para comunicarse con la actividad.
+   Este fragmento debe declarar una interfaz para la comunicación con el fragmento. El fragmento captura la implementación de la interfaz durante su `onAttach()` El método del ciclo vital y puede llamar a los métodos de interfaz para comunicarse con la actividad.
 
    ```java
    public class PlayerClickableAdFragment extends SherlockFragment { 
@@ -87,4 +86,3 @@ Debe separar la lógica de IU del reproductor del proceso que administra los cli
        } 
    } 
    ```
-

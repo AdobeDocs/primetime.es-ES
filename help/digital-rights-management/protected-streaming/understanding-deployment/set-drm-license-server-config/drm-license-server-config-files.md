@@ -2,26 +2,25 @@
 title: Archivos de configuración del servidor de licencias
 description: Archivos de configuración del servidor de licencias
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: d48e88a4-caae-4f4e-b870-38da4f3a715e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%
 
 ---
 
-
 # Archivos de configuración del servidor de licencias{#license-server-configuration-files}
 
-El servidor Adobe Primetime DRM para transmisión protegida requiere los siguientes tipos de archivos de configuración:
+Adobe Primetime DRM Server for Protected Streaming requiere los siguientes tipos de archivos de configuración:
 
 * Archivo de configuración global ( [!DNL flashaccess-global.xml])
-* Archivo de configuración del inquilino para cada inquilino ( [!DNL flashaccess-tenant.xml])
+* Archivo de configuración de usuario para cada usuario ( [!DNL flashaccess-tenant.xml])
 
-Después de completar la edición de los archivos de configuración, Adobe recomienda que utilice las utilidades proporcionadas con el Servidor DRM de Primetime para la transmisión protegida para comprobar que los archivos están bien formados.
+Una vez editados los archivos de configuración, Adobe recomienda utilizar las utilidades proporcionadas con el servidor DRM de Primetime para el flujo protegido para comprobar que los archivos están bien formados.
 
 Consulte *Validador de configuración*.
 
-Si desea evitar que las contraseñas estén disponibles en texto sin formato en los archivos de configuración, debe cifrar todas las contraseñas especificadas en los archivos de configuración global e inquilino utilizando la herramienta Scrambler que Adobe ha proporcionado.
+Si desea evitar que las contraseñas estén disponibles en texto no cifrado en los archivos de configuración, debe cifrar todas las contraseñas especificadas en los archivos de configuración global e inquilino mediante la herramienta Scrambler proporcionada por el Adobe.
 
-Consulte *Contraseña Scrambler* para obtener más información sobre cómo cifrar contraseñas.
+Consulte *Descodificador de contraseñas* para obtener más información sobre cómo cifrar contraseñas.

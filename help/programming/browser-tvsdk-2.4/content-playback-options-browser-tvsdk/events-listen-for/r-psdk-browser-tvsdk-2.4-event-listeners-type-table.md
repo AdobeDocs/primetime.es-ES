@@ -1,24 +1,23 @@
 ---
-description: Cuando registra oyentes de eventos con el TVSDK del explorador, especifica un tipo de evento para escuchar y el nombre de la llamada de retorno. Cuando se produce un evento, el TVSDK del explorador llama a la rellamada y le pasa un objeto de evento del tipo adecuado.
-title: Tipos de eventos y clases para las llamadas de retorno
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Al registrar detectores de eventos con el explorador TVSDK, se especifica el tipo de evento que se va a detectar y el nombre de la llamada de retorno. Cuando se produce un evento, TVSDK del explorador llama a la llamada de retorno y le pasa un objeto de evento del tipo adecuado.
+title: Tipos de eventos y clases para llamadas de retorno
+exl-id: 94c571ea-6dd2-4c15-89db-7015d89c9208
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
 
 ---
 
+# Tipos de eventos y clases para llamadas de retorno{#event-types-and-classes-for-callbacks}
 
-# Tipos de eventos y clases para las llamadas de retorno{#event-types-and-classes-for-callbacks}
-
-Cuando registra oyentes de eventos con el TVSDK del explorador, especifica un tipo de evento para escuchar y el nombre de la llamada de retorno. Cuando se produce un evento, el TVSDK del explorador llama a la rellamada y le pasa un objeto de evento del tipo adecuado.
+Al registrar detectores de eventos con el explorador TVSDK, se especifica el tipo de evento que se va a detectar y el nombre de la llamada de retorno. Cuando se produce un evento, TVSDK del explorador llama a la llamada de retorno y le pasa un objeto de evento del tipo adecuado.
 
 <table frame="all" colsep="1" rowsep="1" id="table_FE58AD65AF3B4483816C00D7EAD2FB4F"> 
  <thead> 
   <tr rowsep="1"> 
    <th colname="2" class="entry"> Cuando escucha este nombre de evento (AdobePSDK.EventType) </th> 
-   <th class="entry">frases/browser-tvsdk-name pasa un evento a su devolución de llamada de este tipo de objeto (<span class="codeph"> AdobePSDK.Event</span>) </th> 
+   <th class="entry">phrases/browser-tvsdk-name pasa un evento a su llamada de retorno de este tipo de objeto (<span class="codeph"> AdobePSDK.Event</span>) </th> 
   </tr> 
  </thead>
  <tbody> 
@@ -54,7 +53,7 @@ Cuando registra oyentes de eventos con el TVSDK del explorador, especifica un ti
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"><span class="codeph"> DRM_METADATA_INFO_AVAILABLE</span> </td> 
-   <td><span class="codeph"> DRMMetadataInfoAvailableEvent</span> </td> 
+   <td><span class="codeph"> DTMetadataInfoAvailableEvent</span> </td> 
   </tr> 
   <tr> 
    <td colname="2"><span class="codeph"> LOAD_INFORMATION_AVAILABLE</span> </td> 
@@ -81,7 +80,7 @@ Cuando registra oyentes de eventos con el TVSDK del explorador, especifica un ti
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"><span class="codeph"> RESERVATION_REACHED</span> </td> 
-   <td><span class="codeph"> ReserationEvent</span> </td> 
+   <td><span class="codeph"> ReservationEvent</span> </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="2"> 
@@ -130,4 +129,3 @@ Cuando registra oyentes de eventos con el TVSDK del explorador, especifica un ti
   </tr> 
  </tbody> 
 </table>
-

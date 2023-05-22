@@ -1,6 +1,6 @@
 ---
-title: Definir un segmento y un lapso de tiempo
-description: Definir un segmento y un lapso de tiempo
+title: Definición de un segmento y un lapso de tiempo
+description: Definición de un segmento y un lapso de tiempo
 exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
 source-git-commit: c17fb003d8c8103aac36696f696c9e3c7bb83c4f
 workflow-type: tm+mt
@@ -9,15 +9,15 @@ ht-degree: 0%
 
 ---
 
-# Definir un segmento y un lapso de tiempo {#define-segment}
+# Definición de un segmento y un lapso de tiempo {#define-segment}
 
-Todos los análisis o la visualización de informes en Account IQ comienzan con la definición del segmento y la selección del lapso de tiempo para la evaluación. [Segmento](/help/AccountIQ/product-concepts.md#segmet-def) hace referencia a todos los suscriptores o visualizadores que cumplen con sus criterios (suscripción a un MVPD y visualización de canales específicos) de evaluación.
+Todos los informes de análisis o visualización de Account IQ comienzan con la definición de segmentos y la selección del lapso de tiempo para la evaluación. [Segmento](/help/AccountIQ/product-concepts.md#segmet-def) hace referencia a todos los suscriptores o visualizadores que cumplen con sus criterios de evaluación (suscripción a una MVPD y visualización de canales específicos).
 
 ![](assets/segment-panel.png)
 
 *Figura: Selección de segmentos y lapsos de tiempo*
 
-En la parte superior de todas las páginas de informes de Account IQ, hay un panel para definir el segmento seleccionando MVPD, programadores de canales, granularidad y lapso de tiempo.
+En la parte superior de todas las páginas de informes de Account IQ, hay un panel para definir segmentos seleccionando MVPD, programadores de canales y granularidad y lapso de tiempo.
 
 ## Selección de segmentos {#select-segment}
 
@@ -29,21 +29,21 @@ Para seleccionar MVPD de **MVPD en el segmento** opción:
 
    >[!NOTE]
    >
-   >**Todo** los MVPD del sector están seleccionados de forma predeterminada. Desde aquí puede seleccionar cualquiera de los **Principales 10 MVPD compartiendo la puntuación**, **Principales 10 MVPD por uso**, **Principales 10 MVPD por cuentas** o MVPD individuales. Sin embargo, para seleccionar MVPD individuales debe anular la selección **Todo**.
+   >**Todo** las MVPD del sector se seleccionan de forma predeterminada. Desde aquí, puede seleccionar cualquiera de las siguientes opciones **Las 10 principales MVPD por puntuación de uso compartido**, **Las 10 principales MVPD por uso**, **Principales 10 MVPD por cuentas**, o MVPD individuales. Sin embargo, para seleccionar MVPD individuales debe anular la selección **Todo**.
 
-1. Toque o haga clic en los MVPD deseados.
+1. Toque o haga clic en las MVPD que desee.
 
-   Puede quitar un MVPD de la selección anulando la selección.
+   Puede eliminar una MVPD de la selección anulando su selección.
 
-1. Toque o haga clic en **Aplicar selección** para que su selección tenga efecto. De lo contrario, perderá la selección que haya realizado.
+1. Haga clic o toque **Aplicar selección** para que la selección surta efecto. De lo contrario, perderá la selección que haya realizado.
 
    >[!NOTE]
    >
-   >Si selecciona el modo de aislamiento, no se puede seleccionar ninguno de los demás MVPD.
+   >Si selecciona el modo de aislamiento, no se puede seleccionar ninguna de las otras MVPD.
 
-### Seleccionar canales en un segmento {#select-segment-channels}
+### Seleccionar canales en el segmento {#select-segment-channels}
 
-Para seleccionar los canales de programador que desee en el **Canales en el segmento** opción:
+Para seleccionar los canales de programador deseados de la **Canales en el segmento** opción:
 
 1. Toque o haga clic en **Canales en el segmento** opción desplegable.
 
@@ -51,55 +51,55 @@ Para seleccionar los canales de programador que desee en el **Canales en el segm
    >
    >**Todo** los canales del programador de su empresa están seleccionados de forma predeterminada. Para seleccionar canales o programadores individuales, primero debe anular la selección **Todo**.
 
-1. Toque o haga clic en los canales o programadores deseados.
+1. Toque o haga clic en los canales o programadores que desee.
 
-   Los elementos de lista de nivel superior de la variable **Canales en el segmento** are [programador](/help/AccountIQ/product-concepts.md#programmer-def) las compañías y los elementos de la lista bajo nombres de programadores son sus [canales](/help/AccountIQ/product-concepts.md#channel-def). Puede seleccionar canales individuales en programadores, o seleccionar programadores y todas las actividades de los canales bajo ese programador se incluyen en los resultados de informes y gráficos.
+   Los elementos de lista de nivel superior de la **Canales en el segmento** son [programador](/help/AccountIQ/product-concepts.md#programmer-def) compañías y los elementos de la lista bajo nombres de programador son sus [canales](/help/AccountIQ/product-concepts.md#channel-def). Puede seleccionar canales individuales en programadores o seleccionar programadores, y todas las actividades de los canales bajo ese programador se incluyen en los resultados de informes y gráficos.
 
    ![](assets/programmer-channels.png)
 
 
-   *Figura: Programadores y canales enumerados en el selector de canales*
+   *Imagen: programadores y canales enumerados en el selector de canales*
 
    >[!IMPORTANT]
    >
-   >Los resultados de seleccionar canales individuales bajo un programador no son los mismos que los de seleccionar al programador.
+   >Los resultados de seleccionar canales individuales bajo un programador no son los mismos que los de seleccionar el programador.
    >
    >
-   >Al seleccionar canales individuales, las actividades de esos canales se desglosan individualmente en algunos informes. Sin embargo, cuando selecciona el programador principal de todos esos canales, se incluye toda la actividad de esos canales, pero no se desglosa de forma individual en los informes.
+   >Al seleccionar canales individuales, las actividades de esos canales se desglosan individualmente en algunos informes. Sin embargo, al seleccionar el programador principal de todos esos canales, se incluye toda la actividad de esos canales, pero no se desglosa de forma individual en los informes.
 
-1. Toque o haga clic en **Aplicar selección** para que su selección tenga efecto.
+1. Haga clic o toque **Aplicar selección** para que la selección surta efecto.
 
 >[!NOTE]
 >
->No puede seleccionar más de 10 elementos en los menús desplegables de MVPD o programador.
+>No se pueden seleccionar más de 10 elementos en los menús desplegables de MVPD o programador.
 
-### Anule la selección de MVPD y canales {#deselect-segment-mvpds-channels}
+### Anular la selección de MVPD y canales {#deselect-segment-mvpds-channels}
 
-Además de cambiar la selección en el **MVPD en el segmento** y **Canales en el segmento** selectores de segmentos, puede anular la selección de los MVPD y canales seleccionados anteriormente mediante:
+Además de cambiar su selección en la **MVPD en el segmento** y **Canales en el segmento** selectores de segmentos, puede anular la selección de las MVPD y los canales seleccionados anteriormente mediante:
 
-* Al seleccionar la variable **Eliminar** icono (![icono quitar](assets/remove-icon.png)) en los nombres de estos MVPD y canales seleccionados que se muestran debajo del selector de segmentos.
+* Selección de la **Eliminar** icono (![quitar icono](assets/remove-icon.png)) en los nombres de estas MVPD y canales seleccionados que se muestran debajo del selector de segmentos.
 
-* También puede utilizar **Borrar selección** para eliminar todos los MVPD o canales seleccionados previamente.
+* También puede utilizar **Borrar selección** para eliminar todos los canales o MVPD seleccionados previamente.
 
 ![](assets/segment-panel-selection.png)
 
-*Figura: MVPD y canales seleccionados en el panel de segmentos y marcos de tiempo*
+*Imagen: MVPD y canales seleccionados en el panel de segmentos y periodo de tiempo*
 
-## Granularidad y selección de lapso de tiempo {#granularity-timeframe}
+## Granularidad y selección de lapsos de tiempo {#granularity-timeframe}
 
 Para seleccionar un período de tiempo de evaluación:
 
-1. Seleccione el **Granularidad y lapso de tiempo** selector de fechas.
+1. Seleccione el **Granularidad y periodo de tiempo** selector de fechas.
 
-1. Seleccione: **Semana** o **Mes** from **Agregar por** para establecer la granularidad en la evaluación.
+1. Seleccione una de las opciones **Semana** o **Mes** de **Agregar por** para definir la granularidad de la evaluación.
 
    ![](assets/granularity-timeframe-weekwise.png)
 
 
-   *Figura: Selector de fecha para seleccionar Granularidad y lapso de tiempo*
+   *Figura: Selector de fecha para seleccionar la granularidad y el lapso de tiempo*
 
-1. Una vez seleccionada la granularidad, puede utilizar flechas hacia adelante o hacia atrás para avanzar o retroceder en el tiempo.
+1. Una vez seleccionada la granularidad, puede utilizar flechas hacia delante o hacia atrás para avanzar o retroceder en el tiempo.
 
-1. Especifique un periodo de tiempo en el pasado (en mes o semana según la granularidad seleccionada) para la evaluación.
+1. Especifique un período de tiempo en el pasado (en mes o semana según la granularidad seleccionada) para la evaluación.
 
-1. Select **Aplicar selección** para asegurarse de que la selección surta efecto.
+1. Seleccionar **Aplicar selección** para asegurarse de que la selección surta efecto.

@@ -1,21 +1,20 @@
 ---
-description: La regla de normalización define una transformación de URL que se aplicará a una URL creativa de origen obtenida de una respuesta VAST/VMAP.
+description: La regla normalize define una transformación de URL que se aplicará a la URL creativa de origen obtenida de una respuesta VAST/VMAP.
 keywords: normalizar regla;reglas de selección creativa
 title: Normalizar reglas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 28f315fe-b665-4abb-9b28-0182e999a8b2
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '167'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Normalizar reglas {#normalize-rules}
 
-La regla de normalización define una transformación de URL que se aplicará a una URL creativa de origen obtenida de una respuesta VAST/VMAP.
+La regla normalize define una transformación de URL que se aplicará a la URL creativa de origen obtenida de una respuesta VAST/VMAP.
 
-## La regla de normalización tiene los siguientes atributos y valores posibles:
+## La regla normalize tiene los siguientes atributos y valores posibles:
 
 <table id="table_ljp_tgx_hz">  
  <thead> 
@@ -34,10 +33,10 @@ La regla de normalización define una transformación de URL que se aplicará a 
    <td>El valor siempre debe ser <span class="codeph"> normalizar</span>.</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> item</span></td> 
+   <td><span class="codeph"> artículo</span></td> 
    <td><span class="codeph"> Cadena</span></td> 
    <td><span class="codeph"> host</span></td> 
-   <td>Actualmente solo se admite <span class="codeph"> host</span>. Este atributo debe estar presente cuando <span class="codeph"> coincide con</span> y los atributos <span class="codeph"> </span> están definidos.</td> 
+   <td>Solo actualmente <span class="codeph"> host</span> es compatible. Este atributo debe estar presente cuando <span class="codeph"> matches</span> y <span class="codeph"> values</span> atributos están definidos.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> matches</span></td> 
@@ -45,31 +44,31 @@ La regla de normalización define una transformación de URL que se aplicará a 
    <td></td> 
    <td>Valores posibles:
     <ul id="ul_tnf_2hx_hz"> 
-     <li><span class="codeph"> eq</span>  - es igual que</li> 
-     <li><span class="codeph"> ne</span> : no es igual a</li> 
+     <li><span class="codeph"> eq</span> - igual a</li> 
+     <li><span class="codeph"> ne</span> - no es igual a</li> 
      <li><span class="codeph"> co</span> - contiene</li> 
-     <li><span class="codeph"> nc</span> : no contiene</li> 
-     <li><span class="codeph"> sw</span> : comienza con</li> 
-     <li><span class="codeph"> ew</span> : termina con</li> 
+     <li><span class="codeph"> nc</span> - no contiene</li> 
+     <li><span class="codeph"> sw</span> - empieza por</li> 
+     <li><span class="codeph"> ew</span> - termina por</li> 
     </ul></td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> values</span></td> 
    <td><span class="codeph"> Matriz</span></td> 
    <td></td> 
-   <td>TVSDK utilizará el atributo <span class="codeph"> coincide con</span> en el elemento <span class="codeph"></span> del creativo de origen y coincidirá con los valores definidos en esta matriz.</td> 
+   <td>TVSDK utilizará el <span class="codeph"> matches</span> en el <span class="codeph"> artículo</span> del creativo de origen y comparan con los valores definidos en esta matriz.</td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> find</span></td> 
+   <td><span class="codeph"> encontrar</span></td> 
    <td><span class="codeph"> regex</span></td> 
    <td></td> 
-   <td> Expresión regular que se aplicará en la URL creativa de origen para que coincida.</td> 
+   <td> Una expresión regular que se aplicará en la URL creativa de origen que corresponda.</td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> replace</span></td> 
    <td><span class="codeph"> regex</span></td> 
    <td></td> 
-   <td> Expresión regular que se aplicará en la URL creativa de origen a reemplazar en función de la coincidencia.</td> 
+   <td> Una expresión regular que se aplicará en la URL creativa de origen que se reemplazará en función de la coincidencia.</td> 
   </tr> 
  </tbody> 
 </table>
@@ -104,4 +103,3 @@ La regla de normalización define una transformación de URL que se aplicará a 
     }
 }
 ```
-

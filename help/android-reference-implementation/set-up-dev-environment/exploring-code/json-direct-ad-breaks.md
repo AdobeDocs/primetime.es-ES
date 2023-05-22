@@ -1,20 +1,19 @@
 ---
 title: Objeto JSON para pausas publicitarias directas
-description: Detalla el objeto JSON cuando el valor de tipo es un salto de publicidad directo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Detalla el objeto JSON cuando el valor del tipo es saltos de publicidad directos
+exl-id: d5e3ddd5-b963-4e7d-b04b-087d4fe96faf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
 
 ---
 
-
 # Objeto JSON para pausas publicitarias directas{#json-object-for-direct-ad-breaks}
 
-El siguiente bloque de código define el objeto JSON de detalles cuando el valor de tipo es pausas publicitarias directas.
+El siguiente bloque de código define los detalles del objeto JSON cuando el valor del tipo es direct and breaks.
 
-El `MetadataNode` devuelto por `IFeedItemAdapter:getStreamMetadata()` contiene una entrada con una clave de tipo `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` y un valor de una representación de cadena del valor del objeto JSON de detalles que aparece a continuación.
+El `MetadataNode` devuelto por `IFeedItemAdapter:getStreamMetadata()` contiene una entrada con una clave de tipo `com.adobe.mediacore.metadata.DefaultMetadataKeys.JSON_METADATA_KEY` y valor de una representación de cadena del valor de objeto JSON de detalles a continuación.
 
 ```
 “metadata”: { 
@@ -50,12 +49,12 @@ El `MetadataNode` devuelto por `IFeedItemAdapter:getStreamMetadata()` contiene u
 
 | Propiedad | Descripción |
 |---|---|
-| `tag` | Cadena que se asigna al campo de etiqueta en `com.adobe.mediacore.timeline.advertising.AdBreak`. |
-| `time` | Indica la hora de inicio de la pausa publicitaria y se asigna al campo de tiempo en `com.adobe.mediacore.timeline.advertising.AdBreak`. El valor 0 indica un anuncio pre-roll. |
-| `replace` | Indica la duración del reemplazo de pausa publicitaria y se asigna al campo `replaceDuration` en `com.adobe.mediacore.timeline.advertising.AdBreak`. |
-| `ad-list` | Una lista de anuncios que se deben reproducir durante la pausa publicitaria dada, se asigna al campo `List<Ad>` en `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `tag` | Una cadena que se asigna al campo de etiqueta en `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `time` | Indica la hora de inicio de la pausa publicitaria y se asigna al campo de hora de `com.adobe.mediacore.timeline.advertising.AdBreak`. El valor 0 indica un anuncio previo a la emisión. |
+| `replace` | Indica la duración de reemplazo de la pausa publicitaria, se asigna a `replaceDuration` field en `com.adobe.mediacore.timeline.advertising.AdBreak`. |
+| `ad-list` | Una lista de anuncios que se reproducirán durante la pausa publicitaria dada, se asigna a la variable `List<Ad>` field en `com.adobe.mediacore.timeline.advertising.AdBreak`. |
 
-El siguiente bloque de código define el objeto JSON para la matriz de lista de anuncios.
+El siguiente bloque de código define el objeto JSON para la matriz de listas de anuncios.
 
 ```
 "ad-list": [ 
@@ -77,4 +76,3 @@ El siguiente bloque de código define el objeto JSON para la matriz de lista de 
 | `url` | La dirección URL del contenido del anuncio se asigna al campo URL en `com.adobe.mediacore.timeline.advertising.Ad`. |
 | `duration` | La duración del anuncio se asigna al campo de duración en `com.adobe.mediacore.timeline.advertising.Ad`. |
 | `tag` | Una cadena de descripción. |
-

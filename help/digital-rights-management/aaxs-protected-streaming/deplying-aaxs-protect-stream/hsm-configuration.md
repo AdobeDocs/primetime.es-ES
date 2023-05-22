@@ -2,20 +2,19 @@
 title: Configuración de HSM
 description: Configuración de HSM
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a3e5759e-1419-4519-bcd7-de83364a48f8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
 
 ---
 
-
 # Configuración de HSM {#hsm-configuration}
 
-Si decide utilizar un HSM para almacenar sus credenciales de servidor, debe cargar las claves privadas y los certificados en el HSM y crear un archivo de configuración [!DNL pkcs11.cfg]. Este archivo debe encontrarse en el directorio *LicenseServer.ConfigRoot*. Consulte el directorio [!DNL Adobe Access Server for Protected Streaming/configs] en el DVD de acceso al Adobe para ver un archivo de configuración PKCS11 de ejemplo. Para obtener información sobre el formato de [!DNL pkcs11.cfg], consulte la documentación del proveedor Sun PKCS11.
+Si decide utilizar un HSM para almacenar las credenciales del servidor, debe cargar las claves privadas y los certificados en el HSM y crear un [!DNL pkcs11.cfg] archivo de configuración. Este archivo debe encontrarse en el *LicenseServer.ConfigRoot* directorio. Consulte la [!DNL Adobe Access Server for Protected Streaming/configs] en el DVD de Adobe Access para un archivo de configuración PKCS11 de ejemplo. Para obtener información sobre el formato de [!DNL pkcs11.cfg], consulte la documentación del proveedor de Sun PKCS11.
 
-Para comprobar que el archivo de configuración HSM y Sun PKCS11 está configurado correctamente, puede utilizar el siguiente comando desde el directorio en el que se encuentra el archivo [!DNL pkcs11.cfg] ( [!DNL keytool] está instalado con Java JRE y JDK):
+Para comprobar que el archivo de configuración de HSM y Sun PKCS11 está configurado correctamente, puede utilizar el siguiente comando desde el directorio donde se encuentra el [!DNL pkcs11.cfg] el archivo se encuentra en ( [!DNL keytool] se instala con Java (JRE y JDK):
 
 ```
 keytool -keystore NONE -storetype PKCS11 -providerClass sun.security.pkcs11.SunPKCS11 
@@ -26,4 +25,4 @@ Si ve sus credenciales en la lista, el HSM está configurado correctamente y el 
 
 >[!NOTE]
 >
->El servidor de acceso a Adobe para transmisión protegida actualmente no admite HSM en sistemas operativos Windows de 64 bits.
+>En la actualidad, el servidor de acceso a Adobe para streaming protegido no admite HSM en sistemas operativos Windows de 64 bits.

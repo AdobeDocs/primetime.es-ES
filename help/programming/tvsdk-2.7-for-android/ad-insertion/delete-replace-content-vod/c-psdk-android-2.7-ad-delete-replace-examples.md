@@ -1,20 +1,19 @@
 ---
-description: A continuación se muestran algunos ejemplos del proceso para eliminar y reemplazar publicidades.
-title: Ejemplos para eliminar y reemplazar publicidades
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Estos son algunos ejemplos del proceso para eliminar y reemplazar anuncios.
+title: Ejemplos de eliminación y sustitución de anuncios
+exl-id: a6fdb86e-507e-4a65-bb32-928e216c6e9a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
+# Ejemplos de eliminación y sustitución de anuncios {#examples-to-delete-and-replace-ads}
 
-# Ejemplos para eliminar y reemplazar anuncios {#examples-to-delete-and-replace-ads}
+Estos son algunos ejemplos del proceso para eliminar y reemplazar anuncios.
 
-A continuación se muestran algunos ejemplos del proceso para eliminar y reemplazar publicidades.
-
-Este es un ejemplo del uso de `DELETE_RANGE`:
+Este es un ejemplo de uso de `DELETE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means,  
@@ -43,7 +42,7 @@ config.setCustomRangeMetadata(customRangeMetadata);
 mediaPlayer.replaceCurrentResource(mediaResource, config);
 ```
 
-Este es un ejemplo del uso de `REPLACE_RANGE`:
+Este es un ejemplo de uso de `REPLACE_RANGE`:
 
 ```java
 // Assume that the 3 timerange specs are obtained through external means, like 
@@ -76,4 +75,3 @@ config.setCustomRangeMetadata(customRangeMetadata);
 // prepare the content for playback by calling replaceCurrentResource 
 mediaPlayer.replaceCurrentResource(mediaResource, config);
 ```
-

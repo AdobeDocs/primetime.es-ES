@@ -1,22 +1,21 @@
 ---
 description: Puede crear un reproductor compatible con Browserify utilizando los archivos JS proporcionados por el TVSDK del explorador.
 title: Reproductor compatible con Browserify
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3e9751d8-7a7e-465b-8d46-d07e4ccb1f5b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
 
 ---
 
-
 # Información general {#browserify-compatible-player-overview}
 
 Puede crear un reproductor compatible con Browserify utilizando los archivos JS proporcionados por el TVSDK del explorador.
 
-El TVSDK del explorador proporciona dos archivos JS compatibles con Browserify. Una es para uso con el módulo AdobePSDK; esto es para desarrollar aplicaciones sin el marco de IU. El otro es para uso con el módulo UI-Framework; devuelve el espacio de nombres PTP que utiliza para escribir aplicaciones mediante el marco de IU.
+El TVSDK del explorador proporciona dos archivos JS compatibles con Browserify. Una es para usar con el módulo AdobePSDK; esta es para desarrollar aplicaciones sin UI-Framework. El otro es para usar con el módulo UI-Framework; devuelve el espacio de nombres PTP que usa para escribir aplicaciones mediante UI-Framework.
 
-Para comenzar con Browserify, ejecute los siguientes comandos de configuración para crear [!DNL final.js] archivos (su archivo de paquete Browserify) dentro de los directorios [!DNL example] en [!DNL samples/browerify/reference] y [!DNL samples/browerify/ui-framework]:
+Para empezar a usar Browserify, ejecute los siguientes comandos de configuración para crear [!DNL final.js] archivos (el archivo del paquete Browserify) dentro de [!DNL example] directorios bajo [!DNL samples/browerify/reference] y [!DNL samples/browerify/ui-framework]:
 
 1. Vaya a [!DNL samples/browserify/reference/build].
 1. Ejecute los siguientes comandos:
@@ -27,4 +26,4 @@ Para comenzar con Browserify, ejecute los siguientes comandos de configuración 
 1. Vaya a [!DNL samples/browserify/ui-framework/build].
 1. Ejecute los mismos comandos que en el paso 2.
 
-Con esta configuración finalizada, puede continuar creando aplicaciones TVSDK compatibles con Browserify basadas en los ejemplos proporcionados con TVSDK.
+Con esta configuración completada, puede continuar con la creación de aplicaciones TVSDK compatibles con Browserify basadas en los ejemplos proporcionados con TVSDK.

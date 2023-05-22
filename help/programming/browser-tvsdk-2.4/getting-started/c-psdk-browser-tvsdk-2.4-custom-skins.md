@@ -1,18 +1,17 @@
 ---
-description: Para utilizar los aspectos personalizados, debe escribir la personalización similar a default-video-controls.css y hacer referencia a esta nueva personalización en el reproductor.
-title: Pieles personalizadas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Para utilizar las máscaras personalizadas, debe escribir la personalización de forma similar a default-video-controls.css y hacer referencia a esta nueva personalización en el reproductor.
+title: Apariencias personalizadas
+exl-id: 4d627545-942d-4883-a010-afddcffb8dd5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
 
 ---
 
+# Apariencias personalizadas{#custom-skins}
 
-# Pieles personalizadas{#custom-skins}
-
-Para utilizar los aspectos personalizados, debe escribir la personalización similar a default-video-controls.css y hacer referencia a esta nueva personalización en el reproductor.
+Para utilizar las máscaras personalizadas, debe escribir la personalización de forma similar a default-video-controls.css y hacer referencia a esta nueva personalización en el reproductor.
 
 Por ejemplo, puede utilizar una de las siguientes opciones:
 
@@ -21,31 +20,30 @@ Por ejemplo, puede utilizar una de las siguientes opciones:
 
 Puede realizar los siguientes tipos de cambios:
 
-* Color de primer plano de botones y texto
+* Color de primer plano de los botones y el texto
 
-   Todos los controles que tienen un primer plano utilizan la clase `vid-skin-fgcolor`. Para cambiar el primer plano de todos los controles, repita todos los elementos con la clase `vid-skin-fgcolor` y especifique el color deseado.
-* Color de fondo de botones y texto
+   Todos los controles que tienen un primer plano utilizan el `vid-skin-fgcolor` clase. Para cambiar el primer plano de todos los controles, recorra en iteración todos los elementos con el `vid-skin-fgcolor` y especifique el color que desee.
+* Color de fondo de los botones y el texto
 
-   Todos los controles que tienen un primer plano utilizan la clase `vid-skin-bgcolor`. Para cambiar el primer plano de todos los controles, repita todos los elementos con la clase `vid-skin-bgcolor` y especifique el color deseado.
+   Todos los controles que tienen un primer plano utilizan el `vid-skin-bgcolor` clase. Para cambiar el primer plano de todos los controles, recorra en iteración todos los elementos con `vid-skin-bgcolor` y especifique el color que desee.
 * Forma del cabezal de reproducción
 
-   El cabezal de reproducción puede ser cuadrado o redondo. Para cambiar el cabezal de reproducción, agregue la clase `square` o `round` al elemento `playhead`.
-* Estilo de los giros de almacenamiento en búfer
+   El cabezal de reproducción puede ser cuadrado o redondo. Para cambiar el cabezal de reproducción, añada `square` o `round` clase a `playhead` Elemento.
+* Estilo de los hiladores de almacenamiento en búfer
 
-   El reproductor de referencia proporciona los siguientes estilos de giros que se pueden mostrar cuando el reproductor almacena en el búfer el contenido:
+   El reproductor de referencia proporciona los siguientes estilos de giros que se pueden mostrar como contenido de búfer del reproductor:
 
-   * Texto de superposición ( `overlay-text`)
+   * Overlay-text ( `overlay-text`)
    * Girador rectangular ( `spinner`)
    * Señal ( `signal`)
    * Barras verticales ( `vertical`)
 
       >[!TIP]
       >
-      >Para utilizar cualquiera de los giros de almacenamiento en búfer, debe añadir la clase en el elemento de almacenamiento en búfer y superposición. Por ejemplo, para utilizar `overlay-text`, agregue las siguientes líneas en el archivo `BufferOverlay.js`:
+      >Para utilizar cualquiera de los giros de almacenamiento en búfer, debe agregar la clase en el elemento buffering-overlay. Por ejemplo, para utilizar `overlay-text`, agregue las siguientes líneas en la `BufferOverlay.js` archivo:
       >
       >
       ```js
       >var overlay = document.getElementById("buffering-overlay"); 
       >overlay.classList.add ("spinner");
       >```
-

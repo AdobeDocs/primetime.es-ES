@@ -1,55 +1,53 @@
 ---
-description: 'TVSDK para Android incluye una serie de funciones y proporciona las siguientes funciones principales '
+description: TVSDK para Android incluye una variedad de funciones y proporciona las siguientes funciones principales
 title: Funciones de TVSDK de Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7df03752-98aa-4317-8e41-a284472cabbb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%
 
 ---
 
-
 # Funciones de TVSDK de Primetime{#primetime-tvsdk-features}
 
-TVSDK para Android incluye una serie de funciones y proporciona las siguientes funciones principales:
+TVSDK para Android incluye una variedad de funciones y proporciona las siguientes funciones principales:
 
-* Reproducción de VOD y de directo/lineal
+* Reproducción de VOD y en directo/lineal
 
-   * Administración de la ventana de reproducción, incluidos los métodos que reproducen, detienen, ponen en pausa, buscan y recuperan la posición del cabezal de reproducción
+   * Gestión de la ventana de reproducción, incluidos los métodos de reproducción, detención, pausa, búsqueda y recuperación de la posición del cabezal de reproducción
    * Compatibilidad con la reproducción de eventos completos
-   * Subtítulos (608, 708, WebVTT) y formas de audio alternativas para aumentar la accesibilidad
-   * Control del estilo del texto en los rótulos
-   * Capacidad DVR , rebobinado rápido/rápido (modo de reproducción de trucos)
+   * Subtítulos (608, 708, WebVTT) y formas alternativas de audio para una mayor accesibilidad
+   * Control del estilo del texto en los subtítulos
+   * Capacidad DVR, avance rápido/rebobinado rápido (modo truco-reproducción)
    * Lógica de velocidad de bits adaptable (ABR) y configuración inicial de los controles ABR
    * Compatibilidad con failover de manifiesto activo
    * Búferes de reproducción ajustables
-   * Duración del fragmento, tamaño y compatibilidad con seguimiento de tiempo de descarga
+   * Compatibilidad con seguimiento de duración, tamaño y tiempo para la descarga de fragmentos
 
 * Publicidad
 
    * VPAID 2.0
    * Vinculación de anuncios del lado del cliente
 
-      * Inserción parcial de Ad-Break, que permite una experiencia parecida a la TV de poder unirse en medio de un anuncio.
-      * Inserción de publicidad perfecta, incluida la compatibilidad con VAST/VMAP
+      * Inserción parcial de desglose de anuncios, que permite una experiencia similar a la de una TV de poder unirse en medio de un anuncio.
+      * Inserción de anuncios sin problemas, incluida la compatibilidad con VAST/VMAP
       * Compatibilidad con etiquetas de referencia personalizadas para anuncios
-      * Compatibilidad para marcar, reemplazar y eliminar anuncios C3
-      * Flujo de trabajo personalizable de contenido/inserción de publicidad, incluida la señalización de bloqueo
+      * Compatibilidad para marcar, reemplazar y eliminar anuncios de C3
+      * Flujo de trabajo personalizable de inserción de contenido/publicidad, incluida la señalización de interrupción
 
 * Protección de contenido
 
-   * Acceso a servicios relacionados con la administración de derechos digitales (DRM)
-   * Reproducción de transmisiones HLS sin encriptar o con transmisión en directo HTTP protegida (PHLS)
-   * Control de salida basado en resolución, basado en la directiva DRM
+   * Acceso a servicios relacionados con la gestión de derechos digitales (DRM)
+   * Reproducción de flujos HLS sin cifrar o con flujo HTTP en directo protegido (PHLS)
+   * Control de salida basado en resolución, basado en la política de DRM
 
-* Seguimiento de anuncios y vídeos
+* Seguimiento de vídeos y anuncios
 
    * Seguimiento de eventos de QoS
-   * Notificaciones que ayudan a TVSDK y a su aplicación a comunicarse de forma asíncrona sobre el estado de los vídeos, anuncios y otros elementos, así como sobre la actividad de registro
+   * Notificaciones que ayudan a TVSDK y a su aplicación a comunicarse de forma asíncrona sobre el estado de los vídeos, los anuncios y otros elementos, y también sobre la actividad de registro
 
 * Registro
 
    * Registro de Debug
    * Compatibilidad de seguimiento para la duración, el tamaño y el tiempo de descarga del fragmento
-

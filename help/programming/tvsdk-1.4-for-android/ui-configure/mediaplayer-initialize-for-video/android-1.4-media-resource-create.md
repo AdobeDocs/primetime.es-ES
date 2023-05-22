@@ -1,20 +1,19 @@
 ---
-description: Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource con información sobre el contenido de vídeo y cargue el recurso de medios. La clase MediaResource representa el contenido que debe cargar la instancia de MediaPlayer.
-title: Creación de un recurso de medios
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource con información sobre el contenido de vídeo y cargue el recurso de medios. La clase MediaResource representa el contenido que carga la instancia de MediaPlayer.
+title: Creación de un recurso multimedia
+exl-id: cda70f91-7f30-4e37-9dfa-888b707e3d61
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
 
 ---
 
+# Creación de un recurso multimedia {#create-a-media-resource}
 
-# Crear un recurso de medios {#create-a-media-resource}
+Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource con información sobre el contenido de vídeo y cargue el recurso de medios. La clase MediaResource representa el contenido que carga la instancia de MediaPlayer.
 
-Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource con información sobre el contenido de vídeo y cargue el recurso de medios. La clase MediaResource representa el contenido que debe cargar la instancia de MediaPlayer.
-
-1. Cree un `MediaResource` pasando información sobre el medio al constructor `MediaResource`.
+1. Crear un `MediaResource` al pasar información sobre los medios a `MediaResource` constructor.
 
    <table id="table_DD0D5D9129D54F73881399B9B4FF546A"> 
     <thead> 
@@ -30,25 +29,25 @@ Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource c
     </tr> 
     <tr> 
     <td colname="col1"> <p>type </p> </td> 
-    <td colname="col2"> <p>Uno de los siguientes miembros de la enumeración <span class="codeph"> MediaResource.Type </span> que corresponde al tipo de archivo indicado: 
+    <td colname="col2"> <p>Uno de los siguientes miembros del <span class="codeph"> MediaResource.Type </span> enumeración que corresponde al tipo de archivo indicado: 
     <ul id="ul_72636C41CA7E4538A3BE11A79E0282FC"> 
-    <li id="li_070960200DEB40E992C58FCB8909AEA3"> <span class="codeph"> HLS  </span> - M3U8 </li> 
+    <li id="li_070960200DEB40E992C58FCB8909AEA3"> <span class="codeph"> HLS </span> - M3U8 </li> 
     </ul> </p> </td> 
     </tr> 
     <tr> 
-    <td colname="col1"> <p>metadata </p> </td> 
-    <td colname="col2"> <p>Una instancia de la clase <span class="codeph"> Metadata </span> , que puede contener información personalizada sobre el contenido que se va a cargar. </p> <p>Algunos ejemplos de contenido son contenido alternativo o de anuncio para colocarlo dentro del contenido principal. Si utiliza publicidad, configure <span class="codeph"> AuditudeSettings </span>. Para obtener más información, consulte <a href="../../../tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata-set-up.md" format="dita" scope="local"> Metadatos del Ad Insertion </a>. </p> </td> 
+    <td colname="col1"> <p>metadatos </p> </td> 
+    <td colname="col2"> <p>Una instancia de <span class="codeph"> Metadatos </span> , que puede contener información personalizada sobre el contenido que se va a cargar. </p> <p>Algunos ejemplos de contenido son contenido alternativo o publicitario para colocar dentro del contenido principal. Si utiliza publicidad, configure <span class="codeph"> AuditudeSettings </span>. Para obtener más información, consulte <a href="../../../tvsdk-1.4-for-android/ad-insertion/ad-insertion-metadata/android-1.4-ad-insertion-metadata-set-up.md" format="dita" scope="local"> Metadatos del Ad Insertion </a>. </p> </td> 
     </tr> 
     </tbody> 
     </table>
 
    >[!IMPORTANT]
    >
-   >TVSDK admite la reproducción solo para tipos de contenido específicos. Si intenta cargar cualquier otro tipo de contenido, TVSDK envía un evento de error.
+   >TVSDK solo admite la reproducción de tipos de contenido específicos. Si intenta cargar cualquier otro tipo de contenido, TVSDK envía un evento de error.
    >
-   >Para el contenido de vídeo bajo demanda (VOD) de MP4, TVSDK no admite la reproducción mediante trucos, el flujo de velocidad de bits adaptable (ABR), la inserción de anuncios, los subtítulos cerrados o DRM.
+   >Para el contenido de MP4 vídeo bajo demanda (VOD), TVSDK no admite trucos, flujo de velocidad de bits adaptable (ABR), inserción de publicidad, subtítulos opcionales o DRM.
 
-   El siguiente código crea una instancia `MediaResource`:
+   El siguiente código crea un `MediaResource` instancia:
 
    ```java
    try { 
@@ -66,14 +65,14 @@ Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource c
 
    >[!TIP]
    >
-   >En este punto, puede utilizar `MediaResource` descriptores de acceso (captadores) para examinar el tipo, la dirección URL y los metadatos del recurso.
+   >En este punto, puede utilizar `MediaResource` descriptores de acceso (getters) para examinar el tipo, la dirección URL y los metadatos del recurso.
 
 1. Cargue el recurso de medios mediante lo siguiente:
 
-   * La instancia de MediaPlayer.
+   * Su instancia de MediaPlayer.
 
-      Para obtener más información, consulte [Carga de un recurso de medios en MediaPlayer](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md).
-   * A `MediaPlayerItemLoader` Para obtener más información, consulte [Carga de un recurso de medios mediante MediaPlayerItemLoader](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md).
+      Para obtener más información, consulte [Cargar un recurso multimedia en MediaPlayer](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md).
+   * A `MediaPlayerItemLoader` Para obtener más información, consulte [Cargar un recurso multimedia mediante MediaPlayerItemLoader](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md).
    >[!IMPORTANT]
    >
-   >No cargue el recurso de medios en un subproceso en segundo plano. La mayoría de las operaciones de TVSDK deben ejecutarse en el subproceso principal y ejecutarlas en un subproceso en segundo plano puede provocar que la operación arroje un error y salga.
+   >No cargue el recurso multimedia en un subproceso en segundo plano. La mayoría de las operaciones de TVSDK deben ejecutarse en el subproceso principal, y ejecutarlas en un subproceso en segundo plano puede provocar que la operación genere un error y salga.

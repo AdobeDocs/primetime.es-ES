@@ -1,33 +1,32 @@
 ---
-description: El audio alternativo o de enlace tardío le permite conmutar entre las pistas de audio disponibles para una pista de vídeo. De este modo, los usuarios pueden seleccionar una pista de idioma cuando se reproduce el vídeo.
-title: Alternar pistas de audio en la lista de reproducción
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: El audio alternativo o de enlace tardío le permite alternar entre las pistas de audio disponibles para una pista de vídeo. De este modo, los usuarios pueden seleccionar una pista de idioma cuando se reproduce el vídeo.
+title: Pistas de audio alternativas en la lista de reproducción
+exl-id: d8d8c122-5837-4f0e-934f-a3d6e1b037c8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
 
 ---
 
-
 # Pistas de audio alternativas en la lista de reproducción {#section_BC8C1C74A5A24A8CA68C1E7E721EE742}
 
-La lista de reproducción de un vídeo puede especificar un número ilimitado de pistas de audio alternativas para el contenido principal del vídeo. Por ejemplo, es posible que desee agregar distintos idiomas al contenido de vídeo o permitir que el usuario cambie entre distintas pistas de su dispositivo mientras se reproduce el contenido.
+La lista de reproducción de un vídeo puede especificar un número ilimitado de pistas de audio alternativas para el contenido de vídeo principal. Por ejemplo, es posible que desee añadir diferentes idiomas al contenido de vídeo o permitir al usuario cambiar entre diferentes pistas en su dispositivo mientras se reproduce el contenido.
 
-Las pistas de audio alternativas, o el audio de enlace tardío, permiten a los usuarios cambiar entre varias pistas de idiomas para flujos de vídeo HTTP (en directo/lineal y VOD), y no es necesario modificar, duplicar ni volver a empaquetar el vídeo para cada pista de audio. Puede proporcionar varias pistas de idioma para un recurso de vídeo antes o después del empaquetado inicial del recurso.
+Las pistas de audio alternativas, o el audio de enlace en tiempo real, permiten a los usuarios cambiar entre pistas de varios idiomas para secuencias de vídeo HTTP (directo/lineal y VOD), y no es necesario modificar, duplicar ni volver a empaquetar el vídeo para cada pista de audio. Puede proporcionar varias pistas de idioma para un recurso de vídeo antes o después del empaquetado inicial del recurso.
 
 >[!TIP]
 >
->Para que el audio alternativo se mezcle con la pista de vídeo del medio principal, las marcas de tiempo de la pista alternativa deben coincidir con las marcas de tiempo del audio en la pista principal.
+>Para que el audio alternativo se mezcle con la pista de vídeo del medio principal, las marcas de tiempo de la pista alternativa deben coincidir con las marcas de tiempo del audio de la pista principal.
 
-Los siguientes requisitos se aplican si utiliza pistas de audio alternativas e incorpora publicidad:
+Si utiliza pistas de audio alternativas e incorpora publicidad, se aplican los siguientes requisitos:
 
-* Si el contenido principal tiene pistas de audio alternativas, los anuncios deben tener al menos un flujo de solo audio.
-* La duración de cada segmento del flujo de solo audio de un anuncio debe ser igual a la duración del segmento del flujo de vídeo de un anuncio.
+* Si el contenido principal tiene pistas de audio alternativas, los anuncios deben tener al menos una secuencia de solo audio.
+* Cada duración de segmento del flujo de solo audio de un anuncio debe ser igual a la duración de segmento del flujo de vídeo de un anuncio.
 
-La pista de audio principal se incluye en la colección de pistas de audio con la etiqueta `default`. Los metadatos de los flujos de audio alternativos se incluyen en la lista de reproducción de las etiquetas `#EXT-X-MEDIA` con `TYPE=AUDIO`.
+La pista de audio principal se incluye en la colección de pistas de audio con el `default` etiqueta. Los metadatos de los flujos de audio alternativos se incluyen en la lista de reproducción de `#EXT-X-MEDIA` etiquetas con `TYPE=AUDIO`.
 
-Por ejemplo, un manifiesto M3U8 que especifica varios flujos de audio alternativos puede tener este aspecto:
+Por ejemplo, un manifiesto M3U8 que especifica varios flujos de audio alternativos podría tener el siguiente aspecto:
 
 ```
 #EXTM3U 

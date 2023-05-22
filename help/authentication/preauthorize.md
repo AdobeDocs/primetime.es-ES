@@ -1,33 +1,33 @@
 ---
-title: Preautorización de la API de iOS/tvOS
-description: Preautorización de la API de iOS/tvOS
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Autorización previa de API de iOS/tvOS
+description: Autorización previa de API de iOS/tvOS
+exl-id: 79c596a4-0e38-4b6c-bb85-f97c6af45ed8
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '391'
 ht-degree: 0%
 
 ---
 
-
 # Preautorizar {#preauthorize}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-La API de preautorización se puede utilizar para obtener una decisión de preautorización para uno o varios recursos, de este modo la aplicación puede implementar sugerencias de interfaz de usuario o el filtrado de contenido.
-
->[!IMPORTANT]
->
->La API de autorización **must** se utilizará antes de conceder al usuario acceso a los recursos especificados.
-
-Si el resultado de la respuesta de API de preautorización contiene uno o más recursos con una decisión de preautorización denegada, se puede incluir información de error adicional **(véase la nota siguiente)** para cada recurso afectado.
+La API de preautorización se puede utilizar para obtener una decisión de preautorización para uno o más recursos, de este modo la aplicación puede implementar sugerencias de interfaz de usuario o filtrado de contenido.
 
 >[!IMPORTANT]
 >
->La función mejorada de informes de errores que agrega información adicional de errores para decisiones de preautorización denegadas está disponible bajo solicitud, ya que debe habilitarse en el lado de la configuración de autenticación de Adobe Primetime.
+>La API de autorización **debe** se utilizará antes de conceder al usuario acceso a los recursos especificados.
 
-En caso de que la solicitud de API de preautorización no se pudiera atender debido a un error del SDK de autenticación de Adobe Primetime o en caso de que se produzca un error en los servicios de autenticación de Adobe Primetime, se incluirá una información de error adicional (independientemente de la configuración anterior) y no se incluirán recursos como parte del resultado de respuesta de API de preautorización.
+Si el resultado de la respuesta de API de preautorización contiene uno o más recursos con una decisión de preautorización denegada, se puede incluir información de error adicional **(consulte la nota siguiente)** para cada recurso afectado.
+
+>[!IMPORTANT]
+>
+>La función de informe de errores mejorada que agrega información de error adicional para las decisiones de preautorización denegadas está disponible bajo solicitud, ya que debe habilitarse en el lado de la configuración de autenticación de Adobe Primetime.
+
+En caso de que la solicitud de API de preautorización no se haya podido atender debido a un error del SDK de autenticación de Adobe Primetime o en caso de que se produzca un error de los servicios de autenticación de Adobe Primetime, se incluirá una información de error adicional (independientemente de la configuración anterior) y no se incluirán recursos como parte del resultado de la respuesta de API de preautorización.
 
 </br>
 
@@ -38,16 +38,16 @@ En caso de que la solicitud de API de preautorización no se pudiera atender deb
 
 **Parámetros:**
 
-- PreauthorizationRequest: El objeto de solicitud utilizado para pasar el contenido de solicitud de API;
-- AccessEnablerCallback: El objeto callback utilizado para devolver la respuesta de API;
-- PreauthorizedResponse: El objeto Response que se utiliza para devolver el contenido de respuesta de la API;
+- PreauthorizeRequest: el objeto de solicitud utilizado para pasar el contenido de la solicitud de API;
+- AccessEnablerCallback: el objeto de devolución de llamada utilizado para devolver la respuesta de la API;
+- PreauthorizeResponse: objeto de respuesta utilizado para devolver el contenido de respuesta de API;
 
  
 </br>
 
 ## `class PreauthorizeRequest`{#androidpreauthorizerequest}
 
-### **clase PreauthorizedRequest.Builder**
+### **class PreauthorizeRequest.Builder**
 
 ```
     ///
@@ -111,7 +111,7 @@ En caso de que la solicitud de API de preautorización no se pudiera atender deb
 ```
  
 
-## **enum PreauthorizedRequest.Feature**
+## **enum PreauthorizeRequest.Feature**
 
 ```
     ///
@@ -161,19 +161,19 @@ En caso de que la solicitud de API de preautorización no se pudiera atender deb
 
 ### Ejemplos:
 
-Esta sección resalta la estructura JSON de algunos posibles objetos PreauthorizedResponse .
+En esta sección se resalta la estructura JSON de algunos posibles objetos PreauthorizeResponse.
 
 >[!IMPORTANT]
 >
->Los JSON presentados por los siguientes ejemplos solo son accesibles a través de las clases de modelos mostradas en este documento. De lo contrario, no podrá acceder a las propiedades de estos JSON a través de métodos públicos.
+>Los JSON presentados por los siguientes ejemplos solo son accesibles a través de las clases de modelo que se muestran en este documento. No podrá acceder a las propiedades de dichos JSON a menos que se utilice el medio de métodos públicos.
 
 >[!IMPORTANT]
 >
->La lista de posibles errores adicionales recuperados a través del medio de la función mejorada de informes de errores se documenta en [Informes de errores avanzados](/help/authentication/enhanced-error-codes.md).
+>La lista de posibles errores adicionales recuperados a través de la función de informe de errores mejorada se documenta en [Informes de error avanzados](/help/authentication/enhanced-error-codes.md).
 
 #### Correcto
 
-Todos los recursos solicitados tienen una decisión positiva de preautorización
+Todos los recursos solicitados están teniendo una decisión positiva de autorización previa
 
 ```JSON
     {
@@ -195,7 +195,7 @@ Todos los recursos solicitados tienen una decisión positiva de preautorización
 ```
  
 
-Uno o varios recursos tienen una decisión de preautorización denegada y la función de informe de errores mejorada no está habilitada en la configuración de autenticación de Adobe Primetime
+Uno o más recursos tienen denegada una decisión de preautorización y la función de informe de errores mejorada no está habilitada en la configuración de autenticación de Adobe Primetime
 
 ```JSON
     {
@@ -218,7 +218,7 @@ Uno o varios recursos tienen una decisión de preautorización denegada y la fun
 ```
  
 
-Uno o más recursos tienen una decisión de preautorización denegada y la función de informe de errores mejorada está habilitada en la configuración de autenticación de Adobe Primetime
+Uno o más recursos tienen denegada una decisión de preautorización y la función de informe de errores mejorada está habilitada en la configuración de autenticación de Adobe Primetime
 
 ```JSON
     {
@@ -253,7 +253,7 @@ Uno o más recursos tienen una decisión de preautorización denegada y la funci
 
  
 
-Error de los servicios de autenticación de Adobe Primetime al realizar la solicitud de API de preautorización
+Los servicios de autenticación de Adobe Primetime experimentaron un error al atender la solicitud de API de preautorización
 
 ```JSON
     {
@@ -271,9 +271,9 @@ Error de los servicios de autenticación de Adobe Primetime al realizar la solic
 ```
  
 
-#### Fallo
+#### Error
 
-El SDK de autenticación de Adobe Primetime produce un error al realizar la solicitud de API de preautorización
+El SDK de autenticación de Adobe Primetime produce un error al atender la solicitud de API de preautorización
 
 ```JSON
     {
@@ -321,7 +321,7 @@ El SDK de autenticación de Adobe Primetime produce un error al realizar la soli
 
 </br>
 
-## **estado de la clase** {#status}
+## **Estado de clase** {#status}
 
 ```
     ///
@@ -377,7 +377,7 @@ El SDK de autenticación de Adobe Primetime produce un error al realizar la soli
 
 <br>
 
-## **decisión de clase** {#decision}
+## **decisión colectiva** {#decision}
 
 ```
     ///
@@ -406,7 +406,7 @@ El SDK de autenticación de Adobe Primetime produce un error al realizar la soli
 </br>
 
 
-## **Código de muestra** {#sample}
+## **Código de ejemplo** {#sample}
 
 ```
 let resources: [String] = ["resource_1", "resource_2", "resource_3"];

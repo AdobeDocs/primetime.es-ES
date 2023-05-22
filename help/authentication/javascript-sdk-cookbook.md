@@ -1,27 +1,27 @@
 ---
-title: Guía de SDK para JavaScript
-description: Guía de SDK para JavaScript
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Guía del SDK para JavaScript
+description: Guía del SDK para JavaScript
+exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
 
 ---
 
-
-# Guía de SDK para JavaScript {#javascript-sdk-cookbook}
+# Guía del SDK para JavaScript {#javascript-sdk-cookbook}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 ## Introducción (#intro)
 
-En este documento se describen los flujos de trabajo de asignación de derechos que implementa la aplicación de nivel superior de un programador para una integración de JavaScript con el servicio de autenticación de Adobe Primetime. Los vínculos a la referencia de la API de JavaScript se incluyen en todas las secciones.
+En este documento se describen los flujos de trabajo de derechos que implementa la aplicación de nivel superior de un programador para una integración de JavaScript con el servicio de autenticación de Adobe Primetime. Los vínculos a la Referencia de la API de JavaScript se incluyen en.
 
-Tenga en cuenta también que la variable [Información relacionada](#related) incluye un vínculo a un conjunto de ejemplos de código JavaScript.
+Tenga en cuenta también que la variable [Información relacionada](#related) Esta sección incluye un vínculo a un conjunto de ejemplos de código JavaScript.
 
-## Flujos de derechos (#rights)
+## Flujos de derecho (#entitlement)
 
 1. [Requisitos previos](#prereq)
 2. [Flujo de inicio](#startup)
@@ -34,32 +34,32 @@ Tenga en cuenta también que la variable [Información relacionada](#related) in
 ![](assets/javascript-flows.png)
 
 
-## Requisitos previos(#preereq)
+## Requisitos previos(#prereq)
 
 **Dependencias:**
 
-- Biblioteca de autenticación de Adobe Primetime (AccessEnabler), trabaje con el administrador de cuentas de autenticación de Adobe Primetime para arreglarlo.
-- requestorId de autenticación válida de Adobe Primetime, trabaje con el administrador de cuentas de autenticación de Adobe Primetime para solucionarlo.
+- Biblioteca de autenticación de Adobe Primetime (AccessEnabler), colabore con el administrador de cuentas de autenticación de Adobe Primetime para organizarlo.
+- ID de solicitante de autenticación de Adobe Primetime válido, colabore con el administrador de cuentas de autenticación de Adobe Primetime para organizarlo.
 
-Cree sus funciones de llamada de retorno:
+Cree sus funciones de devolución de llamada:
 
 - `entitlementLoaded`
 
 </br>
 
-**Déclencheur:** AccessEnabler se ha cargado y ha finalizado la inicialización.
+**Déclencheur:** AccessEnabler se ha cargado y terminado de inicializar.
 
 - `displayProviderDialog(mvpds)`
 
-   **Déclencheur:** `getAuthentication(),` solo si el usuario no ha seleccionado un proveedor (un MVPD) y aún no está autenticado El parámetro mvpds es una matriz de proveedores disponibles para el usuario.
+   **Déclencheur:** `getAuthentication(),` sólo si el usuario no ha seleccionado ningún proveedor (una MVPD) y aún no está autenticado. El parámetro mvpds es una matriz de proveedores disponibles para el usuario.
 
 - `setAuthenticationStatus(status, errorcode)`
 
    **Déclencheur:**
    - `checkAuthentication()`cada vez.
-   - `getAuthentication()` solo si el usuario ya está autenticado y ha seleccionado un proveedor.
+   - `getAuthentication()` solo si el usuario ya se ha autenticado y ha seleccionado un proveedor.
 
-   El estado devuelto es correcto o fallido; el código de error describe el tipo de error.
+   El estado devuelto es éxito o error; el código de error describe el tipo de error.
 
 - `createIFrame(width, height)`
 
@@ -67,19 +67,19 @@ Cree sus funciones de llamada de retorno:
 
    >[!NOTE]
    >
-   >Un proveedor está configurado para representar su pantalla de autenticación como redireccionamiento o en un iFrame, y el programador debe tener en cuenta ambos.
+   >Un proveedor está configurado para procesar su pantalla de autenticación como redireccionamiento o en un iFrame, y el programador debe tener en cuenta ambos.
 
 - `sendTrackingData(event, data)`
 
-   **Déclencheur:** `checkAuthentication(), getAuthentication(),checkAuthorization(), getAuthorization(), setSelectedProvider()`.  La variable `event` indica qué evento de asignación de derechos se ha producido; el `data` es una lista de valores relacionados con el evento. 
+   **Déclencheur:** `checkAuthentication(), getAuthentication(),checkAuthorization(), getAuthorization(), setSelectedProvider()`.  El `event` indica qué evento de asignación de derechos se produjo; el parámetro `data` parámetro es una lista de valores relacionados con el evento. 
 - `setToken(token, resource)`
 
-   **Déclencheur:** `checkAuthorization()`y `getAuthorization()` después de una autorización correcta para ver un recurso.   La variable `token` es el token de contenido breve; el `resource` es el contenido que el usuario está autorizado a ver.
+   **Déclencheur:** `checkAuthorization()`y `getAuthorization()` después de una autorización correcta para ver un recurso.   El `token` parámetro es el token de medios de corta duración; el `resource` parámetro es el contenido que el usuario tiene autorización para ver.
 
 - `tokenRequestFailed(resource, code, description)`
 
-   **Déclencheur:**`checkAuthorization()` y`getAuthorization()`  después de una autorización incorrecta.\
-   La variable `resource` es el contenido que el usuario estaba intentando ver; el `code` es el código de error que indica qué tipo de error se ha producido; el `description` describe el error asociado al código de error.
+   **Déclencheur:**`checkAuthorization()` y`getAuthorization()`  después de una autorización fallida.\
+   El `resource` parámetro es el contenido que el usuario intentaba ver; la variable `code` parámetro es el código de error que indica qué tipo de error se produjo; la variable `description` describe el error asociado con el código de error.
 
 - `selectedProvider(mvpd)`
 
@@ -88,12 +88,12 @@ Cree sus funciones de llamada de retorno:
 - `setMetadataStatus(metadata, key, arguments)`
 
    **Déclencheur:** `getMetadata().`\
-   La variable `metadata` proporciona los datos específicos solicitados; el parámetro key es la clave utilizada en la variable `getMetadata()`solicitud; y `arguments` es el mismo diccionario que se pasó a `getMetadata()`.
+   El `metadata` proporciona los datos específicos solicitados; el parámetro clave es la clave utilizada en el `getMetadata()`solicitud; y la `arguments` El parámetro es el mismo diccionario que se pasó a `getMetadata()`.
 
 
 ## 2. Flujo de inicio
 
-**I. Carga del JavaScript de AccessEnabler:**
+**I. Cargue el JavaScript de AccessEnabler:**
 
 **Para el perfil de ensayo**
 
@@ -105,7 +105,7 @@ src="https://entitlement.auth-staging.adobe.com/entitlement/v4/AccessEnabler.js"
 
 o...
 
-**Para perfil de producción**
+**Para el perfil de producción**
 
 ```JSON
 <script type="text/javascript"         
@@ -113,17 +113,17 @@ src="https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js">
 </script>"
 ```
 
-**Déclencheur:** Cuando se completa la inicialización, la autenticación de Adobe Primetime llama a su `entitlementLoaded()` función de llamada de retorno. Este es el punto de entrada a la comunicación de su aplicación con AccessEnabler. 
+**Déclencheur:** Una vez finalizada la inicialización, la autenticación de Adobe Primetime llama a su `entitlementLoaded()` función de llamada de retorno. Este es el punto de entrada a la comunicación de la aplicación con AccessEnabler. 
 
  
-**II.** La llamada `setRequestor()`establecer la identidad del programador; pase en el `requestorID` y (opcionalmente) una matriz de extremos de autenticación de Adobe Primetime.
+**II.** Llamada `setRequestor()`para establecer la identidad del Programador; pase en el `requestorID` y (opcionalmente) una matriz de puntos finales de autenticación de Adobe Primetime.
 
-**Déclencheur:** Ninguno, pero habilita `displayProviderDialog()` cuando sea necesario.
+**Déclencheur:** Ninguno, pero habilita `displayProviderDialog()` para que se le llame cuando sea necesario.
 
 
-**III.** La llamada `checkAuthentication()` para comprobar si hay una autenticación existente sin iniciar la [flujo de autenticación].  Si esta llamada se realiza correctamente, puede continuar directamente con el `authorization flow`.  Si no es así, vaya a la `authentication flow`.
+**III.** Llamada `checkAuthentication()` para buscar una autenticación existente sin iniciar el [flujo de autenticación].  Si esta llamada se realiza correctamente, puede continuar directamente a la `authorization flow`.  Si no es así, continúe con el `authentication flow`.
 
-**Dependencia:** Una llamada correcta a `setRequestor()`(esta dependencia también se aplica a todas las llamadas posteriores).
+**Dependencia:** Una llamada a correcta a `setRequestor()`(esta dependencia también se aplica a todas las llamadas subsiguientes).
 
  **Déclencheur:** `setAuthenticationStatus()` callback
 
@@ -132,10 +132,10 @@ src="https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js">
 ## 3. Flujo de autenticación</span>
 
 
-**Dependencia:** Una llamada correcta a `setRequestor()`(esta dependencia también se aplica a todas las llamadas posteriores).
+**Dependencia:** Una llamada a correcta a `setRequestor()`(esta dependencia también se aplica a todas las llamadas subsiguientes).
 
 
-La llamada `getAuthentication()` para obtener el estado de autenticación O para almacenar en déclencheur el flujo de autenticación del proveedor.
+Llamada `getAuthentication()` para obtener el estado de autenticación O para almacenar en déclencheur el flujo de autenticación del proveedor.
 
 **Activadores:**
 
@@ -148,42 +148,42 @@ Se llega a la finalización del flujo de autenticación cuando AccessEnabler lla
 
 **Dependencias:**
 
-- Una llamada correcta a `setRequestor()` (esta dependencia también se aplica a todas las llamadas posteriores).
-- ResourceID(s) válidos acordados con los MVPD(s). Tenga en cuenta que los ID de recursos deben ser los mismos que los utilizados en cualquier otro dispositivo o plataforma, y serán los mismos en todos los MVPD.
+- Una llamada a correcta a `setRequestor()` (esta dependencia también se aplica a todas las llamadas subsiguientes).
+- ResourceID(s) válidos acordados con los MVPD. Tenga en cuenta que los ResourceID deben ser los mismos que se usan en cualquier otro dispositivo o plataforma, y serán los mismos en todas las MVPD.
 
-La llamada `getAuthorization()` y pase el ID de recurso para el medio solicitado. Una llamada correcta devolverá un token multimedia corto, que confirma que el usuario está autorizado para ver el contenido multimedia solicitado.
+Llamada `getAuthorization()` y pase el ResourceID para los medios solicitados. Una llamada correcta devolverá un token de medios corto, que confirma que el usuario está autorizado para ver los medios solicitados.
 
-- Si la llamada pasa: El usuario tiene un token AuthN válido y está autorizado para ver el contenido multimedia solicitado.
-- Si la llamada falla: Examine la excepción lanzada para determinar su tipo (AuthN, AuthZ u otro):
-- Si la llamada fue un error AuthN, vuelva a iniciar el flujo AuthN.
-- Si la llamada fue un error AuthZ, el usuario no está autorizado a ver el contenido multimedia solicitado y se debería mostrar algún tipo de mensaje de error al usuario.
-- Si hay algún otro error (error de conexión, error de red, etc.) a continuación, muestre un mensaje de error apropiado al usuario.
+- Si la llamada pasa: El usuario tiene un token de AuthN válido y está autorizado para ver el contenido solicitado.
+- Si la llamada falla: Examine la excepción producida para determinar su tipo (AuthN, AuthZ o algo más):
+- Si la llamada fue un error de AuthN, reinicie el flujo de AuthN.
+- Si la llamada fue un error de AuthZ, el usuario no tiene autorización para ver el contenido solicitado y se debe mostrar algún tipo de mensaje de error al usuario.
+- Si hubo algún otro error (error de conexión, error de red, etc.) a continuación, mostrar un mensaje de error apropiado al usuario.
 
-Utilice el verificador de tokens de medios para validar el shortMediaToken devuelto correctamente `getAuthorization()` llamada a .
+Utilice el verificador de tokens de medios para validar el shortMediaToken devuelto por un correcto `getAuthorization()` llamada.
 
  
-**Dependencia:** El verificador de tokens de medios cortos (incluido con la biblioteca AccessEnabler)
+**Dependencia:** El Comprobador de tokens de medios cortos (incluido en la biblioteca AccessEnabler)
 
-- Si la validación pasa: Mostrar/reproducir el contenido solicitado para el usuario.
-- Si falla: El token AuthZ no es válido, la solicitud de medios debe rechazarse y se debe mostrar un mensaje de error al usuario.
+- Si se supera la validación: mostrar/reproducir el medio solicitado para el usuario.
+- Si falla: El token de AuthZ no era válido, la solicitud de medios debe rechazarse y se debe mostrar un mensaje de error al usuario.
 
 ## 5. Ver flujo de medios (#logout)
 
 - El usuario selecciona los medios que desea ver.
-   - ¿Está protegido el medio?\
-          - La aplicación comprueba si los medios están protegidos:
-      - Si el contenido está protegido, la aplicación inicia el flujo de autorización (AuthZ) anterior.
-      - Si el contenido no está protegido, continúe con el flujo Ver contenido.
+   - ¿Están protegidos los medios?\
+          - Su aplicación comprueba si los medios están protegidos:
+      - Si el medio está protegido, la aplicación inicia el flujo de autorización (AuthZ) anterior.
+      - Si los medios no están protegidos, continúe con el flujo de Ver medios.
       - Medios de reproducción
 
-## Configuración de la ID de visitante (#visitorID)
+## Configuración del ID de visitante (#visitorID)
 
-Configuración de un [visitorID del Experience Cloud](https://marketing.adobe.com/resources/help/en_US/mcvid/) es muy importante desde el punto de vista analítico. Una vez establecido el valor visitorID de EC, el SDK envía esta información junto con cada llamada de red y el servicio de autenticación de Adobe Primetime recopila esta información. De este modo, podrá correlacionar los datos de análisis del servicio de autenticación de Adobe Primetime con cualquier otro informe de análisis que pueda tener de otras aplicaciones o sitios web. Encontrará información sobre cómo configurar la ID de visitante de EC [here](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
+Configuración de un [Experience Cloud visitorID](https://marketing.adobe.com/resources/help/en_US/mcvid/) El valor de es muy importante desde el punto de vista del análisis. Una vez establecido un valor EC visitorID, el SDK enviará esta información junto con cada llamada de red y el servicio de autenticación de Adobe Primetime recopilará esta información. De este modo, podrá correlacionar los datos de análisis del servicio de autenticación de Adobe Primetime con cualquier otro informe de análisis que pueda tener de otras aplicaciones o sitios web. Se puede encontrar información sobre cómo configurar el ID de visitante de EC [aquí](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en).
 
  
 >[!NOTE]
 >
->Tenga en cuenta que esta funcionalidad es compatible a partir de la versión 3.1.0 del SDK para JS. 
+>Tenga en cuenta que esta compatibilidad con la funcionalidad está disponible a partir de la versión 3.1.0 del SDK de JS. 
 
 <!--
 ### Related Information (#related)

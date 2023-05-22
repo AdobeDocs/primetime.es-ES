@@ -1,21 +1,21 @@
 ---
-title: Lista de direcciones IP MVPD
-description: Lista de direcciones IP MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Lista de direcciones IP de MVPD
+description: Lista de direcciones IP de MVPD
+exl-id: be18084c-22f5-47b5-b088-d9032681113d
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 24%
 
 ---
 
-
-# Lista de direcciones IP MVPD
+# Lista de direcciones IP de MVPD
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-Para una integración de autenticación MVPD/Adobe Primetime, se deben permitir ciertas IP en el cortafuegos de un MVPD. Estas son las direcciones IP de salida:
+Para una integración de autenticación MVPD / Adobe Primetime, se deben permitir ciertas IP en el cortafuegos de una MVPD. Estas son las direcciones IP de salida:
 
 * 34.233.60.171
 * 34.233.163.243

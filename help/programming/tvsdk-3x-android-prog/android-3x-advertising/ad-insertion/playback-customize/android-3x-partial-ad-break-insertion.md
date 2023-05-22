@@ -1,28 +1,27 @@
 ---
-title: Inserción parcial de pausa publicitaria
-description: Inserción parcial de pausa publicitaria
+title: Inserción de pausa publicitaria parcial
+description: Inserción de pausa publicitaria parcial
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c86f1e99-7f1e-4a1e-b285-568ad6659f45
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%
 
 ---
 
+# Inserción parcial de un salto de publicidad {#partial-ad-break-insertion}
 
-# Inserción parcial de pausa publicitaria {#partial-ad-break-insertion}
+Puede habilitar una experiencia similar a la de una TV de poder unirse en medio de un anuncio o en emisiones en directo. La función de pausa parcial para anuncios le permite imitar una experiencia similar a una TV en la que, si el cliente inicia una emisión en directo dentro de un midroll, esta se inicia dentro de ese midroll. Es similar a cambiar a un canal de TV y los anuncios se ejecutan sin problemas.
 
-Puede activar una experiencia parecida a la TV para poder unirse en medio de un anuncio, en transmisiones en directo. La función Parcial de pausa publicitaria le permite imitar una experiencia parecida a un televisor en la que, si el cliente inicia un flujo en vivo dentro de un midroll, este se iniciará dentro de ese midroll. Es similar a cambiar a un canal de televisión y los anuncios se ejecutan sin problemas.
+Por ejemplo, si un usuario se une en mitad de una pausa publicitaria de 90 segundos (tres anuncios de 30 segundos), 10 segundos en el segundo anuncio (es decir, a los 40 segundos en la pausa publicitaria), ocurrirá lo siguiente:
 
-Por ejemplo, si un usuario se une en medio de una pausa publicitaria de 90 segundos (tres anuncios de 30 segundos), 10 segundos después del segundo anuncio (es decir, a los 40 segundos de la pausa publicitaria), sucederá lo siguiente:
+* El segundo anuncio se reproduce durante el tiempo restante (20 segundos), seguido del tercer anuncio.
+* Los rastreadores de anuncios para el anuncio parcialmente reproducido (el segundo anuncio) no se activan. Solo se activa el rastreador del tercer anuncio.
 
-* El segundo anuncio se reproduce durante el resto de la duración (20 segundos) seguido del tercer anuncio.
-* Los rastreadores de anuncios para el anuncio reproducido parcialmente (el segundo anuncio) no se activan. Solo se activa el rastreador del tercer anuncio.
+Este comportamiento no está habilitado de forma predeterminada. Para habilitar esta función en su aplicación, haga lo siguiente:
 
-Este comportamiento no está habilitado de forma predeterminada. Para habilitar este funcionamiento en la aplicación, haga lo siguiente:
-
-Active la preferencia para la inserción parcial de pausa publicitaria. Utilice el nuevo método `setPartialAdBreakPref` en la interfaz de MediaPlayer para activar esta función. Utilice el método `getPartialAdBreakPref` para encontrar el estado actual de esta preferencia.
+Active la preferencia Inserción de pausa publicitaria parcial. Utilice el nuevo método `setPartialAdBreakPref` en la interfaz de MediaPlayer para activar esta función. Uso `getPartialAdBreakPref` para encontrar el estado actual de esta preferencia.
 
 ```
     MediaPlayer mediaPlayer = new MediaPlayer(getActivity(). getApplicationContext()); 

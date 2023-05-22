@@ -1,30 +1,30 @@
 ---
-title: Impedir que los MVPD aparezcan en el cuadro de diálogo Selección
-description: Impedir que los MVPD aparezcan en el cuadro de diálogo Selección
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Evitar que las MVPD aparezcan en el cuadro de diálogo de selección
+description: Evitar que las MVPD aparezcan en el cuadro de diálogo de selección
+exl-id: 20faf501-c006-45e2-a725-fb1273ecaffe
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
 
 ---
 
-
-# Impedir que los MVPD aparezcan en el cuadro de diálogo Selección
+# Evitar que las MVPD aparezcan en el cuadro de diálogo de selección
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 ## Problema {#issue-prevent-mvpd-sel-dialog}
 
-Debe evitar que los MVPD específicos (&quot;lista de bloqueados&quot;) aparezcan en el selector de MVPD.
+Debe evitar que las MVPD específicas (&quot;lista de bloqueados&quot;) aparezcan en el selector de MVPD.
 
 
 ## Solución {#solution-prevent-mvpd-sel-dialog}
 
-La solución es hacer una lista de bloqueados cuando `displayProviderDialog()` se llama.
+La solución consiste en incluir en la lista de bloqueados cuando `displayProviderDialog()` se llama.
 
-Por ejemplo, si desea que CableCompany_1 y CableCompany_2 no se muestren dentro del selector de MVPD, haría algo así como se muestra en el siguiente ejemplo.
+Por ejemplo, si desea que CableCompany_1 y CableCompany_2 no se muestren dentro del selector de MVPD, debe hacer algo similar a lo que se muestra en el siguiente ejemplo.
 
 ```C
 function displayProviderDialog(mvpdList) {

@@ -1,25 +1,24 @@
 ---
-description: Puede leer las estadísticas de reproducción, almacenamiento en búfer y dispositivos desde la clase QOSProvider.
-title: Leer las estadísticas de reproducción, almacenamiento en búfer y dispositivos de QOS
-translation-type: tm+mt
+description: Puede leer las estadísticas de reproducción, almacenamiento en búfer y dispositivo de la clase QOSProvider.
+title: Leer las estadísticas de reproducción, almacenamiento en búfer y dispositivo de QOS
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '122'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
 
-# Leer las estadísticas de reproducción, almacenamiento en búfer y dispositivos de QOS{#read-qos-playback-buffering-and-device-statistics}
+# Leer las estadísticas de reproducción, almacenamiento en búfer y dispositivo de QOS{#read-qos-playback-buffering-and-device-statistics}
 
-Puede leer las estadísticas de reproducción, almacenamiento en búfer y dispositivos desde la clase QOSProvider.
+Puede leer las estadísticas de reproducción, almacenamiento en búfer y dispositivo de la clase QOSProvider.
 
-La clase `QOSProvider` proporciona varias estadísticas, incluida información sobre el almacenamiento en búfer, las tasas de bits, las tasas de fotogramas, los datos de tiempo, etc.
+El `QOSProvider` proporciona varias estadísticas, incluida información sobre el almacenamiento en búfer, las velocidades de bits, las velocidades de fotogramas, los datos de tiempo, etc.
 
 También proporciona información sobre el dispositivo, como el fabricante, el modelo, el sistema operativo, la versión del SDK y el tamaño/densidad de la pantalla.
 
-1. Cree una instancia de un reproductor de medios.
-1. Cree un objeto `QOSProvider` y adjúntelo al reproductor de medios.
+1. Cree una instancia de un reproductor multimedia.
+1. Crear un `QOSProvider` y adjuntarlo al reproductor de contenidos.
 
    ```
    // Create Media Player. 
@@ -29,7 +28,7 @@ También proporciona información sobre el dispositivo, como el fabricante, el m
 
 1. (Opcional) Lea las estadísticas de reproducción.
 
-   Una solución para leer las estadísticas de reproducción es tener un temporizador que obtenga periódicamente los nuevos valores de QoS de `QOSProvider`. Por ejemplo:
+   Una solución para leer las estadísticas de reproducción es tener un temporizador, que recupere periódicamente los nuevos valores de QoS de la `QOSProvider`. Por ejemplo:
 
    ```
    var qosTimer:Timer = new Timer(1000); // every 1 second  

@@ -1,85 +1,85 @@
 ---
 title: Pase temporal
 description: Pase temporal
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 1df14090-8e71-4e3e-82d8-f441d07c6f64
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '2210'
 ht-degree: 0%
 
 ---
 
-
 # Pase temporal {#temp-pass}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-## Resumen de características {#tempass-featur-summary}
+## Resumen de funciones {#tempass-featur-summary}
 
-Temp Pass permite a los programadores ofrecer acceso temporal a su contenido protegido, para los usuarios que no tengan credenciales de cuenta con un MVPD.  Temp Pass incluye las siguientes capacidades:
+Temp Pass permite a los programadores ofrecer acceso temporal a su contenido protegido, para usuarios que no tienen credenciales de cuenta con una MVPD.  Pase temporal incluye las siguientes capacidades:
 
-* Temp Pass se puede configurar para proporcionar acceso temporal para cubrir una variedad de escenarios, incluyendo los siguientes:
-   * Un programador puede ofrecer una vista previa diaria y corta (por ejemplo, de 10 minutos) de uno de sus sitios.
-   * Un programador puede ofrecer una sola y larga presentación (por ejemplo, cuatro horas) de un gran evento deportivo como los Juegos Olímpicos, o la locura de la Marcha de la NCAA.
-   * Un programador puede proporcionar una combinación de los dos escenarios anteriores; por ejemplo, un período de visualización inicial más largo un día, seguido de una serie de períodos breves que se repiten diariamente durante algunos días posteriores.
-* Los programadores especifican la duración (tiempo de vida o TTL) de su paso temporal.
-* El paso temporal funciona por solicitante.  Por ejemplo, NBC podría configurar un Pase temporal de 4 horas para el solicitante &quot;NBCOlympics&quot;.
-* Los programadores pueden restablecer todos los tokens otorgados a un solicitante en particular.  El &quot;MVPD temporal&quot; utilizado para implementar el Pase temporal debe configurarse con &quot;Autenticación por solicitante&quot; habilitado.
-* **El acceso a Temp Pass se concede a usuarios individuales en dispositivos específicos**. Una vez que el acceso a Temp Pass expira para un usuario, este no podrá obtener acceso temporal en el mismo dispositivo hasta que el usuario caduque [token de autorización](/help/authentication/glossary.md#authz-token) se borra del servidor de autenticación de Adobe Primetime.
+* El pase temporal se puede configurar para proporcionar acceso temporal a una variedad de escenarios, incluidos los siguientes:
+   * Un programador puede ofrecer un resumen diario (por ejemplo, una previsualización de 10 minutos) de uno de sus sitios.
+   * Un programador puede ofrecer una sola presentación larga (por ejemplo, cuatro horas) de un evento deportivo importante como los Juegos Olímpicos o la Locura de Marzo de la NCAA.
+   * Un programador puede proporcionar una combinación de los dos escenarios anteriores; por ejemplo, un periodo de visualización inicial más largo en un día, seguido de una serie de periodos cortos que se repiten diariamente durante un cierto número de días posteriores.
+* Los programadores especifican la duración (Tiempo de vida o TTL) de su pase temporal.
+* Operadores de pase temporal por solicitante.  Por ejemplo, NBC podría establecer un pase temporal de 4 horas para el solicitante &quot;NBCOlympics&quot;.
+* Los programadores pueden restablecer todos los tokens concedidos a un solicitante concreto.  La &quot;MVPD temporal&quot; utilizada para implementar la aprobación temporal debe configurarse con la &quot;Autenticación por solicitante&quot; habilitada.
+* **El acceso Temp Pass se concede a usuarios individuales en dispositivos específicos**. Una vez que el acceso al pase temporal caduque para un usuario, ese usuario no podrá obtener acceso temporal en el mismo dispositivo hasta que caduque el usuario [token de autorización](/help/authentication/glossary.md#authz-token) se borra del servidor de autenticación de Adobe Primetime.
 
 
 >[!NOTE]
 >
->Temp Pass forma parte del paquete Premium Workflow . Póngase en contacto con su representante de ventas de Primetime si le interesa utilizar esta funcionalidad.
+>Pase temporal forma parte del paquete Flujo de trabajo Premium. Póngase en contacto con su representante de ventas de Primetime si está interesado en utilizar esta funcionalidad.
 
-## Detalles de las funciones {#tempass-featur-details}
+## Detalles de funciones {#tempass-featur-details}
 
-* **Cálculo del tiempo de visualización** - La cantidad de tiempo que un pase temporal sigue siendo válido no se correlaciona con la cantidad de tiempo que un usuario pasa viendo contenido en la aplicación del programador.  Tras la solicitud inicial de autorización del usuario mediante Temp Pass, se calcula el tiempo de caducidad añadiendo el tiempo de solicitud inicial actual al TTL especificado por el Programador. Esta hora de caducidad está asociada al ID de dispositivo del usuario y al ID de solicitante del programador, y se almacena en la base de datos de autenticación de Primetime. Cada vez que el usuario intenta acceder al contenido utilizando Temp Pass desde el mismo dispositivo, la autenticación de Primetime compara la hora de solicitud del servidor con la hora de caducidad asociada con el ID del dispositivo del usuario y el ID del solicitante del programador. Si el tiempo de solicitud del servidor es menor que el tiempo de caducidad, se concede la autorización. de lo contrario, se denegará la autorización.
-* **Parámetros de configuración** - Un programador puede especificar los siguientes parámetros de paso temporal para crear una regla de paso temporal:
-   * **TTL de token** - La cantidad de tiempo que un usuario puede ver sin iniciar sesión en un MVPD. Esta vez se basa en el reloj y caduca si el usuario está viendo el contenido o no.
+* **Cómo se calcula el tiempo de visualización** : La cantidad de tiempo que un pase temporal sigue siendo válido no se correlaciona con la cantidad de tiempo que un usuario emplea para ver contenido en la aplicación del programador.  Tras la solicitud inicial de autorización del usuario a través de Temp Pass, se calcula un tiempo de caducidad añadiendo el tiempo de solicitud actual inicial al TTL especificado por el Programador. Esta hora de caducidad está asociada al ID de dispositivo del usuario y al ID de solicitante del programador, y se almacena en la base de datos de autenticación de Primetime. Cada vez que el usuario intenta acceder al contenido mediante Temp Pass desde el mismo dispositivo, la autenticación de Primetime comparará el tiempo de solicitud del servidor con el tiempo de caducidad asociado con el ID de dispositivo del usuario y el ID del solicitante del programador. Si el tiempo de solicitud del servidor es menor que el tiempo de caducidad, se concederá la autorización; de lo contrario, se denegará la autorización.
+* **Parámetros de configuración** - Un programador puede especificar los siguientes parámetros de pase temporal para crear una regla de pase temporal:
+   * **TTL de token** : cantidad de tiempo que un usuario puede ver sin iniciar sesión en una MVPD. Esta hora está basada en el reloj y caduca tanto si el usuario ve el contenido como si no.
    >[!NOTE]
-   >Un ID de solicitante no puede tener más de una regla de pase temporal asociada.
-* **Autenticación/autorización** - En el flujo de paso temporal, usted especifica el MVPD como &quot;Paso temporal&quot;.  La autenticación de Primetime no se comunica con un MVPD real en el flujo de paso temporal, por lo que el MVPD &quot;Temp Pass&quot; autoriza cualquier recurso. Los programadores pueden especificar un recurso al que se pueda acceder mediante Temp Pass igual que lo hacen para el resto de los recursos de su sitio. La biblioteca del verificador de medios se puede usar de la forma habitual para verificar el token de medios cortos de Temp Pass y hacer cumplir la comprobación de recursos antes de la reproducción.
-* **Seguimiento de datos en el flujo de paso temporal** - Dos puntos con respecto al seguimiento de datos durante un flujo de derechos de paso temporal:
-   * El ID de seguimiento que se pasa de la autenticación de Primetime a su **sendTrackingData()** callback es un hash del ID del dispositivo.
-   * Dado que el ID de MVPD utilizado en el flujo de transferencia temporal es &quot;Temp Pass&quot;, ese mismo ID de MVPD se devuelve a **sendTrackingData()**. Es probable que la mayoría de los programadores deseen tratar las métricas de Temp Pass de forma diferente a las métricas reales de MVPD. Esto requiere un poco de trabajo adicional en la implementación de analytics.
+   >Un ID de solicitante no puede tener asociada más de una regla de Temp Pass.
+* **Autenticación/autorización** - En el flujo Pase temporal, especifique la MVPD como &quot;Pase temporal&quot;.  La autenticación de Primetime no se comunica con una MVPD real en el flujo de Temp Pass, por lo que la MVPD de &quot;Temp Pass&quot; autoriza cualquier recurso. Los programadores pueden especificar un recurso al que se puede tener acceso mediante Pase temporal, tal como lo hacen para el resto de los recursos del sitio. La biblioteca de Media Verifier se puede utilizar de la forma habitual para verificar el token de medios corto de Temp Pass y aplicar la comprobación de recursos antes de la reproducción.
+* **Seguimiento de datos en flujo de pase temporal** : Dos puntos con respecto al seguimiento de datos durante un flujo de derechos de Temp Pass:
+   * El ID de seguimiento que se pasa de la autenticación de Primetime a su **sendTrackingData()** Callback es un hash del ID del dispositivo.
+   * Dado que el ID de MVPD utilizado en el flujo de Temp Pass es &quot;Temp Pass&quot;, ese mismo ID de MVPD se vuelve a pasar a **sendTrackingData()**. Es probable que la mayoría de los programadores quieran tratar las métricas de Temp Pass de forma diferente que las métricas de MVPD reales. Esto requiere cierto trabajo adicional en la implementación de Analytics.
 
-La siguiente ilustración muestra el flujo de paso temporal:
+La siguiente ilustración muestra el flujo de Temp Pass:
 
-![Flujo de paso temporal](assets/temp-pass-flow.png)
+![Flujo de pase temporal](assets/temp-pass-flow.png)
 
-*Figura: Flujo de paso temporal*
+*Figura: Flujo de transferencia temporal*
 
-## Implementación de pase temporal {#implement-tempass}
+## Implementar pase temporal {#implement-tempass}
 
-En el lado de la autenticación de Primetime, Temp Pass se implementa con la adición de un pseudo-MVPD llamado &quot;TempPass&quot; a la configuración del servidor del programador participante.  Este pseudo-MVPD actúa como un MVPD real que otorga temporalmente acceso al contenido protegido del programador.
+En el lado de la autenticación de Primetime, Temp Pass se implementa con la adición de un pseudo-MVPD llamado &quot;TempPass&quot; a la configuración del servidor del programador participante.  Este pseudo-MVPD actúa como un MVPD real que concede temporalmente acceso al contenido protegido del Programador.
 
-Por el lado del programador, Temp Pass se implementa de la siguiente manera para los dos escenarios que utilizan los MVPD para la autenticación:
+En el lado del programador, la transferencia temporal se implementa de la siguiente manera para los dos escenarios que las MVPD utilizan para la autenticación:
 
-* **iFrame en la página del programador**. El paso temporal funciona independientemente del tipo de autenticación de un MVPD, pero para el escenario de iFrame se necesitan pasos adicionales para cancelar el flujo de autenticación actual y autenticarse con el paso temporal. Estos pasos se muestran en la sección [Inicio de sesión en iFrame](/help/authentication/temp-pass.md) más abajo.
-* **Redirigir a la página de inicio de sesión de MVPD**. En el caso más tradicional, en el que la interfaz de usuario para activar el Pase temporal se presenta antes de iniciar la autenticación con un MVPD, no hay pasos especiales que realizar. El Pase Temp debe tratarse como un MVPD normal.
+* **iFrame en la página del programador**. El paso temporal funciona independientemente del tipo de autenticación de una MVPD, pero para el escenario de iFrame se requieren pasos adicionales para cancelar el flujo de autenticación actual y autenticarse con el paso temporal. Estos pasos se muestran en la [Inicio de sesión con iFrame](/help/authentication/temp-pass.md) más abajo.
+* **Redirigir a la página de inicio de sesión de MVPD**. En el caso más tradicional en el que la interfaz de usuario para activar la Temp Pass se presenta antes de iniciar la autenticación con una MVPD, no hay que realizar pasos especiales. El pase temporal debe tratarse como una MVPD normal.
 
-Los siguientes puntos se aplican a ambos escenarios de implementación:
+Los siguientes puntos se aplican a ambos casos de implementación:
 
-* El &quot;Pase temporal&quot; debe mostrarse en el selector de MVPD solo para los usuarios que aún no hayan solicitado una autorización de Pase temporal. Para bloquear la visualización de solicitudes posteriores, se puede mantener un indicador en las cookies. Esto funcionará siempre que el usuario no borre la caché del explorador. Si los usuarios borran las cachés del explorador, aparecerá &quot;Paso temporal&quot; de nuevo en el selector y el usuario podrá solicitarlo de nuevo. El acceso solo se concederá si el tiempo &quot;Temp Pass&quot; aún no ha caducado.
-* Cuando un usuario solicita acceso a través de Temp Pass, el servidor de autenticación de Primetime no realizará su solicitud habitual de Lenguaje de marcado de aserción de seguridad (SAML) durante el proceso de autenticación. En su lugar, el punto final de autenticación devolverá el éxito cada vez que se invoque mientras los tokens son válidos para el dispositivo.
-* Cuando caduca un pase temporal, su usuario ya no se autenticará, ya que en el flujo de paso temporal el token de autenticación y el token de autorización tienen la misma fecha de caducidad. Para explicar a los usuarios que su paso temporal ha caducado, los programadores deben recuperar el MVPD seleccionado justo después de llamar a `setRequestor()`y, a continuación, llame a `checkAuthentication()` como de costumbre. En el `setAuthenticationStatus()` llamada de retorno se puede realizar una comprobación para determinar si el estado de autenticación es 0, de modo que si el MVPD seleccionado era &quot;TempPass&quot;, se pueda presentar a los usuarios un mensaje que indique que su sesión de Temp Pass ha caducado.
-* Si un usuario elimina el token de pase temporal antes de la caducidad, las siguientes comprobaciones de derechos generarán un token que tendrá un TTL igual al tiempo restante.
-* Si el usuario elimina el token de pase temporal después de la caducidad, las siguientes comprobaciones de derechos devolverán &quot;usuario no autorizado&quot;.
+* El &quot;Pase temporal&quot; debe mostrarse en el selector de MVPD solo para los usuarios que aún no hayan solicitado una autorización de Pase temporal. Se puede bloquear la visualización de solicitudes posteriores manteniendo un indicador en las cookies. Esto funcionará mientras el usuario no borre la caché del explorador. Si los usuarios borran las cachés del explorador, vuelve a aparecer &quot;Pase temporal&quot; en el selector y el usuario puede volver a solicitarlo. El acceso solo se concederá si la hora &quot;Pase temporal&quot; aún no ha caducado.
+* Cuando un usuario solicita acceso mediante Pase temporal, el servidor de autenticación de Primetime no realizará su solicitud habitual de Lenguaje de marcado de aserción de seguridad (SAML) durante el proceso de autenticación. En su lugar, el extremo de autenticación devolverá un resultado correcto cada vez que se invoque, mientras que los tokens son válidos para el dispositivo.
+* Cuando caduca un pase temporal, su usuario ya no se autenticará, porque en el flujo de pase temporal el token de autenticación y el token de autorización tienen la misma fecha de caducidad. Para explicar a los usuarios que su pase temporal ha caducado, los programadores deben recuperar el MVPD seleccionado justo después de llamar a `setRequestor()`y, a continuación, invoque `checkAuthentication()` como de costumbre. En el `setAuthenticationStatus()` callback se puede realizar una comprobación para determinar si el estado de autenticación es 0, de modo que si la MVPD seleccionada era &quot;TempPass&quot; se pueda presentar un mensaje a los usuarios de que su sesión de Temp Pass ha caducado.
+* Si un usuario elimina el token de Temp Pass antes de la caducidad, las comprobaciones de derechos posteriores generarán un token que tendrá un TTL igual al tiempo restante.
+* Si el usuario elimina el token de Temp Pass después de la caducidad, las comprobaciones de derechos posteriores devolverán &quot;usuario no autorizado&quot;.
 
-Consulte los ejemplos de [Código de muestra](/help/authentication/temp-pass.md#tempass-sample-code) a continuación para ver ejemplos de cómo codificar los detalles de implementación descritos en esta sección.
+Consulte las muestras en [Código de ejemplo](/help/authentication/temp-pass.md#tempass-sample-code) a continuación encontrará ejemplos de cómo codificar los detalles de implementación descritos en esta sección.
 
 ## Código de muestra {#tempass-sample-code}
 
-Las secciones siguientes muestran cómo llamar a la API de autenticación de Primetime para implementar el flujo de paso temporal:
+Las secciones siguientes muestran cómo llamar a la API de autenticación de Primetime para implementar el flujo de Temp Pass:
 
-* [Ejemplo de inicio de sesión en iFrame](/help/authentication/temp-pass.md#iframe-login-sample)
+* [Ejemplo de inicio de sesión de iFrame](/help/authentication/temp-pass.md#iframe-login-sample)
 * [Ejemplo de inicio de sesión automático](/help/authentication/temp-pass.md#auto-login-sample)
 
-### Ejemplo de inicio de sesión en iFrame {#iframe-login-sample}
+### Ejemplo de inicio de sesión de iFrame {#iframe-login-sample}
 
-Este ejemplo muestra cómo implementar Temp Pass para aquellos casos en los que los MVPD admiten la integración iFrame:
+Este ejemplo muestra cómo implementar Temp Pass para el caso en el que las MVPD admiten la integración de iFrame:
 
 ```HTML
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -210,35 +210,35 @@ Este ejemplo muestra cómo implementar Temp Pass para aquellos casos en los que 
 </html>
 ```
 
-#### Casos de uso de inicio de sesión en iFrame {#iframe-login-use-cases}
+#### Casos de uso de inicio de sesión con iFrame {#iframe-login-use-cases}
 
-**Para solicitar un Pase temporal por primera vez:**
+**Para solicitar un pase temporal por primera vez:**
 
-1. Un usuario accede a la página Programador y hace clic en el vínculo de inicio de sesión.
-1. Se abre el selector de MVPD y el usuario elige un MVPD de la lista.
-1. Se muestra el iFrame de autenticación. Este iFrame contiene un vínculo &quot;Temp Pass&quot;.
-1. El usuario hace clic en &quot;Paso temporal&quot;, por lo que el programador agrega un indicador a una cookie para evitar que el usuario vea el vínculo &quot;Paso temporal&quot; en las visitas posteriores a la página.
-1. La solicitud de autenticación de paso temporal llega a los servidores de autenticación de Primetime y genera un token de autenticación. El TTL es igual al periodo de tiempo establecido por el programador para el paso temporal.
+1. Un usuario accede a la página del programador y hace clic en el vínculo de inicio de sesión.
+1. Se abre el selector de MVPD y el usuario elige una MVPD de la lista.
+1. Se muestra el iFrame de autenticación. Este iFrame contiene un vínculo &quot;Pase temporal&quot;.
+1. El usuario hace clic en &quot;Pase temporal&quot;, por lo que el programador agrega una marca a una cookie para evitar que el usuario vea el vínculo &quot;Pase temporal&quot; en las visitas posteriores a la página.
+1. La solicitud de autenticación de Temp Pass llega a los servidores de autenticación de Primetime y generan un token de autenticación. El TTL es igual al período de tiempo establecido por el Programador para la Temp Pass.
 1. La solicitud de autorización de Temp Pass llega a los servidores de autenticación de Primetime.
-1. Los servidores de autenticación de Primetime extraen los ID de dispositivo y solicitante de la solicitud y los almacenan en la base de datos junto con la hora de caducidad. El tiempo de caducidad se calcula como: tiempo inicial de solicitud de paso temporal más el TTL (especificado por el programador).
+1. Los servidores de autenticación de Primetime extraen los ID de dispositivo y solicitante de la solicitud y los almacenan en la base de datos junto con la hora de caducidad. El tiempo de caducidad se calcula de la siguiente manera: tiempo de solicitud de Temp Pass inicial más el TTL (especificado por el Programador).
 1. Los servidores de autenticación de Primetime generan un token de autorización.
 1. El usuario accede al contenido protegido.
 
-**Para solicitar de nuevo un paso temporal después de que un usuario de Temp Pass que regresa haya eliminado las cookies del explorador:**
+**Para volver a solicitar un pase temporal después de que un usuario que regresa haya eliminado las cookies del explorador:**
 
-1. El usuario accede a la página Programador y hace clic en el vínculo de inicio de sesión.
-1. Se abre el selector de MVPD y el usuario elige un MVPD de la lista.
-1. Se muestra el iFrame de autenticación. Este iFrame contiene un vínculo &quot;Temp Pass&quot; (el usuario borró la cookie original, por lo que el programador no sabe si el usuario ha hecho clic anteriormente en el vínculo &quot;Temp Pass&quot;).
-1. El usuario vuelve a hacer clic en &quot;Pase temporal&quot;, por lo que el programador agrega una marca a una cookie de nuevo para evitar que el usuario vea el vínculo &quot;Pase temporal&quot; en las visitas posteriores a la página.
-1. La solicitud de autenticación de paso temporal llega a los servidores de autenticación de Primetime, que generan un token de autenticación. El TTL es ahora el tiempo restante para la Pase temporal (la diferencia entre la hora actual y la hora de caducidad asociada al ID del dispositivo).
+1. El usuario accede a la página del programador y hace clic en el vínculo de inicio de sesión.
+1. Se abre el selector de MVPD y el usuario elige una MVPD de la lista.
+1. Se muestra el iFrame de autenticación. Este iFrame contiene un enlace &quot;Temp Pass&quot; (el usuario borró la cookie original, por lo que el Programador no sabe si el usuario ha hecho clic en el enlace &quot;Temp Pass&quot; antes).
+1. El usuario vuelve a hacer clic en &quot;Pase temporal&quot;, por lo que el programador vuelve a añadir una marca a una cookie para evitar que el usuario vea el vínculo &quot;Pase temporal&quot; en las visitas posteriores a la página.
+1. La solicitud de autenticación de Temp Pass llega a los servidores de autenticación de Primetime, que generan un token de autenticación. El TTL ahora es el tiempo restante para el pase temporal (la diferencia entre la hora actual y la hora de caducidad asociada con el ID del dispositivo).
 1. La solicitud de autorización de Temp Pass llega a los servidores de autenticación de Primetime.
 1. Los servidores de autenticación de Primetime extraen los ID de dispositivo y solicitante de la solicitud y los utilizan para recuperar la hora de caducidad de la base de datos de autenticación de Primetime. La hora actual se compara con la hora de caducidad.
-1. Si el paso temporal del usuario no ha caducado, los servidores de autenticación de Primetime generarán un token de autorización.
-1. Si el paso temporal del usuario no ha caducado, el usuario podrá acceder al contenido protegido.
+1. Si el pase temporal del usuario no ha caducado, los servidores de autenticación de Primetime generan un token de autorización.
+1. Si el pase temporal del usuario no ha caducado, el usuario podrá acceder al contenido protegido.
 
 ### Ejemplo de inicio de sesión automático {#auto-login-sample}
 
-El siguiente ejemplo ilustra un caso en el que un usuario ha iniciado sesión automáticamente con TempPass al visitar un sitio. El usuario puede elegir iniciar sesión con un MVPD normal en cualquier momento y se le advierte si TempPass ha caducado:
+El siguiente ejemplo ilustra un caso en el que un usuario inicia sesión automáticamente con TempPass al visitar un sitio. El usuario puede optar por iniciar sesión con una MVPD normal en cualquier momento, y se le advierte si TempPass ha caducado:
 
 ```HTML
 <html>
@@ -474,53 +474,53 @@ El siguiente ejemplo ilustra un caso en el que un usuario ha iniciado sesión au
 
 ## Usar varias pasadas temporales {#use-mult-tempass}
 
-Algunos eventos requieren acceso libre por fases al contenido, como un intervalo inicial de acceso libre (por ejemplo, 4 horas), seguido de accesos gratuitos diarios (por ejemplo, 10 minutos cada día siguiente).  Para que un programador implemente este escenario, debe organizarlo con su contacto de Adobe para configurar dos MVPD temporales para el programador.
+Determinados eventos requieren un acceso gratuito por fases al contenido, como un intervalo inicial de acceso gratuito (por ejemplo, 4 horas), seguido de accesos gratuitos diarios (por ejemplo, 10 minutos cada día siguiente).  Para que un programador implemente este escenario, debe organizarlo con su contacto de Adobe para configurar dos MVPD temporales para el programador.
 
-Para este escenario de ejemplo (una sesión gratuita inicial de 4 horas, seguida de sesiones gratuitas diarias de 10 minutos), el Adobe configura un MVPD llamado TempPass1 con un tiempo de vida (TTL) de 4 horas y un TempPass2 con un TTL de 10 minutos para el periodo siguiente.  Ambos están asociados con el ID de solicitante del programador.
+Para este escenario de ejemplo (una sesión inicial gratuita de cuatro horas, seguida de sesiones gratuitas diarias de diez minutos), el Adobe configura una MVPD llamada TempPass1 con un tiempo de vida (TTL) de cuatro horas y una TempPass2 con un TTL de diez minutos para el periodo siguiente.  Ambos están asociados al ID de solicitante del programador.
 
 ### Implementación del programador {#mult-tempass-prog-impl}
 
-Después de que el Adobe configure las dos instancias de TempPass, los dos MVPD adicionales (TempPass1 y TempPass2) aparecerán en la lista MVPD del programador.  El programador debe realizar los siguientes pasos para implementar los pases temporales múltiples:
+Después de que Adobe configure las dos instancias de TempPass, las dos MVPD adicionales (TempPass1 y TempPass2) aparecerán en la lista de MVPD del programador.  El programador debe realizar los siguientes pasos para implementar las varias pasadas temporales:
 
-1. En la visita inicial del usuario al sitio, inicie sesión automáticamente con TempPass1. Puede utilizar el ejemplo de autenticación anterior como punto de partida para esta tarea.
-1. Cuando detecte que TempPass1 ha caducado, almacene el hecho (en una cookie/almacenamiento local) y presente al usuario su selector MVPD estándar. **Asegúrese de filtrar TempPass1 y TempPass2 de esa lista**.
-1. En cada día siguiente, si TempPass1 ha caducado, inicie sesión en ese usuario con TempPass2.
-1. Cuando TempPass2 haya caducado, almacene el hecho (en una cookie/almacenamiento local) durante el día y presente al usuario su selector MVPD estándar. De nuevo, asegúrese de filtrar TempPass1 y TempPass2 de esa lista.
-1. En cada nuevo día, a las 00:00 horas, restablezca todos los pases temporales para TempPass2, utilizando la variable [Restablecer la API web de TempPass](/help/authentication/temp-pass.md#reset-all-tempass).
+1. En la primera visita del usuario al sitio, inicie sesión automáticamente con TempPass1. Puede utilizar el ejemplo de inicio automático anterior como punto de partida para esta tarea.
+1. Cuando detecte que TempPass1 ha caducado, almacene el hecho (en una cookie/almacenamiento local) y presente al usuario su selector de MVPD estándar. **Asegúrese de filtrar TempPass1 y TempPass2 de esa lista**.
+1. En cada día siguiente, si TempPass1 ha caducado, inicie sesión automáticamente en ese usuario con TempPass2.
+1. Cuando TempPass2 haya caducado, almacene el hecho (en una cookie/almacenamiento local) del día y presente al usuario su selector MVPD estándar. De nuevo, asegúrese de filtrar TempPass1 y TempPass2 de esa lista.
+1. En cada nuevo día, a las 00:00 horas, restablezca todas las aprobaciones temporales para TempPass2, utilizando [Restablecer API web de TempPass](/help/authentication/temp-pass.md#reset-all-tempass).
 
 >[!NOTE]
->**Nota de programación:** La autenticación de Primetime no tiene un mecanismo integrado para detener la transmisión gratuita una vez transcurridos los 10 minutos.  Depende de los programadores restringir el acceso una vez que TempPass2 caduque. Para lograr esto, los programadores pueden implementar en sus sitios/aplicaciones una llamada &quot;checkAuthorization&quot; cada X minutos, donde X es el periodo de tiempo que el programador determina que tiene sentido para sus aplicaciones.
+>**Nota de programación:** La autenticación de Primetime no tiene un mecanismo integrado para detener la transmisión gratuita después de que hayan transcurrido 10 minutos.  Depende de los programadores restringir el acceso una vez que TempPass2 caduque. Para ello, los programadores pueden implementar en sus sitios/aplicaciones una llamada &quot;checkAuthorization&quot; cada X minutos, donde X es el periodo de tiempo que el programador determina que tiene sentido para sus aplicaciones.
 
 ## Restablecer todas las pasadas temporales {#reset-all-tempass}
 
-Algunas reglas comerciales requieren la depuración regular de la Pase temporal o un restablecimiento ad hoc de todas las Pases temporales emitidas para un ID de solicitante e ID de MVPD en particular. Esta función admite casos de uso como los siguientes:
+Ciertas reglas comerciales requieren la depuración regular de Pases temporales o un restablecimiento ad hoc de todas las Pases temporales emitidas para un ID de solicitante e ID de MVPD en particular. Esta función es compatible con casos de uso como los siguientes:
 
-* Un Pase temporal diario de 10 minutos (el Pase temporal debe restablecerse al comienzo del día)
-* Pase temporal disponible para todos los usuarios durante las noticias de último minuto. (El paso temporal debe restablecerse para todos los dispositivos en cuanto se inicie la noticia de último minuto).
-* El escenario de varias pasadas temporales que proporciona una combinación de un periodo de visualización inicial de cierta longitud, seguido de periodos diarios subsiguientes de otra longitud.
+* Un pase temporal diario de 10 minutos (el pase temporal debe restablecerse al comienzo del día)
+* Un pase temporal disponible para todos los usuarios durante las últimas noticias. (El pase temporal debe restablecerse para todos los dispositivos tan pronto como comiencen las noticias de última hora).
+* El escenario de varias aprobaciones temporales que proporciona una combinación de un período de visualización inicial de cierta longitud, seguido de períodos diarios subsiguientes de otra longitud.
 
-Para restablecer todas las pasadas temporales, la autenticación de Primetime proporciona a los programadores un *public* API web:
+Para restablecer todas las pasadas temporales, la autenticación de Primetime proporciona a los programadores un *público* API web:
 
 ```url
 DELETE https://mgmt.auth.adobe.com/reset-tempass/v2/reset
 ```
 
 >[!NOTE]
->La URL anterior sustituye a la API de restablecimiento anterior. Ya no se admite la API de restablecimiento anterior (v1).
+>La URL anterior reemplaza a la API de restablecimiento anterior. La API de restablecimiento antigua (v1) ya no es compatible.
 
 * **Protocolo:** HTTPS
 * **Host:**
    * Versión: mgmt.auth.adobe.com
-   * Prequal: mgmt-prequal.auth.adobe.com
+   * Precual: mgmt-prequal.auth.adobe.com
 * **Ruta:** /reset-tempass/v2/reset
 * **Parámetros de consulta:** `device_id=all&requestor_id=REQUESTOR_ID&mvpd_id=TEMPPASS_MVPD_ID`
-* **Encabezados:** ApiKey - 1232293681726481
+* **Encabezados:** ApiKey: 1232293681726481
 * **Respuesta:**
-   * Correcto - HTTP 204
+   * Correcto: HTTP 204
    * Error:
       * HTTP 400 para una solicitud incorrecta
-      * HTTP 401 si ApiKey no se especificó
-      * HTTP 403 si ApiKey no es válido
+      * HTTP 401 si no se especificó ApiKey
+      * HTTP 403 si ApiKey no es válida
 
 Por ejemplo:
 
@@ -530,13 +530,13 @@ $ curl -H "Authorization: Bearer <access_token_here>" -X DELETE -v "https://mgmt
 
 ## Clientes admitidos {#supp-clients}
 
-Compatibilidad con la herramienta Temp Pass y Reset por plataforma:
+Compatibilidad con la herramienta de restablecimiento y pase temporal por plataforma:
 
 | Clientes de autenticación de Adobe Primetime | Pase temporal | Herramienta Restablecer |
 |:--------------------------------------:|:---------:|:----------:|
 | JS AccessEnabler | SÍ | SÍ |
-| iOS de cliente nativo | SÍ | SÍ |
-| Cliente nativo tvOS | SÍ | SÍ |
+| IOS de cliente nativo | SÍ | SÍ |
+| TvOS de cliente nativo | SÍ | SÍ |
 | Android de cliente nativo | SÍ | SÍ |
 | FireTV de cliente nativo | SÍ | SÍ |
 | API sin cliente | SÍ | SÍ |
@@ -545,6 +545,6 @@ Compatibilidad con la herramienta Temp Pass y Reset por plataforma:
 
 Esta sección describe las limitaciones que se aplican a la implementación actual de Temp Pass.
 
-**SDK de JavaScript**: admite restablecer la funcionalidad de pasar temporal desde la versión **3.X y posterior**.
+**SDK de JavaScript**: admite la funcionalidad restablecer paso temporal de la versión **3.X y superior**.
 
 <!--For Customers migrating from the 2.X JavaScript AccessEnabler to the 3.X JavaScript AccessEnabler, see [AccessEnabler JS 2.x to JS 3.x migration guide](https://tve.helpdocsonline.com/accessenabler-js-to-js-migration-guide).-->

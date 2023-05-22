@@ -2,19 +2,18 @@
 title: Creación de reproductores de vídeo
 description: Creación de reproductores de vídeo
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 06667acf-1609-4457-8fc3-0e42fb4252bc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
-
-# Crear reproductores de vídeo{#create-video-players}
+# Creación de reproductores de vídeo{#create-video-players}
 
 Si desea reproducir contenido protegido, su aplicación debe utilizar las API de DRM de ActionScript 3 o Adobe Primetime DRM.
 
-Consulte el *ActionScript de programación 3* y la *Referencia del ActionScript 3.0 para Adobe Flash Platform* para obtener más información.
+Consulte la *ActionScript de programación 3* y el *Referencia de ActionScript 3.0 para Adobe Flash Platform* para obtener más información.
 
-Consulte la documentación de Adobe Primetime PSDK sobre cómo crear reproductores de vídeo basados en iOS.
+Consulte la documentación del PSDK de Adobe Primetime sobre cómo crear reproductores de vídeo basados en iOS.

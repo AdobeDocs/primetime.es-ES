@@ -1,26 +1,25 @@
 ---
-title: Preguntas frecuentes
-description: Preguntas frecuentes
+title: FAQ
+description: FAQ
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9058604e-dbab-4df5-89fd-1219c85c7643
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
 
 ---
 
+# FAQ {#faq}
 
-# Preguntas frecuentes {#faq}
-
-* ¿Con qué frecuencia se producen cambios en la ECI?
-   * Cada vez que se libera un nuevo cliente DRM de Adobe, se añade un registro de dispositivo ECI.
+* ¿Con qué frecuencia ocurren los cambios en la ECI?
+   * Cada vez que se lanza un nuevo cliente DRM de Adobe, se añade un registro de dispositivo ECI.
 
 * ¿Qué tamaño tienen los archivos ECI?
-   * Generalmente son inferiores a 1 kilobyte por registro de dispositivo.
+   * Suelen tener menos de 1 kilobyte por registro de dispositivo.
 
 * ¿Qué sucede si al servidor le falta un registro de dispositivo ECI?
-   * Esa clase particular de clientes no podrá individualizarse con el servidor de individualización On Premies y los errores se registrarán en los archivos de registro.
+   * Esa clase particular de clientes no podrá individualizarse con el servidor de individualización local y se registrarán los errores en los archivos de registro.
 
-* ¿Qué ocurre si las CRL de un servidor han caducado?
-   * El servidor dejará de funcionar correctamente y los errores se registrarán en los archivos de registro.
+* ¿Qué sucede si las CRL de un servidor caducan?
+   * El servidor dejará de funcionar correctamente y se registrarán los errores en los archivos de registro.

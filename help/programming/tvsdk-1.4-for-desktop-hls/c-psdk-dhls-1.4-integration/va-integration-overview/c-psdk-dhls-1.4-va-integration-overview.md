@@ -1,36 +1,34 @@
 ---
-description: Puede realizar un seguimiento del uso de vídeo integrando TVSDK con Adobe Analytics.
+description: Puede rastrear el uso de vídeo integrando TVSDK con Adobe Analytics.
 title: Análisis de vídeo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 02303511-2713-4974-ada7-6f50fc500325
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
 
 ---
 
-
 # Análisis de vídeo{#video-analytics}
 
-Puede realizar un seguimiento del uso de vídeo integrando TVSDK con Adobe Analytics.
+Puede rastrear el uso de vídeo integrando TVSDK con Adobe Analytics.
 
-El seguimiento de vídeo en TVSDK utiliza el servicio **Adobe Analytics Video Essentials**, que proporciona métricas de participación en el vídeo, como vistas de vídeo, vídeos completados, impresiones de anuncios, tiempo invertido en vídeo, etc. Para obtener más información sobre este servicio, póngase en contacto con su representante de Adobe.
+El seguimiento de vídeo en TVSDK utiliza **Adobe Analytics Video Essentials** El servicio, que proporciona métricas de participación de vídeo, como vistas de vídeo, visualizaciones de vídeo completas, impresiones de publicidad, tiempo invertido en vídeo, etc. Para obtener más información sobre este servicio, póngase en contacto con el representante del Adobe.
 
 El siguiente procedimiento resume los pasos para activar el seguimiento de vídeo en el reproductor:
 
-1. Inicialice y/o configure los siguientes componentes de seguimiento de vídeo:
+1. Inicialice o configure los siguientes componentes de seguimiento de vídeo:
 
-   * **Biblioteca de AppMeasurement** : contiene la lógica principal de recopilación de datos de bajo nivel. Aquí es donde los datos de Video Heartbeat se acumulan y envían a través de la red.
-   * **Video Heartbeat Library** : contiene la lógica principal de recopilación de datos de Video Heartbeat. Video Heartbeat Library accede a un subconjunto de las API de biblioteca `AppMeasurement`.
+   * **Biblioteca de AppMeasurement** : contiene la lógica principal de recopilación de datos de bajo nivel. Aquí es donde se acumulan los datos de Video Heartbeat y se envían a través de la red.
+   * **Biblioteca de Video Heartbeat** : contiene la lógica principal de recopilación de datos de Video-Heartbeat. La biblioteca de latidos de vídeo accede a un subconjunto del `AppMeasurement` API de biblioteca.
 
       >[!TIP]
       >
-      >La aplicación no interactúa directamente con el código de Video Heartbeat. En su lugar, la aplicación utiliza las API de TVSDK para configurar las capacidades de seguimiento de vídeo del reproductor.
+      >La aplicación no interactúa directamente con el código de Video Heartbeat. En su lugar, la aplicación utiliza las API de TVSDK para configurar las funcionalidades de seguimiento de vídeo del reproductor.
 
-   * **Biblioteca VisitorID** : identifica de forma exclusiva a los visitantes de la página web que aloja el reproductor de vídeo.
+   * **Biblioteca VisitorID** : Identifica de forma exclusiva a los visitantes de la página web que aloja el reproductor de vídeo.
    >[!IMPORTANT]
    >
-   >La capacidad de seguimiento de vídeo integrada de TVSDK depende de una instancia `AppMeasurement` configurada correctamente. Los elementos de seguimiento suponen que la biblioteca `AppMeasurement` ya está creada y configurada antes de configurar y activar el seguimiento de vídeo. Las funciones de seguimiento de vídeo de TVSDK dependen de la existencia de una instancia de la biblioteca `AppMeasurement` completamente funcional y configurada correctamente.
+   >La capacidad de seguimiento de vídeo integrada de TVSDK depende de un configurado correctamente `AppMeasurement` ejemplo. Los elementos de seguimiento suponen que la variable `AppMeasurement` La biblioteca de ya está instanciada y configurada antes de configurar y activar el seguimiento de vídeo. Las funcionalidades de seguimiento de vídeo de TVSDK dependen de la existencia de una instancia de totalmente funcional y correctamente configurada de `AppMeasurement` biblioteca.
 
-1. Configure informes de análisis de vídeo en el servidor mediante las herramientas de administración de Adobe Analytics.
-
+1. Configure los informes de análisis de vídeo en el servidor mediante las Herramientas de administración de Adobe Analytics.

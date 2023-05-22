@@ -1,42 +1,41 @@
 ---
-description: Puede utilizar el SDK del explorador para recuperar información sobre los medios que puede mostrar en la barra de búsqueda.
-title: Mostrar la duración, la hora actual y el tiempo restante del vídeo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede utilizar el TVSDK del explorador para recuperar información sobre los medios que puede mostrar en la barra de búsqueda.
+title: Mostrar la duración, el tiempo actual y el tiempo restante del vídeo
+exl-id: f2aa3c42-9c47-4a55-aed6-7dc5a8d0662b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
 
 ---
 
+# Mostrar la duración, el tiempo actual y el tiempo restante del vídeo{#display-the-duration-current-time-and-remaining-time-of-the-video}
 
-# Mostrar la duración, la hora actual y el tiempo restante del vídeo{#display-the-duration-current-time-and-remaining-time-of-the-video}
+Puede utilizar el TVSDK del explorador para recuperar información sobre los medios que puede mostrar en la barra de búsqueda.
 
-Puede utilizar el SDK del explorador para recuperar información sobre los medios que puede mostrar en la barra de búsqueda.
+1. Espere a que el reproductor esté en el estado PREPARADO.
+1. Recupere el tiempo del cabezal de reproducción actual utilizando `MediaPlayer.currentTime` atributo.
 
-1. Espere a que el reproductor esté en al menos el estado PREPARADO.
-1. Recupere el tiempo del cabezal de reproducción actual mediante el atributo `MediaPlayer.currentTime`.
-
-   Este atributo devuelve la posición actual del cursor de reproducción en la cronología virtual en milisegundos. El tiempo se calcula en función del flujo resuelto que puede contener varias instancias de contenido alternativo, como varios anuncios o pausas publicitarias duplicados en el flujo principal. Para los flujos en directo/lineales, el tiempo devuelto siempre está en el intervalo de la ventana de reproducción.
+   Este atributo devuelve la posición actual del cabezal de reproducción en la cronología virtual en milisegundos. El tiempo se calcula en relación con el flujo resuelto que puede contener varias instancias de contenido alternativo, como varios anuncios o pausas publicitarias empalmadas en el flujo principal. Para los flujos en directo/lineales, el tiempo devuelto siempre está en el intervalo de la ventana de reproducción.
 
    ```js
    MediaPlayer.currentTime
    ```
 
-1. Recupere el intervalo de reproducción de la emisión y determine la duración.
-   1. Utilice la propiedad `mediaPlayer.playbackRange` para obtener el intervalo de tiempo de la cronología virtual.
+1. Recupere el rango de reproducción de la emisión y determine la duración.
+   1. Utilice el  `mediaPlayer.playbackRange` para obtener el intervalo de tiempo de la escala de tiempo virtual.
 
    1. Para determinar la duración, reste el inicio desde el final del intervalo.
 
-      Esto incluye la duración del contenido adicional que se inserta en la emisión (anuncios).
+      Esto incluye la duración del contenido adicional que se inserta en el flujo (anuncios).
 
-      Para VOD, el intervalo siempre comienza con cero y el valor final es igual a la suma de la duración del contenido principal y las duraciones del contenido adicional que se inserta en la emisión (anuncios).
+      Para VOD, el intervalo siempre comienza con cero y el valor final es igual a la suma de la duración del contenido principal y las duraciones del contenido adicional que se inserta en el flujo (anuncios).
 
       Para un recurso lineal/activo, el rango representa el intervalo de la ventana de reproducción y este intervalo cambia durante la reproducción.
 
-1. Utilice los métodos disponibles en los elementos MediaPlayer y Browser TVSDK para configurar los parámetros de la barra de búsqueda.
+1. Utilice los métodos disponibles en los elementos TVSDK de MediaPlayer y Browser para configurar los parámetros de la barra de búsqueda.
 
-   Por ejemplo, este es un posible diseño para mostrar la barra de búsqueda en HTML.
+   Por ejemplo, este es un diseño posible para mostrar la barra de búsqueda en el HTML.
 
    ```
    <div class="seekbar" id="seekbar"> 
@@ -148,7 +147,7 @@ Puede utilizar el SDK del explorador para recuperar información sobre los medio
    } 
    ```
 
-1. Escuche `AdobePSDK.TimeChangeEvent` y actualice la barra de búsqueda según corresponda.
+1. Escuchar para `AdobePSDK.TimeChangeEvent` y actualice la barra de búsqueda en consecuencia.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIME_CHANGED, onTimeChange); 
@@ -172,7 +171,7 @@ Puede utilizar el SDK del explorador para recuperar información sobre los medio
        } 
    ```
 
-   En este ejemplo se crea un objeto de barra de búsqueda para actualizar la barra de búsqueda:
+   En este ejemplo se crea un objeto seekbar para actualizar la barra de búsqueda:
 
    ```js
    /** 
@@ -343,4 +342,3 @@ Puede utilizar el SDK del explorador para recuperar información sobre los medio
    
            })(); 
    ```
-

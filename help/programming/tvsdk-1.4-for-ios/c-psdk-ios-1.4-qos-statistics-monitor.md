@@ -1,35 +1,34 @@
 ---
-description: Quality of service (QoS) ofrece una vista detallada del rendimiento del motor de vídeo. TVSDK proporciona estadísticas detalladas sobre la reproducción, el almacenamiento en búfer y los dispositivos.
+description: Calidad de servicio (QoS) ofrece una vista detallada del rendimiento del motor de vídeo. TVSDK proporciona estadísticas detalladas sobre la reproducción, el almacenamiento en búfer y los dispositivos.
 title: Estadísticas de calidad del servicio
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7684605f-e049-47bf-8073-155d1ff000e0
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '197'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Estadísticas de calidad del servicio{#quality-of-service-statistics}
 
-# Estadísticas de calidad de servicio{#quality-of-service-statistics}
+Calidad de servicio (QoS) ofrece una vista detallada del rendimiento del motor de vídeo. TVSDK proporciona estadísticas detalladas sobre la reproducción, el almacenamiento en búfer y los dispositivos.
 
-Quality of service (QoS) ofrece una vista detallada del rendimiento del motor de vídeo. TVSDK proporciona estadísticas detalladas sobre la reproducción, el almacenamiento en búfer y los dispositivos.
+## Leer las estadísticas de reproducción, almacenamiento en búfer y dispositivo de QOS {#section_9996406E2D814FA382B77E3041CB02BC}
 
-## Leer las estadísticas de reproducción, almacenamiento en búfer y dispositivos de QOS {#section_9996406E2D814FA382B77E3041CB02BC}
+Puede leer las estadísticas de reproducción, almacenamiento en búfer y dispositivo desde el `PTQOSProvider` clase.
 
-Puede leer las estadísticas de reproducción, almacenamiento en búfer y dispositivos desde la clase `PTQOSProvider` .
+El `PTQOSProvider` proporciona varias estadísticas, incluida información sobre el almacenamiento en búfer, las velocidades de bits, las velocidades de fotogramas, los datos de tiempo, etc.
 
-La clase `PTQOSProvider` proporciona varias estadísticas, incluida información sobre el almacenamiento en búfer, las tasas de bits, las tasas de fotogramas, los datos de tiempo, etc.
-
-También proporciona información sobre el dispositivo, como el modelo, el sistema operativo y el ID del dispositivo del fabricante.
+También proporciona información sobre el dispositivo, como el modelo, el sistema operativo y el ID de dispositivo del fabricante.
 
 >[!TIP]
 >
->No se puede cambiar el tamaño del búfer de reproducción, pero se puede supervisar el estado del tamaño del búfer para su depuración o análisis. `PTPlaybackInformation` incluye propiedades como  `playbackBufferFull` y  `playbackLikelyToKeepUp`.
+>No puede cambiar el tamaño del búfer de reproducción, pero puede supervisar el estado del tamaño del búfer para la depuración o el análisis. `PTPlaybackInformation` incluye propiedades como `playbackBufferFull` y `playbackLikelyToKeepUp`.
 
-1. Cree una instancia de un reproductor de medios.
-1. Cree un objeto `PTQOSProvider` y adjúntelo al reproductor de medios.
+1. Cree una instancia de un reproductor multimedia.
+1. Crear un `PTQOSProvider` y adjuntarlo al reproductor de contenidos.
 
-   El constructor `PTQOSProvider` toma un contexto de reproductor para que pueda recuperar información específica del dispositivo.
+   El `PTQOSProvider` toma un contexto del reproductor para poder recuperar información específica del dispositivo.
 
    ```
    qosProvider = [[PTQOSProvider alloc]initWithPlayer:self.player]; 
@@ -37,7 +36,7 @@ También proporciona información sobre el dispositivo, como el modelo, el siste
 
 1. (Opcional) Lea las estadísticas de reproducción.
 
-   Una solución para leer las estadísticas de reproducción es tener un temporizador, como `NSTimer`, que obtenga periódicamente los nuevos valores de QoS de `PTQOSProvider`. Por ejemplo:
+   Una solución para leer las estadísticas de reproducción es tener un temporizador, como un `NSTimer`, que recupera periódicamente los nuevos valores de QoS de la `PTQOSProvider`. Por ejemplo:
 
    ```
    - (void)printPlaybackInfoLog { 
@@ -62,4 +61,3 @@ También proporciona información sobre el dispositivo, como el modelo, el siste
    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self  
       selector:@selector(printPlaybackInfoLog) userInfo:nil repeats:YES];
    ```
-

@@ -1,25 +1,24 @@
 ---
-title: Implementar compatibilidad con capítulos
-description: Implementar compatibilidad con capítulos
+title: Implementación de compatibilidad con capítulos
+description: Implementación de compatibilidad con capítulos
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4d1b3488-88c9-49ff-9e54-f78aacdabf6e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 0%
 
 ---
 
+# Implementación de compatibilidad con capítulos {#implement-chapter-support}
 
-# Implementar compatibilidad con capítulos {#implement-chapter-support}
+Puede definir y rastrear *personalizado* capítulos para el seguimiento de vídeo en aplicaciones basadas en TVSDK.
 
-Puede definir y rastrear capítulos *personalizados* para el seguimiento de vídeo en aplicaciones basadas en TVSDK.
-
-Los capítulos personalizados los gestiona la aplicación y se basan en datos de CMS o en otra forma que la aplicación utilice para definir capítulos.
+La aplicación gestiona los capítulos personalizados y se basan en datos de CMS o en otra forma que la aplicación utiliza para definir capítulos.
 
 >[!CAUTION]
 >
->Los capítulos predeterminados no son compatibles con el Android TVSDK 2.5.
+>Los capítulos predeterminados no son compatibles con el SDK 2.5 de Android.
 
 1. Defina y rastree capítulos personalizados.
 
@@ -45,4 +44,3 @@ Los capítulos personalizados los gestiona la aplicación y se basan en datos de
    
    vaMetadata.setChapters(chapters); 
    ```
-

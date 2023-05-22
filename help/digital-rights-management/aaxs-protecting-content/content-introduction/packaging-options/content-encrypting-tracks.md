@@ -1,18 +1,17 @@
 ---
-title: Cifrar pistas
-description: Cifrar pistas
+title: Cifrado de pistas
+description: Cifrado de pistas
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: affb8e10-f07c-4c15-ad0f-26489c0fa417
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 0%
 
 ---
 
+# Cifrado de pistas{#encrypting-tracks}
 
-# Cifrar pistas{#encrypting-tracks}
+Especifica qué partes del contenido están cifradas: audio, vídeo o ambas.
 
-Especifica qué partes del contenido están cifradas: audio, vídeo o ambos.
-
-Ejemplo de caso de uso: Permite cifrar solo las pistas del contenido que requieren protección, reduciendo así la sobrecarga de descifrado en el cliente y mejorando el rendimiento de reproducción.
+Ejemplo de caso de uso: permite cifrar solo las pistas del contenido que requieren protección, reducir así la sobrecarga de descifrado en el cliente y mejorar el rendimiento de reproducción.

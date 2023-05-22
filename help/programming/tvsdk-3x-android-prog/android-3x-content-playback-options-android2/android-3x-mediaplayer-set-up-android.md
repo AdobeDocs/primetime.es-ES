@@ -1,30 +1,29 @@
 ---
-description: TVSDK proporciona herramientas para crear una aplicación de reproductor de vídeo avanzada (el reproductor Primetime) que se puede integrar con otros componentes de Primetime. También proporciona varias funciones diseñadas para maximizar la calidad de la reproducción de vídeo.
-title: Configuración del reproductor multimedia
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK proporciona herramientas para crear una aplicación de reproductor de vídeo avanzada (su reproductor de Primetime) que puede integrar con otros componentes de Primetime. También ofrece una serie de funciones diseñadas para maximizar la calidad de reproducción de vídeo.
+title: Configuración del reproductor de contenidos
+exl-id: 99fdc4c1-0c67-4de5-87a5-b42d76f43ae9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
+# Configuración del reproductor de contenidos {#set-up-the-media-player}
 
-# Configuración del reproductor de medios {#set-up-the-media-player}
-
-TVSDK proporciona herramientas para crear una aplicación de reproductor de vídeo avanzada (el reproductor Primetime) que se puede integrar con otros componentes de Primetime. También proporciona varias funciones diseñadas para maximizar la calidad de la reproducción de vídeo.
+TVSDK proporciona herramientas para crear una aplicación de reproductor de vídeo avanzada (su reproductor de Primetime) que puede integrar con otros componentes de Primetime. También ofrece una serie de funciones diseñadas para maximizar la calidad de reproducción de vídeo.
 
 <!--<a id="section_1FE83A68DE624F20B52C0959851F5699"></a>-->
 
-Cree una instancia de `MediaPlayer` y coloque una vista de ella en un diseño de marco.
+Crear una instancia de `MediaPlayer` y coloque una vista de él en un diseño de marco.
 
-1. Cree una instancia de `MediaPlayer`, pasando un objeto `android.content.Context` al constructor:
+1. Instanciar `MediaPlayer`, pasando un `android.content.Context` objeto al constructor:
 
    ```java
    MediaPlayer mediaPlayer = new MediaPlayer(context);
    ```
 
-1. Proporcione un diseño de marco ( `android.widget.FrameLayout`) para contener `ViewGroup` de `mediaPlayer`:
+1. Proporcionar un diseño de marco ( `android.widget.FrameLayout`) para guardar un `ViewGroup` de `mediaPlayer`:
 
    ```java
    FrameLayout playerFrame = (FrameLayout) _viewGroup.findViewById(R.id.playerFrame);
@@ -44,7 +43,7 @@ Cree una instancia de `MediaPlayer` y coloque una vista de ella en un diseño de
     }
    ```
 
-1. Coloque una vista de `mediaPlayer` dentro del diseño de marco:
+1. Colocar una vista de `mediaPlayer` dentro del diseño del marco:
 
    ```java
    playerFrame.addView(mediaPlayer.getView());
@@ -52,4 +51,4 @@ Cree una instancia de `MediaPlayer` y coloque una vista de ella en un diseño de
 
    >[!NOTE]
    >
-   >La instancia `MediaPlayer` ( `mediaPlayer`) ya está disponible y configurada correctamente para mostrar contenido de vídeo en la pantalla del dispositivo.
+   >El `MediaPlayer` instancia ( `mediaPlayer`) ya está disponible y correctamente configurado para mostrar contenido de vídeo en la pantalla del dispositivo.

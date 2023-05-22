@@ -1,27 +1,26 @@
 ---
-description: TVSDK prepara objetos TimedMetadata para etiquetas suscritas cada vez que se encuentran estos objetos en el manifiesto de contenido.
+description: TVSDK prepara los objetos TimedMetadata para las etiquetas suscritas cada vez que se encuentran estos objetos en el manifiesto de contenido.
 title: Suscripción a etiquetas personalizadas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7f1f86ca-eeba-43c3-ac2a-c493d05ad73a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
-
 # Suscripción a etiquetas personalizadas{#subscribe-to-custom-tags}
 
-TVSDK prepara objetos TimedMetadata para etiquetas suscritas cada vez que se encuentran estos objetos en el manifiesto de contenido.
+TVSDK prepara los objetos TimedMetadata para las etiquetas suscritas cada vez que se encuentran estos objetos en el manifiesto de contenido.
 
-Antes de iniciar la reproducción, debe suscribirse a las etiquetas .
+Antes de que comience la reproducción, debe suscribirse a las etiquetas.
 Para recibir notificaciones sobre etiquetas personalizadas en manifiestos HLS:
 
-Establezca los nombres de etiquetas de publicidad personalizados de forma global pasando una matriz que contenga las etiquetas personalizadas a `setSubscribedTags` en `MediaPlayerItemConfig`.
+Establezca los nombres de etiquetas de publicidad personalizados de forma global pasando una matriz que contenga las etiquetas personalizadas a `setSubscribedTags` in `MediaPlayerItemConfig`.
 
 >[!IMPORTANT]
 >
->Debe incluir el prefijo `#` al trabajar con flujos HLS.
+>Debe incluir la variable `#` cuando se trabaja con secuencias HLS.
 
 Por ejemplo:
 
@@ -32,4 +31,3 @@ array[1] = "#EXT-X-BLACKOUT";
 array[2] = "#EXT-OATCLS-SCTE35"; 
 MediaPlayerItemConfig.setSubscribedTags(array);
 ```
-

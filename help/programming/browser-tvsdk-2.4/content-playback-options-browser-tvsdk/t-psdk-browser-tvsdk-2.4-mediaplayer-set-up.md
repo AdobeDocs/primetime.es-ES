@@ -1,34 +1,33 @@
 ---
 description: Un objeto MediaPlayer encapsula el comportamiento y la funcionalidad de un reproductor multimedia.
 title: Configuración de MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f492b2bb-3280-4306-ac4b-8b8d0fd68409
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
 
 ---
 
-
 # Configuración de MediaPlayer{#set-up-the-mediaplayer}
 
 Un objeto MediaPlayer encapsula el comportamiento y la funcionalidad de un reproductor multimedia.
 
-1. Cree una instancia de `MediaPlayer` mediante lo siguiente:
+1. Crear una instancia de `MediaPlayer` mediante lo siguiente:
 
    ```js
    var player = new AdobePSDK.MediaPlayer();
    ```
 
-1. Cree una instancia `MediaPlayerView`:
+1. Crear un `MediaPlayerView` instancia:
 
    ```js
    var view = new AdobePSDK.MediaPlayerView(container);
    ```
 
-   donde `container` es el elemento `div` de destino que contiene su `HTMLMediaElement`.
+   donde `container` es el destinatario `div` elemento que contiene su `HTMLMediaElement`.
 
-   Por ejemplo, en una página HTML:
+   Por ejemplo, en una página de HTML:
 
    ```
    <div id="videoDiv"> 
@@ -50,13 +49,13 @@ Un objeto MediaPlayer encapsula el comportamiento y la funcionalidad de un repro
          document.getElementById("videoDiv"));  
    ```
 
-1. Adjunte la instancia `MediaPlayerView` a la instancia `MediaPlayer`:
+1. Adjunte su `MediaPlayerView` a su `MediaPlayer` instancia:
 
    ```js
    player.view = view;
    ```
 
-1. Adjunte el elemento `div` de controles personalizados a la instancia de MediaPlayer.
+1. Adjuntar los controles personalizados `div` a su instancia de MediaPlayer.
 
    Por ejemplo, en HTML:
 
@@ -77,4 +76,4 @@ Un objeto MediaPlayer encapsula el comportamiento y la funcionalidad de un repro
    }
    ```
 
-La instancia `MediaPlayer` ya está disponible y configurada correctamente para mostrar contenido de vídeo en la pantalla del dispositivo.
+El `MediaPlayer` La instancia de ya está disponible y configurada correctamente para mostrar contenido de vídeo en la pantalla del dispositivo.

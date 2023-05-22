@@ -1,23 +1,22 @@
 ---
-description: De forma predeterminada, un flujo en directo compatible con DVR expone un rango en el que se puede buscar y pausar al espectador.
-title: DVR con inserción de anuncios
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: De forma predeterminada, un flujo en directo compatible con DVR expone un rango de búsqueda en el que el visualizador puede hacer una pausa y buscar.
+title: DVR con inserción de publicidad
+exl-id: 3471741d-1ae3-4cbe-aa35-4e333aeb83c6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%
 
 ---
 
+# DVR con inserción de publicidad {#dvr-with-ad-insertion}
 
-# DVR con inserción de anuncios {#dvr-with-ad-insertion}
+De forma predeterminada, un flujo en directo compatible con DVR expone un rango de búsqueda en el que el visualizador puede hacer una pausa y buscar.
 
-De forma predeterminada, un flujo en directo compatible con DVR expone un rango en el que se puede buscar y pausar al espectador.
-
-Las pausas publicitarias se muestran como barras rojas en la barra de control, como se muestra a continuación:
+Los saltos de anuncios se muestran como barras rojas en la barra de control, como se muestra a continuación:
 
 <!--<a id="fig_720DD22D2318485EAB4BEA55C30D5ECF"></a>-->
 
 ![](assets/dvr-with-ads.jpg)
 
-El rango buscable es gris y los puntos rojos representan pausas publicitarias.
+El rango buscable es de color gris y los puntos rojos representan saltos de anuncios.

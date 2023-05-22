@@ -1,20 +1,19 @@
 ---
-description: Puede mostrar el tiempo actual y restante del contenido que se está reproduciendo.
-title: Mostrar una barra de desplazamiento con la posición actual del tiempo de reproducción
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede mostrar el tiempo actual y el tiempo restante del contenido que se está reproduciendo.
+title: Mostrar una barra de desplazamiento de búsqueda con la posición de tiempo de reproducción actual
+exl-id: a8b34cf4-4dfd-4799-9408-87c4d60eff4c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
 
 ---
 
+# Mostrar una barra de desplazamiento de búsqueda con la posición de tiempo de reproducción actual {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
 
-# Mostrar una barra de depuración con la posición de tiempo de reproducción actual {#display-a-seek-scrub-bar-with-the-current-playback-time-position}
+Puede mostrar el tiempo actual y el tiempo restante del contenido que se está reproduciendo.
 
-Puede mostrar el tiempo actual y restante del contenido que se está reproduciendo.
-
-Para implementar una barra de desplazamiento, utilice el siguiente código de muestra:
+Para implementar una barra de desplazamiento, utilice el siguiente código de ejemplo:
 
 ```
 // 1. Register for the PTMediaPlayerTimeChangeNotification 

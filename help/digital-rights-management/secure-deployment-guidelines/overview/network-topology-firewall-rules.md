@@ -1,30 +1,29 @@
 ---
-description: 'Al determinar las reglas del cortafuegos, tenga en cuenta los siguientes tipos de direcciones URL '
-title: Reglas de firewall
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Al determinar las reglas del cortafuegos, tenga en cuenta los siguientes tipos de URL
+title: Reglas del cortafuegos
+exl-id: 3f6f6d1a-5759-43b3-9f62-6feb02e0a5c5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
 
 ---
 
+# Reglas del cortafuegos {#firewall-rules}
 
-# Reglas de firewall {#firewall-rules}
+Al determinar las reglas del cortafuegos, tenga en cuenta los siguientes tipos de URL:
 
-Al determinar las reglas del cortafuegos, tenga en cuenta los siguientes tipos de direcciones URL:
+## URL entrantes {#section_F111526A9DB844CBBF21A3CAE5F50880}
 
-## Direcciones URL entrantes {#section_F111526A9DB844CBBF21A3CAE5F50880}
+Puede configurar el cortafuegos externo para que exponga únicamente las direcciones URL de la funcionalidad de la aplicación que desea proporcionar a los usuarios finales.
 
-Puede configurar el firewall externo de modo que muestre únicamente las direcciones URL para la funcionalidad de la aplicación que desea proporcionar a los usuarios finales.
-
-Los usuarios externos pueden acceder a las siguientes direcciones URL utilizando el cortafuegos exterior:
+Los usuarios externos pueden acceder a las siguientes direcciones URL mediante el cortafuegos externo:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_bqs_whz_n4"> 
  <thead class="- topic/thead "> 
   <tr rowsep="1" class="- topic/row "> 
    <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">URL raíz </p> </th> 
-   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Objetivo </p> </th> 
+   <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Finalidad </p> </th> 
   </tr> 
  </thead>
  <tbody class="- topic/tbody "> 
@@ -41,7 +40,7 @@ Los usuarios externos pueden acceder a las siguientes direcciones URL utilizando
      <li id="li_01B2E17BF4DB456383FD6E18E9DE28F5"><span class="filepath"> /flashaccess/authn/v5/*</span> </li> 
      <li id="li_096D349CCD7945B387CB80C3E99063C7"><span class="filepath"> /flashaccess/authn/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para autenticar usuarios. </p> <p>Se debe poder acceder a esta dirección URL si se usan las API de cliente de Adobe Primetime DRM para la autenticación de usuarios. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para autenticar usuarios. </p> <p>Debe poder acceder a esta dirección URL si utiliza las API de cliente de DRM de Adobe Primetime para la autenticación de usuarios. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -52,7 +51,7 @@ Los usuarios externos pueden acceder a las siguientes direcciones URL utilizando
      <li id="li_5112283BDCF1457099056733B633FAF1"><span class="filepath"> /flashaccess/license/v5/*</span> </li> 
      <li id="li_F73A570E2C1A45E1BBF21C1468B90D3A"><span class="filepath"> /flashaccess/license/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para emitir licencias a usuarios finales. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para emitir licencias para usuarios finales. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -62,7 +61,7 @@ Los usuarios externos pueden acceder a las siguientes direcciones URL utilizando
      <li id="li_2222D27F73D0421396A4F0E18140B3F9"><span class="filepath"> /flashaccess/sync/v5</span> </li> 
      <li id="li_18020B7CE36B4C209F65FF01A00B6737"><span class="filepath"> /flashaccess/sync/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para sincronizar solicitudes. </p> <p>Se debe poder acceder a esta dirección URL si se especifican los requisitos de sincronización en las licencias. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para sincronizar solicitudes. </p> <p>Si especifica los requisitos de sincronización en sus licencias, debe poder acceder a esta dirección URL. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -72,7 +71,7 @@ Los usuarios externos pueden acceder a las siguientes direcciones URL utilizando
      <li id="li_CF7590FDAF694EDF9685434BE8EE10CA"><span class="filepath"> /flashaccess/domain/v5</span> </li> 
      <li id="li_CA73424FDFAA4BD8BBE2C1AD165D2C31"><span class="filepath"> /flashaccess/domain/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para registrar dominios. </p> <p>Se debe poder acceder a esta dirección URL si se implementa la compatibilidad con el dominio. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para registrar dominios. </p> <p>Si implementa la compatibilidad con dominios, debe poder acceder a esta dirección URL. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> 
@@ -82,15 +81,15 @@ Los usuarios externos pueden acceder a las siguientes direcciones URL utilizando
      <li id="li_C761F14F3C97479CBA5C255739E01A28"><span class="filepath"> /flashaccess/dereg/v5</span> </li> 
      <li id="li_23A8AABE7499488EB61B7ED27CC65098"><span class="filepath"> /flashaccess/dereg/v6/*</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para anular el registro de dominios. </p> <p>Se debe poder acceder a esta dirección URL si se implementa la compatibilidad con el dominio. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para anular el registro de dominios. </p> <p>Si implementa la compatibilidad con dominios, debe poder acceder a esta dirección URL. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /flashaccess/headerconversion/v1/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para permitir que el cliente convierta los metadatos DRM de FMRMS 1.x a metadatos DRM de Primetime. </p> <p>Nota:  Esta URL debe utilizar SSL (HTTPS). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para permitir que el cliente convierta metadatos DRM de FMRMS 1.x en metadatos DRM de Primetime. </p> <p>Nota: Esta dirección URL debe utilizar SSL (HTTPS). </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="filepath"> /edcws/services/urn:EDCLicenseService/*</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL del servicio web de LiveCycle Rights Management ES. Si el contenido se ha publicado utilizando una versión anterior de FMRMS, esta URL permite que los clientes más antiguos se conecten al servidor. Se solicita a estos clientes que actualicen a Adobe Primetime DRM. </p> <p class="- topic/p ">Nota: Esta URL debe utilizar SSL (HTTPS). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">URL del servicio web de LiveCycle Rights Management ES. Si el contenido se ha publicado con una versión anterior de FRMS, esta dirección URL permite a los clientes más antiguos conectarse al servidor. Se solicitará a estos clientes que actualicen a Adobe Primetime DRM. </p> <p class="- topic/p ">Nota: Esta dirección URL debe utilizar SSL (HTTPS). </p> </td> 
   </tr> 
   <tr> 
    <td colname="1" class="- topic/entry "> 
@@ -98,18 +97,18 @@ Los usuarios externos pueden acceder a las siguientes direcciones URL utilizando
      <li id="li_24B4D42BECF8405281C73B782F8E7310"><span class="filepath"> /flashaccess/lreturn/v5</span> </li> 
      <li id="li_6B79563205D1421F89131E650D71E83B"><span class="filepath"> /flashaccess/lreturn/v6</span> </li> 
     </ul> </td> 
-   <td colname="2" class="- topic/entry "> <p>Para devolver licencias. </p> <p> La dirección URL debe ser accesible si implementa la compatibilidad con la devolución de licencias. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Para devolver licencias. </p> <p> La dirección URL debe ser accesible si implementa la compatibilidad con devoluciones de licencias. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 >[!NOTE]
 >
->El cortafuegos interno solo debe permitir conexiones al servidor de licencias de Primetime DRM a través del proxy inverso y solo a las URL de la tabla. Para mejorar la escalabilidad, utilice HTTP para las conexiones entre el proxy inverso y el DRM de Primetime.
+>El cortafuegos interno solo debe permitir conexiones al servidor de licencias DRM de Primetime a través del proxy inverso y solo a las URL de la tabla. Para mejorar la escalabilidad, utilice HTTP para las conexiones entre el proxy inverso y Primetime DRM.
 
-## Direcciones URL salientes {#section_FFF9F7BB353149F4A27F8788E9934A48}
+## URL salientes {#section_FFF9F7BB353149F4A27F8788E9934A48}
 
-Las URL salientes permiten al servidor de licencias descargar las CRL desde el Adobe.
+Las direcciones URL salientes permiten al servidor de licencias descargar las CRL desde la Adobe.
 
 Esta es una lista de las direcciones URL salientes que puede utilizar:
 
@@ -117,4 +116,3 @@ Esta es una lista de las direcciones URL salientes que puede utilizar:
 * `https://crl2.adobe.com/Adobe/FlashAccessIntermediateCA.crl`
 * `https://crl3.adobe.com/AdobeSystemsIncorporatedFlashAccessRuntime/LatestCRL.crl`
 * `https://crl2.adobe.com/Adobe/FlashAccessIndividualizationCA.crl`
-

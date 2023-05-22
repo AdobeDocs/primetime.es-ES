@@ -1,20 +1,19 @@
 ---
-description: La utilidad Calculadora de hash SWF calcula el compendio de una aplicación SWF ubicada en un archivo.
-title: Calculadora de hash SWF
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La utilidad Calculadora de hash de SWF calcula el resumen de una aplicación de SWF ubicada en un archivo.
+title: calculadora de hash de SWF
+exl-id: 245254fe-2fcb-41e8-94bd-0cbc8b39b2b5
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 0%
 
 ---
 
+# calculadora de hash de SWF{#swf-hash-calculator}
 
-# Calculadora de hash SWF{#swf-hash-calculator}
+La utilidad Calculadora de hash de SWF calcula el resumen de una aplicación de SWF ubicada en un archivo.
 
-La utilidad Calculadora de hash SWF calcula el compendio de una aplicación SWF ubicada en un archivo.
-
-Para ejecutar el lavafaros, escriba:
+Para ejecutar el hash, escriba:
 
 ```
 Hasher.bat 
@@ -41,4 +40,4 @@ SWF Hash:
 </i class="+ topic>
 ```
 
-Puede utilizar este valor para especificar el compendio SWF en [!DNL flashaccess-tenant.xml].
+Puede utilizar este valor para especificar el compendio de SWF en [!DNL flashaccess-tenant.xml].

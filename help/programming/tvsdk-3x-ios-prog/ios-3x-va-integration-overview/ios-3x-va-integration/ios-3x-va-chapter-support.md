@@ -1,24 +1,23 @@
 ---
-title: Implementar compatibilidad con capítulos
-description: Implementar compatibilidad con capítulos
+title: Implementación de compatibilidad con capítulos
+description: Implementación de compatibilidad con capítulos
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2cc34a75-5fcb-4b4a-ba2c-5e1e805597e4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%
 
 ---
 
-
-# Implementar compatibilidad con capítulos {#implement-chapter-support}
+# Implementación de compatibilidad con capítulos {#implement-chapter-support}
 
 Puede definir y rastrear capítulos para el seguimiento de vídeo en una aplicación basada en TVSDK de las siguientes maneras:
 
-* Los capítulos predeterminados, que TVSDK administra internamente.
+* Capítulos predeterminados, que TVSDK administra internamente.
 
-   Un capítulo se define como el tiempo entre cada pausa publicitaria. Por ejemplo, el tiempo entre una pausa publicitaria pre-roll y la primera mitad de la emisión se define como el primer capítulo.
-* Los capítulos personalizados, que son administrados por la aplicación y se basan en datos de CMS o de otra manera que la aplicación utiliza para definir capítulos.
+   Un capítulo se define como el tiempo entre cada pausa publicitaria. Por ejemplo, el tiempo entre una pausa publicitaria del anuncio previo a la emisión y el primer anuncio durante la emisión se define como el primer capítulo.
+* Los capítulos personalizados, que son administrados por la aplicación y se basan en datos de CMS o en otra forma que la aplicación utiliza para definir capítulos.
 
    Defina y rastree capítulos predeterminados o personalizados.
 

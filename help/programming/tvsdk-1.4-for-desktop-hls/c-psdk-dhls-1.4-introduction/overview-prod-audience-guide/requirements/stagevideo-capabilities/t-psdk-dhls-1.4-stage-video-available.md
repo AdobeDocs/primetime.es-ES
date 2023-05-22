@@ -1,22 +1,21 @@
 ---
-description: Si StageVideo no está disponible y la aplicación intenta utilizar StageVideo, el TVSDK no genera ningún error. La aplicación puede determinar si StageVideo está disponible escuchando StageVideoAvailabilityEvent.
+description: Si StageVideo no está disponible y la aplicación intenta utilizar StageVideo, TVSDK no genera un error. La aplicación puede determinar si StageVideo está disponible escuchando StageVideoAvailabilityEvent.
 title: Comprobar si StageVideo está disponible
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 24136a14-8d7d-4569-9911-fac4e2de3227
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Comprobar si StageVideo está disponible{#check-whether-stagevideo-is-available}
 
-Si StageVideo no está disponible y la aplicación intenta utilizar StageVideo, el TVSDK no genera ningún error. La aplicación puede determinar si StageVideo está disponible escuchando StageVideoAvailabilityEvent.
+Si StageVideo no está disponible y la aplicación intenta utilizar StageVideo, TVSDK no genera un error. La aplicación puede determinar si StageVideo está disponible escuchando StageVideoAvailabilityEvent.
 
-A partir del Flash 15 y posteriores, cuando el hardware `StageVideo` no esté disponible, volverá al software `StageVideo`. Para el Flash 14 y anteriores, puede determinar si `StageVideo` está disponible. Si `StageVideo` no está disponible, puede utilizar `StageVideoAvailabilityEvent` para comprender por qué no está disponible.
+Desde el Flash 15 y posterior, cuando el hardware `StageVideo` no está disponible, volverá a depender del software `StageVideo`. Para el Flash 14 y anteriores, puede determinar si `StageVideo` está disponible. If `StageVideo` no está disponible, puede utilizar `StageVideoAvailabilityEvent` para comprender por qué no está disponible.
 
-1. Escuche `StageVideoAvailabilityEvent` para determinar si `StageVideo` está disponible.
+1. Escuchar para `StageVideoAvailabilityEvent` para determinar si `StageVideo` está disponible.
 
    Por ejemplo:
 
@@ -28,4 +27,4 @@ A partir del Flash 15 y posteriores, cuando el hardware `StageVideo` no esté di
    }
    ```
 
-1. Si `StageVideo` no está disponible, marque `flash.media.StageVideoAvailabilityReason`.
+1. If `StageVideo` no está disponible, marque `flash.media.StageVideoAvailabilityReason`.

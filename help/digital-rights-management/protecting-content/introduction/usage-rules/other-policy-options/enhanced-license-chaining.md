@@ -1,26 +1,25 @@
 ---
-title: encadenamiento de licencias mejorado
-description: encadenamiento de licencias mejorado
+title: Encadenamiento de licencias mejorado
+description: Encadenamiento de licencias mejorado
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 269e7866-fe43-45a8-84d8-c51e4fc95f77
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 0%
 
 ---
 
+# Encadenamiento de licencias mejorado {#enhanced-license-chaining}
 
-# encadenado de licencias mejorado {#enhanced-license-chaining}
+Puede utilizar el encadenamiento de licencias mejorado para actualizar una licencia mediante una licencia raíz principal para la actualización por lotes de licencias.
 
-Puede utilizar la encadenación de licencias mejorada para actualizar una licencia utilizando una licencia raíz principal para la actualización por lotes de licencias.
+Primetime DRM 2.0 admite el encadenamiento de licencias, en el que las licencias hoja y raíz están enlazadas a un equipo específico. Primetime DRM 3.0 y versiones posteriores admiten el encadenamiento de licencias mejorado, en el que una hoja está enlazada a una licencia raíz y solo la licencia raíz está enlazada a un equipo o dominio específico. La cadena de licencias mejorada admite la incrustación de una licencia hoja con el contenido y el cliente solo necesita adquirir la licencia raíz del servidor de licencias para consumir el contenido protegido.
 
-Primetime DRM 2.0 admite la encadenación de licencias en la que tanto las licencias de hoja como las de raíz están vinculadas a un equipo específico. Primetime DRM 3.0 y posteriores son compatibles con la encadenación de licencias mejorada, en la que una hoja está enlazada a una licencia raíz, y solo la licencia raíz está enlazada a un equipo o dominio específico. La cadena de licencias mejorada admite la incrustación de una licencia de hoja con el contenido, y el cliente solo necesita adquirir la licencia raíz del servidor de licencias para consumir el contenido protegido.
-
-Si desea habilitar la encadenación de licencias mejorada, debe asignar una clave de cifrado raíz a una directiva de DRM de Primetime. La clave de cifrado raíz se utiliza para enlazar criptográficamente la licencia de hoja a la licencia raíz.
+Si desea habilitar el encadenamiento de licencias mejorado, debe asignar una clave de cifrado raíz a una directiva DRM de Primetime. La clave de cifrado raíz se utiliza para enlazar criptográficamente la licencia hoja a la licencia raíz.
 
 >[!NOTE]
 >
->La encadenación de licencias mejorada es compatible con los clientes de Primetime DRM versión 3.0 o posterior. Si un cliente anterior solicita una licencia para contenido que admita la encadenación de licencias mejorada, el servidor de licencias aún puede emitir una licencia a este cliente utilizando la encadenación de licencias admitida por Primetime DRM 2.0.
+>La versión 3.0 o posterior de los clientes de Primetime DRM admite el encadenamiento mejorado de licencias. Si un cliente más antiguo solicita una licencia para contenido que admita el encadenamiento de licencias mejorado, el servidor de licencias aún puede emitir una licencia para este cliente utilizando el encadenamiento de licencias compatible con Primetime DRM 2.0.
 
-Ejemplo de caso de uso: Utilice esta opción para actualizar las licencias vinculadas descargando una licencia raíz única. Por ejemplo, implemente modelos de suscripción en los que el contenido se pueda reproducir mientras el usuario renueve la suscripción mensualmente. La ventaja de este enfoque es que los usuarios solo tienen que adquirir una licencia única para actualizar todas sus licencias de suscripción.
+Ejemplo de caso de uso: utilice esta opción para actualizar cualquier licencia vinculada descargando una sola licencia raíz. Por ejemplo, implemente modelos de suscripción en los que el contenido se pueda reproducir siempre y cuando el usuario renueve la suscripción mensualmente. La ventaja de este enfoque es que los usuarios solo tienen que adquirir una única licencia para actualizar todas sus licencias de suscripción.

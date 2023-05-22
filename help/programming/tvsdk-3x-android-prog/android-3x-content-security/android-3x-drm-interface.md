@@ -1,28 +1,27 @@
 ---
-description: El elemento clave del lado del cliente de la solución Primetime DRM es el administrador de DRM. La aplicación de ejemplo incluida con el SDK para Android también incluye una clase DRMHelper que se puede utilizar para facilitar la implementación de ciertas operaciones DRM.
-title: Información general sobre la interfaz de DRM de Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: El elemento clave del lado del cliente de la solución DRM de Primetime es el Administrador de DRM. La aplicación de ejemplo que se incluye con el SDK para Android también incluye una clase DRMHelper que se puede utilizar para facilitar la implementación de determinadas operaciones de DRM.
+title: Información general sobre la interfaz DRM Primetime
+exl-id: 39e9f2e2-0945-4a89-baee-a2e558f03fd4
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
 
 ---
 
+# Información general sobre la interfaz DRM Primetime {#primetime-drm-interface-overview}
 
-# Resumen de la interfaz de DRM de Primetime {#primetime-drm-interface-overview}
-
-El elemento clave del lado del cliente de la solución Primetime DRM es el administrador de DRM. La aplicación de ejemplo incluida con el SDK para Android también incluye una clase `DRMHelper` que se puede utilizar para facilitar la implementación de ciertas operaciones de DRM.
+El elemento clave del lado del cliente de la solución DRM de Primetime es el Administrador de DRM. La aplicación de ejemplo que se incluye con el SDK para Android también incluye un `DRMHelper` que se puede utilizar para facilitar la implementación de determinadas operaciones de DRM.
 
 <!--<a id="section_4DD54E085AB345FE9BE00865E56B28DB"></a>-->
 
-Primetime DRM proporciona un flujo de trabajo escalable y eficiente para implementar la protección de contenido en aplicaciones TVSDK. Para proteger y administrar los derechos del contenido de vídeo, debe crear una licencia para cada archivo multimedia digital.
+Primetime DRM proporciona un flujo de trabajo escalable y eficaz para implementar la protección de contenido en aplicaciones TVSDK. Protege y administra los derechos del contenido de vídeo creando una licencia para cada archivo multimedia digital.
 
-Para obtener más información, consulte el código del reproductor de muestra de DRM que se incluye en el paquete TVSDK.
+Para obtener más información, consulte el código del reproductor de muestra DRM que se incluye en el paquete TVSDK.
 
 Estos son los elementos de API más importantes para trabajar con DRM:
 
-* Referencia en el reproductor de medios al objeto de administrador de DRM que implementa el subsistema DRM:
+* Referencia en el reproductor de contenido al objeto del administrador de DRM que implementa el subsistema de DRM:
 
    ```java
    MediaPlayer.getDRMManager();
@@ -30,10 +29,10 @@ Estos son los elementos de API más importantes para trabajar con DRM:
 
    >[!TIP]
    >
-   >Esta API devolverá un objeto `DRMManager` válido solo después de activar `MediaPlayerEvent.DRM_METADATA`. Si llama a `getDRMManager()` antes de que se active este evento, es posible que devuelva NULL.
+   >Esta API devolverá un válido `DRMManager` objeto solo después de `MediaPlayerEvent.DRM_METADATA` está despedido. Si llama a `getDRMManager()` antes de que se active este evento, podría devolver NULL.
 
-* La clase de ayuda `DRMHelper`, que resulta útil al implementar flujos de trabajo de DRM.
-* Un método de carga de metadatos `DRMHelper`, que carga los metadatos DRM cuando se encuentran en una dirección URL independiente del contenido.
+* El `DRMHelper` clase auxiliar, que resulta útil al implementar flujos de trabajo de DRM.
+* A `DRMHelper` método de cargador de metadatos, que carga metadatos DRM cuando se encuentran en una dirección URL independiente del contenido.
 
    ```java
    public static void loadDRMMetadata(final DRMManager drmManager,  
@@ -41,7 +40,7 @@ Estos son los elementos de API más importantes para trabajar con DRM:
       final DRMLoadMetadataListener loadMetadataListener);
    ```
 
-* Un método `DRMHelper` para comprobar los metadatos de DRM y determinar si se requiere autenticación.
+* A `DRMHelper` para comprobar los metadatos DRM y determinar si se requiere autenticación.
 
    ```java
    /** 
@@ -55,7 +54,7 @@ Estos son los elementos de API más importantes para trabajar con DRM:
    public static boolean isAuthNeeded(DRMMetadata drmMetadata);
    ```
 
-* `DRMHelper` para realizar la autenticación.
+* `DRMHelper` método para realizar la autenticación.
 
    ```java
    /** 
@@ -80,6 +79,6 @@ Estos son los elementos de API más importantes para trabajar con DRM:
    final DRMAuthenticationListener authenticationListener);
    ```
 
-* Eventos que notifican a la aplicación sobre varias actividades y estados de DRM.
+* Eventos que notifican a la aplicación sobre diversas actividades y estados de DRM.
 
-Para obtener más información sobre DRM, consulte la [documentación de DRM](https://helpx.adobe.com/primetime/user-guide.html).
+Para obtener más información sobre DRM, consulte la [Documentación de DRM](https://helpx.adobe.com/primetime/user-guide.html).

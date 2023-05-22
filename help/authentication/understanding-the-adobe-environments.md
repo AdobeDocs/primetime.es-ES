@@ -1,7 +1,8 @@
 ---
 title: Explicación de los entornos de Adobe
 description: Explicación de los entornos de Adobe
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: bb6cf37f-48cd-47bb-b3c2-f7a96e49b12d
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -12,25 +13,25 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-La documentación oficial que describe los entornos de Adobe está disponible [Configuración del entorno y pruebas en Pre-qual](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md):
+La documentación oficial que describe los entornos de Adobe está disponible [Configurar el entorno y realizar pruebas en Pre-Qual](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md):
 
-Los entornos de Adobe se resumen en unas pocas palabras:
+Los entornos de Adobe, resumidos en pocas palabras:
 
-Adobe tiene dos entornos: **Pre-Calificación** y **Versión**.
+El Adobe tiene dos entornos: **Pre-Calificación** y **Versión**.
 
 * En el entorno de precalificación, estamos preparando la nueva compilación para su lanzamiento.
 
-* La versión actual se encuentra en el entorno de versión.
+* La versión actual se encuentra en el entorno de la versión.
 
-Cada entorno tiene dos perfiles : **ensayo** y **producción**.
+Cada entorno tiene dos perfiles: **puesta en escena** y **producción**.
 
 * El perfil de ensayo se conecta al servidor de ensayo de MVPD
-* El perfil de producción se conecta al perfil de producción de los MVPD.
+* El perfil de producción se conecta al perfil de producción de las MVPD.
 
-La razón de tener los dos perfiles es que en el perfil de ensayo estamos preparando nuevos socios para que se activen, y les gustaría probar el sistema con la próxima compilación (Pre-Qualification) o con la versión una (más estable).
+El motivo de tener los dos perfiles es que en el perfil de ensayo estamos preparando nuevos socios para lanzarlos, y les gustaría probar el sistema con la próxima compilación (precalificación) o con la versión (más estable).
 
-Si un socio desea probar la nueva versión, hay que realizar un par de pasos adicionales. Consulte [Configuración del entorno y pruebas en Pre-qual](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md).
+Si un socio desea probar la nueva versión, hay que realizar un par de pasos adicionales. Consulte. [Configurar el entorno y realizar pruebas en Pre-Qual](/help/authentication/setting-up-your-environment-and-testing-in-prequal.md).
 
 Al seguir los pasos anteriores, se garantiza que la próxima versión se probará en el entorno de precalificación.

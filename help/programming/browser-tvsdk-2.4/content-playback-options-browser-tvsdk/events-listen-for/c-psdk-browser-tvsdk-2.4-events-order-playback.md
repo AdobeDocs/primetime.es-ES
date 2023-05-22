@@ -1,40 +1,39 @@
 ---
-description: El SDK de TVSDK de explorador envía eventos/notificaciones en secuencias generalmente esperadas. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
+description: TVSDK del explorador envía eventos/notificaciones en secuencias generalmente esperadas. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
 title: Orden de los eventos de reproducción
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: fd9dc0d5-0f39-4a6d-9d88-1fd49946fedf
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
-
 # Orden de los eventos de reproducción{#order-of-playback-events}
 
-El SDK de TVSDK de explorador envía eventos/notificaciones en secuencias generalmente esperadas. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
+TVSDK del explorador envía eventos/notificaciones en secuencias generalmente esperadas. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
 
 <!--<a id="section_D247A5873A854A079EFA6AC2E80AB894"></a>-->
 
 Los siguientes ejemplos muestran el orden de algunos eventos que incluyen eventos de reproducción.
 
-* Cuando se carga correctamente un recurso de medios a través de `replaceCurrentResource`, el orden de los eventos es:
+* Al cargar correctamente un recurso de medios mediante `replaceCurrentResource`, el orden de los eventos es:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` con  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` con `event.status =`
 
       * `MediaPlayerStatus.INITIALIZING`
       * `MediaPlayerStatus.INITIALIZED`
 
-* Al prepararse para la reproducción mediante `MediaPlayer.prepareToPlay`, el orden de los eventos es:
+* Al preparar la reproducción mediante `MediaPlayer.prepareToPlay`, el orden de los eventos es:
 
-   * `AdobePSDK.MediaPlayerStatusChangeEvent` con  `event.status =`
+   * `AdobePSDK.MediaPlayerStatusChangeEvent` con `event.status =`
 
       * `MediaPlayerStatus.PREPARING`
       * `MediaPlayerStatus.PREPARED`
 
 <!--<a id="section_76C13548AF934868B70757CA5489E516"></a>-->
 
-El siguiente ejemplo muestra una progresión típica de eventos:
+El siguiente ejemplo muestra una progresión típica de los eventos:
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  
@@ -100,4 +99,3 @@ onStatusChange = function (event) {
     } 
 };
 ```
-

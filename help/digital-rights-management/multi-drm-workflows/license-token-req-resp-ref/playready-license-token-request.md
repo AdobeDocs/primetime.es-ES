@@ -1,22 +1,21 @@
 ---
-description: La interfaz de token de licencia PlayReady proporciona servicios de producción y prueba.
-title: Solicitud/respuesta del token de licencia de PlayReady
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La interfaz del token de licencia de PlayReady proporciona servicios de producción y prueba.
+title: Solicitud/respuesta de token de licencia de PlayReady
+exl-id: 12f925f7-336b-42b2-95a9-e806801bab8c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '898'
 ht-degree: 4%
 
 ---
 
+# Solicitud/respuesta de token de licencia de PlayReady {#playready-license-token-request-response}
 
-# Solicitud de token de licencia PlayReady/respuesta {#playready-license-token-request-response}
-
-La interfaz de token de licencia PlayReady proporciona servicios de producción y prueba.
+La interfaz del token de licencia de PlayReady proporciona servicios de producción y prueba.
 
 Esta solicitud HTTP devuelve un token que se puede canjear por una licencia PlayReady.
 
-**Método: GET, POST**  (con un cuerpo con codificación www-url que contiene parámetros para ambos métodos)
+**Método: GET, POST** (con un cuerpo con codificación www-url que contiene parámetros para ambos métodos)
 
 **URL:**
 
@@ -50,7 +49,7 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia Play
 
 ## Parámetros de consulta de solicitud {#section_26F8856641A64A46A3290DBE61ACFAD2}
 
-**Tabla 9: Parámetros de consulta de token**
+**Tabla 9: Parámetros de consulta de tokens**
 
 <table id="table_zxg_dyr_pv">  
  <thead> 
@@ -63,12 +62,12 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia Play
  <tbody> 
   <tr> 
    <td><span class="codeph"> customerAuthenticator</span> </td> 
-   <td> <p>Esta es la clave de API del cliente, una para los entornos de producción y prueba. Puede encontrarlo en la pestaña del panel de administración de ExpressPlay. </p> </td> 
+   <td> <p>Esta es la clave de API del cliente, una para los entornos de producción y prueba. Puede encontrarlo en la pestaña del Panel de administración de ExpressPlay. </p> </td> 
    <td> Sí </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> errorFormat</span> </td> 
-   <td><span class="codeph"> html</span> o <span class="codeph"> json</span>. Si <span class="codeph"> html</span> (predeterminado) se proporciona una representación HTML de cualquier error en el cuerpo de la entidad de la respuesta. <p>Si se especifica <span class="codeph"> json</span> , se devuelve una respuesta estructurada en formato JSON. Consulte <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> Errores JSON</a> para obtener más información. </p> <p>El tipo de MIME de la respuesta es <span class="codeph"> text/uri-list</span> on success, <span class="codeph"> text/html</span> para el formato de error HTML o <span class="codeph"> application/json</span> para el formato de error JSON. </p> </td> 
+   <td>Cualquiera <span class="codeph"> html</span> o <span class="codeph"> json</span>. If <span class="codeph"> html</span> (valor predeterminado) se proporciona una representación de HTML de cualquier error en el cuerpo de la entidad de la respuesta. <p>If <span class="codeph"> json</span> se especifica, se devuelve una respuesta estructurada en formato JSON. Consulte <a href="https://www.expressplay.com/developer/restapi/#json-errors" format="html" scope="external"> Errores de JSON</a> para obtener más información. </p> <p>El tipo MIME de la respuesta es <span class="codeph"> text/uri-list</span> en caso de éxito, <span class="codeph"> text/html</span> para el formato de error del HTML, o <span class="codeph"> application/json</span> para el formato de error JSON. </p> </td> 
    <td> No </td> 
   </tr> 
  </tbody> 
@@ -87,16 +86,16 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia Play
  <tbody> 
   <tr> 
    <td><span class="codeph"> generalFlags</span> </td> 
-   <td>Cadena hexadecimal de 4 bytes que representa los indicadores de licencia. Debe establecerse en "00000001" para una licencia persistente. <p>Nota: Las licencias de alquiler (<span class="codeph"> rightsType=Rental</span>) DEBEN ser persistentes. </p> </td> 
+   <td>Cadena hexadecimal de 4 bytes que representa los indicadores de licencia. Debe establecerse como "00000001" para una licencia persistente. <p>Nota: Licencias de alquiler (<span class="codeph"> rightsType=Rental</span>) DEBE ser persistente. </p> </td> 
    <td> No </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> kek</span> </td> 
-   <td> Clave de cifrado de claves (KEK). Las claves se almacenan cifradas con un KEK mediante un algoritmo de ajuste de claves (AES Key Wrap, RFC3394). </td> 
+   <td> Clave de cifrado de clave (KEK). Las claves se almacenan cifradas con una KEK mediante un algoritmo de ajuste de claves (AES Key Wrap, RFC3394). </td> 
    <td> No </td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> child</span> </td> 
+   <td><span class="codeph"> niño</span> </td> 
    <td>Una representación de cadena hexadecimal de 16 bytes de la clave de cifrado de contenido o una cadena <span class="codeph"> ^somestring'</span>. La longitud de la cadena seguida de '^' no puede tener buenos 64 caracteres. </td> 
    <td> Sí </td> 
   </tr> 
@@ -108,7 +107,7 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia Play
   <tr> 
    <td><span class="codeph"> contentKey</span> </td> 
    <td> Una representación de cadena hexadecimal de 16 bytes de la clave de cifrado de contenido </td> 
-   <td>Sí, a menos que se proporcione <span class="codeph"> kek</span> y <span class="codeph"> ek</span> o <span class="codeph"> kid</span> </td> 
+   <td>Sí, a menos <span class="codeph"> kek</span> y <span class="codeph"> ek</span> o <span class="codeph"> niño</span> se proporcionan </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> rightsType</span> </td> 
@@ -117,37 +116,37 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia Play
   </tr> 
   <tr> 
    <td><span class="codeph"> rent.periodEndTime</span> </td> 
-   <td>Fecha de finalización del alquiler. Este valor DEBE tener el formato "RFC 3339" _ fecha/hora en el formato "Z" del indicador de zona ("Zulu time") o un número entero precedido de un signo "+". <p>Si el valor es un formato de fecha y hora <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339</a>, representa una fecha y hora de caducidad absoluta para la licencia. Un ejemplo de fecha y hora RFC 3339 es 2006-04-14T12:01:10Z. </p> <p> Si el valor es un número entero precedido por un signo "+", se toma como un número relativo de segundos desde el momento en que se emite el token. El contenido no se puede reproducir después de este tiempo. Solo es válido si <span class="codeph"> rightsType</span> es <span class="codeph"> Alquiler</span>. </p> </td> 
+   <td>Fecha de finalización del alquiler. Este valor DEBE tener el formato de fecha/hora "RFC 3339" _ en el formato de designador de zona "Z" ("hora zulú") o un número entero precedido por el signo "+". <p>Si el valor es un <a href="https://www.ietf.org/rfc/rfc3339.txt" format="html" scope="external"> RFC 3339</a> formato de fecha y hora, que representa una fecha y hora de caducidad absoluta para la licencia. Un ejemplo de RFC 3339 es 2006-04-14T12:01:10Z. </p> <p> Si el valor es un entero precedido por un signo "+", se toma como un número relativo de segundos desde el momento en que se emite el token. El contenido no se puede reproducir después de este tiempo. Solo es válido si <span class="codeph"> rightsType</span> es <span class="codeph"> Alquiler</span>. </p> </td> 
    <td>Sí, cuando <span class="codeph"> rightsType</span> es <span class="codeph"> Alquiler</span>. </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> rent.playDuration</span> </td> 
-   <td>Tiempo, en segundos, que el contenido se puede reproducir una vez iniciada la reproducción. Solo es válido si <span class="codeph"> rightsType</span> es Rental. </td> 
+   <td>Tiempo, en segundos, que puede reproducirse el contenido una vez iniciada la reproducción. Solo es válido si <span class="codeph"> rightsType</span> es Alquiler. </td> 
    <td> No </td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> analógicoVideoOPL</span> </td> 
-   <td> Valor entero que indica el nivel de protección de salida para vídeo analógico. Intervalo válido 0-999. </td> 
+   <td><span class="codeph"> analogVideoOPL</span> </td> 
+   <td> Valor entero que indica el nivel de protección de salida de vídeo analógico. Intervalo válido 0-999. </td> 
    <td> Sí </td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> zipDigitalAudioOPL</span> </td> 
-   <td> Valor entero que indica el nivel de protección de salida para audio digital comprimido. Intervalo válido 0-999. </td> 
+   <td><span class="codeph"> compressedDigitalAudioOPL</span> </td> 
+   <td> Valor entero que indica el nivel de protección de salida del audio digital comprimido. Intervalo válido 0-999. </td> 
    <td> Sí </td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> zipDigitalVideoOPL</span> </td> 
-   <td> Valor entero que indica el nivel de protección de salida para vídeo digital comprimido. Intervalo válido 0-999. </td> 
+   <td><span class="codeph"> compressedDigitalVideoOPL</span> </td> 
+   <td> Valor entero que indica el nivel de protección de salida de vídeo digital comprimido. Intervalo válido 0-999. </td> 
    <td> Sí </td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> unzipDigitalAudioOPL</span> </td> 
-   <td> Valor entero que indica el nivel de protección de salida para el audio digital sin comprimir. Intervalo válido 0-999. </td> 
+   <td><span class="codeph"> uncompressedDigitalAudioOPL</span> </td> 
+   <td> Valor entero que indica el nivel de protección de salida para audio digital sin comprimir. Intervalo válido 0-999. </td> 
    <td> Sí </td> 
   </tr> 
   <tr> 
-   <td><span class="codeph"> unzipDigitalVideoOPL</span> </td> 
-   <td> Valor entero que indica el nivel de protección de salida para vídeo digital sin comprimir. Intervalo válido 0-999. </td> 
+   <td><span class="codeph"> uncompressedDigitalVideoOPL</span> </td> 
+   <td> Valor entero que indica el nivel de protección de salida de vídeo digital sin comprimir. Intervalo válido 0-999. </td> 
    <td> Sí </td> 
   </tr> 
   <tr> 
@@ -157,18 +156,18 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia Play
   </tr> 
   <tr> 
    <td><span class="codeph"> outputControlFlags</span> </td> 
-   <td> Un valor hexadecimal de 4 bytes para indicar los indicadores de otras opciones de control de salida </td> 
+   <td> Valor hexadecimal de 4 bytes que indica los indicadores de otras opciones de control de salida </td> 
    <td> No </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> extensionType</span> </td> 
-   <td>Una palabra arbitraria de 4 letras que representa un identificador de 32 bits para una extensión. El código ASCII de 8 bits de cada letra es la parte correspondiente de 8 bits del identificador. Por ejemplo, el valor identificador 0x61626364 (hexadecimal) estaría escrito ‘<span class="codeph"> abcd</span>', porque el código ASCII para ‘a' es 0x61, etc. </td> 
+   <td>Una palabra arbitraria de 4 letras que representa un identificador de 32 bits para una extensión. El código ASCII de 8 bits de cada letra es la parte correspondiente de 8 bits del identificador. Por ejemplo, el valor del identificador 0x61626364 (hexadecimal) sería ‘<span class="codeph"> abcd</span>', porque el código ASCII para 'a' es 0x61, etc. </td> 
    <td> No </td> 
   </tr> 
   <tr> 
    <td><span class="codeph"> extensionPayload</span> </td> 
-   <td> Cadena codificada base64 de la extensión. </td> 
-   <td>Sí, cuando se especifica <span class="codeph"> extensionType</span>. </td> 
+   <td> Una cadena codificada en base64 de Extension. </td> 
+   <td>Sí, cuando <span class="codeph"> extensionType</span> se ha especificado. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -179,11 +178,11 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia Play
 
 | **Código de estado HTTP** | **Descripción** | **Content-Type** | **El cuerpo de la entidad contiene** |
 |---|---|---|---|
-| `200 OK` | Sin error. | `text/uri-list` | URL y token de adquisición de licencia |
-| `400 Bad Request` | Argumentos no válidos | `text/html` o  `application/json` | Descripción del error |
-| `401 Unauthorized` | Error de autenticación | `text/html` o  `application/json` | Descripción del error |
-| `404 Not found` | Dirección URL incorrecta | `text/html` o  `application/json` | Descripción del error |
-| `50x Server Error` | Error del servidor | `text/html` o  `application/json` | Descripción del error |
+| `200 OK` | No hay error. | `text/uri-list` | URL de adquisición de licencia y token |
+| `400 Bad Request` | Argumentos no válidos | `text/html` o `application/json` | Descripción del error |
+| `401 Unauthorized` | Error de autenticación | `text/html` o `application/json` | Descripción del error |
+| `404 Not found` | URL incorrecta | `text/html` o `application/json` | Descripción del error |
+| `50x Server Error` | Error del servidor | `text/html` o `application/json` | Descripción del error |
 
 **Tabla 12: Códigos de error de evento**
 
@@ -217,11 +216,11 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia Play
   </tr> 
   <tr> 
    <td> -2018 </td> 
-   <td>Token de autenticación no válido: &lt;details&gt; <p>Nota:  Esto puede ocurrir si el autenticador es incorrecto o al acceder a la API de prueba en *.test.expression.com mediante el autenticador de producción y viceversa. </p> <p importance="high">Nota: El SDK de prueba y la herramienta de prueba avanzada (ATT) solo funcionan con <span class="filepath"> *.test.expression.com</span>, mientras que los dispositivos de producción deben utilizar <span class="filepath"> *.service.expression.com</span>. </p> </td> 
+   <td>Token de autenticación no válido: &lt;details&gt; <p>Nota: Esto puede ocurrir si el autenticador es incorrecto o al acceder a la API de prueba en *.test.expressplay.com mediante el autenticador de producción y viceversa. </p> <p importance="high">Nota: El SDK de prueba y la herramienta de prueba avanzada (ATT) solo funcionan con <span class="filepath"> *.test.expressplay.com</span>, mientras que los dispositivos de producción deben utilizar <span class="filepath"> *.service.expressplay.com</span>. </p> </td> 
   </tr> 
   <tr> 
    <td> -2019 </td> 
-   <td> No hay suficientes tokens disponibles </td> 
+   <td> Tokens no disponibles suficientes </td> 
   </tr> 
   <tr> 
    <td> -2020 </td> 
@@ -233,11 +232,11 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia Play
   </tr> 
   <tr> 
    <td> -2022 </td> 
-   <td> Falta el tiempo de finalización del período de alquiler </td> 
+   <td> Hora de finalización del período de alquiler faltante </td> 
   </tr> 
   <tr> 
    <td> -2023 </td> 
-   <td> Falta la duración de la reproducción de alquiler </td> 
+   <td> Falta la duración de reproducción de alquiler </td> 
   </tr> 
   <tr> 
    <td> -2025 </td> 
@@ -249,7 +248,7 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia Play
   </tr> 
   <tr> 
    <td> -2030 </td> 
-   <td> Error del administrador de ExpressPlay: &lt;details&gt; </td> 
+   <td> Error de administración de ExpressPlay: &lt;details&gt; </td> 
   </tr> 
   <tr> 
    <td> -2031 </td> 
@@ -261,11 +260,11 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia Play
   </tr> 
   <tr> 
    <td> -2034 </td> 
-   <td> Control de salida no válido, valores fuera del rango especificado </td> 
+   <td> Control de salida no válido, valores fuera del intervalo especificado </td> 
   </tr> 
   <tr> 
    <td> -2035 </td> 
-   <td> No se ha especificado ningún valor correspondiente </td> 
+   <td> No se especificó ningún valor correspondiente </td> 
   </tr> 
   <tr> 
    <td> -2036 </td> 
@@ -273,43 +272,43 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia Play
   </tr> 
   <tr> 
    <td> -2037 </td> 
-   <td> La carga útil de extensión debe estar codificada en Base64 </td> 
+   <td> La carga de la extensión debe codificarse en Base64 </td> 
   </tr> 
   <tr> 
    <td> -2040 </td> 
-   <td><span class="codeph"> </span> OutputControlFlagmust be encode 4 bytes </td> 
+   <td><span class="codeph"> OutputControlFlag</span> debe codificarse en 4 bytes </td> 
   </tr> 
   <tr> 
    <td> -3004 </td> 
-   <td> Formato de error especificado no válido: &lt;formato&gt; </td> 
+   <td> Formato de error especificado no válido: &lt;format&gt; </td> 
   </tr> 
   <tr> 
    <td> -4001 </td> 
-   <td> El dispositivo no se ha podido autenticar </td> 
+   <td> No se ha podido autenticar el dispositivo </td> 
   </tr> 
   <tr> 
    <td> -4018 </td> 
-   <td>Falta <span class="codeph"> kid</span> </td> 
+   <td>Falta <span class="codeph"> niño</span> </td> 
   </tr> 
   <tr> 
    <td> -4019 </td> 
-   <td> Error al obtener la clave de contenido del servicio de almacenamiento clave </td> 
+   <td> Error al obtener la clave de contenido del servicio de almacenamiento de claves </td> 
   </tr> 
   <tr> 
    <td> -4020 </td> 
-   <td><span class="codeph"> </span> kidmust be 32 hexadecimal length </td> 
+   <td><span class="codeph"> niño</span> debe tener 32 caracteres hexadecimales </td> 
   </tr> 
   <tr> 
    <td> -4021 </td> 
-   <td><span class="codeph"> </span> El archivo debe tener 64 caracteres después de ^ </td> 
+   <td><span class="codeph"> niño</span> debe tener 64 caracteres después de ^ </td> 
   </tr> 
   <tr> 
    <td> -4022 </td> 
-   <td><span class="codeph"> kid</span> no válido </td> 
+   <td>No válido <span class="codeph"> niño</span> </td> 
   </tr> 
   <tr> 
    <td> -4024 </td> 
-   <td>Clave <span class="codeph"> cifrada</span> o kek no válida </td> 
+   <td>Cifrado no válido <span class="codeph"> key</span> o kek </td> 
   </tr> 
   <tr> 
    <td> -5001 </td> 
@@ -317,7 +316,7 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia Play
   </tr> 
   <tr> 
    <td> -5002 </td> 
-   <td> La opción PlayReady está desactivada para este servicio </td> 
+   <td> La opción PlayReady está deshabilitada para este servicio </td> 
   </tr> 
   <tr> 
    <td> -5003 </td> 
@@ -337,7 +336,7 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia Play
   </tr> 
   <tr> 
    <td> -5007 </td> 
-   <td>Solo se puede especificar uno de <span class="codeph"> kek</span> o <span class="codeph"> contentKey</span> </td> 
+   <td>Solo uno de <span class="codeph"> kek</span> o <span class="codeph"> contentKey</span> se puede especificar </td> 
   </tr> 
  </tbody> 
 </table>

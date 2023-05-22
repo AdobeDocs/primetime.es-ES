@@ -1,25 +1,24 @@
 ---
-title: Información general sobre la configuración de preferencias
-description: Información general sobre la configuración de preferencias
+title: Información general sobre preferencias de configuración
+description: Información general sobre preferencias de configuración
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9618a038-c5b0-4b49-8936-ef8fcacf2105
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
 
 ---
 
+# Información general sobre preferencias de configuración {#setting-preferences-overview}
 
-# Información general sobre la configuración de preferencias {#setting-preferences-overview}
-
-Con la excepción de la URL del servidor de Packager, todas las preferencias especificadas a continuación se almacenan en el archivo [!DNL flashaccess-refimpl-packager.properties] del servidor. Todos los ajustes se pueden modificar directamente en el archivo de propiedades o a través de la aplicación de AIR. Las contraseñas se cifran cuando se almacenan en el archivo de propiedades del servidor. Escriba la contraseña no cifrada en la interfaz de usuario y se cifrará antes de almacenarla en el archivo.
+Con la excepción de la URL del servidor de Packager, todas las preferencias especificadas a continuación se almacenan en el [!DNL flashaccess-refimpl-packager.properties] en el servidor. Todos los ajustes se pueden modificar directamente en el archivo de propiedades o a través de la aplicación AIR. Las contraseñas se cifran cuando se almacenan en el archivo de propiedades del servidor. Escriba la contraseña no cifrada en la interfaz de usuario y se cifrará antes de almacenarla en el archivo.
 
 >[!NOTE]
 >
->Todos los directorios y rutas hacen referencia a directorios en el servidor del empaquetador, no en el cliente que ejecuta la aplicación AIR.
+>Todos los directorios y rutas hacen referencia a directorios del servidor del empaquetador, no del cliente que ejecuta la aplicación de AIR.
 
-Los cambios realizados aquí surten efecto inmediatamente después de guardar las preferencias. No es necesario reiniciar el servidor a menos que el subproceso del empaquetador termine debido a problemas de configuración.
+Cualquier cambio realizado aquí surtirá efecto inmediatamente después de guardar las preferencias. No es necesario reiniciar el servidor a menos que el subproceso Packager haya finalizado debido a problemas de configuración.
 
 Las descripciones de preferencias utilizan los términos siguientes:
 
@@ -32,8 +31,8 @@ Las descripciones de preferencias utilizan los términos siguientes:
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> URL del servidor de paquetes </td> 
-   <td colname="2" class="- topic/entry "> Ubicación del servidor que ejecuta <span class="filepath"> flashaccess-packager.war </span>; por ejemplo, <span class="filepath"> https://localhost:8080 </span> </td> 
+   <td colname="1" class="- topic/entry "> URL de Packager Server </td> 
+   <td colname="2" class="- topic/entry "> Ubicación del servidor en ejecución <span class="filepath"> flashaccess-packager.war </span>; por ejemplo, <span class="filepath"> https://localhost:8080 </span> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> Directorio de recursos </td> 
@@ -45,4 +44,3 @@ Las descripciones de preferencias utilizan los términos siguientes:
   </tr> 
  </tbody> 
 </table>
-

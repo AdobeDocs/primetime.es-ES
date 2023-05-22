@@ -1,22 +1,21 @@
 ---
-description: Con NotificationEvent, puede rastrear las advertencias que se pasan desde el motor de vídeo de Adobe (AVE).
+description: Con NotificationEvent, puede realizar un seguimiento de las advertencias que se transmiten desde el motor de vídeo de Adobe (AVE).
 title: Seguimiento de advertencias de AVE en el reproductor
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 49118d7f-ed79-4d22-ba91-8929f97c7256
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '165'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Seguimiento de advertencias de AVE en el reproductor{#track-ave-warnings-in-your-player}
 
-Con NotificationEvent, puede rastrear las advertencias que se pasan desde el motor de vídeo de Adobe (AVE).
+Con NotificationEvent, puede realizar un seguimiento de las advertencias que se transmiten desde el motor de vídeo de Adobe (AVE).
 
-La aplicación del reproductor puede realizar un seguimiento de las advertencias y los errores de reproducción generados por el AVE, como la conmutación por error o los eventos de cierre de red que no detienen la reproducción y que no requieren necesariamente que la aplicación realice ninguna acción. Aunque algunos errores de AVE son tratados por el TVSDK, `NotificationEvent` sirve como mecanismo general de paso a la capa de la aplicación para advertencias de AVE. Después de recibir advertencias de AVE, puede elegir realizar alguna acción, como detener la reproducción de forma proactiva, activar un plan de contingencia, registrar mensajes, etc.
+La aplicación del reproductor puede rastrear las advertencias de reproducción y los errores generados por el AVE, como los eventos de conmutación por error o de caída de red que no detienen la reproducción y no requieren necesariamente ninguna acción por parte de la aplicación. Aunque algunos errores de AVE los soluciona el TVSDK, `NotificationEvent` sirve como mecanismo de paso a través general de la capa de aplicación para advertencias AVE. Después de recibir advertencias de AVE, puede optar por realizar algunas acciones, como detener la reproducción de forma proactiva, activar un plan de contingencia, registrar mensajes, etc.
 
-Utilice los siguientes elementos de API para realizar el seguimiento de las advertencias de AVE en el reproductor:
+Utilice los siguientes elementos de API para rastrear advertencias de AVE en el reproductor:
 
 **NotificationCode**
 
@@ -76,7 +75,7 @@ public class NotificationEvent extends Event {
 }
 ```
 
-Agregue un detector de eventos al reproductor para capturar advertencias de AVE.
+Añada un detector de eventos al reproductor para detectar advertencias de AVE.
 
 Por ejemplo:
 
@@ -99,7 +98,7 @@ private function onWarningAvailable(event:NotificationEvent):void {
 
 <!--<a id="example_C35262605D394718B40C084B569A5052"></a>-->
 
-Este es un ejemplo de advertencias de AVE que se rastrearon usando `NotificationEvent`:
+A continuación, se muestra un ejemplo de advertencias AVE que se rastrearon mediante `NotificationEvent`:
 
 ```
 [WARN ] [psdkdemo::PSDKDemo] #onWarningAvailable metadata [resourceType:HLS] 

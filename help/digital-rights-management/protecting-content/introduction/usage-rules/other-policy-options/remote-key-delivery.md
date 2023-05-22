@@ -1,27 +1,25 @@
 ---
-title: Entrega remota y local de claves de iOS
-description: Entrega remota y local de claves de iOS
+title: Entrega de claves iOS remotas y locales
+description: Entrega de claves iOS remotas y locales
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: becc2d3f-39f3-40ee-b980-7dfbbe6f569d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%
 
 ---
 
-
 # Entrega de claves iOS remotas y locales {#remote-and-local-ios-key-delivery}
 
 Adobe Primetime admite las siguientes opciones para la entrega de claves a clientes de iOS:
 
-* **Remoto** : funciona tal como se especifica en la especificación HTTP Live Streaming (HLS); el manifiesto M3U8 especifica una ruta HTTPS que incluye una clave AES que debe utilizarse para descifrar los siguientes segmentos cifrados en el flujo. Cuando especifica `Remote` en la directiva de DRM de Primetime, el dispositivo cliente debe conectarse a un servidor HTTPS remoto para obtener una clave AES.
+* **Remoto** : Funciona según se especifica en la especificación de flujo en directo HTTP (HLS); el manifiesto M3U8 especifica una ruta HTTPS que incluye una clave AES que debe utilizarse para descifrar los siguientes segmentos cifrados del flujo. Cuando especifique `Remote` en la directiva DRM de Primetime, el dispositivo cliente debe conectarse a un servidor HTTPS remoto para obtener una clave AES.
 
-* **Local** : cuando especifica  `Local` en el DRM de Primetime en lugar de conectarse a Internet/red para la clave de AES, un servidor HTTPS local se incrusta en la aplicación de iOS, que luego administra todas las solicitudes clave de AES. El servidor HTTPS incrustado se configura y configura automáticamente en la aplicación P. El desarrollador de la aplicación no requiere ninguna intervención.
+* **Local** - Cuando especifique `Local` en el DRM de Primetime, en lugar de conectarse a Internet/red para la clave AES, se incrusta un servidor HTTPS local en la aplicación de iOS, que luego administra todas las solicitudes de clave AES. El servidor HTTPS incrustado se configura y configura automáticamente en la aplicación IP. El desarrollador de aplicaciones no requiere ninguna intervención.
 
-La entrega de clave remota se habilita a través de la directiva Primetime DRM que se utiliza para empaquetar contenido. Si desea cambiar esta configuración, debe volver a empaquetar el contenido. Si habilita la entrega de claves remotas, debe implementar un Servidor de claves DRM de Primetime que pueda administrar las solicitudes clave de los clientes de iOS. Sin embargo, no hay ningún cambio en el flujo de trabajo de los clientes en otras plataformas.
+La entrega de claves remotas se habilita a través de la directiva DRM de Primetime que se utiliza para empaquetar contenido. Si desea cambiar esta configuración, debe volver a empaquetar el contenido. Si activa la entrega de claves remotas, debe implementar un Servidor de claves DRM de Primetime que pueda administrar las solicitudes de claves de los clientes de iOS. Sin embargo, no se han realizado cambios en el flujo de trabajo para clientes de otras plataformas.
 
 >[!NOTE]
 >
->La selección de envíos clave solo afecta a los clientes de iOS. Todos los demás dispositivos que utilizan contenido HLS, como Android y Primetime on Desktop (Flash Player), siempre utilizan la entrega de claves `Local`, aunque se haya especificado `Remote`.
-
+>La selección Entrega de claves solo afecta a los clientes de iOS. Todos los demás dispositivos que utilizan contenido HLS, como Android y Primetime en el escritorio (Flash Player), siempre utilizan `Local` entrega de claves, incluso si `Remote` se ha especificado.

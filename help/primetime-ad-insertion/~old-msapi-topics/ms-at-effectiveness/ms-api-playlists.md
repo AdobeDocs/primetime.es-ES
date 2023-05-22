@@ -1,7 +1,6 @@
 ---
-description: El servidor de manifiesto devuelve listas de reproducción maestras en formato M3U8, de acuerdo con el estándar HTTP Live Streaming propuesto. Consiste en un conjunto de flujos de transporte variantes (TSs), cada uno con representaciones del mismo contenido para diferentes velocidades de bits y formatos. La inserción de anuncios de Adobe Primetime añade la etiqueta de directiva EXT-X-MARKER, que deben interpretar los reproductores de vídeo del cliente.
-title: Directiva EXT-X-MARKER
-translation-type: tm+mt
+description: El servidor de manifiesto devuelve listas de reproducción maestras en formato M3U8, que se ajustan al estándar de flujo en directo HTTP propuesto. Consiste en un conjunto de flujos de transporte de variante (TS), cada uno de los cuales contiene representaciones del mismo contenido para diferentes velocidades de bits y formatos. La inserción de anuncios de Adobe Primetime agrega la etiqueta de directiva EXT-X-MARKER, que deben interpretar los reproductores de vídeo del cliente.
+title: DIRECTIVA EXT-X-MARKER
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '748'
@@ -10,65 +9,65 @@ ht-degree: 0%
 ---
 
 
-# Directiva EXT-X-MARKER {#ext-x-marker-directive}
+# DIRECTIVA EXT-X-MARKER {#ext-x-marker-directive}
 
-El servidor de manifiesto devuelve listas de reproducción maestras en formato M3U8, de acuerdo con el estándar HTTP Live Streaming propuesto. Consiste en un conjunto de flujos de transporte variantes (TSs), cada uno con representaciones del mismo contenido para diferentes velocidades de bits y formatos. La inserción de anuncios de Adobe Primetime añade la etiqueta de directiva EXT-X-MARKER, que deben interpretar los reproductores de vídeo del cliente.
+El servidor de manifiesto devuelve listas de reproducción maestras en formato M3U8, que se ajustan al estándar de flujo en directo HTTP propuesto. Consiste en un conjunto de flujos de transporte de variante (TS), cada uno de los cuales contiene representaciones del mismo contenido para diferentes velocidades de bits y formatos. La inserción de anuncios de Adobe Primetime agrega la etiqueta de directiva EXT-X-MARKER, que deben interpretar los reproductores de vídeo del cliente.
 
-Para obtener más información sobre la etiqueta EXT-X-MARKER, consulte [Adobe Primetime HTTP Live Streaming Profile](https://wwwimages2.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeHLS_April2014.pdf).
-
->[!NOTE]
->
->Esta funcionalidad solo está disponible si la URL del servidor de manifiesto de arranque no contiene el parámetro `pttrackingmode`.
+Para obtener más información sobre la etiqueta EXT-X-MARKER, consulte [Perfil de streaming en directo HTTP de Adobe Primetime](https://wwwimages2.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeHLS_April2014.pdf).
 
 >[!NOTE]
 >
->La etiqueta EXT-X-MARKER se agrega a los segmentos de anuncios y no a los segmentos de contenido.
-
-El borrador estándar en [HTTP Live Streaming](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23) describe el contenido y el formato de las listas de reproducción de variantes. La etiqueta EXT-X-MARKER indica al cliente que invoque una llamada de retorno. Contiene los siguientes componentes:
-
-* **** Identificador IDUnique (cadena) para este evento de llamada de retorno en el contexto del flujo del programa.
-
-* **** TYPEType (cadena) del evento de llamada de retorno: PodBegin, PodEnd, PrerollPodBegin, PrerollPodEnd o AdBegin
-
-* **** DURACIÓNLongitud de tiempo (en segundos) desde el inicio del segmento con la etiqueta para la que la directiva sigue siendo válida.
-
-* **** OFFSETOopcional. El desplazamiento (en segundos) relativo al principio de la reproducción del segmento, cuando se debe invocar la rellamada.
-
-   * `PodBegin` y  `PrerollPodBegin` contienen información de señalización en el atributo DATA y se activan al principio del segmento. Por lo tanto, la etiqueta `OFFSET` no está disponible aquí.
-
-   * `AdBegin` contiene información de señalización en el atributo DATA y las etiquetas de impresión se activan al principio de ese segmento. Por lo tanto, la etiqueta `OFFSET` tampoco está disponible aquí.
-
-   * `PodEnd` y  `PrerollPodEnd` contienen información de señalización en el atributo DATA , pero se activan al final del segmento actual porque se espera que estas etiquetas se activen al final del último segmento del último anuncio del pod. En este caso, `OFFSET` se establece en `<duration of segment>` para especificar que la señalización se active al final del segmento actual.
-
-* **** Cadena con codificación DATABase64 entre comillas dobles que contienen los datos que se pasarán a la aplicación al invocar la rellamada. Contiene información de seguimiento de anuncios que se ajusta a las especificaciones VMAP1.0 y VAST3.0.
-
-* **** Número de anuncios que se vincularán en la pausa publicitaria.
-
-   Solo aplicable si el componente TIPO está establecido en PodBegin o PrerollPodBegin.
-
-* **** DESGLOSEduración total (en segundos) de la pausa publicitaria rellenada.
-
-   Solo aplicable si el componente TIPO está establecido en PodBegin o PrerollPodBegin.
-
-Al construir la rellamada, interprete los componentes EXT-X-MARKER de la siguiente manera:
-
-* Cuando la etiqueta contenga `OFFSET`, active la rellamada con el desplazamiento especificado en relación con el comienzo de la reproducción del contenido en ese segmento. De lo contrario, se activa la rellamada en cuanto comienza a reproducirse el contenido de ese segmento.
-* Utilice `DURATION` para rastrear el progreso del contenido de la publicidad y para solicitar direcciones URL para rastrear eventos.
-* Pase `ID`, `TYPE` y `DATA` a la rellamada.
-
-Utilice los valores `PrerollPodBegin` y `PrerollPodEnd` para `TYPE` para decidir qué segmento de TS se reproducirá primero en los flujos en directo/lineales.
+>Esta funcionalidad sólo está disponible si la dirección URL del servidor de manifiesto de arranque no contiene el `pttrackingmode` parámetro.
 
 >[!NOTE]
 >
->Los valores `PrerollPodBegin` y `PrerollPodEnd` solo están disponibles cuando se inserta un anuncio pre-roll en un flujo en vivo.
+>La etiqueta EXT-X-MARKER se añade a los segmentos de publicidad y no a los de contenido.
+
+El borrador de la norma en [HTTP Live Streaming](https://tools.ietf.org/html/draft-pantos-http-live-streaming-23) describe el contenido y el formato de las listas de reproducción de variante. La etiqueta EXT-X-MARKER indica al cliente que invoque una llamada de retorno. Contiene los siguientes componentes:
+
+* **ID** Identificador único (cadena) de este evento de llamada de retorno en el contexto del flujo de programa.
+
+* **TIPO** Tipo (cadena) del evento de llamada de retorno: PodBegin, PodEnd, PrerollPodBegin, PrerollPodEnd o AdBegin
+
+* **DURACIÓN** Tiempo (en segundos) desde el inicio del segmento que lleva la etiqueta durante el cual la directiva sigue siendo válida.
+
+* **OFFSET** Opcional. El desplazamiento (en segundos) en relación con el principio de la reproducción del segmento, cuando se debe invocar la llamada de retorno.
+
+   * `PodBegin` y `PrerollPodBegin` contienen información de señalización en el atributo DATA y se activan al principio del segmento. Por lo tanto, `OFFSET` La etiqueta de no está disponible aquí.
+
+   * `AdBegin` contiene información de señalización en el atributo de DATOS y las etiquetas de impresión se activan al principio de ese segmento. Por lo tanto, `OFFSET` La etiqueta de tampoco está disponible aquí.
+
+   * `PodEnd` y `PrerollPodEnd` contienen información de señalización en el atributo DATA, pero se activan al final del segmento actual porque se espera que estas etiquetas se activen al final del último segmento del último anuncio de la secuencia. En este caso, `OFFSET` se establece en `<duration of segment>` para especificar que la señalización se active al final del segmento actual.
+
+* **DATOS** Cadena codificada en Base64 entre comillas dobles que contiene los datos que se van a pasar a la aplicación al invocar la devolución de llamada. Contiene información de seguimiento de anuncios que cumple las especificaciones de VMAP1.0 y VAST3.0.
+
+* **RECUENTO** Número de anuncios que se vincularán en la pausa publicitaria.
+
+   Solo es aplicable si el componente TYPE está establecido en PodBegin o PreRollPodBegin.
+
+* **RUPTURA** Duración total (en segundos) de la pausa publicitaria rellenada.
+
+   Solo es aplicable si el componente TYPE está establecido en PodBegin o PreRollPodBegin.
+
+Al construir la llamada de retorno, interprete los componentes EXT-X-MARKER de la siguiente manera:
+
+* Cuando la etiqueta contenga `OFFSET`, active la llamada de retorno en el desplazamiento especificado en relación con el principio de la reproducción del contenido en ese segmento. De lo contrario, activa la llamada de retorno en cuanto el contenido de ese segmento comience a reproducirse.
+* Uso `DURATION` para realizar un seguimiento del progreso del contenido del anuncio y solicitar direcciones URL para el seguimiento de eventos.
+* Aprobado `ID`, `TYPE`, y `DATA` a la llamada de retorno.
+
+Utilice el `PrerollPodBegin`, y `PrerollPodEnd` valores para `TYPE` para decidir qué segmento TS se reproducirá primero en emisiones en directo/lineales.
+
+>[!NOTE]
+>
+>El `PrerollPodBegin`, y `PrerollPodEnd` Estos valores solo están disponibles cuando se inserta un anuncio previo a la emisión en una emisión en directo.
 
 El servidor de manifiestos incluye etiquetas EXT-X-MARKER en los siguientes segmentos:
 
-* El primer segmento de la pausa publicitaria, para rastrear el comienzo de un pod de anuncios.
-* El primer segmento del anuncio, para rastrear el inicio/finalización/progreso de un anuncio individual dentro de un pod de anuncios.
+* El primer segmento de la pausa publicitaria, para rastrear el principio de un pod de anuncios.
+* El primer segmento del anuncio, para realizar un seguimiento del inicio, la finalización o el progreso de un anuncio individual dentro de un pod de anuncios.
 * El último segmento de la pausa publicitaria, para rastrear el final de un pod de anuncios.
 
-El servidor de manifiestos envía un documento XML `VMAP1.0-conformant` para realizar un seguimiento del inicio y el final de cada pausa publicitaria. Es una versión filtrada de la respuesta VMAP1.0 real devuelta por el servidor de publicidad y contiene principalmente los eventos de seguimiento como se muestra aquí:
+El servidor de manifiesto envía un `VMAP1.0-conformant` Documento XML para realizar un seguimiento del inicio y el final de cada pausa publicitaria. Es una versión filtrada de la respuesta VMAP1.0 real devuelta por el servidor de publicidad y contiene principalmente los eventos de seguimiento como se muestra a continuación:
 
 ```xml
 <?xml version="1.0"?> 
@@ -93,7 +92,7 @@ El servidor de manifiestos envía un documento XML `VMAP1.0-conformant` para rea
 </AdTrackingFragments>
 ```
 
-Para cada creador de publicidad que el servidor de manifiesto inserta en el contenido del programa, envía un documento XML compatible con VAST3.0 para rastrear ese anuncio. Cada documento XML contiene un elemento `<InLine>` que describe el elemento creativo de publicidad lineal insertado, o un elemento `<Wrapper>` en el caso de los anuncios envolventes (es decir, los anuncios vinculados o redirigidos) y cualquier publicidad y extensión asociada. Si la respuesta VAST contiene un atributo de secuencia, como cuando el anuncio forma parte de un pod de anuncios, el documento incluye ese atributo. El siguiente es un documento XML de muestra conforme con VAST3.0 para rastrear un anuncio individual:
+Para cada creatividad publicitaria que el servidor de manifiesto inserta en el contenido del programa, envía un documento XML compatible con VAST3.0 para realizar el seguimiento de dicha publicidad. Cada documento XML contiene un `<InLine>` elemento que describe el anuncio lineal insertado o un `<Wrapper>` en el caso de los anuncios envolventes (es decir, anuncios vinculados o redirigidos) y cualquier anuncio complementario y extensión asociados. Si la respuesta VAST contiene un atributo de secuencia, como cuando el anuncio forma parte de un pod de anuncios, el documento incluye ese atributo. A continuación se muestra un ejemplo de un documento XML compatible con VAST3.0 para realizar el seguimiento de un anuncio individual:
 
 ```xml
 <?xml version="1.0"?> 

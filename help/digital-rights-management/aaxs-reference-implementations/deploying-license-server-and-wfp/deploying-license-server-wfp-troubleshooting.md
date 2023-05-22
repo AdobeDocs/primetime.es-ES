@@ -1,19 +1,18 @@
 ---
-title: Resolución de problemas
-description: Resolución de problemas
+title: Solución de problemas
+description: Solución de problemas
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4af7b625-63d3-48b6-98a5-b8894dd0c67f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%
 
 ---
 
-
 # Solución de problemas {#troubleshooting}
 
-A continuación se enumeran los problemas comunes y las soluciones para la implementación:
+A continuación se enumeran problemas comunes y soluciones para la implementación:
 
 * Si ve el siguiente error:
 
@@ -22,7 +21,7 @@ A continuación se enumeran los problemas comunes y las soluciones para la imple
        javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher"
    ```
 
-   Asegúrese de que la contraseña esté cifrada utilizando la clase proporcionada `ScrambleUtil`.
+   Asegúrese de que la contraseña esté cifrada con el proporcionado `ScrambleUtil` clase.
 
 * Si ve el siguiente error:
 
@@ -38,5 +37,4 @@ A continuación se enumeran los problemas comunes y las soluciones para la imple
        "javax.crypto.BadPaddingException: Given final block not properly padded"
    ```
 
-   Asegúrese de que ha utilizado la clase de codificador de contraseña que se proporciona con la Implementación de referencia (esta utilidad de desguace es diferente de la que se proporciona con el servidor Adobe® Access™ para transmisión protegida).
-
+   Asegúrese de utilizar la clase de codificador de contraseñas que se proporciona con la Implementación de referencia (esta utilidad de codificador es diferente de la que se proporciona con el servidor Adobe ® Access™ para flujo protegido).

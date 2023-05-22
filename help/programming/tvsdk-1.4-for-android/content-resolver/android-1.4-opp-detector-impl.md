@@ -1,20 +1,19 @@
 ---
-description: Puede implementar sus propios detectores de oportunidad implementando la interfaz PlacementOportunityDetector.
-title: Implementar un detector de oportunidades personalizado
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede implementar sus propios detectores de oportunidades implementando la interfaz PlacementOpportunityDetector.
+title: Implementación de un detector de oportunidades personalizado
+exl-id: d78949a0-2c76-4976-9358-05f3db86781e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
+# Implementación de un detector de oportunidades personalizado {#implement-a-custom-opportunity-detector}
 
-# Implementar un detector de oportunidades personalizado {#implement-a-custom-opportunity-detector}
+Puede implementar sus propios detectores de oportunidades implementando la interfaz PlacementOpportunityDetector.
 
-Puede implementar sus propios detectores de oportunidad implementando la interfaz PlacementOportunityDetector.
-
-1. Cree una instancia personalizada `AdvertisingFactory` y reemplace `createOpportunityDetector`. Por ejemplo:
+1. Crear un personalizado `AdvertisingFactory` instancia y anulación `createOpportunityDetector`. Por ejemplo:
 
    ```java
    new AdvertisingFactory() { 
@@ -35,16 +34,16 @@ Puede implementar sus propios detectores de oportunidad implementando la interfa
    mediaPlayer.registerAdClientFactory(advertisingFactory);
    ```
 
-1. Cree una clase de detector de oportunidades personalizada que amplíe la clase `PlacementOpportunityDetector`.
+1. Cree una clase de detector de oportunidades personalizada que amplíe el `PlacementOpportunityDetector` clase.
    1. En el detector de oportunidades personalizado, anule esta función:
 
       ```java
       public List<PlacementOpportunity> process(List<TimedMetadata> timedMetadataList, Metadata metadata)
       ```
 
-      El `timedMetadataList` contiene la lista de `TimedMetadata` disponibles, que está ordenada. Los metadatos contienen los parámetros de objetivo y los parámetros personalizados que se van a enviar al proveedor de publicidad.
+      El `timedMetadataList` contiene la lista de `TimedMetadata`, que se ordena. Los metadatos contienen los parámetros de objetivo y los parámetros personalizados que se envían al proveedor de publicidad.
 
-   1. Para cada `TimedMetadata`, cree un `List<PlacementOpportunity>`. La lista puede estar vacía, pero no ser nula. `PlacementOpportunity` debe tener los siguientes atributos:
+   1. Para cada `TimedMetadata`, cree un `List<PlacementOpportunity>`. La lista puede estar vacía, pero no ser nula. `PlacementOpportunity` debe tener los atributos siguientes:
 
       ```java
       PlacementOpportunity( 
@@ -54,9 +53,9 @@ Puede implementar sus propios detectores de oportunidad implementando la interfa
       )
       ```
 
-   1. Una vez creadas las oportunidades de colocación para todos los objetos de metadatos temporizados detectados, solo tiene que devolver la lista `PlacementOpportunity`.
+   1. Una vez creadas las oportunidades de ubicación para todos los objetos de metadatos cronometrados detectados, simplemente devuelva el `PlacementOpportunity` lista.
 
-Este es un detector de oportunidades de colocación personalizado de ejemplo:
+Este es un ejemplo de detector de oportunidades de ubicación personalizado:
 
 ```java
 public class CustomPlacementOpportunityDetector implements PlacementOpportunityDetector { 
@@ -82,4 +81,3 @@ public class CustomPlacementOpportunityDetector implements PlacementOpportunityD
     ... 
 } 
 ```
-

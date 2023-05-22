@@ -1,20 +1,19 @@
 ---
-description: Cuando un usuario hace clic en una publicidad, la aplicación debe pausar la reproducción del contenido de vídeo principal.
+description: Cuando un usuario hace clic en un anuncio, la aplicación debe pausar la reproducción del contenido de vídeo principal.
 title: Pausar y reanudar la reproducción
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 06922c80-b5c1-4e0c-872b-9400e07cf613
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
-
 # Pausar y reanudar la reproducción {#pause-and-resume-playback}
 
-Cuando un usuario hace clic en una publicidad, la aplicación debe pausar la reproducción del contenido de vídeo principal.
+Cuando un usuario hace clic en un anuncio, la aplicación debe pausar la reproducción del contenido de vídeo principal.
 
-Anule los valores `onPause` y `onResume` de la actividad de Android.
+Anular la variable `onPause` y `onResume` de la actividad de Android.
 
 ```java
 @Override 
@@ -45,4 +44,3 @@ public void onPause() {
  
 abandonAudioFocus(); 
 ```
-

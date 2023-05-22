@@ -1,21 +1,21 @@
 ---
 title: Recuperar solicitud de perfil SSO de Platform
 description: Recuperar solicitud de perfil SSO de Platform
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 44fd4e26-4d9a-4607-ac2c-b85d848f5fc6
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
 
 ---
 
-
 # Recuperar solicitud de perfil SSO de Platform {#retrieve-platform-sso-profile-request}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-## Puntos finales de API de REST {#clientless-endpoints}
+## Extremos de API de REST {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -31,18 +31,16 @@ ht-degree: 0%
 
 ## Descripción {#description}
 
-Este recurso genera solicitudes de perfil para un ID de solicitante y un tuple MVPD.
+Este recurso produce solicitudes de perfil para un ID de solicitante y una tupla MVPD.
 
 
-| Punto final | Llamada  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
+| Extremo | Llamado  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/{requestor}/profile-request/{mvpd} | Aplicación de flujo continuo</br></br>o</br></br>Servicio de programación | 1. solicitante (parámetro de ruta)</br>2. mvpd (parámetro de ruta)</br>3. deviceType (obligatorio) | GET | La respuesta Content-Type será application/octet-stream, ya que la carga útil real es opaca para la aplicación cliente.</br></br>La aplicación debe reenviar la respuesta a la Plataforma</br></br>Motor SSO para obtener un SSO de perfil. | 200 - Éxito   </br>400 - Solicitud incorrecta |
+| &lt;sp_fqdn>/api/v1/{solicitante}/profile-requests/{mvpd} | Aplicación de streaming</br></br>o</br></br>Servicio de programador | 1. solicitante (parámetro de ruta)</br>2. mvpd (parámetro de ruta)</br>3. deviceType (obligatorio) | GET | El Content-Type de respuesta será application/octet-stream, ya que la carga útil real es opaca para la aplicación cliente.</br></br>La aplicación debe reenviar la respuesta a la Plataforma</br></br>Motor de SSO para obtener un SSO de perfil. | 200 - Éxito   </br>400: Solicitud incorrecta |
 
 
 | Parámetro de entrada | Descripción |
 | --------------- | -------------------------------------------------------------------------------------------------------- |
-| requestor | El RequestorId del programador para el que esta operación es válida. |
-| mvpd | El Id. de MVPD para el que es válida esta operación. |
-| deviceType | Plataforma de Apple para la que intentamos obtener una solicitud de perfil.  Cualquiera **iOS** o **tvOS**. |
-
-
+| solicitante | Identificador de solicitante del programador para el que es válida esta operación. |
+| mvpd | Id de MVPD para el que es válida esta operación. |
+| deviceType | La plataforma de Apple para la que intentamos obtener una solicitud de perfil.  Cualquiera **iOS** o **tvOS**. |

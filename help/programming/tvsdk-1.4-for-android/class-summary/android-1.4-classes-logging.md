@@ -1,16 +1,15 @@
 ---
 description: Estas clases permiten personalizar el registro.
-title: Clases de registro
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Registrar clases
+exl-id: e420f557-eb4f-4adf-9b87-1cffc6b36d53
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
 
 ---
 
-
-# Registrando clases{#logging-classes}
+# Registrar clases{#logging-classes}
 
 Estas clases permiten personalizar el registro.
 
@@ -37,8 +36,8 @@ Paquete: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/ap
    <td colname="2"> Interfaz. Habilita el registro personalizado. </td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Registrador</a> </span></td> 
-   <td colname="2">Interfaz. Los métodos necesarios para implementar un registrador personalizado para la frase <code>primetime-sdk-name</code>. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Logger</a> </span></td> 
+   <td colname="2">Interfaz. Los métodos necesarios para implementar un registrador personalizado para <code>primetime-sdk-name</code> Frase. </td> 
   </tr> 
  </tbody>
 </table>

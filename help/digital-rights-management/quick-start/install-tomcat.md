@@ -1,27 +1,26 @@
 ---
-title: Instalar Tomcat
-description: Instalar Tomcat
+title: Instalación de Tomcat
+description: Instalación de Tomcat
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: aed8fc1c-0d75-47ca-bbd4-c0934a66e284
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%
 
 ---
 
-
-# Instalar Tomcat {#install-tomcat}
+# Instalación de Tomcat {#install-tomcat}
 
 Debe instalar Tomcat en ambos servidores.
-1. Instale Tomcat desde el directorio [!DNL \Third Party\Tomcat\6.0.18\] en el DVD de instalación.
+1. Instale Tomcat desde el [!DNL \Third Party\Tomcat\6.0.18\] en el DVD de instalación.
 
    >[!NOTE]
    >
-   >Asegúrese de que Tomcat esté instalado en una ubicación donde no haya espacios en la ruta. Puede introducir `C:\Program Files\Tomcat`, pero no `C:\Tomcat\`.
+   >Asegúrese de que Tomcat está instalado en una ubicación en la que no haya espacios en la ruta. Puede introducir `C:\Program Files\Tomcat`, pero no `C:\Tomcat\`.
 
-1. Para iniciar Tomcat, escriba `TomcatInstallDir>\bin\catalina.bat run`.
+1. Para iniciar Tomcat, introduzca `TomcatInstallDir>\bin\catalina.bat run`.
 1. Para verificar la instalación, vaya a la página de aterrizaje de Tomcat introduciendo `https://<Hostname>:8080/`.
-1. Cree un archivo `crossdomain.xml` y colóquelo en el directorio `<TomcatInstallDir>\webapps\ROOT\`.
+1. Crear un `crossdomain.xml` y coloque el archivo en la carpeta `<TomcatInstallDir>\webapps\ROOT\` directorio.
 
-   También puede copiar un archivo desde el directorio `https://drmtest2.adobe.com/crossdomain.xml`.
+   También puede copiar un archivo desde el `https://drmtest2.adobe.com/crossdomain.xml` directorio.

@@ -2,18 +2,17 @@
 title: Detalles de la notificación NATIVE_ERROR
 description: Detalles de la notificación NATIVE_ERROR
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3819b932-47a2-4adb-830b-0a95a5fec70b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
 
 ---
 
-
 # Detalles de la notificación NATIVE_ERROR {#details-for-the-native-error-notification}
 
-Cuando TVSDK gestiona un error nativo, establece algunos o todos los valores de clave de metadatos siguientes.
+Cuando TVSDK administra un error nativo, establece algunos o todos los valores de clave de metadatos siguientes.
 
 <table id="table_86A21619515B435DBB65DC4DFBB64B29"> 
  <thead> 
@@ -24,7 +23,7 @@ Cuando TVSDK gestiona un error nativo, establece algunos o todos los valores de 
  </thead>
  <tbody> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_CODE  </span> </td> 
+   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_CODE </span> </td> 
    <td colname="col2"> 
     <pre>
       Código de error nativo del AVE. 
@@ -36,20 +35,20 @@ Cuando TVSDK gestiona un error nativo, establece algunos o todos los valores de 
     </ul> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_NAME  </span> </td> 
-   <td colname="col2"> Una cadena que contiene el nombre del error; por ejemplo, <span class="codeph"> AAXS_InvalidVoucher </span> o <span class="codeph"> DECODER_FAILED </span>. </td> 
+   <td colname="col1"> <span class="codeph"> NATIVE_ERROR_NAME </span> </td> 
+   <td colname="col2"> Una cadena que contiene el nombre del error; por ejemplo, <span class="codeph"> Cupón AXS_Invalid </span> o <span class="codeph"> DECODER_FAILED </span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> NATIVE_SUBERROR_CODE  </span> </td> 
-   <td colname="col2"> Para los errores de DRM, también se devuelven códigos de suberror. Estos códigos corresponden al código de suberror <span class="codeph"> DRMErrorEvents </span> que devuelve el Flash Player. Cuando informe de errores a Adobe, incluya este valor numérico para obtener ayuda sobre la resolución de problemas. </td> 
+   <td colname="col1"> <span class="codeph"> NATIVE_SUBERROR_CODE </span> </td> 
+   <td colname="col2"> Para los errores de DRM, también se devuelven códigos de suberror. Estos códigos corresponden a la variable <span class="codeph"> DRMErrorEvents </span> código de suberror devuelto por el Flash Player. Cuando comunique errores al Adobe, incluya este valor numérico para obtener asistencia en la resolución de problemas. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING  </span> </td> 
-   <td colname="col2"> Para DRM, esta es su cadena de error personalizada de la implementación del servidor DRM, si la ha definido. Incluya esto también cuando informe de errores a Adobes. </td> 
+   <td colname="col1"> <span class="codeph"> DRM_ERROR_STRING </span> </td> 
+   <td colname="col2"> Para DRM, esta es la cadena de error personalizada de la implementación del servidor DRM, si ha definido alguna. Incluya esto también al informar de errores al Adobe. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <span class="codeph"> DESCRIPCIÓN  </span> </td> 
-   <td colname="col2"> Descripción de cadena del error. Normalmente es la URL de los medios. </td> 
+   <td colname="col1"> <span class="codeph"> DESCRIPCIÓN </span> </td> 
+   <td colname="col2"> Descripción en cadena del error. Normalmente, la dirección URL del contenido. </td> 
   </tr> 
  </tbody> 
 </table>
@@ -58,4 +57,4 @@ TVSDK recibe estos códigos de error y cadenas del motor de vídeo.
 
 >[!IMPORTANT]
 >
->Para obtener una lista completa de los códigos de error de cliente DRM de Adobe Primetime, consulte [DRM Client Error Message Reference](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf).
+>Para obtener una lista completa de los códigos de error del cliente DRM de Adobe Primetime, consulte [Referencia de mensaje de error del cliente DRM](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_client_error_message_reference.pdf).

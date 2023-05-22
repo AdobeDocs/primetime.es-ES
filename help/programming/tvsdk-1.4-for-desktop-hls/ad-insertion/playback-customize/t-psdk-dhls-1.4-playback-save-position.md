@@ -1,20 +1,19 @@
 ---
 description: Puede guardar la posición de reproducción actual en un vídeo y reanudar la reproducción en la misma posición en una sesión futura.
-title: Guarde la posición del vídeo y reanude más tarde
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Guardar la posición del vídeo y reanudarlo más tarde
+exl-id: a06897a6-bf57-4902-b1b4-e931419b56ba
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 0%
 
 ---
 
-
-# Guarde la posición del vídeo y reanude más tarde{#save-the-video-position-and-resume-later}
+# Guardar la posición del vídeo y reanudarlo más tarde{#save-the-video-position-and-resume-later}
 
 Puede guardar la posición de reproducción actual en un vídeo y reanudar la reproducción en la misma posición en una sesión futura.
 
-Los anuncios insertados de forma dinámica difieren entre las sesiones de usuario, por lo que guardar la posición **con** publicidad duplicada hace referencia a una posición diferente en una sesión futura. TVSDK proporciona métodos para recuperar la posición de reproducción e ignorar los anuncios duplicados.
+Los anuncios insertados dinámicamente difieren entre las sesiones de usuario, por lo que se guarda la posición **con** los anuncios empalmados hacen referencia a una posición diferente en una sesión futura. TVSDK proporciona métodos para recuperar la posición de reproducción al ignorar los anuncios empalmados.
 
 1. Cuando el usuario sale de un vídeo, la aplicación recupera y guarda la posición en el vídeo.
 
@@ -22,16 +21,16 @@ Los anuncios insertados de forma dinámica difieren entre las sesiones de usuari
    >
    >No se incluyen las duraciones de los anuncios.
 
-   Las pausas publicitarias pueden variar en cada sesión debido a patrones de anuncios, restricciones de frecuencia, etc. La hora actual del vídeo en una sesión puede ser diferente en una sesión futura. Al guardar una posición en el vídeo, la aplicación recupera la hora local . Utilice la propiedad `localTime` para leer esta posición , que puede guardar en el dispositivo o en una base de datos del servidor.
+   Las pausas publicitarias pueden variar en cada sesión debido a patrones de anuncios, restricción de frecuencia, etc. La hora actual del vídeo en una sesión puede ser diferente en una sesión futura. Al guardar una posición en el vídeo, la aplicación recupera la hora local Utilice el `localTime` para leer esta posición , que puede guardar en el dispositivo o en una base de datos del servidor.
 
    ```
    var resumeTime:Number = player.localTime; 
    // save the resumeTime to a persistent location
    ```
 
-   Por ejemplo, si el usuario se encuentra en el minuto 20 del vídeo y esta posición incluye cinco minutos de anuncios, `currentTime` tendrá `be` 1200 segundos, mientras que `localTime` en esta posición tendrá `be` 900 segundos.
+   Por ejemplo, si el usuario se encuentra en el minuto 20 del vídeo y esta posición incluye cinco minutos de anuncios, `currentTime` testamento `be` 1200 segundos, mientras `localTime` en esta posición `be` 900 segundos.
 
-1. Restaure la sesión del usuario cuando se reanude la actividad del reproductor.
+1. Restaura la sesión del usuario cuando se reanuda la actividad del reproductor.
 
    TVSDK no reanuda la reproducción entre las inicializaciones de TVSDK porque no guarda ninguna información localmente. La aplicación debe implementar esta lógica.
 
@@ -46,13 +45,13 @@ Los anuncios insertados de forma dinámica difieren entre las sesiones de usuari
 
       >[!TIP]
       >
-      >Solo se llama a este método con valores de hora locales. Si se llama al método con resultados de tiempo actuales, se produce un comportamiento incorrecto.
+      >Solo se llama a este método con valores de hora local. Si se llama al método con los resultados de la hora actual, se produce un comportamiento incorrecto.
 
-   * Para buscar el tiempo actual, utilice `seek`.
+   * Para buscar la hora actual, utilice `seek`.
 
-1. Cuando la aplicación reciba el evento de cambio de estado `onStatusChanged` , busque la hora local guardada.
-1. Proporcione los pausas publicitarias tal como se especifica en la interfaz de directivas de publicidad.
-1. Implemente un selector de políticas de publicidad personalizado ampliando el selector de directivas de publicidad predeterminado.
-1. Proporcione las pausas publicitarias que se deben presentar al usuario implementando `selectAdBreaksToPlay`.
+1. Cuando su aplicación reciba la `onStatusChanged` evento de cambio de estado, busque la hora local guardada.
+1. Proporcione los saltos de anuncio según se especifican en la interfaz de la política de anuncios.
+1. Implemente un selector de políticas de publicidad personalizado ampliando el selector de políticas de publicidad predeterminado.
+1. Proporcione las pausas publicitarias que deben presentarse al usuario implementando `selectAdBreaksToPlay`.
 
-   Cuando el reproductor introduce el estado PREPARADO, todos los anuncios ya se han resuelto, por lo que la propiedad `AdPolicyInfo.adBreakTimelineItem` contiene todos los saltos de anuncio antes de la posición horaria local. La aplicación puede decidir reproducir una pausa publicitaria previa y reanudar a la hora local especificada, reproducir una pausa publicitaria intermedia y reanudar a la hora local especificada o no reproducir ninguna pausa publicitaria.
+   Cuando el reproductor entra en el estado PREPARADO, todos los anuncios ya están resueltos, por lo que la variable `AdPolicyInfo.adBreakTimelineItem` contiene todas las pausas publicitarias anteriores a la posición horaria local. La aplicación puede decidir reproducir una pausa publicitaria pre-roll y reanudarla a la hora local especificada, reproducir una pausa publicitaria mid-roll y reanudarla a la hora local especificada o reproducir ninguna pausa publicitaria.

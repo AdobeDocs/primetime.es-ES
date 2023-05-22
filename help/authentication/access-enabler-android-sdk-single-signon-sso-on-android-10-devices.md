@@ -1,41 +1,39 @@
 ---
-title: Acceso al inicio de sesión único (SSO) del SDK para Android de Enabler en aplicaciones Android 10
-description: Acceso al inicio de sesión único (SSO) del SDK para Android de Enabler en aplicaciones Android 10
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Acceso Habilitar el inicio de sesión único (SSO) del SDK de Android en aplicaciones de Android 10
+description: Acceso Habilitar el inicio de sesión único (SSO) del SDK de Android en aplicaciones de Android 10
+exl-id: dedade15-c451-4757-b684-d3728e11dd87
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%
 
 ---
 
-
-
-# Acceso al inicio de sesión único (SSO) del SDK para Android de Enabler en aplicaciones Android 10 {#access-enabler-android-sdk-single-sign-on-sso-on-android-10-apps}
+# Acceso Habilitar el inicio de sesión único (SSO) del SDK de Android en aplicaciones de Android 10 {#access-enabler-android-sdk-single-sign-on-sso-on-android-10-apps}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 ## Información general
 
-El inicio de sesión único (SSO) entre aplicaciones con autenticación de Adobe Primetime está disponible en dispositivos con Android OS a través del SDK para Android de Access Enabler. Para ofrecer el inicio de sesión único (SSO) en dispositivos Android, el SDK para Android de Access Enabler versión 3.2.1 (última) y las versiones anteriores utilizan un archivo de base de datos compartido guardado en una implementación de almacenamiento Android, accesible en todas las aplicaciones con autenticación Adobe Primetime.
+El inicio de sesión único (SSO) entre aplicaciones con autenticación de Adobe Primetime está disponible en dispositivos que utilizan el sistema operativo Android a través del SDK de Android con el servicio de habilitación de acceso. Para ofrecer el inicio de sesión único (SSO) en dispositivos Android, el Access Enabler Android SDK versión 3.2.1 (más reciente) y las versiones anteriores utilizan un archivo de base de datos compartido guardado en una implementación de almacenamiento de Android, al que pueden acceder todas las aplicaciones con autenticación de Adobe Primetime.
 
-Sin embargo, Google en la última versión de Android 10 produjo algunos cambios &quot;para dar a los usuarios más control sobre sus archivos y para limitar el desorden de archivos, las aplicaciones dirigidas a Android 10 (nivel de API 29) y superiores tienen acceso con ámbitos en un dispositivo de almacenamiento externo, o almacenamiento con ámbitos, de forma predeterminada. Estas aplicaciones solo pueden ver su directorio específico de la aplicación `\[...\]`&quot;. Se presentan más detalles relacionados con estos cambios en el almacenamiento de Android 10 en [Documentación de almacenamiento de datos y archivos para Android](https://developer.android.com/training/data-storage/files/external-scoped).
+Sin embargo, en la última versión de Android 10, Google produjo algunos cambios &quot;para dar a los usuarios más control sobre sus archivos y para limitar el desorden de archivos, las aplicaciones dirigidas a Android 10 (nivel de API 29) y superiores reciben acceso con ámbito en un dispositivo de almacenamiento externo, o almacenamiento con ámbito, de forma predeterminada. Estas aplicaciones solo pueden ver su directorio específico de la aplicación `\[...\]`&quot;. Más detalles relacionados con estos cambios de almacenamiento de Android 10 se presentan en [Documentación de almacenamiento de datos y archivos para Android](https://developer.android.com/training/data-storage/files/external-scoped).
 
-Como resultado de estos cambios, la versión de Android de Access Enabler ofrece el inicio de sesión único (SSO) **SDK 3.2.1 (última versión)** y las versiones anteriores pueden verse afectadas en dispositivos Android 10, tal como se explica en la siguiente sección.
+Como resultado de estos cambios, el inicio de sesión único (SSO) ofrecido por la versión de Access Enabler de Android **SDK 3.2.1 (última versión)** y versiones anteriores pueden verse afectadas en dispositivos Android 10, como se explica en la siguiente sección.
 
 Consulte [Información general de Roku SSO](/help/authentication/roku-sso-overview.md).
 
 ## Comportamiento
 
-Según el **nivel de SDK de target** o el uso de **android:requestLegacyExternalStorage** Atributo de manifiesto El inicio de sesión único (SSO) ofrecido por el SDK de Access Enabler para Android versión 3.2.1 (última) y versiones anteriores se comportará de la siguiente manera:
+Según la aplicación de **nivel de SDK de destino** o el uso de **android:requestLegacyExternalStorage** Atributo de manifiesto de inicio de sesión único (SSO) ofrecido por el SDK de Access Enabler Android versión 3.2.1 (más reciente) y las versiones anteriores se comportarán de la siguiente manera:
 
-- Sus destinos de aplicación **Android 9 (nivel de API 28)** o inferior **-\>** Inicio de sesión único (SSO) **funcionará**
-- Sus destinos de aplicación **Android 10** **(Nivel de API 29)** y sí **set** el valor de **requestLegacyExternalStorage en true** en el archivo de manifiesto de la aplicación **-\>** Inicio de sesión único (SSO) **funcionará**
-- Sus destinos de aplicación **Android 10** **(Nivel de API 29)** y sí **sin configurar** el valor de **requestLegacyExternalStorage en true** en el archivo de manifiesto de la aplicación **-\>** Inicio de sesión único (SSO) **no funcionará**
+- Destinos de su aplicación **Android 9 (nivel de API 28)** o inferior **-\>** Inicio de sesión único (SSO) **funcionará**
+- Destinos de su aplicación **Android 10** **(Nivel de API 29)** y lo hace **set** el valor de **requestLegacyExternalStorage a true** en el archivo de manifiesto de su aplicación **-\>** Inicio de sesión único (SSO) **funcionará**
+- Destinos de su aplicación **Android 10** **(Nivel de API 29)** y lo hace **sin configurar** el valor de **requestLegacyExternalStorage a true** en el archivo de manifiesto de su aplicación **-\>** Inicio de sesión único (SSO) **no funcionará**
 
 
 >[!TIP]
 >
-> Antes de que el SDK para Android de Access Enabler de autenticación de Adobe Primetime sea totalmente compatible con el almacenamiento de ámbitos, puede desactivar temporalmente la opción en función del nivel de SDK de destino de la aplicación o del atributo requestLegacyExternalStorage manifest tal como se explica en público [Documentación de Android](https://developer.android.com/training/data-storage/files/external-scoped#opt-out-of-scoped-storage).
-
+> Antes de que la autenticación de Adobe Primetime permita el acceso El SDK de Android sea totalmente compatible con el almacenamiento con ámbito, puede optar por excluirse temporalmente en función del nivel de SDK de destino de la aplicación o del atributo de manifiesto requestLegacyExternalStorage, tal como se explica en público [Documentación de Android](https://developer.android.com/training/data-storage/files/external-scoped#opt-out-of-scoped-storage).

@@ -1,27 +1,26 @@
 ---
-description: Quality of service (QoS) ofrece una vista detallada del rendimiento del motor de vídeo. El SDK de explorador proporciona estadísticas detalladas sobre la reproducción, el almacenamiento en búfer y los dispositivos.
+description: Calidad de servicio (QoS) ofrece una vista detallada del rendimiento del motor de vídeo. El TVSDK del explorador proporciona estadísticas detalladas sobre la reproducción, el almacenamiento en búfer y los dispositivos.
 title: Estadísticas de calidad del servicio
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b7486ed5-e59f-428c-942c-a2fee7a869c9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '141'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Estadísticas de calidad del servicio{#quality-of-service-statistics}
 
-# Estadísticas de calidad de servicio{#quality-of-service-statistics}
+Calidad de servicio (QoS) ofrece una vista detallada del rendimiento del motor de vídeo. El TVSDK del explorador proporciona estadísticas detalladas sobre la reproducción, el almacenamiento en búfer y los dispositivos.
 
-Quality of service (QoS) ofrece una vista detallada del rendimiento del motor de vídeo. El SDK de explorador proporciona estadísticas detalladas sobre la reproducción, el almacenamiento en búfer y los dispositivos.
+## Leer las estadísticas de reproducción, almacenamiento en búfer y dispositivo de QOS {#read-qos-playback-buffering-and-device-statistics}
 
-## Leer las estadísticas de reproducción, almacenamiento en búfer y dispositivos de QOS {#read-qos-playback-buffering-and-device-statistics}
+Puede leer las estadísticas de reproducción, almacenamiento en búfer y dispositivo de la clase QOSProvider.
 
-Puede leer las estadísticas de reproducción, almacenamiento en búfer y dispositivos desde la clase QOSProvider.
+El `QOSProvider` proporciona varias estadísticas, incluida información sobre el almacenamiento en búfer, las velocidades de bits, las velocidades de fotogramas, los datos de tiempo, etc.
 
-La clase `QOSProvider` proporciona varias estadísticas, incluida información sobre el almacenamiento en búfer, las tasas de bits, las tasas de fotogramas, los datos de tiempo, etc.
-
-1. Cree una instancia de un reproductor de medios.
-1. Cree un objeto `QOSProvider` y adjúntelo al reproductor de medios.
+1. Cree una instancia de un reproductor multimedia.
+1. Crear un `QOSProvider` y adjuntarlo al reproductor de contenidos.
 
    ```js
    // Create Media Player.qosProvider =  
@@ -31,7 +30,7 @@ La clase `QOSProvider` proporciona varias estadísticas, incluida información s
 
 1. (Opcional) Lea las estadísticas de reproducción.
 
-   Una solución para leer las estadísticas de reproducción es tener un temporizador que obtenga periódicamente los nuevos valores de QoS de `QOSProvider`. Por ejemplo:
+   Una solución para leer las estadísticas de reproducción es tener un temporizador, que recupere periódicamente los nuevos valores de QoS de la `QOSProvider`. Por ejemplo:
 
    ```js
    var qosTimer = (function () { 

@@ -1,29 +1,27 @@
 ---
-description: Un detector de oportunidades es un componente TVSDK del explorador que detecta etiquetas personalizadas en un flujo e identifica las oportunidades de colocación. Estas oportunidades se envían al gestor de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y los metadatos de la oportunidad de colocación.
-title: Personalización de detectores de oportunidades y resolución de contenido
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Un detector de oportunidades es un componente TVSDK del explorador que detecta las etiquetas personalizadas en un flujo e identifica las oportunidades de ubicación. Estas oportunidades se envían al solucionador de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y los metadatos de la oportunidad de ubicación.
+title: Personalizar detectores de oportunidades y solucionadores de contenido
+exl-id: 1866ed53-acfc-45d3-941e-0ed171aa038b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%
 
 ---
 
-
 # Información general {#customize-opportunity-detectors-and-content-resolvers-overview}
 
-Un detector de oportunidades es un componente TVSDK del explorador que detecta etiquetas personalizadas en un flujo e identifica las oportunidades de colocación. Estas oportunidades se envían al gestor de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y los metadatos de la oportunidad de colocación.
+Un detector de oportunidades es un componente TVSDK del explorador que detecta las etiquetas personalizadas en un flujo e identifica las oportunidades de ubicación. Estas oportunidades se envían al solucionador de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y los metadatos de la oportunidad de ubicación.
 
-El SDK de explorador incluye los siguientes detectores de oportunidad predeterminados:
+El TVSDK del explorador incluye los siguientes detectores de oportunidades predeterminados:
 
-* `AdSignalingModeOpportunityGenerator`, que crea oportunidades de colocación de anuncios iniciales basadas en el modo de señalización de anuncios.
-* `ManifestCuesOpportunityGenerator`, que crea oportunidades de colocación de anuncios desde cualquier etiqueta de salida de empalme.
+* `AdSignalingModeOpportunityGenerator`, que crea oportunidades de colocación de anuncios iniciales basadas en el modo de señalización de publicidad.
+* `ManifestCuesOpportunityGenerator`, que crea oportunidades de colocación de anuncios a partir de cualquier etiqueta de empalme.
 
-El SDK de TVSDK del explorador también incluye los solucionadores de contenido predeterminados, como `AuditudeResolver`, que proporcionan contenido que se insertará en función de la clave de metadatos del elemento del reproductor. `AuditudeResolver` es capaz de comunicarse con los servidores de Adobe Primetime ad decisioning y devolver pausas publicitarias que se van a colocar.
+TVSDK del explorador también incluye solucionadores de contenido predeterminados, como `AuditudeResolver`, que proporciona contenido que se inserta en función de la clave de metadatos del elemento de reproductor. `AuditudeResolver` es capaz de comunicarse con los servidores de Adobe Primetime ad Decisioning y devolver las pausas publicitarias que deben colocarse.
 
-Puede anular los detectores de oportunidades predeterminados y los solucionadores de contenido para personalizar el flujo de trabajo de la publicidad de las siguientes maneras:
+Puede anular los detectores de oportunidades y los solucionadores de contenido predeterminados para personalizar el flujo de trabajo de publicidad de las siguientes maneras:
 
-* Compatibilidad adicional con la detección de etiquetas personalizada
-* Reconocer etiquetas personalizadas para la inserción de publicidad
-* Crear un proveedor de publicidad personalizado
-
+* Añadir compatibilidad con la detección de etiquetas personalizada
+* Reconocimiento de etiquetas personalizadas para la inserción de anuncios
+* Creación de un proveedor de publicidad personalizado

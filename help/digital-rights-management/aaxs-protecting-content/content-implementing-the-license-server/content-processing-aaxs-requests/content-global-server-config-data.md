@@ -1,16 +1,15 @@
 ---
-title: Datos de configuración del servidor global
-description: Datos de configuración del servidor global
+title: Datos de configuración global del servidor
+description: Datos de configuración global del servidor
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 0afce045-1dd7-4fe7-84b7-d60068b3423a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 0%
 
 ---
 
+# Datos de configuración global del servidor{#global-server-configuration-data}
 
-# Datos de configuración del servidor global{#global-server-configuration-data}
-
-Además de la configuración utilizada por el servidor de licencias, `HandlerConfiguration` almacena información de configuración que se puede enviar al cliente para controlar cómo se aplican las licencias. Esto se hace creando una clase `ServerConfigData` y llamando a `HandlerConfiguration.setServerConfigData()` (esta configuración se aplica solamente a las licencias emitidas por este servidor de licencias). La tolerancia a la ventana del reloj es una propiedad que puede establecer el servidor de licencias para controlar cómo el cliente aplica las licencias. De forma predeterminada, los usuarios pueden retrasar el reloj del equipo 4 horas sin invalidar las licencias. Si un operador de servidor de licencias desea utilizar una configuración diferente, el nuevo valor se puede configurar en la clase `ServerConfigData`. Cuando cambie el valor de cualquiera de estas configuraciones, asegúrese de aumentar el número de versión llamando a `setVersion()`. Los nuevos valores solo se enviarán al cliente si la versión del cliente es menor que la versión actual `ServerConfigData`.
+Además de la configuración utilizada por el servidor de licencias, `HandlerConfiguration` almacena información de configuración que se puede enviar al cliente para controlar cómo se aplican las licencias. Esto se hace creando un `ServerConfigData` clase y llamada `HandlerConfiguration.setServerConfigData()` (esta configuración sólo se aplica a las licencias emitidas por este servidor de licencias). La tolerancia del reloj contra devoluciones es una propiedad que puede establecer el servidor de licencias para controlar cómo el cliente aplica las licencias. De forma predeterminada, los usuarios pueden retrasar el reloj del equipo 4 horas sin invalidar las licencias. Si un operador de servidor de licencias desea utilizar una configuración diferente, el nuevo valor se puede establecer en la variable `ServerConfigData` clase. Cuando cambie el valor de cualquiera de estas configuraciones, asegúrese de incrementar el número de versión llamando a `setVersion()`. Los nuevos valores solo se enviarán al cliente si la versión del cliente es menor que la actual `ServerConfigData` versión.

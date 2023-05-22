@@ -1,7 +1,8 @@
 ---
 title: Exportar métricas para un MVPD y programadores seleccionados
 description: Exportar métricas para un MVPD y programadores seleccionados
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 868016ec-71aa-44b9-a002-0d124a64c167
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -10,30 +11,30 @@ ht-degree: 0%
 
 # Exportar métricas para un MVPD y programadores seleccionados {#export-metric}
 
-El panel de control de cuentas IQ muestra tablas y gráficos para las estadísticas de uso compartido de credenciales de las cuentas de suscriptor del segmento seleccionado. Además de ver los patrones y puntuaciones de uso compartido, también puede exportar las métricas de uso de la cuenta y compartir puntuaciones para los suscriptores de los MVPD y canales en el segmento seleccionado desde estas tablas.
+El panel de IQ de cuenta muestra tablas y gráficos para las estadísticas de uso compartido de credenciales de las cuentas de suscriptor en el segmento seleccionado. Además de ver los patrones y puntuaciones de uso compartido, también puede exportar las métricas de uso de la cuenta y las puntuaciones de uso compartido para los suscriptores de las MVPD y los canales en el segmento seleccionado desde estas tablas.
 
-Para exportar métricas para un MVPD y programadores seleccionados, una vez que haya iniciado sesión como usuario autorizado de MVPD:
+Para exportar métricas de un MVPD y de programadores seleccionados, una vez que haya iniciado sesión como usuario de MVPD autorizado:
 
-1. Defina un segmento que desee siguiendo los pasos indicados en [Cómo definir el segmento y seleccionar el intervalo de tiempo](/help/AccountIQ/howto-select-segment-timeframe.md) para evaluación de [segmento y marco de tiempo](/help/AccountIQ/segments-timeframe.md) panel.
+1. Defina el segmento que desee siguiendo los pasos de [Cómo definir el segmento y seleccionar el periodo de tiempo](/help/AccountIQ/howto-select-segment-timeframe.md) para evaluación desde [segmento y periodo de tiempo](/help/AccountIQ/segments-timeframe.md) panel.
 
-1. Vaya a uno de los paneles siguientes:
+1. Vaya a uno de los siguientes paneles:
 
    * Programadores en el segmento
       ![](assets/prog-segment-export-option.png)
 
-   * Número de cuentas y uso por nivel de probabilidad de uso compartido
+   * Número de cuentas y uso compartido por nivel de probabilidad
 
       ![](assets/progr-usage-panel-export.png)
 
-1. Select **Exportar** disponible en la esquina superior derecha del panel.
+1. Seleccionar **Exportar** opción disponible en la esquina superior derecha del panel.
 
-Los datos se exportan en formato CSV y el archivo se descarga localmente en el dispositivo. Puede utilizar el editor y el visor de CSV que desee para abrir los informes exportados.
+Los datos se exportan en formato CSV y el archivo se descarga localmente en el dispositivo. Puede utilizar el visor y el editor CSV que desee para abrir los informes exportados.
 
 * Programadores en el segmento
 
    ![](assets/export-progr-in-seg.png)
 
 
-* Número de cuentas y uso por nivel de probabilidad de uso compartido
+* Número de cuentas y uso compartido por nivel de probabilidad
 
    ![](assets/export-acc-usage.png)

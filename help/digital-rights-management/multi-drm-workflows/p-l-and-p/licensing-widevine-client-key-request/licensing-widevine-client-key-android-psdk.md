@@ -1,20 +1,19 @@
 ---
 description: El código de cliente pasa datos a una API de Android.
-title: Flujo de trabajo de solicitud de clave en el PSDK de Android
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Flujo de trabajo de solicitud de claves en Android PSDK
+exl-id: 3ff52c0d-0789-4fe5-bf9d-f03184bad488
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%
 
 ---
 
-
-# Flujo de trabajo de solicitud de clave en el SDK para Android{#key-request-workflow-on-android-psdk}
+# Flujo de trabajo de solicitud de claves en Android PSDK{#key-request-workflow-on-android-psdk}
 
 El código de cliente pasa datos a una API de Android.
 
-En Android, el código de cliente debe pasar la URL del servidor de licencias y los datos de adquisición de licencias correspondientes mediante la siguiente API:
+En Android, el código de cliente debe pasar la URL del servidor de licencias y los datos de adquisición de licencias adjuntos mediante la siguiente API:
 
 ```
 class DRMManager 
@@ -32,9 +31,9 @@ class DRMManager
     }
 ```
 
-Después de llamar correctamente a esta API, su código puede iniciar la reproducción del contenido de la forma habitual. Si utiliza Expressplay, puede pasar el token como parte de la URL del servidor de licencias o como una propiedad de solicitud y eliminar el token de la URL del servidor de licencias.
+Después de llamar correctamente a esta API, el código puede iniciar la reproducción del contenido de la manera habitual. Si utiliza Expressplay, puede pasar el token como parte de la URL del servidor de licencias o como una propiedad de solicitud y eliminar el token de la URL del servidor de licencias.
 
-Algunos dispositivos Android admiten tanto Widevine como PlayReady. En estos dispositivos, es posible que el cliente desee forzar al PSDK a descifrar el contenido mediante un DRM determinado si el contenido tiene varios encabezados DRM. Esto se puede hacer llamando a la siguiente API antes de la reproducción:
+Algunos dispositivos Android son compatibles con Widevine y PlayReady. En estos dispositivos, es posible que el cliente desee obligar a PSDK a descifrar el contenido mediante un DRM concreto si el contenido tiene varios encabezados DRM. Esto se puede hacer llamando a la siguiente API antes de la reproducción:
 
 ```
 class MediaPlayer 
@@ -48,4 +47,3 @@ class MediaPlayer
    public void setDRMScheme(String drm) throws MediaPlayerException 
    }
 ```
-

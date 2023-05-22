@@ -1,6 +1,6 @@
 ---
-description: Puede obtener una descripción de la línea de tiempo asociada con el elemento seleccionado que está reproduciendo TVSDK. Esto resulta muy útil cuando la aplicación muestra un control de barra de desplazamiento personalizado en el que se identifican las secciones de contenido que se corresponden con el contenido de la publicidad.
-title: Inspect de la cronología de reproducción
+description: Puede obtener una descripción de la cronología asociada con el elemento seleccionado actualmente y que TVSDK está reproduciendo. Esto resulta muy útil cuando la aplicación muestra un control de barra de desplazamiento personalizado en el que se identifican las secciones de contenido que corresponden al contenido del anuncio.
+title: Inspect la cronología de reproducción
 exl-id: 38b5ce0e-5554-462e-986f-f3864f7cf879
 source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
@@ -9,25 +9,25 @@ ht-degree: 0%
 
 ---
 
-# Inspect de la cronología de reproducción{#inspect-the-playback-timeline}
+# Inspect la cronología de reproducción{#inspect-the-playback-timeline}
 
-Puede obtener una descripción de la línea de tiempo asociada con el elemento seleccionado que está reproduciendo TVSDK. Esto resulta muy útil cuando la aplicación muestra un control de barra de desplazamiento personalizado en el que se identifican las secciones de contenido que se corresponden con el contenido de la publicidad.
+Puede obtener una descripción de la cronología asociada con el elemento seleccionado actualmente y que TVSDK está reproduciendo. Esto resulta muy útil cuando la aplicación muestra un control de barra de desplazamiento personalizado en el que se identifican las secciones de contenido que corresponden al contenido del anuncio.
 
-A continuación se muestra un ejemplo de implementación, tal como se ve en la siguiente captura de pantalla.
+A continuación, se muestra una implementación de ejemplo como se ve en la siguiente captura de pantalla.
 <!--<a id="fig_6D9FB3764F3947A38B8E7726187BD461"></a>-->
 
 ![](assets/inspect-playback.jpg){width="368.641pt"}
 
-1. Acceda a la `Timeline` en el `MediaPlayer` usando la variable `get` método.
+1. Acceda a la `Timeline` objeto en el `MediaPlayer` uso del `get` método.
 
-   La variable `Timeline` encapsula la información relacionada con el contenido de la cronología asociada con el elemento multimedia que está cargado actualmente por el `MediaPlayer` instancia. La variable `Timeline` proporciona acceso a una vista de solo lectura de la línea de tiempo subyacente. La variable `Timeline` la clase proporciona un método getter para obtener todas las ubicaciones `TimelineMarker` objetos.
+   El `Timeline` encapsula la información relacionada con el contenido de la cronología asociada al elemento de medios que carga actualmente el objeto `MediaPlayer` ejemplo. El `Timeline` proporciona acceso a una vista de sólo lectura de la escala de tiempo subyacente. El `Timeline` proporciona un método de captador para obtener todas las `TimelineMarker` objetos.
 
-1. Iterar por la lista de `TimelineMarkers` y utilice la información devuelta para implementar su línea de tiempo.
+1. Iterar por la lista de `TimelineMarkers` y utilice la información devuelta para implementar la cronología.
 
        Un objeto &quot;TimelineMarker&quot; contiene dos fragmentos de información:
    
    * Posición del marcador en la cronología (en milisegundos)
-   * Duración del marcador en la cronología (en milisegundos)
+   * Duración del marcador en la escala de tiempo (en milisegundos)
 
 <!--<a id="example_BA936629E82B4082A2E2C548E3FC3357"></a>-->
 

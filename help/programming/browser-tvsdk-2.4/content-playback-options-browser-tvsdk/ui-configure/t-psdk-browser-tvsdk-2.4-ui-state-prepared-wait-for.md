@@ -1,30 +1,28 @@
 ---
-description: Para poder usar la mayoría de los métodos del reproductor TVSDK del explorador, el reproductor debe estar en un estado válido.
-title: Espere un estado válido
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Para poder utilizar la mayoría de los métodos de reproductor de TVSDK del explorador, el reproductor debe estar en un estado válido.
+title: Esperar a un estado válido
+exl-id: 14f6a5db-4f81-448b-b291-487569a7bc4e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
+# Esperar a un estado válido {#wait-for-a-valid-state}
 
-# Espere un estado válido {#wait-for-a-valid-state}
+Para poder utilizar la mayoría de los métodos de reproductor de TVSDK del explorador, el reproductor debe estar en un estado válido.
 
-Para poder usar la mayoría de los métodos del reproductor TVSDK del explorador, el reproductor debe estar en un estado válido.
+El reproductor se desplaza por varios estados. Esperar a que el reproductor esté en el estado correcto garantiza que el recurso multimedia se haya cargado correctamente. Si el reproductor no se encuentra en el estado requerido, se activan muchos métodos de reproductor `IllegalStateException`.
 
-El reproductor se mueve por varios estados. Esperar que el reproductor esté en el estado correcto garantiza que el recurso de medios se haya cargado correctamente. Si el reproductor no está en al menos el estado requerido, muchos métodos del reproductor arrojan `IllegalStateException`.
+El estado requerido suele ser PREPARADO.
 
-El estado requerido suele estar PREPARADO.
+1. Para confirmar que el estado es PREPARADO:
 
-1. Para confirmar que el estado está PREPARADO:
+   Cuando se inicie el reproductor, espere a que el TVSDK del explorador envíe el `AdobePSDK.MediaPlayerStatusChangeEvent` evento con un `event.status` de `MediaPlayerStatus.PREPARED`.
 
-   Cuando el reproductor se está inicializando, espere a que el SDK de TVSDK del explorador distribuya el evento `AdobePSDK.MediaPlayerStatusChangeEvent` con un `event.status` de `MediaPlayerStatus.PREPARED`.
-
-   Para comprobar si el estado actual del objeto MediaPlayer está al menos PREPARADO.
+   Para comprobar si el estado actual del objeto MediaPlayer es al menos PREPARED.
 
    ```
    <readonly> status :AdobePSDK.MediaPlayerStatus
    ```
-

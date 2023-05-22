@@ -1,38 +1,38 @@
 ---
-title: Cómo migrar la página de inicio de sesión de MVPD de iFrame a Elemento emergente
-description: Cómo migrar la página de inicio de sesión de MVPD de iFrame a Elemento emergente
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Cómo migrar la página de inicio de sesión de MVPD de iFrame a Emergente
+description: Cómo migrar la página de inicio de sesión de MVPD de iFrame a Emergente
+exl-id: 389ea0ea-4e18-4c2e-a527-c84bffd808b4
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
 
 ---
 
-
-# Cómo migrar la página de inicio de sesión de MVPD de iFrame a Elemento emergente {#migr-mvpd-login-iframe-popup}
+# Cómo migrar la página de inicio de sesión de MVPD de iFrame a Emergente {#migr-mvpd-login-iframe-popup}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-## Elemento emergente frente a iFrame {#popup-vs-iframe}
+## Emergente frente a iFrame {#popup-vs-iframe}
 
-Algunos usuarios han encontrado problemas con cookies de terceros con la implementación de iFrame de una página de inicio de sesión de MVPD.
+Algunos usuarios han encontrado problemas de cookies de terceros con la implementación de iFrame de una página de inicio de sesión de MVPD.
 <!--These issues are described in the tech notes linked below:
 
 * [Adobe Primetime authentication and Safari login issues](https://tve.helpdocsonline.com/adobe-pass)
 * [MVPD iFrame login and 3rd party cookies](https://tve.helpdocsonline.com/mvpd)-->
 
-El equipo de autenticación de Adobe Primetime **recomienda implementar la página de inicio de sesión emergente / nueva ventana** en lugar de la versión de iFrame en Firefox y Safari.  Sin embargo, si va a implementar una página de inicio de sesión para Internet Explorer, puede encontrar problemas con la implementación emergente. Los problemas de IE se deben al hecho de que, después de que el usuario se autentica con su MVPD en la ventana emergente, la autenticación de Adobe Primetime fuerza un redireccionamiento de página principal, que Internet Explorer ve como un bloqueador emergente. El equipo de autenticación de Adobe Primetime **recomienda implementar el inicio de sesión en iFrame para Internet Explorer**.
+El equipo de autenticación de Adobe Primetime **recomienda implementar la página emergente/nueva ventana de inicio de sesión** en lugar de la versión de iFrame en Firefox y Safari.  Sin embargo, si va a implementar una página de inicio de sesión para Internet Explorer, puede encontrar problemas con la implementación emergente. Los problemas de IE se deben al hecho de que, después de que el usuario se autentique con su MVPD en la ventana emergente, la autenticación de Adobe Primetime fuerza un redireccionamiento de página principal, que Internet Explorer ve como un bloqueador de ventanas emergentes. El equipo de autenticación de Adobe Primetime **recomienda implementar el inicio de sesión con iFrame para Internet Explorer**.
 
-El código de ejemplo presentado en esta nota técnica utiliza una implementación híbrida tanto de iFrame como de la ventana emergente: se abre un iFrame en Internet Explorer y se muestra una ventana emergente en los demás navegadores.
+El código de ejemplo presentado en esta nota técnica utiliza una implementación híbrida de iFrame y popup, lo que abre un iFrame en Internet Explorer y una ventana emergente en los demás navegadores.
 
 Teniendo en cuenta que ya existe una implementación de iFrame, la primera parte de la nota técnica presenta el código para la implementación de iFrame y la segunda parte presenta los cambios para dar cabida a la implementación emergente como predeterminada.
 
 
 ## Selector de MVPD con página de inicio de sesión en un iFrame {#mvpd-pickr-iframe}
 
-Los ejemplos de código anterior mostraban una página de HTML que contenía la variable &lt;div> etiqueta donde se creará el iFrame junto con el botón cerrar iFrame:
+Los ejemplos de código anteriores mostraban una página de HTML que contiene el &lt;div> donde se creará el iFrame junto con el botón Cerrar iFrame:
 
 ```HTML
 <body> 
@@ -48,7 +48,7 @@ Los ejemplos de código anterior mostraban una página de HTML que contenía la 
 </body>
 ```
 
-Aquí está el asociado **JavaScript** código:
+Este es el asociado **JavaScript** código:
 
 ```JavaScript
 /*
@@ -105,10 +105,10 @@ function setSelectedProvider(providerID) {
 
 ## Selector de MVPD con página de inicio de sesión en una ventana emergente {#mvpd-pickr-popup}
 
-Ya que no vamos a usar un **iFrame** el código de HTML ya no contendrá el iFrame ni el botón para cerrar el iFrame. El div que anteriormente contenía el iFrame - **mvpddiv** - se conservarán y utilizarán para:
+Ya que no vamos a usar un **iFrame** ya no contendrá el iFrame ni el botón para cerrar el iFrame en el código de HTML. El div que anteriormente contenía el iFrame: **mvpddiv** - se conservarán y utilizarán para lo siguiente:
 
-* para notificar al usuario que la página de inicio de sesión de MVPD ya está abierta si se pierde el foco emergente
-* proporcionar un vínculo para recuperar el foco en la ventana emergente
+* para notificar al usuario de que la página de inicio de sesión de MVPD ya está abierta si se pierde el enfoque emergente
+* para proporcionar un vínculo que le permita volver a centrarse en la ventana emergente
 
 ```HTML
 <body onload="javascript:loadAccessEnabler();"> 
@@ -134,9 +134,9 @@ Ya que no vamos a usar un **iFrame** el código de HTML ya no contendrá el iFra
 </body>
 ```
 
-La lista de MVPD se mostrará en el div llamado **picker** como selección **-mvpdList**.
+La lista de MVPD se muestra en el div llamado **selector** como una selección **-mvpdList**.
 
-Se utilizará una nueva llamada de retorno de API: **setConfig(configXML)**. La rellamada se activa después de llamar a la función setRequestor(requestorID) . Esta llamada de retorno devuelve la lista de MVPD que están integrados con requestorID establecido anteriormente. En el método de rellamada, se analizará el XML entrante y la lista de MVPD se almacenará en caché. El selector de MVPD también se crea pero no se muestra.
+Se utilizará una nueva llamada de retorno de API: **setConfig(configXML)**. La llamada de retorno se activa después de llamar a la función setRequestor(requestorID). Esta llamada de retorno devuelve la lista de MVPD que están integradas con el ID del solicitante establecido anteriormente. En el método de devolución de llamada, se analizará el XML entrante y se almacenará en caché la lista de MVPD. El selector de MVPD también se crea pero no se muestra.
 
 ```JavaScript
 var mvpdList;  // The list of cached MVPDs
@@ -168,7 +168,7 @@ function setConfig(configXML) {
 }
 ```
 
-Después de llamar a la función getAuthentication() o getAuthorization() , se activa la llamada de retorno displayProviderDialog() . Normalmente, dentro de esta llamada de retorno, la lista MVPD se habría creado y mostrado. Dado que el selector de MVPD ya está creado, lo único que queda por hacer es mostrarlo al usuario.
+Después de llamar a las funciones getAuthentication() o getAuthorization(), se activa la llamada de retorno displayProviderDialog(). Normalmente, dentro de esta llamada de retorno, se habría creado y mostrado la lista de MVPD. Dado que el selector de MVPD ya está creado, lo único que queda por hacer es mostrarlo al usuario.
 
 ```JavaScript
 /*
@@ -179,15 +179,15 @@ function displayProviderDialog(providers) {
 }
 ```
 
-Una vez que el usuario ha seleccionado un MVPD desde el selector, se debe crear la ventana emergente. Algunos exploradores pueden bloquear la ventana emergente si se crea con about:blank o con una página que se encuentra en otro dominio, por lo que se recomienda abrirla con el nombre de host desde el que se carga AccessEnabler.
+Una vez que el usuario ha seleccionado una MVPD del selector, es necesario crear la ventana emergente. Algunos exploradores pueden bloquear la ventana emergente si se crea con about:blank o con una página que se encuentra en otro dominio; por lo tanto, se recomienda abrirla con el nombre de host desde el que se carga AccessEnabler.
 
-En la implementación de iFrame, el restablecimiento del flujo de autenticación se realizaba mediante el botón btnCloseIframe y la función de JavaScript closeIframeAction(), pero ahora ya no es posible decorar el iFrame. Por lo tanto, se logra el mismo comportamiento mirando cuándo se cierra la ventana emergente (ya sea por el usuario o finalizando el flujo de autenticación). Se ha añadido un fragmento de código que también ayuda en caso de que el usuario pierda el foco de la ventana emergente:
+En la implementación de iFrame, el restablecimiento del flujo de autenticación se realizaba mediante el botón btnCloseIframe y la función de JavaScript closeIframeAction(), pero ahora la decoración del iFrame ya no es posible. Por lo tanto, se logra el mismo comportamiento observando cuándo se cierra la ventana emergente (ya sea por el usuario o al finalizar el flujo de autenticación). Se ha agregado un fragmento de código que también ayuda en caso de que el usuario pierda el enfoque de la ventana emergente:
 
 ```HTML
 "<a href="javascript:mvpdWindow.focus();">Click here to open it.</a>".
 ```
 
-En la llamada de retorno createIFrame() , la variable **mvpddiv** se mostrará div.
+En la llamada de retorno createIFrame() , **mvpddiv** se mostrará el div.
 
 ```JavaScript
 function createIFrame(width, height) {
@@ -228,8 +228,8 @@ function checkClosed() {
 
 >[!IMPORTANT]
 >
->* El código de ejemplo contiene una variable codificada para el requestorID - &quot;REF&quot; utilizado que debe reemplazarse por un ID de solicitante de programador real.
->* El código de ejemplo solo se ejecutará correctamente desde un dominio en la lista blanca asociado al id de solicitante utilizado.
->* Dado que todo el código está disponible para descarga, el código presentado en esta nota técnica se ha truncado. Para obtener una muestra completa, consulte **Ejemplo de iFrame de JS frente a muestra emergente**.
->* Las bibliotecas JavaScript externas se vincularon desde [Servicios alojados en Google](https://developers.google.com/speed/libraries/).
+>* El código de ejemplo contiene una variable codificada para el ID de solicitante utilizado: &quot;REF&quot;, que debe reemplazarse por un ID de solicitante de programador real.
+>* El código de ejemplo solo se ejecutará correctamente desde un dominio de la lista blanca asociado al ID de solicitante utilizado.
+>* Dado que todo el código está disponible para su descarga, el código presentado en esta nota técnica se ha truncado. Para ver una muestra completa, consulte **Ejemplo de iFrame de JS frente a ventana emergente**.
+>* Las bibliotecas JavaScript externas se vincularon desde [Servicios alojados de Google](https://developers.google.com/speed/libraries/).
 

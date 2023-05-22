@@ -1,23 +1,22 @@
 ---
-description: Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookie para la administración de sesiones, el acceso a la puerta, etc.
-title: Trabajar con cookies
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookies para la administración de sesiones, el acceso a puertas, etc.
+title: Trabajo con cookies
+exl-id: ea9d83f9-a047-4e24-98e5-f565b8a31a89
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
 
 ---
 
+# Trabajo con cookies {#work-with-cookies}
 
-# Trabajar con cookies {#work-with-cookies}
+Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookies para la administración de sesiones, el acceso a puertas, etc.
 
-Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookie para la administración de sesiones, el acceso a la puerta, etc.
+Esta es una solicitud de ejemplo al servidor de claves con algo de autenticación:
 
-A continuación, se muestra un ejemplo de solicitud al servidor de claves con cierta autenticación:
-
-1. El cliente inicia sesión en el sitio web en un explorador y su inicio de sesión muestra que este cliente puede ver el contenido.
-1. En función de lo que espera el servidor de licencias, la aplicación genera un token de autenticación.
+1. El cliente inicia sesión en el sitio web en un explorador y su inicio de sesión muestra que este cliente tiene permiso para ver contenido.
+1. En función de lo que espere el servidor de licencias, la aplicación generará un token de autenticación.
 
    Este valor se pasa a TVSDK.
 1. TVSDK establece este valor en el encabezado de la cookie.
@@ -27,7 +26,7 @@ A continuación, se muestra un ejemplo de solicitud al servidor de claves con ci
 
 Para trabajar con cookies:
 
-Cree un `cookieManager` y agregue las cookies para los URI a su cookieStore.
+Crear un `cookieManager` y añada sus cookies para los URI de su cookieStore.
 
 Por ejemplo:
 
@@ -43,11 +42,11 @@ cookieManager.getCookieStore().add(newURI("https://twitter.com/"),cookie);
 
 >[!TIP]
 >
->Cuando se habilita el redireccionamiento 302, la solicitud de publicidad puede redirigirse a un dominio diferente del dominio al que pertenece la cookie.
+>Cuando la redirección 302 está habilitada, la solicitud de publicidad se puede redirigir a un dominio diferente del dominio al que pertenece la cookie.
 
-TVSDK consulta esto `cookieManager` durante la ejecución, comprueba si hay cookies asociadas con la dirección URL y las utiliza automáticamente.
+TVSDK consulta esto `cookieManager` en tiempo de ejecución, comprueba si hay cookies asociadas a la dirección URL y las utiliza automáticamente.
 
-Se llama al evento MediaPlayerEvent.COOKIES_UPDATED cuando se actualizan las cookies C++. Este cookieUpdatedEvent tiene un método getCookieString() que devuelve un valor de cadena para la cookie.
+Se llama al evento MediaPlayerEvent.COOKIES_UPDATED cuando se actualizan las cookies de C++. Este cookieUpdatedEvent tiene un método getCookieString() que devuelve un valor de cadena para la cookie.
 
 A continuación se muestra un fragmento de código de ejemplo:
 
@@ -62,4 +61,3 @@ public void onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)
  }  
 };
 ```
-

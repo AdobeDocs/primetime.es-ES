@@ -1,17 +1,16 @@
 ---
-title: Lista de permitidos para aplicaciones Adobe® Primetime permitidas para reproducir contenido protegido
-description: Lista de permitidos para aplicaciones Adobe® Primetime permitidas para reproducir contenido protegido
+title: Lista de permitidos para aplicaciones de Adobe ® Primetime permitidas para reproducir contenido protegido
+description: Lista de permitidos para aplicaciones de Adobe ® Primetime permitidas para reproducir contenido protegido
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 56004a0f-118c-42f3-869b-2cc1c91ee544
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
 
 ---
 
-
-# Lista de permitidos para aplicaciones Adobe® Primetime permitidas para reproducir contenido protegido {#allowlist-for-adobe-primetime-applications-allowed-to-play-protected-content}
+# Lista de permitidos para aplicaciones de Adobe ® Primetime permitidas para reproducir contenido protegido {#allowlist-for-adobe-primetime-applications-allowed-to-play-protected-content}
 
 Especifica las aplicaciones de AIR/iOS que pueden reproducir contenido. Especifique el ID de la aplicación de AIR/iOS, la versión mínima, la versión máxima y el ID del editor.
 
@@ -19,5 +18,4 @@ Ejemplo de caso de uso: Utilice esta regla para limitar la reproducción a una a
 
 >[!NOTE]
 >
->Si utiliza el Flash Builder de Adobe para crear aplicaciones protegidas, asegúrese de no implementar la aplicación en modo &quot;Depurar&quot;. Al implementar una aplicación en modo &quot;depuración&quot;, el Flash Builder adjuntará &quot;.debug&quot; al ID de la aplicación de AIR. Esto hará que la funcionalidad de lista de permitidos en Acceso a Adobe se comporte de forma inesperada.
-
+>Si utiliza el Flash Builder de Adobe para crear aplicaciones protegidas, asegúrese de no implementar la aplicación en el modo &quot;Depurar&quot;. Al implementar una aplicación en modo &quot;Depuración&quot;, el Flash Builder anexará &quot;.debug&quot; al ID de aplicación de AIR. Esto provocará que la funcionalidad de lista de permitidos de Acceso a Adobe se comporte de forma inesperada.

@@ -1,21 +1,21 @@
 ---
 title: Cierre de sesión de MVPD
 description: Cierre de sesión de MVPD
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: a2b57d02-9688-48e3-beff-1012cd361d0c
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
 
 ---
 
-
 # Cierre de sesión de MVPD
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-Los casos de uso de cierre de sesión se pueden implementar mediante una solicitud de cierre de sesión SAML enviada al IdP o llamando a un extremo de cierre de sesión personalizado.  Los ejemplos de solicitud y respuesta siguientes proporcionan ejemplos de la implementación del cierre de sesión SAML.
+Los casos de uso de cierre de sesión se pueden implementar mediante una solicitud de cierre de sesión de SAML enviada al IdP o mediante una llamada a un extremo de cierre de sesión personalizado.  Los ejemplos de solicitud y respuesta siguientes proporcionan ejemplos de la implementación de cierre de sesión de SAML.
 
 ## Ejemplo de solicitud de cierre de sesión {#sample-logout-request}
 
@@ -37,7 +37,7 @@ Los casos de uso de cierre de sesión se pueden implementar mediante una solicit
 </samlp:LogoutRequest>
 ```
 
-## Respuesta de cierre de sesión de muestra {#sample-logout-response}
+## Ejemplo de respuesta de cierre de sesión {#sample-logout-response}
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

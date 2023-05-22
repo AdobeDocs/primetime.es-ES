@@ -1,16 +1,15 @@
 ---
 description: Estas clases permiten personalizar el registro.
-title: Clases de registro
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Registrar clases
+exl-id: 214c3744-dea8-448d-9d7e-68a18e02dd3b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%
 
 ---
 
-
-# Registro de clases {#logging-classes}
+# Registrar clases {#logging-classes}
 
 Estas clases permiten personalizar el registro.
 

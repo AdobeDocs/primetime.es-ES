@@ -1,39 +1,38 @@
 ---
-title: Crear directivas de DRM personalizadas (opcional)
-description: Crear directivas de DRM personalizadas (opcional)
+title: Creación de políticas de DRM personalizadas (opcional)
+description: Creación de políticas de DRM personalizadas (opcional)
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: a74f60b1-96a0-4fc4-bbf2-5db78f343562
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 0%
 
 ---
 
+# Creación de políticas de DRM personalizadas (opcional){#create-custom-drm-policies-optional}
 
-# Crear directivas de DRM personalizadas (opcional){#create-custom-drm-policies-optional}
-
-El kit de protección de DRM de Primetime Cloud incluye algunas políticas preconfiguradas que se pueden utilizar durante el empaquetado. Si desea realizar configuraciones de directiva adicionales, por ejemplo, un derecho de lista de permitidos SWF específico, el administrador de políticas de DRM de Primetime incluido se puede usar para generar políticas personalizadas.
+El kit de protección DRM de Primetime Cloud incluye algunas directivas preconfiguradas que se pueden utilizar durante el empaquetado. Si se desean configuraciones de directivas adicionales, por ejemplo, un derecho de inclusión en una lista de permitidos por el SWF específico, se puede utilizar el Administrador de directivas DRM de Primetime incluido para generar directivas personalizadas.
 
 >[!NOTE]
 >
->Todas las directivas deben utilizar autenticación ANONYMOUS (no contraseña de nombre de usuario ni personalizada), independientemente de si se utiliza o no el flujo de trabajo de autenticación/derechos personalizados .
+>Todas las políticas deben utilizar la autenticación ANÓNIMA (no la contraseña del nombre de usuario o personalizada), independientemente de si se utiliza o no el flujo de trabajo de autenticación/derecho personalizado.
 
-Con el Administrador de directivas se incluye el archivo de configuración [!DNL flashaccesstools.properties], que se ha modificado para exponer únicamente las opciones de directiva configurables que admite el servicio de DRM de Primetime Cloud. Si se establecen opciones de directiva que no sean compatibles con el servicio Primetime Cloud DRM, se generarán errores de adquisición de licencias. Para obtener información sobre el uso del Administrador de políticas de DRM de Primetime, consulte: [Implementaciones de referencia de DRM de Primetime: Administrador de directivas](https://help.adobe.com/en_US/primetime/drm/5.3/reference_implementations/index.html#concept-DRM_Policy_Manager).
+Junto con el Administrador de directivas se incluye la variable [!DNL flashaccesstools.properties] archivo de configuración, que se ha modificado para exponer únicamente las opciones de directiva configurables que admite el servicio DRM de Primetime Cloud. La configuración de opciones de directiva no admitidas por el servicio DRM de Primetime Cloud dará como resultado errores de adquisición de licencia. Para obtener información sobre el uso del Gestor de políticas de DRM de Primetime, consulte: [Implementaciones de referencia de DRM de Primetime: Administrador de directivas](https://help.adobe.com/en_US/primetime/drm/5.3/reference_implementations/index.html#concept-DRM_Policy_Manager).
 
-Para crear una política nueva, actualice el archivo [!DNL flashaccesstools.properties] como desee y, a continuación, utilice el comando :
+Para crear una nueva directiva, actualice el [!DNL flashaccesstools.properties] como desee y, a continuación, utilice el comando:
 
 ```
 java -jar libs/AdobePolicyManager.jar new myPolicy.pol
 ```
 
-## Crear directivas de forma dinámica para Auth/Entitlement{#create-policies-dynamically-for-custom-auth-entitlement} personalizado
+## Crear directivas de forma dinámica para Autorización/Autorización personalizada{#create-policies-dynamically-for-custom-auth-entitlement}
 
-Si utiliza la autenticación/derechos personalizados de DRM de Primetime Cloud y desea crear dinámicamente una nueva directiva de DRM para cada solicitud de licencia (en lugar de extraer directivas de un grupo pregenerado), Adobe recomienda que utilice directamente el SDK de Java de DRM de Primetime. El uso directo del SDK de Java es más rápido que la herramienta [!DNL AdobePolicyManager.jar], que envía automáticamente el archivo de directiva al disco, lo que incurre en sobrecarga de E/S de disco.
+Si utiliza la autenticación/derecho personalizado de DRM de Primetime Cloud y desea crear dinámicamente una nueva política de DRM para cada solicitud de licencia (en lugar de extraer políticas de un grupo generado previamente), Adobe recomienda utilizar directamente el SDK de Java de DRM de Primetime. El uso directo del SDK de Java es más rápido que el [!DNL AdobePolicyManager.jar] , que envía automáticamente el archivo de directiva al disco, incurriendo en una sobrecarga de E/S del disco.
 
-El código de muestra que utiliza el SDK de Java se encuentra en el directorio [!DNL /Primetime DRM PolicyManager/sampleCode/], denominado [!DNL CreatePolicy.java] y [!DNL CreatePolicyWithOutputProtection.java]. Puede encontrar Javadocs y la documentación del SDK de Java en [Información general del SDK de Adobe Primetime DRM](../../../digital-rights-management/drm-sdk-overview/overview.md)
+Puede encontrar código de muestra con el SDK de Java en la [!DNL /Primetime DRM PolicyManager/sampleCode/] directorio, con nombre [!DNL CreatePolicy.java] y [!DNL CreatePolicyWithOutputProtection.java]. Puede encontrar documentación y JavaScript para el SDK de Java en [Información general sobre el SDK de DRM de Adobe Primetime](../../../digital-rights-management/drm-sdk-overview/overview.md)
 
-Para crear y ejecutar los ejemplos, copie los archivos .java en la carpeta ../libs/ y ejecute:
+Para generar y ejecutar los ejemplos, copie los archivos .java en la carpeta ../libs/ y ejecute:
 
 ```
 javac -cp adobe-flashaccess-sdk.jar:. CreatePolicy.java

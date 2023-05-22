@@ -1,16 +1,15 @@
 ---
 description: Puede especificar el formato de subtítulos.
-title: Ejemplos de formato de rótulo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Ejemplos Formato de rótulo
+exl-id: 946530a1-c7d7-4582-81b8-71b2980561cb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '33'
 ht-degree: 0%
 
 ---
 
-
-# Ejemplos: Formato de rótulo{#examples-caption-formatting}
+# Ejemplos: Caption formatting{#examples-caption-formatting}
 
 Puede especificar el formato de subtítulos.
 
@@ -34,5 +33,4 @@ var tf = new AdobePSDK.TextFormat(
 
 >[!IMPORTANT]
 >
->El SDK del explorador no admite la opacidad de borde, color de relleno o borde de fuente.
-
+>El TVSDK del explorador no admite bordes de fuentes, colores de relleno u opacidad de relleno.

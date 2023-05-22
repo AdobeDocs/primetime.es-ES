@@ -1,22 +1,21 @@
 ---
-description: En AdobeTVSDKConfig.json puede especificar reglas predeterminadas, así como reglas para zonas específicas.
+description: En AdobeTVSDKConfig.json puede especificar reglas predeterminadas y reglas para zonas específicas.
 title: Ejemplo de reglas de selección creativa
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 2f777f83-948b-47e1-97c1-4259a7482cfb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%
 
 ---
 
-
 # Ejemplo de reglas de selección creativa{#sample-creative-selection-rules}
 
-En `AdobeTVSDKConfig.json` puede especificar reglas predeterminadas, así como reglas para zonas específicas.
+En el `AdobeTVSDKConfig.json` puede especificar reglas predeterminadas y reglas para zonas específicas.
 
 ## Ejemplo de reglas predeterminadas {#section_xy4_3fx_hz}
 
-El siguiente es un ejemplo de archivo `AdobeTVSDKConfig.json` que define solo reglas predeterminadas:
+El siguiente es un ejemplo de un `AdobeTVSDKConfig.json` que define sólo las reglas predeterminadas:
 
 ```
 {
@@ -64,9 +63,9 @@ El siguiente es un ejemplo de archivo `AdobeTVSDKConfig.json` que define solo re
 }
 ```
 
-## Ejemplo de reglas predeterminadas con reglas de zona adicionales {#section_ocv_3fx_hz}
+## Reglas predeterminadas de muestra con reglas de zona adicionales {#section_ocv_3fx_hz}
 
-El siguiente es un ejemplo de archivo [!DNL AdobeTVSDKConfig.json] que define reglas predeterminadas, además de reglas adicionales para un ID de zona específico (en este caso, zona **&quot;1234&quot;**):
+El siguiente es un ejemplo de un [!DNL AdobeTVSDKConfig.json] que define las reglas predeterminadas, además de las reglas adicionales para un ID de zona específico (en este caso, zona **&quot;1234&quot;**):
 
 ```
 {
@@ -135,4 +134,3 @@ El siguiente es un ejemplo de archivo [!DNL AdobeTVSDKConfig.json] que define re
     }
 }
 ```
-

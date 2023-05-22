@@ -1,24 +1,24 @@
 ---
-title: 'Implementación de API sin cliente: códigos de error/mensajes con motivo probable/causa'
-description: 'Implementación de API sin cliente: códigos de error/mensajes con motivo probable/causa'
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: 'Implementación de API sin cliente: códigos de error/mensajes con motivo/causa probable'
+description: 'Implementación de API sin cliente: códigos de error/mensajes con motivo/causa probable'
+exl-id: 616e35fc-9b72-422b-9a05-e6248bd52490
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 0%
 
 ---
 
-
-# Implementación de API sin cliente: códigos de error/mensajes con motivo probable/causa {#clientless-api-implementation--error-codes-messages-with-probable-reason-cause}
+# Implementación de API sin cliente: códigos de error/mensajes con motivo/causa probable {#clientless-api-implementation--error-codes-messages-with-probable-reason-cause}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 </br>
 
 
-## Error: No autorizado
+## Error: no autorizado
 
 ### Causas:
 
@@ -30,29 +30,29 @@ ht-degree: 0%
 ### Causas:
 
 1. El servidor no encontró el código de registro, que se creó para un solicitante y un entorno específicos.
-1. Puede encontrarse con problemas de scripts entre dominios
-1. Se debe agregar la suplantación adecuada al archivo /etc/hosts
+1. Podría estar teniendo problemas con scripts entre dominios
+1. Se debe añadir una suplantación adecuada al archivo /etc/hosts
 
 ## Error: 400 Solicitud incorrecta
 
 ### Causas:
 
 1. URL mal formada para POST/GET
-1. SAMLAssertionParserException - La afirmación de SAML cifrada no se pudo descifrar al final del Adobe
+1. SAMLAssertionParserException: la afirmación de SAML cifrada no se pudo descifrar al final del Adobe
 
 ## Error: 403 prohibido
 
 ### Causas:
 
-1. Demasiadas solicitudes rápidas, una función de la administración de API para evitar ataques de DoS.
-2. Si utiliza un entorno de preequilibrio, agregue la simulación, de lo contrario, asegúrese de que la simulación se haya eliminado del archivo /etc/hosts
+1. Demasiadas solicitudes rápidas: una función de la administración de API para evitar ataques DoS.
+2. Si utiliza un entorno de calidad previa, agregue la suplantación; de lo contrario, asegúrese de que la suplantación se haya eliminado del archivo /etc/hosts
 
-## Error: No se puede iniciar sesión en la página MVPD
+## Error: No se puede iniciar sesión en la página de MVPD
 
 ### Causas:
 
 1. El nombre de usuario y la contraseña no coinciden 
-2. Es posible que el inicio de sesión esté desactivado
+2. Es posible que se haya deshabilitado el inicio de sesión
 3. Compruebe si el inicio de sesión es para producción o ensayo
 
 

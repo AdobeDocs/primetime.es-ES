@@ -1,29 +1,28 @@
 ---
-description: TVSDK prepara objetos TimedMetadata para etiquetas suscritas cada vez que se encuentran estos objetos en el manifiesto de contenido.
+description: TVSDK prepara los objetos TimedMetadata para las etiquetas suscritas cada vez que se encuentran estos objetos en el manifiesto de contenido.
 title: Suscripción a etiquetas personalizadas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 7a3021cc-d2ba-4a70-9c1f-59766b848a62
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 0%
 
 ---
 
-
 # Suscripción a etiquetas personalizadas{#subscribe-to-custom-tags}
 
-TVSDK prepara objetos TimedMetadata para etiquetas suscritas cada vez que se encuentran estos objetos en el manifiesto de contenido.
+TVSDK prepara los objetos TimedMetadata para las etiquetas suscritas cada vez que se encuentran estos objetos en el manifiesto de contenido.
 
-Antes de iniciar la reproducción, debe suscribirse a las etiquetas .
-Para suscribirse a etiquetas, asigne un vector que contenga los nombres de etiqueta personalizados a la propiedad `subscribedTags` . Si también necesita cambiar las etiquetas de publicidad utilizadas por el generador de oportunidades predeterminado, asigne un vector que contenga los nombres de etiqueta de publicidad personalizados a la propiedad `adTags` .
+Antes de que comience la reproducción, debe suscribirse a las etiquetas.
+Para suscribirse a etiquetas, asigne un vector que contenga los nombres de etiqueta personalizados a `subscribedTags` propiedad. Si también debe cambiar las etiquetas de publicidad utilizadas por el generador de oportunidades predeterminado, asigne un vector que contenga los nombres de etiquetas de publicidad personalizados a `adTags` propiedad.
 
 Para recibir notificaciones sobre etiquetas personalizadas en manifiestos HLS:
 
-1. Defina los nombres de las etiquetas de anuncio personalizadas de forma global asignando un vector que contenga las etiquetas personalizadas a `subscribeTags` en `MediaPlayerItemConfig`.
+1. Configure los nombres de etiquetas de publicidad personalizados globalmente asignando un vector que contenga las etiquetas personalizadas a `subscribeTags` in `MediaPlayerItemConfig`.
 
    >[!IMPORTANT]
    >
-   >Debe incluir el prefijo `#` al trabajar con flujos HLS.
+   >Debe incluir la variable `#` cuando se trabaja con secuencias HLS.
 
    Por ejemplo:
 
@@ -34,7 +33,7 @@ Para recibir notificaciones sobre etiquetas personalizadas en manifiestos HLS:
    PSDKConfig.subscribedTags = subscribedTags;
    ```
 
-1. Para cambiar globalmente las etiquetas de publicidad que usa el generador de oportunidades predeterminado, asigne un vector que contenga los nombres de etiquetas de publicidad personalizadas a la propiedad `adTags` en `PSDKConfig`.
+1. Para cambiar globalmente las etiquetas de publicidad que utiliza el generador de oportunidades predeterminado, asigne un vector que contenga los nombres de etiquetas de publicidad personalizados a `adTags` propiedad en `PSDKConfig`.
 
    ```
    var adTags:Vector.<String> = new Vector.<String>(); 
@@ -42,20 +41,20 @@ Para recibir notificaciones sobre etiquetas personalizadas en manifiestos HLS:
    PSDKConfig.adTags = adTags; 
    ```
 
-1. Para que todos los ajustes globales tengan efecto, reemplace el recurso actual.
+1. Para que la configuración global surta efecto, reemplace el recurso actual.
 
    ```
    player.replaceCurrentResource(mediaResource);
    ```
 
-1. Para definir los nombres de las etiquetas suscritas para una secuencia, si es necesario:
-   1. Cree una configuración de elemento del reproductor de medios.
+1. Para establecer los nombres de las etiquetas suscritas para un flujo, si es necesario:
+   1. Cree una configuración de elemento de reproductor de contenidos.
 
       >[!TIP]
       >
-      >La forma más sencilla es crear una configuración de elemento predeterminada del reproductor de medios.
+      >La forma más sencilla es crear una configuración predeterminada de elemento del reproductor de contenidos.
 
-   1. Asigne un vector que contenga las etiquetas personalizadas a `subscribeTags` en `MediaPlayerItemConfig`.
+   1. Asignar un vector que contenga las etiquetas personalizadas a `subscribeTags` in `MediaPlayerItemConfig`.
 
    ```
    var mediaPlayerItemConfig:MediaPlayerItemConfig =  
@@ -67,7 +66,7 @@ Para recibir notificaciones sobre etiquetas personalizadas en manifiestos HLS:
    mediaPlayerItemConfig.subscribeTags = subscribedTags;
    ```
 
-1. Para cambiar las etiquetas de publicidad que usa el generador de oportunidades predeterminado en el flujo especificado, asigne un vector que contenga los nombres de etiquetas de publicidad personalizadas a la propiedad `adTags` en `mediaPlayerItemConfig`
+1. Para cambiar las etiquetas de anuncio que utiliza el generador de oportunidades predeterminado en el flujo especificado, asigne un vector que contenga los nombres de etiquetas de anuncio personalizados a `adTags` propiedad en `mediaPlayerItemConfig`
 
    ```
    var adTags:Vector.<String> = new Vector.<String>(); 
@@ -80,4 +79,3 @@ Para recibir notificaciones sobre etiquetas personalizadas en manifiestos HLS:
    ```
    player.replaceCurrentResource(mediaResource, mediaPlayerItemConfig);
    ```
-

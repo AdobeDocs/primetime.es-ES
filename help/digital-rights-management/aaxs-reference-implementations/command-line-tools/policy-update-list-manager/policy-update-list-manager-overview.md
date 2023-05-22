@@ -1,16 +1,15 @@
 ---
-title: Información general sobre el Administrador de listas de actualización de políticas
-description: Información general sobre el Administrador de listas de actualización de políticas
+title: Información general sobre el Administrador de listas de actualización de directivas
+description: Información general sobre el Administrador de listas de actualización de directivas
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3f5b8f3c-71b9-4a0c-8261-03251bfb29f6
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
 
 ---
 
+# Información general sobre el Administrador de listas de actualización de directivas {#policy-update-list-manager-overview}
 
-# Información general sobre el Administrador de listas de actualización de políticas {#policy-update-list-manager-overview}
-
-Antes de usar el Administrador de listas de actualizaciones de directivas, asegúrese de que cumple los requisitos enumerados en Requisitos y de que el archivo de configuración contiene la información necesaria (consulte Archivo de configuración en *Uso de las implementaciones de referencia de acceso a Adobe*).
+Antes de usar el Administrador de listas de actualización de directivas, asegúrese de que cumple los requisitos enumerados en Requisitos y de que el archivo de configuración contiene la información necesaria (consulte Archivo de configuración en *Uso de las implementaciones de referencia de acceso a Adobe*).

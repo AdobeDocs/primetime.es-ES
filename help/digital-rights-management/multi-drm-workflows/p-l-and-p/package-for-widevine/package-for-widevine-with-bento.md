@@ -1,26 +1,25 @@
 ---
-description: Utilizamos el empaquetador Bento4 y el empaquetador sin conexión de Adobe para crear contenido DASH cifrado. Bento4 toma como entrada contenido mp4 sin encriptar.
+description: Utilizamos tanto el empaquetador Bento4 como el empaquetador sin conexión de Adobe para crear contenido DASH cifrado. Bento4 toma como entrada contenido mp4 no cifrado.
 title: Empaquete su contenido con Bento4
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: c873eaf6-c738-4f95-a900-a8aecb03754d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
 
 ---
 
+# Empaquetando contenido para Widevine y PlayReady {#package-for-widevine}
 
-# Contenido de paquetes para Widevine y PlayReady {#package-for-widevine}
-
-Utilizamos el empaquetador Bento4 y el empaquetador sin conexión de Adobe para crear contenido DASH cifrado. Bento4 toma como entrada contenido mp4 sin encriptar.
+Utilizamos tanto el empaquetador Bento4 como el empaquetador sin conexión de Adobe para crear contenido DASH cifrado. Bento4 toma como entrada contenido mp4 no cifrado.
 
 ## Empaquete su contenido con Bento4{#package-your-content-with-bento}
 
-El empaquetador Bento4 espera que el mp4 de entrada se prefragmente. La distribución del paquete Bento4 incluye una herramienta para esto.
+El empaquetador Bento4 espera que el mp4 de entrada esté prefragmentado. La distribución Bento4 Packager incluye una herramienta para esto.
 
-**Llamada a Bento4**
+**Llamando a Bento4**
 
-Las invocaciones típicas del empaquetador Bento4 tendrían el aspecto siguiente:
+Las invocaciones típicas del empaquetador Bento4 tendrían el aspecto de los ejemplos siguientes:
 
 ```
 ./mp4dash
@@ -45,7 +44,7 @@ Las invocaciones típicas del empaquetador Bento4 tendrían el aspecto siguiente
 --playready-header=\"LA_URL:http://pr.test.expressplay.com/playready/RightsManager.asmx\"
 ```
 
-El ejemplo siguiente combina esquemas PlayReady y Widevine. En este caso concreto, el empaquetador agrega tanto la protección de contenido Widevine como los datos de inicialización de protección de contenido PlayReady al contenido DASH de salida.
+El ejemplo siguiente combina los esquemas PlayReady y Widevine. En este caso particular, el empaquetador agrega los datos de inicialización de protección de contenido Widevine y de protección de contenido PlayReady al contenido DASH de salida.
 
 ```
 /mp4dash
@@ -63,19 +62,19 @@ El ejemplo siguiente combina esquemas PlayReady y Widevine. En este caso concret
 
 donde
 
-El valor del indicador `--encryption-key` tiene el formato `<base16 encoded key id>:<base16 encoded encryption key>`.
+El valor de `--encryption-key` el indicador está en el formulario `<base16 encoded key id>:<base16 encoded encryption key>`.
 
-El indicador `--widevine-header=provider:intertrust#content_id:2a` indica al empaquetador que incluya el cuadro pssh en el manifiesto, que TVSDK requiere actualmente para la reproducción.
+El `--widevine-header=provider:intertrust#content_id:2a` El indicador indica al empaquetador que incluya el cuadro pssh en el manifiesto, que TVSDK requiere actualmente para la reproducción.
 
 El valor de `-playready-header` es para la adquisición de licencias PlayReady.
 
-## Empaquete el contenido con Adobe Offline Packager {#package-your-content-with-adobe-offline-packager}
+## Empaquetar el contenido con Adobe Offline Packager {#package-your-content-with-adobe-offline-packager}
 
-Adobe de paquetes sin conexión toma como entrada contenido mp4 sin encriptar.
+El empaquetador sin conexión de Adobe toma como entrada contenido mp4 sin cifrar.
 
-**Llamada a Adobe Offline Packager**
+**Llamando al empaquetador sin conexión de Adobe**
 
-Una invocación típica de adobe offline packager sería como la llamada a continuación:
+Una invocación típica del empaquetador sin conexión de Adobe tendría el siguiente aspecto:
 
 ```
 java -jar OfflinePackager.jar -conf_path Content_PR_WV.xml -in_path "Jaigo.mp4"
@@ -89,7 +88,7 @@ http://pr.test.expressplay.com/playready/RightsManager.asmx
 -content_id c595f214d84dc7ecf31a8ebf1b7ddda5
 ```
 
-En este caso concreto, el empaquetador sin conexión agrega tanto la protección de contenido Widevine como los datos de inicialización de protección de contenido PlayReady al contenido DASH de salida. El valor de `-key_file_path` es para una clave codificada base64. El valor de `-playready_LA_URL` es para la adquisición de licencias PlayReady.
+En este caso particular, el empaquetador sin conexión agrega los datos de inicialización de la protección de contenido Widevine y de la protección de contenido PlayReady al contenido DASH de salida. El valor de `-key_file_path` es para una clave codificada en base64. El valor de `-playready_LA_URL` es para la adquisición de licencias PlayReady.
 
 El argumento conf_path apunta al archivo de configuración que contendría lo siguiente:
 
@@ -101,4 +100,4 @@ El argumento conf_path apunta al archivo de configuración que contendría lo si
 </config>
 ```
 
-Como algunos dispositivos Android, principalmente Amazon Fire TV, no admiten el descifrado de audio, el cifrado de audio es opcional.
+Debido a que algunos dispositivos Android, principalmente Amazon Fire TV, no admiten el descifrado de audio, el cifrado de audio es opcional.

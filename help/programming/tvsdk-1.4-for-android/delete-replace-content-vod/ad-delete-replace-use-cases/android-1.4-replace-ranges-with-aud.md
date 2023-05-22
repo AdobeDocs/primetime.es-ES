@@ -1,26 +1,25 @@
 ---
-description: Puede insertar anuncios en contenido de VOD.
-title: Reemplazar intervalos de tiempo por una publicidad
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede insertar anuncios en el contenido de VOD.
+title: Reemplazo de intervalos de tiempo por un anuncio
+exl-id: b341d337-e190-4e2d-bad6-579771bcc577
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 0%
 
 ---
 
+# Reemplazo de intervalos de tiempo por un anuncio{#replace-time-ranges-with-an-ad}
 
-# Reemplazar intervalos de tiempo por un anuncio{#replace-time-ranges-with-an-ad}
+Puede insertar anuncios en el contenido de VOD.
 
-Puede insertar anuncios en contenido de VOD.
-
-En este caso, `TimeRanges` entre `begin` y `end` en `localTime` se eliminan de la cronología. Se sustituyen por un `AdBreak` de `begin` a `begin+replaceDuration`. Si la duración de reemplazo no existe como parámetro, el servidor realiza la determinación en el Adbreak devuelto.
+En este caso, `TimeRanges` entre los `begin` y `end` in `localTime` se eliminan de la cronología. Se sustituyen por una `AdBreak` de `begin` hasta `begin+replaceDuration`. Si la duración de reemplazo no existe como parámetro, el servidor realiza la determinación en el Adbreak devuelto.
 
 >[!NOTE]
 >
->Siempre debe proporcionar una duración de reemplazo específica para los intervalos personalizados. Si no hay anuncios que vayan a reemplazar este intervalo personalizado, proporcione un valor de 0 para la duración de reemplazo.
+>Siempre debe proporcionar una duración de reemplazo específica para los intervalos personalizados. Si no se pretende que ningún anuncio sustituya este intervalo personalizado, proporcione una duración de sustitución de 0.
 
-Reemplace intervalos con anuncios de Primetime y decisioning.
+Reemplace rangos por anuncios de Primetime y Decisioning.
 
 ```
 {   
@@ -76,4 +75,3 @@ Reemplace intervalos con anuncios de Primetime y decisioning.
     "id": "vod_003"
 }
 ```
-

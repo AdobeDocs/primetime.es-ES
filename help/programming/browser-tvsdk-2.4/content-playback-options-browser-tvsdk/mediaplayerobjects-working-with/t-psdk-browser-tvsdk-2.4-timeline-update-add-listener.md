@@ -1,20 +1,19 @@
 ---
 description: Para recibir notificaciones sobre actualizaciones de la cronología, registre los oyentes de eventos correspondientes.
-title: Agregar oyentes para TimelineUpdatedEvent
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Agregar detectores para TimelineUpdatedEvent
+exl-id: 7b55beb5-fd84-4144-8d02-bbd998f99e3a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
 
 ---
 
-
-# Agregar oyentes para TimelineUpdatedEvent{#add-listeners-for-timelineupdatedevent}
+# Agregar detectores para TimelineUpdatedEvent{#add-listeners-for-timelineupdatedevent}
 
 Para recibir notificaciones sobre actualizaciones de la cronología, registre los oyentes de eventos correspondientes.
 
-Cada vez que se actualiza la línea de tiempo, `MediaPlayer` envía `AdobePSDK.TimelineEvent` con el tipo `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
+Cada vez que se actualiza la cronología, la variable `MediaPlayer` envíos `AdobePSDK.TimelineEvent` con tipo `AdobePSDK.PSDKEventType.TIMELINE_UPDATED`.
 1. Implemente los oyentes adecuados.
 
    ```js
@@ -33,10 +32,9 @@ Cada vez que se actualiza la línea de tiempo, `MediaPlayer` envía `AdobePSDK.T
    }
    ```
 
-1. Registre los oyentes del evento.
+1. Registre los oyentes de eventos.
 
    ```js
    player.addEventListener(AdobePSDK.PSDKEventType.TIMELINE_UPDATED,  
        onTimelineUpdatedEvent);
    ```
-

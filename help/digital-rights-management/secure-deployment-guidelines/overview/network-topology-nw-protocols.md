@@ -1,16 +1,15 @@
 ---
 description: Al configurar una arquitectura de red segura, se requieren protocolos de red para la interacción entre Adobe Primetime DRM y otros sistemas de la red empresarial.
-title: Protocolos de red Adobe Primetime DRM
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Protocolos de red DRM de Adobe Primetime
+exl-id: d5720ef4-6845-4a62-940a-9d8ba9b43b13
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '226'
 ht-degree: 0%
 
 ---
 
-
-# Protocolos de red Adobe Primetime DRM {#adobe-primetime-drm-network-protocols}
+# Protocolos de red DRM de Adobe Primetime {#adobe-primetime-drm-network-protocols}
 
 Al configurar una arquitectura de red segura, se requieren protocolos de red para la interacción entre Adobe Primetime DRM y otros sistemas de la red empresarial.
 
@@ -19,7 +18,7 @@ Al configurar una arquitectura de red segura, se requieren los siguientes protoc
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_itc_33z_n4"> 
  <thead class="- topic/thead "> 
   <tr rowsep="1" class="- topic/row "> 
-   <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">Protocolo </p> </th> 
+   <th colname="1" class="- topic/entry entry"> <p class="- topic/p ">Protocol </p> </th> 
    <th colname="2" class="- topic/entry entry"> <p class="- topic/p ">Uso </p> </th> 
   </tr> 
  </thead>
@@ -30,7 +29,7 @@ Al configurar una arquitectura de red segura, se requieren los siguientes protoc
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">HTTPS (opcional) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Los clientes de Flash Player, Adobe AIR y Adobe Primetime pueden utilizar HTTPS para comunicarse con Primetime DRM; HTTPS (SSL) no es necesario a menos que admita clientes FMRMS 1.x. Para obtener más información, consulte <a href="../../secure-deployment-guidelines/overview/network-topology-firewall-rules.md" format="dita" scope="local"> Direcciones URL entrantes </a> y Configuración de SSL. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Los clientes de Flash Player, Adobe AIR y Adobe Primetime pueden utilizar HTTPS para comunicarse con Primetime DRM; HTTPS (SSL) no es necesario a menos que admita clientes FMRMS 1.x. Para obtener más información, consulte <a href="../../secure-deployment-guidelines/overview/network-topology-firewall-rules.md" format="dita" scope="local"> URL entrantes </a> y Configurar SSL. </p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -39,10 +38,10 @@ Al configurar una arquitectura de red segura, se requieren los siguientes protoc
 
 Puede configurar el servidor de licencias DRM de Adobe Primetime para que utilice cualquier puerto de red.
 
-Estos puertos deben habilitarse o deshabilitarse en el cortafuegos interno, según la funcionalidad de red que desee permitir a los clientes que se conecten al servidor de aplicaciones que ejecuta Primetime DRM.
+Estos puertos deben habilitarse o deshabilitarse en el cortafuegos interno, según la funcionalidad de red que desee permitir para los clientes que se conectan al servidor de aplicaciones que ejecuta Primetime DRM.
 
 ## Configuración de SSL {#configuring-ssl}
 
-Secure Sockets Layer (SSL) solo es necesario si necesita soporte para clientes de Flash Media Rights Management Server 1.x.
+La Capa de sockets seguros (SSL) sólo es necesaria si necesita compatibilidad con clientes de Flash Media Rights Management Server 1.x.
 
 Se requiere SSL con autenticación de cliente para el servidor de claves DRM de Adobe Primetime. Para obtener más información, consulte [Uso del servidor de claves DRM de Adobe Primetime](../../using-the-drm-key-server/requirements.md).

@@ -1,22 +1,21 @@
 ---
-description: En algunas implementaciones de analytics, es posible que la aplicación cliente desee proporcionar una posición de cabezal de reproducción diferente a la registrada en el valor localTime de TVSDK. Por ejemplo, durante la reproducción de un flujo LINEAR, se puede proporcionar el cabezal de reproducción de cada programa en relación con su tiempo de inicio.
-title: Implementar actualizaciones de tiempo personalizadas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: En determinadas implementaciones de análisis, es posible que la aplicación cliente desee proporcionar una posición de cabezal de reproducción diferente a la indicada por el valor localTime de TVSDK. Por ejemplo, durante una reproducción de flujo LINEAL, se puede proporcionar el cabezal de reproducción de cada programa en relación con su hora de inicio.
+title: Implementación de actualizaciones de tiempo personalizadas
+exl-id: be0f2684-6a17-4d99-8875-7f404ce8a656
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
 
 ---
 
+# Implementación de actualizaciones de tiempo personalizadas{#implement-custom-time-updates}
 
-# Implementar actualizaciones de tiempo personalizadas{#implement-custom-time-updates}
-
-En algunas implementaciones de analytics, es posible que la aplicación cliente desee proporcionar una posición de cabezal de reproducción diferente a la registrada en el valor localTime de TVSDK. Por ejemplo, durante la reproducción de un flujo LINEAR, se puede proporcionar el cabezal de reproducción de cada programa en relación con su tiempo de inicio.
+En determinadas implementaciones de análisis, es posible que la aplicación cliente desee proporcionar una posición de cabezal de reproducción diferente a la indicada por el valor localTime de TVSDK. Por ejemplo, durante una reproducción de flujo LINEAL, se puede proporcionar el cabezal de reproducción de cada programa en relación con su hora de inicio.
 
 >[!TIP]
 >
->Sobrescriba este método solo si desea proporcionar una posición de cabezal de reproducción diferente a la predeterminada.
+>Anule este método solo si desea proporcionar una posición de cabezal de reproducción diferente a la posición predeterminada.
 
 1. Para anular la posición predeterminada del cabezal de reproducción:
 
@@ -31,5 +30,4 @@ En algunas implementaciones de analytics, es posible que la aplicación cliente 
 
    >[!IMPORTANT]
    >
-   >Los valores de este fragmento de código son solo muestras. Debe utilizar valores diferentes para la posición del cabezal de reproducción personalizado.
-
+   >Los valores de este fragmento de código son solo ejemplos. Debe utilizar valores diferentes para la posición personalizada del cabezal de reproducción.

@@ -1,33 +1,32 @@
 ---
-description: Puede establecer valores de control de ABR solo con ABRControlParameters, pero puede construir uno nuevo en cualquier momento.
-title: Configurar las tasas de bits adaptables mediante ABRControlParameters
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede establecer valores de control ABR sólo con ABRControlParameters, pero puede construir uno nuevo en cualquier momento.
+title: Configurar tasas de bits adaptables mediante ABRControlParameters
+exl-id: fc7887bd-37e8-48e7-8afb-3946fb3f1e77
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
+# Configurar tasas de bits adaptables mediante ABRControlParameters {#configure-adaptive-bit-rates-using-abrcontrolparameters}
 
-# Configurar las tasas de bits adaptables mediante ABRControlParameters {#configure-adaptive-bit-rates-using-abrcontrolparameters}
-
-Puede establecer valores de control de ABR solo con ABRControlParameters, pero puede construir uno nuevo en cualquier momento.
+Puede establecer valores de control ABR sólo con ABRControlParameters, pero puede construir uno nuevo en cualquier momento.
 
 Las siguientes condiciones se aplican a `ABRControlParameters`:
 
 * En el momento de la construcción, debe proporcionar valores para todos los parámetros.
 * Después de la construcción, no se pueden cambiar valores individuales.
-* Si los parámetros especificados están fuera del rango permitido, se genera un `ArgumentError`.
+* Si los parámetros especificados están fuera del intervalo permitido, una variable `ArgumentError` se ha lanzado.
 
-1. Determine las tasas de bits inicial, mínima y máxima.
-1. Determine la política ABR:
+1. Determine las velocidades de bits iniciales, mínimas y máximas.
+1. Determine la directiva ABR:
 
    * `ABR_CONSERVATIVE`
    * `ABR_MODERATE`
    * `ABR_AGGRESSIVE`
 
-1. Establezca los valores del parámetro ABR en el constructor `ABRControlParameters` y asigne los valores al Reproductor de medios.
+1. Establezca los valores del parámetro ABR en la variable `ABRControlParameters` y asigne los valores al reproductor de medios.
 
    ```
    public ABRControlParameters(int initialBitRate, 
@@ -39,4 +38,3 @@ Las siguientes condiciones se aplican a `ABRControlParameters`:
      int maxTrickPlayBandwidthUsage, 
      int maxPlayoutRate);
    ```
-

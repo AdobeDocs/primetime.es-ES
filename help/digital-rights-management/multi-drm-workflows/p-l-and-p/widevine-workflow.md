@@ -1,28 +1,27 @@
 ---
-description: Este flujo de trabajo Multi-DRM le lleva a través de la configuración, el empaquetado, la licencia y la reproducción del contenido DASH cifrado con Widevine y PlayReady.
-title: Flujo de trabajo Multi-DRM para Widevine y PlayReady
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Este flujo de trabajo Multi-DRM le lleva a través de la configuración, el empaquetado, las licencias y la reproducción de contenido DASH cifrado con Widevine y PlayReady.
+title: Flujo de trabajo de múltiples DRM para Widevine y PlayReady
+exl-id: 97adfa69-52ef-470b-903a-eff1f075b7be
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
 
 ---
 
+# Flujo de trabajo de múltiples DRM para Widevine y PlayReady {#multi-drm-workflow-for-widevine-and-playready}
 
-# Flujo de trabajo Multi-DRM para Widevine y PlayReady {#multi-drm-workflow-for-widevine-and-playready}
+Este flujo de trabajo Multi-DRM le lleva a través de la configuración, el empaquetado, las licencias y la reproducción de contenido DASH cifrado con Widevine y PlayReady.
 
-Este flujo de trabajo Multi-DRM le lleva a través de la configuración, el empaquetado, la licencia y la reproducción del contenido DASH cifrado con Widevine y PlayReady.
-
-Primetime TVSDK solo admite la reproducción de contenido DASH cifrado con Widevine o cifrado con PlayReady en HTML5 y Android en la versión 2.X de TVSDK. El cifrado de contenido DASH está definido por la especificación de Cifrado común, cuyos detalles completos están fuera del alcance de este documento. Esta sección proporciona detalles pertinentes del formato DASH y la especificación de codificación, así como información sobre algunas de las herramientas que puede utilizar para generar el contenido admitido.
+Primetime TVSDK admite la reproducción de contenido DASH cifrado con Widevine o PlayReady cifrado en HTML5 y Android solo en la versión 2.X de TVSDK. El cifrado de contenido de DASH se define mediante la especificación de cifrado común, cuyos detalles están fuera del ámbito de este documento. Esta sección proporciona detalles pertinentes del formato DASH y la especificación de cifrado, así como información sobre algunas de las herramientas que puede utilizar para generar el contenido admitido.
 
 >[!NOTE]
 >
->No se ha planificado respaldar a Android TVSDK 1.X la reproducción de contenido DASH cifrado con Widevine.
+>No se ha planificado migrar a Android TVSDK 1.X la reproducción de contenido DASH cifrado por Widevine.
 
-## Contenido DASH y Cifrado común de un vistazo {#section_33A881158F724835B4B89AAE97302B17}
+## Generalidades de DASH Content and Common Encryption {#section_33A881158F724835B4B89AAE97302B17}
 
-El contenido de guiones consiste en un manifiesto principal, escrito en xml, que apunta a los archivos de vídeo y audio para la reproducción. En el ejemplo siguiente, el manifiesto DASH apunta a una URL de vídeo, video/1080_30.mp4, y una URL de audio, audio/1080_30.mp4, relativa a la URL del manifiesto.
+El contenido del guión consiste en un manifiesto principal, escrito en xml, que apunta a los archivos de vídeo y audio que se van a reproducir. En el ejemplo siguiente, el manifiesto DASH apunta a una dirección URL de vídeo, video/1080_30.mp4, y una dirección URL de audio, audio/1080_30.mp4, en relación con la dirección URL del manifiesto.
 
 ```
 <MPD xmlns="urn:mpeg:DASH:schema:MPD:2011" xmlns:cenc="urn:mpeg:cenc:2013" xmlns:scte35="urn:scte:scte35:2013" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"mediaPresentationDuration="PT30S" minBufferTime="PT8S" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" type="static" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 DASH-MPD.xsd">
@@ -44,7 +43,7 @@ El contenido de guiones consiste en un manifiesto principal, escrito en xml, que
 </MPD>
 ```
 
-A continuación se muestra un ejemplo de manifiesto con Cifrado común aplicado. Los elementos XML de protección de contenido Widevine (los bloques `<ContentProtection>`) del manifiesto contienen un cuadro pssh codificado base64 (Encabezado específico del sistema de protección). El cuadro pssh contiene los datos necesarios para inicializar el descifrado de contenido. Estos datos también están incrustados en el contenido de vídeo/audio al que hace referencia el manifiesto. El contenido de DASH puede tener varios elementos de protección de contenido, por ejemplo 1 para PlayReady y 1 para Widevine.
+A continuación se muestra un manifiesto de ejemplo con Cifrado común aplicado. Los elementos XML de protección de contenido de Widevine (la variable `<ContentProtection>` bloques) en el manifiesto contienen un pssh codificado en base64 (Encabezado específico del sistema de protección). El cuadro pssh contiene los datos necesarios para inicializar el descifrado de contenido. Estos datos también están incrustados en el contenido de vídeo/audio al que hace referencia el manifiesto. El contenido de DASH puede tener varios elementos de protección de contenido, por ejemplo, 1 para PlayReady y 1 para Widevine.
 
 ```
 <?xml version="1.0" ?>
@@ -137,4 +136,4 @@ Observe que el primer ejemplo anterior hace referencia a un archivo solo para ca
 </Representation>
 ```
 
-En este caso, el analizador de contenido (TVSDK) espera encontrar contenido de vídeo en Jaigo0.m4s, Jaigo1.m4s, Jaigo2.m4s, etc. Se utiliza principalmente para la transmisión en directo y tiene la ventaja de que no requiere que el cliente descargue el manifiesto de nuevo de vez en cuando.
+En este caso, el analizador de contenido (TVSDK) espera encontrar contenido de vídeo en Jaigo0.m4s, Jaigo1.m4s, Jaigo2.m4s, etc. Se utiliza principalmente para el streaming en directo y tiene la ventaja de que no requiere que el cliente descargue el manifiesto de nuevo de vez en cuando.

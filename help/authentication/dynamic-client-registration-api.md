@@ -1,101 +1,101 @@
 ---
 title: API de registro de cliente dinámico
 description: API de registro de cliente dinámico
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 06a76c71-bb19-4115-84bc-3d86ebcb60f3
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
 
 ---
 
-
 # API de registro de cliente dinámico {#dynamic-client-registration-api}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 ## Información general {#overview}
 
-Actualmente, existen dos maneras en las que la autenticación de Primetime identifica y registra las aplicaciones:
+Actualmente, la autenticación de Primetime identifica y registra las aplicaciones de dos formas:
 
-* los clientes basados en navegador se registran mediante [lista de dominios](/help/authentication/programmer-overview.md)
-* los clientes de aplicaciones nativas, como las aplicaciones de iOS y Android, se registran mediante el mecanismo de solicitud firmado.
+* los clientes basados en el explorador se registran mediante permitido [lista de dominios](/help/authentication/programmer-overview.md)
+* los clientes de aplicaciones nativas, como las aplicaciones de iOS y Android, se registran mediante el mecanismo de solicitante firmado.
 
 La autenticación de Adobe Primetime propone un nuevo mecanismo para registrar aplicaciones. Este mecanismo se describe en los párrafos siguientes.
 
 ## El mecanismo de registro de solicitudes {#appRegistrationMechanism}
 
-### Motivos técnicos {#reasons}
+### Razones técnicas {#reasons}
 
-El mecanismo de autenticación en la autenticación de Adobe Primetime dependía de cookies de sesión, pero debido a [Pestañas personalizadas de Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari View Controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}, este objetivo ya no se puede lograr.
+El mecanismo de autenticación de la autenticación de Adobe Primetime dependía de las cookies de sesión, pero debido a [Fichas personalizadas de Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari View Controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}Sin embargo, este objetivo ya no se puede lograr.
 
-Dadas estas limitaciones, el Adobe introduce un nuevo mecanismo de registro para todos sus clientes. Se basa en el RFC de OAuth 2.0 y consta de los siguientes pasos:
+Dadas estas limitaciones, el Adobe introduce un nuevo mecanismo de registro para todos sus clientes. Se basa en el documento RFC de OAuth 2.0 y consta de los siguientes pasos:
 
-1. Recuperación de la instrucción de software desde el panel de control de Televisión
-1. Obtención de credenciales de cliente
-1. Obtención del token de acceso
+1. Recuperación de la declaración del software desde el panel de TVE
+1. Obteniendo credenciales del cliente
+1. Obtención de token de acceso
 
-### Recuperación de la declaración de software desde el panel de control de Televisión {#softwareStatement}
+### Recuperación de la Declaración de Software del Tablero de TVE {#softwareStatement}
 
-Para cada aplicación que publique, debe obtener una declaración de software. Todas las instrucciones de software se proporcionan a través del panel TVE, una vez que se crean las aplicaciones. La instrucción de software debe implementarse junto con la aplicación en el dispositivo del usuario.
+Para cada aplicación que publique, deberá obtener una declaración de software. Todas las instrucciones de software se proporcionan a través del Tablero de TVE, una vez creadas las aplicaciones. La instrucción de software debe implementarse junto con la aplicación en el dispositivo del usuario.
 
 >[!IMPORTANT]
 >
->Al utilizar una instrucción de software, ya no se necesitará el mecanismo de identificación del solicitante firmado.
+>Al utilizar una instrucción de software, el mecanismo de ID de solicitante firmado ya no será necesario.
 
-Para obtener más información sobre cómo crear instrucciones de software, visite [Registro de clientes en el panel de control de Televisión](/help/authentication/dynamic-client-registration.md).
+Para obtener más información sobre cómo crear instrucciones de software, visite [Registro de cliente en el panel de TVE](/help/authentication/dynamic-client-registration.md).
 
 ### Obtención de credenciales de cliente {#clientCredentials}
 
-Después de recuperar una instrucción de software desde TVE Dashboard, debe registrar la aplicación en el servidor de autorización de Adobe Primetime. Para ello, realice una llamada /register y recupere su identificador de cliente único.
+Después de recuperar una declaración de software del Tablero de TVE, debe registrar la aplicación con el servidor de autorización de Adobe Primetime. Para ello, realice una llamada /register y recupere el identificador de cliente único.
 
 **Solicitud**
 
-| Llamada HTTP |  |
+| llamada HTTP |  |
 |-----------|--------------------|
 | ruta | /o/client/register |
-| method | POST |
+| método | POST |
 
 | campos |  |  |
 |--------------------|---------------------------------------------------------------------------|-----------|
-| software_statement | La instrucción de software creada en TVE Dashboard. | mandatory |
-| redirect_uri | El URI que utiliza la aplicación para completar el flujo de autenticación. | opcional |
+| software_statement | La declaración de software creada en TVE Dashboard. | obligatorio |
+| redirect_uri | URI que utiliza la aplicación para completar el flujo de autenticación. | opcional |
 
 | encabezados de solicitud |  |  |
 |-----------------|--------------------------------------------------------------------------------|-----------|
-| Content-Type | application/json | mandatory |
-| X-Device-Info | La información del dispositivo tal como se define en Pasar información del dispositivo y de conexión | mandatory |
-| User-Agent | El agente de usuario | mandatory |
+| Content-Type | application/json | obligatorio |
+| X-Device-Info | La información del dispositivo tal como se define en Pasar información de dispositivo y conexión | obligatorio |
+| User-Agent | El agente de usuario | obligatorio |
 
 **Respuesta**
 
 | encabezados de respuesta |  |  |
 |------------------|------------------|-----------|
-| Content-Type | application/json | mandatory |
+| Content-Type | application/json | obligatorio |
 
 | campos de respuesta |  |  |
 |---------------------|-----------------|----------------------------|
-| client_id | Cadena | mandatory |
-| client_secret | Cadena | mandatory |
-| client_id_issu_at | long | mandatory |
-| redirect_uris | lista de cadenas | mandatory |
-| grant_types | lista de cadenas<br/> **valor aceptado**<br/> `client_credentials`: Utilizado por clientes inseguros, como el SDK para Android. | mandatory |
+| client_id | Cadena | obligatorio |
+| client_secret | Cadena | obligatorio |
+| client_id_Issued_at | largo | obligatorio |
+| redirect_uris | lista de cadenas | obligatorio |
+| grant_types | lista de cadenas<br/> **valor aceptado**<br/> `client_credentials`: lo utilizan clientes no seguros, como el SDK de Android. | obligatorio |
 | error | **valores aceptados**<ul><li>invalid_request</li><li>invalid_redirect_uri</li><li>invalid_software_statement</li><li>unapproved_software_statement</li></ul> | obligatorio en un flujo de error |
 
 
 #### Respuesta de error {#error-response}
 
-En caso de error, el servidor de registro responde con un código de estado HTTP 400 (solicitud incorrecta) e incluye los siguientes parámetros dentro de la respuesta:
+En caso de error, el servidor de registro responde con un código de estado HTTP 400 (Solicitud incorrecta) e incluye los siguientes parámetros en la respuesta:
 
-| código de estado | cuerpo de respuesta | descripción |
+| código de estado | cuerpo respuesta | description |
 | --- | --- | --- |
-| HTTP 400 | {&quot;error&quot;: &quot;invalid_request&quot;} | A la solicitud le falta un parámetro obligatorio, incluye un valor de parámetro no admitido, repite un parámetro o su formato no es correcto. |
-| HTTP 400 | {&quot;error&quot;: &quot;invalid_redirect_uri&quot;} | El redirect_uri no está permitido para este cliente en función de su aplicación registrada. |
-| HTTP 400 | {&quot;error&quot;: &quot;invalid_software_statement&quot;} | La instrucción de software no es válida. |
-| HTTP 400 | {&quot;error&quot;: &quot;unapproved_software_statement&quot;} | No se encuentra el software_id en la configuración. |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_request&quot;} | A la solicitud le falta un parámetro requerido, incluye un valor de parámetro no admitido, repite un parámetro o su formato no es correcto. |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_redirect_uri&quot;} | Redirect_uri no está permitido para este cliente en función de su aplicación registrada. |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_software_statement&quot;} | La instrucción del software no es válida. |
+| HTTP 400 | {&quot;error&quot;: &quot;unapproved_software_statement&quot;} | No se encuentra software_id en la configuración. |
 
-#### Ejemplo de credenciales de cliente {#client-credentials-example}
+#### Ejemplo de credenciales del cliente {#client-credentials-example}
 
 **Solicitud:**
 
@@ -149,25 +149,25 @@ Pragma: no-cache
 { "error": "invalid_request" }
 ```
 
-### Obtención del token de acceso {#accessToken}
+### Obtención de token de acceso {#accessToken}
 
-Después de recuperar el identificador de cliente único (ID de cliente y secreto de cliente) para la aplicación, debe obtener un token de acceso. El token de acceso es un token OAuth 2.0 obligatorio, que se utiliza para llamar a las API de autenticación de Primetime.
+Después de recuperar el identificador de cliente único (ID de cliente y secreto de cliente) para la aplicación, debe obtener un token de acceso. El token de acceso es un token obligatorio de OAuth 2.0 que se utiliza para llamar a las API de autenticación de Primetime.
 
 >[!NOTE]
 >
->Actualmente, los tokens de acceso tienen un tiempo de vida de 24 horas.
+>Actualmente, los tokens de acceso tienen una duración de 24 horas.
 
 **Solicitud**
 
 
-| **Llamada HTTP** |  |
+| **llamada HTTP** |  |
 | --- | --- |
 | ruta | `/o/client/token` |
-| method | POST |
+| método | POST |
 
 | **parámetros de solicitud** |  |
 | --- | --- |
-| `grant_type` | Recibido en el proceso de registro de cliente.<br/> **Valor aceptado**<br/>`client_credentials`: Se utiliza para clientes inseguros, como el SDK para Android. |
+| `grant_type` | Recibido en el proceso de registro de cliente.<br/> **Valor aceptado**<br/>`client_credentials`: se utiliza para clientes no seguros, como el SDK para Android. |
 | `client_id` | Identificador de cliente obtenido en el proceso de registro de cliente. |
 | `client_secret` | Identificador de cliente obtenido en el proceso de registro de cliente. |
 
@@ -175,22 +175,22 @@ Después de recuperar el identificador de cliente único (ID de cliente y secret
 
 | campos de respuesta |  |  |
 | --- | --- | --- |
-| `access_token` | El valor del token de acceso que debe utilizar para llamar a las API de Primetime | mandatory |
-| `expires_in` | Tiempo en segundos hasta que caduca el token de acceso | mandatory |
-| `token_type` | Tipo del token **portador** | mandatory |
-| `created_at` | Hora de emisión del token | mandatory |
+| `access_token` | El valor del token de acceso que debe utilizarse para llamar a las API de Primetime | obligatorio |
+| `expires_in` | Tiempo en segundos hasta que caduca access_token | obligatorio |
+| `token_type` | El tipo de token **portador** | obligatorio |
+| `created_at` | La hora de emisión del token | obligatorio |
 | **encabezados de respuesta** |  |  |
-| `Content-Type` | application/json | mandatory |
+| `Content-Type` | application/json | obligatorio |
 
 **Respuesta de error**
 
-En caso de error, el servidor de autorización responde con un código de estado HTTP 400 (solicitud incorrecta) e incluye los siguientes parámetros dentro de la respuesta:
+En caso de error, el servidor de autorización responde con un código de estado HTTP 400 (Solicitud incorrecta) e incluye los siguientes parámetros en la respuesta:
 
-| código de estado | cuerpo de respuesta | descripción |
+| código de estado | cuerpo respuesta | description |
 | --- | --- | --- |
 | HTTP 400 | {&quot;error&quot;: &quot;invalid_request&quot;} | A la solicitud le falta un parámetro requerido, incluye un valor de parámetro no admitido (que no sea el tipo de concesión), repite un parámetro, incluye varias credenciales, utiliza más de un mecanismo para autenticar al cliente o tiene un formato incorrecto. |
-| HTTP 400 | {&quot;error&quot;: &quot;invalid_client&quot;} | Error de autenticación de cliente porque se desconoce el cliente. El SDK DEBE registrarse de nuevo con el servidor de autorización. |
-| HTTP 400 | {&quot;error&quot;: &quot;no autorizado_client&quot;} | El cliente autenticado no está autorizado a utilizar este tipo de concesión de autorización. |
+| HTTP 400 | {&quot;error&quot;: &quot;invalid_client&quot;} | Error de autenticación del cliente porque se desconocía el cliente. El SDK DEBE volver a registrarse en el servidor de autorización. |
+| HTTP 400 | {&quot;error&quot;: &quot;unauthorized_client&quot;} | El cliente autenticado no tiene autorización para utilizar este tipo de concesión de autorización. |
 
 #### Ejemplo de obtención del token de acceso: {#obt-access-token}
 
@@ -232,21 +232,21 @@ Pragma: no-cache
 
 ## Realización de solicitudes de autenticación {#autheticationRequests}
 
-Usar el token de acceso para realizar Adobe Primetime [Llamadas de API de autenticación](/help/authentication/initiate-authentication.md). Para ello, es necesario añadir el token de acceso a la solicitud de API de una de las siguientes maneras:
+Utilice el token de acceso para realizar Adobe Primetime [Llamadas de API de autenticación](/help/authentication/initiate-authentication.md). Para ello, es necesario añadir el token de acceso a la solicitud de API de una de las siguientes maneras:
 
-* añadiendo un nuevo parámetro de consulta a la solicitud. El nuevo parámetro se llama **access_token**.
+* agregando un nuevo parámetro de consulta a la solicitud. Ese nuevo parámetro se llama **access_token**.
 
 * añadiendo un nuevo encabezado HTTP a la solicitud: Autorización: Portador. Se recomienda utilizar el encabezado HTTP, ya que las cadenas de consulta tienden a ser visibles en los registros del servidor.
 
-En caso de error, podrían devolverse las siguientes respuestas de error:
+En caso de error, se podrían devolver las siguientes respuestas de error:
 
 | Respuestas de error |  |  |
 |-----------------|-----|--------------------------------------------------------------------------------------------------------|
-| invalid_request | 400 | El formato de la solicitud es incorrecto. |
-| invalid_client | 403 | Ya no se permite que el ID de cliente realice solicitudes. Se deben generar nuevas credenciales de cliente. |
-| access_deny | 401 | El access_token no es válido (caducado o no válido). El cliente DEBE solicitar un nuevo access_token. |
+| invalid_request | 400 | La solicitud tiene un formato incorrecto. |
+| invalid_client | 403 | El ID de cliente ya no tiene permiso para realizar solicitudes. Deben generarse nuevas credenciales de cliente. |
+| access_denied | 401 | El access_token no es válido (caducado o no válido). El cliente DEBE solicitar un nuevo access_token. |
 
-### Realización de solicitudes de autenticación Ejemplos:
+### Ejemplos de solicitudes de autenticación:
 
 **Envío del token de acceso como parámetro de solicitud:**
 

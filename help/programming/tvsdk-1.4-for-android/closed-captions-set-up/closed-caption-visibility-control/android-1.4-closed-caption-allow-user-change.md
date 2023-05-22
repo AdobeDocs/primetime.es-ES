@@ -1,16 +1,15 @@
 ---
 description: Este es un ejemplo de cómo crear un botón que permita al usuario seleccionar una pista de subtítulos.
-title: Ejemplo Permitir que los usuarios cambien el seguimiento de rótulo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Ejemplo Permitir a los usuarios cambiar el seguimiento de los subtítulos
+exl-id: d7ba19ac-cbfa-4fb4-a92d-21a3d0f7c23f
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
-
-# Ejemplo: Permitir que los usuarios cambien el seguimiento de rótulo{#example-allow-users-to-change-the-caption-track}
+# Ejemplo: Permitir a los usuarios cambiar el seguimiento de los subtítulos{#example-allow-users-to-change-the-caption-track}
 
 Este es un ejemplo de cómo crear un botón que permita al usuario seleccionar una pista de subtítulos.
 
@@ -28,7 +27,7 @@ Este es un ejemplo de cómo crear un botón que permita al usuario seleccionar u
      android:text="CC" /> 
    ```
 
-1. Convierta la lista de pistas de subtítulos cerrados disponibles en una matriz de cadenas. Las pistas de subtítulos cerrados que tienen actividad (es decir, los canales para los que TVSDK ha descubierto datos) se marcan según corresponda:
+1. Convierta la lista de pistas de subtítulos cerrados disponibles en una matriz de cadenas. Los seguimientos de subtítulos cerrados que tienen actividad (es decir, canales para los que TVSDK ha detectado datos) se marcan como corresponde:
 
    ```java
    /** 
@@ -54,7 +53,7 @@ Este es un ejemplo de cómo crear un botón que permita al usuario seleccionar u
    } 
    ```
 
-1. Cuando el usuario haga clic en el botón , muestre un cuadro de diálogo que enumere todas las pistas de CC predeterminadas.
+1. Cuando el usuario haga clic en el botón, mostrar un cuadro de diálogo que enumere todas las pistas de CC predeterminadas.
 
    ```java
       public void selectClosedCaptioningClick(View view) { 
@@ -82,4 +81,3 @@ Este es un ejemplo de cómo crear un botón que permita al usuario seleccionar u
        ab.show(); 
    } 
    ```
-

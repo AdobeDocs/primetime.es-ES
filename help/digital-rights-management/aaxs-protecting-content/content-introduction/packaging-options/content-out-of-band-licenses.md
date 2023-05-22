@@ -2,17 +2,16 @@
 title: Licencias fuera de banda
 description: Licencias fuera de banda
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 90206bd8-d3a4-4b8a-ab9b-83adff4c5d09
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%
 
 ---
 
-
 # Licencias fuera de banda {#out-of-band-licenses}
 
-Mediante Adobe Access 3.0 Professional, es posible implementar un flujo de trabajo en el que los clientes obtengan licencias pregeneradas fuera de banda, eliminando así la necesidad de implementar un servidor de licencias. Para admitir este flujo de trabajo, se debe especificar una opción que indique que no hay ningún servidor de licencias disponible en el momento del empaquetado. Esto evitará que el cliente de acceso a Adobe intente solicitar una licencia para este contenido desde un servidor de licencias.
+Con Adobe Access 3.0 Professional, es posible implementar un flujo de trabajo en el que los clientes obtienen licencias generadas previamente fuera de banda, lo que elimina la necesidad de implementar un servidor de licencias. Para admitir este flujo de trabajo, se debe especificar en el momento del empaquetado una opción que indique que no hay ningún servidor de licencias disponible. Esto evitará que el cliente de acceso a Adobe intente solicitar una licencia para este contenido desde un servidor de licencias.
 
-El contenido que indica que no hay servidor de licencias disponible, solo se puede reproducir en clientes de acceso a Adobe versión 3.0 y posteriores. Los clientes más antiguos necesitarían actualizar para reproducir este contenido.
+Contenido que indica que no hay ningún servidor de licencias disponible, sólo se puede reproducir en clientes de Adobe Access versión 3.0 y posteriores. Los clientes más antiguos necesitarían actualizarse para reproducir este contenido.

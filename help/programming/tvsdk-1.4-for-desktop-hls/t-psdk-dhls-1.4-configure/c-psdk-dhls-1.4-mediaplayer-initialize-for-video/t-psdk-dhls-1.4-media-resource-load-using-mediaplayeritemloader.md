@@ -1,31 +1,30 @@
 ---
-description: Otra forma de resolver un recurso multimedia es con MediaPlayerItemLoader. Esto resulta útil cuando desea obtener información sobre un flujo de medios concreto sin crear una instancia de MediaPlayer.
-title: Carga de un recurso multimedia mediante MediaPlayerItemLoader
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Otra forma de resolver un recurso multimedia es con MediaPlayerItemLoader. Esto resulta útil cuando desea obtener información sobre un flujo de medios determinado sin crear una instancia de MediaPlayer.
+title: Cargar un recurso multimedia mediante MediaPlayerItemLoader
+exl-id: 08379bd8-1602-4013-a6fb-b1aa6ba539aa
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '168'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Cargar un recurso multimedia mediante MediaPlayerItemLoader{#load-a-media-resource-using-mediaplayeritemloader}
 
-# Carga de un recurso multimedia mediante MediaPlayerItemLoader{#load-a-media-resource-using-mediaplayeritemloader}
+Otra forma de resolver un recurso multimedia es con MediaPlayerItemLoader. Esto resulta útil cuando desea obtener información sobre un flujo de medios determinado sin crear una instancia de MediaPlayer.
 
-Otra forma de resolver un recurso multimedia es con MediaPlayerItemLoader. Esto resulta útil cuando desea obtener información sobre un flujo de medios concreto sin crear una instancia de MediaPlayer.
+A través de `MediaPlayerItemLoader` , puede intercambiar un recurso multimedia por el recurso correspondiente `MediaPlayerItem` sin adjuntar una vista a `MediaPlayer` , lo que llevaría a la asignación de los recursos de hardware de descodificación de vídeo. El proceso de obtención de la `MediaPlayerItem` La instancia de es asíncrona.
 
-A través de la clase `MediaPlayerItemLoader`, puede intercambiar un recurso de medios para el `MediaPlayerItem` correspondiente sin adjuntar una vista a una instancia `MediaPlayer`, lo que llevaría a la asignación de los recursos de hardware de descodificación de vídeo. El proceso para obtener la instancia `MediaPlayerItem` es asíncrono.
-
-1. Implemente detectores de eventos para estos eventos `MediaPlayerItemLoader`:
+1. Implementar detectores de eventos para estos `MediaPlayerItemLoader` eventos:
 
    * `MediaPlayerItemLoaderEvent.ERROR` evento
 
-      TVSDK lo utiliza para informar a la aplicación de que se ha producido un error. TVSDK proporciona una propiedad de error que contiene información de diagnóstico.
+      TVSDK utiliza esto para informar a la aplicación de que se ha producido un error. TVSDK proporciona una propiedad de error que contiene información de diagnóstico.
 
 1. Registre esta instancia en `MediaPlayerItemLoader`.
-1. Llame a `DefaultMediaPlayerItemLoader.load`, pasando una instancia de un objeto `MediaResource`.
+1. Llamada `DefaultMediaPlayerItemLoader.load`, pasando una instancia de `MediaResource` objeto.
 
-   La dirección URL del objeto `MediaResource` debe señalar a la secuencia para la que desea obtener información. Por ejemplo:
+   La dirección URL del `MediaResource` debe apuntar a la secuencia de la que desea obtener información. Por ejemplo:
 
    ```
    private function onLoadError(event:MediaPlayerItemLoaderEvent):void { 
@@ -45,4 +44,3 @@ A través de la clase `MediaPlayerItemLoader`, puede intercambiar un recurso de 
    // load the media resource 
    itemLoader.load(mediaResource); 
    ```
-

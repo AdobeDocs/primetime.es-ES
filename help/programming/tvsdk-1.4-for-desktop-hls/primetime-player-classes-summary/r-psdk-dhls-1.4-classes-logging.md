@@ -1,16 +1,15 @@
 ---
 description: Estas clases permiten personalizar el registro.
-title: Clases de registro
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Registrar clases
+exl-id: 85cf33dc-54c0-43f0-8386-2805853226ed
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
 
 ---
 
-
-# Registrando clases{#logging-classes}
+# Registrar clases{#logging-classes}
 
 Estas clases permiten personalizar el registro.
 
@@ -25,12 +24,12 @@ Paquete: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/ap
  </thead>
  <tbody> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/BaseLogger.html" format="html" scope="external"> Logger base</a></span> </td> 
-   <td colname="2"> Clase. Clase de implementación básica de la interfaz del registrador. </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/BaseLogger.html" format="html" scope="external"> BaseLogger</a></span> </td> 
+   <td colname="2"> Clase. Clase de implementación base de la interfaz del registrador. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/DefaultLogger.html" format="html" scope="external"> DefaultLogger</a></span> </td> 
-   <td colname="2"> Clase. El registrador predeterminado envía todos los mensajes entrantes para rastrear. </td> 
+   <td colname="2"> Clase. El registrador predeterminado envía todos los mensajes entrantes al seguimiento. </td> 
   </tr> 
   <tr rowsep="1"> 
    <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Log.html" format="html" scope="external"> Registro</a></span> </td> 
@@ -41,7 +40,7 @@ Paquete: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/ap
    <td colname="2"> Clase. Fábrica de registro predeterminada.</td> 
   </tr> 
   <tr rowsep="1"> 
-   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Registrador</a></span> </td> 
+   <td colname="1"><span class="codeph"><a href="https://help.adobe.com/en_US/primetime/api/psdk/asdoc-dhls_1.4/com/adobe/mediacore/logging/Logger.html" format="html" scope="external"> Logger</a></span> </td> 
    <td colname="2">Interfaz. Los métodos necesarios para implementar un registrador personalizado para la frase. </td> 
   </tr> 
   <tr rowsep="0"> 
@@ -50,4 +49,3 @@ Paquete: [com.adobe.mediacore.logging](https://help.adobe.com/en_US/primetime/ap
   </tr> 
  </tbody> 
 </table>
-

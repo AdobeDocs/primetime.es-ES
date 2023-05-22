@@ -1,7 +1,6 @@
 ---
-description: Utilice el comando HTTP GET para interactuar con el servidor de manifiestos.
-title: Enviar un comando al servidor de manifiesto
-translation-type: tm+mt
+description: Utilice el comando GET HTTP para interactuar con el servidor de manifiesto.
+title: Enviar un comando al servidor de manifiestos
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '235'
@@ -10,11 +9,11 @@ ht-degree: 0%
 ---
 
 
-# Enviar un comando al servidor de manifiesto {#send-a-command-to-the-manifest-server}
+# Enviar un comando al servidor de manifiestos {#send-a-command-to-the-manifest-server}
 
-Utilice el comando HTTP GET para interactuar con el servidor de manifiestos.
+Utilice el comando GET HTTP para interactuar con el servidor de manifiesto.
 
-1. Envíe una solicitud `HTTP GET` para una URL de arranque construida con el siguiente patrón:
+1. Enviar un `HTTP GET` solicitud de una URL de bootstrap construida con el siguiente patrón:
 
    ```
    https://{manifest-server:port}/auditude/variant/
@@ -22,11 +21,11 @@ Utilice el comando HTTP GET para interactuar con el servidor de manifiestos.
     ?{query parameters}
    ```
 
-* **** PublisherAssetIDRrequerido. ID exclusivo del editor para el contenido específico.
+* **PublisherAssetID** Requerido. ID único del publicador para el contenido específico.
 
-* **URL de** contenidoRequerido. URL del archivo M3U8 de contenido, base64 codificada para ser segura dentro de la URL del servidor de manifiestos. La dirección URL de contenido debe apuntar a un archivo M3U8 de variante, aunque solo haya un flujo de velocidad de bits.
+* **URL de contenido** Requerido. URL del archivo de contenido M3U8, codificado en Base64 para que sea seguro dentro de la URL del servidor de manifiesto. La dirección URL de contenido debe señalar a un archivo de variante M3U8, aunque solo haya una secuencia de velocidad de bits.
 
-* **Parámetros de** consultaAlgunos son obligatorios, otros opcionales. Estos constituyen la parte más variada de la solicitud. Indican al servidor de manifiesto qué tipo de cliente está realizando la solicitud y qué desea que haga el servidor de manifiesto.
+* **Parámetros de consulta** Algunos son obligatorios y otros opcionales. Estos constituyen la parte más variada de la solicitud. Indican al servidor de manifiesto qué tipo de cliente realiza la solicitud y qué desea que haga el servidor de manifiesto.
 
    Por ejemplo:
 
@@ -37,10 +36,10 @@ Utilice el comando HTTP GET para interactuar con el servidor de manifiestos.
    &pttrackingversion=v2&live=false
    ```
 
-   **Solicitudes HTTP vs. HTTPS**
+   **Solicitudes HTTP o HTTPS**
 
-   El servidor de manifiesto crea direcciones URL utilizando el mismo protocolo HTTP de la solicitud del cliente. Si un reproductor realiza una solicitud HTTP (http) no segura, el servidor de manifiesto devuelve URL de manifiesto y URL de seguimiento de Auditude con el protocolo http. Si un reproductor realiza una conexión HTTP segura (https), un servidor de manifiesto, devuelve direcciones URL de manifiesto y direcciones URL de seguimiento de Auditude con el protocolo https.
+   El servidor de manifiestos crea direcciones URL utilizando el mismo protocolo HTTP de la solicitud del cliente. Si un reproductor realiza una solicitud HTTP (http) no segura, el servidor de manifiestos devuelve direcciones URL de manifiesto y direcciones URL de seguimiento de audiencia con el protocolo http. Si un reproductor realiza una conexión HTTP segura (https), un servidor de manifiesto, devuelve direcciones URL de manifiesto y direcciones URL de seguimiento de audiencia con el protocolo https.
 
    >[!NOTE]
    >
-   >El servidor de manifiestos no puede cambiar el protocolo (HTTP o HTTPS) de los segmentos de contenido (.ts) y las señalizaciones de seguimiento de terceros. Debe ponerse en contacto con el contenido y los proveedores de publicidad de terceros para que configuren los protocolos deseados.
+   >El servidor de manifiestos no puede cambiar el protocolo (HTTP o HTTPS) de los segmentos de contenido (.ts) ni las señalizaciones de seguimiento de terceros. Debe ponerse en contacto con los proveedores de contenido y de publicidad de terceros para que configuren los protocolos deseados.

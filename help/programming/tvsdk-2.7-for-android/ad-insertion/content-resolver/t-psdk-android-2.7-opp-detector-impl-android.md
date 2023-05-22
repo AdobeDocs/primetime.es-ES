@@ -1,20 +1,19 @@
 ---
-description: Puede implementar sus propios generadores de oportunidades implementando la clase OportunityGenerator .
-title: Implementar un generador de oportunidades personalizado
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede implementar sus propios generadores de oportunidades implementando la clase OpportunityGenerator.
+title: Implementación de un generador de oportunidades personalizado
+exl-id: 8fa97515-692c-4e34-9afb-17a5409228db
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 4%
+ht-degree: 0%
 
 ---
 
+# Implementación de un generador de oportunidades personalizado {#implement-a-custom-opportunity-generator}
 
-# Implementar un generador de oportunidades personalizado {#implement-a-custom-opportunity-generator}
+Puede implementar sus propios generadores de oportunidades implementando la clase OpportunityGenerator.
 
-Puede implementar sus propios generadores de oportunidades implementando la clase OportunityGenerator .
-
-1. Implemente su `ContentFactory` personalizado implementando la interfaz `ContentFactory` y anulando `retrieveGenerators`.
+1. Implemente el personalizado `ContentFactory` mediante la implementación de `ContentFactory` interfaz y anulación `retrieveGenerators`.
 
    Por ejemplo:
 
@@ -30,7 +29,7 @@ Puede implementar sus propios generadores de oportunidades implementando la clas
    }
    ```
 
-1. Registre el `ContentFactory` en el `MediaPlayer`.
+1. Registre el `ContentFactory` a la `MediaPlayer`.
 
    Por ejemplo:
 
@@ -47,14 +46,14 @@ Puede implementar sus propios generadores de oportunidades implementando la clas
    itemLoader.load(resource, id, config);
    ```
 
-1. Cree una clase de generador de oportunidades personalizada que implemente la clase `OpportunityGenerator`.
+1. Cree una clase de generador de oportunidades personalizada que implemente la variable `OpportunityGenerator` clase.
 
    ```java
    public class CustomOpportunityGenerator implements OpportunityGenerator  
    {...}
    ```
 
-   1. En el generador de oportunidades personalizado, anule `doConfigure`, `doUpdate` y `doCleanup`:
+   1. En el generador de oportunidades personalizado, omita `doConfigure`, `doUpdate` y `doCleanup`:
 
       ```java
       @Override 
@@ -69,13 +68,13 @@ Puede implementar sus propios generadores de oportunidades implementando la clas
       }
       ```
 
-      Para obtener los metadatos temporizados:
+      Para obtener los metadatos cronometrados:
 
       ```java
       List<TimedMetadata> tList = getItem().getTimedMetadata(); 
       ```
 
-   1. Para cada `TimedMetadata` o grupo de `TimedMetadata`, cree una oportunidad con los siguientes atributos:
+   1. Para cada `TimedMetadata` o grupo de `TimedMetadata`, cree una oportunidad con los atributos siguientes:
 
       ```java
       Opportunity( 
@@ -90,7 +89,7 @@ Puede implementar sus propios generadores de oportunidades implementando la clas
 
 <!--<a id="example_7A46377EBE79458E87423EB95D0568D4"></a>-->
 
-Este es un detector de oportunidades de colocación personalizado de ejemplo:
+Este es un ejemplo de detector de oportunidades de ubicación personalizado:
 
 ```java
 public class MyOpportunityGenerator implements OpportunityGenerator {
@@ -150,4 +149,3 @@ public class MyOpportunityGenerator implements OpportunityGenerator {
     protected void cleanup() {} 
 }
 ```
-

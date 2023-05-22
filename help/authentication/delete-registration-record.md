@@ -1,21 +1,21 @@
 ---
 title: Eliminar registro
-description: Eliminar registro
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+description: Eliminar registro de registro
+exl-id: 42707070-2e1f-4847-93fd-30025aef56c1
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
-
 # Eliminar registro {#delete-registration-record}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-## Puntos finales de API de REST {#clientless-endpoints}
+## Extremos de API de REST {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -34,9 +34,9 @@ ht-degree: 0%
 
 Elimina el registro de código reg y libera el código reg para su reutilización. 
 
-| Punto final | Llamada  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
+| Extremo | Llamado  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Por ejemplo:</br></br>&lt;reggie_fqdn>/reggie/v1/regcode/ER45RTY | Aplicación de flujo continuo</br></br>o</br></br>Servicio de programación | 1. ID del solicitante  </br>    (Componente Ruta)</br>2.  Código de registro  </br>    (Componente Ruta) | DELETE | Ninguna | 204 |
+| &lt;reggie_fqdn>/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Por ejemplo:</br></br>&lt;reggie_fqdn>/reggie/v1/regcode/ER45RTY | Aplicación de streaming</br></br>o</br></br>Servicio de programador | 1. ID del solicitante  </br>    (Componente Ruta)</br>2.  Código de registro  </br>    (Componente Ruta) | DELETE | Ninguno | 204 |
 
 {style="table-layout:auto"}
 
@@ -44,8 +44,8 @@ Elimina el registro de código reg y libera el código reg para su reutilizació
 
 | Parámetro de entrada | Descripción |
 | --- | --- |
-| requestor | El RequestorId del programador para el que esta operación es válida. |
-| código de registro | El valor del código de registro que se mostraría en el dispositivo de transmisión (que se introduciría en el flujo de autenticación). |
+| solicitante | Identificador de solicitante del programador para el que es válida esta operación. |
+| código de registro | El valor del código de registro que se mostrará en el dispositivo de streaming (para introducirlo en el flujo de autenticación). |
 
 {style="table-layout:auto"}
 

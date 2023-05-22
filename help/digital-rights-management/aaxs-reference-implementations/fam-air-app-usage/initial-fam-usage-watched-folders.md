@@ -1,24 +1,23 @@
 ---
-title: Carpetas vigiladas
-description: Carpetas vigiladas
+title: Carpetas inspeccionadas
+description: Carpetas inspeccionadas
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 94ee89e3-f59f-438b-ae6d-809e4a81dad9
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%
 
 ---
 
+# Carpetas inspeccionadas {#watched-folders}
 
-# Carpetas vigiladas {#watched-folders}
+Puede utilizar carpetas inspeccionadas para empaquetar automáticamente el contenido creado en determinadas carpetas. Cada carpeta inspeccionada se puede configurar con diferentes opciones de empaquetado. Para probar las opciones de empaquetado antes de crear una carpeta inspeccionada, utilice la pestaña Medios del paquete.
 
-Puede utilizar Carpetas vigiladas para empaquetar automáticamente el contenido creado en determinadas carpetas. Cada carpeta vigilada se puede configurar con diferentes opciones de empaquetado. Para probar las opciones de empaquetado antes de crear una carpeta vigilada, utilice la ficha Medios de paquete .
+Para crear una carpeta inspeccionada, haga clic en **[!UICONTROL Add New Watched Folder]** y rellene las opciones de empaquetado. Consulte la [Empaquetando archivos multimedia](../../aaxs-protecting-content/content-packaging-media-files/content-packaging-media-files-overview.md) para obtener una descripción de cada opción. Cuando termine, haga clic en **[!UICONTROL Save Watched Folder Properties]**.
 
-Para crear una carpeta vigilada, haga clic en **[!UICONTROL Add New Watched Folder]** y rellene las opciones de empaquetado. Consulte la sección [Packaging media files](../../aaxs-protecting-content/content-packaging-media-files/content-packaging-media-files-overview.md) para obtener una descripción de cada opción. Cuando termine, haga clic en **[!UICONTROL Save Watched Folder Properties]**.
+Cuando se guarda una carpeta inspeccionada, las opciones de empaquetado se guardan en *[Carpeta de entrada]* [!DNL \properties\watchfolder.properties]. Cualquier contenido añadido a la carpeta de entrada que cumpla los criterios de selección de archivos de medios de entrada se empaquetará automáticamente y se colocará en la carpeta de salida. Consulte las Preferencias globales de carpeta inspeccionada en la sección [Preferencias del empaquetador](../../aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pkg-prefs.md) para configurar opciones adicionales de carpeta inspeccionada.
 
-Cuando se guarda una carpeta vigilada, las opciones de empaquetado se guardan en *[Carpeta de entrada]* [!DNL \properties\watchfolder.properties]. Cualquier contenido añadido a la carpeta de entrada que cumpla los criterios de selección de archivos de medios de entrada se empaquetará automáticamente y se colocará en la carpeta de salida. Consulte las Preferencias de carpeta vigiladas globales en la sección [Preferencias del empaquetador](../../aaxs-reference-implementations/fam-air-app-usage/initial-fam-setup-set-prefs/initial-fam-setup-pkg-prefs.md) para configurar opciones de carpeta vigilada adicionales.
+Para modificar la configuración de la carpeta inspeccionada, seleccione la ruta de entrada de la carpeta inspeccionada en la lista de la parte superior de la pantalla. Modifique la configuración y haga clic en **[!UICONTROL Save Watched Folder Properties]**.
 
-Para modificar la configuración de la carpeta vigilada, seleccione la ruta de entrada de la carpeta vigilada en la lista de la parte superior de la pantalla. Modifique la configuración y haga clic en **[!UICONTROL Save Watched Folder Properties]**.
-
-Para eliminar una carpeta vigilada, seleccione la ruta de entrada Carpeta vigilada en la lista de la parte superior de la pantalla y haga clic en **[!UICONTROL Delete Watched Folder Properties]**.
+Para eliminar una carpeta inspeccionada, seleccione la ruta de entrada de la carpeta inspeccionada en la lista de la parte superior de la pantalla y haga clic en **[!UICONTROL Delete Watched Folder Properties]**.

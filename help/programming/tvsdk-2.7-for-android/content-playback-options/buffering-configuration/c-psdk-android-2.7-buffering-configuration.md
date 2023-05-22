@@ -1,36 +1,35 @@
 ---
-description: Para ofrecer una experiencia de visualización más fluida, TVSDK a veces almacena en el búfer el flujo de vídeo. Puede configurar el modo en que se almacena en búfer el reproductor.
+description: Para proporcionar una experiencia de visualización más fluida, TVSDK a veces almacena en búfer el flujo de vídeo. Puede configurar el modo en que el reproductor se almacena en búfer.
 title: Almacenamiento en búfer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: f4df3084-376e-421c-aaa5-83de2815dabe
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 0%
 
 ---
 
-
 # Información general {#buffering-overview}
 
-Para ofrecer una experiencia de visualización más fluida, TVSDK a veces almacena en el búfer el flujo de vídeo. Puede configurar el modo en que se almacena en búfer el reproductor.
+Para proporcionar una experiencia de visualización más fluida, TVSDK a veces almacena en búfer el flujo de vídeo. Puede configurar el modo en que el reproductor se almacena en búfer.
 
-TVSDK define una duración del búfer de reproducción de al menos 30 segundos y un tiempo de búfer inicial antes de que se inicie la reproducción del contenido, de al menos 2 segundos. Después de que la aplicación llama a `play`, pero antes de que comience la reproducción, TVSDK almacena en búfer el contenido hasta el momento inicial para proporcionar un inicio suave cuando realmente comienza a reproducirse.
+TVSDK define una duración del búfer de reproducción de al menos 30 segundos y un tiempo de búfer inicial de al menos 2 segundos antes de que comience la reproducción del contenido. Después de que la aplicación invoque `play`, pero antes de que comience la reproducción, TVSDK almacena en búfer el contenido hasta el momento inicial para proporcionar un inicio sin problemas cuando comienza a reproducirse.
 
-Puede modificar los tiempos de búfer definiendo nuevas políticas de almacenamiento en búfer y puede modificar cuando se produzca el almacenamiento en búfer inicial al utilizar la opción de activación instantánea.
+Puede modificar los tiempos de almacenamiento en búfer mediante la definición de nuevas directivas de almacenamiento en búfer y puede modificar cuándo se produce el almacenamiento en búfer inicial mediante el uso instantáneo de.
 
 ## Políticas de tiempo de almacenamiento en búfer {#section_9B3407D52F1E4CB48E7A4836EBDA8F70}
 
-Según el entorno (incluido el dispositivo, el sistema operativo o las condiciones de red), puede establecer distintas directivas de almacenamiento en búfer para el reproductor, como cambiar la duración mínima del almacenamiento en búfer inicial y del almacenamiento en búfer de reproducción continuo.
+Según el entorno (incluido el dispositivo, el sistema operativo o las condiciones de la red), puede establecer diferentes políticas de almacenamiento en búfer para el reproductor, como cambiar la duración mínima del almacenamiento en búfer inicial y del almacenamiento en búfer de reproducción continua.
 
-Después de llamar a `play`, el reproductor de contenidos comienza a almacenar en búfer el vídeo. Cuando el reproductor de contenido almacena en búfer la cantidad de vídeo especificada por el tiempo de búfer inicial, se inicia la reproducción. Este proceso mejora el tiempo de inicio porque el reproductor no espera a que se complete todo el búfer de reproducción antes de iniciar la reproducción. En su lugar, después de almacenar en búfer los pocos segundos iniciales, comienza la reproducción.
+Después de llamar a `play`, el reproductor multimedia comienza a almacenar el vídeo en búfer. Cuando el reproductor de contenidos ha almacenado en búfer la cantidad de vídeo especificada por el tiempo de almacenamiento en búfer inicial, comienza la reproducción. Este proceso mejora el tiempo de inicio, ya que el reproductor no espera a que se llene todo el búfer de reproducción antes de iniciar la reproducción. En su lugar, después de almacenar en búfer los segundos iniciales, comienza la reproducción.
 
-Mientras se representa el vídeo, TVSDK continúa almacenando en búfer nuevos fragmentos hasta que se ha almacenado en búfer la cantidad especificada por el tiempo de búfer de reproducción. Si la longitud del búfer actual cae por debajo del tiempo de búfer de reproducción, el reproductor descargará fragmentos adicionales. Una vez que la longitud del búfer actual supera el tiempo de búfer de reproducción en unos segundos, TVSDK dejará de descargar fragmentos.
+Mientras se procesa el vídeo, TVSDK continúa almacenando en búfer nuevos fragmentos hasta que se almacena en búfer la cantidad especificada por el tiempo de búfer de reproducción. Si la longitud actual del búfer cae por debajo del tiempo del búfer de reproducción, el reproductor descargará fragmentos adicionales. Una vez que la longitud actual del búfer sea superior en unos segundos al tiempo de búfer de reproducción, TVSDK dejará de descargar fragmentos.
 
 >[!TIP]
 >
->Si el valor del búfer inicial es alto, puede que le proporcione al usuario un tiempo de almacenamiento en búfer inicial largo antes de comenzar. Esto podría proporcionar una reproducción suave durante más tiempo; sin embargo, si las condiciones de red son deficientes, la reproducción inicial podría retrasarse.
+>Si el valor inicial del búfer es alto, puede proporcionar al usuario un tiempo de almacenamiento en búfer inicial largo antes de comenzar. Esto puede proporcionar una reproducción fluida durante más tiempo; sin embargo, si las condiciones de la red son deficientes, la reproducción inicial podría retrasarse.
 
-Si activa instantáneamente llamando a `prepareBuffer`, el almacenamiento en búfer inicial comienza en ese momento, en lugar de esperar a `play`.
+Si habilita el encendido instantáneo llamando a `prepareBuffer`, el almacenamiento en búfer inicial comienza en ese momento, en lugar de esperar a `play`.
 
 ## Establecer tiempos de almacenamiento en búfer {#section_05CDD927869D47EBA1D2069B1416B2E4}
 
@@ -38,9 +37,9 @@ El `MediaPlayer` proporciona métodos para establecer y obtener el tiempo de alm
 
 >[!TIP]
 >
->Si no establece los parámetros de control de búfer antes de comenzar la reproducción, el reproductor de medios toma como valor predeterminado 2 segundos para el búfer inicial y 30 segundos para el tiempo de búfer de reproducción en curso.
+>Si no define los parámetros de control del búfer antes de comenzar la reproducción, el reproductor de contenido toma como valor predeterminado 2 segundos para el búfer inicial y 30 segundos para el tiempo de búfer de reproducción en curso.
 
-1. Configure el objeto `BufferControlParameters`, que encapsula el tiempo de búfer inicial y los parámetros de control de tiempo del búfer de reproducción.
+1. Configure las variables `BufferControlParameters` , que encapsula los parámetros iniciales de control de tiempo del búfer de reproducción y tiempo del búfer de reproducción.
 
    Esta clase proporciona los siguientes métodos de fábrica:
 
@@ -50,26 +49,26 @@ El `MediaPlayer` proporciona métodos para establecer y obtener el tiempo de alm
       public static BufferControlParameters createSimple(long bufferTime)
       ```
 
-   * Para establecer los tiempos de búfer inicial y de reproducción:
+   * Para definir los tiempos iniciales y de búfer de reproducción:
 
       ```
       public static BufferControlParameters createDual( 
         long initialBuffer,  
         long bufferTime)
       ```
-   Si los parámetros no son válidos, estos métodos arrojan `MediaPlayerException` con el código de error `PSDKErrorCode.INVALID_ARGUMENT`, como cuando se cumplen las siguientes condiciones:
+   Si los parámetros no son válidos, estos métodos activan `MediaPlayerException` con código de error `PSDKErrorCode.INVALID_ARGUMENT`, como cuando se cumplen las siguientes condiciones:
 
    * El tiempo de búfer inicial es inferior a cero.
    * El tiempo de búfer inicial es bueno que el tiempo de búfer.
 
 
-1. Para establecer los valores de los parámetros de búfer, utilice este método `MediaPlayer`:
+1. Para definir los valores de los parámetros de búfer, utilice esta opción `MediaPlayer` método:
 
    ```java
    void setBufferControlParameters(BufferControlParameters params)
    ```
 
-1. Para obtener los valores de parámetro de búfer actuales, utilice este método `MediaPlayer`:
+1. Para obtener los valores actuales de los parámetros de búfer, utilice esta opción `MediaPlayer` método:
 
    ```java
       BufferControlParameters getBufferControlParameters()  

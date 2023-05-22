@@ -1,26 +1,25 @@
 ---
 description: Puede designar intervalos de tiempo en el contenido de VOD como pausas publicitarias.
-title: Marcar rangos
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+title: Marcar intervalos
+exl-id: ed13168d-5ee8-4f4b-a72e-a38b6d7f9a04
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
 
 ---
 
-
-# Marcar rangos {#mark-ranges}
+# Marcar intervalos {#mark-ranges}
 
 Puede designar intervalos de tiempo en el contenido de VOD como pausas publicitarias.
 
-El `TimeRanges` entre `begin` y `end` en `localTime` se marcará como un `AdBreak` en la cronología. Se ignoran otras configuraciones de publicidad.
+El `TimeRanges` entre los `begin` y `end` in `localTime` se marcará como una `AdBreak` en la cronología. Se omiten otras configuraciones de publicidad.
 
 >[!TIP]
 >
->Si solo desea marcar ciertos intervalos en el contenido como anuncios, sin inserción de publicidad dinámica, cree una instancia `CustomRangeMetadata` y especifique el tipo como una operación `MARK` con los intervalos personalizados definidos.
+>Si solo desea marcar ciertos intervalos del contenido como anuncios y no desea insertar anuncios dinámicos, cree un `CustomRangeMetadata` y especifique el tipo como un `MARK` operación con los intervalos personalizados definidos.
 
-1. Marca los intervalos:
+1. Puntee en marcar los intervalos:
 
    ```
    {   
@@ -68,4 +67,3 @@ El `TimeRanges` entre `begin` y `end` en `localTime` se marcará como un `AdBrea
        "id": "vod_004"
    }
    ```
-

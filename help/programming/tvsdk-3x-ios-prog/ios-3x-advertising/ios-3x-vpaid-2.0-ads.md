@@ -1,18 +1,17 @@
 ---
-description: Video Player Ad-Serving Interface Definition (VPAID) 2.0 proporciona una interfaz común para reproducir anuncios en vídeo. Proporciona una rica experiencia de medios para los usuarios y permite a los editores segmentar mejor los anuncios, rastrear las impresiones de los anuncios y monetizar el contenido de los vídeos.
-title: Compatibilidad con anuncios de VPAID 2.0
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La Definición de la interfaz para servicio de anuncios del reproductor de vídeo (VPAID) 2.0 proporciona una interfaz común para reproducir anuncios de vídeo. Proporciona una experiencia multimedia enriquecida para los usuarios y permite a los editores segmentar mejor los anuncios, rastrear las impresiones de los anuncios y monetizar el contenido de vídeo.
+title: Compatibilidad con anuncios VPAID 2.0
+exl-id: 6d29e53c-8fb4-4dd7-9859-8c105923bdef
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 0%
 
 ---
 
+# Compatibilidad con anuncios VPAID 2.0 {#vpaid-ad-support}
 
-# Compatibilidad con anuncios de VPAID 2.0 {#vpaid-ad-support}
-
-Video Player Ad-Serving Interface Definition (VPAID) 2.0 proporciona una interfaz común para reproducir anuncios en vídeo. Proporciona una rica experiencia de medios para los usuarios y permite a los editores segmentar mejor los anuncios, rastrear las impresiones de los anuncios y monetizar el contenido de los vídeos.
+La Definición de la interfaz para servicio de anuncios del reproductor de vídeo (VPAID) 2.0 proporciona una interfaz común para reproducir anuncios de vídeo. Proporciona una experiencia multimedia enriquecida para los usuarios y permite a los editores segmentar mejor los anuncios, rastrear las impresiones de los anuncios y monetizar el contenido de vídeo.
 
 Se admiten las siguientes funciones:
 
@@ -22,50 +21,50 @@ Se admiten las siguientes funciones:
 * Anuncios VPAID lineales en contenido de vídeo bajo demanda (VOD)
 * Anuncios VPAID de JavaScript
 
-   Los anuncios VPAID deben estar basados en JavaScript y la respuesta de anuncio debe identificar el tipo de medio del anuncio VPAID como `application/javascript`.
+   Los anuncios VPAID deben estar basados en JavaScript y la respuesta de publicidad debe identificar el tipo de medio del anuncio VPAID como `application/javascript`.
 
 No se admiten las siguientes funciones:
 
 * Versión 1.0 de la especificación VPAID
-* Anuncios omitidos
-* Anuncios no lineales, como anuncios superpuestos, anuncios complementarios dinámicos, anuncios minimizables, anuncios contraíbles y anuncios ampliables
+* Anuncios omitibles
+* Anuncios no lineales como anuncios de superposición, anuncios dinámicos complementarios, anuncios minimizables, anuncios contraíbles y anuncios expandibles
 * Precarga de anuncios VPAID
 * Anuncios VPAID en contenido en directo
 * Flash de anuncios VPAID
 * Anuncio VPAID posterior a la emisión
 
-## Cambios en la API {#section_D62F3E059C6C493592D34534B0BFC150}
+## Cambios de API {#section_D62F3E059C6C493592D34534B0BFC150}
 
 Se han realizado los siguientes cambios en la API:
 
-* `PTAuditudeMetadata` tiene una  `customAdLoadTimeout` propiedad para cambiar el tiempo de espera predeterminado en el proceso de carga de VPAID.
+* `PTAuditudeMetadata` tiene un `customAdLoadTimeout` para cambiar el tiempo de espera predeterminado en el proceso de carga de VPAID.
 
-   El valor de tiempo de espera predeterminado es de 10 segundos.
+   El valor de tiempo de espera predeterminado es 10 segundos.
 
-* `PTMediaPlayerCustomAdNotification` se envía desde la  `PTMediaPlayer` instancia
+* `PTMediaPlayerCustomAdNotification` se envía desde el `PTMediaPlayer` instancia
 
 <!--<a id="section_495700E1C5404A7B85307A4137C740C5"></a>-->
 
-Mientras se reproduce el anuncio de VPAID:
+Mientras se reproduce el anuncio VPAID:
 
-* El anuncio VPAID se muestra en un contenedor de vista sobre la vista del reproductor, por lo que el código que depende de los toques de los usuarios en la vista del reproductor no funciona.
-* El reproductor de contenido principal está en pausa y las llamadas a `pause` y `play` en la instancia del reproductor se utilizan para pausar y reanudar el anuncio de VPAID.
+* El anuncio de VPAID se muestra en un contenedor de vistas encima de la vista del reproductor, por lo que el código que depende de los toques de los usuarios en la vista del reproductor no funciona.
+* El reproductor de contenido principal se detiene y llama a `pause` y `play` en la instancia del reproductor se utilizan para pausar y reanudar el anuncio VPAID.
 
-* Los anuncios VPAID no tienen una duración predefinida, ya que la publicidad puede ser interactiva.
+* Los anuncios VPAID no tienen una duración predefinida, ya que el anuncio puede ser interactivo.
 
-   Es posible que la duración de la publicidad y la duración total de la pausa publicitaria definidas por la respuesta del servidor de publicidad no sean precisas.
+   Es posible que la duración del anuncio y la duración total de la pausa publicitaria definidas por la respuesta del servidor de publicidad no sean precisas.
 
-## Implementación de la integración de VPAID 2.0 {#section_63C9C737367C4A0AB4D62E0DC2084141}
+## Implementación de la integración con VPAID 2.0 {#section_63C9C737367C4A0AB4D62E0DC2084141}
 
-Para agregar compatibilidad con VPAID 2.0 en su aplicación iOS:
+Para añadir compatibilidad con VPAID 2.0 en la aplicación de iOS:
 
-1. (Opcional) Añada un oyente para eventos de publicidad personalizados.
+1. (Opcional) Agregue un oyente para los eventos de publicidad personalizados.
 
    ```
    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onMediaPlayerCustomAdNotification:) name:PTMediaPlayerCustomAdNotification object:self.player];
    ```
 
-1. (Opcional) Muestre la notificación.
+1. (Opcional) Visualice la notificación.
 
    ```
    -(void)onMediaPlayerCustomAdNotification:(NSNotification *)notification{    PTCustomAdNotificationObject *notificationObject = [notification.userInfo objectForKey:PTCustomAdNotificationObjectKey];    if (notificationObject)    

@@ -1,20 +1,19 @@
 ---
-description: Cree un PlaybackManager que gestione la configuración y la operación de reproducción del flujo HLS. No se requiere ninguna otra configuración.
-title: Habilitar la reproducción de vídeo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Cree un Administrador de reproducción que se ocupe de la configuración y la operación de reproducción del flujo HLS. No se requiere ninguna otra configuración.
+title: Habilitar reproducción de vídeo
+exl-id: b53f602b-5752-4471-9905-2e4351dfc8d3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
 
 ---
 
+# Habilitar reproducción de vídeo {#enable-video-playback}
 
-# Habilitar la reproducción de vídeo {#enable-video-playback}
+Cree un Administrador de reproducción que se ocupe de la configuración y la operación de reproducción del flujo HLS. No se requiere ninguna otra configuración.
 
-Cree un PlaybackManager que gestione la configuración y la operación de reproducción del flujo HLS. No se requiere ninguna otra configuración.
-
-1. Cree el objeto del reproductor multimedia asegurándose de que el siguiente código exista en [!DNL PlayerFragment.java]:
+1. Cree el objeto del reproductor de contenido asegurándose de que el siguiente código exista en [!DNL PlayerFragment.java]:
 
    ```java
    private MediaPlayer createMediaPlayer() { 
@@ -24,13 +23,13 @@ Cree un PlaybackManager que gestione la configuración y la operación de reprod
 
    <!-- I've duplicated this information. It also exists in the PlayerFragment section, just before the Feature manager section. I figured that I should have it here as well, in case they jump directly to this section.-->
 
-1. Cree el gestor de reproducción a través de `ManagerFactory`:
+1. Cree el administrador de reproducción mediante el `ManagerFactory`:
 
    ```java
    playbackManager = ManagerFactory.getPlaybackManager(config, mediaPlayer);
    ```
 
-1. Implemente `PlaybackManagerEventListener` en `PlayerFragment` para gestionar los eventos de reproducción:
+1. Implementación de `PlaybackManagerEventListener` en el `PlayerFragment` para gestionar los eventos de reproducción:
 
    ```java
    private final PlaybackManagerEventListener playbackManagerEventListener =  

@@ -1,21 +1,21 @@
 ---
 title: Iniciar autenticación
 description: Iniciar autenticación
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 55dddd29-68d6-4aae-8744-307fea285e29
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '290'
 ht-degree: 0%
 
 ---
 
-
 # Iniciar autenticación {#initiate-authentication}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-## Puntos finales de API de REST {#clientless-endpoints}
+## Extremos de API de REST {#clientless-endpoints}
 
 &lt;reggie_fqdn>:
 
@@ -32,24 +32,24 @@ ht-degree: 0%
 
 ## Descripción {#description}
 
-Inicia el proceso de autenticación informando de un evento de selección de MVPD. Crea un registro en la base de datos de autenticación de Primetime, que se concilia cuando se recibe una respuesta correcta del MVPD. 
+Inicia el proceso de autenticación al informar de un evento de selección de MVPD. Crea un registro en la base de datos de autenticación de Primetime, que se concilia cuando se recibe una respuesta correcta de MVPD. 
 
 
 
-| Punto final | Llamada  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
+| Extremo | Llamado  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/authentication | Módulo AuthN | 1. requestor_id (obligatorio)</br>2.  mso_id (obligatorio)</br>3.  reg_code (obligatorio)</br>4.  domain_name (obligatorio)</br>5.  noflash=true -  </br>    (obligatorio, parámetro residual)</br>6.  no_iframe=true (obligatorio, parámetro residual)</br>7.  parámetros adicionales (opcional)</br>8.  redirect_url (obligatorio) | GET | La aplicación web de inicio de sesión se redirige a la página de inicio de sesión de MVPD. | 302 para implementaciones de redireccionamiento completas |
+| &lt;sp_fqdn>/api/v1/authenticate | Módulo AuthN | 1. requestor_id (obligatorio)</br>2.  mso_id (obligatorio)</br>3.  reg_code (Obligatorio)</br>4.  domain_name (obligatorio)</br>5.  noflash=true -  </br>    (Obligatorio, Parámetro residual)</br>6.  no_iframe=true (obligatorio, parámetro residual)</br>7.  parámetros adicionales (opcional)</br>8.  redirect_url (obligatorio) | GET | La aplicación web Login se redirige a la página de inicio de sesión de MVPD. | 302 para implementaciones de redirección completas |
 
 {style="table-layout:auto"}
 
 
 | Parámetro de entrada | Descripción |
 | --- | --- |
-| requestor_id | El solicitante del programador para el que esta operación es válida. |
-| mso_id | El ID de MVPD para el que es válida esta operación. |
+| requestor_id | El solicitante del programador para el que es válida esta operación. |
+| mso_id | ID de MVPD para el que es válida esta operación. |
 | reg_code | El código de registro generado por el servicio Reggie. |
 | domain_name | El dominio de origen. |
-| redirect_url | La URL de redireccionamiento de la aplicación web de inicio de sesión tras la finalización de la autenticación. |
+| redirect_url | La URL de redireccionamiento de la aplicación web de inicio de sesión tras finalizar la autenticación. |
 
 {style="table-layout:auto"}
 
@@ -78,7 +78,7 @@ Inicia el proceso de autenticación informando de un evento de selección de MVP
 >
 >La llamada también puede contener parámetros opcionales que habilitan otras funcionalidades como:
 >
-> * generic\_data - habilita el uso de [Paso temporal promocional](/help/authentication/promotional-temp-pass.md)
+> * generic\_data: habilita el uso de [TempPass promocional](/help/authentication/promotional-temp-pass.md)
 >
 >```JSON
 >Example:
@@ -88,12 +88,10 @@ Inicia el proceso de autenticación informando de un evento de selección de MVP
 
 ### **Notas** {#notes}
 
-* El valor de la variable `domain_name` debe establecerse en uno de los nombres de dominio registrados con la autenticación de Primetime. Para obtener más información, consulte [Registro e inicialización](/help/authentication/programmer-overview.md).
+* El valor del `domain_name` El parámetro debe establecerse en uno de los nombres de dominio registrados con autenticación de Primetime. Para obtener más información, consulte [Registro e inicialización](/help/authentication/programmer-overview.md).
 
-* [Evite utilizar &quot;&amp;&#39;reg\_code&quot; en la solicitud /authenticate (nota técnica)](/help/authentication/clientless-avoid-using-reg-code-in-authenticate-request.md)
+* [Evite utilizar &#39;&amp;&#39;reg\_code en la solicitud /authentication (Nota técnica)](/help/authentication/clientless-avoid-using-reg-code-in-authenticate-request.md)
 
-* La variable `redirect_url` debe ser el último en orden
+* El `redirect_url` el parámetro debe ser el último en orden
 
-* El valor de la variable `redirect_url` debe tener codificación de dirección URL
-
-
+* El valor del `redirect_url` El parámetro debe tener codificación URL

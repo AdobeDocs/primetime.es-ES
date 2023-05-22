@@ -1,16 +1,15 @@
 ---
-title: Servidor Adobe Primetime DRM para transmisión protegida
-description: Servidor Adobe Primetime DRM para transmisión protegida
+title: Servidor DRM de Adobe Primetime para flujo protegido
+description: Servidor DRM de Adobe Primetime para flujo protegido
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 490babeb-eb94-4dd9-a572-eba1d7f65278
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
 
 ---
 
+# Servidor DRM de Adobe Primetime para flujo protegido{#adobe-primetime-drm-server-for-protected-streaming}
 
-# Servidor Adobe Primetime DRM para transmisión protegida{#adobe-primetime-drm-server-for-protected-streaming}
-
-Para los casos de uso de flujo continuo en los que el contenido está protegido con Primetime DRM, como para el HTTP Dynamic Streaming de Adobe, el software también incluye Primetime DRM Server para transmisión protegida. Esta solución se puede implementar fácilmente en un contenedor de servlet como Tomcat y puede lograr un alto nivel de escalabilidad y rendimiento para satisfacer las necesidades de distribución de contenido más grandes.
+Para casos de uso de streaming en los que el contenido está protegido con Primetime DRM, como para el HTTP Dynamic Streaming de Adobe, el software también incluye Primetime DRM Server for Protected Streaming. Esta solución se puede implementar fácilmente en un contenedor de servlets como Tomcat y puede lograr un alto nivel de escalabilidad y rendimiento para satisfacer las mayores necesidades de distribución de contenido.

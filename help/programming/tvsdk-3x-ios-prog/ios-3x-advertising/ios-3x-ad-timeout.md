@@ -1,24 +1,23 @@
 ---
-description: Puede insertar anuncios en su VOD y contenido en directo/lineal mediante la interfaz de Adobe Primetime ad decisioning .
-title: Requisitos de publicidad
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede insertar anuncios en su VOD y contenido en directo/lineal mediante la interfaz de Adobe Primetime ad decisioning.
+title: Requisitos publicitarios
+exl-id: b162e5b0-9f6c-46de-85de-97cec009a9b7
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%
 
 ---
 
+# Tiempo de espera de publicidad {#ad-timeout}
 
-# Tiempo de espera de anuncio {#ad-timeout}
+## Requisitos básicos de AV {#av-foundation-requirements}
 
-## Requisitos de base AV {#av-foundation-requirements}
+En el caso del contenido de VOD, la vinculación de lista de reproducción, que implica la carga del manifiesto de contenido principal, la resolución del anuncio y la carga del manifiesto del anuncio, debe completarse en un plazo de 35 segundos.
 
-En el caso del contenido de VOD, la vinculación de la lista de reproducción, que implica la carga del manifiesto de contenido principal, la resolución de anuncios y la carga del manifiesto de anuncios, debe completarse en un plazo de 35 segundos.
+En el caso del contenido en directo, cada vez que se actualice la lista de reproducción, la vinculación de la lista de reproducción debe completarse en un plazo de 20 segundos
 
-En el caso del contenido activo, cada vez que se actualiza la lista de reproducción, la vinculación de la lista de reproducción debe completarse en un plazo de 20 segundos
-
-**API relevantes para el tiempo de espera de la resolución de anuncios**
+**API relevantes para el tiempo de espera de AdResolution**
 
 ```
 /** @name Properties */
@@ -37,7 +36,7 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adResolutionTimeout = 15 seconds
 ```
 
-A continuación, siga la sección: [Metadatos del servidor de publicidad de Primetime](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
+A continuación, siga esta sección: [Metadatos de Primetime y del servidor](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
 
 **API relevantes para el tiempo de espera de AdManifest**
 
@@ -59,4 +58,4 @@ PTAuditudeMetadata *adMetadata = [[[PTAuditudeMetadata alloc] init]autorelease];
 adMetadata.adManifestTimeout = 5 seconds
 ```
 
-A continuación, siga la sección: [Metadatos del servidor de publicidad de Primetime](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).
+A continuación, siga esta sección: [Metadatos de Primetime y del servidor](/help/programming/tvsdk-3x-ios-prog/ios-3x-advertising/ios-3x-primetime-ad-serving-metadata/ios-3x-primetime-ad-serving-metadata.md).

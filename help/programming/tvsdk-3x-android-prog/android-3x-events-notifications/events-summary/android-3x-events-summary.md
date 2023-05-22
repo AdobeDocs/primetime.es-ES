@@ -1,6 +1,6 @@
 ---
-description: La aplicación puede supervisar la actividad del reproductor y el estado cambiante del reproductor escuchando los eventos que envía TVSDK.
-title: Resumen de eventos del reproductor de Primetime
+description: La aplicación puede monitorizar la actividad del reproductor y su estado cambiando al escuchar los eventos que envía TVSDK.
+title: Resumen de eventos del reproductor Primetime
 exl-id: 3912f140-1600-41fb-9dc4-306646b7cd85
 source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
 workflow-type: tm+mt
@@ -11,19 +11,19 @@ ht-degree: 0%
 
 # Resumen de eventos del reproductor Primetime {#primetime-player-events-summary}
 
-La aplicación puede supervisar la actividad del reproductor y el estado cambiante del reproductor escuchando los eventos que envía TVSDK.
+La aplicación puede monitorizar la actividad del reproductor y su estado cambiando al escuchar los eventos que envía TVSDK.
 
 ## Eventos {#events}
 
-TVSDK le notifica cuándo se producen eventos a los que debe responder su aplicación. Cada evento corresponde a una clase listener, con un método callback que debe implementar.
+TVSDK le avisa cuando se producen eventos, a los que la aplicación debe responder. Cada evento corresponde a una clase de agente de escucha, con un método de devolución de llamada que debe implementar.
 
 >[!TIP]
 >
->Los códigos de evento son las constantes de la enumeración `MediaPlayerEvent`.
+>Los códigos de evento son las constantes de `MediaPlayerEvent` enum.
 
 `AdBreakCompletedEventListener`
 
-* **** Lo que significa que la reproducción de la pausa publicitaria ha finalizado.
+* **Significado** Se ha completado la reproducción de la pausa publicitaria.
 
 * **Llamada de retorno para implementar** `onAdBreakCompleted(AdBreakPlaybackEvent event)`
 
@@ -31,7 +31,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `AdBreakSkippedEventListener`
 
-* **** Lo que significa que se omitió una pausa publicitaria durante la reproducción.
+* **Significado** Se ha omitido una pausa publicitaria durante la reproducción.
 
 * **Llamada de retorno para implementar** `onAdBreakSkipped(AdBreakPlaybackEvent event)`
 
@@ -39,7 +39,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `AdBreakStartedEventListener`
 
-* **** Lo que significa que se ha iniciado la reproducción de la pausa publicitaria.
+* **Significado** Ha comenzado la reproducción de la pausa publicitaria.
 
 * **Llamada de retorno para implementar** `onAdBreakStarted(AdBreakPlaybackEvent event)`
 
@@ -47,14 +47,14 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `AdClickedEventListener`
 
-* **** Lo que significa que se hizo clic en un anuncio durante la reproducción.
+* **Significado** Se hizo clic en un anuncio durante la reproducción.
 
 * **Llamada de retorno para implementar** `onAdClicked(AdClickEvent event)`
 * **Código de evento** `AD_CLICK`
 
 `AdCompletedEventListener`
 
-* **** Lo que significa que la reproducción del anuncio ha finalizado.
+* **Significado** Se ha completado la reproducción del anuncio.
 
 * **Llamada de retorno para implementar** `onAdCompleted(AdPlaybackEvent event)`
 
@@ -62,7 +62,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `AdProgressEventListener`
 
-* **** Significa que se informa del progreso durante la reproducción.
+* **Significado** Informe del progreso durante la reproducción.
 
 * **Llamada de retorno para implementar** `onAdProgress(AdPlaybackEvent event)`
 
@@ -70,7 +70,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `AdResolutionCompleteEventListener`
 
-* **** Lo que significa que la toma de decisiones y la resolución de anuncios de Primetime han finalizado. Este evento solo se aplica al contenido de VOD.
+* **Significado** Se ha completado Primetime y decisioning and resolution. Este evento solo se aplica al contenido de VOD.
 
 * **Llamada de retorno para implementar** `onAdResolutionComplete()`
 
@@ -78,7 +78,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `AdStartedEventListener`{#section_A4339C48F82640A8AF4AF09CB3B33188}
 
-* **** Lo que significa que se ha iniciado la reproducción del anuncio.
+* **Significado** Ha comenzado la reproducción del anuncio.
 
 * **Llamada de retorno para implementar** `onAdStarted(AdPlaybackEvent event)`
 
@@ -86,7 +86,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `AudioUpdatedEventListener`
 
-* **** Lo que significa que se ha detectado una nueva pista de audio.
+* **Significado** Se ha detectado una nueva pista de audio.
 
 * **Llamada de retorno para implementar** `onAudioUpdated(MediaPlayerItemEvent event)`
 
@@ -94,7 +94,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `BufferingBeginEventListener`
 
-* **** Es decir, el reproductor ha empezado a almacenar en búfer.
+* **Significado** El reproductor ha comenzado el almacenamiento en búfer.
 
 * **Llamada de retorno para implementar** `onBufferingBegin(BufferEvent event)`
 
@@ -102,7 +102,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `BufferingEndEventListener`
 
-* **** Es decir, el reproductor ha dejado de almacenar en búfer.
+* **Significado** El reproductor ha dejado de almacenar en búfer.
 
 * **Llamada de retorno para implementar** `onBufferingEnd(BufferEvent event)`
 
@@ -110,7 +110,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `BufferPreparedEventListener`
 
-* **** Significa que el búfer está preparado.
+* **Significado** El búfer está preparado.
 
 * **Llamada de retorno para implementar** `onBufferPrepared()`
 
@@ -118,7 +118,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `CaptionsUpdatedEventListener`
 
-* **** Lo que significa que se ha detectado una nueva pista de rótulo.
+* **Significado** Se ha detectado un nuevo seguimiento de subtítulos.
 
 * **Llamada de retorno para implementar** `onCaptionsUpdated(MediaPlayerItemEvent event)`
 
@@ -126,7 +126,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `DRMMetadataInfoEventListener`
 
-* **** Lo que significa que se ha detectado un nuevo metadatos DRM en el flujo de medios.
+* **Significado** Se ha detectado un nuevo metadato DRM en el flujo de medios.
 
 * **Llamada de retorno para implementar** `onDRMMetadataInfo(DRMMetadataInfoEvent event)`
 
@@ -134,7 +134,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `ItemCreatedEventListener`
 
-* **** Lo que significa que se ha creado un nuevo elemento del reproductor de contenidos.
+* **Significado** Se ha creado un nuevo elemento de reproductor de contenidos.
 
 * **Llamada de retorno para implementar** `onItemCreated(MediaPlayerItemEvent event)`
 
@@ -142,7 +142,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `ItemLoadCompleteEventListener`
 
-* **** Significa que se ha creado nueva información de carga para el elemento actual.
+* **Significado** Se ha creado nueva información de carga para el elemento actual.
 
 * **Llamada de retorno para implementar** `onLoadComplete(MediaPlayerItemEvent event)`
 
@@ -150,7 +150,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `LoadInformationEventListener`
 
-* **** Lo que significa que se ha cargado un segmento nuevo.
+* **Significado** Se ha cargado un nuevo segmento.
 
 * **Llamada de retorno para implementar** `onLoadInformation(LoadInformationEvent event)`
 
@@ -158,7 +158,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `MainManifestUpdatedEventListener`
 
-* **** Lo que significa que se ha actualizado el manifiesto principal o la lista de reproducción.
+* **Significado** Se ha actualizado el manifiesto principal o la lista de reproducción.
 
 * **Llamada de retorno para implementar** `onMainManifestUpdated(MediaPlayerItemEvent event)`
 
@@ -166,7 +166,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `NotificationEventListener`
 
-* **** Lo que significa que la operación ha fallado.
+* **Significado** Error en la operación.
 
 * **Llamada de retorno para implementar** `onNotification(NotificationEvent event)`
 
@@ -174,7 +174,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `PlaybackRangeUpdatedEventListener`
 
-* **** Lo que significa que se ha actualizado el intervalo de reproducción.
+* **Significado** Se ha actualizado el intervalo de reproducción.
 
 * **Llamada de retorno para implementar** `onPlaybackRangeUpdated(MediaPlayerItemEvent event)`
 
@@ -182,7 +182,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `PlaybackRatePlayingEventListener`
 
-* **** Esto significa que se puede ver una nueva tasa de reproducción en la pantalla.
+* **Significado** Se puede ver una nueva velocidad de reproducción en la pantalla.
 
 * **Llamada de retorno para implementar** `onRatePlaying(PlaybackRateEvent event)`
 
@@ -190,7 +190,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `PlaybackRateSelectedEventListener`
 
-* **** Es decir, se ha establecido el atributo de tasa de MediaPlayer.
+* **Significado** Se ha establecido el atributo de tarifa de MediaPlayer.
 
 * **Llamada de retorno para implementar** `onRateSelected(PlaybackRateEvent event)`
 
@@ -198,7 +198,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `PlayStartEventListener`
 
-* **** Es decir, se ha iniciado la reproducción.
+* **Significado** Se ha iniciado la reproducción.
 
 * **Llamada de retorno para implementar** `onPlayStart()`
 
@@ -206,7 +206,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `ProfileChangeEventListener`
 
-* **** Es decir, el perfil actual de MediaPlayer ha cambiado.
+* **Significado** El perfil actual de MediaPlayer ha cambiado.
 
 * **Llamada de retorno para implementar** `onProfileChanged(ProfileEvent event)`
 
@@ -214,7 +214,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `ReservationReachedEventListener`
 
-* **** Significa que Playback ha alcanzado una reserva en la cronología.
+* **Significado** La reproducción ha alcanzado una reserva de cronología.
 
 * **Llamada de retorno para implementar** `onReservationReached(ReservationEvent event)`
 
@@ -222,7 +222,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `SeekBeginEventListener`
 
-* **** Se inició la operación de SIGNIFICACIÓN.
+* **Significado** Operación de búsqueda iniciada.
 
 * **Llamada de retorno para implementar** `onSeekBegin(SeekEvent event)`
 
@@ -230,7 +230,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `SeekEndEventListener`
 
-* **** Lo que significa que la operación de búsqueda ha finalizado.
+* **Significado** La operación de búsqueda ha finalizado.
 
 * **Llamada de retorno para implementar** `onSeekEnd(SeekEvent event)`
 
@@ -238,7 +238,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `SeekPositionAdjustedEventListener`
 
-* **** Lo que significa que la posición de búsqueda se ha ajustado debido a reglas de reproducción internas o reglas comerciales externas.
+* **Significado** La posición de búsqueda se ha ajustado debido a reglas de reproducción internas o reglas de negocio externas.
 
 * **Llamada de retorno para implementar** `onPositionAdjusted(SeekEvent event)`
 
@@ -246,7 +246,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `SizeAvailableEventListener`
 
-* **** Es decir, el tamaño del contenido está disponible.
+* **Significado** El tamaño del medio está disponible.
 
 * **Llamada de retorno para implementar** `onSizeAvailable(SizeAvailableEvent event)`
 
@@ -254,7 +254,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `StatusChangeEventListener`
 
-* **** Es decir, el estado de MediaPlayer ha cambiado.
+* **Significado** El estado de MediaPlayer ha cambiado.
 
 * **Llamada de retorno para implementar** `onStatusChanged(MediaPlayerStatusChangeEvent event)`
 
@@ -262,7 +262,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `TimeChangeEventListener`
 
-* **** Es decir, el cabezal de reproducción ha cambiado.
+* **Significado** El cabezal de reproducción ha cambiado.
 
 * **Llamada de retorno para implementar** `onTimeChanged(TimeChangeEvent event)`
 
@@ -270,7 +270,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `TimedEventEventListener`
 
-* **** Es decir, la operación se completa con el tiempo necesario para la operación.
+* **Significado** La operación se ha completado con el tiempo necesario para la operación.
 
 * **Llamada de retorno para implementar** `onTimedEvent(TimedEventEvent event)`
 
@@ -278,7 +278,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `TimelineMetadataAddedInBackgroundEventListener`
 
-* **** Es decir, se ha añadido un nuevo metadato temporizado a un elemento en segundo plano.
+* **Significado** Se ha agregado un nuevo metadato temporizado a un elemento en segundo plano.
 
 * **Llamada de retorno para implementar** `onTimedMetadata(TimedMetadataEvent event)`
 
@@ -286,7 +286,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `TimedMetadataEventListener`
 
-* **** Es decir, se ha detectado un nuevo metadato temporizado en el flujo de medios.
+* **Significado** Se ha detectado un nuevo metadato cronometrado en el flujo de medios.
 
 * **Llamada de retorno para implementar** `onTimedMetadata(TimedMetadataEvent event)`
 
@@ -294,7 +294,7 @@ TVSDK le notifica cuándo se producen eventos a los que debe responder su aplica
 
 `TimelineUpdatedEventListener`
 
-* **** Lo que significa que la línea de tiempo se ha modificado. Es posible que se hayan agregado o eliminado anuncios de la cronología.
+* **Significado** Se ha modificado la cronología. Es posible que se hayan agregado o eliminado anuncios de la cronología.
 
 * **Llamada de retorno para implementar** `onTimelineUpdated(TimelineEvent event)`
 

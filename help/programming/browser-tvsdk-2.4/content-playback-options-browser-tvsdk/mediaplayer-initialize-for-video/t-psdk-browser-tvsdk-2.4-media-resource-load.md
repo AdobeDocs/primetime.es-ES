@@ -1,44 +1,42 @@
 ---
-description: Cargue un recurso creando una instancia de MediaResource directamente y cargando el contenido del vídeo que desea reproducir.
-title: Carga de un recurso de medios en MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Cargue un recurso creando directamente una instancia de MediaResource y cargando el contenido de vídeo que desea reproducir.
+title: Cargar un recurso multimedia en MediaPlayer
+exl-id: b775c33e-399c-4a03-a132-407944f07706
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
 
 ---
 
+# Cargar un recurso multimedia en MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
 
-# Cargar un recurso de medios en MediaPlayer {#load-a-media-resource-in-the-mediaplayer}
+Cargue un recurso creando directamente una instancia de MediaResource y cargando el contenido de vídeo que desea reproducir.
 
-Cargue un recurso creando una instancia de MediaResource directamente y cargando el contenido del vídeo que desea reproducir.
+1. Configure su `MediaPlayer` elemento reproducible del objeto con el nuevo recurso que se va a reproducir.
 
-1. Establezca el elemento que se puede reproducir del objeto `MediaPlayer` con el nuevo recurso que se va a reproducir.
+   Reemplace el existente `MediaPlayer` elemento reproducible actualmente del objeto llamando a `replaceCurrentResource` y pasar un existente `MediaResource` ejemplo.
 
-   Reemplace el elemento que actualmente se puede reproducir del objeto `MediaPlayer` existente llamando a `replaceCurrentResource` y pasando una instancia `MediaResource` existente.
-
-1. Espere a que el TVSDK del explorador distribuya `AdobePSDK.MediaPlayerStatusChangeEvent` con `event.status` que sea igual a cualquiera de las siguientes opciones:
+1. Espere a que el TVSDK del explorador se distribuya `AdobePSDK.MediaPlayerStatusChangeEvent` con `event.status` que sea igual a cualquiera de las siguientes opciones:
 
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.ERROR`
 
-      A través de estos eventos, el objeto MediaPlayer notifica a la aplicación si el recurso multimedia se ha cargado correctamente.
+      Mediante estos eventos, el objeto MediaPlayer notifica a la aplicación si el recurso multimedia se ha cargado correctamente.
 
-1. Cuando el estado del reproductor de contenidos cambia a `MediaPlayerStatus.INITIALIZED`, puede llamar a `MediaPlayer.prepareToPlay`.
+1. Cuando el estado del reproductor de contenidos cambie a `MediaPlayerStatus.INITIALIZED`, puede llamar a `MediaPlayer.prepareToPlay`.
 
-   El estado INITIALIZED indica que el medio se ha cargado correctamente. Al llamar a `prepareToPlay` se inicia el proceso de resolución y colocación de publicidad, si existe.
-1. Cuando el SDK del explorador distribuye el evento `MediaPlayerStatus.PREPARED` , el flujo de medios se ha cargado correctamente (se ha creado un MediaPlayerItem) y está preparado para la reproducción.
+   El estado INITIALIZED indica que el medio se ha cargado correctamente. Llamando `prepareToPlay` inicia el proceso de resolución y colocación de la publicidad, si lo hay.
+1. Cuando el TVSDK del explorador envía el `MediaPlayerStatus.PREPARED` evento el flujo de medios se ha cargado correctamente (se crea un MediaPlayerItem) y está preparado para la reproducción.
 
-Si se produce un error, el `MediaPlayer` cambia al `MediaPlayerStatus.ERROR`.
+Si se produce un error, la variable `MediaPlayer` cambia al `MediaPlayerStatus.ERROR`.
 
-También notifica a su aplicación mediante el envío del evento `MediaPlayerStatus.ERROR` .
+También notifica a la aplicación enviando el `MediaPlayerStatus.ERROR` evento.
 
 ><!--<a id="example_3774607C6F08473282CF0CB7F3D82373"></a>-->
 
-
-El siguiente código de ejemplo simplificado ilustra el proceso de carga de un recurso de medios:
+El siguiente código de ejemplo simplificado ilustra el proceso de carga de un recurso multimedia:
 
 ```js
 player.addEventListener(AdobePSDK.PSDKEventType.STATUS_CHANGED,  

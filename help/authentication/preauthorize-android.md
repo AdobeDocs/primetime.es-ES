@@ -1,20 +1,19 @@
 ---
-title: Autorización previa de Android
-description: Autorización previa de Android
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Preautorizar Android
+description: Preautorizar Android
+exl-id: b5337595-135f-4981-a578-2da432f125d6
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
 
 ---
 
-
-
 # Preautorizar {#preuthorize-android}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 </br>
 
@@ -23,7 +22,7 @@ Las aplicaciones deben utilizar el método de API de preautorización para obten
 
 
 
-En caso de un error inesperado (por ejemplo, un problema de red, un extremo de autorización de MVPD no disponible, etc.) cuando los servicios de autenticación de Adobe Primetime procesen una solicitud de API de preautorización, se incluirá una o varias informaciones de error separadas para los recursos afectados como parte del resultado de respuesta de API de preautorización.
+En caso de error inesperado (por ejemplo, problema de red, punto final de autorización de MVPD no disponible, etc.) que se produce cuando los servicios de autenticación de Adobe Primetime procesan una solicitud de API de preautorización, se incluirá una o varias informaciones de error separadas para los recursos afectados como parte del resultado de la respuesta de API de preautorización.
 
 
 ## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`
@@ -35,14 +34,14 @@ En caso de un error inesperado (por ejemplo, un problema de red, un extremo de a
 
 **Parámetros:**
 
-- *PreauthorizationRequest*: Objeto de Generador utilizado para definir la solicitud
-- AccessEnablerCallback : llamada de retorno utilizada para devolver la respuesta de API
-- PreauthorizedResponse : Objeto utilizado para devolver el contenido de respuesta de la API
+- *PreauthorizeRequest*: objeto de creación utilizado para definir la solicitud
+- AccessEnablerCallback : llamada de retorno utilizada para devolver la respuesta de la API
+- PreauthorizeResponse : objeto utilizado para devolver el contenido de respuesta de API
 
 
-### clase pública PreauthorizationRequest {#androidpreauthorizerequest}
+### public class PreauthorizeRequest {#androidpreauthorizerequest}
 
-**clase PreauthorizedRequest.Builder**\
+**class PreauthorizeRequest.Builder**\
  
 
 ```java
@@ -64,7 +63,7 @@ En caso de un error inesperado (por ejemplo, un problema de red, un extremo de a
     ///
 ```
 
-**public Builder setResources(List\&lt;string> resources)**
+**public Builder setResources(List\&lt;string> recursos)**
 
 ```
     ///
@@ -87,7 +86,7 @@ En caso de un error inesperado (por ejemplo, un problema de red, un extremo de a
 
 
 **public Builder disableFeatures(Set\&lt;preauthorizerequest.feature>
-características)**
+funciones)**
 
 ```
     ///
@@ -107,9 +106,9 @@ características)**
     ///
 ```
 
-**public PreauthorizationRequest build()**
+**public PreauthorizeRequest build()**
 
-**enum PreauthorizedRequest.Feature**
+**enum PreauthorizeRequest.Feature**
 
 ```java
     ///
@@ -143,7 +142,7 @@ características)**
 
  
 
-### class PreauthorizedResponse {#preauthorizeresponse}
+### class PreauthorizeResponse {#preauthorizeresponse}
 
 ```java
     ///
@@ -164,7 +163,7 @@ características)**
 ```
 
 
-**estado de la clase** {#status}
+**Estado de clase** {#status}
 
 ```java
 ///
@@ -228,7 +227,7 @@ características)**
 
 </br>
 
->**decisión de clase** {#decision}
+>**decisión colectiva** {#decision}
 
 ```
     ///
@@ -289,4 +288,3 @@ Ejemplo : 
         }
     });
 ```
-

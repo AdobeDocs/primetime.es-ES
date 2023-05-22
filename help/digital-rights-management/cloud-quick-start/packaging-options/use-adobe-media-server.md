@@ -1,19 +1,18 @@
 ---
-title: Usar el servidor de Adobes Medium
-description: Usar el servidor de Adobes Medium
+title: Usar Adobe Medium Server
+description: Usar Adobe Medium Server
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: bb0b12f0-cd33-4a8a-8466-ae0e35cb1641
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '66'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
+# Usar Adobe Medium Server {#use-adobe-media-server}
 
-# Usar servidor de Adobes Medium {#use-adobe-media-server}
-
-Es posible que algunos clientes ya estén utilizando Adobe Medium Server y deseen mantener ese modelo de envío de contenido. Si este es el caso, los datos específicos de DRM de Primetime Cloud necesarios se pueden obtener de cualquiera de los archivos de configuración incluidos en este kit para rellenar la configuración XML de JIT (Just In Time) para AMS.
+Es posible que algunos clientes ya estén utilizando Adobe Medium Server y deseen mantener ese modelo de entrega de contenido. En este caso, los datos específicos de DRM de Primetime Cloud necesarios se pueden recopilar de cualquiera de los archivos de configuración incluidos en este kit para rellenar la configuración XML JIT (Just In Time) para AMS.
 
 Por ejemplo:
 
@@ -43,4 +42,3 @@ Por ejemplo:
   </HDS>
 </Application>
 ```
-

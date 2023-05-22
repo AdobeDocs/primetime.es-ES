@@ -1,37 +1,36 @@
 ---
 title: Usar Ad Insertion en flujo en directo/lineal
-description: Uso del Ad Insertion en el flujo en directo/lineal
-translation-type: tm+mt
-source-git-commit: 0f98b9848f1764e7c66e3692d8a845513493597f
+description: Uso del Ad Insertion en un flujo en directo/lineal
+exl-id: d56ed723-ec72-4bbd-befc-6858c7c9d800
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
 
 ---
 
-
 # Usar Ad Insertion en flujo en directo/lineal {#ad-insertion-live-linear-stream}
 
-Primetime Ad Insertion ofrece a los editores la capacidad de gestionar situaciones de inserción de anuncios estándar y complejas que se producen durante flujos en directo o lineales.
+El Ad Insertion de Primetime permite a los editores gestionar situaciones de inserción de anuncios estándar y complejas que se producen durante emisiones en directo/lineales.
 
 ## Formatos de referencia admitidos {#cue-formats-supported}
 
-Primetime Ad Insertion admite una amplia gama de formatos de señal estándar y no estándar, entre los que se incluyen:
+El Ad Insertion de Primetime admite una amplia gama de formatos de referencia estándar y no estándar, incluidos:
 
-* PPP SCTE-35 (marcadores de anuncios mejorados con SCTE-35)
+* PPP SCTE-35 (marcadores de anuncios mejorados SCTE-35)
 
-* [Especificación de señalización de inserción de Programa digital de Adobe](https://www.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeDigitalProgramInsertionSignalingSpecification.pdf)
+* [Especificación de señalización de inserción de programas digitales de Adobe](https://www.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeDigitalProgramInsertionSignalingSpecification.pdf)
 
-* Binary SCTE-35 (tanto HLS como DASH)
+* SCTE-35 binario (tanto HLS como DASH)
 
-* Textual SCTE-35 (tanto HLS como DASH)
+* Texto SCTE-35 (HLS y GUIÓN)
 
-Póngase en contacto con su representante de soporte técnico de Primetime para obtener más detalles u otros formatos de referencia admitidos.
+Póngase en contacto con su representante de asistencia técnica de Primetime para obtener más información u otros formatos de referencia admitidos.
 
-## Compatibilidad con Salto de publicidad parcial {#partial-ad-break-support}
+## Compatibilidad con pausa publicitaria parcial {#partial-ad-break-support}
 
-Las pausas de publicidad parciales se pueden utilizar en situaciones en las que un visor entra en un flujo en directo o lineal después de iniciarse una pausa publicitaria.  Por ejemplo: si un visor introduce una pausa publicitaria de 2:00 en la marca 1:00, la inserción de una pausa publicitaria parcial garantiza que los anuncios se mostrarán en el tiempo restante. Sin la inserción de pausa publicitaria parcial, no se enviarían anuncios a este visor durante la pausa. El Ad Insertion Primetime habilita la inserción de pausa publicitaria parcial de forma predeterminada si las etiquetas correspondientes están presentes en los flujos multimedia.
+Las pausas publicitarias parciales se pueden utilizar en situaciones en las que un visualizador entra en un flujo en directo/lineal después de haberse iniciado una pausa publicitaria.  Por ejemplo, si un usuario introduce una pausa publicitaria de 2 en la marca de 1, la inserción de una pausa publicitaria parcial garantiza que los anuncios se publiquen en el tiempo restante. Sin la inserción de una pausa publicitaria parcial, no se mostrará ningún anuncio a este visor durante la pausa. El Ad Insertion de Primetime permite la inserción de pausas publicitarias parciales de forma predeterminada si las etiquetas adecuadas están presentes en los flujos de medios.
 
-## Retorno anticipado (salida anticipada de publicidad) {#early-return-early-ad-exit}
+## Retorno anticipado (salida anticipada del anuncio) {#early-return-early-ad-exit}
 
-Hay casos en los que puede ser necesario volver antes de una pausa publicitaria en un flujo en directo o lineal, como cuando un evento deportivo vuelve repentinamente a la acción. Cada formato de decisión de publicidad contiene una etiqueta para &quot;cue-out&quot; (anuncios) o &quot;cue-in&quot; (contenido).  Si se encuentra una etiqueta de &quot;cue-in&quot; antes del final de una pausa publicitaria, el Ad Insertion de Adobe Primetime respetará el cue-in.  Póngase en contacto con el empaquetador de contenido para activar el retorno anticipado.
+Hay casos en los que puede ser necesario volver antes de tiempo desde una pausa publicitaria en un flujo en directo/lineal, como cuando un evento deportivo vuelve repentinamente a la acción. Cada formato de decisión de anuncio contiene una etiqueta para &quot;cue-out&quot; (anuncios) o &quot;cue-in&quot; (contenido).  Si se encuentra una etiqueta de &quot;entrada&quot; antes del final de una pausa publicitaria, el Ad Insertion de Adobe Primetime aceptará la entrada.  Póngase en contacto con el empaquetador de contenido para habilitar la devolución anticipada.

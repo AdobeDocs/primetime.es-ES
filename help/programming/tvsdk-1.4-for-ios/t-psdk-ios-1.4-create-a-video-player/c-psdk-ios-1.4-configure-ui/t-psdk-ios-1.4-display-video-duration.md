@@ -15,10 +15,10 @@ Puede mostrar la duración del contenido activo actualmente.
 
 Implemente una visualización de duración de vídeo con el siguiente código de ejemplo:
 
-La variable `PTMediaPlayer` propiedad, [seekableRange](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html#//api/name/seekableRange), contiene el intervalo de ventanas que se puede buscar actualmente:
+El `PTMediaPlayer` propiedad, [seekableRange](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/Classes/PTMediaPlayer.html#//api/name/seekableRange), contiene el intervalo de ventana actual en el que se puede buscar:
 
 * Para VOD, este intervalo es todo el intervalo de contenido de VOD, incluidos los anuncios.
-* Para live/linear, este rango representa la ventana que se puede buscar.
+* Para live/linear, este rango representa la ventana en la que se puede buscar.
 
 Para obtener más información sobre la API, consulte [Referencia de la API de TVSDK 1.4 para iOS](https://help.adobe.com/en_US/primetime/api/psdk/appledoc/index.html)
 

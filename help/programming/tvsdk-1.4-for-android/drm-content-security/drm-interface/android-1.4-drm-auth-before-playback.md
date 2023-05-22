@@ -1,29 +1,28 @@
 ---
-description: Cuando los metadatos DRM de un vídeo están separados del flujo de medios, realice la autenticación antes de comenzar la reproducción.
+description: Cuando los metadatos DRM de un vídeo son independientes del flujo de medios, realice la autenticación antes de comenzar la reproducción.
 title: Autenticación DRM antes de la reproducción
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: da81ec38-ea77-4fcd-a6e4-5804465385cb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '338'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
-
 # Autenticación DRM antes de la reproducción {#drm-authentication-before-playback}
 
-Cuando los metadatos DRM de un vídeo están separados del flujo de medios, realice la autenticación antes de comenzar la reproducción.
+Cuando los metadatos DRM de un vídeo son independientes del flujo de medios, realice la autenticación antes de comenzar la reproducción.
 
 Un recurso de vídeo puede tener asociado un archivo de metadatos DRM. Por ejemplo:
 
 * &quot;url&quot;: &quot;ht<span></span>tps://www.domain.com/asset.m3u8&quot;
 * &quot;drmMetadata&quot;: &quot;ht<span></span>tps://www.domain.com/asset.metadata&quot;
 
-En este caso, utilice los métodos `DRMHelper` para descargar el contenido del archivo de metadatos DRM, analizarlo y comprobar si es necesaria la autenticación DRM.
+Cuando este sea el caso, utilice `DRMHelper` métodos para descargar el contenido del archivo de metadatos DRM, analizarlo y comprobar si se necesita autenticación DRM.
 
-1. Utilice `loadDRMMetadata` para cargar el contenido de la URL de metadatos y analizar los bytes descargados en `DRMMetadata`.
+1. Uso `loadDRMMetadata` para cargar el contenido de la URL de metadatos y analizar los bytes descargados en una `DRMMetadata`.
 
-   Como cualquier otra operación de red, este método es asincrónico, creando su propio subproceso.
+   Como cualquier otra operación de red, este método es asincrónico y crea su propio subproceso.
 
    ```java
    public static void loadDRMMetadata( 
@@ -38,8 +37,8 @@ En este caso, utilice los métodos `DRMHelper` para descargar el contenido del a
    DRMHelper.loadDRMMetadata(drmManager, metadataURL, new DRMLoadMetadataListener());
    ```
 
-1. Como la operación es asincrónica, es aconsejable que el usuario lo sepa. De lo contrario, se preguntará por qué su reproducción no comienza. Por ejemplo, mostrar una rueda giratoria mientras se descargan y analizan los metadatos DRM.
-1. Implemente las llamadas de retorno en `DRMLoadMetadataListener`. El `loadDRMMetadata` llama a estos controladores de eventos (envía estos eventos).
+1. Como la operación es asincrónica, es aconsejable que el usuario sea consciente de ello. De lo contrario, se preguntará por qué su reproducción no está empezando. Por ejemplo, mostrar una rueda giratoria mientras se descargan y analizan los metadatos de DRM.
+1. Implementar las llamadas de retorno en `DRMLoadMetadataListener`. El `loadDRMMetadata` llama a estos controladores de eventos (envía estos eventos).
 
    ```java
    public interface  
@@ -58,11 +57,11 @@ En este caso, utilice los métodos `DRMHelper` para descargar el contenido del a
    }
    ```
 
-   * `onLoadMetadataUrlStart` detecta cuándo se ha iniciado la carga de la URL de metadatos.
-   * `onLoadMetadataUrlComplete` detecta cuándo ha finalizado la carga de la URL de metadatos.
-   * `onLoadMetadataUrlError` indica que los metadatos no se han cargado.
+   * `onLoadMetadataUrlStart` detecta cuándo ha comenzado la carga de la URL de metadatos.
+   * `onLoadMetadataUrlComplete` detecta cuándo ha terminado de cargarse la dirección URL de metadatos.
+   * `onLoadMetadataUrlError` indica que los metadatos no se han podido cargar.
 
-1. Cuando la carga finalice, inspeccione el objeto `DRMMetadata` para ver si se necesita autenticación DRM.
+1. Cuando finalice la carga, inspeccione el `DRMMetadata` para ver si es necesaria la autenticación DRM.
 
    ```java
    public static boolean <b>isAuthNeeded</b>(DRMMetadata drmMetadata);
@@ -83,7 +82,7 @@ En este caso, utilice los métodos `DRMHelper` para descargar el contenido del a
      }
    ```
 
-1. Si no se necesita autenticación, comience la reproducción.
+1. Si no se necesita autenticación, inicie la reproducción.
 1. Si se necesita autenticación, realice la autenticación adquiriendo la licencia.
 
    ```java
@@ -106,7 +105,7 @@ En este caso, utilice los métodos `DRMHelper` para descargar el contenido del a
         final DRMAuthenticationListener authenticationListener);
    ```
 
-   En este ejemplo, para simplificar, se codifica explícitamente el nombre y la contraseña del usuario.
+   Este ejemplo, para simplificar, codifica explícitamente el nombre y la contraseña del usuario.
 
    ```java
    DRMHelper.performDrmAuthentication(drmManager, drmMetadata, DRM_USERNAME, DRM_PASSWORD,  
@@ -169,5 +168,4 @@ En este caso, utilice los métodos `DRMHelper` para descargar el contenido del a
 1. Si la autenticación se realiza correctamente, inicie la reproducción.
 1. Si la autenticación no se realiza correctamente, notifique al usuario y no inicie la reproducción.
 
-La aplicación debe gestionar los errores de autenticación. Al no autenticarse correctamente antes de reproducir, TVSDK pasa a un estado de error. Es decir, cambia su estado a ERROR, se genera un error que contiene el código de error de la biblioteca DRM y la reproducción se detiene. La aplicación debe resolver el problema, restablecer el reproductor y volver a cargar el recurso.
-
+La aplicación debe gestionar cualquier error de autenticación. Si no se autentica correctamente antes de reproducir, TVSDK se coloca en un estado de error. Es decir, cambia su estado a ERROR, se genera un error que contiene el código de error de la biblioteca DRM y se detiene la reproducción. La aplicación debe resolver el problema, restablecer el reproductor y volver a cargar el recurso.

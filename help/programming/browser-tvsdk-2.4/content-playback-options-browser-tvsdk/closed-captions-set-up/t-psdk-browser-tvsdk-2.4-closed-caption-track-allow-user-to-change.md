@@ -1,27 +1,26 @@
 ---
-description: Este es un ejemplo de cómo un usuario puede seleccionar una pista de subtítulos.
+description: A continuación se muestra un ejemplo de cómo un usuario puede seleccionar una pista de subtítulos.
 title: Permitir al usuario cambiar la pista
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 103ca0ad-2707-4e4f-87ee-f55041e4527a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
 
 ---
 
+# Permitir al usuario cambiar la pista{#allow-the-user-to-change-the-track}
 
-# Permitir al usuario cambiar el seguimiento{#allow-the-user-to-change-the-track}
+A continuación se muestra un ejemplo de cómo un usuario puede seleccionar una pista de subtítulos.
 
-Este es un ejemplo de cómo un usuario puede seleccionar una pista de subtítulos.
-
-1. Para mostrar las pistas de subtítulos cerrados disponibles, utilice la propiedad `MediaPlayerItem.closedCaptionsTracks` .
+1. Para mostrar las pistas de subtítulos opcionales disponibles, utilice el `MediaPlayerItem.closedCaptionsTracks` propiedad.
 
    ```js
    var tracks = item.closedCaptionsTracks;
    ```
 
-1. Para definir qué pista de subtítulos es actual, utilice el método `MediaPlayerItem.selectClosedCaptionsTrack`.
-1. Una vez preparado el elemento del reproductor de contenidos, recuperarlo del reproductor de contenidos mediante el método ` MediaPlayer.  currentItem `.
+1. Para definir qué pista de subtítulos está actualizada, use el `MediaPlayerItem.selectClosedCaptionsTrack` método.
+1. Una vez preparado el elemento del reproductor de contenido, recupérelo del reproductor de contenido mediante el comando ` MediaPlayer.  currentItem ` método.
 
    ```js
    // Select the cc track with index k. 
@@ -32,4 +31,3 @@ Este es un ejemplo de cómo un usuario puede seleccionar una pista de subtítulo
        item.selectClosedCaptionsTrack(tracks[k]); 
    }
    ```
-

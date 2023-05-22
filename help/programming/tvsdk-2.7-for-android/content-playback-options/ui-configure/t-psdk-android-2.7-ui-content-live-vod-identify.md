@@ -1,21 +1,20 @@
 ---
-description: Es posible que deba saber si el contenido multimedia está activo o si se trata de vídeo bajo demanda (VOD).
-title: Identificar si el contenido está activo o VOD
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Es posible que deba saber si el contenido multimedia está en directo o es vídeo bajo demanda (VOD).
+title: Identificar si el contenido está activo o es VOD
+exl-id: 756d4f04-d354-4194-80c9-c2ea6198a566
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
 
 ---
 
+# Identificar si el contenido está activo o es VOD {#identify-whether-the-content-is-live-or-vod}
 
-# Identifique si el contenido está activo o VOD {#identify-whether-the-content-is-live-or-vod}
+Es posible que deba saber si el contenido multimedia está en directo o es vídeo bajo demanda (VOD).
 
-Es posible que deba saber si el contenido multimedia está activo o si se trata de vídeo bajo demanda (VOD).
-
-1. Asegúrese de que el reproductor está en al menos el estado `PREPARED`.
-1. Determine si el contenido `MediaPlayerItem` está activo ( `true`) o VOD ( `false`).
+1. Asegúrese de que el reproductor esté en, al menos, la `PREPARED` estado.
+1. Determine si la variable `MediaPlayerItem` el contenido está activo ( `true`) o VOD ( `false`).
 
    ```java
    boolean isLive();

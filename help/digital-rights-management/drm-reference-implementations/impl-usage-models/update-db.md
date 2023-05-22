@@ -2,28 +2,27 @@
 title: Actualizar la base de datos de implementación de referencia
 description: Actualizar la base de datos de implementación de referencia
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b337bf9c-7add-47b8-9576-db7fa067c51d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
 
 ---
 
+# Actualizar la base de datos de implementación de referencia{#update-the-reference-implementation-db}
 
-# Actualizar la implementación de referencia DB{#update-the-reference-implementation-db}
+Para controlar los modelos de uso en los que se emite una licencia a un usuario designado, añada entradas a la base de datos de implementación de referencia.
 
-Para controlar los modelos de uso en los que se emite una licencia a un usuario designado, agregue entradas a la base de datos de implementación de referencia.
+1. Agregar entradas a `Customer` tabla.
 
-1. Agregue entradas a la tabla `Customer`.
+   El `Customer` La tabla incluye los nombres de usuario y contraseñas para autenticar a los usuarios. También indica si un usuario tiene una suscripción (una licencia emitida bajo el *Suscripción* modelo de uso).
 
-   La tabla `Customer` incluye nombres de usuario y contraseñas para autenticar usuarios. También indica si un usuario tiene una suscripción (una licencia emitida bajo el modelo de uso *Subscription* ).
+1. Conceder acceso al usuario en los modelos de uso de Descargar para uso propio o Vídeo bajo demanda.
 
-1. Conceda acceso a un usuario en los modelos de uso Descargar para ser propietario o Vídeo bajo demanda .
-
-       Agregue entradas a la tabla &quot;CustomerAuthorization&quot; para especificar:
+       Agregue entradas a la tabla CustomerAuthorization para especificar:
    
    * El modelo de uso
    * Cada segmento de contenido al que puede acceder un usuario
 
-Para obtener más información sobre cómo rellenar cada tabla, consulte el script [!DNL PopulateSampleDB.sql] (incluido en el DVD de Primetime DRM en el directorio [!DNL Reference Implementation/Server/Reference Implementation Server/dbscript/]).
+Para obtener más información sobre cómo rellenar cada tabla, consulte la [!DNL PopulateSampleDB.sql] (incluido en el DVD de DRM de Primetime en el [!DNL Reference Implementation/Server/Reference Implementation Server/dbscript/] directorio).

@@ -1,7 +1,6 @@
 ---
-description: Si el cliente solicita información de seguimiento en formato JSON, el servidor de manifiesto devuelve un archivo en uno de los formatos JSON.
+description: Si el cliente solicita información de seguimiento en formato JSON, el servidor de manifiesto envía un archivo en uno de los formatos JSON.
 title: Formatos JSON para el seguimiento de direcciones URL
-translation-type: tm+mt
 source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
 workflow-type: tm+mt
 source-wordcount: '211'
@@ -10,9 +9,9 @@ ht-degree: 0%
 ---
 
 
-# Formatos JSON para rastrear direcciones URL {#json-formats-for-tracking-urls}
+# Formatos JSON para el seguimiento de direcciones URL {#json-formats-for-tracking-urls}
 
-Si el cliente solicita información de seguimiento en formato JSON, el servidor de manifiesto devuelve un archivo en uno de los formatos JSON.
+Si el cliente solicita información de seguimiento en formato JSON, el servidor de manifiesto envía un archivo en uno de los formatos JSON.
 
 ## Formato JSON para el seguimiento de la versión 1 {#json_v1}
 
@@ -36,7 +35,7 @@ El archivo JSON que envía el servidor de manifiesto si `pttrackingversion=v1` t
 
 El archivo JSON que envía el servidor de manifiesto si `pttrackingversion=v2` tiene el formato del siguiente ejemplo, que proviene de un bloque JSON típico.
 
-Se ha abreviado para evitar repeticiones innecesarias, de modo que la estructura sea más clara. Los puntos suspensivos (tres puntos, separados por espacios) indican información omitida dentro de algunas direcciones URL y entre algunos bloques de código. Las direcciones URL no abreviadas aparecen en varias líneas, aunque aparecen en una sola línea del archivo JSON.
+Se ha abreviado para evitar repeticiones innecesarias, de modo que la estructura sea más clara. Los puntos suspensivos (tres puntos separados por espacios) indican información omitida en algunas direcciones URL y entre algunos bloques de código. Las direcciones URL sin abreviar aparecen en varias líneas, aunque en una sola línea del archivo JSON.
 
 ```
 { 
@@ -364,9 +363,9 @@ Se ha abreviado para evitar repeticiones innecesarias, de modo que la estructura
 
 >[!NOTE]
 >
->El valor `offset` del atributo `scte35` extraído de `ad breaks` podría ser negativo. Esto se debe a que el sidecar JSON V2 contiene información sobre las pausas publicitarias que están parcialmente en la ventana de reproducción actual. Por lo tanto, el atributo `scte35` también contiene información sobre esas pausas publicitarias.
+>El `offset` valor del `scte35` atributo como extraído de `ad breaks` podría ser negativo. Esto se debe a que el sidecar JSON V2 contiene información sobre las pausas publicitarias que están parcialmente en la ventana de reproducción actual. Por lo tanto, la `scte35` también contiene información sobre estas pausas publicitarias.
 
-## Formato JSON para el seguimiento de la versión 3 {#json_v3}
+## Formato JSON para la versión 3 del seguimiento {#json_v3}
 
 El archivo JSON que envía el servidor de manifiesto si `pttrackingversion=v3` tiene el siguiente formato general:
 

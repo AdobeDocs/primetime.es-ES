@@ -1,18 +1,17 @@
 ---
-description: Puede configurar nombres de etiquetas personalizados en un flujo con la clase MediaPlayerItemConfig .
-title: Métodos de clase Config para etiquetas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede configurar nombres de etiquetas personalizados en una secuencia con la clase MediaPlayerItemConfig.
+title: Métodos de clase de configuración para etiquetas
+exl-id: 864d5c35-2b26-447b-8134-414e82096f18
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%
 
 ---
 
+# Métodos de clase de configuración para etiquetas{#config-class-methods-for-tags}
 
-# Métodos de clase Config para etiquetas{#config-class-methods-for-tags}
-
-Puede configurar nombres de etiquetas personalizados en un flujo con la clase MediaPlayerItemConfig .
+Puede configurar nombres de etiquetas personalizados en una secuencia con la clase MediaPlayerItemConfig.
 
 Para crear un nuevo `MediaPlayerItemConfig`:
 
@@ -20,7 +19,7 @@ Para crear un nuevo `MediaPlayerItemConfig`:
 var mediaPlayerItemConfig = new AdobePSDK.MediPlayerItemConfig();
 ```
 
-A continuación encontrará información sobre cómo se utilizan los métodos `MediaPlayerItemConfig` para administrar las etiquetas personalizadas:
+A continuación se proporciona información sobre cómo `MediaPlayerItemConfig` Los métodos de se utilizan para administrar etiquetas personalizadas:
 
 <table id="table_0AC0973497144DDAB05726E3F031ACD1"> 
  <tbody> 
@@ -43,7 +42,7 @@ A continuación encontrará información sobre cómo se utilizan los métodos `M
    <td colname="col2"> <p>Establece la lista de etiquetas suscritas expuestas a la aplicación. </p> <p>Su aplicación también se suscribe automáticamente a todas las etiquetas que se transmiten a través de <span class="codeph"> adTags </span>. </p> </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> <b>Personalización de las etiquetas de publicidad utilizadas por el detector de oportunidades predeterminado  </b> </td> 
+   <td colname="col1"> <b>Personalizar las etiquetas de anuncio utilizadas por el detector de oportunidades predeterminado </b> </td> 
    <td colname="col2"> </td> 
   </tr> 
   <tr> 
@@ -65,9 +64,8 @@ A continuación encontrará información sobre cómo se utilizan los métodos `M
 
 Recuerde lo siguiente:
 
-* El nombre de etiqueta personalizado debe contener el prefijo `#` .
+* El nombre de etiqueta personalizado debe contener la variable `#` prefijo.
 
-   Por ejemplo, `#EXT-X-ASSET` es un nombre de etiqueta personalizado correcto, pero `EXT-X-ASSET` no es correcto.
+   Por ejemplo, `#EXT-X-ASSET` es un nombre de etiqueta personalizado correcto, pero `EXT-X-ASSET` es incorrecto.
 
 * No puede cambiar la configuración después de cargar el flujo de medios.
-

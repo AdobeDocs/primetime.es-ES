@@ -1,24 +1,23 @@
 ---
-description: Los sistemas operativos y los servidores de aplicaciones están incluidos en su solución Adobe Primetime DRM.
+description: Los sistemas operativos y los servidores de aplicaciones están incluidos en la solución DRM de Adobe Primetime.
 title: Información de seguridad específica del proveedor
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 4cc39414-cab5-4282-825d-64651d9b03e1
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
 
 ---
 
-
 # Información de seguridad específica del proveedor{#vendor-specific-security-information}
 
-Los sistemas operativos y los servidores de aplicaciones están incluidos en su solución Adobe Primetime DRM.
+Los sistemas operativos y los servidores de aplicaciones están incluidos en la solución DRM de Adobe Primetime.
 
-Para encontrar información de seguridad específica del proveedor para su sistema operativo y servidor de aplicaciones, consulte Uso del servidor de claves DRM de Adobe Primetime.
+Para obtener información de seguridad específica del proveedor para el sistema operativo y el servidor de aplicaciones, consulte Uso del servidor de claves DRM de Adobe Primetime.
 
 ## Información de seguridad del sistema operativo {#section_53CAD802FCA54C4D8CE0C4E1B3045E52}
 
-Al proteger el sistema operativo, debe implementar las medidas que describe el proveedor del sistema operativo.
+A la hora de proteger el sistema operativo, debe implementar las medidas descritas por el proveedor del sistema operativo.
 
 Estas son algunas de las medidas:
 
@@ -27,7 +26,7 @@ Estas son algunas de las medidas:
 * Eliminación de servicios y aplicaciones innecesarios
 * Copia de seguridad de archivos
 
-A continuación se proporciona información sobre los sistemas operativos compatibles con Adobe Primetime DRM:
+A continuación se proporciona información sobre los sistemas operativos compatibles con DRM de Adobe Primetime:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_ugl_kjz_n4"> 
  <thead class="- topic/thead "> 
@@ -59,23 +58,23 @@ A continuación se proporciona información sobre los enfoques para minimizar la
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Revisiones de seguridad </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Existe un mayor riesgo de que un usuario no autorizado obtenga acceso al servidor de aplicaciones si los parches y las actualizaciones de seguridad del proveedor no se aplican de manera oportuna. </p> <p>Nota:  Asegúrese de probar los parches de seguridad antes de aplicarlos a los servidores de producción. </p> <p class="- topic/p ">Debe crear políticas y procedimientos para buscar e instalar parches con regularidad. </p> </td> 
+   <td colname="1" class="- topic/entry "> <p class="- topic/p ">Parches de seguridad </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">El riesgo de que un usuario no autorizado obtenga acceso al servidor de aplicaciones aumenta si los parches y las actualizaciones de seguridad del proveedor no se aplican de forma oportuna. </p> <p>Nota: Asegúrese de probar los parches de seguridad antes de aplicarlos a los servidores de producción. </p> <p class="- topic/p ">Debe crear políticas y procedimientos para comprobar e instalar los parches de forma regular. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Software de protección antivirus </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Los analizadores de virus pueden identificar los archivos infectados mediante la búsqueda de una firma o un comportamiento inusual. </p> <p>Los escáneres guardan sus firmas de virus en un archivo, que generalmente se almacena en el disco duro local. Con frecuencia se descubren nuevos virus, por lo que debe asegurarse de que este archivo se actualice con regularidad. De esta manera, los escáneres de virus siempre pueden identificar todos los virus actuales. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Los analizadores de virus pueden identificar los archivos infectados mediante la búsqueda de una firma o un comportamiento inusual. </p> <p>Los analizadores guardan sus firmas de virus en un archivo que suele almacenarse en el disco duro local. Los nuevos virus se descubren con frecuencia, por lo que debe asegurarse de que este archivo se actualiza con regularidad. De este modo, los analizadores de virus siempre pueden identificar todos los virus actuales. </p> </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">Protocolo de tiempo de red (NTP) </p> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para un correcto funcionamiento y análisis forense, mantenga un tiempo preciso en los servidores y paquetes de Primetime DRM. Utilice una versión segura de NTP para sincronizar el tiempo de Primetime DRM en todos los sistemas conectados a Internet. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Para un funcionamiento adecuado y análisis forense, mantenga la hora exacta en los servidores y empaquetadores DRM de Primetime. Utilice una versión segura de NTP para sincronizar la hora DRM de Primetime en todos los sistemas conectados a Internet. </p> </td> 
   </tr> 
  </tbody> 
 </table>
 
 ## Información de seguridad del servidor de aplicaciones {#section_22986936F1A547CEAB2D97E9E9D4825C}
 
-Al proteger el servidor de aplicaciones, debe implementar las medidas que describe el proveedor del servidor.
+A la hora de proteger el servidor de aplicaciones, debe implementar las medidas descritas por el proveedor del servidor.
 
 Estas son algunas de estas medidas:
 
@@ -86,4 +85,3 @@ Estas son algunas de estas medidas:
 * Cierre de puertos innecesarios
 * Limitación de interfaces administrativas por direcciones IP o dominios
 * Uso del Administrador de seguridad de Java™
-

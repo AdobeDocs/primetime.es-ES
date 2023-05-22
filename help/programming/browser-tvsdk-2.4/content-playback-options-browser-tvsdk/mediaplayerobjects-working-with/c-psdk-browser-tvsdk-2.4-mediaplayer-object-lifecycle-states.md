@@ -1,64 +1,63 @@
 ---
-description: Desde el momento en que se crea la instancia de MediaPlayer hasta el momento en que se termina, esta instancia pasa de un estado a otro.
+description: Desde el momento en que se crea la instancia de MediaPlayer hasta el momento en que finaliza, esta instancia pasa de un estado al siguiente.
 title: Ciclo de vida y estados del objeto MediaPlayer
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 26cad982-ef85-42fb-aaa7-e5d494088766
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
 
 ---
 
-
 # Ciclo de vida y estados del objeto MediaPlayer{#life-cycle-and-states-of-the-mediaplayer-object}
 
-Desde el momento en que se crea la instancia de MediaPlayer hasta el momento en que se termina, esta instancia pasa de un estado a otro.
+Desde el momento en que se crea la instancia de MediaPlayer hasta el momento en que finaliza, esta instancia pasa de un estado al siguiente.
 
 Estos son los estados posibles:
 
-* **IDLE**:  `MediaPlayerStatus.IDLE`
+* **INACTIVO**: `MediaPlayerStatus.IDLE`
 
-* **INICIALIZACIÓN**:  `MediaPlayerStatus.INITIALIZING`
+* **INICIALIZACIÓN**: `MediaPlayerStatus.INITIALIZING`
 
-* **INICIALIZADO**:  `MediaPlayerStatus.INITIALIZED`
+* **INICIALIZADO**: `MediaPlayerStatus.INITIALIZED`
 
-* **PREPARACIÓN**:  `MediaPlayerStatus.PREPARING`
+* **PREPARANDO**: `MediaPlayerStatus.PREPARING`
 
-* **PREPARADO**:  `MediaPlayerStatus.PREPARED`
+* **PREPARADO**: `MediaPlayerStatus.PREPARED`
 
-* **REPRODUCIENDO**:  `MediaPlayerStatus.PLAYING`
+* **JUGANDO**: `MediaPlayerStatus.PLAYING`
 
-* **EN PAUSA**:  `MediaPlayerStatus.PAUSED`
+* **PAUSADO**: `MediaPlayerStatus.PAUSED`
 
-* **BUSCANDO**:  `MediaPlayerStatus.SEEKING`
+* **BUSCANDO**: `MediaPlayerStatus.SEEKING`
 
-* **COMPLETAR**:  `MediaPlayerStatus.COMPLETE`
+* **COMPLETADO**: `MediaPlayerStatus.COMPLETE`
 
-* **ERROR**:  `MediaPlayerStatus.ERROR`
+* **ERROR**: `MediaPlayerStatus.ERROR`
 
-* **LANZADO**:  `MediaPlayerStatus.RELEASED`
+* **PUBLICADO**: `MediaPlayerStatus.RELEASED`
 
 La lista completa de estados se define en `MediaPlayerStatus`.
 
-Conocer el estado del reproductor es útil porque algunas operaciones solo se permiten mientras el reproductor esté en un estado concreto. Por ejemplo, no se puede llamar a `play` mientras se encuentra en el estado IDLE. Debe llamarse después de alcanzar el estado PREPARADO. El estado ERROR también cambia lo que puede suceder a continuación.
+Conocer el estado del reproductor es útil porque algunas operaciones solo se permiten mientras el reproductor está en un estado particular. Por ejemplo, `play` no se puede llamar mientras se esté en estado IDLE. Debe llamarse después de alcanzar el estado PREPARADO. El estado ERROR también cambia lo que puede suceder a continuación.
 
-A medida que se carga y reproduce un recurso multimedia, el reproductor realiza la siguiente transición:
+Cuando se carga y reproduce un recurso multimedia, el reproductor realiza la transición de la siguiente manera:
 
 1. El estado inicial es IDLE.
-1. La aplicación llama a `MediaPlayer.replaceCurrentResource`, que mueve el reproductor al estado INICIALIZAR.
-1. Si el TVSDK del explorador carga correctamente el recurso, el estado cambia a INITIALIZADO.
-1. La aplicación llama a `MediaPlayer.prepareToPlay` y el estado cambia a PREPARACIÓN.
-1. El SDK del explorador prepara el flujo de medios e inicia la resolución de anuncios y la inserción de anuncios (si está habilitada).
+1. La aplicación llama a `MediaPlayer.replaceCurrentResource`, que mueve el reproductor al estado INICIALIZANDO.
+1. Si el TVSDK del explorador carga correctamente el recurso, el estado cambia a INITIALIZED.
+1. La aplicación llama a `MediaPlayer.prepareToPlay`y el estado cambia a PREPARING.
+1. TVSDK del explorador prepara el flujo de medios e inicia la resolución de anuncios y la inserción de anuncios (si está activada).
 
-   Una vez completado este paso, se insertan anuncios en la cronología o el procedimiento publicitario ha fallado, y el estado del reproductor cambia a PREPARADO.
-1. A medida que la aplicación reproduce y pone en pausa el contenido, el estado se mueve entre REPRODUCIR y PAUSADO.
+   Cuando se completa este paso, los anuncios se insertan en la cronología o el procedimiento de publicidad ha fallado y el estado del reproductor cambia a PREPARADO.
+1. A medida que la aplicación reproduce y pausa el contenido, el estado cambia entre REPRODUCIR y PAUSADO.
 
    >[!TIP]
    >
-   >Cuando se reproduce o se pone en pausa, cuando se sale de la reproducción, se apaga el dispositivo o se cambia de aplicación, el estado cambia a SUSPENDED y se liberan los recursos. Para continuar, restaure el reproductor multimedia.
+   >Mientras se reproduce o está en pausa, cuando sale de la reproducción, apaga el dispositivo o cambia de aplicación, el estado cambia a SUSPENDIDO y los recursos se liberan. Para continuar, restaure el reproductor de contenidos.
 
-1. Cuando el reproductor llega al final de la emisión, el estado se vuelve COMPLETO.
-1. Cuando la aplicación libera el reproductor de contenido, el estado cambia a LANZADO.
+1. Cuando el reproductor llega al final del flujo, el estado se vuelve COMPLETO.
+1. Cuando la aplicación libera el reproductor de contenido, el estado cambia a RELEASED.
 1. Si se produce un error durante el proceso, el estado cambia a ERROR.
 
 Esta es una ilustración del ciclo de vida de una instancia de MediaPlayer:
@@ -67,7 +66,7 @@ Esta es una ilustración del ciclo de vida de una instancia de MediaPlayer:
 
 ![](assets/player-state-transitions-diagram-android_1.2_web.png)
 
-Puede utilizar el estado para proporcionar comentarios al usuario sobre el proceso (por ejemplo, un control de número mientras espera el siguiente cambio de estado) o para realizar los siguientes pasos en la reproducción del contenido, como esperar al estado adecuado antes de llamar al siguiente método.
+Puede utilizar el estado para proporcionar comentarios al usuario sobre el proceso (por ejemplo, un control de número mientras espera el siguiente cambio de estado) o para dar los siguientes pasos durante la reproducción del contenido, como esperar al estado adecuado antes de llamar al siguiente método.
 
 Por ejemplo:
 
@@ -82,4 +81,3 @@ function onStateChanged(state) {
     } 
 } 
 ```
-

@@ -1,29 +1,28 @@
 ---
-description: El SDK de explorador admite varias funciones DASH que puede implementar para agregar funcionalidad a sus aplicaciones de vídeo.
-title: Funciones DASH compatibles
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: El TVSDK del explorador admite una serie de funciones de DASH que puede implementar para añadir funcionalidad a las aplicaciones de vídeo.
+title: Funciones de DASH compatibles
+exl-id: 29a5d1a3-e31e-459c-90b5-80227df46e4b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 0%
 
 ---
 
+# Funciones de DASH compatibles{#supported-dash-features}
 
-# Funciones DASH compatibles{#supported-dash-features}
+El TVSDK del explorador admite una serie de funciones de DASH que puede implementar para añadir funcionalidad a las aplicaciones de vídeo.
 
-El SDK de explorador admite varias funciones DASH que puede implementar para agregar funcionalidad a sus aplicaciones de vídeo.
-
-* [Funciones de reproducción principal de DASH](#dash-core-playback)
+* [Funciones de reproducción DASH Core](#dash-core-playback)
 * [Funciones de reproducción avanzadas de DASH](#dash-advanced-playback)
 * [Funciones de protección de contenido DASH](#dash-content-protection)
-* [Funciones de inserción de anuncios principales de DASH](#dash-core-ad-insertion)
-* [Funciones avanzadas de inserción de anuncios de DASH](#dash-advanced-insertion-features)
+* [Funciones de inserción de publicidad principal de DASH](#dash-core-ad-insertion)
+* [DASH Funciones avanzadas de inserción de anuncios](#dash-advanced-insertion-features)
 * [Integraciones de DASH](#dash-integrations)
 
 >[!TIP]
 >
->En las siguientes tablas de matriz de características, ![](assets/supported15.png)
+>En las tablas de la matriz de características siguientes,  ![](assets/supported15.png)
 >significa que la función es compatible con la versión actual.
 
 Se admiten las siguientes funciones:
@@ -84,29 +83,29 @@ Se admiten las siguientes funciones:
 | Categoría | Tipo de contenido | Función | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
 | Integraciones | VOD + Activo | Integración de VHL de Adobe Analytics | ![](assets/supported15.png) |
-| Integraciones | VOD + Activo | Facturación | ![](assets/supported15.png) |
+| Integraciones | VOD + Activo | Factura | ![](assets/supported15.png) |
 | Integraciones | VOD + Activo | Browserify | ![](assets/supported15.png) |
 
-## Funciones avanzadas de inserción de anuncios (CSAI) de DASH {#dash-advanced-insertion-features}
+## Funciones avanzadas de inserción de publicidad (CSAI) de DASH {#dash-advanced-insertion-features}
 
 | Categoría | Tipo de contenido | Función | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Ad Insertion | VOD | Solo publicidad | No admitido |
-| Ad Insertion | VOD | Parámetros de objetivo | Solo VOD |
+| Ad Insertion | VOD | Solo anuncio | No compatible |
+| Ad Insertion | VOD | Parámetros de segmentación | Solo VOD |
 | Ad Insertion | VOD | Parámetros personalizados | Solo VOD |
-| Ad Insertion | VOD + Activo | Política de publicidad personalizada | No admitido |
-| Ad Insertion | VOD + Activo | Carga de publicidad diferida | No admitido |
-| Ad Insertion | VOD | Anuncios Companion, anuncios tipo titular y anuncios en los que se puede hacer clic | No admitido |
-| Ad Insertion | VOD | VPAID 2.0 | No admitido |
+| Ad Insertion | VOD + Activo | Política de publicidad personalizada | No compatible |
+| Ad Insertion | VOD + Activo | Carga diferida de publicidad | No compatible |
+| Ad Insertion | VOD | Anuncios complementarios, anuncios de banner y anuncios en los que se puede hacer clic | No compatible |
+| Ad Insertion | VOD | VPAID 2.0 | No compatible |
 
-## Funciones de inserción de anuncios principales de DASH (CSAI) {#dash-core-ad-insertion}
+## Funciones de inserción de anuncios de núcleo DASH (CSAI) {#dash-core-ad-insertion}
 
 | Categoría | Tipo de contenido | Función | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Ad Insertion | VOD + Activo | Anuncio | Solo VOD |
+| Ad Insertion | VOD + Activo | Pre-roll | Solo VOD |
 | Ad Insertion | VOD + Activo | Mid-roll | Solo VOD |
-| Ad Insertion | VOD + Activo | Anuncio | Solo VOD |
-| Ad Insertion | FER VOD | Resolución de anuncios y comportamientos | No admitido |
+| Ad Insertion | VOD + Activo | Post-roll | Solo VOD |
+| Ad Insertion | VOD FER | Resolución y comportamientos de publicidad | No compatible |
 | Ad Insertion | VOD + Activo | Política de publicidad predeterminada | Solo VOD |
 | Ad Insertion | VOD + Activo | VAST 2.0/3.0 | Solo VOD |
 | Ad Insertion | VOD + Activo | VMAP 1.0 | Solo VOD |
@@ -128,13 +127,13 @@ Se admiten las siguientes funciones:
    <td colname="col1"> Protección de contenido </td> 
    <td colname="col2"> VOD + Activo </td> 
    <td colname="col3"> AES-128 </td> 
-   <td colname="col6"> No admitido </td>
+   <td colname="col6"> No compatible </td>
   </tr> 
   <tr> 
    <td colname="col1"> Protección de contenido </td> 
    <td colname="col2"> VOD + Activo </td> 
-   <td colname="col3"> Ejemplo-AES </td> 
-   <td colname="col6"> No admitido </td> 
+   <td colname="col3"> Sample-AES </td> 
+   <td colname="col6"> No compatible </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Protección de contenido </td> 
@@ -142,47 +141,47 @@ Se admiten las siguientes funciones:
    <td colname="col3"> DRM </td> 
    <td colname="col6"> 
     <ul id="ul_irb_p2g_xx"> 
-     <li id="li_C4643F2978BC4C8ABDB3E6C72C75A468">Widevine on 
+     <li id="li_C4643F2978BC4C8ABDB3E6C72C75A468">Widevine en 
       <ul id="ul_7047EA49AA3F40FE8F90E0ED6C028D83"> 
        <li id="li_B575735388D74D789D56BF373A470A6D">Chrome </li> 
        <li id="li_855146E4AC3A48E69B65F0022E1C0156">Firefox 47+ </li> 
        <li id="li_BC06B0A6EAAC4FC991C713775A8BB4DA">Chromecast </li> 
       </ul> </li> 
      <li id="li_D48B51C2208F423CB85D08886C2E1C66">PlayReady en Internet Explorer en Windows 8.1 y Edge </li> 
-     <li id="li_2786AC19387241A296E015EE6FD07F2D">Acceso a Adobe para Windows Firefox (solo vídeo) </li> 
+     <li id="li_2786AC19387241A296E015EE6FD07F2D">Acceso mediante Adobe para Windows Firefox (solo vídeo) </li> 
     </ul> </td> 
   </tr> 
  </tbody> 
 </table>
 
-## Funciones de reproducción avanzada de DASH {#dash-advanced-playback}
+## Funciones de reproducción avanzadas de DASH {#dash-advanced-playback}
 
 | Categoría | Tipo de contenido | Función | HTML5, FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Reproducción | VOD | Reproducción con desplazamiento | ![](assets/supported15.png) |
+| Reproducción | VOD | Reproducción en offset | ![](assets/supported15.png) |
 | Reproducción | VOD | Reproducción solo de audio | ![](assets/supported15.png) |
-| Reproducción | VOD | Reproducción complicada | ![](assets/supported15.png) |
-| Reproducción | VOD | Reproducción suave y difícil | ![](assets/supported15.png) |
-| Reproducción | VOD + Activo | Análisis de ID3 | No admitido |
+| Reproducción | VOD | Juego de trucos | ![](assets/supported15.png) |
+| Reproducción | VOD | Smooth Trick Play | ![](assets/supported15.png) |
+| Reproducción | VOD + Activo | Análisis de ID3 | No compatible |
 | Reproducción | VOD | Compatibilidad con varios períodos | Solo VOD |
-| Reproducción | VOD + Activo | Transmisiones con token | No admitido |
-| Reproducción | VOD + Activo | Facturación | ![](assets/supported15.png) |
+| Reproducción | VOD + Activo | Flujos tokenizados | No compatible |
+| Reproducción | VOD + Activo | Factura | ![](assets/supported15.png) |
 | Reproducción | VOD + Activo | Browserify | ![](assets/supported15.png) |
 
 ## Funciones de reproducción principal de DASH {#dash-core-playback}
 
 | Categoría | Tipo de contenido | Función | HTML5 FF, IE, Chrome, Android Chrome |
 |---|---|---|---|
-| Reproducción | VOD + Activo | Reproducción general (Reproducir, Pausar, Buscar) | ![](assets/supported15.png) |
-| Reproducción | FER VOD | Reproducción general (Reproducir, Pausar, Buscar) | No admitido |
-| Reproducción | VOD + Activo | Tasa de bits adaptable | ![](assets/supported15.png) |
-| Reproducción | VOD + Activo | Subtítulos 608/708 | ![](assets/supported15.png) |
+| Reproducción | VOD + Activo | Reproducción general (reproducir, pausar, buscar) | ![](assets/supported15.png) |
+| Reproducción | VOD FER | Reproducción general (reproducir, pausar, buscar) | No compatible |
+| Reproducción | VOD + Activo | Velocidad de bits adaptable | ![](assets/supported15.png) |
+| Reproducción | VOD + Activo | 608/708 subtítulos | ![](assets/supported15.png) |
 | Reproducción | VOD + Activo | WebVTT | Solo VOD |
 | Reproducción | VOD + Activo | Failover | Solo VOD |
-| Reproducción | VOD + Activo | Notificaciones de QoS y del reproductor | ![](assets/supported15.png) |
+| Reproducción | VOD + Activo | Notificaciones de QoS y reproductor | ![](assets/supported15.png) |
 | Reproducción | VOD + Activo | Compatibilidad con encabezados de cookie | ![](assets/supported15.png) |
-| Reproducción | VOD + Activo | Configuración de parámetros de control de búfer | ![](assets/supported15.png) |
+| Reproducción | VOD + Activo | Estableciendo parámetros de control de búfer | ![](assets/supported15.png) |
 | Reproducción | VOD + Activo | Establecer controles de velocidad de bits adaptables | ![](assets/supported15.png) |
 | Reproducción | VOD + Activo | Etiquetas personalizadas (EventStream) | Solo VOD (en línea) |
 | Reproducción | VOD + Activo | Audio de enlace tardío | Solo VOD |
-| Reproducción | VOD + Activo | 302 redireccionamiento | Solo VOD |
+| Reproducción | VOD + Activo | Redirección 302 | Solo VOD |

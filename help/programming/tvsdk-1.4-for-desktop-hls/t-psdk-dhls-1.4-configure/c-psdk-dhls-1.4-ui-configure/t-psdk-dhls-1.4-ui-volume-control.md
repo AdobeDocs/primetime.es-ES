@@ -1,14 +1,13 @@
 ---
 description: Puede configurar un control de interfaz de usuario para el volumen de sonido.
 title: Proporcionar control de volumen
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 058d79d2-35cc-4238-8fc1-2820a2d91ffb
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
 
 ---
-
 
 # Proporcionar control de volumen{#provide-volume-control}
 
@@ -16,14 +15,14 @@ Puede configurar un control de interfaz de usuario para el volumen de sonido.
 
 1. Espere a que la instancia de MediaPlayer esté en un estado válido para este comando.
 
-   Cualquier estado que no sea LANZADO es válido.
-1. Llame al método del conjunto de volúmenes en la instancia `MediaPlayer` para configurar el volumen de audio.
+   Cualquier estado excepto RELEASED es válido.
+1. Llame al método del conjunto de volúmenes en el `MediaPlayer` para configurar el volumen de audio.
 
    ```
    public function set volume(value:Number):void
    ```
 
-   El valor del volumen representa el volumen solicitado expresado como una proporción del volumen máximo, donde 0 no dice nada y 1 es el volumen máximo.
+   El valor del volumen representa el volumen solicitado expresado como una proporción del volumen máximo, donde 0 es silencioso y 1 es el volumen máximo.
 
    <table id="table_144A2B1260374FBE8D976194F602DDC7"> 
    <thead> 
@@ -34,7 +33,7 @@ Puede configurar un control de interfaz de usuario para el volumen de sonido.
    </thead>
    <tbody> 
    <tr> 
-      <td colname="col1"> Menor que 0 </td> 
+      <td colname="col1"> Menos de 0 </td> 
       <td colname="col2"> 0 </td> 
    </tr> 
    <tr> 
@@ -42,13 +41,13 @@ Puede configurar un control de interfaz de usuario para el volumen de sonido.
       <td colname="col2"> El volumen especificado </td> 
    </tr> 
    <tr> 
-      <td colname="col1"> Bueno a 1 </td> 
-      <td colname="col2"> El valor se divide entre 100 y se establece en uno de los siguientes valores: 
+      <td colname="col1"> Bueno que 1 </td> 
+      <td colname="col2"> El valor dividido entre 100 y establecido en uno de los siguientes valores: 
       <ul id="ul_8C2282F0EDC44A408820F5768709214F"> 
       <li id="li_B00BC6F4812D4000891358F762C8E492">El resultado si está entre 0 y 1 </li> 
-      <li id="li_03B7F30662554F299320040CAC2DEB7A">1 si el resultado es bueno a 1 </li> 
-      </ul> <p>Sugerencia:  Esta lógica gestiona los valores que proporcionan los clientes en función de versiones anteriores de 
-      <span class="codeph">frases/primetime-sdk-name</span>, donde los valores de volumen oscilaban entre 0 y 100. </p> </td> 
+      <li id="li_03B7F30662554F299320040CAC2DEB7A">1 si el resultado es bueno que 1 </li> 
+      </ul> <p>Sugerencia: Esta lógica gestiona los valores proporcionados por los clientes en función de versiones anteriores de 
+      <span class="codeph">frases/primetime-sdk-name</span>, donde los valores de volumen oscilaron entre 0 y 100. </p> </td> 
    </tr> 
    </tbody> 
    </table>

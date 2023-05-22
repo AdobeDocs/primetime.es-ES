@@ -1,23 +1,21 @@
 ---
-title: Información general sobre la topología de red
-description: Información general sobre la topología de red
+title: Introducción a la topología de red
+description: Introducción a la topología de red
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: ca5e8701-f8a3-4125-bb60-bfb9efd5c8f3
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 0%
 
 ---
 
+# Introducción a la topología de red {#network-topology-overview}
 
-# Descripción general de la topología de red {#network-topology-overview}
+Después de implementar correctamente Adobe Access, es importante mantener la seguridad de su entorno. En esta sección se describen las tareas necesarias para mantener la seguridad del servidor de producción de Acceso a Adobe.
 
-Después de implementar correctamente Acceso a Adobe, es importante mantener la seguridad de su entorno. En esta sección se describen las tareas necesarias para mantener la seguridad del servidor de producción de Adobe Access.
-
-Utilice un *proxy inverso* para asegurarse de que los distintos conjuntos de direcciones URL para las aplicaciones web de acceso a Adobe están disponibles tanto para los usuarios externos como para los internos. Esta configuración es más segura que permitir que los usuarios se conecten directamente al servidor de aplicaciones en el que se está ejecutando Adobe Access. El proxy inverso realiza todas las solicitudes HTTP para el servidor de aplicaciones que ejecuta Acceso a Adobe. Los usuarios solo tienen acceso de red al proxy inverso y solo pueden intentar las conexiones URL que admite el proxy inverso.
+Utilice un *proxy inverso* para asegurarse de que los usuarios externos e internos tengan a su disposición diferentes conjuntos de direcciones URL para aplicaciones web de acceso de Adobe. Esta configuración es más segura que permitir que los usuarios se conecten directamente al servidor de aplicaciones en el que se está ejecutando el acceso al Adobe. El proxy inverso realiza todas las solicitudes HTTP para el servidor de aplicaciones que ejecuta el acceso de Adobe. Los usuarios solo tienen acceso a la red desde el proxy inverso y solo pueden intentar las conexiones URL compatibles con el proxy inverso.
 
 <!--<a id="fig-frx-dcg-44"></a>-->
 
 ![](assets/AdobeAccess_4_SecureDeployment_web.png)
-

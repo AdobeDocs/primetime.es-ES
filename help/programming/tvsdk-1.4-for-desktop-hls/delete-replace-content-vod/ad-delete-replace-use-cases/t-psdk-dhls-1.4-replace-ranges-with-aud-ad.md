@@ -1,21 +1,20 @@
 ---
-title: Reemplazar intervalos de tiempo por un anuncio de Adobe Primetime ad decisioning
-description: Reemplazar intervalos de tiempo por un anuncio de Adobe Primetime ad decisioning
+title: Reemplazo de intervalos de tiempo con un anuncio de Adobe Primetime ad Decisioning
+description: Reemplazo de intervalos de tiempo con un anuncio de Adobe Primetime ad Decisioning
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 263274b7-4602-4be0-b0ad-040f6f0f2fae
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%
 
 ---
 
+# Reemplazo de intervalos de tiempo con un anuncio de Adobe Primetime ad Decisioning{#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
 
-# Reemplazar intervalos de tiempo por un anuncio de Adobe Primetime ad decisioning{#replace-time-ranges-with-an-adobe-primetime-ad-decisioning-ad}
+Eliminar `TimeRanges` entre los `begin` y `end` in `localTime` en la cronología. Sustitúyala por un AdBreak de `begin` hasta `begin+replaceDuration`.
 
-Elimine `TimeRanges` entre `begin` y `end` en `localTime` de la cronología. Sustitúyalo por un AdBreak de `begin` a `begin+replaceDuration`.
-
-Reemplace intervalos con anuncios de Primetime y decisioning.
+Reemplace rangos por anuncios de Primetime y Decisioning.
 
 ```
 {   
@@ -70,4 +69,3 @@ Reemplace intervalos con anuncios de Primetime y decisioning.
     "id": "vod_003"
 }
 ```
-

@@ -1,23 +1,22 @@
 ---
-description: Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookie para la administración de sesiones, el acceso a la puerta, etc.
-title: Trabajar con cookies
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookies para la administración de sesiones, el acceso a puertas, etc.
+title: Trabajo con cookies
+exl-id: 7f0e7d77-0718-4df7-8380-0e9351f588bc
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 0%
 
 ---
 
+# Trabajo con cookies {#work-with-cookies}
 
-# Trabajar con cookies {#work-with-cookies}
+Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookies para la administración de sesiones, el acceso a puertas, etc.
 
-Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookie para la administración de sesiones, el acceso a la puerta, etc.
+Esta es una solicitud de ejemplo al servidor de claves con algo de autenticación:
 
-A continuación, se muestra un ejemplo de solicitud al servidor de claves con cierta autenticación:
-
-1. El cliente inicia sesión en el sitio web en un explorador y su inicio de sesión muestra que este cliente puede ver el contenido.
-1. En función de lo que espera el servidor de licencias, la aplicación genera un token de autenticación.
+1. El cliente inicia sesión en el sitio web en un explorador y su inicio de sesión muestra que este cliente tiene permiso para ver contenido.
+1. En función de lo que espere el servidor de licencias, la aplicación generará un token de autenticación.
 
    Este valor se pasa a TVSDK.
 1. TVSDK establece este valor en el encabezado de la cookie.
@@ -27,7 +26,7 @@ A continuación, se muestra un ejemplo de solicitud al servidor de claves con ci
 
 Para trabajar con cookies:
 
-1. Cree un `cookieManager` y agregue las cookies para los URI a su cookieStore.
+1. Crear un `cookieManager` y añada sus cookies para los URI de su cookieStore.
 
    Por ejemplo:
 
@@ -43,32 +42,32 @@ Para trabajar con cookies:
 
    >[!TIP]
    >
-   >Cuando se habilita el redireccionamiento 302, la solicitud de publicidad puede redirigirse a un dominio diferente del dominio al que pertenece la cookie.
+   >Cuando la redirección 302 está habilitada, la solicitud de publicidad se puede redirigir a un dominio diferente del dominio al que pertenece la cookie.
 
-   TVSDK consulta esto `cookieManager` durante la ejecución, comprueba si hay cookies asociadas con la dirección URL y las utiliza automáticamente.
+   TVSDK consulta esto `cookieManager` en tiempo de ejecución, comprueba si hay cookies asociadas a la dirección URL y las utiliza automáticamente.
 
-   Si es necesario actualizar las cookies en la aplicación durante la reproducción, no utilice la API `networkConfiguration.setCookieHeaders` , ya que la actualización se producirá en el almacén de cookies de JAVA.
+   Si es necesario actualizar las cookies en la aplicación durante la reproducción, no utilice `networkConfiguration.setCookieHeaders` API, ya que la actualización se producirá en el almacén de cookies JAVA.
 
-   `networkConfiguration.setCookieHeaders` La API establece las cookies en C++ CookieStore de TVSDK.
+   `networkConfiguration.setCookieHeaders` La API establece las cookies en el almacén de cookies de C++ de TVSDK.
 
-   Cuando utilice cookies JAVA y las comparta entre Application y TVSDK, utilice JAVA CookieStore para administrar las cookies únicamente.
+   Cuando utilice cookies JAVA y las comparta entre Application y TVSDK, utilice JAVA CookieStore para gestionar las cookies únicamente.
 
-   Antes de inicializar la reproducción, establezca las cookies en CookieStore mediante el Administrador de cookies, tal como se ha indicado anteriormente.
+   Antes de iniciar la reproducción, establezca las cookies en CookieStore mediante el Administrador de cookies como se ha indicado anteriormente.
 
-   TVSDK recogerá automáticamente la cookie almacenada en CookieStore.
+   TVSDK recoge automáticamente la cookie almacenada en CookieStore.
 
    Si es necesario actualizar un valor de cookie más adelante durante la reproducción, llame al mismo método add de CookieStore con la misma clave y un nuevo campo de valor.
 
-   También se configura
+   También establecido
    `networkConfiguration.setReadSetCookieHeader`(false) antes de llamar a
    `config.setNetworkConfiguration(networkConfiguration)`
 
    >[!NOTE]
    >
-   >Después de establecer &#39;setReadSetCookieHeader&#39; en false, establezca las cookies para las solicitudes clave mediante el administrador de cookies JAVA.
+   >Después de establecer este &quot;setReadSetCookieHeader&quot; en false, establezca las cookies para las solicitudes de clave mediante el administrador de cookies JAVA.
 
    `onCookiesUpdated(CookiesUpdatedEvent cookiesUpdatedEvent)`
-Esta API de rellamada se activará cada vez que haya una actualización en las cookies C++ (cookies que provienen de la respuesta http). La aplicación necesita escuchar esta llamada de retorno y puede actualizar su JAVA CookieStore en consecuencia para que sus llamadas de red en JAVA puedan utilizar las cookies como se muestra a continuación:
+Esta API de llamada de retorno se activa siempre que haya una actualización en las cookies de C++ (cookies que provienen de la respuesta http). La aplicación debe escuchar esta llamada de retorno y puede actualizar su JAVA CookieStore en consecuencia para que sus llamadas de red en JAVA puedan utilizar las cookies como se muestra a continuación:
 
    ```
    private final CookiesUpdatedEventListener cookiesUpdatedEventListener = new CookiesUpdatedEventListener() {

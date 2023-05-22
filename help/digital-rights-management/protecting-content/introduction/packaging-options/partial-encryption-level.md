@@ -2,31 +2,30 @@
 title: Nivel de cifrado parcial
 description: Nivel de cifrado parcial
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 47bcd5e1-f45a-44b8-8a00-209a6d0abd0d
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 0%
 
 ---
 
-
 # Nivel de cifrado parcial {#partial-encryption-level}
 
-Esta opción de empaquetado especifica si se deben cifrar todas las tramas o solo un subconjunto de tramas. Hay tres niveles de encriptación: baja, media y alta.
+Esta opción de empaquetado especifica si se deben cifrar todos los marcos o sólo un subconjunto de ellos. Existen tres niveles de cifrado: bajo, medio y alto.
 
 >[!NOTE]
 >
->El cifrado parcial se aplica solo a la pista de vídeo en archivos F4V/MP4.
+>El cifrado parcial se aplica únicamente a la pista de vídeo de los archivos F4V/MP4.
 
-El cifrado parcial está diseñado para proporcionar granularidad a los proveedores de contenido para codificar el contenido en partes. El cifrado de contenido añade una sobrecarga de CPU al dispositivo que está descifrando y viendo el contenido. Utilice el cifrado parcial para reducir la sobrecarga de CPU mientras mantiene una protección muy sólida del contenido. Un caso motivador para utilizar esta función es una única pieza de contenido que se pretende reproducir en dispositivos de baja, media y alta potencia.
+El cifrado parcial está diseñado para proporcionar a los proveedores de contenido granularidad para codificar el contenido en partes. El cifrado de contenido añade sobrecarga de CPU al dispositivo que descifra y visualiza el contenido. Utilice el cifrado parcial para reducir la sobrecarga de CPU y, al mismo tiempo, mantener una protección muy sólida del contenido. Un caso motivador para usar esta función es un solo fragmento de contenido que se pretende que sea reproducible en dispositivos de baja, media y alta potencia.
 
-Debido a la naturaleza de la codificación de vídeo, no es necesario cifrar el 100 % del vídeo para que no se pueda reproducir si se roba. El cifrado parcial tiene tres configuraciones: baja, media y alta, y los porcentajes de cifrado asociados dependen de cómo se codifique el vídeo. Debido a esta dependencia de codificación, el porcentaje del contenido cifrado se encuentra dentro de los siguientes intervalos:
+Debido a la naturaleza de la codificación de vídeo, no es necesario cifrar el 100% del vídeo para que no se pueda reproducir si se roba. El cifrado parcial tiene tres configuraciones, baja, media y alta, y los porcentajes de cifrado asociados dependen de cómo se codifique el vídeo. Debido a esta dependencia de codificación, el porcentaje del contenido cifrado se encuentra dentro de los siguientes intervalos:
 
-* Alto: Codifica todas las muestras.
-* Medio: Codifica un destinatario el 50 % de los datos.
-* Bajo: Codifica un objetivo del 20 al 30 % de los datos.
+* Alto: codifica todas las muestras.
+* Medio: codifica un 50 % de los datos objetivo.
+* Bajo: codifica un destino del 20 al 30 % de los datos.
 
-Estos ajustes se diseñaron con la siguiente regla: Cualquier contenido cifrado en la configuración baja también se cifra en la configuración media. Esto garantiza que el mismo fragmento de contenido distribuido con un cifrado bajo por una parte y distribuido a medio cifrado por otra parte no comprometa la protección del contenido.
+Esta configuración se diseñó con la siguiente regla: Cualquier contenido cifrado en el nivel bajo también se cifra en el nivel medio. Esto garantiza que el mismo fragmento de contenido distribuido con cifrado bajo por una parte y distribuido con cifrado medio por otra parte no comprometa la protección del contenido.
 
-Ejemplo de caso de uso: Al reducir el nivel de encriptación, disminuye la sobrecarga de descifrado en el cliente y mejora el rendimiento de reproducción en equipos de gama baja.
+Ejemplo de caso de uso: Al reducir el nivel de cifrado, se reduce la sobrecarga de descifrado en el cliente y se mejora el rendimiento de reproducción en los equipos de gama baja.

@@ -1,5 +1,5 @@
 ---
-title: Crear una operación en un segmento de usuario y realizar un seguimiento del efecto
+title: Creación de una operación en un segmento de usuario y seguimiento de efectos
 description: Cómo crear una operación que afecte y rastree el efecto en un segmento definido de usuarios.
 exl-id: ab74f857-e178-4120-8f9c-655ec921d096
 source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
@@ -11,38 +11,38 @@ ht-degree: 0%
 
 # Creación de una operación en un segmento de usuario {#operation-to-track-segment}
 
-Cada página de informes en Account IQ tiene un **Crear nueva operación** para ayudarle a crear flujos de trabajo que automatizan (y simplifican) diversas acciones (masivas) en cuentas de suscriptor; defina reglas para especificar una muestra, definir acciones y registrar y analizar los efectos de esas acciones. En la página para crear operaciones, puede definir la muestra de grupos de usuarios en los que se realizarán las operaciones y programar la operación para que se ejecute en una fecha futura.
+Cada página de informes de Account IQ tiene un **Crear nueva operación** opción que permite crear flujos de trabajo para automatizar (y simplificar) diversas acciones (masivas) en las cuentas de suscriptor; definir reglas para especificar un ejemplo, definir acciones y registrar y analizar los efectos de dichas acciones. En la página para crear operaciones, puede definir el ejemplo de grupos de usuarios en los que se realizarán las operaciones y programar la operación para que se ejecute en una fecha futura.
 
 Para crear una operación:
 
-1. Defina su segmento (cohorte) para su análisis en cualquiera de las páginas de informes o tableros, siguiendo los pasos indicados en [Definición de segmentos y periodo de tiempo](/help/AccountIQ/howto-select-segment-timeframe.md).
+1. Defina su segmento (cohorte) para su análisis en cualquiera de las páginas de informes o paneles, siguiendo los pasos indicados en [Definición de segmentos y periodo de tiempo](/help/AccountIQ/howto-select-segment-timeframe.md).
 
-1. Select **Crear nueva operación** disponible en cualquiera de las páginas de informes o tableros. La variable **Crear nueva operación** se muestra.
+1. Seleccionar **Crear nueva operación** opción disponible en cualquiera de las páginas de informes o paneles. El **Crear nueva operación** se muestra la página.
 
    ![Página para crear una nueva operación](assets/create-new-operations.png)
-   *Figura: Página para crear una nueva operación*
+   *Imagen: página para crear una nueva operación*
 
-1. En el **Crear nueva operación** rellene los detalles de los campos del formulario para:
+1. En el **Crear nueva operación** , rellene los detalles de los campos de formulario para:
 
-   * [Nombre de la operación](#operation-details) en Detalles de operación
-   * Segmento para ejecutar la operación en [Segmento de destino](#segment) y refinar el segmento utilizando [Segmentación adicional](#additional-segmentation)
-   * [Tipo de segmento](#segment-type) under [Segmento de destino](#segment)
+   * [Nombre de operación](#operation-details) en Detalles de operación
+   * Segmento en el que se ejecutará la operación [Segmento de destino](#segment) y perfeccione el segmento utilizando [Segmentación adicional](#additional-segmentation)
+   * [Tipo de segmento](#segment-type) bajo [Segmento de destino](#segment)
    * [Acción](#action)
-   * [Activación de la programación](#schedule)
+   * [Programar activación](#schedule)
 
-1. [Guardar la operación](#save-operation).
+1. [Guarde la operación](#save-operation).
 
-## Detalles de la operación {#operation-details}
+## Detalles de operación {#operation-details}
 
-+++Programador: detalles de operación
++++Programador- detalles de operación
 
-Asigne un nombre a la nueva operación en **Nombre de la operación** en Detalles de la operación. Por ejemplo, &quot;*Pruebe el efecto de la autenticación multifactor en los suscriptores de MVPD X&quot; o &quot;Limite el número de emisiones en la monitorización de concurrencia&quot; o &quot;Limita los suscriptores de MVPD que ven el canal &#39;N&#39; de más de 20 dispositivos*&quot;.
+Asigne un nombre a la nueva operación en **Nombre de operación** en Detalles de la operación. Por ejemplo, &quot;*Pruebe el efecto de la autenticación multifactor en los suscriptores de MVPD X&quot; o &quot;Limite el número de flujos en la Monitorización de la Concurrencia&quot; o &quot;Limite los suscriptores de MVPD D D que ven el canal &#39;N&#39; desde más de 20 dispositivos*&quot;.
 
 +++
 
-+++MVPD: detalles de la operación
++++MVPD- detalles de operación
 
-Asigne un nombre a la nueva operación en **Nombre de la operación** en Detalles de la operación. Por ejemplo, &quot;*Pruebe el efecto de la autenticación multifactor en los visores del canal N&quot; o &quot;Limite el número de emisiones en la supervisión de concurrencia&quot; o &quot;Limite los suscriptores que ven el canal &quot;N&quot; de más de 20 dispositivos*&quot;.
+Asigne un nombre a la nueva operación en **Nombre de operación** en Detalles de la operación. Por ejemplo, &quot;*Pruebe el efecto de la autenticación multifactor en los visualizadores del canal N&quot;, &quot;Limite el número de emisiones en la Monitorización de la concurrencia&quot; o &quot;Limite los suscriptores que visualizan el canal &#39;N&#39; desde 20 dispositivos más*&quot;.
 
 +++
 
@@ -50,7 +50,7 @@ Asigne un nombre a la nueva operación en **Nombre de la operación** en Detalle
 
 +++Programador- Segmento de destino
 
-La variable **Segmento** define a los usuarios a los que se aplicará esta operación; o el grupo de muestra para la operación. El segmento predeterminado es el **segmento** ha seleccionado mediante [panel de segmento y marco de tiempo](/help/AccountIQ/howto-select-segment-timeframe.md) en la página de informes o tableros principales del paso 1 anterior.
+El **Segmento** aquí se definen los usuarios a los que se va a operar con esta operación o el grupo de muestra de la operación. El segmento predeterminado es **segmento** ha seleccionado utilizando [panel de segmento y periodo de tiempo](/help/AccountIQ/howto-select-segment-timeframe.md) en la página de informes principales o paneles del paso 1 anterior.
 
 <!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
 
@@ -58,13 +58,13 @@ La variable **Segmento** define a los usuarios a los que se aplicará esta opera
 ![](assets/operations-segment-selection.png)
 *Figure: Segment and timeframe selection on the main page*-->
 
-Este segmento define los suscriptores que se verán afectados por la operación que se está creando. Por ejemplo, el segmento seleccionado puede especificar *todas las cuentas de suscriptor de MVPD denominadas &#39;C&#39; que ven el canal &#39;N Sports&#39;*.
+Este segmento define los suscriptores que se verán afectados por la operación que se está creando. Por ejemplo, el segmento seleccionado podría especificar *todas las cuentas de suscriptor de MVPD llamadas &quot;C&quot; que ven el canal &quot;N Sports&quot;*.
 
 +++
 
-+++MVPD: segmento de Target
++++MVPD- Segmento de destino
 
-La variable **Segmento** define a los usuarios a los que se aplicará esta operación; o el grupo de muestra para la operación. El segmento predeterminado es el **segmento** ha seleccionado mediante [panel de segmento y marco de tiempo](/help/AccountIQ/howto-select-segment-timeframe.md) en la página de informes o tableros principales del paso 1 anterior.
+El **Segmento** aquí se definen los usuarios a los que se va a operar con esta operación o el grupo de muestra de la operación. El segmento predeterminado es **segmento** ha seleccionado utilizando [panel de segmento y periodo de tiempo](/help/AccountIQ/howto-select-segment-timeframe.md) en la página de informes principales o paneles del paso 1 anterior.
 
 <!--* The first segment entry in the **Segment** section, by default, shows the **segment** you selected in the step 1.
 
@@ -72,32 +72,32 @@ La variable **Segmento** define a los usuarios a los que se aplicará esta opera
 ![](assets/operations-segment-selection.png)
 *Figure: Segment and timeframe selection on the main page*-->
 
-Este segmento define sus suscriptores (que son visualizadores de canales específicos) que se verán afectados por la operación que se está creando. Por ejemplo, su segmento (predeterminado) incluye *todas las cuentas de suscriptor que ven el canal &quot;N Sports&quot;*.
+Este segmento define los suscriptores (que son visualizadores de canales específicos) que se verán afectados por la operación que se está creando. Por ejemplo, el segmento (predeterminado) incluye *todas las cuentas de suscriptor que ven el canal &quot;N Sports&quot;*.
 +++
 
 ### Segmentación adicional {#additional-segmentation}
 
-Además, puede refinar el segmento de destino agregando más métricas. Por ejemplo, puede agregar otra métrica Probabilidad de uso compartido buena al 90 %. Así que ahora la declaración del problema dice: *&quot;cree una operación para cuentas de suscriptores de MVPD llamadas &#39;C&#39; que estén viendo el canal &#39;N Sports&#39; que tengan una probabilidad de compartir bueno 90%&quot;*.
+Además, puede restringir el segmento de destinatario agregando más métricas. Por ejemplo, puede agregar otra métrica Probabilidad de uso compartido buena al 90 %. Ahora la declaración del problema dice *&quot;crear una operación para las cuentas de suscriptor de MVPD denominadas &#39;C&#39; que están viendo el canal &#39;N Sports&#39; que tienen una probabilidad de uso compartido del 90 % bueno&quot;*.
 
 ![](assets/additional-segment.gif)
 
 *Figura: Segmentación adicional*
 
-Además, si refina la operación añadiendo otra métrica para el número de dispositivos, la declaración de problema actualizada dice *&quot;cree una operación para cuentas de suscriptores de MVPD llamadas &#39;C&#39; que estén viendo el canal &#39;N Sports&#39; que tengan una puntuación de uso compartido superior a 90 y que estén utilizando más de 5 dispositivos para ver contenido durante el periodo de evaluación&quot;*.
+Además, si refina la operación agregando otra métrica para el número de dispositivos, la instrucción de problema actualizada indica lo siguiente *&quot;crear una operación para cuentas de suscriptor de MVPD llamadas &#39;C&#39; que están viendo el canal &#39;N Sports&#39; que tienen una puntuación de uso compartido superior a 90 y están utilizando más de 5 dispositivos para ver contenido durante el periodo de evaluación&quot;*.
 
 ![](assets/refined-segment.png)
 
-*Figura: Segmento de ejemplo refinado con puntuación de uso compartido general y número de métricas de dispositivos*
+*Imagen: segmento de ejemplo refinado con puntuación de uso compartido general y métricas de número de dispositivos*
 
-Al hacerlo, el grupo de usuarios se vuelve más refinado. Por lo tanto, al agregar más métricas y condiciones, califica aún más el segmento para definir las cuentas en las que se van a operar.
+Al hacerlo, el grupo de usuarios se refina. Por lo tanto, al agregar más métricas y condiciones, está calificando aún más el segmento para definir las cuentas en las que operar.
 
 ### Tipo de segmento {#segment-type}
 
-Tipo de segmento es la forma en que se trata un segmento a lo largo del periodo de evaluación de la operación.
+Tipo de segmento es la forma en que se trata un segmento durante todo el periodo de evaluación de la operación.
 
 ![](assets/segment-type.png)
 
-*Figura: Refine el número de segmentos para operar usando el tipo de segmento*
+*Imagen: refinamiento del número de segmentos en los que operar mediante el tipo de segmento*
 
 <!--The segment type option allows you to further refine your segment based on the evaluation period (or time).
 
@@ -113,7 +113,7 @@ When you select **Variable number of accounts** segment type, you do not limit t
 
 >[!IMPORTANT]
 >
->Solo puede usar **Número fijo de cuentas** a partir de ahora. La opción para seleccionar **Número variable de cuentas** estará disponible en próximas versiones.
+>Solo puede utilizar **Número fijo de cuentas** opción, a partir de ahora. La opción para seleccionar **Número variable de cuentas** estará disponible en próximas versiones.
 
 <!--
 
@@ -142,45 +142,45 @@ if not fixed segment, then I won't initially evaluate or have initial set of 500
 
 ## Acción {#action}
 
-La variable **Acción** define qué operación realizará en el segmento definido.
+El **Acción** define la operación que se realizará en el segmento definido.
 
 Existen dos tipos de acciones que puede realizar:
 
-* Acciones que utilizan sistemas integrados con Account IQ; como **Supervisión de la concurrencia** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
+* Acciones que utilizan sistemas integrados con Account IQ; como **Monitorización de concurrencia** <!--[Concurrency Monitoring](https://tve.helpdocsonline.com/concurrency-monitoring-introduction), or Adobe Target-->.
 
-* Acciones para crear y procesar flujos de trabajo externos a Account IQ y no integrados con el sistema de Account IQ. Por ejemplo, una acción para que el programador de canales &#39;N&#39; envíe correos electrónicos masivos a todos los suscriptores de MVPD &#39;C&#39;.
+* Acciones para crear y procesar flujos de trabajo que sean externos a Account IQ y no estén integrados con el sistema Account IQ. Por ejemplo, una acción para que el programador de canal &quot;N&quot; envíe correos electrónicos masivos a todos los suscriptores de MVPD &quot;C&quot;.
 
 >[!NOTE]
 >
->Al crear operaciones, no solo se especifican acciones y se define su ámbito, sino que también se empieza a registrar el efecto de estas operaciones.
+>Al crear operaciones, no solo se especifican acciones y se define su ámbito, sino que también se comienza a registrar el efecto de estas operaciones.
 
 ## Programación{#schedule}
 
-Puede programar la activación para la operación estableciendo las fechas de inicio y finalización.
+Puede programar la activación de la operación estableciendo las fechas de inicio y finalización.
 
 >[!NOTE]
 >
->La fecha de inicio y la fecha de finalización tienen una granularidad igual a la que seleccionó para la evaluación al definir el segmento mediante **panel de segmento y marco de tiempo**, en el paso 1.
+>La fecha de inicio y la fecha de finalización tienen una granularidad igual a la granularidad seleccionada para la evaluación al definir segmentos mediante **panel de segmento y periodo de tiempo**, en el paso 1.
 >
 >
->Por lo tanto, si seleccionó la granularidad como Semana, las fechas de inicio y finalización estarán en términos de semana (por ejemplo, Semana 14); si selecciona la granularidad como Mes, las fechas de inicio y finalización se expresan en términos de meses.
+>Por lo tanto, si seleccionó la granularidad como Semana, las fechas de inicio y finalización se expresan en términos de semana (por ejemplo, Semana 14); si selecciona la granularidad como Mes, las fechas de inicio y finalización se expresan en términos de meses.
 
 
 >[!IMPORTANT]
 >
->La fecha de inicio debe ser posterior al periodo de evaluación y también posterior a la fecha actual. Del mismo modo, la fecha de finalización también debe ser posterior a la fecha de inicio y a la fecha actual.
+>La fecha de inicio debe ser posterior al periodo de evaluación y también a la fecha actual. Del mismo modo, la fecha de finalización también debe ser posterior a la fecha de inicio y a la fecha actual.
 
-### Guardar la operación {#save-operation}
+### Guarde la operación {#save-operation}
 
-Cuando guarda la operación, aparece una pantalla de mensaje que le informa de que el segmento que ha definido en esta operación también se guarda para el futuro. Sin embargo, debe asignar un nombre a este segmento.
+Al guardar la operación, se muestra una pantalla de mensaje que le informa de que el segmento definido en esta operación también se guarda para futuras operaciones. Sin embargo, debe asignar un nombre a este segmento.
 
 ![](assets/save-operation.png)
 
-*Figura: Guardar operación y especificar el nombre del segmento*
+*Imagen: operación de guardado y especificación del nombre del segmento*
 
 >[!NOTE]
 >
->Se recomienda nombrar la operación en función de la acción que esté realizando en combinación con el segmento en el que actuará.
+>Se recomienda asignar un nombre a la operación en función de la acción que esté realizando en combinación con el segmento sobre el que actuará.
 
 <!--In future you can select this saved segment when defining a segment for your analysis on the main reports page. Moreover, the saved segment is also listed when you create an operation the next time.
 
@@ -196,8 +196,8 @@ Cuando guarda la operación, aparece una pantalla de mensaje que le informa de q
 
 Una vez creada una operación, se ejecutará desde la fecha de inicio hasta la fecha de finalización especificada.
 
-Los detalles de la operación guardada se pueden ver en el [Operaciones](/help/AccountIQ/operations.md) página.
+Los detalles de la operación guardada se pueden ver en la página principal [Operaciones](/help/AccountIQ/operations.md) página.
 
 ![](assets/new-operation-created.png)
 
-*Figura: La operación recién creada se muestra en la página principal Operaciones*
+*Imagen: la operación recién creada aparece en la página principal de Operaciones*

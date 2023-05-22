@@ -1,28 +1,27 @@
 ---
-description: Puede anular el comportamiento predeterminado de cómo administra TVSDK las búsquedas en lugar de las publicidades al usar marcadores de anuncios personalizados.
-title: Controlar el comportamiento de reproducción para buscar en marcadores de anuncios personalizados
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede anular el comportamiento predeterminado para el modo en que TVSDK gestiona las búsquedas sobre los anuncios al utilizar marcadores de anuncio personalizados.
+title: Controle el comportamiento de reproducción para buscar sobre los marcadores de publicidad personalizados
+exl-id: c148aca6-699d-4b93-9013-9e20bc391687
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
 
 ---
 
+# Controle el comportamiento de reproducción para buscar sobre los marcadores de publicidad personalizados {#control-playback-behavior-for-seeking-over-custom-ad-markers}
 
-# Controlar el comportamiento de reproducción para buscar en marcadores de anuncios personalizados {#control-playback-behavior-for-seeking-over-custom-ad-markers}
+Puede anular el comportamiento predeterminado para el modo en que TVSDK gestiona las búsquedas sobre los anuncios al utilizar marcadores de anuncio personalizados.
 
-Puede anular el comportamiento predeterminado de cómo administra TVSDK las búsquedas en lugar de las publicidades al usar marcadores de anuncios personalizados.
+De forma predeterminada, cuando un usuario busca dentro o fuera de las secciones de publicidad que resultan de la colocación de marcadores de publicidad personalizados, TVSDK omite los anuncios. Esto puede diferir del comportamiento de reproducción actual para las pausas publicitarias estándar. Puede configurar TVSDK para que cambie la posición del cabezal de reproducción al principio del anuncio personalizado omitido más recientemente cuando el usuario busque más allá de uno o más anuncios personalizados.
 
-De forma predeterminada, cuando un usuario busca en secciones de anuncios anteriores o en secciones de anuncios anteriores resultantes de la colocación de marcadores de anuncios personalizados, TVSDK omite los anuncios. Esto puede diferir del comportamiento de reproducción actual de las pausas publicitarias estándar. Puede configurar TVSDK para que vuelva a colocar el cursor de reproducción al principio del anuncio personalizado que se haya omitido más recientemente cuando el usuario busque más anuncios personalizados.
-
-1. Llame a `CustomRangeMetadata.setAdjustSeekPosition` con `true`.
+1. Llamada `CustomRangeMetadata.setAdjustSeekPosition` con `true`.
 
    ```java
    customRangeMetadata.setAdjustSeekPosition (true);
    ```
 
-1. Utilice `customRangeMetadata` en `MediaPlayerItemConfig`.
+1. Uso `customRangeMetadata` in `MediaPlayerItemConfig`.
 
    ```java
    // Set customRangeMetadata 

@@ -1,37 +1,36 @@
 ---
-description: Para el contenido de vídeo bajo demanda (VOD), TVSDK inserta los saltos de publicidad duplicando los anuncios en el contenido principal, de modo que la duración de la cronología aumente.
-title: Resolver e insertar publicidad de VOD
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Para el contenido de vídeo bajo demanda (VOD), TVSDK inserta saltos de publicidad uniendo los anuncios en el contenido principal para que aumente la duración de la cronología.
+title: Resolución e inserción de un anuncio de VOD
+exl-id: c8e1423c-5d53-452c-ad01-8335ccf42471
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%
 
 ---
 
+# Resolución e inserción de anuncios de VOD {#resolve-and-insert-vod-ad}
 
-# Resolver e insertar anuncios de VOD {#resolve-and-insert-vod-ad}
+Para el contenido de vídeo bajo demanda (VOD), TVSDK inserta saltos de publicidad uniendo los anuncios en el contenido principal para que aumente la duración de la cronología.
 
-Para el contenido de vídeo bajo demanda (VOD), TVSDK inserta los saltos de publicidad duplicando los anuncios en el contenido principal, de modo que la duración de la cronología aumente.
-
-Antes de la reproducción, TVSDK resuelve anuncios conocidos, inserta y rompe el contenido principal tal como se describe en una cronología devuelta por Adobe Primetime al tomar decisiones de anuncios y, si es necesario, vuelve a calcular la cronología virtual.
+Antes de la reproducción, TVSDK resuelve los anuncios conocidos, inserta saltos de anuncios en el contenido principal tal como se describe en una cronología que devuelve Adobe Primetime ad decisioning y vuelve a calcular la cronología virtual, si es necesario.
 
 TVSDK inserta anuncios de las siguientes maneras:
 
-* **Anuncio previo a la emisión**, que se coloca antes del contenido.
+* **Pre-roll**, que se coloca antes del contenido.
 * **Mid-roll**, que se encuentra en medio del contenido.
-* **Anuncio**, que se coloca después del contenido.
+* **Post-roll**, que se coloca después del contenido.
 
 >[!TIP]
 >
->Una vez iniciada la reproducción, no se pueden producir cambios adicionales en el contenido.
+>Después de que comience la reproducción, no se pueden producir cambios adicionales en el contenido.
 
-Los anuncios no pueden ser:
+Los anuncios no pueden:
 
 * Insertado
 * Eliminado
 
-   Por ejemplo, no puede eliminar anuncios integrados del contenido para ofrecer una experiencia sin publicidad.
+   Por ejemplo, no puede eliminar anuncios integrados del contenido para ofrecer una experiencia sin anuncios.
 * Reemplazado
 
-   Por ejemplo, no se pueden reemplazar los anuncios integrados por anuncios orientados.
+   Por ejemplo, no se pueden reemplazar los anuncios integrados con anuncios de destino.

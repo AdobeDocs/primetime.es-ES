@@ -1,39 +1,37 @@
 ---
-description: Para mostrar anuncios de banners, debe crear instancias de banners y permitir que TVSDK escuche eventos relacionados con anuncios.
-title: Mostrar anuncios de tipo titular
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Para mostrar anuncios de banner, debe crear instancias de banner y permitir que TVSDK escuche eventos relacionados con anuncios.
+title: Mostrar anuncios de banner
+exl-id: 04c4ef1c-bc3b-4f8a-b5af-ba23baf2a6c8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
+# Mostrar anuncios de banner {#display-banner-ads}
 
-# Mostrar anuncios de tipo titular {#display-banner-ads}
+Para mostrar anuncios de banner, debe crear instancias de banner y permitir que TVSDK escuche eventos relacionados con anuncios.
 
-Para mostrar anuncios de banners, debe crear instancias de banners y permitir que TVSDK escuche eventos relacionados con anuncios.
+TVSDK proporciona una lista de anuncios de banner complementarios asociados a un anuncio lineal a través de `AdPlaybackEventListener.onAdBreakStart` evento.
 
-TVSDK proporciona una lista de anuncios de tipo titular asociados a un anuncio lineal a través del evento `AdPlaybackEventListener.onAdBreakStart` .
+Los manifiestos pueden especificar anuncios de banner complementarios mediante:
 
-Los manifiestos pueden especificar anuncios de banners complementarios mediante:
-
-* Un fragmento HTML
-* La dirección URL de una página de iFrame
-* La URL de una imagen estática o un archivo SWF de Flash de Adobe
+* Un fragmento de HTML
+* La dirección URL de una página iFrame
+* La URL de una imagen estática o un archivo del SWF del Flash de Adobe
 
 Para cada anuncio complementario, TVSDK indica qué tipos están disponibles para su aplicación.
 
-1. Añada un oyente para el evento `AdPlaybackEventListener.onAdBreakStart` que haga lo siguiente:
+1. Agregue un oyente para `AdPlaybackEventListener.onAdBreakStart` que hace lo siguiente:
 
-   * Borra los anuncios existentes en la instancia del banner.
+   * Borra los anuncios existentes en la instancia de banner.
    * Obtiene la lista de anuncios complementarios de `Ad.getCompanionAssets`.
-   * Si la lista de anuncios complementarios no está vacía, repita la lista para las instancias de banner.
+   * Si la lista de anuncios complementarios no está vacía, itere en la lista de instancias de banner.
 
-      Cada instancia de banner (un `AdAsset`) contiene información, como ancho, alto, tipo de recurso (html, iframe o static) y datos necesarios para mostrar el banner complementario.
-   * Si una publicidad de vídeo no tiene anuncios complementarios reservados con ella, la lista de recursos complementarios no contiene datos para esa publicidad de vídeo.
-   * Para mostrar un anuncio en pantalla independiente, agregue la lógica a la secuencia de comandos para ejecutar una etiqueta de publicidad de visualización DFP normal (DoubleClick for Publishers) en la instancia de banner adecuada.
-   * Envía la información del banner a una función de la página que muestra los banners en una ubicación adecuada.
+      Cada instancia de banner (un `AdAsset`) contiene información, como anchura, altura, tipo de recurso (html, iframe o estático) y datos necesarios para mostrar el banner complementario.
+   * Si un anuncio de vídeo no tiene anuncios complementarios reservados con él, la lista de recursos complementarios no contiene datos para ese anuncio de vídeo.
+   * Para mostrar un anuncio en pantalla independiente, agregue la lógica al script para ejecutar una etiqueta de anuncio en pantalla DFP (DoubleClick for Publishers) normal en la instancia de banner adecuada.
+   * Envía la información del titular a una función de la página que muestra los titulares en una ubicación adecuada.
 
-      Normalmente es `div` y su función utiliza el `div ID` para mostrar el banner.
-
+      Esto suele ser un `div`, y la función utiliza el `div ID` para mostrar el titular.

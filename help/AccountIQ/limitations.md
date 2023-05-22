@@ -1,6 +1,6 @@
 ---
 title: Limitaciones y problemas conocidos
-description: Problemas conocidos en el producto.
+description: Problemas conocidos del producto.
 exl-id: 08d65716-8b6a-4300-acda-fec63e1e6815
 source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
 workflow-type: tm+mt
@@ -11,32 +11,32 @@ ht-degree: 0%
 
 # Problemas y limitaciones conocidos {#known-issues}
 
-Adobe se esfuerza por ofrecer una funcionalidad sólida y experiencias de usuario sin problemas a través de sus ofertas. La versión actual (versión 1.0) de Account IQ proporciona análisis de uso compartido y suscripción a proveedores de flujo continuo con un alto grado de confianza. Sin embargo, las siguientes limitaciones se solucionarán en las próximas versiones.
+Adobe se esfuerza por ofrecer una funcionalidad sólida y experiencias de usuario sin problemas a través de sus ofertas. La versión actual (versión 1.0) de Account IQ proporciona análisis de uso compartido y suscripción a proveedores de streaming con un alto grado de confianza. Sin embargo, las siguientes limitaciones se abordarán en próximas versiones.
 
-* Al definir cohortes en el tablero o en las páginas de informes, actualmente no hay opción de agregar métricas como **número de dispositivos** para restringir el segmento. Esta funcionalidad estará disponible en una versión futura.
+* Al definir cohortes en las páginas de informes o tableros, actualmente no hay opción para agregar métricas como **número de dispositivos** para refinar el segmento. Esta capacidad estará disponible en una versión futura.
 
-* Al estimar las puntuaciones de uso compartido de cuentas individuales, Account IQ adopta un enfoque conservador que permite a las empresas actuar en el uso compartido con bueno grado de confianza. Sin embargo, este enfoque tiende a subestimar la cantidad total de uso compartido cuando se agrega entre muchas cuentas.
+* Al estimar las puntuaciones de uso compartido para cuentas individuales, Account IQ adopta un enfoque conservador que permite a las empresas actuar sobre el uso compartido con un bueno grado de confianza. Sin embargo, este enfoque tiende a subestimar la cantidad total de uso compartido cuando se acumula en muchas cuentas.
 
-* La variable [Puntuación de uso compartido general](/help/AccountIQ/dashboard.md#overall-sharing-score) actualmente solo factores en [Nivel de uso compartido](/help/AccountIQ/dashboard.md#sharing-level) y [Uso de cuentas compartidas](/help/AccountIQ/dashboard.md#usage-from-shared-accounts). Las versiones futuras incorporarán métricas adicionales.
+* El [Puntuación general de uso compartido](/help/AccountIQ/dashboard.md#overall-sharing-score) actualmente solo hay factores en [Nivel de uso compartido](/help/AccountIQ/dashboard.md#sharing-level) y [Uso de cuentas compartidas](/help/AccountIQ/dashboard.md#usage-from-shared-accounts). Las versiones futuras tendrán en cuenta las métricas adicionales.
 
-* Al definir cohortes en las páginas de informes o tableros, los selectores para MVPD y canales carecen del mecanismo de búsqueda, a partir de ahora.
+* Al definir cohortes en las páginas de informes o tableros, los selectores de MVPD y canales carecen del mecanismo de búsqueda, por ahora.
 
-* Al definir cohortes en las páginas de informes o tableros, existe una limitación para seleccionar solo hasta 10 MVPD y programadores (o canales individuales).
+* Al definir cohortes en las páginas de informes o tableros, existe la limitación de seleccionar solo hasta 10 MVPD y programadores (o canales individuales).
 
-* La opción de exportar estadísticas de cuenta está limitada a exportar 1000 cuentas hasta ahora.
+* La opción de exportar estadísticas de cuenta se limita a exportar 1000 cuentas, a partir de ahora.
 
-* La opción para seleccionar [Tipo de segmento](#segment-type) cuando se define Operaciones se limita a **Número fijo de cuentas**. La variable **Número variable de cuentas** estará disponible en una versión próxima.
+* La opción para seleccionar [Tipo de segmento](#segment-type) al definir Operations se limita a **Número fijo de cuentas**. El **Número variable de cuentas** La opción estará disponible en una próxima versión.
 
-* Las secciones Prueba comparativa, Modelos de detección, Segmentos, Instantáneas y Reglas del panel de navegación izquierdo están deshabilitadas actualmente y estarán disponibles en una versión próxima.
+* Las secciones de Benchmark, Modelos de detección, Segmentos, Instantáneas y Reglas de la navegación izquierda están desactivadas actualmente y estarán disponibles en una próxima versión.
 
-* Al crear [Operaciones](/help/AccountIQ/operation-affecting-user-segment.md), solo puede identificar dos tipos de [Acciones](/help/AccountIQ/operation-affecting-user-segment.md) a partir de ahora: reglas de monitorización de concurrencia y acciones externas.
+* Al crear [Operaciones](/help/AccountIQ/operation-affecting-user-segment.md), solo se pueden identificar dos tipos de [Acciones](/help/AccountIQ/operation-affecting-user-segment.md) a partir de ahora: reglas de supervisión de concurrencia y acciones externas.
 
-* Actualmente, las Operaciones solo se pueden crear y [programado](/help/AccountIQ/operation-affecting-user-segment.md#action). Las versiones futuras le permitirán pausar, reanudar y administrar por completo.
+* Actualmente, solo se pueden crear Operaciones y [programado](/help/AccountIQ/operation-affecting-user-segment.md#action). Las versiones futuras le permiten pausar, reanudar y administrar por completo.
 
-* Debido al conjunto de datos más limitado utilizado, el modo de aislamiento no refleja realmente la cantidad de uso compartido. Por lo tanto, MVPD en modo de aislamiento no puede compararse con ningún otro MVPD. <!--do we need to separate out this limitation, which is from a different persona i.e. only for Programmer persona?-->
+* Debido al conjunto de datos más limitado que se utiliza, el modo de aislamiento no refleja realmente la cantidad de uso compartido. Por lo tanto, MVPD en el modo de aislamiento no se puede comparar con ninguna otra MVPD. <!--do we need to separate out this limitation, which is from a different persona i.e. only for Programmer persona?-->
 
-* Al definir un [segmento](/help/AccountIQ/segments-timeframe.md) para una operación puede agregar métricas. Pero si selecciona un segmento guardado, no podrá agregar más métricas para refinar el segmento.
+* Al definir un nuevo [segmento](/help/AccountIQ/segments-timeframe.md) para una operación, puede añadir métricas. Sin embargo, si selecciona un segmento guardado, no podrá añadir más métricas para restringir el segmento.
 
-* La granularidad y el selector de intervalo de tiempo están limitados a una semana o un mes, lo que significa que los datos se pueden evaluar en una sola semana o en un solo mes.
+* La granularidad y el selector de periodo de tiempo están limitados a una semana o un mes, lo que significa que los datos pueden evaluarse en una sola semana o solo en un mes.
 
-* Actualmente, los intervalos predefinidos están desactivados en el selector de granularidad y marcos de tiempo, y estarán disponibles en una versión futura.
+* Los intervalos predefinidos están desactivados actualmente en el selector de granularidad y periodo de tiempo y estarán disponibles en una versión futura.

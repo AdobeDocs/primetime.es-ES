@@ -1,23 +1,22 @@
 ---
-title: Casos de uso especial
-description: Casos de uso especial
+title: Casos de uso especiales
+description: Casos de uso especiales
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 33aad8cc-5939-4890-bc89-32d6bbf1fa4c
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%
 
 ---
 
+# Casos de uso especiales{#special-use-cases}
 
-# Casos de uso especial{#special-use-cases}
-
-TVSDK prefiere la configuración de intervalos personalizados a la configuración de anuncios estándar. Por ejemplo, si se definen intervalos MARK , se ignora la configuración de inserción de la publicidad. Si se definen intervalos REPLACE, TVSDK utiliza automáticamente el modo de señalización `CustomRanges` .
+TVSDK prefiere la configuración de intervalo personalizado a la configuración de anuncio estándar. Por ejemplo, si se definen intervalos MARK, se ignoran los ajustes de inserción del anuncio. Si se definen intervalos REPLACE, TVSDK utiliza automáticamente la variable `CustomRanges` modo de señalización.
 
 1. `ReplaceRange` sin duración de reemplazo
 
-   Si falta la duración de la sustitución, el servidor determina la duración real de la sustitución. El número de anuncios colocados en este `AdBreak` también lo determina el servidor.
+   Si falta la duración de reemplazo, el servidor determina la duración real de reemplazo. El número de anuncios colocados en este `AdBreak` también lo determina el servidor.
 
    ```
    {
@@ -61,6 +60,6 @@ TVSDK prefiere la configuración de intervalos personalizados a la configuració
    }
    ```
 
-1. MARCA e intervalos de DELETE con duración de reemplazo
+1. Intervalos de MARCA y DELETE con duración de sustitución
 
    Se ignora la duración de reemplazo adicional.

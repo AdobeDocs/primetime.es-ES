@@ -1,15 +1,14 @@
 ---
-title: Estructura del directorio de registros
-description: Estructura del directorio de registros
+title: Estructura del directorio de registro
+description: Estructura del directorio de registro
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 8c52fd85-cc46-41da-b5a1-41b5d61da6ad
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '16'
 ht-degree: 0%
 
 ---
-
 
 # Estructura del directorio de registro{#log-directory-structure}
 
@@ -29,4 +28,3 @@ El directorio de registro tiene la siguiente estructura:
  </i class="+ topic>
 </i class="+ topic>
 ```
-

@@ -1,22 +1,21 @@
 ---
-description: TVSDK proporciona API y código de muestra para la gestión de periodos de interrupción.
-title: Implementación de la gestión de bloqueos
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: TVSDK proporciona API y código de ejemplo para gestionar períodos de interrupción.
+title: Implementación de gestión de interrupciones
+exl-id: c7252467-a075-4227-b7bc-db1112a96a2b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
 
 ---
 
+# Implementación de gestión de interrupciones{#implement-blackout-handling}
 
-# Implementar la gestión de bloqueos{#implement-blackout-handling}
+TVSDK proporciona API y código de ejemplo para gestionar períodos de interrupción.
 
-TVSDK proporciona API y código de muestra para la gestión de periodos de interrupción.
+Para implementar la gestión de interrupciones, incluido el suministro de contenido alternativo durante la interrupción:
 
-Para implementar la gestión de bloqueos, incluido el suministro de contenido alternativo durante la interrupción:
-
-1. Configure la aplicación para detectar etiquetas de bloqueo en un manifiesto de flujo en directo.
+1. Configure la aplicación para detectar etiquetas de interrupción en un manifiesto de flujo en directo.
 
    ```
    private function startPlayback(resource:MediaResource):void { 
@@ -30,7 +29,7 @@ Para implementar la gestión de bloqueos, incluido el suministro de contenido al
    }
    ```
 
-1. Cree oyentes de eventos para eventos de metadatos temporizados en flujos en primer y segundo plano.
+1. Cree detectores de eventos para eventos de metadatos cronometrados en flujos en primer y segundo plano.
 
    ```
    private function createMediaPlayer(context:MediaPlayerContext):void { 
@@ -42,7 +41,7 @@ Para implementar la gestión de bloqueos, incluido el suministro de contenido al
    }
    ```
 
-1. Implemente controladores de eventos de metadatos temporizados para flujos en primer y segundo plano.
+1. Implemente controladores de eventos de metadatos cronometrados para las secuencias en primer y segundo plano.
 
    Primer plano:
 
@@ -86,7 +85,7 @@ Para implementar la gestión de bloqueos, incluido el suministro de contenido al
    }
    ```
 
-1. Prepare MediaPlayer para los bloqueos.
+1. Preparar MediaPlayer para interrupciones.
 
    ```
    public function prepareBlackoutRanges(timedMetadata:Vector.<TimedMetadata>):void { 
@@ -124,7 +123,7 @@ Para implementar la gestión de bloqueos, incluido el suministro de contenido al
    }
    ```
 
-1. Configure una comprobación de la lista de objetos TimedMetadataObjects para cada aparición de una actualización en la posición del cursor de reproducción.
+1. Configure una comprobación de la lista de TimedMetadataObjects para cada ocurrencia de una actualización de la posición del cabezal de reproducción.
 
    ```
    private function onTimeChange(event:TimeChangeEvent):void { 
@@ -157,7 +156,7 @@ Para implementar la gestión de bloqueos, incluido el suministro de contenido al
    }
    ```
 
-1. Cree métodos para cambiar contenido al principio y al final del periodo de interrupción.
+1. Cree métodos para cambiar el contenido al principio y al final del período de interrupción.
 
    ```
    public function initiate(event:TimerEvent=null):void { 
@@ -195,4 +194,3 @@ Para implementar la gestión de bloqueos, incluido el suministro de contenido al
        } 
    }
    ```
-

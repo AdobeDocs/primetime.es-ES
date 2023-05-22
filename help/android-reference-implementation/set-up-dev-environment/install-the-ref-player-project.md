@@ -1,44 +1,43 @@
 ---
-description: La referencia TVSDK Primetime es una aplicación de Android creada en torno a los marcos TVSDK y AVE.
-title: Generar la implementación de referencia de Primetime
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: La referencia de Primetime de TVSDK es una aplicación de Android creada en torno a los marcos de TVSDK y AVE.
+title: Genere la implementación de referencia de Primetime
+exl-id: d2950f2b-06d7-4fc8-a031-5f058ce47545
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '216'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
+# Genere la implementación de referencia de Primetime {#build-the-primetime-reference-implementation}
 
-# Generar la implementación de referencia de Primetime {#build-the-primetime-reference-implementation}
+La referencia de Primetime de TVSDK es una aplicación de Android creada en torno a los marcos de TVSDK y AVE.
 
-La referencia TVSDK Primetime es una aplicación de Android creada en torno a los marcos TVSDK y AVE.
+Para configurar y generar el proyecto de referencia de Primetime en Eclipse:
 
-Para configurar y crear el proyecto de referencia de Primetime en Eclipse:
-
-1. Descargue el archivo zip de TVSDK para Android y desempaquete el archivo en un directorio en una ubicación que recuerde.
+1. Descargue el archivo zip de Android de TVSDK y desempaquete en un directorio en una ubicación que recuerde.
 1. Inicie Eclipse.
-1. Seleccione **[!UICONTROL File]** > **[!UICONTROL Import]**.
-1. Seleccione **[!UICONTROL Android]** > **[!UICONTROL Existing Android Code Into Workspace]**.
-1. Haga clic **[!UICONTROL Next]**.
-1. Utilice el botón **[!UICONTROL Browse]** para rellenar el campo **[!UICONTROL Root Directory]** con el directorio en [!DNL samples/PrimetimeReference/src] en el que desempaquetó el archivo zip TVSDK para Android.
+1. Seleccionar **[!UICONTROL File]** > **[!UICONTROL Import]**.
+1. Seleccionar **[!UICONTROL Android]** > **[!UICONTROL Existing Android Code Into Workspace]**.
+1. Clic **[!UICONTROL Next]**.
+1. Utilice el **[!UICONTROL Browse]** para rellenar el **[!UICONTROL Root Directory]** con el directorio en [!DNL samples/PrimetimeReference/src] al que ha desempaquetado el archivo zip de TVSDK para Android.
 1. Seleccione los siguientes proyectos para importar: **[!UICONTROL appcompat]**, **[!UICONTROL PrimetimeReference]**.
-1. Haga clic **[!UICONTROL Finish]**.
-1. Seleccione **[!UICONTROL Project]** > **[!UICONTROL Build Project]** para crear el proyecto.
+1. Clic **[!UICONTROL Finish]**.
+1. Seleccionar  **[!UICONTROL Project]** > **[!UICONTROL Build Project]** para generar el proyecto.
 
-   Este paso no es necesario si el proyecto está configurado para generarse automáticamente.
-1. Si desea incluir el proyecto de pruebas en el espacio de trabajo, asocie el proyecto de pruebas con el proyecto PrimetimeReference:
-   1. Repita los pasos 3. hasta 6.
+   Este paso no es necesario si el proyecto se configura para que se genere automáticamente.
+1. Si desea incluir el proyecto de pruebas en el espacio de trabajo, asócielo con el proyecto PrimetimeReference:
+   1. Repita los pasos 3. hasta el 6.
    1. Seleccione el siguiente proyecto para importar: `PrimetimeReference\tests`.
-   1. Haga clic **[!UICONTROL Finish]**.
+   1. Clic **[!UICONTROL Finish]**.
 
       El proyecto de pruebas depende del proyecto CatalogActivity, por lo que debe asociar el proyecto de pruebas con el proyecto CatalogActivity.
-   1. Haga clic con el botón derecho en **[!UICONTROL tests]** y seleccione **[!UICONTROL Properties]**.
-   1. Seleccione la pestaña **[!UICONTROL Projects]** en Ruta de compilación de Java.
-   1. Haga clic **[!UICONTROL Add...]**
+   1. Clic con el botón derecho **[!UICONTROL tests]** y elija **[!UICONTROL Properties]**.
+   1. Seleccione el **[!UICONTROL Projects]** en Ruta de la versión de Java.
+   1. Clic **[!UICONTROL Add...]**
    1. Seleccione CatalogActivity.
-   1. Haga clic en **[!UICONTROL OK]** para agregar el proyecto.
-   1. Haga clic en **[!UICONTROL OK]** para salir de la página Propiedades.
-   1. Seleccione **[!UICONTROL Project]** > **[!UICONTROL Build Project]** para crear el proyecto.
+   1. Clic **[!UICONTROL OK]** para agregar el proyecto.
+   1. Clic **[!UICONTROL OK]** para salir de la página Propiedades.
+   1. Seleccionar  **[!UICONTROL Project]** > **[!UICONTROL Build Project]** para generar el proyecto.
 
-      Este paso no es necesario si el proyecto está configurado para generarse automáticamente.
+      Este paso no es necesario si el proyecto se configura para que se genere automáticamente.

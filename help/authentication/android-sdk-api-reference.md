@@ -1,32 +1,31 @@
 ---
-title: Referencia de la API del SDK para Android
-description: Referencia de la API del SDK para Android
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+title: Referencia de API de SDK para Android
+description: Referencia de API de SDK para Android
+exl-id: f932e9a1-2dbe-4e35-bd60-a4737407942d
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '4517'
 ht-degree: 0%
 
 ---
 
-
-
-# Referencia de la API del SDK para Android {#android-sdk-api-reference}
+# Referencia de API de SDK para Android {#android-sdk-api-reference}
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 ## Introducción {#intro}
 
-Este documento detalla los métodos y las llamadas de retorno expuestos por el SDK para Android para la autenticación Adobe Primetime, compatibles con las versiones de autenticación de Adobe Primetime 1.7 y posteriores. Los métodos y las funciones de llamada de retorno que se describen aquí se definen en los archivos de encabezado AccessEnabler.h y EntitlementDelegate.h .
+Este documento detalla los métodos y las llamadas de retorno expuestos por el SDK de Android para la autenticación de Adobe Primetime, compatible con las versiones de autenticación de Adobe Primetime 1.7 y posteriores. Los métodos y las funciones de devolución de llamada que se describen aquí se definen en los archivos de encabezado AccessEnabler.h y EntitlementDelegate.h.
 
-Consulte [https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library](https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library) para el último SDK de AccessEnabler para Android. 
+Consulte la [https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library](https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-AccessEnabler-Library) para el SDK de AccessEnabler de Android más reciente. 
 
 
-**Nota:** El equipo de autenticación de Adobe Primetime le anima a utilizar solo la autenticación de Adobe Primetime *public* API:
+**Nota:** El equipo de autenticación de Adobe Primetime le recomienda utilizar únicamente la autenticación de Adobe Primetime *público* API:
 
-- Las API públicas están disponibles *y* en todos los tipos de cliente admitidos. Para cualquier función pública, nos aseguramos de que cada tipo de cliente tenga una versión correspondiente de los métodos asociados.</span>
-- Las API públicas deben ser lo más estables posible, para admitir la compatibilidad con versiones anteriores y garantizar que las integraciones de socios no se rompan. Sin embargo, para *non*-API públicas, nos reservamos el derecho de cambiar su firma en cualquier momento futuro. Si se encuentra con un flujo particular que no se puede admitir mediante una combinación de las llamadas a la API de autenticación de Adobe Primetime pública actuales, el mejor enfoque es informarnos. Teniendo en cuenta sus necesidades, podemos modificar las API públicas y proporcionar una solución estable para el futuro.
+- Las API públicas están disponibles *y completamente probado* en todos los tipos de cliente admitidos. Para cualquier función pública, nos aseguramos de que cada tipo de cliente tenga una versión correspondiente de los métodos asociados.</span>
+- Las API públicas deben ser lo más estables posible, admitir la compatibilidad con versiones anteriores y garantizar que las integraciones de socios no se rompan. Sin embargo, para *non*-API públicas, nos reservamos el derecho de cambiar su firma en cualquier momento futuro. Si se encuentra con un flujo particular que no se puede admitir a través de una combinación de las llamadas públicas actuales a la API de autenticación de Adobe Primetime, el mejor enfoque es hacérnoslo saber. Teniendo en cuenta sus necesidades, podemos modificar las API públicas y proporcionar una solución estable en el futuro.
 
 ## API de Android {#api}
 
@@ -38,7 +37,7 @@ Consulte [https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-Ac
 - [getAuthentication](#getAuthN)
 - [displayProviderDialog](#displayProviderDialog)
 - [setSelectedProvider](#setSelectedProvider)
-- [navegarToUrl](#navigagteToUrl)
+- [navigationToUrl](#navigagteToUrl)
 - [getAuthenticationToken](#getAuthNToken)
 - [setAuthenticationStatus](#setAuthNStatus)
 - preautorizar
@@ -55,17 +54,17 @@ Consulte [https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-Ac
 
 ### Factory.getInstance {#getInstance}
 
-**Descripción:** Crea una instancia del objeto Access Enabler. Debe haber una sola instancia de Access Enabler por instancia de aplicación.
+**Descripción:** Crea una instancia del objeto Habilitador de acceso. Debe haber una sola instancia de Access Enabler por cada instancia de aplicación.
 
 | Llamada de API: constructor |
 | --- |
-| **public static** AccessEnabler **getInstance**(Context appContext, String softwareStatement, String redirectUrl)<br>        **lanzamientos** AccessEnablerException <br><br>**public static** AccessEnabler getInstance(Context appContext, String env_url, String softwareStatement, String redirectUrl)<br>**lanzamientos** AccessEnablerException |
+| **estática pública** AccessEnabler **getInstance**(Context appContext, String softwareStatement, String redirectUrl)<br>        **lanzamientos** AccessEnablerException <br><br>**estática pública** AccessEnabler getInstance(Context appContext, String env_url, String softwareStatement, String redirectUrl)<br>**lanzamientos** AccessEnablerException |
 
 **Disponibilidad:** v3.1.2+
 
 **Parámetros:**
 
-- *appContext*: Contexto de la aplicación de Android.
+- *appContext*: contexto de aplicación de Android.
 - env\_url: para realizar pruebas con el entorno de ensayo de Adobe, env\_url se puede establecer en &quot;sp.auth-staging.adobe.com&quot;
 
 **Obsoleto:**
@@ -79,13 +78,13 @@ Consulte [https://tve.zendesk.com/hc/en-us/articles/204963219-Android-Native-Ac
 
 ### setRequestor {#setRequestor}
 
-**Descripción:** Establece la identidad del programador. A cada programador se le asigna un ID único al registrarse con Adobe para el sistema de autenticación de Adobe Primetime. Cuando se trata de SSO y tokens remotos, el estado de autenticación puede cambiar cuando la aplicación está en segundo plano, se puede volver a llamar a setRequestor cuando la aplicación se ponga en primer plano para sincronizar con el estado del sistema (obtenga un token remoto si SSO está habilitado o elimine el token local si se ha producido un cierre de sesión mientras tanto).
+**Descripción:** Establece la identidad del programador. A cada programador se le asigna un ID único al registrarse con el Adobe en el sistema de autenticación de Adobe Primetime. Cuando se trata de SSO y tokens remotos, el estado de autenticación puede cambiar cuando la aplicación está en segundo plano. Se puede volver a llamar a setRequestor cuando la aplicación se pone en primer plano para sincronizar con el estado del sistema (recupere un token remoto si está habilitado el SSO o elimine el token local si se ha cerrado la sesión mientras tanto).
 
-La respuesta del servidor contiene una lista de MVPD junto con información de configuración adjunta a la identidad del Programador. El código Access Enabler utiliza internamente la respuesta del servidor. Solo el estado de la operación (es decir, SUCCESS/FAIL) se presenta a la aplicación a través de la llamada de retorno setRequestorComplete() .
+La respuesta del servidor contiene una lista de MVPD junto con información de configuración adjunta a la identidad del programador. El código Access Enabler utiliza internamente la respuesta del servidor. Solo el estado de la operación (es decir, SUCCESS/FAIL) se presenta a la aplicación a través de la llamada de retorno setRequestorComplete().
 
-Si la variable *url* no se usa, la llamada de red resultante se dirige a la dirección URL predeterminada del proveedor de servicios: el entorno de producción/lanzamiento de Adobe.
+Si la variable *url* no se utiliza, la llamada de red resultante se dirige a la dirección URL del proveedor de servicios predeterminado: el entorno de producción/versión de Adobe.
 
-Si se proporciona un valor para la variable *url* , la llamada de red resultante se dirige a todas las direcciones URL proporcionadas en la variable *url* parámetro. Todas las solicitudes de configuración se activan simultáneamente en subprocesos separados. El primer encuestado tiene prioridad al compilar la lista de MVPD. Para cada MVPD de la lista, Access Enabler recuerda la URL del proveedor de servicios asociado. Todas las solicitudes de asignación de derechos subsiguientes se dirigen a la URL asociada al proveedor de servicios que estaba emparejado con el MVPD de destino durante la fase de configuración.
+Si se proporciona un valor para *url* , la llamada de red resultante se dirige a todas las direcciones URL proporcionadas en el parámetro *url* parámetro. Todas las solicitudes de configuración se activan simultáneamente en subprocesos independientes. El primer respondedor tiene prioridad al compilar la lista de MVPD. Para cada MVPD de la lista, el Habilitador de acceso recuerda la URL del proveedor de servicios asociado. Todas las solicitudes de derechos subsiguientes se dirigen a la URL asociada al proveedor de servicios emparejado con la MVPD de destino durante la fase de configuración.
 
 | Llamada de API: configuración del solicitante |
 | --- |
@@ -101,13 +100,13 @@ Si se proporciona un valor para la variable *url* , la llamada de red resultan
 
 **Parámetros:**
 
-- *requestorID*: ID exclusivo asociado al programador. Pase el ID exclusivo asignado por Adobe a su sitio cuando se registre por primera vez con el servicio de autenticación de Adobe Primetime.
+- *requestorID*: ID único asociado con el programador. Pase el ID único asignado por el Adobe a su sitio cuando se registró por primera vez en el servicio de autenticación de Adobe Primetime.
 
-- *signedRequestorID*: Una copia del ID del solicitante que se firma digitalmente con su clave privada. <!--For more details. see [Registering Native Clients](http://tve.helpdocsonline.com/registering-native-clients)-->.
+- *signedRequestorID*: una copia del ID del solicitante firmado digitalmente con su clave privada. <!--For more details. see [Registering Native Clients](http://tve.helpdocsonline.com/registering-native-clients)-->.
 
-- *url*: Parámetro opcional; de forma predeterminada, se utiliza el proveedor de servicios de Adobe (http://sp.auth.adobe.com/). Esta matriz le permite especificar puntos finales para los servicios de autenticación y autorización proporcionados por Adobe (se pueden utilizar diferentes instancias para la depuración). Puede usarlo para especificar varias instancias del proveedor de servicios de autenticación de Adobe Primetime. Al hacerlo, la lista de MVPD está compuesta por los extremos de todos los proveedores de servicios. Cada MVPD está asociado con el proveedor de servicios más rápido; es decir, el proveedor que respondió primero y que admite ese MVPD.
+- *url*: Parámetro opcional; de forma predeterminada, se utiliza el proveedor de servicios de Adobe (http://sp.auth.adobe.com/). Esta matriz permite especificar extremos para los servicios de autenticación y autorización proporcionados por el Adobe (se pueden utilizar diferentes instancias para la depuración). Puede utilizar esto para especificar varias instancias del proveedor de servicios de autenticación de Adobe Primetime. Al hacerlo, la lista de MVPD se compone de los extremos de todos los proveedores de servicios. Cada MVPD está asociado con el proveedor de servicios más rápido; es decir, el proveedor que respondió primero y que admite ese MVPD.
 
-**Llamadas de retorno activadas:** `setRequestorComplete()`
+**Llamadas activadas:** `setRequestorComplete()`
 
 Obsoleto:
 
@@ -115,15 +114,15 @@ Obsoleto:
     
     public void setRequestor (String requestorId, String signedRequestorId, ArrayList)&lt;string> url)
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 ### setRequestorComplete {#setRequestorComplete}
 
-**Descripción:** Llamada de retorno activada por Access Enabler que informa a su aplicación de que la fase de configuración ha finalizado. Esto es una señal de que la aplicación puede empezar a emitir solicitudes de asignación de derechos. La aplicación no puede emitir solicitudes de asignación de derechos hasta que se complete la fase de configuración.
+**Descripción:** Llamada de retorno activada por el Access Enabler que informa a la aplicación de que la fase de configuración ha finalizado. Esto indica que la aplicación puede empezar a emitir solicitudes de derechos. La aplicación no puede emitir solicitudes de asignación de derechos hasta que se complete la fase de configuración.
 
-| Llamada de retorno: configuración del solicitante completada |
+| Llamada de retorno: configuración del solicitante completa |
 | --- |
-| java public void setRequestorComplete(estado int) |
+| java public void setRequestorComplete(int status) |
 
 **Disponibilidad:** v1.0+
 
@@ -131,21 +130,21 @@ Obsoleto:
 
 - *status*: Puede tomar uno de los siguientes valores:
    - SDK \>= 3.4.0
-      - `AccessEnablerConstants.ACCESS_ENABLER_STATUS_SUCCESS` : la fase de configuración se completó correctamente
-      - `AccessEnablerConstants.ACCESS_ENABLER_STATUS_ERROR` : error en la fase de configuración
+      - `AccessEnablerConstants.ACCESS_ENABLER_STATUS_SUCCESS` - la fase de configuración se completó correctamente
+      - `AccessEnablerConstants.ACCESS_ENABLER_STATUS_ERROR` - fase de configuración fallida
    - SDK \&lt; 3.4
-      - `AccessEnabler.ACCESS_ENABLER_STATUS_SUCCESS` : la fase de configuración se completó correctamente
-      - `AccessEnabler.ACCESS_ENABLER_STATUS_ERROR` : error en la fase de configuración
+      - `AccessEnabler.ACCESS_ENABLER_STATUS_SUCCESS` - la fase de configuración se completó correctamente
+      - `AccessEnabler.ACCESS_ENABLER_STATUS_ERROR` - fase de configuración fallida
 
 **Activado por:** `setRequestor()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 ### setOptions {#setOptions}
 
-**Descripción:** Configura las opciones globales del SDK. Acepta un **Mapa\&lt;string string=&quot;&quot;>** como argumento. Los valores del mapa se pasarán al servidor junto con cada llamada de red que realice el SDK.
+**Descripción:** Configura las opciones globales del SDK. Acepta un **Mapa\&lt;string string=&quot;&quot;>** como argumento. Los valores del mapa se pasan al servidor junto con cada llamada de red que realice el SDK.
 
-Los valores se pasarán al servidor independientemente del flujo actual (autenticación/autorización). Si desea cambiar los valores, puede llamar a este método en cualquier momento.
+Los valores se pasan al servidor independientemente del flujo actual (autenticación/autorización). Si desea cambiar los valores, puede llamar a este método en cualquier momento.
 
 | Llamada de API: setOptions |
 | --- |
@@ -155,20 +154,20 @@ Los valores se pasarán al servidor independientemente del flujo actual (autenti
 
 **Parámetros:**
 
-- *opciones*: Un mapa&lt;string string=&quot;&quot;> que contiene opciones globales de SDK. Actualmente están disponibles las siguientes opciones:
-   - **applicationProfile** - Se puede utilizar para realizar configuraciones de servidor basadas en este valor.
-   - **ap_vi** - El Marketing Cloud visitorID. Este valor se puede usar posteriormente para informes de análisis avanzados.
+- *opciones*: Un mapa&lt;string string=&quot;&quot;> que contiene las opciones globales de SDK. Actualmente están disponibles las siguientes opciones:
+   - **applicationProfile** : se puede utilizar para realizar configuraciones de servidor basadas en este valor.
+   - **ap_vi** : el ID de visitante de Marketing Cloud. Este valor puede utilizarse posteriormente en informes de análisis avanzados.
    - **ap_ai** - El ID de publicidad
-   - **device_info** - La información del cliente tal como se describe aquí: [Pasar información del cliente: conexión y aplicación del dispositivo](/help/authentication/passing-client-information-device-connection-and-application.md).
+   - **device_info** - Información del cliente como se describe aquí: [Pasar la conexión y aplicación del dispositivo de información del cliente](/help/authentication/passing-client-information-device-connection-and-application.md).
 
-[De vuelta al principio...](#apis)
+[Volver al principio...](#apis)
 
 
 ### checkAuthentication {#checkAuthN}
 
-**Descripción:** Comprueba el estado de autenticación. Para ello, busca un token de autenticación válido en el espacio de almacenamiento del token local. Llamar a este método no realiza llamadas de red. La aplicación lo utiliza para consultar el estado de autenticación del usuario y actualizar la IU en consecuencia (es decir, actualizar la IU de inicio de sesión / cierre de sesión). El estado de autenticación se comunica a la aplicación a través del [*setAuthenticationStatus()*](#setAuthNStatus) llamada de retorno.
+**Descripción:** Comprueba el estado de autenticación. Para ello, busca un token de autenticación válido en el espacio de almacenamiento del token local. Llamar a este método no realiza llamadas de red. La aplicación la utiliza para consultar el estado de autenticación del usuario y actualizar la interfaz de usuario en consecuencia (es decir, actualizar la interfaz de usuario de inicio de sesión/cierre de sesión). El estado de autenticación se comunica a la aplicación a través de la [*setAuthenticationStatus()*](#setAuthNStatus) devolución de llamada.
 
-Si un MVPD admite la función &quot;Autenticación por solicitante&quot;, se pueden almacenar varios tokens de autenticación en un dispositivo.  Para obtener más información sobre esta función, consulte la [Directrices de almacenamiento en caché](#$caching) en la Información general técnica de Android.
+Si una MVPD admite la función &quot;Autenticación por solicitante&quot;, se pueden almacenar varios tokens de autenticación en un dispositivo.  Para obtener más información sobre esta función, consulte la [Directrices de almacenamiento en caché](#$caching) de la Información general técnica de Android.
 
 | Llamada de API: comprobar el estado de autenticación |
 | --- |
@@ -176,25 +175,25 @@ Si un MVPD admite la función &quot;Autenticación por solicitante&quot;, se pue
 
 **Disponibilidad:** v1.0+
 
-**Parámetros:** Ninguna
+**Parámetros:** Ninguno
 
-**Llamadas de retorno activadas:** `setAuthenticationStatus()`
+**Llamadas activadas:** `setAuthenticationStatus()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 
 ### getAuthentication {#getAuthN}
 
-**Descripción:** Inicia el flujo de trabajo de autenticación completo. Se inicia comprobando el estado de autenticación. Si aún no se ha autenticado, se inicia el flujo de autenticación state-machine:
+**Descripción:** Inicia el flujo de trabajo de autenticación completo. Se inicia comprobando el estado de autenticación. Si no se ha autenticado ya, se inicia el flujo de autenticación estado-máquina:
 
-- Si el último intento de autenticación fue exitoso, la fase de selección de MVPD se omite y la variable [*navigateToUrl()*](#navigagteToUrl) se activa la rellamada. La aplicación utiliza esta llamada de retorno para crear una instancia del control WebView que presenta al usuario la página de inicio de sesión de MVPD.
-- Si el último intento de autenticación no se realizó correctamente o si el usuario cerró la sesión de forma explícita, se muestra la [*displayProviderDialog()*](#displayProviderDialog) se activa la rellamada. Su aplicación utiliza esta llamada de retorno para mostrar la IU de selección de MVPD. Además, se requiere que la aplicación reanude el flujo de autenticación informando a la biblioteca de Access Enabler sobre la selección de MVPD del usuario a través del [setSelectedProvider()](#setSelectedProvider) método.
+- Si el último intento de autenticación se realizó correctamente, se omite la fase de selección de MVPD y la variable [*navigationToUrl()*](#navigagteToUrl) se activa la devolución de llamada. La aplicación utiliza esta llamada de retorno para crear una instancia del control WebView que presenta al usuario la página de inicio de sesión de la MVPD.
+- Si el último intento de autenticación no se realizó correctamente o si el usuario cerró sesión explícitamente, el [*displayProviderDialog()*](#displayProviderDialog) se activa la devolución de llamada. La aplicación utiliza esta llamada de retorno para mostrar la interfaz de usuario de selección de MVPD. Además, la aplicación debe reanudar el flujo de autenticación informando a la biblioteca de habilitación de acceso de la selección de MVPD del usuario a través de la [setSelectedProvider()](#setSelectedProvider) método.
 
-Como las credenciales del usuario se verifican en la página de inicio de sesión de MVPD, su aplicación es necesaria para supervisar las operaciones de redirección múltiple que se producen mientras el usuario se autentica en la página de inicio de sesión de MVPD. Cuando se introducen las credenciales correctas, el control WebView se redirige a una URL personalizada definida por la variable *AccessEnabler.ADOBEPASS\_REDIRECT\_URL* constante. WebView no pretende cargar esta dirección URL. La aplicación debe interceptar esta dirección URL e interpretar este evento como una señal de que la fase de inicio de sesión ha finalizado. A continuación, debe entregar el control al activador de acceso para completar el flujo de autenticación (llamando a la función *getAuthenticationToken()* método).
+A medida que las credenciales del usuario se verifican en la página de inicio de sesión de MVPD, la aplicación debe supervisar las operaciones de redirección múltiples que se producen mientras el usuario se autentica en la página de inicio de sesión de MVPD. Cuando se especifican las credenciales correctas, el control WebView se redirige a una dirección URL personalizada definida por el *AccessEnabler.ADOBEPASS\_REDIRECT\_URL* constante. WebView no pretende cargar esta dirección URL. La aplicación debe interceptar esta URL e interpretar este evento como una señal de que la fase de inicio de sesión ha finalizado. Luego debe entregar el control al Habilitador de acceso para completar el flujo de autenticación (llamando al *getAuthenticationToken()* método).
 
-Si un MVPD admite la función &quot;Autenticación por solicitante&quot;, se pueden almacenar varios tokens de autenticación en un dispositivo (uno por programador).  Para obtener más información sobre esta función, consulte la [Directrices de almacenamiento en caché](#$caching) en la Información general técnica de Android.
+Si una MVPD admite la función &quot;Autenticación por solicitante&quot;, se pueden almacenar varios tokens de autenticación en un dispositivo (uno por programador).  Para obtener más información sobre esta función, consulte la [Directrices de almacenamiento en caché](#$caching) de la Información general técnica de Android.
 
-Finalmente, el estado de autenticación se comunica a la aplicación a través de la variable *setAuthenticationStatus()* llamada de retorno.
+Finalmente, el estado de autenticación se comunica a la aplicación a través de la *setAuthenticationStatus()* devolución de llamada.
 
 
 
@@ -212,25 +211,25 @@ Finalmente, el estado de autenticación se comunica a la aplicación a través d
 
 **Parámetros:**
 
-- *forceAuthn*: Un indicador que especifica si se debe iniciar el flujo de autenticación, independientemente de si el usuario ya está autenticado o no.
-- *data*: Mapa que consiste en pares de clave-valor que se enviarán al servicio de pases de Pay-TV. Adobe puede utilizar estos datos para habilitar futuras funciones sin cambiar el SDK.
+- *forceAuthen*: un indicador que especifica si se debe iniciar el flujo de autenticación, independientemente de si el usuario ya se ha autenticado o no.
+- *datos*: Mapa formado por pares de clave-valor que se enviarán al servicio de pase de TV de pago. El Adobe de puede utilizar estos datos para habilitar futuras funciones sin cambiar el SDK.
 
-**Llamadas de retorno activadas:** `setAuthenticationStatus(), displayProviderDialog(), navigateToUrl(), sendTrackingData()`
+**Llamadas activadas:** `setAuthenticationStatus(), displayProviderDialog(), navigateToUrl(), sendTrackingData()`
 
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 ### displayProviderDialog {#displayProviderDialog}
 
-**Descripción** Llamada de retorno activada por el activador de acceso para informar a la aplicación de que es necesario crear una instancia de los elementos de la interfaz de usuario correspondientes para permitir al usuario seleccionar el MVPD deseado. La rellamada proporciona una lista de objetos MVPD con información adicional que puede ayudar a crear correctamente el panel de la interfaz de usuario de selección (como la URL que señala al logotipo de MVPD, el nombre descriptivo, etc.)
+**Descripción** La llamada de retorno se activa mediante el Habilitador de acceso para informar a la aplicación de que es necesario crear una instancia de los elementos de la interfaz de usuario adecuados para permitir que el usuario seleccione la MVPD deseada. La llamada de retorno proporciona una lista de objetos MVPD con información adicional que puede ayudar a crear correctamente el panel de la interfaz de usuario de selección (como la URL que señala al logotipo de MVPD, un nombre para mostrar descriptivo, etc.)
 
-Una vez que el usuario ha seleccionado el MVPD deseado, la aplicación de la capa superior es necesaria para reanudar el flujo de autenticación llamando a *setSelectedProvider()* y transmitirle el ID del MVPD correspondiente a la selección del usuario.\
+Una vez que el usuario ha seleccionado la MVPD deseada, la aplicación de capa superior debe reanudar el flujo de autenticación llamando a *setSelectedProvider()* y pasándole el ID de la MVPD correspondiente a la selección del usuario.\
  
 >[!NOTE]
 >
-> Anulación del flujo de autenticación
+> Cancelación del flujo de autenticación
 > </br></br>
-> Tenga en cuenta que este es un punto en el que el usuario tiene la capacidad de presionar el botón &quot;Atrás&quot;, que equivale a la anulación del flujo de autenticación. En este caso, la aplicación debe llamar a la función `setSelectedProvider()` método, pasar *null* como parámetro, para dar a Access Enabler la oportunidad de restablecer su máquina-estado de autenticación.
+> Tenga en cuenta que este es un punto en el que el usuario tiene la capacidad de pulsar el botón &quot;Atrás&quot;, lo que equivale a anular el flujo de autenticación. En este caso, la aplicación debe llamar a la función `setSelectedProvider()` método, pasar *null* como parámetro, para dar al Habilitador de acceso la oportunidad de restablecer su estado de autenticación-máquina.
 
 | Llamada de retorno: mostrar la IU de selección de MVPD |
 | --- |
@@ -240,47 +239,47 @@ Una vez que el usuario ha seleccionado el MVPD deseado, la aplicación de la cap
 
 **Parámetros**:
 
-- *mvpds*: Lista de objetos MVPD que contienen información relacionada con MVPD que la aplicación puede utilizar para crear los elementos de la interfaz de usuario de selección de MVPD.
+- *mvpds*: lista de objetos MVPD que contienen información relacionada con MVPD que la aplicación puede utilizar para crear los elementos de la interfaz de usuario de selección de MVPD.
 
 **Activado por:** `getAuthentication(), getAuthorization()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 
 ### setSelectedProvider {#setSelectedProvider}
 
-**Descripción:** Su aplicación llama a este método para informar al habilitador de acceso de la selección de MVPD del usuario. La aplicación puede utilizar este método para seleccionar o cambiar el proveedor de servicios utilizado para la autenticación.
+**Descripción:** La aplicación llama a este método para informar al Habilitador de acceso de la selección de MVPD del usuario. La aplicación puede utilizar este método para seleccionar o cambiar el proveedor de servicios utilizado para la autenticación.
 
-Si el MVPD seleccionado es un MVPD TempPass, se autenticará automáticamente con ese MVPD sin necesidad de llamar a getAuthentication() después.
+Si la MVPD seleccionada es una MVPD TempPass, se autenticará automáticamente con esa MVPD sin necesidad de llamar posteriormente a getAuthentication().
 
-Tenga en cuenta que esto no es posible para el pase temporal promocional donde se proporcionan parámetros adicionales en el método getAuthentication() .
+Tenga en cuenta que esto no es posible en el caso del pase temporal promocional, en el que se proporcionan parámetros adicionales en el método getAuthentication().
 
-Al pasar *null* como parámetro, Access Enabler supone que el usuario ha cancelado el flujo de autenticación (es decir, ha presionado el botón &quot;Atrás&quot;), y responde restableciendo el equipo-estado de autenticación y llamando a la función *setAuthenticationStatus()* llamada de retorno con la función `AccessEnablerConstants.PROVIDER_NOT_SELECTED_ERROR` código de error.
+Al pasar *null* como parámetro, el Access Enabler supone que el usuario ha cancelado el flujo de autenticación (es decir, ha pulsado el botón &quot;Atrás&quot;), y responde restableciendo el estado de autenticación-máquina y llamando a *setAuthenticationStatus()* devolución de llamada con `AccessEnablerConstants.PROVIDER_NOT_SELECTED_ERROR` código de error.
 
-| Llamada de API: establecer el proveedor seleccionado actualmente |
+| Llamada de API: establezca el proveedor seleccionado actualmente |
 | --- |
 | public void setSelectedProvider(String mvpdId) |
 
 **Disponibilidad:** v1.0+
 
-**Parámetros:** Ninguna
+**Parámetros:** Ninguno
 
-**Llamadas de retorno activadas:** `setAuthenticationStatus(), sendTrackingData(), navigateToUrl()`
+**Llamadas activadas:** `setAuthenticationStatus(), sendTrackingData(), navigateToUrl()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 
-### navegarToUrl {#navigagteToUrl}
+### navigationToUrl {#navigagteToUrl}
 
-**Obsoleto:** A partir del SDK para Android 3.0, navegarToUrl se utiliza solo si la pestaña personalizada de Chrome no está presente en el dispositivo
+**Obsoleto:** A partir del SDK 3.0 de Android, navegarToUrl se utiliza solo si Chrome Custom Tab no está presente en el dispositivo
 
-**Descripción:** Llamada de retorno activada por Access Enabler que informa a la aplicación de que el usuario debe ser presentado con la página de inicio de sesión de MVPD para poder introducir sus credenciales. Access Enabler pasa como parámetro la dirección URL de la página de inicio de sesión de MVPD. La aplicación es necesaria para crear una instancia de un control WebView y dirigirlo a esta dirección URL. Además, la aplicación es necesaria para controlar las direcciones URL cargadas por el control WebView e interceptar la operación de redirección dirigida a la URL personalizada definida por la variable `AccessEnabler.ADOBEPASS_REDIRECT_URL (deprecated)` constante. En este evento, es necesario que la aplicación cierre u oculte el control WebView y devuelva el control a la biblioteca de Access Enabler llamando a la función *getAuthenticationToken()* método. Access Enabler completa el flujo de autenticación recuperando el token de autenticación del servidor back-end y almacenándolo localmente en el almacenamiento de token.  
+**Descripción:** Llamada de retorno activada por el Access Enabler, que informa a la aplicación de que el usuario debe tener la página de inicio de sesión de MVPD para poder introducir sus credenciales. El Access Enabler pasa como parámetro la dirección URL de la página de inicio de sesión de MVPD. La aplicación debe crear una instancia de un control WebView y dirigirlo a esta dirección URL. Además, la aplicación es necesaria para supervisar las direcciones URL cargadas por el control WebView e interceptar la operación de redirección dirigida a la dirección URL personalizada definida por el `AccessEnabler.ADOBEPASS_REDIRECT_URL (deprecated)` constante. Tras este evento, la aplicación debe cerrar u ocultar el control WebView y devolver el control a la biblioteca del Habilitador de acceso llamando a la función *getAuthenticationToken()* método. Access Enabler completa el flujo de autenticación recuperando el token de autenticación del servidor back-end y almacenándolo localmente en el almacenamiento de tokens.  
 
 >[!WARNING]
 >
-> **Anulación del flujo de autenticación**  <br>Tenga en cuenta que este es un punto en el que el usuario tiene la capacidad de presionar el botón &quot;Atrás&quot;, que equivale a la anulación del flujo de autenticación. En este caso, la aplicación debe llamar a la función _setSelectedProvider()_ paso de métodos _null_ como parámetro y dando la oportunidad a Access Enabler de restablecer su estado-máquina de autenticación.
+> **Cancelación del flujo de autenticación**  <br>Tenga en cuenta que este es un punto en el que el usuario tiene la capacidad de pulsar el botón &quot;Atrás&quot;, lo que equivale a anular el flujo de autenticación. En este caso, la aplicación debe llamar a la función _setSelectedProvider()_ paso de método _null_ como parámetro y dando la oportunidad al Habilitador de acceso de restablecer su estado de autenticación-máquina.
 
-| Llamada de retorno: mostrar página de inicio de sesión de MVPD |
+| Callback: mostrar la página de inicio de sesión de MVPD |
 | --- |
 | public void navegarToUrl(String url) |
 
@@ -288,18 +287,18 @@ Al pasar *null* como parámetro, Access Enabler supone que el usuario ha cance
 
 **Parámetros:**
 
-- *url*: Dirección URL que señala a la página de inicio de sesión de MVPD
+- *url*: URL que señala a la página de inicio de sesión de la MVPD
 
 **Activado por:** `getAuthentication(), setSelectedProvider()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 
 ### getAuthenticationToken {#getAuthNToken}
 
-**Obsoleto:** A partir del SDK para Android 3.0, ya que la pestaña personalizada de Chrome se utiliza para la autenticación, este método ya no se utiliza desde la aplicación .
+**Obsoleto:** A partir del SDK 3.0 de Android, ya que Chrome Custom Tab se utiliza para la autenticación, este método ya no se utiliza desde la aplicación.
 
-**Descripción:** Completa el flujo de autenticación al solicitar el token de autenticación del servidor back-end. Su aplicación debe llamar a este método solo en respuesta al evento en el que el control WebView que aloja la página de inicio de sesión de MVPD se redirija a la URL personalizada definida por la variable `AccessEnabler.ADOBEPASS_REDIRECT_URL` constante.
+**Descripción:** Completa el flujo de autenticación solicitando el token de autenticación al servidor back-end. La aplicación debe llamar a este método únicamente en respuesta a un evento en el que el control WebView que aloja la página de inicio de sesión de MVPD se redirige a la dirección URL personalizada definida por la variable `AccessEnabler.ADOBEPASS_REDIRECT_URL` constante.
 
 | Llamada de API: recuperar el token de autenticación |
 | --- |
@@ -309,18 +308,18 @@ Al pasar *null* como parámetro, Access Enabler supone que el usuario ha cance
 
 **Parámetros:**
 
-- *cookies*: Cookies establecidas en el dominio de destino (consulte la aplicación de demostración en el SDK para obtener una implementación de referencia).
+- *galletas*: cookies que se establecen en el dominio de destino (consulte la aplicación de demostración en el SDK para obtener una implementación de referencia).
 
-**Llamadas de retorno activadas:** `setAuthenticationStatus()`, `sendTrackingData()`
+**Llamadas activadas:** `setAuthenticationStatus()`, `sendTrackingData()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 
 ### setAuthenticationStatus {#setAuthNStatus}
 
-**Descripción:** Llamada de retorno activada por Access Enabler que informa a la aplicación del estado del flujo de autenticación. Hay muchos lugares en los que este flujo puede fallar, ya sea como resultado de la interacción del usuario o debido a otros escenarios imprevistos (por ejemplo, problemas de conectividad de red, etc.). Esta rellamada informa a la aplicación del estado de éxito/error del flujo de autenticación, al tiempo que proporciona información adicional sobre el motivo del error, cuando es necesario.
+**Descripción:** Llamada de retorno activada por el Habilitador de acceso, que informa a la aplicación del estado del flujo de autenticación. Hay muchos lugares donde este flujo puede fallar, ya sea como resultado de la interacción del usuario o debido a otros escenarios imprevistos (es decir, problemas de conectividad de red, etc.). Esta llamada de retorno informa a la aplicación del estado de éxito/error del flujo de autenticación, a la vez que proporciona información adicional sobre el motivo del error, cuando es necesario.
 
-| Llamada de retorno: informar del estado del flujo de autenticación |
+| Callback: informar del estado del flujo de autenticación |
 | --- |
 | public void setAuthenticationStatus(int status, String errorCode) |
 
@@ -330,78 +329,78 @@ Al pasar *null* como parámetro, Access Enabler supone que el usuario ha cance
 
 - *status*: Puede tomar uno de los siguientes valores:
    - `AccessEnablerConstants.ACCESS_ENABLER_STATUS_SUCCESS` - el flujo de autenticación se completó correctamente
-   - `AccessEnablerConstants.ACCESS_ENABLER_STATUS_ERROR` - error en el flujo de autenticación
-- *code*: Motivo del error. If *status* es `AccessEnablerConstants.ACCESS_ENABLER_STATUS_SUCCESS`, luego *code* es una cadena vacía (es decir, definida por la variable `AccessEnablerConstants.USER_AUTHENTICATED` constante). En caso de error, este parámetro puede tomar uno de los siguientes valores:
-   - `AccessEnablerConstants.USER_NOT_AUTHENTICATED_ERROR` - El usuario no está autenticado. En respuesta a la *checkAuthentication()* llamada de método cuando no hay ningún token de autenticación válido en la caché de token local.
-   - `AccessEnablerConstants.PROVIDER_NOT_SELECTED_ERROR` - AccessEnabler ha restablecido el estado-máquina de autenticación después de pasar la aplicación de capa superior *null* a `setSelectedProvider()` para anular el flujo de autenticación.  Presumiblemente, el usuario ha cancelado el flujo de autenticación (es decir, ha presionado el botón &quot;Atrás&quot;).
-   - `AccessEnablerConstants.GENERIC_AUTHENTICATION_ERROR` : el flujo de autenticación falló debido a motivos como la falta de disponibilidad de la red o el usuario canceló el flujo de autenticación explícitamente.
+   - `AccessEnablerConstants.ACCESS_ENABLER_STATUS_ERROR` - error del flujo de autenticación
+- *código*: Motivo del error. If *status* es `AccessEnablerConstants.ACCESS_ENABLER_STATUS_SUCCESS`, entonces *código* es una cadena vacía (es decir, definida por la variable `AccessEnablerConstants.USER_AUTHENTICATED` constante). En caso de error, este parámetro puede tomar uno de los siguientes valores:
+   - `AccessEnablerConstants.USER_NOT_AUTHENTICATED_ERROR` - El usuario no está autenticado. En respuesta a la *checkAuthentication()* llamada al método cuando no hay ningún token de autenticación válido en la caché de token local.
+   - `AccessEnablerConstants.PROVIDER_NOT_SELECTED_ERROR` - AccessEnabler ha restablecido el estado de autenticación-máquina después de que se aprobara la aplicación de capa superior *null* hasta `setSelectedProvider()` para anular el flujo de autenticación.  Es de suponer que el usuario ha cancelado el flujo de autenticación (es decir, ha presionado el botón &quot;Atrás&quot;).
+   - `AccessEnablerConstants.GENERIC_AUTHENTICATION_ERROR` - El flujo de autenticación falló debido a razones como la no disponibilidad de la red o el usuario canceló el flujo de autenticación explícitamente.
 
 **Activado por:** `checkAuthentication(), getAuthentication(), checkAuthorization()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 
 ### checkPreauthorizedResources {#checkPreauth}
 
->**Obsoleto:** A partir del SDK para Android 3.6, la API de preautorización sustituye a checkPreauthorizedResources, proporcionando códigos de error ampliados. 
+>**Obsoleto:** A partir del SDK 3.6 de Android, la API preautorizada sustituye a checkPreauthorizedResources, proporcionando códigos de error ampliados. 
 
-**Descripción:** La aplicación utiliza este método para determinar si el usuario ya está autorizado a ver recursos protegidos específicos. El objetivo principal de este método es recuperar información para utilizarla al decorar la interfaz de usuario (por ejemplo, indicar el estado de acceso con los iconos de bloqueo y desbloqueo).
+**Descripción:** La aplicación utiliza este método para determinar si el usuario ya está autorizado para ver recursos protegidos específicos. El propósito principal de este método es recuperar información para utilizarla en la decoración de la interfaz de usuario (por ejemplo, para indicar el estado de acceso con los iconos de bloqueo y desbloqueo).
 
-| Llamada de API: establecer el proveedor seleccionado actualmente |
+| Llamada de API: establezca el proveedor seleccionado actualmente |
 | --- |
 | `public void checkPreauthorizedResources(ArrayList<String> resources)` |
 
 **Disponibilidad:** v1.3+
 
-**Parámetros:** La variable `resources` es una matriz de recursos para los que se debe comprobar la autorización. Cada elemento de la lista debe ser una cadena que represente el ID del recurso. El ID de recurso está sujeto a las mismas limitaciones que el ID de recurso en la variable `getAuthorization()` , es decir, debe ser un valor acordado establecido entre el Programador y el MVPD o un fragmento RSS de medios.
+**Parámetros:** El `resources` El parámetro es una matriz de recursos para los que se debe comprobar la autorización. Cada elemento de la lista debe ser una cadena que represente el ID de recurso. El ID de recurso está sujeto a las mismas limitaciones que el ID de recurso de la variable `getAuthorization()` llamada, es decir, debe ser un valor acordado establecido entre el Programador y el MVPD o un fragmento de medios RSS.
 
 **Llamada de retorno activada:** `preauthorizedResources()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 
 ### checkPreauthorizedResources {#checkPreauth2}
 
-**Obsoleto:** A partir del SDK para Android 3.6, la API de preautorización sustituye a checkPreauthorizedResources, proporcionando códigos de error ampliados. 
+**Obsoleto:** A partir del SDK 3.6 de Android, la API preautorizada sustituye a checkPreauthorizedResources, proporcionando códigos de error ampliados. 
 
-**Descripción:** La aplicación utiliza este método para determinar si el usuario ya está autorizado a ver recursos protegidos específicos. El objetivo principal de este método es recuperar información para utilizarla al decorar la interfaz de usuario (por ejemplo, indicar el estado de acceso con los iconos de bloqueo y desbloqueo).
+**Descripción:** La aplicación utiliza este método para determinar si el usuario ya está autorizado para ver recursos protegidos específicos. El propósito principal de este método es recuperar información para utilizarla en la decoración de la interfaz de usuario (por ejemplo, para indicar el estado de acceso con los iconos de bloqueo y desbloqueo).
 
-| Llamada de API: establecer el proveedor seleccionado actualmente |
+| Llamada de API: establezca el proveedor seleccionado actualmente |
 | --- |
 | `public void checkPreauthorizedResources(ArrayList<String> resources, boolean cache)` |
 
 **Disponibilidad:** v3.1+
 
-**Parámetros:** La variable `resources` es una matriz de recursos para los que se debe comprobar la autorización. Cada elemento de la lista debe ser una cadena que represente el ID del recurso. El ID de recurso está sujeto a las mismas limitaciones que el ID de recurso en la variable `getAuthorization()` , es decir, debe ser un valor acordado establecido entre el Programador y el MVPD o un fragmento RSS de medios.
+**Parámetros:** El `resources` El parámetro es una matriz de recursos para los que se debe comprobar la autorización. Cada elemento de la lista debe ser una cadena que represente el ID de recurso. El ID de recurso está sujeto a las mismas limitaciones que el ID de recurso de la variable `getAuthorization()` llamada, es decir, debe ser un valor acordado establecido entre el Programador y el MVPD o un fragmento de medios RSS.
 
-La variable `cache` especifica si se puede utilizar o no la respuesta de preautorización en caché. De forma predeterminada, la caché es verdadera, el SDK devolverá una respuesta previamente almacenada en caché si está disponible.
+El `cache` el parámetro especifica si se puede utilizar o no la respuesta de preautorización en caché. De forma predeterminada, la caché es verdadera, el SDK devolverá una respuesta almacenada en caché anteriormente si está disponible.
 
 **Llamada de retorno activada:** `preauthorizedResources()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 ### preauthorizedResources {#preauthResources}
 
-**Obsoleto:** A partir del SDK para Android 3.6, la API de preautorización sustituye a checkPreauthorizedResources, proporcionando códigos de error ampliados. no se llamará a la rellamada preauthorizedResources en la nueva API.
+**Obsoleto:** A partir del SDK 3.6 de Android, la API preautorizada sustituye a checkPreauthorizedResources, proporcionando códigos de error ampliados. no se llamará a la devolución de llamada preauthorizedResources en la nueva API.
 
 
-**Descripción:** Llamada de retorno activada por checkPreauthorizedResources(). Proporciona una lista de los recursos que el usuario ya está autorizado a ver.
+**Descripción:** Llamada de retorno activada por checkPreauthorizedResources(). Proporciona una lista de recursos que el usuario ya tiene autorización para ver.
 
-| Llamada de API: establecer el proveedor seleccionado actualmente |
+| Llamada de API: establezca el proveedor seleccionado actualmente |
 | --- |
 | `public void checkPreauthorizedResources(ArrayList<String> resources)` |
 
 **Disponibilidad:** v1.3+
 
-**Parámetros:** La variable `resources` es una matriz de recursos para los que el usuario ya está autorizado a ver.
+**Parámetros:** El `resources` El parámetro es una matriz de recursos que el usuario ya tiene autorización para ver.
 
 **Activado por:** `checkPreauthorizedResources()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 ### <span id="checkAuthZ"></span>checkAuthorization
 
-**Descripción:** La aplicación utiliza este método para comprobar el estado de autorización. Se inicia comprobando primero el estado de autenticación. Si no se autentica, la variable *setTokenRequestFailed()* se activa la rellamada y el método se cierra. Si el usuario está autenticado, también déclencheur el flujo de autorización. Consulte los detalles sobre *getAuthorization()* método.
+**Descripción:** La aplicación utiliza este método para comprobar el estado de autorización. Se inicia comprobando primero el estado de autenticación. Si no se autentica, la variable *setTokenRequestFailed()* la llamada de retorno se activa y el método se cierra. Si el usuario está autenticado, también almacena en déclencheur el flujo de autorización. Consulte los detalles en la *getAuthorization()* método.
 
 | Llamada de API: comprobar el estado de autorización |
 | --- |
@@ -417,17 +416,17 @@ La variable `cache` especifica si se puede utilizar o no la respuesta de preauto
 
 **Parámetros:**
 
-- *resourceId*: El ID del recurso para el que el usuario solicita la autorización.
-- *data*: Mapa que consiste en pares de clave-valor que se enviarán al servicio de pases de Pay-TV. Adobe puede utilizar estos datos para habilitar futuras funciones sin cambiar el SDK.
+- *resourceId*: ID del recurso para el que el usuario solicita autorización.
+- *datos*: Mapa formado por pares de clave-valor que se enviarán al servicio de pase de TV de pago. El Adobe de puede utilizar estos datos para habilitar futuras funciones sin cambiar el SDK.
 
-**Llamadas de retorno activadas:** `tokenRequestFailed(), setToken(),sendTrackingData(), setAuthenticationStatus()`
+**Llamadas activadas:** `tokenRequestFailed(), setToken(),sendTrackingData(), setAuthenticationStatus()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 
 ### <span id="getAuthZ"></span>getAuthorization
 
-**Descripción:** La aplicación utiliza este método para iniciar el flujo de autorización. Si el usuario no está autenticado, también inicia el flujo de autenticación. Si el usuario se autentica, Access Enabler procede a enviar solicitudes para el token de autorización (si no hay ningún token de autorización válido en la caché de token local) y para el token de medios de corta duración. Una vez obtenido el token de contenido corto, el flujo de autorización se considera completo. La variable *setToken()* se activa la rellamada de y el token de contenido corto se envía como parámetro a la aplicación. Si, por cualquier razón, la autorización falla, la variable *tokenRequestFailed()* se activa la llamada de retorno y se proporcionan el código de error y los detalles.
+**Descripción:** La aplicación utiliza este método para iniciar el flujo de autorización. Si el usuario aún no se ha autenticado, también inicia el flujo de autenticación. Si el usuario se autentica, el Habilitador de acceso procede a emitir solicitudes para el token de autorización (si no hay ningún token de autorización válido en la caché de tokens local) y para el token de medios de corta duración. Una vez obtenido el token de medios corto, el flujo de autorización se considera completo. El *setToken()* la llamada de retorno se activa y el token de medios corto se entrega como parámetro a la aplicación. Si, por cualquier motivo, la autorización falla, la variable *tokenRequestFailed()* la llamada de retorno se activa y se proporcionan el código de error y los detalles.
 
 | Llamada de API: iniciar el flujo de autorización |
 | --- |
@@ -443,25 +442,25 @@ La variable `cache` especifica si se puede utilizar o no la respuesta de preauto
 
 **Parámetros:**
 
-- *resourceId*: El ID del recurso para el que el usuario solicita la autorización.
-- *data*: Mapa que consiste en pares de clave-valor que se enviarán al servicio de pases de Pay-TV. Adobe puede utilizar estos datos para habilitar futuras funciones sin cambiar el SDK. 
+- *resourceId*: ID del recurso para el que el usuario solicita autorización.
+- *datos*: Mapa formado por pares de clave-valor que se enviarán al servicio de pase de TV de pago. El Adobe de puede utilizar estos datos para habilitar futuras funciones sin cambiar el SDK. 
 
-**Llamadas de retorno activadas:** `tokenRequestFailed(), setToken(), sendTrackingData()`
+**Llamadas activadas:** `tokenRequestFailed(), setToken(), sendTrackingData()`
 
 >[!WARNING]
 >
-> **Llamadas adicionales activadas**  <br> Este método también puede almacenar en déclencheur las siguientes llamadas de retorno (si también se inicia el flujo de autenticación): *setAuthenticationStatus()*, *displayProviderDialog()*, *navigateToUrl()*
+> **Llamadas de retorno adicionales activadas**  <br> Este método también puede almacenar en déclencheur las siguientes llamadas de retorno (si también se inicia el flujo de autenticación): *setAuthenticationStatus()*, *displayProviderDialog()*, *navigationToUrl()*
 
 **NOTA: Utilice checkAuthorization() en lugar de getAuthorization() siempre que sea posible. El método getAuthorization() iniciará un flujo de autenticación completo (si el usuario no está autenticado) y esto podría llevar a una implementación complicada por parte del programador.**
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 
 ### setToken {#setToken}
 
-**Descripción:** Llamada de retorno activada por Access Enabler que informa a su aplicación de que el flujo de autorización se completó correctamente. El token de contenido de corta duración también se entrega como parámetro.
+**Descripción:** Llamada de retorno activada por el Habilitador de acceso que informa a la aplicación de que el flujo de autorización se completó correctamente. El token de medios de corta duración también se entrega como parámetro.
 
-| Llamada de retorno: el flujo de autorización se completó correctamente |
+| Llamada de retorno: flujo de autorización completado correctamente |
 | --- |
 | public void setToken(String token, String resourceId) |
 
@@ -469,40 +468,40 @@ La variable `cache` especifica si se puede utilizar o no la respuesta de preauto
 
 **Parámetros:**
 
-- *token*: El testigo breve de los medios de comunicación
+- *token*: el token de medios de corta duración
 - *resourceId*: El recurso para el que se obtuvo la autorización
 
 **Activado por:** `checkAuthorization()`, `getAuthorization()`
 
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 ### tokenRequestFailed {#tokenRequestFailed}
 
-**Descripción:** Llamada de retorno activada por Access Enabler que informa a la aplicación de capa superior de que el flujo de autorización ha fallado.
+**Descripción:** Llamada de retorno activada por el Habilitador de acceso que informa a la aplicación de capa superior de que el flujo de autorización ha fallado.
 
-| Llamada de retorno: error en el flujo de autorización |
+| Callback: error del flujo de autorización |
 | --- |
-| public void tokenRequestFailed(String resourceId, <br>        String errorCode, String errorDescription) |
+| public void tokenRequestFailed(String resourceId, <br>        Cadena errorCode, Cadena errorDescription) |
 
 **Disponibilidad:** v1.0+
 
 **Parámetros:**
 
 - *resourceId*: El recurso para el que se obtuvo la autorización
-- *errorCode*: Código de error asociado al escenario de error. Valores posibles:
-   - `AccessEnablerConstants.USER_NOT_AUTHORIZED_ERROR` - El usuario no pudo autorizar para el recurso dado
-- *errorDescription*: Detalles adicionales sobre el escenario de error. Si esta cadena descriptiva no está disponible por ningún motivo, la autenticación de Adobe Primetime envía una cadena vacía **(&quot;&quot;&quot;)**.
+- *errorCode*: código de error asociado al escenario de error. Valores posibles:
+   - `AccessEnablerConstants.USER_NOT_AUTHORIZED_ERROR` - El usuario no ha podido autorizar el recurso en cuestión
+- *errorDescription*: Detalles adicionales sobre el escenario de error. Si esta cadena descriptiva no está disponible por ningún motivo, la autenticación de Adobe Primetime envía una cadena vacía **(&quot;&quot;)**.
 
-   Una MVPD puede utilizar esta cadena para pasar mensajes de error personalizados o mensajes relacionados con las ventas. Por ejemplo, si a un suscriptor se le niega la autorización para un recurso, el MVPD podría enviar un mensaje como: &quot;Actualmente no tiene acceso a este canal en su paquete. Si desea actualizar su paquete haga clic aquí&quot;. La autenticación de Adobe Primetime pasa el mensaje a través de esta llamada de retorno al programador, que tiene la opción de mostrarlo o ignorarlo. La autenticación de Adobe Primetime también puede utilizar este parámetro para notificar la condición que podría haber provocado un error. Por ejemplo, &quot;Se produjo un error de red al comunicarse con el servicio de autorización del proveedor&quot;.
+   Una MVPD puede utilizar esta cadena para pasar mensajes de error personalizados o mensajes relacionados con las ventas. Por ejemplo, si se deniega a un suscriptor la autorización para un recurso, la MVPD podría enviar un mensaje como: &quot;Actualmente no tiene acceso a este canal en su paquete. Si desea actualizar el paquete, haga clic aquí.&quot; La autenticación de Adobe Primetime pasa el mensaje a través de esta llamada de retorno al programador, que tiene la opción de mostrarlo o ignorarlo. La autenticación de Adobe Primetime también puede utilizar este parámetro para notificar la condición que podría haber provocado un error. Por ejemplo, &quot;Se produjo un error de red al comunicarse con el servicio de autorización del proveedor&quot;.
 
 **Activado por:** `checkAuthorization(), getAuthorization()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 ### cierre de sesión {#logout}
 
-**Descripción:** Utilice este método para iniciar el flujo de cierre de sesión. El cierre de sesión es el resultado de una serie de operaciones de redireccionamiento HTTP debido al hecho de que el usuario necesita cerrar la sesión tanto desde los servidores de autenticación de Adobe Primetime como desde los servidores de MVPD. Como resultado, este flujo no se puede completar con una solicitud HTTP simple emitida por la biblioteca Access Enabler. El SDK utiliza una pestaña personalizada de Chrome para ejecutar las operaciones de redireccionamiento HTTP. Este flujo será visible para el usuario y se cerrará cuando se complete
+**Descripción:** Utilice este método para iniciar el flujo de cierre de sesión. El cierre de sesión es el resultado de una serie de operaciones de redirección HTTP debido al hecho de que el usuario debe cerrar la sesión tanto desde los servidores de autenticación de Adobe Primetime como desde los servidores de MVPD. Como resultado, este flujo no se puede completar con una simple solicitud HTTP emitida por la biblioteca del Habilitador de acceso. El SDK utiliza unas pestañas personalizadas de Chrome para ejecutar las operaciones de redirección HTTP. Este flujo será visible para el usuario y se cerrará cuando se complete
 
 | Llamada de API: iniciar el flujo de cierre de sesión |
 | --- |
@@ -510,39 +509,39 @@ La variable `cache` especifica si se puede utilizar o no la respuesta de preauto
 
 **Disponibilidad:** v1.0+
 
-**Parámetros:** Ninguna
+**Parámetros:** Ninguno
 
-**Llamadas de retorno activadas:**
+**Llamadas activadas:**
 
-- `navigateToUrl()` para la versión del SDK anterior a 3.0
+- `navigateToUrl()` para la versión de SDK anterior a 3.0
 - `setAuthenticationStatus()` para la versión del SDK > 3.0
 
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 
 ### getSelectedProvider {#getSelectedProvider}
 
 **Descripción:** Utilice este método para determinar el proveedor seleccionado actualmente.
 
-| Llamada de API: determinar el MVPD seleccionado actualmente |
+| Llamada de API: determina la MVPD seleccionada actualmente |
 | --- |
 | public void getSelectedProvider() |
 
 **Disponibilidad:** v1.0+
 
-**Parámetros:** Ninguna
+**Parámetros:** Ninguno
 
-**Llamadas de retorno activadas:** `selectedProvider()`
+**Llamadas activadas:** `selectedProvider()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 
 ### <span id="selectedProvider"></span>selectedProvider
 
-**Descripción:** Llamada de retorno activada por Access Enabler que proporciona información sobre el MVPD seleccionado actualmente a la aplicación.
+**Descripción:** Llamada de retorno activada por el Access Enabler que envía información sobre la MVPD seleccionada actualmente a la aplicación.
 
-| Llamada de retorno: información sobre el MVPD seleccionado actualmente |
+| Callback: información sobre la MVPD seleccionada actualmente. |
 | --- |
 | public void selectedProvider(Mvpd mvpd) |
 
@@ -551,18 +550,18 @@ La variable `cache` especifica si se puede utilizar o no la respuesta de preauto
 
 **Parámetros:**
 
-- *mvpd*: Objeto que contiene información sobre el MVPD seleccionado actualmente
+- *mvpd*: objeto que contiene información sobre la MVPD seleccionada actualmente
 
 **Activado por:** `getSelectedProvider()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 
 ### getMetadata {#getMetadata}
 
-**Descripción:** Utilice este método para recuperar información expuesta como metadatos por la biblioteca Access Enabler. La aplicación puede acceder a esta información proporcionando un objeto MetadataKey compuesto.
+**Descripción:** Utilice este método para recuperar la información expuesta como metadatos por la biblioteca del Habilitador de acceso. La aplicación puede tener acceso a esta información proporcionando un objeto MetadataKey compuesto.
 
-| Llamada de API: consulta de AccessEnabler para metadatos |
+| Llamada de API: consultar los metadatos en AccessEnabler |
 | --- |
 | `public void getMetadata(MetadataKey metadataKey)` |
 
@@ -570,25 +569,25 @@ La variable `cache` especifica si se puede utilizar o no la respuesta de preauto
 
 Hay dos tipos de metadatos disponibles para los programadores:
 
-- Metadatos estáticos (TTL token de autenticación, TTL token de autorización e ID de dispositivo) 
-- Metadatos de usuario (información específica del usuario, como ID de usuario y código postal; pasados de un MVPD al dispositivo de un usuario durante los flujos de autenticación y/o autorización)
+- Metadatos estáticos (TTL del token de autenticación, TTL del token de autorización e ID de dispositivo) 
+- Metadatos del usuario (información específica del usuario, como el ID de usuario y el código postal; pasados de una MVPD al dispositivo de un usuario durante los flujos de autenticación o autorización)
 
 **Parámetros:**
 
-- *metadataKey*: Estructura de datos que encapsula una clave y una variable args, con el siguiente significado:
-   - Si la clave es `METADATA_KEY_USER_META` y args contiene un objeto SerializableNameValuePair con el nombre = `METADATA_ARG_USER_META` y valor = `[metadata_name]`, luego la consulta se realiza para los metadatos del usuario. La lista actual de tipos de metadatos de usuario disponibles:
+- *metadataKey*: estructura de datos que encapsula una variable clave y args, con el siguiente significado:
+   - Si la clave es `METADATA_KEY_USER_META` y args contiene un objeto SerializableNameValuePair denominado = `METADATA_ARG_USER_META` y valor = `[metadata_name]`A continuación, se realiza la consulta de los metadatos del usuario. La lista actual de tipos de metadatos de usuario disponibles:
       - `zip` - Código postal
 
-      - `householdID` - Identificador del hogar. Si un MVPD no admite subcuentas, será idéntico a `userID`.
+      - `householdID` - Identificador del hogar. Si una MVPD no admite subcuentas, será idéntico a `userID`.
 
-      - `maxRating` - Clasificación parental máxima para el usuario
+      - `maxRating` - Calificación parental máxima para el usuario
 
-      - `userID` - El identificador de usuario. Si un MVPD admite subcuentas y el usuario no es la cuenta principal, `userID` será diferente a `householdID`.
+      - `userID` : el identificador de usuario. Si una MVPD admite subcuentas y el usuario no es la cuenta principal, `userID` será diferente a `householdID`.
 
       - `channelID` - Una lista de canales que el usuario puede ver
-   - Si la clave es `METADATA_KEY_DEVICE_ID` a continuación, la consulta se realiza para obtener el id del dispositivo actual. Tenga en cuenta que esta función está deshabilitada de forma predeterminada y los programadores deben ponerse en contacto con Adobe para obtener información sobre la habilitación y las tarifas.
-   - Si la clave es `METADATA_KEY_TTL_AUTHZ` y args contiene un objeto SerializableNameValuePair con el nombre = `METADATA_ARG_RESOURCE_ID` y valor = `[resource_id]`, se realiza la consulta para obtener el tiempo de caducidad del token de autorización asociado al recurso especificado.
-   - Si la clave es `METADATA_KEY_TTL_AUTHN` a continuación, la consulta se realiza para obtener el tiempo de caducidad del token de autenticación. 
+   - Si la clave es `METADATA_KEY_DEVICE_ID` a continuación, se realiza la consulta para obtener el id del dispositivo actual. Tenga en cuenta que esta función está desactivada de forma predeterminada y los programadores deben ponerse en contacto con el Adobe para obtener información sobre la habilitación y las tarifas.
+   - Si la clave es `METADATA_KEY_TTL_AUTHZ` y args contiene un objeto SerializableNameValuePair denominado = `METADATA_ARG_RESOURCE_ID` y valor = `[resource_id]`, se realiza la consulta para obtener la hora de caducidad del token de autorización asociado al recurso especificado.
+   - Si la clave es `METADATA_KEY_TTL_AUTHN` a continuación, se realiza la consulta para obtener el tiempo de caducidad del token de autenticación. 
 
  
 
@@ -600,19 +599,19 @@ Hay dos tipos de metadatos disponibles para los programadores:
 
 >[!NOTE]
 >
->Los metadatos de usuario disponibles para un programador dependen de lo que un MVPD ponga a disposición.  Esta lista se ampliará aún más a medida que los nuevos metadatos estén disponibles y se añadan al sistema de autenticación de Adobe Primetime.
+>Los metadatos de usuario reales disponibles para un programador dependen de lo que una MVPD ponga a disposición.  Esta lista se ampliará a medida que haya nuevos metadatos disponibles y añadidos al sistema de autenticación de Adobe Primetime.
 
-**Llamadas de retorno activadas:** [`setMetadataStatus()`](#setMetadaStatus)
+**Llamadas activadas:** [`setMetadataStatus()`](#setMetadaStatus)
 
-**Más información:** [Metadatos de usuario](/help/authentication/user-metadata-feature.md)
+**Más información:** [Metadatos del usuario](/help/authentication/user-metadata-feature.md)
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 ### setMetadataStatus {#setMetadaStatus}
 
-**Descripción:** Llamada de retorno activada por Access Enabler que envía los metadatos solicitados mediante un *getMetadata()* llamada a .
+**Descripción:** Llamada de retorno activada por el activador de acceso que entrega los metadatos solicitados mediante una *getMetadata()* llamada.
 
-| Llamada de retorno: resultado de la solicitud de recuperación de metadatos |
+| Callback: resultado de la solicitud de recuperación de metadatos |
 | --- |
 | ```public void setMetadataStatus(MetadataKey key, MetadataStatus result)``` |
 
@@ -620,9 +619,9 @@ Hay dos tipos de metadatos disponibles para los programadores:
 
 **Parámetros:**
 
-- *key*: El objeto MetadataKey que contiene la clave para la que se solicita el valor de los metadatos y los parámetros asociados (consulte aplicación de demostración para una implementación de referencia).
-- *result*: Un objeto compuesto que contiene los metadatos solicitados. El objeto tiene los siguientes campos:
-   - *simpleResult*: una cadena que representa el valor de los metadatos cuando se realizó la solicitud de autenticación TTL, autorización TTL o ID del dispositivo. Este valor es nulo si la solicitud se realizó para los metadatos de usuario.
+- *key*: el objeto MetadataKey que contiene la clave para la que se solicita el valor de los metadatos y los parámetros asociados (consulte la aplicación de demostración para una implementación de referencia).
+- *resultado*: un objeto compuesto que contiene los metadatos solicitados. El objeto tiene los campos siguientes:
+   - *simpleResult*: una cadena que representa el valor de los metadatos cuando se realizó la solicitud para el TTL de autenticación, el TTL de autorización o el ID de dispositivo. Este valor es nulo si se realizó la solicitud de metadatos del usuario.
 
    - *userMetadataResult*: un objeto que contiene la representación Java de una carga útil de metadatos de usuario JSON.\
       Por ejemplo:
@@ -660,16 +659,16 @@ se traduce a Java como: 
           }
 ```
 
-Este valor es nulo cuando la solicitud se realizó para metadatos simples (TTL de autenticación, TTL de autorización o ID de dispositivo).
+Este valor es nulo cuando se realizó la solicitud de metadatos simples (TTL de autenticación, TTL de autorización o ID de dispositivo).
 
-- *cifrados*: Valor booleano que especifica si los metadatos recuperados están cifrados o no. Este parámetro es significativo solo para solicitudes de metadatos de usuario, no tiene significado para metadatos estáticos (por ejemplo: Autenticación TTL) que siempre se recibe sin encriptar. Si este parámetro se establece en True, corresponde al programador obtener el valor de los metadatos de usuario sin encriptar realizando un descifrado RSA utilizando la clave privada de lista blanca (la misma clave privada que se usa para firmar el id de solicitante en la variable [`setRequestor`](#setRequestor) ).
+- *cifrado*: Valor booleano que especifica si los metadatos recuperados están cifrados o no. Este parámetro solo es significativo para solicitudes de metadatos del usuario, no tiene significado para metadatos estáticos (por ejemplo, TTL de autenticación) que siempre se reciben sin cifrar. Si este parámetro se establece en True, depende del programador obtener el valor de metadatos del usuario sin cifrar realizando un descifrado RSA con la clave privada de la lista blanca (la misma clave privada que se utiliza para la firma del ID del solicitante en el [`setRequestor`](#setRequestor) llamada).
 
 **Activado por:** [`getMetadata()`](#getMetadata)
 
-**Más información:** [Metadatos de usuario](/help/authentication/user-metadata-feature.md)
+**Más información:** [Metadatos del usuario](/help/authentication/user-metadata-feature.md)
 
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 
 ### getVersion {#getVersion}
@@ -681,22 +680,22 @@ Este valor es nulo cuando la solicitud se realizó para metadatos simples (TTL d
 | ```public static String getVersion()``` |
 
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 </br>
 
 ## Seguimiento de eventos {#tracking}
 
-Access Enabler déclencheur una llamada de retorno adicional que no está necesariamente relacionada con los flujos de derechos. Implementación de la función de llamada de retorno de seguimiento de eventos denominada *sendTrackingData()* es opcional, pero permite a la aplicación rastrear eventos específicos y compilar estadísticas como el número de intentos de autenticación/autorización correctos/fallidos. A continuación se muestra la especificación para la variable *sendTrackingData()* llamada de retorno:\
+El activador de acceso déclencheur una llamada de retorno adicional que no está necesariamente relacionada con los flujos de derechos. Implementación de la función de devolución de llamada de seguimiento de eventos denominada *sendTrackingData()* es opcional, pero permite a la aplicación realizar un seguimiento de eventos específicos y compilar estadísticas como el número de intentos de autenticación/autorización correctos/fallidos. A continuación se muestra la especificación para *sendTrackingData()* callback:\
  
 
 ### sendTrackingData {#sendTrackingData}
 
-**Descripción:** Llamada de retorno activada por el activador de acceso que indica a la aplicación la ocurrencia de varios eventos, como la finalización/fallo de los flujos de autenticación/autorización. El tipo de dispositivo, el tipo de cliente Access Enabler y el sistema operativo también se incluyen en los informes mediante sendTrackingData().
+**Descripción:** Llamada de retorno activada por el Habilitador de acceso que indica a la aplicación la ocurrencia de varios eventos, como la finalización/error de los flujos de autenticación/autorización. sendTrackingData() también informa del tipo de dispositivo, el tipo de cliente del Access Enabler y el sistema operativo.
 
 >[!WARNING]
 >
-> El tipo de dispositivo y el sistema operativo se derivan del uso de una biblioteca Java pública ([http://java.net/projects/user-agent-utils](http://java.net/projects/user-agent-utils)) y la cadena del agente de usuario. Tenga en cuenta que esta información se proporciona solamente como una forma granular de desglosar las métricas operativas en categorías de dispositivos, pero ese Adobe no puede asumir ninguna responsabilidad por los resultados incorrectos. Utilice la nueva funcionalidad en consecuencia.
+> El tipo de dispositivo y el sistema operativo se derivan del uso de una biblioteca Java pública ([http://java.net/projects/user-agent-utils](http://java.net/projects/user-agent-utils)) y la cadena del agente de usuario. Tenga en cuenta que esta información se proporciona solo como una forma grosera de desglosar las métricas operativas en categorías de dispositivos, pero que ese Adobe no puede responsabilizarse de los resultados incorrectos. Utilice la nueva funcionalidad en consecuencia.
 
 
 - Valores posibles para el tipo de dispositivo:
@@ -707,7 +706,7 @@ Access Enabler déclencheur una llamada de retorno adicional que no está necesa
    - `unknown`
 
 
-- Valores posibles del tipo de cliente Access Enabler:
+- Valores posibles para el tipo de cliente del Habilitador de acceso:
    - `flash`
    - `html5`
    - `ios`
@@ -715,7 +714,7 @@ Access Enabler déclencheur una llamada de retorno adicional que no está necesa
 
 </br>
 
-| Llamada de retorno: seguimiento de eventos |
+| Callback: seguimiento de eventos |
 | --- |
 | ```public void sendTrackingData(Event event, ArrayList<String> data)``` |
 
@@ -726,41 +725,41 @@ Access Enabler déclencheur una llamada de retorno adicional que no está necesa
 - *evento*: el evento que se está rastreando. Existen tres tipos de eventos de seguimiento posibles:
    - **authorizationDetection:** cada vez que se devuelve una solicitud de token de autorización (el tipo de evento es `EVENT_AUTHZ_DETECTION`)
    - **authenticationDetection:** cada vez que se produce una comprobación de autenticación (el tipo de evento es `EVENT_AUTHN_DETECTION`)
-   - **mvpdSelection:** cuando el usuario selecciona un MVPD en el formulario de selección de MVPD (el tipo de evento es `EVENT_MVPD_SELECTION`)
-- *data*: datos adicionales asociados al evento registrado. Estos datos se presentan en forma de una lista de valores.
+   - **mvpdSelection:** cuando el usuario selecciona una MVPD en el formulario de selección de MVPD (el tipo de evento es `EVENT_MVPD_SELECTION`)
+- *datos*: datos adicionales asociados al evento del que se informa. Estos datos se presentan en forma de lista de valores.
 
-A continuación se indican las instrucciones para interpretar los valores de la variable *data*
+A continuación se proporcionan instrucciones para interpretar los valores de la variable *datos*
 matriz:
 
 - Para el tipo de evento *`EVENT_AUTHN_DETECTION`:*
-   - **0** - Si la solicitud del token se ha realizado correctamente (true/false) y si el valor anterior es verdadero:
+   - **0** - Si la solicitud de token se realizó correctamente (verdadero/falso) y si lo anterior es verdadero:
    - **1** - Cadena de ID de MVPD
-   - **2** - GUID (con hash md5)
-   - **3** - Token ya en la caché (true/false)
+   - **2** - GUID (MD5 con hash)
+   - **3** - El token ya está en la caché (verdadero/falso)
    - **4** - Tipo de dispositivo
-   - **5** - Tipo de cliente Access Enabler
+   - **5** - Tipo de cliente de Access Enabler
    - **6** - Tipo de sistema operativo
 
 - Para el tipo de evento `EVENT_AUTHZ_DETECTION`
-   - **0** - Si la solicitud del token se ha realizado correctamente (true/false) y si se ha realizado correctamente:
+   - **0** - Si la solicitud de token se realizó correctamente (verdadero/falso) y, si se realizó correctamente:
    - **1** - ID de MVPD
-   - **2** - GUID (con hash md5)
-   - **3** - Token ya en la caché (true/false)
+   - **2** - GUID (MD5 con hash)
+   - **3** - El token ya está en la caché (verdadero/falso)
    - **4** - Error
    - **5** - Detalles
    - **6** - Tipo de dispositivo
-   - **7** - Tipo de cliente Access Enabler
+   - **7** - Tipo de cliente de Access Enabler
    - **8** - Tipo de sistema operativo
 
 - Para el tipo de evento `EVENT_MVPD_SELECTION`
-   - **0** - ID del MVPD seleccionado actualmente
+   - **0** - ID de la MVPD seleccionada actualmente
    - **1** - Tipo de dispositivo
-   - **2** - Tipo de cliente Access Enabler
+   - **2** - Tipo de cliente de Access Enabler
    - **3** - Tipo de sistema operativo
 
 **Activado por:** `checkAuthentication()`, `getAuthentication()`, `checkAuthorization()`, `getAuthorization()`, `setSelectedProvider()`
 
-[Volviendo a la API de Android...](#api)
+[Volver a la API de Android...](#api)
 
 
 <!--

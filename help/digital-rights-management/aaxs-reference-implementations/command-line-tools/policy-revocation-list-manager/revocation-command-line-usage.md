@@ -1,19 +1,18 @@
 ---
-title: Uso de la línea de comandos
-description: Uso de la línea de comandos
+title: Uso de línea de comandos
+description: Uso de línea de comandos
 copied-description: true
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b9e51bab-7bef-459f-bb4d-13ccc4add37a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
 
+# Uso de línea de comandos {#command-line-usage}
 
-# Uso de la línea de comandos {#command-line-usage}
-
-El Administrador de listas de revocación se encuentra en el directorio \Reference Implementation\Command Line Tools del DVD. Para ejecutar la herramienta, utilice una de las siguientes sintaxis:
+El Administrador de listas de revocación se encuentra en el directorio \Implementación de referencia\Herramientas de línea de comandos del DVD. Para ejecutar la herramienta, utilice una de las siguientes sintaxis:
 
 ```
     java -jar AdobeRevocationListManager.jar 
@@ -35,7 +34,7 @@ El Administrador de listas de revocación se encuentra en el directorio \Referen
 * `destfile` indica dónde se escribirá la lista de revocación.
 * `crlNumber` es un número de versión no negativo de la Lista de revocación de certificados (CRL). Este número debe incrementarse cada vez que se actualiza la CRL.
 
-La siguiente tabla contiene descripciones de las opciones de la línea de comandos que se muestran en la sintaxis anterior:
+La siguiente tabla contiene descripciones de las opciones de la línea de comandos mostradas en la sintaxis anterior:
 
 <table frame="all" colsep="1" rowsep="1" class="+ topic/table adobe-d/table " id="table_a3y_wqy_n4"> 
  <thead class="- topic/thead "> 
@@ -46,33 +45,32 @@ La siguiente tabla contiene descripciones de las opciones de la línea de comand
  </thead>
  <tbody class="- topic/tbody "> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c configfile</span> </td> 
-   <td colname="2" class="- topic/entry ">Especifica la ubicación del archivo de configuración. Si no se utiliza esta opción, el Administrador de la lista de revocación buscará <span class="filepath"> flashaccesstools.properties</span> en el directorio de trabajo. </td> 
+   <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-c archivoDeConfiguración</span> </td> 
+   <td colname="2" class="- topic/entry ">Especifica la ubicación del archivo de configuración. Si no se utiliza esta opción, el Administrador de listas de revocación buscará <span class="filepath"> flashaccesstools.properties</span> en el directorio de trabajo. </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-d nombre de archivo</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Muestra información sobre la lista de revocación. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Muestra información acerca de la lista de revocación. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">-e fecha</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Opcional) La fecha de caducidad de la lista de revocación. Utilice el formato <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> o <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span> (por ejemplo, 2009-01-31-14:30:00 representa el 31 de enero a las 2:30 p. m). </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Opcional) Fecha de caducidad de la lista de revocación. Usar el formato <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-dd</span> o <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-dd-h24:min:s</span> (por ejemplo, 2009-01-31-14:30:00 representa el 31 de enero a las 2:30 p.m.). </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph">-f filename[certfile]</span> </td> 
-   <td colname="2" class="- topic/entry ">Agrega todas las entradas de la lista de revocación existente. Solo se puede especificar un archivo existente. <p class="- topic/p ">Si esta lista existente se firmó con una credencial diferente a la que se usa para firmar la nueva lista, especifique su archivo de certificado a continuación, para que se pueda verificar su firma. </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph">-f nombreDeArchivo[certfile]</span> </td> 
+   <td colname="2" class="- topic/entry ">Agrega todas las entradas de la lista de revocación existente. Solo se puede especificar un archivo existente. <p class="- topic/p ">Si esta lista existente se firmó con una credencial diferente a la que se usa para firmar la nueva lista, especifique su archivo de certificado a continuación, de modo que se pueda comprobar su firma. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -noprompt</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">No pregunte si el archivo de destino debe sobrescribirse. Si el archivo de destino ya existe y -o no está establecido, se devuelve un error. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">No pregunte si el archivo de destino debe sobrescribirse. Si el archivo de destino ya existe y no se ha establecido -o, se devolverá un error. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> -o</span> </td> 
    <td colname="2" class="- topic/entry "> Si el archivo de destino ya existe, sobrescribirlo sin preguntar. </td> 
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
-   <td colname="1" class="- topic/entry "><span class="codeph">-r issuerName serialNumber revocationDate</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Revoca el certificado identificado por <span class="codeph"> issuerName</span> y <span class="codeph"> serialNumber</span> en la fecha dada. El <span class="codeph"> issuerName</span> debe seguir el formato de nombre 509 (por ejemplo, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>). Especifique los números de serie en formato hexadecimal. Especifique la fecha de revocación como <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd</span> o <span class="+ topic/ph pr-d/codeph codeph">yyyy-mm-dd-h24:min:sec</span>, por ejemplo 2008-12-1 o 2008-12-1-00:00:00 para la medianoche del 1 de 1 de diciembre 1. 008. Si no se especifica la fecha de revocación, se utiliza la fecha actual. </p> </td> 
+   <td colname="1" class="- topic/entry "><span class="codeph">-r nombreDeEmisor númeroDeSerie revocationDate</span> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Revoca el certificado identificado por <span class="codeph"> IssuerName</span> y <span class="codeph"> serialNumber</span> en la fecha determinada. El <span class="codeph"> IssuerName</span> debe seguir el formato de nombre 509 (por ejemplo, <span class="codeph"> CN=12345,O=Adobe Systems Incorporated,C=US</span>). Especifique los números de serie en formato hexadecimal. Especificar la fecha de revocación como <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-dd</span> o <span class="+ topic/ph pr-d/codeph codeph">aaaa-mm-dd-h24:min:s</span>, por ejemplo 2008-12-1 o 2008-12-1-00:00:00 para la medianoche del 1 de diciembre de 2008. Si no se especifica la fecha de revocación, se utiliza la fecha actual. </p> </td> 
   </tr> 
  </tbody> 
 </table>
-

@@ -1,18 +1,17 @@
 ---
-description: Puede activar esta función y comprobar si hay eventos relacionados.
-title: Usar actualización de manifiesto maestro en vivo
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Puede activar esta función y buscar eventos relacionados.
+title: Usar actualización activa del manifiesto maestro
+exl-id: 02cb3116-cc30-4139-841b-8d6297214b8b
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%
 
 ---
 
+# Usar actualización activa del manifiesto maestro{#use-live-master-manifest-update}
 
-# Usar actualización de manifiesto maestro en vivo{#use-live-master-manifest-update}
+Puede activar esta función y buscar eventos relacionados.
 
-Puede activar esta función y comprobar si hay eventos relacionados.
-
-1. Para activar las actualizaciones de manifiesto maestro en vivo, establezca la frecuencia de actualización (en minutos) estableciendo la propiedad `NetworkConfiguration.masterUpdateInterval`.
-1. Opcionalmente, puede rastrear las actualizaciones de manifiesto correctas escuchando el evento `MediaPlayerItemEvent.MASTER_UPDATED`.
+1. Para activar las actualizaciones del manifiesto principal activo, establezca la frecuencia de actualización (en minutos) configurando `NetworkConfiguration.masterUpdateInterval` propiedad.
+1. De forma opcional, rastree las actualizaciones de manifiesto correctas escuchando el `MediaPlayerItemEvent.MASTER_UPDATED` evento.

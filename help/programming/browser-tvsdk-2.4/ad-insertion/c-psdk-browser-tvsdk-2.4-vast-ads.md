@@ -1,30 +1,29 @@
 ---
-description: Cuando el TVSDK del explorador solicita una publicidad que no está en el servidor de publicidad principal, el reproductor debe solicitar la publicidad desde el servidor secundario. La plantilla de servicio de publicidad de vídeo (VAST) establece el estándar de comunicación entre servidores de publicidad y reproductores de vídeo, y es la respuesta que envía el servidor de publicidad secundario cuando solicita el anuncio.
+description: Cuando el TVSDK del explorador solicita un anuncio que no está en el servidor de publicidad principal, el reproductor debe solicitar el anuncio del servidor secundario. La plantilla de servicio de anuncios de vídeo (VAST) establece el estándar de comunicación entre servidores de publicidad y reproductores de vídeo y es la respuesta que envía el servidor de publicidad secundario cuando se solicita el anuncio.
 title: Anuncios VAST
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: b0ebade5-b5da-413d-84f4-abebac579f45
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
 
 ---
 
-
 # Anuncios VAST {#vast-ads}
 
-Cuando el TVSDK del explorador solicita una publicidad que no está en el servidor de publicidad principal, el reproductor debe solicitar la publicidad desde el servidor secundario. La plantilla de servicio de publicidad de vídeo (VAST) establece el estándar de comunicación entre servidores de publicidad y reproductores de vídeo, y es la respuesta que envía el servidor de publicidad secundario cuando solicita el anuncio.
+Cuando el TVSDK del explorador solicita un anuncio que no está en el servidor de publicidad principal, el reproductor debe solicitar el anuncio del servidor secundario. La plantilla de servicio de anuncios de vídeo (VAST) establece el estándar de comunicación entre servidores de publicidad y reproductores de vídeo y es la respuesta que envía el servidor de publicidad secundario cuando se solicita el anuncio.
 
-Para obtener más información sobre VAST, consulte [Plantilla de servicio de publicidad de vídeo digital (VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
+Para obtener más información sobre VAST, consulte [Plantilla de servicio de anuncios de vídeo digital (VAST) 3.0](https://www.iab.com/wp-content/uploads/2015/06/VASTv3_0.pdf).
 
-El SDK de TVSDK del explorador admite los siguientes elementos de publicidad VAST:
+El TVSDK del explorador es compatible con los siguientes elementos de publicidad VAST:
 
-## Anuncios envolventes y en línea {#section_11B8A1A8F52F4F77981C6AAC02185087}
+## Envoltorio y anuncios en línea {#section_11B8A1A8F52F4F77981C6AAC02185087}
 
 Se admiten los siguientes elementos:
 
-* **`wrapper`** Cuando el reproductor necesita ponerse en contacto con un servidor de publicidad secundario para solicitar una publicidad, el elemento wrapper proporciona la información de redirección. Un elemento envolvente puede señalar a varios contenedores que finalmente apuntan a un anuncio VAST.
+* **`wrapper`** Cuando el reproductor debe ponerse en contacto con un servidor de publicidad secundaria para solicitar una publicidad, el elemento envoltorio proporciona la información de redirección. Un elemento envolvente puede apuntar a varios envoltorios que finalmente apuntan a un anuncio VAST.
 
-* **`inline`** Se admiten los siguientes elementos obligatorios:
+* **`inline`** Se admiten los siguientes elementos necesarios:
 
 * `AdSystem`
 * `AdTitle`
@@ -38,16 +37,16 @@ Se admiten los siguientes elementos:
 
 ## Creativos {#section_0121F948CB074E49A8132D202786CAA4}
 
-Este elemento es un archivo que forma parte de un anuncio VAST y contiene un elemento `creative` que puede admitir un anuncio lineal, un anuncio no lineal o un anuncio complementario. En el elemento `creative`, se admiten los elementos `id`, `sequence` y `adId`.
+Este elemento es un archivo que forma parte de un anuncio VAST y contiene un `creative` que pueden admitir un anuncio lineal, uno no lineal o un anuncio complementario. En el `creative` , el `id`, `sequence`, y `adId` son compatibles.
 
-A continuación se muestra más información sobre los tipos de publicidad:
+Aquí tiene más información sobre los tipos de anuncios:
 
-* **Anuncios** linealesSe admiten los siguientes elementos:
+* **Anuncios lineales** Se admiten los siguientes elementos:
 
-   * `TrackingEvent`, que contiene el  `Tracking` elemento .
+   * `TrackingEvent`, que contiene el `Tracking` Elemento.
       * `Duration`
       * `AdParameters`
-      * `VideoClicks`, lo que incluye lo siguiente:
+      * `VideoClicks`, incluidos los siguientes:
 
       * `ClickThrough`
       * `ClickTracking`
@@ -59,15 +58,15 @@ A continuación se muestra más información sobre los tipos de publicidad:
 
          >[!TIP]
          >
-         >En este elemento, se admiten los atributos `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework` y `type`.
+         >En este elemento, la variable `id`, `bitrate`, `delivery`, `width`, `height`, `scalable`, `maintainAspectRatio`, `apiFramework`, y `type` se admiten atributos de.
 
-* **Anuncios no** linealesSe admiten los siguientes elementos:
+* **Anuncios no lineales** Se admiten los siguientes elementos:
 
    * `Non-linear`
 
       >[!TIP]
       >
-      >En este elemento, se admiten los atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio` y `minSuggestedDuration`.
+      >En este elemento, la variable `id`, `width`, `height`, `apiFramework`, `expandedWidth`, `expandedHeight`, `scalable`, `maintainAspectRatio`, y `minSuggestedDuration` se admiten atributos de.
 
       * `StaticResource`
       * `IFrameResource`
@@ -75,13 +74,13 @@ A continuación se muestra más información sobre los tipos de publicidad:
       * `NonLinearClickThrough`
       * `AdParameters`
 
-* **Anuncios** complementariosSe admiten los siguientes elementos:
+* **Anuncios complementarios** Se admiten los siguientes elementos:
 
    * `Companion`
 
       >[!TIP]
       >
-      >En este elemento, se admiten los atributos `id`, `width`, `height`, `apiFramework`, `expandedWidth` y `expandedHeight`.
+      >En este elemento, la variable `id`, `width`, `height`, `apiFramework`, `expandedWidth`, y `expandedHeight` se admiten atributos de.
 
       * `StaticResource`
       * `IFrameResource`

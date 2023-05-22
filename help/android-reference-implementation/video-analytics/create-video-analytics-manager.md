@@ -1,29 +1,27 @@
 ---
-description: Creación del administrador de Video Analytics
-title: Creación del administrador de Video Analytics
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Creación del Administrador de Video Analytics
+title: Creación del Administrador de Video Analytics
+exl-id: 8d2bbb39-10e2-43e8-8ed3-bc376b3f3cc8
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%
 
 ---
 
+# Creación del Administrador de Video Analytics {#create-the-video-analytics-manager}
 
-# Crear el administrador de Video Analytics {#create-the-video-analytics-manager}
+Una nueva clase de administrador ( `VAManager`) se ha añadido a la Implementación de referencia de Android. `VAManager` simplemente crea y destruye una instancia de `VideoHeartbeat` clase. La implementación de referencia crea un `VAManager` instancia cuando se crea un nuevo `MediaPlayer` se crea y destruye esa instancia cuando el `MediaPlayer` se destruye. Esto se implementa en `PlayerFragment.java`.
 
-Se ha añadido una nueva clase de administrador ( `VAManager`) a la implementación de referencia de Android. `VAManager` simplemente crea y destruye una instancia de la  `VideoHeartbeat` clase. La implementación de referencia crea una instancia `VAManager` cuando se crea un `MediaPlayer` nuevo y destruye esa instancia cuando se destruye el `MediaPlayer`. Esto se implementa en `PlayerFragment.java`.
-
-## Para crear un nuevo Administrador de análisis de vídeo
+## Para crear un nuevo Administrador de Video Analytics
 
 ```java
 VAManager vaManager = ManagerFactory.getVAManager(true, config, mediaPlayer);  
 vaManager.createVAProvider(getActivity().getApplicationContext()); 
 ```
 
-La variable de configuración es una implementación concreta de `IVAConfig` y contiene las configuraciones `VideoHeartbeat` de tiempo de ejecución.
+La variable de configuración es una implementación concreta de `IVAConfig` y contiene el tiempo de ejecución `VideoHeartbeat` configuraciones.
 
 >[!NOTE]
 >
->Si la aplicación de Android no está configurada con una cuenta de Adobe Analytics, no se generarán los datos de seguimiento de vídeo, aunque se cree y habilite una instancia de `VAManager`.
-
+>Si la aplicación de Android no está configurada con una cuenta de Adobe Analytics, los datos de seguimiento de vídeo no se generan, aunque se cree una instancia de `VAManager` se crea y se activa.

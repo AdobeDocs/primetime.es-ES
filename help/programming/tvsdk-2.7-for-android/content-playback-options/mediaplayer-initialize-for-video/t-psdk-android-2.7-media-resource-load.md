@@ -1,39 +1,38 @@
 ---
-description: Cargue un recurso creando una instancia de MediaResource directamente y cargando el contenido del vídeo que desea reproducir. Esta es una forma de cargar un recurso de medios.
-title: Carga de un recurso de medios en el reproductor de medios
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+description: Cargue un recurso creando directamente una instancia de MediaResource y cargando el contenido de vídeo que desea reproducir. Esta es una forma de cargar un recurso multimedia.
+title: Carga de un recurso multimedia en el reproductor de contenidos
+exl-id: ee11876b-c752-46cc-8e65-8c1608a41362
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
 
 ---
 
+# Carga de un recurso multimedia en el reproductor de contenidos {#load-a-media-resource-in-the-media-player}
 
-# Carga de un recurso de medios en el reproductor de medios {#load-a-media-resource-in-the-media-player}
+Cargue un recurso creando directamente una instancia de MediaResource y cargando el contenido de vídeo que desea reproducir. Esta es una forma de cargar un recurso multimedia.
 
-Cargue un recurso creando una instancia de MediaResource directamente y cargando el contenido del vídeo que desea reproducir. Esta es una forma de cargar un recurso de medios.
+1. Configure el reproductor de contenidos para que reproduzca el nuevo recurso.
 
-1. Configure el reproductor de medios para que reproduzca el nuevo recurso.
-
-   Reemplace el elemento que se puede reproducir actualmente llamando a `MediaPlayer.replaceCurrentResource()` y pasando una instancia `MediaResource` existente.
+   Reemplazar el elemento que se puede reproducir actualmente llamando a `MediaPlayer.replaceCurrentResource()` y pasar un existente `MediaResource` ejemplo.
 
    Esto inicia el proceso de carga de recursos.
 
-1. Registre el evento `MediaPlayerEvent.STATUS_CHANGED` con la instancia `MediaPlayer` . En la rellamada, compruebe al menos los siguientes valores de estado:
+1. Registre el `MediaPlayerEvent.STATUS_CHANGED` con el evento `MediaPlayer` ejemplo. En la llamada de retorno, compruebe al menos los siguientes valores de estado:
 
    * `MediaPlayerStatus.PREPARED`
    * `MediaPlayerStatus.INITIALIZED`
    * `MediaPlayerStatus.ERROR`
 
-   Mediante estos eventos, el objeto `MediaPlayer` notifica a la aplicación cuando ha cargado correctamente el recurso de medios.
-1. Cuando el estado del reproductor de contenidos cambia a `INITIALIZED`, puede llamar a `MediaPlayer.prepareToPlay()`.
+   A través de estos eventos, la `MediaPlayer` notifica a la aplicación cuando ha cargado correctamente el recurso multimedia.
+1. Cuando el estado del reproductor de contenidos cambie a `INITIALIZED`, puede llamar a `MediaPlayer.prepareToPlay()`.
 
-   Este estado indica que el medio se ha cargado correctamente. El nuevo `MediaPlayerItem` está listo para la reproducción. Al llamar a `prepareToPlay()` se inicia el proceso de resolución y colocación de publicidad, si existe.
+   Este estado indica que el medio se ha cargado correctamente. El nuevo `MediaPlayerItem` está listo para la reproducción. Llamando `prepareToPlay()` inicia el proceso de resolución y colocación de la publicidad, si lo hay.
 
-Si se produce un error, el reproductor de contenidos cambia al estado `ERROR`.
+Si se produce un error, el reproductor multimedia cambia al `ERROR` estado.
 
-El siguiente código de ejemplo simplificado ilustra el proceso de carga de un recurso de medios:
+El siguiente código de ejemplo simplificado ilustra el proceso de carga de un recurso multimedia:
 
 ```java
 // mediaResource is a properly configured MediaResource instance 

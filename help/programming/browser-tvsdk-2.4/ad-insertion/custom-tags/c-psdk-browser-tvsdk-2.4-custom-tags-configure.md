@@ -1,34 +1,33 @@
 ---
-description: Los flujos de contenido multimedia pueden incluir metadatos adicionales en forma de etiquetas en el archivo de descripción de la presentación de contenido (MPD) y este archivo indica la ubicación de la publicidad. Puede especificar nombres de etiquetas personalizados y recibir notificaciones cuando determinadas etiquetas aparezcan en el archivo de manifiesto.
+description: Los flujos de medios pueden llevar metadatos adicionales en forma de etiquetas en el archivo de descripción de presentación de medios (MPD), y este archivo indica la colocación de la publicidad. Puede especificar nombres de etiquetas personalizados y recibir notificaciones cuando determinadas etiquetas aparezcan en el archivo de manifiesto.
 title: Etiquetas personalizadas
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 9e6343b5-ade7-467a-b2a1-8f8d69492a1a
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 0%
 
 ---
 
-
 # Información general {#custom-tags-overview}
 
-Los flujos de contenido multimedia pueden incluir metadatos adicionales en forma de etiquetas en el archivo de descripción de la presentación de contenido (MPD) y este archivo indica la ubicación de la publicidad. Puede especificar nombres de etiquetas personalizados y recibir notificaciones cuando determinadas etiquetas aparezcan en el archivo de manifiesto.
+Los flujos de medios pueden llevar metadatos adicionales en forma de etiquetas en el archivo de descripción de presentación de medios (MPD), y este archivo indica la colocación de la publicidad. Puede especificar nombres de etiquetas personalizados y recibir notificaciones cuando determinadas etiquetas aparezcan en el archivo de manifiesto.
 
 ## Etiquetas de contenido HLS {#section_E99299152089418FBA56F5F09FC547B0}
 
 >[!IMPORTANT]
 >
->Esta función no está disponible para Safari en equipos Apple, ya que el SDK del explorador utiliza la etiqueta de vídeo, en lugar de Flash o MSE, para reproducir contenido HLS.
+>Esta función no está disponible para Safari en equipos con Apple, ya que TVSDK del explorador utiliza la etiqueta de vídeo, en lugar de Flash o MSE, para reproducir contenido HLS.
 
-El SDK de TVSDK del explorador proporciona compatibilidad lista para usar con etiquetas publicitarias #EXT específicas. La aplicación puede utilizar etiquetas personalizadas para mejorar el flujo de trabajo publicitario o para admitir situaciones de bloqueo. Para admitir flujos de trabajo avanzados, el SDK de explorador le permite especificar y suscribirse a etiquetas adicionales en el manifiesto. Se le puede notificar cuando estas etiquetas aparezcan en el archivo de manifiesto.
+El TVSDK del explorador es compatible de serie con etiquetas publicitarias #EXT específicas. La aplicación puede utilizar etiquetas personalizadas para mejorar el flujo de trabajo de la publicidad o para admitir situaciones de interrupción. Para admitir flujos de trabajo avanzados, el TVSDK del explorador le permite especificar y suscribirse a etiquetas adicionales en el manifiesto. Puede recibir una notificación cuando estas etiquetas aparezcan en el archivo de manifiesto.
 
 >[!TIP]
 >
->Puede suscribirse a etiquetas personalizadas tanto para VOD como para flujos en directo/lineales.
+>Puede suscribirse a etiquetas personalizadas tanto para VOD como para emisiones en directo/lineales.
 
 >[!NOTE]
 >
->Cuando se reproduce HLS utilizando la etiqueta de vídeo en Safari y no utilizando la reserva de Flash, esta función no estará disponible en Safari.
+>Cuando se reproduce HLS con la etiqueta de vídeo en Safari y no con la reserva de Flash, esta función no estará disponible en Safari.
 
 ## Uso de etiquetas HLS personalizadas {#section_AD032318AEF5418393D2B1DF36B0BABB}
 
@@ -62,22 +61,22 @@ seg5.ts
 
 La aplicación puede configurar los siguientes escenarios:
 
-* En el archivo existe una notificación cuando `#EXT-X-ASSET` etiquetas, o cualquier otro conjunto de nombres de etiquetas personalizados al que se haya suscrito.
-* Inserte publicidades cuando se encuentre una etiqueta `#EXT-X-AD` o cualquier otro nombre de etiqueta personalizado en el flujo.
+* Una notificación cuando `#EXT-X-ASSET` las etiquetas, o cualquier otro conjunto de nombres de etiqueta personalizados a los que se haya suscrito, existen en el archivo.
+* Insertar anuncios cuando un `#EXT-X-AD` , o cualquier otro nombre de etiqueta personalizado, se encuentra en el flujo.
 
-Puede suscribirse a cualquiera de las siguientes etiquetas como etiquetas personalizadas: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Se le notifica con un evento `TimedMetadata` durante el análisis de los archivos de manifiesto.
+Puede suscribirse a cualquiera de las siguientes etiquetas como etiquetas personalizadas: `EXT-PROGRAM-DATE-TIME`, `EXT-X-START`, `EXT-X-AD`, `EXT-X-CUE`, `EXT-X-ENDLIST`. Se le notifica con una `TimedMetadata` durante el análisis de los archivos de manifiesto.
 
-Hay algunas etiquetas publicitarias, como `EXT-X-CUE`, a las que ya está suscrito. El generador de oportunidades predeterminado también utiliza estas etiquetas de publicidad. Puede especificar qué etiquetas de publicidad utiliza el generador de oportunidades predeterminado estableciendo la propiedad `adTags` .
+Hay algunas etiquetas publicitarias, como `EXT-X-CUE`, a la que ya está suscrito. Estas etiquetas de anuncio también las utiliza el generador de oportunidades predeterminado. Puede especificar qué etiquetas de publicidad utiliza el generador de oportunidades predeterminado estableciendo la variable `adTags` propiedad.
 
-## Etiquetas de contenido DASH {#section_967A952319BE4048B4C6612FFF7ADA6E}
+## Etiquetas de contenido de DASH {#section_967A952319BE4048B4C6612FFF7ADA6E}
 
-DASH tiene dos formas de señalar eventos:
+DASH tiene dos formas de señalizar eventos:
 
 * En el archivo MPD.
 
-   Este archivo es similar al archivo M3U8 en contenido HLS y los eventos MPD existen en el archivo .mpd.
-* Inband en la representación
+   Este archivo es similar al archivo M3U8 del contenido HLS y los eventos MPD existen en el archivo .mpd.
+* En banda en la representación
 
-   Los eventos dentro de banda se multiplexan con representaciones agregando los mensajes de evento como parte de los segmentos. Una representación es una lista de segmentos de vídeo y audio que se reproducen en secuencia. Los datos de evento de entrada se incrustan en estos segmentos.
+   Los eventos en banda se multiplexan con representaciones agregando los mensajes de evento como parte de los segmentos. Una representación es una lista de segmentos de vídeo y audio que se reproducen en secuencia. Los datos de evento en banda están incrustados en estos segmentos.
 
-Estos eventos se notifican como eventos `TimedMetadata` a la aplicación en cuanto el explorador TVSDK los analiza. Una vez que se notifica un evento, no se vuelve a notificar.
+Estos eventos se notifican como `TimedMetadata` a la aplicación en cuanto el TVSDK del explorador los analice. Una vez notificado un evento, no se le notificará de nuevo.

@@ -1,27 +1,26 @@
 ---
-description: Esta versión incluye reproductores y admite una amplia gama de navegadores.
+description: Esta versión incluye reproductores y es compatible con una amplia gama de navegadores.
 title: Requisitos
-translation-type: tm+mt
-source-git-commit: 89bdda1d4bd5c126f19ba75a819942df901183d1
+exl-id: 3157a86b-bf93-41d9-be82-0b702d69c69e
+source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
 
 ---
 
-
 # Información general {#requirements-overview}
 
-El SDK de explorador requiere propiedades específicas para el contenido multimedia, el contenido de manifiesto y las versiones de software.
+El TVSDK del explorador requiere propiedades específicas para el contenido de medios, el contenido de manifiesto y las versiones de software.
 
-La versión TVSDK del explorador incluye los siguientes reproductores:
+La versión de TVSDK del explorador incluye los siguientes reproductores:
 
 * `Primetime.js` para HLS en equipos de escritorio y móviles
 
 Los reproductores incluyen las siguientes API de referencia:
 
-* `Primetime.js` Explorador TVSDK
-* API de JavaScript para reproducción principal
+* `Primetime.js` TVSDK del explorador
+* API de JavaScript para Core Playback
 * Reproductor de demostración de referencia
 
 **Plataformas certificadas:**
@@ -41,7 +40,7 @@ Los reproductores incluyen las siguientes API de referencia:
    * Microsoft Windows 10
 
       * Edge+
-   * Apple OS X
+   * APPLE OS X
 
       * Safari 8+
       * Chrome 33+
@@ -54,20 +53,20 @@ Los reproductores incluyen las siguientes API de referencia:
 
    * Android 4.4
 
-      * Explorador nativo
+      * Navegador nativo
       * Chrome 33+
    * Android 5.0
 
-      * Explorador nativo
+      * Navegador nativo
       * Chrome 33+
    * Android 6.0
 
       * Chrome 33+
-   * Apple iOS 8
+   * APPLE IOS 8
 
       * Safari 8+
       * Chrome 33+
-   * Apple iOS 9
+   * APPLE IOS 9
 
       * Safari 8+
       * Chrome 33+

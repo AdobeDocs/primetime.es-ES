@@ -1,45 +1,44 @@
 ---
 title: Información general sobre la guía de integración del programador
 description: descripción de la guía de integración del programador
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
+source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
 
 ---
 
-
-
 # Guía de integración del programador {#programmer-integration-guide}
 
 
 >[!NOTE]
 >
->El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite ningún uso no autorizado.
+>El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
-## Cookbooks {#cookbooks}
+## Libros {#cookbooks}
 
 * Guía del SDK de JavaScript de AccessEnabler 
-* Guía del SDK de AccessEnabler iOS/tvOS
-* Guía del SDK para Android de AccessEnabler
+* Guía del SDK de AccessEnabler para iOS/tvOS
+* Guía del SDK de AccessEnabler para Android
 * Guía de la API de REST (servidor a servidor)
-* Guía de la API de REST (cliente a servidor)
+* Guía de la API de REST (de cliente a servidor)
 
 ## Referencias de API {#api-references}
 
-* Referencia de la API del SDK de JavaScript de AccessEnabler
+* Referencia de API del SDK de JavaScript de AccessEnabler
 * Referencia de la API del SDK de AccessEnabler iOS/tvOS
-* Referencia de la API del SDK para Android de AccessEnabler
+* Referencia de API de SDK de Android AccessEnabler
 * Referencia de API de REST
 
 ## Información general técnica {#technical-overviews}
 
-* Información general sobre el SDK de JavaScript de AccessEnabler
-* Información general sobre el SDK de AccessEnabler iOS/tvOS
-* Información general sobre el SDK para Android de AccessEnabler
-* Información general de la API de REST
+* Información general del SDK de JavaScript de AccessEnabler
+* Información general sobre el SDK de AccessEnabler para iOS/tvOS
+* Información general del SDK de Android AccessEnabler
+* Información general de API REST
 
-Están pensados para ingenieros de software que se encarguen del aspecto técnico de una integración de autenticación de Adobe Primetime.
+Están destinados a ingenieros de software que se ocupen del aspecto técnico de una integración de autenticación de Adobe Primetime.
 
 <!--
 
