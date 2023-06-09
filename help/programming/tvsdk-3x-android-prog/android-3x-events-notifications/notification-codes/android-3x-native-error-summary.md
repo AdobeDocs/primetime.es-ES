@@ -3,9 +3,9 @@ title: Detalles de la notificación NATIVE_ERROR
 description: Detalles de la notificación NATIVE_ERROR
 copied-description: true
 exl-id: 08121879-d5a6-4224-b08d-9e66fe4d185a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '6888'
+source-wordcount: '6868'
 ht-degree: 2%
 
 ---
@@ -141,7 +141,7 @@ Cuando TVSDK administra un error nativo, devuelve algunos o todos los valores de
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AUDITUDE_ERROR_CODE</span> </td> 
-   <td colname="col2"> Código de error de audiencia (número). </td> 
+   <td colname="col2"> Código de error del Auditude (número). </td> 
   </tr> 
  </tbody> 
 </table>
@@ -349,7 +349,7 @@ Cuando se comuniquen errores de DRM al Adobe, asegúrese de incluir el `NATIVE_S
    <td colname="col2"><span class="codeph"> AAXS_I15nFailed </span> </td> 
    <td colname="col3"> <p>Error en el proceso de aprovisionamiento del cliente con claves. subErrorId contiene un error de línea, específico del servidor o específico del cliente. </p> 
     <ul id="ul_98D919B9060A441AACB6106F6D8E8DA7"> 
-     <li id="li_DCAB00A8AC4A426CBBD377374B3F71AE">El software del distribuidor debe reintentar la operación al menos una vez. <p>Si utiliza Google Chrome en Windows, proporcione una explicación sobre cómo permitir el acceso a complementos que no están en una zona protegida. Para obtener más información, consulte <a href="https://helpx.adobe.com/adobe-access/kb/error-3321.html" format="html" scope="external"> Acceso denegado a la zona protegida de Google Chrome</a>. </p> </li> 
+     <li id="li_DCAB00A8AC4A426CBBD377374B3F71AE">El software del distribuidor debe reintentar la operación al menos una vez. <p>Si utiliza Google Chrome en Windows, proporcione una explicación sobre cómo permitir el acceso a complementos que no están en una zona protegida. Acceso denegado a la zona protegida de Google Chrome</a>. </p> </li> 
      <li id="li_7FB7681FE32D444BB1BDBA3E5953A2C3">El distribuidor debe realizar una de las siguientes tareas: 
       <ul id="ul_486B64F187C44AE3B4775953A6142836"> 
        <li id="li_095B1D4CD051427CB2BFA7082B454056">Si el error es consistente entre plataformas, debe escalar el problema con Adobe. </li> 
@@ -682,7 +682,7 @@ Cuando se comuniquen errores de DRM al Adobe, asegúrese de incluir el `NATIVE_S
   <tr> 
    <td colname="col1"> 3368 </td> 
    <td colname="col2"><span class="codeph"> AXS_UserSettingsNoAccess</span> </td> 
-   <td colname="col3"> <p>El usuario ha cancelado la operación o ha introducido opciones que no permiten el acceso al sistema. </p> <p>Este error solo se produce cuando la versión del SWF es 19 o posterior. Para la compatibilidad con versiones anteriores, se produce 3321 cuando el SWF es de la versión 18 o anterior. </p> <p>El software del distribuidor debe guiar al usuario hasta una explicación de cómo permitir el acceso al complemento sin zona protegida. Para obtener más información, consulte <a href="https://helpx.adobe.com/adobe-access/kb/error-3321.html" format="html" scope="external"> Acceso denegado a la zona protegida de Google Chrome</a> y <a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> Error DRM 3322/3346/3368 en Chrome (problemas de la barra de información)</a>. </p> </td> 
+   <td colname="col3"> <p>El usuario ha cancelado la operación o ha introducido opciones que no permiten el acceso al sistema. </p> <p>Este error solo se produce cuando la versión del SWF es 19 o posterior. Para la compatibilidad con versiones anteriores, se produce 3321 cuando el SWF es de la versión 18 o anterior. </p> <p>El software del distribuidor debe guiar al usuario hasta una explicación de cómo permitir el acceso al complemento sin zona protegida. Acceso denegado a la zona protegida de Google Chrome</a> y <a href="https://forums.adobe.com/message/5520902" format="https" scope="external"> Error DRM 3322/3346/3368 en Chrome (problemas de la barra de información)</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3369 </td> 

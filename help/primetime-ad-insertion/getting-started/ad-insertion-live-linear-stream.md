@@ -2,9 +2,9 @@
 title: Usar Ad Insertion en flujo en directo/lineal
 description: Uso del Ad Insertion en un flujo en directo/lineal
 exl-id: d56ed723-ec72-4bbd-befc-6858c7c9d800
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ El Ad Insertion de Primetime admite una amplia gama de formatos de referencia es
 
 * PPP SCTE-35 (marcadores de anuncios mejorados SCTE-35)
 
-* [Especificación de señalización de inserción de programas digitales de Adobe](https://www.adobe.com/content/dam/acom/en/devnet/primetime/PrimetimeDigitalProgramInsertionSignalingSpecification.pdf)
+* [Especificación de señalización de inserción de programas digitales de Adobe](assets/PrimetimeDigitalProgramInsertionSignalingSpecification.pdf)
 
 * SCTE-35 binario (tanto HLS como DASH)
 

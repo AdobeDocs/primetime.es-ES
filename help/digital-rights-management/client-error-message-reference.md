@@ -2,9 +2,9 @@
 description: Los errores del cliente DRM son un subconjunto de los errores del lado del cliente de TVSDK.
 title: Referencia de mensaje de error del cliente DRM
 exl-id: 3d74cb92-c0a7-4eab-91b8-7e60a9c33df4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '5185'
+source-wordcount: '5173'
 ht-degree: 1%
 
 ---
@@ -82,7 +82,7 @@ Los errores del cliente DRM son un subconjunto de los errores del lado del clien
 | 3365 | IncognitoModeNotAllowed | Esta combinación de navegador y plataforma no permite la reproducción protegida mediante DRM en modo incógnito.<br>El software del distribuidor debe aconsejar al usuario que salga del modo Incognito o utilice un navegador diferente. Para obtener más información, consulte [Causa y resolución del error DRM 3365](https://forums.adobe.com/thread/1266622). |
 | 3366 | Parámetro incorrecto | El tiempo de ejecución del host llamó a la biblioteca DRM de Primetime con un parámetro incorrecto. |
 | 3367 | BadSignature | Error en la firma del manifiesto M3U8.<br>**Nota:** Este código de error solo lo devuelve iOS DRMNative Framework o AVE. |
-| 3368 | UserSettingsNoAccess | El usuario ha cancelado la operación o ha introducido opciones que no permiten el acceso al sistema.<br>Este error solo se produce en la versión 19 o posterior del SWF. Para la compatibilidad con versiones anteriores, se genera el código de error 3321 para la versión 18 o anterior del SWF.<br>El software del distribuidor debe guiar al usuario hasta una explicación de cómo permitir el acceso al complemento sin zona protegida. Para obtener más información, consulte [Acceso denegado a la zona protegida de Google Chrome](https://helpx.adobe.com/adobe-access/kb/error-3321.html) y [Error DRM 3322/3346/3368 en Chrome (problemas de la barra de información)](https://forums.adobe.com/message/5520902). |
+| 3368 | UserSettingsNoAccess | El usuario ha cancelado la operación o ha introducido opciones que no permiten el acceso al sistema.<br>Este error solo se produce en la versión 19 o posterior del SWF. Para la compatibilidad con versiones anteriores, se genera el código de error 3321 para la versión 18 o anterior del SWF.<br>El software del distribuidor debe guiar al usuario hasta una explicación de cómo permitir el acceso al complemento sin zona protegida. Para obtener más información, consulte [Error DRM 3322/3346/3368 en Chrome (problemas de la barra de información)](https://forums.adobe.com/message/5520902). |
 | 3369 | InterfazNoDisponible | No hay disponible una interfaz de explorador requerida. Este problema solo se produce en Pepper. Puede haber una discrepancia entre el complemento de Flash y la versión del explorador.<br>El software del distribuidor debe guiar al usuario para asegurarse de que tiene instalada la última versión del navegador.<br>Si las incidencias de este error aumentan y corresponden a una actualización del explorador que se está publicando, escale a Adobe. |
 | 3370 | ContentIdSettingsNoAccess | El usuario ha desactivado la **Permitir identificadores para la configuración de contenido protegido.**<br>**Nota:** Este error apareció en las versiones 13.0.0.x o buenas de Pepper.<br>El equipo de software y/o operaciones del distribuidor debe guiar al usuario para habilitar la **Permitir identificadores para contenido protegido** configuración.<br>Para obtener más información, consulte [https://forums.adobe.com/message/6518323#6518323](https://forums.adobe.com/message/6518323#6518323). |
 | 3371 | NoOPConstraintInPixelConstraints | Resolución mal formada basada en restricciones de protección de salida en la licencia.<br>El software del distribuidor debe mostrar un mensaje de error. Pida al usuario que informe del problema al distribuidor con un título de contenido.<br>El distribuidor debe volver a empaquetar el contenido con una política válida. |

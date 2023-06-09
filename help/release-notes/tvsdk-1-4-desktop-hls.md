@@ -5,9 +5,9 @@ contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
 exl-id: 5e227c99-acf6-4b16-a35a-68e2928fdbfd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
 workflow-type: tm+mt
-source-wordcount: '5195'
+source-wordcount: '5194'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ Ahora se admite el cifrado AES basado en muestras.
 
 * #33777 de Zendesk: La versión del SWF de tokens de Localhost para la distribución DHLS ha caducado.
 
-   Actualización del token localhost para la demostración de PMP en DHLS.
+  Actualización del token localhost para la demostración de PMP en DHLS.
 
 ### Problemas resueltos en las versiones anteriores {#resolved-issues-previous}
 
@@ -110,11 +110,11 @@ Ahora se admite el cifrado AES basado en muestras.
 
 * Zendesk #30731 - TVSDK no reproduce varios anuncios VPAID en un AdBreak.
 
-   Se ha corregido la reproducción de varios anuncios VPAID en un AdBreak.
+  Se ha corregido la reproducción de varios anuncios VPAID en un AdBreak.
 
 * Zendesk #29968 - Cartel doble.
 
-   El reproductor de vídeo puede repetir el último segmento de un periodo cuando se produce un cambio ABR. Debido a esto, a veces, se repite el último segmento del preroll. Esto se ha corregido.
+  El reproductor de vídeo puede repetir el último segmento de un periodo cuando se produce un cambio ABR. Debido a esto, a veces, se repite el último segmento del preroll. Esto se ha corregido.
 
 **Versión 1.4.35** (879)
 
@@ -124,31 +124,31 @@ Ahora se admite el cifrado AES basado en muestras.
 
 * Zendesk #21701: envíe la URL creativa original para la solicitud CRS 1401 en lugar de la URL normalizada.
 
-   Se ha corregido el problema por el que se solicitaban direcciones URL ya empaquetadas para su transcodificación, según lo requerido por el back-end CRS.
+  Se ha corregido el problema por el que se solicitaban direcciones URL ya empaquetadas para su transcodificación, según lo requerido por el back-end CRS.
 * Zendesk #26197: la compresión anamórfica no se reproduce en la resolución de pantalla deseada.
 
-   **Nota**: Este problema requiere el reproductor de Flash 24.0.0.194 o posterior.
+  **Nota**: Este problema requiere el reproductor de Flash 24.0.0.194 o posterior.
 
-   Se ha corregido el problema por el que se usaban entradas que faltaban en las tablas de proporción de aspecto para calcular la anchura de salida.
+  Se ha corregido el problema por el que se usaban entradas que faltaban en las tablas de proporción de aspecto para calcular la anchura de salida.
 
 * Zendesk #26840: Detección de HDCP que falla en IE11 + Windows7 después de un segundo intento.
 
-   **Nota**: Este problema requiere el reproductor de Flash 24.0.0.218 o posterior.
+  **Nota**: Este problema requiere el reproductor de Flash 24.0.0.218 o posterior.
 
-   Este problema se resolvió modificando el procesamiento de cola de mensajes principal de AdobeCP para iterar en toda la cola, en lugar de bloquear en el primer mensaje.
+  Este problema se resolvió modificando el procesamiento de cola de mensajes principal de AdobeCP para iterar en toda la cola, en lugar de bloquear en el primer mensaje.
 
 * #27460 de Zendesk: La nueva cuenta de Akamai no puede gestionar una solicitud de CDN de POST.
 
-   La nueva cuenta de CDN no puede gestionar una solicitud de CDN de POST. Este problema se resolvió actualizando el código para que la solicitud de publicidad de cdn.auditude.com fuera GET en lugar de POST.
+  La nueva cuenta de CDN no puede gestionar una solicitud de CDN de POST. Este problema se resolvió actualizando el código para que la solicitud de publicidad de cdn.auditude.com fuera GET en lugar de POST.
 * Zendesk #27619: caída de Flash en Windows 10
 
-   **Nota**: Este problema requiere el reproductor de Flash 24.0.0.218 o posterior.
+  **Nota**: Este problema requiere el reproductor de Flash 24.0.0.218 o posterior.
 
-   Este problema se resolvió evitando un error como resultado de direcciones URL largas.
+  Este problema se resolvió evitando un error como resultado de direcciones URL largas.
 
 * #28218 de Zendesk: El evento de seguimiento no se activa mientras se realiza el reenvío desde el punto de reanudación
 
-   Este problema es el mismo que en Zendesk #26592. Se ha corregido el problema por el que se permitían las operaciones de búsqueda cuando el reproductor de medios estaba en el estado PREPARADO para flujos de VOD.
+  Este problema es el mismo que en Zendesk #26592. Se ha corregido el problema por el que se permitían las operaciones de búsqueda cuando el reproductor de medios estaba en el estado PREPARADO para flujos de VOD.
 
 **Versión 1.4.32** (867)
 
@@ -196,7 +196,7 @@ Este problema se resolvía realizando un seguimiento de los cambios en la veloci
 
 * Zendesk #25027: Auditude no funciona en la versión de escritorio 1.4.27
 
-Este problema se solucionó añadiendo el código para comprobar AUDITUDE_METADATA_KEY y haciendo que AUDITUDE_METADATA_KEY y ADVERTISING_METADATA_KEY sean intercambiables.
+Este problema se solucionó añadiendo el código para comprobar el valor de AUDITUDE_METADATA_KEY y haciendo que AUDITUDE_METADATA_KEY y ADVERTISING_METADATA_KEY sean intercambiables.
 
 * Zendesk #24428: Problema frecuente de almacenamiento en búfer al utilizar TVSDK para reproducir un HLS de DRM
 
@@ -380,9 +380,9 @@ Se ha resuelto este problema para que se comporte correctamente y no distribuya 
 
 **Nota**: Este problema requiere el reproductor de Flash 21.0.0.182 o posterior.
 
-La solicitud de audiencia analiza AuditudeSettings en busca de parámetros personalizados al crear una unidad de anuncio para solicitudes de publicidad.
+La solicitud del Auditude analiza AuditudeSettings en busca de parámetros personalizados al crear una unidad de anuncio para solicitudes de publicidad.
 
-Este comportamiento se ha cambiado para incluir parámetros personalizados del objeto de oportunidad en la solicitud. Además, las oportunidades múltiples con diferentes parámetros personalizados no se pueden empaquetar en una solicitud de Auditude.
+Este comportamiento se ha cambiado para incluir parámetros personalizados del objeto de oportunidad en la solicitud. Además, no se pueden empaquetar varias oportunidades con diferentes parámetros personalizados en una sola solicitud de Auditude.
 
 * Zendesk #21227 - m3u8 no puede jugar consistentemente
 
@@ -695,7 +695,7 @@ Los tipos MIME para el formato HLS distinguían entre mayúsculas y minúsculas,
 
 **Versión 1.4.6**
 
-* Zendesk #2652: Documentación de audiencias para HLS de escritorio, Auditude media_id aclarada para la documentación de HLS de escritorio
+* Zendesk #2652: Documentación del Auditude para HLS de escritorio, Auditude aclarado media_id para HLS de escritorio
 
 **Versión 1.4.5**
 
@@ -754,7 +754,7 @@ _playbackManager.pause();
 
    * PTPLAY-1634: la misma etiqueta suscrita tiene diferentes marcas de tiempo en diferentes ventanas activas. Cuando las ventanas activas se mueven, la misma etiqueta de cada una de ellas debe tener las mismas marcas de tiempo. Sin embargo, a veces, las mismas etiquetas tienen marcas de tiempo diferentes.
    * PTPLAY-28: la cronología de MediaPlayer no incluye pausas vacías.
-   * Se requiere un archivo de directiva entre dominios (cross-domain.xml) para poder transmitir contenido desde un dominio diferente. [Configuración de un archivo cross-domain.xml para flujo HTTP](https://www.adobe.com/devnet/adobe-media-server/articles/cross-domain-xml-for-streaming.html).
+   * Se requiere un archivo de directiva entre dominios (cross-domain.xml) para poder transmitir contenido desde un dominio diferente. [Configuración de un archivo cross-domain.xml para flujo HTTP](https://helpx.adobe.com/adobe-media-server/dev/configure-dynamic-streaming-live-streaming.html).
    * #3694203 de errores: En un flujo de DVR, la búsqueda desde dentro de un mid-roll que se reproduce en otro anuncio mid-roll puede provocar la congelación del explorador
    * Error #3753725: selectPolicyForSeekIntoAd no tiene en cuenta si se ha visto la pausa publicitaria
    * #3754529 de errores: Los anuncios previos a la emisión no se eliminan del flujo al buscar de nuevo en un flujo de DVR en directo
