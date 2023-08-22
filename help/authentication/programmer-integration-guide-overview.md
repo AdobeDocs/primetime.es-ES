@@ -2,7 +2,7 @@
 title: Información general sobre la guía de integración del programador
 description: descripción de la guía de integración del programador
 exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%
@@ -15,10 +15,11 @@ ht-degree: 0%
 >[!NOTE]
 >
 >El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
+>
 
 ## Libros {#cookbooks}
 
-* Guía del SDK de JavaScript de AccessEnabler 
+* Guía del SDK de JavaScript de AccessEnabler
 * Guía del SDK de AccessEnabler para iOS/tvOS
 * Guía del SDK de AccessEnabler para Android
 * Guía de la API de REST (servidor a servidor)

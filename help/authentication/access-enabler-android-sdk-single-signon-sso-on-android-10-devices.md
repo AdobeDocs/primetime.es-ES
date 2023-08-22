@@ -2,7 +2,7 @@
 title: Acceso Habilitar el inicio de sesión único (SSO) del SDK de Android en aplicaciones de Android 10
 description: Acceso Habilitar el inicio de sesión único (SSO) del SDK de Android en aplicaciones de Android 10
 exl-id: dedade15-c451-4757-b684-d3728e11dd87
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%
@@ -30,8 +30,8 @@ Consulte [Información general de Roku SSO](/help/authentication/roku-sso-overvi
 Según la aplicación de **nivel de SDK de destino** o el uso de **android:requestLegacyExternalStorage** Atributo de manifiesto de inicio de sesión único (SSO) ofrecido por el SDK de Access Enabler Android versión 3.2.1 (más reciente) y las versiones anteriores se comportarán de la siguiente manera:
 
 - Destinos de su aplicación **Android 9 (nivel de API 28)** o inferior **-\>** Inicio de sesión único (SSO) **funcionará**
-- Destinos de su aplicación **Android 10** **(Nivel de API 29)** y lo hace **set** el valor de **requestLegacyExternalStorage a true** en el archivo de manifiesto de su aplicación **-\>** Inicio de sesión único (SSO) **funcionará**
-- Destinos de su aplicación **Android 10** **(Nivel de API 29)** y lo hace **sin configurar** el valor de **requestLegacyExternalStorage a true** en el archivo de manifiesto de su aplicación **-\>** Inicio de sesión único (SSO) **no funcionará**
+- Destinos de su aplicación **Android 10** **(Nivel de API 29)** y lo hace **set** el valor de **requestLegacyExternalStorage a true** en el archivo de manifiesto de su aplicación **-\>** Inicio de sesión único (SSO) **funcionará**
+- Destinos de su aplicación **Android 10** **(Nivel de API 29)** y lo hace **sin configurar** el valor de **requestLegacyExternalStorage a true** en el archivo de manifiesto de su aplicación **-\>** Inicio de sesión único (SSO) **no funcionará**
 
 
 >[!TIP]

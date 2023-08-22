@@ -2,7 +2,7 @@
 title: 'Error de autenticación de iOS: no se encuentra adobepass.ios.app'
 description: 'Error de autenticación de iOS: no se encuentra adobepass.ios.app'
 exl-id: cd97c6fb-f0fa-45c2-82c1-f28aa6b2fd12
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 ## Problema {#issue}
 
-El usuario está pasando por el flujo de autenticación y, después de introducir correctamente sus credenciales con su proveedor, se le redirige a una página de error, a una página de búsqueda o a otra página personalizada que le informa de eso `adobepass.ios.app` no se pudo encontrar/resolver.
+El usuario está pasando por el flujo de autenticación y, después de introducir correctamente sus credenciales con su proveedor, se le redirige a una página de error, a una página de búsqueda o a otra página personalizada que le informa de eso `adobepass.ios.app` no se pudo encontrar/resolver.
 
 ## Explicación {#explanation}
 
-En iOS, `adobepass.ios.app` se utiliza como URL de redirección final para indicar que el flujo de AuthN ha finalizado. En este punto, la aplicación debe realizar una solicitud al AccessEnabler para obtener el token de AuthN y finalizar el flujo de AuthN.
+En iOS, `adobepass.ios.app` se utiliza como URL de redirección final para indicar que el flujo de AuthN ha finalizado. En este punto, la aplicación debe realizar una solicitud al AccessEnabler para obtener el token de AuthN y finalizar el flujo de AuthN.
 
-El problema es que `adobepass.ios.app` no existe realmente y almacenará en déclencheur un mensaje de error en `webView`. Las versiones anteriores de la aplicación de demostración de iOS daban por hecho que este error siempre se activaba al final del flujo de AuthN y se configuraba para gestionarlo en consecuencia (`indidFailLoadWithError`).
+El problema es que `adobepass.ios.app` no existe realmente y almacenará en déclencheur un mensaje de error en `webView`. Las versiones anteriores de la aplicación de demostración de iOS daban por hecho que este error siempre se activaba al final del flujo de AuthN y se configuraba para gestionarlo en consecuencia (`indidFailLoadWithError`).
 
 **Nota:** Este problema se ha corregido en versiones posteriores de DemoApp (incluida con la descarga del SDK para iOS).
 
-Desafortunadamente, esta suposición NO es correcta. Hay algunos servidores DNS o proxy &quot;inteligentes&quot; que no solo transmitirán el error generado, sino que, en su lugar, harán una de las siguientes acciones: 
+Desafortunadamente, esta suposición NO es correcta. Hay algunos servidores DNS o proxy &quot;inteligentes&quot; que no solo transmitirán el error generado, sino que, en su lugar, harán una de las siguientes acciones:
 
 - Crear una página de error personalizada
 - Reenviar a una página de búsqueda o a algún otro tipo de página o portal de cliente.
@@ -36,7 +36,7 @@ En estos casos, la respuesta que vuelva a iOS webView será una respuesta perfec
 
 ## Solución {#solution}
 
-NO realice la misma suposición que hace DemoApp. En su lugar, intercepte la solicitud antes de ejecutarla (en `shouldStartLoadWithRequest`) y manejarlo apropiadamente.
+NO realice la misma suposición que hace DemoApp. En su lugar, intercepte la solicitud antes de ejecutarla (en `shouldStartLoadWithRequest`) y manejarlo apropiadamente.
 
 Ejemplo de cómo interceptar la solicitud antes de ejecutarla:
 
@@ -60,6 +60,6 @@ return YES;
 
 Algunas cosas que hay que tener en cuenta:
 
-- NUNCA use `adobepass.ios.app` directamente en cualquier parte del código. En su lugar, utilice la constante `ADOBEPASS_REDIRECT_URL`
+- NUNCA use `adobepass.ios.app` directamente en cualquier parte del código. En su lugar, utilice la constante `ADOBEPASS_REDIRECT_URL`
 - El `return NO;` evitará que la página se cargue
-- Asegúrese de que la variable `getAuthenticationToken` se llama a una vez y solo una vez en el código. Varias llamadas a `getAuthenticationToken` dará como resultado resultados no definidos.
+- Asegúrese de que la variable `getAuthenticationToken` se llama a una vez y solo una vez en el código. Varias llamadas a `getAuthenticationToken` dará como resultado resultados no definidos.

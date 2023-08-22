@@ -2,7 +2,7 @@
 title: Uso del proxy Charles
 description: Uso del proxy Charles
 exl-id: bb38543f-f6bc-4b5a-91b8-41bc51ee4c56
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -16,16 +16,16 @@ ht-degree: 0%
 >El contenido de esta página se proporciona únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe. No se permite el uso no autorizado.
 
 
-**Charles:** <http://charlesproxy.com>
+**Charles:** <http://charlesproxy.com>
 
- 
+
 ## Descargar, instalar y empezar con Charles Proxy {#download-install-and-get-stared-with-charles-proxy}
 
-- **Descargar** - <http://www.charlesproxy.com/download/>
-- **Instalar** - <http://www.charlesproxy.com/documentation/installation/>
-- **Primeros pasos** - <http://www.charlesproxy.com/documentation/getting-started/>
+- **Descargar** - <http://www.charlesproxy.com/download/>
+- **Instalar** - <http://www.charlesproxy.com/documentation/installation/>
+- **Primeros pasos** - <http://www.charlesproxy.com/documentation/getting-started/>
 
- 
+
 ## Pestañas de estructura frente a secuencia {#structure-vs-sequence-tabs}
 
 Existen dos formas diferentes de ver el tráfico:
@@ -41,28 +41,28 @@ Habilitar proxy SSL `\[ *Proxy -\> Proxy Settings... -\> SSL* \]`
 Marque la casilla de verificación &quot;Habilitar proxy SSL&quot; y añada todas las ubicaciones HTTPS.
 
 
-![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/ProxySettings.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/SSLSettings.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/AddHttpsLocations.PNG)
+![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/ProxySettings.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/SSLSettings.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/AddHttpsLocations.PNG)
 
 
 
-- Proxy SSL: <http://www.charlesproxy.com/documentation/proxying/ssl-proxying/>
-- Certificados SSL: <http://www.charlesproxy.com/documentation/using-charles/ssl-certificates/>
+- Proxy SSL: <http://www.charlesproxy.com/documentation/proxying/ssl-proxying/>
+- Certificados SSL: <http://www.charlesproxy.com/documentation/using-charles/ssl-certificates/>
 - Proxy SSL de dispositivos móviles: consulte lo siguiente.
 
- 
+
 ## Ignorar/excluir hosts {#ignore-/-exclude-hosts}
 
 Si el resultado se vuelve demasiado confuso, puede optar por omitir o excluir ubicaciones. Puede ignorar o excluir ubicaciones mediante cualquiera de estas acciones:
 
 - Haga clic con el botón derecho en las solicitudes que desee ignorar y, a continuación, seleccione &quot;Ignorar&quot;
-- Añadir manualmente las ubicaciones que se excluirán de `\[ *Proxy -\> Recording Settings... -\> Exclude* \]`
+- Añadir manualmente las ubicaciones que se excluirán de `\[ *Proxy -\> Recording Settings... -\> Exclude* \]`
 
- 
+
 ## Suplantación de DNS {#dns-spoffing}
 
 `\[ *Tools -\> DNS Spoofing...* \]`
 
- 
+
 
 La suplantación de DNS es muy útil cuando se intenta redirigir una solicitud a una IP diferente, especialmente cuando se trabaja con dispositivos móviles:
 
@@ -70,20 +70,20 @@ La suplantación de DNS es muy útil cuando se intenta redirigir una solicitud a
 
 <http://www.charlesproxy.com/documentation/tools/dns-spoofing/>
 
- 
+
 ## Asignar remoto {#map-remote}
 
 `\[ *Tools -\> Map Remote...* \]`
 
- 
 
-Con el control remoto de mapas puede redirigir una solicitud &quot;entrante&quot; a un punto de conexión diferente. El caso de uso más común de esta función es &quot;Asignar&quot; `AccessEnabler.swf` hasta `AccessEnablerDebug.swf:`
 
-![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/MapRemote.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/MapRemoteAdd.PNG)
+Con el control remoto de mapas puede redirigir una solicitud &quot;entrante&quot; a un punto de conexión diferente. El caso de uso más común de esta función es &quot;Asignar&quot; `AccessEnabler.swf` hasta `AccessEnablerDebug.swf:`
+
+![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/MapRemote.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/MapRemoteAdd.PNG)
 
 <http://www.charlesproxy.com/documentation/tools/map-remote/>
 
- 
+
 
 ## Proxy inverso {#reverse-proxy}
 
@@ -95,32 +95,32 @@ Con el control remoto de mapas puede redirigir una solicitud &quot;entrante&quot
 
 #### Conexión SSL desde iPhone {#ssl-connection-from-iphone}
 
-Navegar a <http://charlesproxy.com/charles.crt> desde el dispositivo iOS.  Esto iniciará el cuadro de diálogo de instalación del certificado:
+Navegar a <http://charlesproxy.com/charles.crt> desde el dispositivo iOS.  Esto iniciará el cuadro de diálogo de instalación del certificado:
 
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate1\(1\).PNG)![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate2\(1\).PNG)![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate3.PNG)
 
- </br>
+</br>
 
-Clic `\[ *Install*... *Install*... *Done* \]` para completar la instalación del certificado.
+Clic `\[ *Install*... *Install*... *Done* \]` para completar la instalación del certificado.
 
 <http://www.charlesproxy.com/documentation/faqs/ssl-connections-from-within-iphone-applications/>
 
- 
+
 
 #### Uso de Charles desde un dispositivo iOS {#using-charles-from-an-ios-device}
 
-En el dispositivo iOS, seleccione `\[ *Settings* -\> *Wi-FI* -\> (*YOUR\_WIFI\_NETWORK)* \]`. Haga clic en la pequeña flecha azul junto a su red, y luego vaya a HTTP Proxy y seleccione &quot;Manual&quot;: 
+En el dispositivo iOS, seleccione `\[ *Settings* -\> *Wi-FI* -\> (*YOUR\_WIFI\_NETWORK)* \]`. Haga clic en la pequeña flecha azul junto a su red, y luego vaya a HTTP Proxy y seleccione &quot;Manual&quot;:
 
 
- </br>
+</br>
 
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceManualProxy1.png)![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceManualProxy2.PNG)
 
 
- </br>
-Aquí debe especificar la IP y el puerto de la máquina donde está ejecutando Charles. <span style="line-height: 1.6em;">Si ahora abre Safari en su dispositivo iOS e intenta abrir una página web, debería obtener la siguiente ventana emergente en el equipo que ejecuta Charles:
- 
- </br>
+</br>
+Aquí debe especificar la IP y el puerto de la máquina donde está ejecutando Charles. <span style="line-height: 1.6em;">Si ahora abre Safari en su dispositivo iOS e intenta abrir una página web, debería obtener la siguiente ventana emergente en el equipo que ejecuta Charles:
+
+</br>
 
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceManualProxy3.PNG)
 

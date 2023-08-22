@@ -2,7 +2,7 @@
 title: Información general del SDK de JavaScript
 description: Información general del SDK de JavaScript
 exl-id: 8756c804-a4c1-4ee3-b2b9-be45f38bdf94
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '511'
 ht-degree: 0%
@@ -29,15 +29,15 @@ El flujo general de derechos de autenticación de Adobe Primetime se cubre en [F
 
 ## Creación del cuadro de diálogo de selección de MVPD {#creating-the-mvpd-selection-dialog}
 
-Para que un usuario inicie sesión en su MVPD y se autentique, su página o reproductor debe proporcionar al usuario una forma de identificar su MVPD. Se proporciona una versión predeterminada de un cuadro de diálogo de selección de MVPD para el desarrollo. Para el uso en producción, debe implementar su propio selector de MVPD. 
+Para que un usuario inicie sesión en su MVPD y se autentique, su página o reproductor debe proporcionar al usuario una forma de identificar su MVPD. Se proporciona una versión predeterminada de un cuadro de diálogo de selección de MVPD para el desarrollo. Para el uso en producción, debe implementar su propio selector de MVPD.
 
-Si ya sabe quién es el proveedor del cliente, puede [establecer la MVPD mediante programación](/help/authentication/home.md), sin interacción del usuario. La técnica es la misma, pero omite el paso de invocar el cuadro de diálogo Selector de proveedor y pedir al cliente que seleccione su MVPD.
+Si ya sabe quién es el proveedor del cliente, puede [establecer la MVPD mediante programación](/help/authentication/home.md), sin interacción del usuario. La técnica es la misma, pero omite el paso de invocar el cuadro de diálogo Selector de proveedor y pedir al cliente que seleccione su MVPD.
 
 ## Visualización del proveedor de servicios {#displaying-the-service-provider}
 
 En el siguiente ejemplo de código se muestra cómo detectar y mostrar el proveedor de servicios para el cliente actual:
 
- **HTML** : Esta página añade una sección a la página que muestra el proveedor elegido por el cliente, si ya ha iniciado sesión:
+**HTML** : Esta página añade una sección a la página que muestra el proveedor elegido por el cliente, si ya ha iniciado sesión:
 
 ```HTML
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
@@ -74,7 +74,7 @@ En el siguiente ejemplo de código se muestra cómo detectar y mostrar el provee
     </body>
     </html>
 ```
- 
+
 
 **JavaScript** Este archivo JavaScript consulta el Habilitador de acceso para el proveedor actual si el usuario ya ha iniciado sesión y muestra el resultado en la sección de la página reservada para él. También implementa un cuadro de diálogo de selector de MVPD:
 
@@ -197,13 +197,13 @@ En el siguiente ejemplo de código se muestra cómo detectar y mostrar el provee
 
 ## Cerrando sesión {#logout}
 
-Llamada `logout()` para iniciar el proceso de cierre de sesión. Este método no toma argumentos. Cierra la sesión del usuario actual, borra toda la información de autenticación y autorización de ese usuario y elimina todos los tokens AuthN y AuthZ del sistema local.
+Llamada `logout()` para iniciar el proceso de cierre de sesión. Este método no toma argumentos. Cierra la sesión del usuario actual, borra toda la información de autenticación y autorización de ese usuario y elimina todos los tokens AuthN y AuthZ del sistema local.
 
 Hay algunos casos en los que el reproductor no es responsable de administrar los cierres de sesión de los usuarios:
 
- 
 
-- **Cuando el cierre de sesión se inicia desde un sitio que no está integrado con la autenticación de Adobe Primetime.** En este caso, la MVPD puede invocar el servicio de cierre de sesión único de autenticación de Adobe Primetime a través de una redirección del explorador. (Actualmente no se admite la invocación de SLO a través de una llamada a backchannel).
+
+- **Cuando el cierre de sesión se inicia desde un sitio que no está integrado con la autenticación de Adobe Primetime.** En este caso, la MVPD puede invocar el servicio de cierre de sesión único de autenticación de Adobe Primetime a través de una redirección del explorador. (Actualmente no se admite la invocación de SLO a través de una llamada a backchannel).
 
 >[!NOTE]
 >

@@ -2,9 +2,9 @@
 title: Guía de iOS/tvOS
 description: Guía de iOS/tvOS
 exl-id: 4743521e-d323-4d1d-ad24-773127cfbe42
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
-source-wordcount: '2414'
+source-wordcount: '2413'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ La actividad de red de AccessEnabler tiene lugar en su propio subproceso, por lo
 
 ## Configuración del ID de visitante {#visitorIDSetup}
 
-Configuración de un [Marketing Cloud visitorID](https://marketing.adobe.com/resources/help/en_US/mcvid/) El valor de es muy importante desde el punto de vista del análisis. Una vez establecido un valor visitorID, el SDK enviará esta información junto con cada llamada de red y el servidor de autenticación de Adobe Primetime recopilará esta información. En el futuro, podrá correlacionar los análisis del servicio de autenticación de Adobe Primetime con cualquier otro informe de análisis que pueda tener de otras aplicaciones o sitios web. Se puede encontrar información sobre cómo configurar visitorID [aquí](#setOptions).
+Configuración de un [Marketing Cloud visitorID](https://experienceleague.adobe.com/docs/id-service/using/home.html) El valor de es muy importante desde el punto de vista del análisis. Una vez establecido un valor visitorID, el SDK enviará esta información junto con cada llamada de red y el servidor de autenticación de Adobe Primetime recopilará esta información. En el futuro, podrá correlacionar los análisis del servicio de autenticación de Adobe Primetime con cualquier otro informe de análisis que pueda tener de otras aplicaciones o sitios web. Se puede encontrar información sobre cómo configurar visitorID [aquí](#setOptions).
 
 ## Flujos de derecho {#entitlement}
 
@@ -69,51 +69,51 @@ YO.  [Flujo de cierre de sesión con Apple SSO](#logout_flow_with_AppleSSO) </br
    * [`displayProviderDialog(mvpds)`](#$dispProvDialog) </br>
       * Activado por [`getAuthentication()`](#$getAuthN) solo si el usuario no ha seleccionado un proveedor (MVPD) y aún no está autenticado. </br>
       * El `mvpds` El parámetro es una matriz de proveedores disponibles para el usuario.
+
    * `setAuthenticationStatus(status, errorcode)` </br>
       * Activado por `checkAuthentication()` cada vez. </br>
       * Activado por [`getAuthentication()`](#$getAuthN) solo si el usuario ya se ha autenticado y ha seleccionado un proveedor. </br>
       * El estado devuelto es éxito o error, el código de error describe el tipo de error.
+
    * [`navigateToUrl(url)`](#$nav2url) </br>
       * Activado por [`getAuthentication()`](#$getAuthN) después de que el usuario seleccione una MVPD. El `url` proporciona la ubicación de la página de inicio de sesión de la MVPD.
+
    * `sendTrackingData(event, data)` </br>
       * Activado por `checkAuthentication()`, [`getAuthentication()`](#$getAuthN), `checkAuthorization()`, [`getAuthorization()`](#$getAuthZ), `setSelectedProvider()`.
-      * El `event` indica qué evento de asignación de derechos se produjo; el parámetro `data` parámetro es una lista de valores relacionados con el evento. 
+      * El `event` indica qué evento de asignación de derechos se produjo; el parámetro `data` parámetro es una lista de valores relacionados con el evento.
+
    * `setToken(token, resource)`
 
       * Activado por [checkAuthorization()](#checkAuthZ) y [getAuthorization()](#$getAuthZ) después de una autorización correcta para ver un recurso.
       * El `token` parámetro es el token de medios de corta duración; el `resource` parámetro es el contenido que el usuario tiene autorización para ver.
+
    * `tokenRequestFailed(resource, code, description)` </br>
       * Activado por [checkAuthorization()](#checkAuthZ) y [getAuthorization()](#$getAuthZ) después de una autorización fallida.
       * El `resource` parámetro es el contenido que el usuario intentaba ver; la variable `code` parámetro es el código de error que indica qué tipo de error se produjo; la variable `description` describe el error asociado con el código de error.
+
    * `selectedProvider(mvpd)` </br>
       * Activado por [`getSelectedProvider()`](#getSelProv).
       * El `mvpd` proporciona información sobre el proveedor seleccionado por el usuario.
+
    * `setMetadataStatus(metadata, key, arguments)`
       * Activado por `getMetadata().`
       * El `metadata` proporciona los datos específicos solicitados; el parámetro `key` parámetro es la clave utilizada en el [getMetadata()](#getMeta) solicitud; y la `arguments` El parámetro es el mismo diccionario que se pasó a [getMetadata()](#getMeta).
+
    * [preauthorizedResources(authorizedResources)](#preauthResources)
 
       * Activado por [`checkPreauthorizedResources()`](#checkPreauth).
 
       * El `authorizedResources` presenta los recursos que el usuario está autorizado a ver.
+
    * [`presentTvProviderDialog(viewController)`](#presentTvDialog)
 
       * Activado por [getAuthentication()](#getAuthN) cuando el solicitante actual admite al menos una MVPD compatible con SSO.
       * El parámetro viewController es el cuadro de diálogo de SSO de Apple y debe presentarse en el controlador de vista principal.
+
    * [`dismissTvProviderDialog(viewController)`](#dismissTvDialog)
 
       * Se activa mediante una acción del usuario (seleccionando &quot;Cancelar&quot; u &quot;Otros proveedores de TV&quot; en el cuadro de diálogo de SSO de Apple).
       * El parámetro viewController es el cuadro de diálogo de SSO de Apple y debe descartarse del controlador de vista principal.
-
-
-
-
-
-
-
-
-
-
 
 ![](assets/iOS-flows.png)
 
@@ -124,12 +124,14 @@ YO.  [Flujo de cierre de sesión con Apple SSO](#logout_flow_with_AppleSSO) </br
 
    a. Llamada [`init`](#$init) para crear una única instancia del AccessEnabler de autenticación de Adobe Primetime.
    * **Dependencia:** Biblioteca nativa iOS/tvOS de autenticación de Adobe Primetime (AccessEnabler)
+
    b. Llamada `setRequestor()` para establecer la identidad del Programador; pase en el `requestorID` y (opcionalmente) una matriz de puntos finales de autenticación de Adobe Primetime. Para tvOS también deberá proporcionar la clave pública y el secreto. Consulte [Documentación sin cliente](#create_dev) para obtener más información.
 
    * **Dependencia:** ID de solicitante de autenticación de Adobe Primetime válido (póngase en contacto con el administrador de cuentas de autenticación de Adobe Primetime para arreglarlo).
 
    * **Déclencheur:**
-      [setRequestorComplete()](#$setReqComplete) devolución de llamada.
+     [setRequestorComplete()](#$setReqComplete) devolución de llamada.
+
    >[!NOTE]
    >
    >No se pueden completar solicitudes de asignación de derechos hasta que se haya establecido completamente la identidad del solicitante. Esto significa que mientras [`setRequestor()`](#$setReq)  sigue ejecutándose, todas las solicitudes de derechos subsiguientes. Por ejemplo, [`checkAuthentication()`](#checkAuthN) están bloqueados.
@@ -139,8 +141,6 @@ YO.  [Flujo de cierre de sesión con Apple SSO](#logout_flow_with_AppleSSO) </br
    1. Espere a que se active la [`setRequestorComplete()`](#setReqComplete) callback (parte del delegado AccessEnabler). Esta opción proporciona la mayor certeza de que [`setRequestor()`](#$setReq) completado, por lo que se recomienda para la mayoría de las implementaciones.
 
    1. Continúe sin esperar a que se active el [`setRequestorComplete()`](#setReqComplete) llamada de retorno y empiece a emitir solicitudes de derechos. Estas llamadas (checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout) se ponen en cola mediante la biblioteca AccessEnabler, que realizará las llamadas de red reales después de la [`setRequestor()`](#$setReq). Esta opción se puede interrumpir ocasionalmente si, por ejemplo, la conexión de red es inestable.
-
-
 
 1. Llamada `checkAuthentication()` para comprobar si hay una autenticación existente sin iniciar el flujo de autenticación completo.  Si esta llamada se realiza correctamente, puede continuar directamente al flujo de autorización. Si no es así, continúe con el flujo de autenticación.
 
@@ -170,7 +170,7 @@ YO.  [Flujo de cierre de sesión con Apple SSO](#logout_flow_with_AppleSSO) </br
 >
 >En este punto, el usuario tiene la oportunidad de cancelar el flujo de autenticación. Si esto sucede, el nivel de la interfaz de usuario es responsable de informar a AccessEnabler sobre este evento llamando a [setSelectedProvider()](#setSelProv) con `null` como parámetro. Esto permite al AccessEnabler limpiar su estado interno y restablecer el flujo de autenticación.
 
-1. Una vez que el usuario ha iniciado sesión correctamente, la capa de aplicación detecta la carga de una dirección URL personalizada específica. Tenga en cuenta que esta dirección URL personalizada específica no es válida y no está pensada para que el controlador la cargue. Su aplicación debe interpretarlo únicamente como una señal de que el flujo de autenticación se ha completado y de que es seguro cerrar el `UIWebView/WKWebView` o `SFSafariViewController` controlador. En el caso de `SFSafariViewController`necesita que se use el controlador, la dirección URL personalizada específica está definida por el **`application's custom scheme`** (p. ej.,`adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`); de lo contrario, esta dirección URL personalizada específica se define mediante **`ADOBEPASS_REDIRECT_URL`** constante (es decir, `adobepass://ios.app`).
+1. Una vez que el usuario ha iniciado sesión correctamente, la capa de aplicación detecta la carga de una dirección URL personalizada específica. Tenga en cuenta que esta dirección URL personalizada específica no es válida y no está pensada para que el controlador la cargue. Su aplicación debe interpretarlo únicamente como una señal de que el flujo de autenticación se ha completado y de que es seguro cerrar el `UIWebView/WKWebView` o `SFSafariViewController` controlador. En el caso a `SFSafariViewController`necesita que se use el controlador, la dirección URL personalizada específica está definida por el **`application's custom scheme`** (p. ej.,`adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`); de lo contrario, esta dirección URL personalizada específica se define mediante **`ADOBEPASS_REDIRECT_URL`** constante (es decir, `adobepass://ios.app`).
 
 1. Cierre el controlador UIWebView/WKWebView o SFSafariViewController y llame al método AccessEnabler `handleExternalURL:url` método de API, que indica al AccessEnabler que recupere el token de autenticación del servidor back-end.
 
@@ -255,7 +255,7 @@ YO.  [Flujo de cierre de sesión con Apple SSO](#logout_flow_with_AppleSSO) </br
 
    a. Siguiendo el mismo patrón que el flujo de trabajo de autenticación, el dominio AccessEnabler realiza una solicitud a la capa de aplicación de la interfaz de usuario, a través de `navigateToUrl:` o `navigateToUrl:useSVC:` callback, para crear un controlador UIWebView/WKWebView o SFSafariViewController e indicar a que cargue la URL proporcionada en el `url` parámetro. Dirección URL del extremo de cierre de sesión en el servidor back-end.
 
-   b. La aplicación debe supervisar la actividad del `UIWebView/WKWebView or SFSafariViewController` y detectar el momento en que carga una dirección URL personalizada específica, a medida que pasa por varias redirecciones. Tenga en cuenta que esta dirección URL personalizada específica no es válida y no está pensada para que el controlador la cargue. Su aplicación debe interpretarlo únicamente como una señal de que el flujo de cierre de sesión se ha completado y de que es seguro cerrar el `UIWebView/WKWebView` o `SFSafariViewController` controlador. Cuando el controlador carga esta dirección URL personalizada específica, la aplicación debe cerrar el `UIWebView/WKWebView or SFSafariViewController` controlador y llamar a AccessEnabler `handleExternalURL:url`Método de API. En el caso de `SFSafariViewController`necesita que se use el controlador, la dirección URL personalizada específica está definida por el **`application's custom scheme`** (por ejemplo, `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`); de lo contrario, esta dirección URL personalizada específica se define mediante **`ADOBEPASS_REDIRECT_URL`**  constante (es decir, `adobepass://ios.app`).
+   b. La aplicación debe supervisar la actividad del `UIWebView/WKWebView or SFSafariViewController` y detectar el momento en que carga una dirección URL personalizada específica, a medida que pasa por varias redirecciones. Tenga en cuenta que esta dirección URL personalizada específica no es válida y no está pensada para que el controlador la cargue. Su aplicación debe interpretarlo únicamente como una señal de que el flujo de cierre de sesión se ha completado y de que es seguro cerrar el `UIWebView/WKWebView` o `SFSafariViewController` controlador. Cuando el controlador carga esta dirección URL personalizada específica, la aplicación debe cerrar el `UIWebView/WKWebView or SFSafariViewController` controlador y llamar a AccessEnabler `handleExternalURL:url`Método de API. En el caso a `SFSafariViewController`necesita que se use el controlador, la dirección URL personalizada específica está definida por el **`application's custom scheme`** (por ejemplo, `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`); de lo contrario, esta dirección URL personalizada específica se define mediante **`ADOBEPASS_REDIRECT_URL`**  constante (es decir, `adobepass://ios.app`).
 
    >[!NOTE]
    >

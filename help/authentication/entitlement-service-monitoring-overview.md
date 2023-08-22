@@ -2,7 +2,7 @@
 title: Información general sobre supervisión del servicio de derechos
 description: Información general sobre supervisión del servicio de derechos
 exl-id: ebd5d650-0a32-4583-9045-5156356494e2
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 0%
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 Los sitios y las aplicaciones de TVE deben estar disponibles las 24 horas del día, los 7 días de la semana, de modo que los clientes necesiten conocer los eventos de asignación de derechos en tiempo real para detectar y corregir los problemas lo antes posible. También deben analizar los datos mensuales para determinar qué plataformas proporcionan la mayor parte del tráfico y qué plataformas podrían tener una implementación incorrecta y tasas de conversión deficientes.
 
-La Monitorización del servicio de derecho (ESM) proporciona a los programadores y a las MVPD una fuente de datos que ofrece visibilidad en tiempo real de sus eventos de autenticación y autorización. Los datos se recopilan de los sistemas de autenticación de Adobe Primetime y se proporcionan mediante una API RESTful.  Los clientes pueden consumir los datos de forma directa o desde sus propios paneles operativos personalizados.
+La Monitorización del servicio de derecho (ESM) proporciona a los programadores y a las MVPD una fuente de datos que ofrece visibilidad en tiempo real de sus eventos de autenticación y autorización. Los datos se recopilan de los sistemas de autenticación de Adobe Primetime y se proporcionan mediante una API RESTful.  Los clientes pueden consumir los datos de forma directa o desde sus propios paneles operativos personalizados.
 
-Los elementos principales del sistema de gestión ambientalmente racional son sus métricas y dimensiones. ESM genera informes que contienen métricas agregadas según la selección de dimensiones. Como los eventos de Adobe Pass se registran en la zona horaria PST, los informes de ESM también están disponibles en la zona horaria PST. 
+Los elementos principales del sistema de gestión ambientalmente racional son sus métricas y dimensiones. ESM genera informes que contienen métricas agregadas según la selección de dimensiones. Como los eventos de Adobe Pass se registran en la zona horaria PST, los informes de ESM también están disponibles en la zona horaria PST.
 
-La API de ESM no está disponible de forma general.  Póngase en contacto con el representante del Adobe para preguntas sobre disponibilidad.
+La API de ESM no está disponible de forma general.  Póngase en contacto con el representante del Adobe para preguntas sobre disponibilidad.
 
 ## ESM para programadores {#esm-for-programmers}
 
@@ -116,11 +116,11 @@ La API de ESM no está disponible de forma general.  Póngase en contacto con e
 
 Puede utilizar los datos de ESM para los siguientes casos de uso:
 
-- **Monitorización** - Los equipos de operaciones o monitorización pueden crear un tablero o gráfico que llame a la API cada minuto. Con la información mostrada, pueden detectar un problema (con la autenticación de Primetime o con una MVPD) en el momento en que aparece.  
+- **Monitorización** - Los equipos de operaciones o monitorización pueden crear un tablero o gráfico que llame a la API cada minuto. Con la información mostrada, pueden detectar un problema (con la autenticación de Primetime o con una MVPD) en el momento en que aparece.
 
-- **Depuración/Pruebas de calidad** - Como los datos también se desglosan por plataforma, dispositivo, navegador y sistema operativo, el análisis de los patrones de uso puede señalar problemas en combinaciones específicas (por ejemplo, Safari en OSX).  
+- **Depuración/Pruebas de calidad** - Como los datos también se desglosan por plataforma, dispositivo, navegador y sistema operativo, el análisis de los patrones de uso puede señalar problemas en combinaciones específicas (por ejemplo, Safari en OSX).
 
-- **Analytics** - Los datos proporcionados se pueden utilizar para complementar/auditar los datos del lado del cliente que se recopilan a través de Adobe Analytics u otra herramienta de análisis.
+- **Analytics** - Los datos proporcionados se pueden utilizar para complementar/auditar los datos del lado del cliente que se recopilan a través de Adobe Analytics u otra herramienta de análisis.
 
 <!--
 ## Related Information {#related-information}

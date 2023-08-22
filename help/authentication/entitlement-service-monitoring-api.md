@@ -2,7 +2,7 @@
 title: API de supervisión del servicio de derechos
 description: API de supervisión del servicio de derechos
 exl-id: a9572372-14a6-4caa-9ab6-4a6baababaa1
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '2026'
 ht-degree: 0%
@@ -23,13 +23,13 @@ La supervisión del servicio de derechos (ESM) se implementa como WOLAP (basado 
 >
 >La API de ESM no está disponible de forma general. Póngase en contacto con el representante del Adobe para preguntas sobre disponibilidad.
 
-La API de ESM proporciona una vista jerárquica de los cubos OLAP subyacentes. Cada recurso ([dimensión](#esm_dimensions) en la jerarquía de dimensiones, asignado como segmento de ruta de URL) genera informes con (agregados) [métricas](#esm_metrics) para la selección actual. Cada recurso señala a su recurso principal (para el resumen) y a sus subrecursos (para el desglose). El corte y el trozo se logran mediante parámetros de cadena de consulta que anclan dimensiones a valores o rangos específicos.
+La API de ESM proporciona una vista jerárquica de los cubos OLAP subyacentes. Cada recurso ([dimensión](#esm_dimensions) en la jerarquía de dimensiones, asignado como segmento de ruta de URL) genera informes con (agregados) [métricas](#esm_metrics) para la selección actual. Cada recurso señala a su recurso principal (para el resumen) y a sus subrecursos (para el desglose). El corte y el trozo se logran mediante parámetros de cadena de consulta que anclan dimensiones a valores o rangos específicos.
 
 La API de REST proporciona los datos disponibles en un intervalo de tiempo especificado en la solicitud (volviendo a los valores predeterminados si no se proporciona ninguno), según la ruta de dimensión, los filtros proporcionados y las métricas seleccionadas. El intervalo de tiempo no se aplicará a los informes que no contengan dimensiones de tiempo (año, mes, día, hora, minuto, segundo).
 
-La ruta raíz de la URL del punto de conexión devolverá las métricas agregadas generales dentro de un único registro, junto con los vínculos a las opciones de desglose disponibles. La versión de la API se asigna como el segmento final de la ruta del URI del extremo. Por ejemplo, `https://mgmt.auth.adobe.com/*v2*` significa que los clientes tendrán acceso a WOLAP versión 2.
+La ruta raíz de la URL del punto de conexión devolverá las métricas agregadas generales dentro de un único registro, junto con los vínculos a las opciones de desglose disponibles. La versión de la API se asigna como el segmento final de la ruta del URI del extremo. Por ejemplo, `https://mgmt.auth.adobe.com/*v2*` significa que los clientes tendrán acceso a WOLAP versión 2.
 
-Las rutas URL disponibles se pueden detectar mediante los vínculos contenidos en la respuesta. Las rutas de URL válidas se mantienen para asignar una ruta dentro del árbol de desglose subyacente que contiene las métricas agregadas (previamente). Una ruta en el formulario `/dimension1/dimension2/dimension3` reflejará una agregación previa de esas tres dimensiones (el equivalente de un SQL `clause GROUP` POR `dimension1`, `dimension2`, `dimension3`). Si esta agregación previa no existe y el sistema no puede calcularla sobre la marcha, la API devolverá una respuesta 404 Not Found.
+Las rutas URL disponibles se pueden detectar mediante los vínculos contenidos en la respuesta. Las rutas de URL válidas se mantienen para asignar una ruta dentro del árbol de desglose subyacente que contiene las métricas agregadas (previamente). Una ruta en el formulario `/dimension1/dimension2/dimension3` reflejará una agregación previa de esas tres dimensiones (el equivalente de un SQL `clause GROUP` POR `dimension1`, `dimension2`, `dimension3`). Si esta agregación previa no existe y el sistema no puede calcularla sobre la marcha, la API devolverá una respuesta 404 Not Found.
 
 ## Árbol de desglose {#drill-down-tree}
 
@@ -44,7 +44,7 @@ Los siguientes árboles de desglose ilustran las dimensiones (recursos) disponib
 
 ![](assets/esm-mvpd-dimensions.png)
 
-Una GET a la `https://mgmt.auth.adobe.com/v2` El extremo de la API devolverá una representación que contiene:
+Una GET a la `https://mgmt.auth.adobe.com/v2` El extremo de la API devolverá una representación que contiene:
 
 * Vínculos a las rutas desplegables raíz disponibles:
 
@@ -102,7 +102,7 @@ Los siguientes parámetros de cadena de consulta tienen significados reservados 
 | access_token | Sí | En caso de que la protección OAuth de IMS esté habilitada, el token de IMS se puede pasar como token de portador de autorización estándar o como parámetro de cadena de consulta. | Ninguno | access_token=XXXXXX |
 | dimension-name | Sí | Cualquier nombre de dimensión: contenido en la ruta URL actual o en cualquier subruta válida; el valor se tratará como un filtro igual a. Si no se proporciona ningún valor, esto obligará a que la dimensión especificada se incluya en la salida aunque no esté incluida o sea adyacente a la ruta actual | Ninguno | someDimension=someValue&amp;someOtherDimension |
 | fin | Sí | Hora de finalización del informe en milis | Hora actual del servidor | end=30-07-2012 |
-| formato | Sí | Se utiliza para la negociación de contenido (con el mismo efecto, pero con una prioridad menor que la ruta &quot;extensión&quot;; consulte a continuación). | Ninguno: la negociación de contenido probará las demás estrategias | format=json |
+| formato | Sí | Se utiliza para la negociación de contenido (con el mismo efecto, pero con una prioridad menor que la ruta &quot;extensión&quot;; consulte a continuación). | Ninguno: la negociación de contenido probará las otras estrategias | format=json |
 | límite | Sí | Número máximo de filas que se devolverán | Valor predeterminado notificado por el servidor en el autovínculo si no se especifica ningún límite en la solicitud | limit=1500 |
 | métricas | Sí | Lista separada por comas de los nombres de métricas que se van a devolver; esto debe utilizarse tanto para filtrar un subconjunto de las métricas disponibles (para reducir el tamaño de la carga útil) como para forzar a la API a que devuelva una proyección que contenga las métricas solicitadas (en lugar de la proyección óptima predeterminada). | Todas las métricas disponibles para la proyección actual se devolverán en caso de que no se proporcione este parámetro. | métricas=m1,m2 |
 | start | Sí | Hora de inicio del informe como ISO8601; el servidor rellenará la parte restante si solo se proporciona un prefijo: por ejemplo, start=2012 resultará en start=2012-01-01:00:00:00 | Notificado por el servidor en el autovínculo; el servidor intenta proporcionar valores predeterminados razonables en función de la granularidad de tiempo seleccionada | inicio=15-07-2012 |
@@ -134,7 +134,7 @@ Los datos están disponibles en los siguientes formatos:
 
 Los clientes pueden utilizar las siguientes estrategias de negociación de contenido (la prioridad viene dada por la posición en la lista: lo primero es lo primero):
 
-1. Una &quot;extensión de archivo&quot; anexada al último segmento de la ruta URL: p. ej., `/esm/v2/media-company/year/month/day.xml`. Si la dirección URL contiene una cadena de consulta, la extensión debe ir antes del signo de interrogación: `/esm/v2/media-company/year/month/day.csv?mvpd= SomeMVPD`
+1. Una &quot;extensión de archivo&quot; anexada al último segmento de la ruta URL: p. ej., `/esm/v2/media-company/year/month/day.xml`. Si la dirección URL contiene una cadena de consulta, la extensión debe ir antes del signo de interrogación: `/esm/v2/media-company/year/month/day.csv?mvpd= SomeMVPD`
 1. Un parámetro de cadena de consulta de formato: p. ej., `/esm/report?format=json`
 1. El encabezado HTTP Accept estándar: por ejemplo,. `Accept: application/xml`
 
@@ -198,32 +198,32 @@ Ejemplo (suponiendo que tengamos una sola métrica llamada `clients` y hay una a
    </resource>
 ```
 
-* https://mgmt.auth.adobe.com/esm/v2/year/month.json 
+* https://mgmt.auth.adobe.com/esm/v2/year/month.json
 
-   ```JSON
-       {
-         "_links" : {
-           "self" : {
-             "href" : "/esm/v2/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21"
-           },
-           "roll-up" : {
-             "href" : "/esm/v2/year"
-           },
-           "drill-down" : {
-             "href" : "/esm/v2/year/month/day"
-           }
-         },
-         "report" : [ {
-           "month" : "6",
-           "year" : "2012",
-           "clients" : "205"
-         }, {
-           "month" : "7",
-           "year" : "2012",
-           "clients" : "466"
-         } ]
-       }
-   ```
+  ```JSON
+      {
+        "_links" : {
+          "self" : {
+            "href" : "/esm/v2/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21"
+          },
+          "roll-up" : {
+            "href" : "/esm/v2/year"
+          },
+          "drill-down" : {
+            "href" : "/esm/v2/year/month/day"
+          }
+        },
+        "report" : [ {
+          "month" : "6",
+          "year" : "2012",
+          "clients" : "205"
+        }, {
+          "month" : "7",
+          "year" : "2012",
+          "clients" : "466"
+        } ]
+      }
+  ```
 
 ### CSV
 
@@ -250,7 +250,7 @@ Ejemplo: https://mgmt.auth.adobe.com/v2/year/month.csv producirá un archivo den
 
 Las respuestas HTTP correctas contienen un `Last-Modified` que indica la hora en la que se actualizó por última vez el informe del cuerpo. La falta de un encabezado Última modificación indica que los datos del informe se calculan en tiempo real.
 
-Por lo general, los datos granulados se actualizan con menos frecuencia que los datos granulados (por ejemplo, los valores por minuto o por hora pueden estar más actualizados que los valores diarios, especialmente para las métricas que no se pueden calcular en función de granularidades más pequeñas, como los recuentos únicos).
+Por lo general, los datos granulados se actualizarán con menos frecuencia que los datos granulados (por ejemplo, los valores por minuto o por hora pueden estar más actualizados que los valores diarios, especialmente para las métricas que no se pueden calcular en función de granularidades más pequeñas, como los recuentos únicos).
 
 Las versiones futuras de ESM pueden permitir a los clientes realizar GET condicionales al proporcionar el encabezado estándar &quot;If-Modified-Since&quot;.
 

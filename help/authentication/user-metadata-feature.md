@@ -2,7 +2,7 @@
 title: Función de metadatos de usuario
 description: Función de metadatos de usuario
 exl-id: 9fd68885-7b3a-4af0-a090-6f1f16efd2a1
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Introducción {#intro}
 
-La función de metadatos de usuario permite a los programadores acceder a diferentes tipos de datos específicos del usuario que mantienen las MVPD.  Los tipos de metadatos de usuario incluyen códigos postales, clasificaciones parentales, ID de usuario y más.  *Usuario* Los metadatos son una extensión de la variable disponible anteriormente. *estático* metadatos (TTL del token de autenticación, TTL del token de autorización e ID de dispositivo).
+La función de metadatos de usuario permite a los programadores acceder a diferentes tipos de datos específicos del usuario que mantienen las MVPD.  Los tipos de metadatos de usuario incluyen códigos postales, clasificaciones parentales, ID de usuario y más.  *Usuario* Los metadatos son una extensión de la variable disponible anteriormente. *estático* metadatos (TTL del token de autenticación, TTL del token de autorización e ID de dispositivo).
 
 
 Puntos clave de metadatos de usuario:
@@ -33,9 +33,9 @@ Puntos clave de metadatos de usuario:
 
 ## Obtención de metadatos de usuario {#obtaining}
 
-Los metadatos de usuario están disponibles para los programadores mediante AccessEnabler `getMetadata()` y a través de la `/usermetadata` en la API sin cliente.  Consulte la documentación de la API de la plataforma para obtener más información sobre el uso de `getMetadata()` y su llamada de retorno correspondiente `setMetadataStatus()` (o para los puntos de conexión y parámetros utilizados en la API sin cliente).
+Los metadatos de usuario están disponibles para los programadores mediante AccessEnabler `getMetadata()` y a través de la `/usermetadata` en la API sin cliente.  Consulte la documentación de la API de la plataforma para obtener más información sobre el uso de `getMetadata()` y su llamada de retorno correspondiente `setMetadataStatus()` (o para los puntos de conexión y parámetros utilizados en la API sin cliente).
 
-Los programadores obtienen metadatos proporcionando una clave para el tipo de metadatos que desean obtener: `getMetadata(key)`.  
+Los programadores obtienen metadatos proporcionando una clave para el tipo de metadatos que desean obtener: `getMetadata(key)`.
 
 Los metadatos se devuelven de la siguiente manera: `setMetadataStatus(key, encrypted, data)`:
 
@@ -45,7 +45,7 @@ Los metadatos se devuelven de la siguiente manera: `setMetadataStatus(key, encry
 | `encrypted` | Booleano | Un indicador booleano que indica si el &quot;valor&quot; está cifrado o no. Si es &quot;true&quot;, &quot;value&quot; será en realidad una representación cifrada con web JSON del valor real. |
 | `data` | Objeto | Un objeto JSON que contiene la representación de los metadatos |
 
- 
+
 
 La estructura del parámetro de datos y los valores varían entre tipos:
 
@@ -53,7 +53,7 @@ La estructura del parámetro de datos y los valores varían entre tipos:
 | --- | --- | --- | --- |
 | `zip` | Matriz JSON | \[&quot;77754&quot;, &quot;12345&quot;\] | Código postal |
 | `householdID` | Cadena JSON | &quot;1o7241p&quot; | Identificador del hogar. Si la MVPD no admite subcuentas, será idéntico a `userID` |
-| `maxRating` | Objeto JSON | { MPAA: &quot;NR&quot;, <br>  VCHIP: &quot;X&quot;,  <br>  URL: &quot;http://manage.my/parental&quot; } | Clasificación paterna máxima para el usuario |
+| `maxRating` | Objeto JSON | { MPAA: &quot;NR&quot;, <br>  VCHIP: &quot;X&quot;,  <br>  URL: &quot;http://manage.my/parental&quot; } | Clasificación paterna máxima para el usuario |
 | `userID` | Cadena JSON | &quot;1o7241p&quot; | El identificador de usuario. En caso de que una MVPD admita subcuentas y el usuario no sea la cuenta principal, `userID` será diferente a `householdID`. |
 | `channelID` | Matriz JSON | \[&quot;channel-1&quot;, &quot;channel-2&quot; \] | Una lista de canales que un usuario puede ver |
 | `is_hoh` | Cadena JSON | &quot;1&quot; | Un indicador que identifica si un usuario es el cabeza de familia |
@@ -68,7 +68,7 @@ La estructura del parámetro de datos y los valores varían entre tipos:
 > **Nota:** Si el parámetro de datos está cifrado, como suele suceder con el parámetro de datos **clave de zip**, la representación de la clave de metadatos será una cadena JSON en lugar de una matriz o un objeto.
 
 
-**Importante:** Los metadatos de usuario reales disponibles para un programador dependen de lo que una MVPD ponga a disposición.  Se deben firmar acuerdos legales con MVPD antes de que los metadatos confidenciales del usuario (como el código postal) estén disponibles en el entorno de producción.
+**Importante:** Los metadatos de usuario reales disponibles para un programador dependen de lo que una MVPD ponga a disposición.  Se deben firmar acuerdos legales con MVPD antes de que los metadatos confidenciales del usuario (como el código postal) estén disponibles en el entorno de producción.
 
 </br>
 
@@ -76,17 +76,17 @@ La estructura del parámetro de datos y los valores varían entre tipos:
 | Nombre | Detalles | Requiere cifrado | Comentarios |
 | --- | --- | --- | --- |
 | ID de usuario | Según lo dispuesto por la MVPD | No | Este es el valor al que luego se le aplica un hash mediante Adobe y que se expone en el token de medios y en la llamada de retorno sendTrackingData().<br><br>El hash en este caso se realizó por motivos históricos<br><br>Este ID puede ser un ID doméstico o un ID de subcuenta. Normalmente no se especifica, solo es el ID vinculado al inicio de sesión que se utilizó en el momento (que puede ser uno principal o una subcuenta) |
-| ID de usuario ascendente | Proporcionado por la MVPD para utilizarse únicamente para flujos de supervisión de concurrencia | No | Este valor se utiliza al aplicar límites de concurrencia en los sitios y las aplicaciones de MVPD y Programador. <br><br>El ID también puede contener políticas de monitorización de concurrencia<br><br>Para la mayoría de las MVPD, este valor es igual al ID de usuario |
+| ID de usuario ascendente | Proporcionado por la MVPD para utilizarse únicamente para flujos de supervisión de concurrencia | No | Este valor se utiliza al aplicar límites de concurrencia en los sitios y las aplicaciones de MVPD y Programador. <br><br>El ID también puede contener políticas de monitorización de concurrencia<br><br>Para la mayoría de las MVPD, este valor es igual al ID de usuario |
 | ID de usuario doméstico | Suministrado por la MVPD para ser utilizado principalmente para flujos de Control Parental | No | ID que permite a los programadores comprender el uso doméstico frente al de subcuentas.<br><br>A veces se utiliza como sustituto de Control parental si no hay clasificaciones verdaderas disponibles (si el usuario ha iniciado sesión con la cuenta del hogar que puede ver, de lo contrario, el contenido clasificado no se muestra)<br><br>Hay muchas variaciones entre las MVPD para la forma en que se representa: ID de usuario doméstico, ID de cabeza de familia, bandera de cabeza de familia, etc. |
 | Cabeza de familia | Indicador que indica si la cuenta corriente es cabeza de familia o no | No | véase más arriba |
-| ID de tipo/ID principal | Identificadores de cuenta del hogar | No | Indicadores específicos de AT&amp;T para cabeza de familia.<br><br>ID de tipo = indicador que identifica si la cuenta de usuario es la cuenta principal/secundaria<br><br>OID principal = Identificador del hogar. Si TypeID es Primary, contendrá el valor de userID |
+| ID de tipo/ID principal | Identificadores de cuenta del hogar | No | Indicadores específicos de AT&amp;T para cabeza de familia.<br><br>ID de tipo = indicador que identifica si la cuenta de usuario es la cuenta principal/secundaria<br><br>OID principal = Identificador del hogar. Si TypeID es Primary, contendrá el valor de userID |
 | Clasificación máxima | Clasificación máxima permitida para la cuenta actual | No | Permite a los programadores filtrar el contenido que no es adecuado para la cuenta de.<br><br>Tiene clasificaciones MPAA o VCHIP |
 | Línea de canales | Lista de canales disponibles en el paquete del usuario | No | Se utiliza para permitir o quitar rápidamente varios canales de los portales que agregan varias redes</br></br> *Tenga en cuenta que la autorización de verificación previa generalmente permite una mayor flexibilidad para este caso de uso y debe usarse en su lugar* <br><br>La especificación OLCA lo permite como AttributeStatement en la respuesta AuthN |
-| Estado de HBA | Indica si se ha producido la autenticación mediante HBA | No |  |
+| Estado de HBA | Indica si se ha producido la autenticación mediante HBA | No |     |
 | Código postal | Código postal de facturación del usuario | Sí | Se utiliza para eventos deportivos o de difusión<br><br>También se puede proporcionar con la respuesta AuthZ para actualizaciones rápidas<br><br>Datos confidenciales, necesita acuerdos legales de MVPD |
 | Código postal cifrado | Código postal de facturación del usuario (Comcast) | Sí | Como arriba pero cifrado por Comcast |
 | Idioma | Configuración de idioma del usuario | No | Se utiliza para mostrar mensajes según las preferencias del usuario |
-| Permitir creación de reflejo | Indica si se permite o no la duplicación de pantalla para este dispositivo | No |  |
+| Permitir creación de reflejo | Indica si se permite o no la duplicación de pantalla para este dispositivo | No |     |
 
 
 
@@ -95,31 +95,31 @@ La estructura del parámetro de datos y los valores varían entre tipos:
 La siguiente tabla muestra el estado actual de los metadatos de usuario en el ecosistema de autenticación de Adobe Primetime:
 
 
-|  | **Legal **<br><br>**Acuerdo **<br><br>**Firmado (solo zip)** | **ID de usuario **<br><br>**en AuthN** | **Código postal **<br><br>**en AuthN/Z** | **Clasificación **<br><br>**en AuthN/Z** | **Hogar **<br><br>**ID en AuthN/Z** | **ID de canal en AuthN** | **Cabeza de familia en AuthN** | **Escribir ID en AuthN** | **OID principal en AuthN** | Idioma | UserID ascendente **en AuthN** | Estado de HBA | OnNet | inHome | Permitir creación de reflejo en AuthZ | **Notas** |
+|     | **Legal **<br><br>**Acuerdo **<br><br>**Firmado (solo zip)** | **ID de usuario **<br><br>**en AuthN** | **Código postal **<br><br>**en AuthN/Z** | **Clasificación **<br><br>**en AuthN/Z** | **Hogar **<br><br>**ID en AuthN/Z** | **ID de canal en AuthN** | **Cabeza de familia en AuthN** | **Escribir ID en AuthN** | **OID principal en AuthN** | Idioma | UserID ascendente **en AuthN** | Estado de HBA | OnNet | inHome | Permitir creación de reflejo en AuthZ | **Notas** |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Nombre formal** | n/a | `userID` | `zip` | `maxRating` | `householdID` | `channelID` | is_hoh | typeID | primaryOID | idioma | upstreamUserID | hba_status | onNet | inHome | allowMirroring | 1. Para AuthN: el analizador OiosamlMetadataParser debe cambiarse para que todos los analizadores tengan este nuevo atributo habilitado <br>2.  Para AuthZ: no hay una forma genérica, ya que la implementación de autorización es específica de MVPD |
-| **Cifrado obligatorio** | n/a | **No** | **Sí** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** |  |
-| **Sensible** | n/a | **No** | **Sí** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** |  |  |
+| **Nombre formal** | n/a | `userID` | `zip` | `maxRating` | `householdID` | `channelID` | is_hoh | typeID | primaryOID | idioma | upstreamUserID | hba_status | onNet | inHome | allowMirroring | 1. Para AuthN: el analizador OiosamlMetadataParser debe cambiarse para que todos los analizadores tengan este nuevo atributo habilitado <br>2.  Para AuthZ: no hay una forma genérica, ya que la implementación de autorización es específica de MVPD |
+| **Cifrado obligatorio** | n/a | **No** | **Sí** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** |     |
+| **Sensible** | n/a | **No** | **Sí** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** |     |     |
 | **IdP de Adobe** | **Sí** | **Sí** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí** | **Sí** | **Sí** | **Sí** | **No** | **Sí** | **No** | **No** | **No** | **No** | No se necesita ningún acuerdo legal. Se puede habilitar. |
-| **Synacor** | **Sí** | **Sí** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí** | **Sí** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** | **Acuerdo legal que no cubre todas las MVPD proxy.**   <br>Se trata de una compatibilidad genérica con Synacor; posiblemente no se acumule en todas sus MVPD. |
+| **Synacor** | **Sí** | **Sí** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí** | **Sí** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** | **Acuerdo legal que no cubre todas las MVPD proxy.**   <br>Se trata de una compatibilidad genérica con Synacor; posiblemente no se acumule en todas sus MVPD. |
 | Plato | **No** | **Sí** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** | Comparte la misma lista que todas las MVPD de Synacor, además de upstreamUserID. |
-| Comcast | **No** | **Sí** | **No** | **Sí (solo AuthZ)** | **Sí (solo AuthZ)** | **No** | **No** | **No** | **No** | **No** | **Sí** | **Sí** | **No** | **No** | **No** |  |
+| Comcast | **No** | **Sí** | **No** | **Sí (solo AuthZ)** | **Sí (solo AuthZ)** | **No** | **No** | **No** | **No** | **No** | **Sí** | **Sí** | **No** | **No** | **No** |     |
 | **AT&amp;T** | **Sí** | **Sí** | **Sí (solo AuthN)** | **No** | **Sí (solo AuthN)** | **No** | **No** | **Sí** | **Sí** | **No** | **Sí** | **No** | **No** | **No** | **No** | Acuerdo legal firmado. |
 | **Cablevision** | **Sí** | **Sí** | **Sí (solo AuthN)** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** | Acuerdo legal firmado. |
-| **HTC** | **No** | **Sí** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |  |
+| **HTC** | **No** | **Sí** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |     |
 | **Proxy Massilon** | **Sí** | **Sí** | **Sí (solo AuthN)** | **No** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** | Acuerdo legal firmado. |
 | **Borrado de proxy** | **Sí** | **Sí** | **Sí (solo AuthN)** | **Sí (solo AuthZ)** | **No** | **No** | **No** | **No** | **No** | **Sí** | **Sí** | **No** | **No** | **No** | **No** | Acuerdo legal firmado. |
-| Rogers | **No** | **Sí** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |  |
-| RCN | **Sí** | **Sí** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |  |
-| Carta | **Sí** | **Sí** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |  |
-| Verizon | **No** | **Sí** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **Sí** | **Sí** | **No** | **No** | **No** |  |
-| Eastlink | **No** | **Sí** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |  |
-| GLDS de proxy | **No** | **Sí** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |  |
-| DTV | **Sí** | **Sí** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |  |
-| COX | **No** | **Sí** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |  |
-| Cogeco | **No** | **Sí** | **Sí (solo AuthN)** | **No** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |  |
+| Rogers | **No** | **Sí** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |     |
+| RCN | **Sí** | **Sí** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |     |
+| Carta | **Sí** | **Sí** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |     |
+| Verizon | **No** | **Sí** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **Sí** | **Sí** | **No** | **No** | **No** |     |
+| Eastlink | **No** | **Sí** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |     |
+| GLDS de proxy | **No** | **Sí** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |     |
+| DTV | **Sí** | **Sí** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |     |
+| COX | **No** | **Sí** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |     |
+| Cogeco | **No** | **Sí** | **Sí (solo AuthN)** | **No** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** |     |
 | Videotron | **No** | **Sí** | **Sí (solo AuthN)** | **No** | **Sí*** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** | Expone householdID con el mismo valor que userID |
-| Espectro | **Sí** | **Sí** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **Sí** | **Sí** | **No** | **No** | **Sí** |  |
+| Espectro | **Sí** | **Sí** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **Sí (solo AuthN)** | **No** | **No** | **No** | **No** | **No** | **Sí** | **Sí** | **No** | **No** | **Sí** |     |
 | **Todos los demás **<br><br>**MVPD** | **No** | **Sí** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **No** | **Sí** | **No** | **No** | **No** | **No** | **Aún no hay ningún acuerdo legal. Los metadatos confidenciales no están disponibles para la producción.**  <br>Para todas las MVPD, el ID de usuario está disponible sin trabajo adicional. |
 
 
@@ -159,7 +159,7 @@ La lista de tipos de metadatos de usuario se ampliará a medida que haya nuevos 
       alert(key + "=" + data);
     }
 ```
- 
+
 
 ### Ejemplo de código 2 (simulación de getMetadata) {#code_sample2}
 
@@ -211,18 +211,18 @@ La lista de tipos de metadatos de usuario se ampliará a medida que haya nuevos 
       alert(key + "=" + data);
     }
 ```
- 
 
-Para obtener más información sobre su plataforma particular o para obtener información sobre cómo se procesan los metadatos de usuario en el MVPD, consulte el vínculo correspondiente en Información relacionada a continuación.  
+
+Para obtener más información sobre su plataforma particular o para obtener información sobre cómo se procesan los metadatos de usuario en el MVPD, consulte el vínculo correspondiente en Información relacionada a continuación.
 
 <!---
 
 ## Related Information {#related}
 
 - ActionScript - [getMetadata()](#getMeta), [setMetadataStatus()](#setMetaData)
-- JavaScript - [getMetadata()](#getMeta), [setMetadataStatus()](#setMetaData)
-- iOS - [getMetadata()](#getMeta), [setMetadataStatus()](#setMetaStatus)
-- Android - [getMetadata()](#getMetadata), [setMetadataStatus()](#setMetadaStatus)
-- Clientless - [AuthN Metadata](#authn_metadata)
+- JavaScript - [getMetadata()](#getMeta), [setMetadataStatus()](#setMetaData)
+- iOS - [getMetadata()](#getMeta), [setMetadataStatus()](#setMetaStatus)
+- Android - [getMetadata()](#getMetadata), [setMetadataStatus()](#setMetadaStatus)
+- Clientless - [AuthN Metadata](#authn_metadata)
 - [MVPD Integration Guide: User Metadata Exchange](/help/authentication/mvpd-user-metadata-exchng.md)
 -->

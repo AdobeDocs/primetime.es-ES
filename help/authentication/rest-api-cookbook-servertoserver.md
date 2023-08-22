@@ -2,7 +2,7 @@
 title: Guía de la API de REST (servidor a servidor)
 description: Rest API cookbook server to server.
 exl-id: 36ad4a64-dde8-4a5f-b0fe-64b6c0ddcbee
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1825'
 ht-degree: 0%
@@ -18,16 +18,24 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-El propósito de este documento de guía es detallar las prácticas recomendadas para implementar la autenticación de Adobe Primetime mediante las arquitecturas de servidor a servidor.  Proporciona requisitos básicos, implementación de flujo paso a paso y consideraciones generales para entornos y operaciones de producción.
+El propósito de este documento de guía es detallar las prácticas recomendadas para implementar la autenticación de Adobe Primetime mediante las arquitecturas de servidor a servidor.  Proporciona requisitos básicos, implementación de flujo paso a paso y consideraciones generales para entornos y operaciones de producción.
 
- 
+
 
 ## Componentes {#components}
 
 En una solución de servidor a servidor en funcionamiento están implicados los siguientes componentes:
 
- 
-| Tipo | Componente | Descripción | | — | — | — | | Dispositivo de streaming | Aplicación de streaming | La aplicación de programador que reside en el dispositivo de flujo continuo del usuario y reproduce vídeo autenticado. | | | Módulo \[Opcional\] AuthN | si el dispositivo de streaming tiene un agente de usuario (es decir, un explorador web), el módulo AuthN es responsable de autenticar al usuario en el MVPD IdP. | | \[Opcional\] Dispositivo AuthN | Aplicación AuthN | si el dispositivo de streaming no tiene un agente de usuario (es decir, un explorador web), la aplicación AuthN es una aplicación web de programador a la que se accede desde un dispositivo de un usuario independiente mediante un explorador web. | | Infraestructura del programador | Servicio de programador | Servicio que vincula el dispositivo de streaming con el servicio de Adobe Pass para obtener decisiones de autenticación y autorización. | | Infraestructura de Adobe | Servicio de Adobe Pass | Servicio que se integra con el servicio MVPD IdP y AuthZ y proporciona decisiones de autenticación y autorización. | | Infraestructura de MVPD | ID de MVPD | Punto final de MVPD que proporciona un servicio de autenticación basado en credenciales para validar la identidad de su usuario. | | | Servicio MVPD AuthZ | Punto final de MVPD que proporciona decisiones de autorización basadas en las suscripciones del usuario, los controles parentales, etc. |
+
+| Tipo | Componente | Descripción |
+| --- | --- | --- |
+| Dispositivo de streaming | Aplicación de streaming | La aplicación de programador que reside en el dispositivo de transmisión del usuario y reproduce vídeo autenticado. |
+| | Módulo \[Optional\] AuthN | si el dispositivo de streaming tiene un agente de usuario (es decir, un explorador web), el módulo AuthN es responsable de autenticar al usuario en el MVPD IdP. |
+| \[Opcional\] Dispositivo AuthN | Aplicación AuthN | si el dispositivo de streaming no tiene un agente de usuario (es decir, un explorador web), la aplicación AuthN es una aplicación web de programador a la que se accede desde un dispositivo de un usuario independiente mediante un explorador web. |
+| Infraestructura del programador | Servicio de programador | Servicio que vincula el dispositivo de streaming con el servicio de Adobe Pass para obtener decisiones de autenticación y autorización. |
+| Infraestructura de Adobe | Servicio de Adobe Pass | Servicio que se integra con el servicio MVPD IdP y AuthZ y proporciona decisiones de autenticación y autorización. |
+| Infraestructura de MVPD | ID de MVPD | Punto final de MVPD que proporciona un servicio de autenticación basado en credenciales para validar la identidad de su usuario. |
+| | Servicio AuthZ de MVPD | Punto final de MVPD que proporciona decisiones de autorización basadas en las suscripciones del usuario, los controles parentales, etc. |
 
 
 Los términos adicionales utilizados en el flujo se definen en la variable
@@ -43,7 +51,7 @@ Adobe Pass utiliza DCR para proteger las comunicaciones de cliente entre una apl
 
 ### Autenticación (authN)
 
-El flujo de autenticación se utiliza para permitir que un usuario se identifique con su MVPD para determinar si el usuario tiene una cuenta válida. 
+El flujo de autenticación se utiliza para permitir que un usuario se identifique con su MVPD para determinar si el usuario tiene una cuenta válida.
 
 1. El usuario inicia la aplicación Dispositivo de streaming e intenta iniciar sesión o ver contenido protegido.
 2. La aplicación Dispositivo de streaming realiza una solicitud al servicio Programador para determinar si el dispositivo ya está autenticado.
@@ -58,7 +66,7 @@ El flujo de autenticación se utiliza para permitir que un usuario se identifiqu
 11. El módulo AuthN inicia la autenticación del usuario con la MVPD mostrando un selector de MVPD. Una vez que el usuario selecciona la MVPD, el módulo AuthN llama a **autentificar** con el regcode, que redirige el agente de usuario al ID de MVPD. Cuando el usuario se autentica correctamente con la MVPD, el agente de usuario se redirige de nuevo a través del servicio Adobe Pass, donde la autenticación correcta se registra con el regcode y, a continuación, se redirige de nuevo al módulo AuthN.
 12. Si el dispositivo de streaming es diferente del dispositivo AuthN, este debe mostrar un mensaje de autenticación al usuario y los pasos para continuar (p. ej., &quot;Success\! Ahora puede volver a la consola de juegos para continuar \[...\]&quot;). Si el dispositivo de streaming es el mismo que el dispositivo AuthN, el dispositivo de streaming puede detectar mediante programación la finalización de la autenticación.
 
- 
+
 
 El diagrama siguiente ilustra el flujo de autenticación:
 
@@ -90,7 +98,7 @@ El diagrama siguiente ilustra el flujo de cierre de sesión:
 
 ### \[Opcional\] Autorización previa (también conocida como Pre-flight)
 
-La preautorización se puede utilizar para determinar rápidamente, a partir de un conjunto de recursos, a qué recursos puede tener acceso un usuario.  El resultado de esta llamada se utiliza generalmente para personalizar la interfaz de usuario de un usuario individual.
+La preautorización se puede utilizar para determinar rápidamente, a partir de un conjunto de recursos, a qué recursos puede tener acceso un usuario.  El resultado de esta llamada se utiliza generalmente para personalizar la interfaz de usuario de un usuario individual.
 
 1. Una vez autenticado el usuario, el Dispositivo de streaming puede llamar al Servicio de programador para solicitar el contenido al que el usuario tiene derecho a transmitir.
 
@@ -108,23 +116,23 @@ El diagrama siguiente ilustra el flujo de preautorización:
 ### \[Opcional\] Metadatos
 
 Los metadatos se pueden utilizar para recuperar información de usuario compartida por MVPD.
- Algunos ejemplos de esto son el ID de usuario, el código postal, etc.
+Algunos ejemplos de esto son el ID de usuario, el código postal, etc.
 
-1. Una vez autenticado el usuario, el servicio de programador puede llamar a Adobe Pass **usermetadata** API para solicitar información sobre el usuario autenticado.
+1. Una vez autenticado el usuario, el servicio de programador puede llamar a Adobe Pass **usermetadata** API para solicitar información sobre el usuario autenticado.
 
 1. La respuesta incluirá todos los metadatos disponibles para el usuario determinado. Los campos específicos se configuran por separado para cada integración de Programador/MVPD.
 
 El diagrama siguiente ilustra el flujo de preautorización:
 
- 
+
 
 ![](assets/user-metadata-api-preauthz.png)
 
- 
+
 
 ## Entornos y requisitos funcionales{#environments}
 
- 
+
 
 Un programador debe crear al menos dos entornos: uno para la producción y uno o más para el ensayo.
 
@@ -133,29 +141,29 @@ Un programador debe crear al menos dos entornos: uno para la producción y uno o
 
 El entorno de producción debe tener una alta disponibilidad y escalarse adecuadamente para picos grandes o inesperados (por ejemplo, deportes en directo, noticias de última hora).
 
- 
-
-El servicio Adobe Pass se ejecuta en varios centros de datos distribuidos geográficamente en Estados Unidos.  Para lograr el mejor tiempo de respuesta (es decir, la menor latencia) desde el servicio de Adobe Pass, el Programador también debe crear una infraestructura de servicio dispersa geográficamente similar. 
 
 
-El servicio Programador debe limitar la memoria caché DNS a un máximo de 30 segundos en caso de que el Adobe necesite redireccionar el tráfico. Esto puede ocurrir si un centro de datos deja de estar disponible.\
- 
+El servicio Adobe Pass se ejecuta en varios centros de datos distribuidos geográficamente en todo Estados Unidos.  Para lograr el mejor tiempo de respuesta (es decir, la menor latencia) desde el servicio de Adobe Pass, el Programador también debe crear una infraestructura de servicio dispersa geográficamente similar.
+
+
+El servicio Programador debe limitar la memoria caché DNS a un máximo de 30 segundos en caso de que el Adobe necesite redireccionar el tráfico. Esto puede ocurrir si un centro de datos deja de estar disponible.
+
 
 El programador debe proporcionar el rango de IP pública del entorno de producción. Estas se incluirán en una lista de direcciones IP permitidas en la infraestructura de Adobe Pass para su acceso y se administrarán mediante las políticas de uso de API equitativas de Adobe.
 
 ### Ensayo
 
-El entorno de ensayo puede ser mínimo, pero debe incluir todos los componentes del sistema y la lógica empresarial. Debe funcionar de manera similar a la producción y permitir versiones de prueba fuera de la producción. Lo ideal es que el entorno de ensayo se pueda conectar a los entornos de prueba de Adobe Pass para que el programador lo use y, cuando sea necesario, mediante el Adobe, para que podamos ayudarle en las pruebas y la resolución de problemas.
+El entorno de ensayo puede ser mínimo, pero debe incluir todos los componentes del sistema y la lógica empresarial. Debe funcionar de manera similar a la producción y permitir versiones de prueba fuera de la producción. Lo ideal es que el entorno de ensayo se pueda conectar a los entornos de prueba de Adobe Pass para que el programador lo use y, cuando sea necesario, mediante el Adobe, para que podamos ayudarle en las pruebas y la resolución de problemas.
 
 ### Requisitos funcionales
 
 El servicio Programador debe pasar información precisa de identificación del dispositivo para el que está ejecutando los flujos. Además, el servicio Programador debe pasar la IP del dispositivo para el que está ejecutando los flujos (en un encabezado x-forwarded-for) junto con el puerto de origen de la conexión (en el campo de información del dispositivo):
 
-    **X-Forwarded-For : \&lt;client _ip=&quot;&quot;>** 
+    **X-Forwarded-For : \&lt;client _ip=&quot;&quot;>**
     
     donde \&lt;client _ip=&quot;&quot;> es la dirección IP pública del cliente
     
-     
+    
     
     El encabezado debe añadirse en las llamadas **regcode** y **authorize**
     
@@ -165,15 +173,15 @@ El servicio Programador debe pasar información precisa de identificación del d
     
     X-Forwarded-For:203.45.101.20
     
-     
+    
     
     GET /api/v1/authorize HTTP/1.1
     
     X-Forwarded-For:203.45.101.20
 
- 
 
-El servicio Programador debe enviar los datos y el formato requeridos por las MVPD individuales o aplicaciones integradas (por ejemplo, IP del dispositivo, puerto de origen, información del dispositivo, MRSS, datos opcionales como ECID). <!--Please see the documentation for [Passing Device and Connection Information Cookbook](http://tve.helpdocsonline.com/passing-device-information-cookbook)-->.
+
+El servicio Programador debe enviar los datos y el formato requeridos por las MVPD individuales o aplicaciones integradas (por ejemplo, IP del dispositivo, puerto de origen, información del dispositivo, MRSS, datos opcionales como ECID). <!--Please see the documentation for [Passing Device and Connection Information Cookbook](http://tve.helpdocsonline.com/passing-device-information-cookbook)-->.
 
 
 El servicio Programador debe respetar los TTL authN y authZ al almacenar en caché e invalidar las sesiones authN o authZ cuando se le notifique.
@@ -183,6 +191,6 @@ El programador debe mantener los certificados compartidos con el Adobe.
 <!--
 ## Related Information {#related}
 
-* [REST API Reference](/help/authentication/rest-api-reference.md)
+* [REST API Reference](/help/authentication/rest-api-reference.md)
 * [Glossary of Terms](/help/authentication/adobe-pass-glossary.md)
 -->

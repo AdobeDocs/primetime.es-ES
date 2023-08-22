@@ -2,7 +2,7 @@
 title: Preguntas y respuestas de certificados
 description: Preguntas y respuestas de certificados
 exl-id: d4e493b0-4467-42b1-9758-16c5941d8051
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 0%
@@ -29,6 +29,6 @@ ht-degree: 0%
 
 </br>
 
-**T3:** ¿Se necesita un nuevo certificado para las páginas web que utilizarán el nuevo TempPass flexible? 
+**T3:** ¿Se necesita un nuevo certificado para las páginas web que utilizarán el nuevo TempPass flexible?
 
-**A:** El certificado (y cualquier certificado) está configurado a nivel de empresa de medios y programador. FlexibleTempPass es un MVPD, no es necesario configurar ningún certificado para él, por lo que si está integrando un programador existente con TempPass flexible, se utilizará el certificado que ya está configurado a nivel de programador / empresa de medios.
+**A:** El certificado (y cualquier certificado) está configurado a nivel de empresa de medios y programador. FlexibleTempPass es un MVPD, no es necesario configurar ningún certificado para él, por lo que si está integrando un programador existente con TempPass flexible, se utilizará el certificado que ya está configurado a nivel de programador / empresa de medios.

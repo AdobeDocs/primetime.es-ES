@@ -2,7 +2,7 @@
 title: Procedimientos de escalación
 description: Procedimientos de escalación
 exl-id: 1d754e5a-d5fa-4411-8932-2a36294da6eb
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '853'
 ht-degree: 0%
@@ -21,12 +21,12 @@ ht-degree: 0%
 
 ## Introducción {#introduction}
 
-Este documento describe los procedimientos de apoyo para incidentes graves **GRAVEDAD 1** nivel) que afecta a la autenticación de Adobe Primetime, a la supervisión de la concurrencia de Primetime y a sus socios.\
- 
+Este documento describe los procedimientos de apoyo para incidentes graves **GRAVEDAD 1** nivel) que afecta a la autenticación de Adobe Primetime, a la supervisión de la concurrencia de Primetime y a sus socios.
+
 
 ## Definición de un incidente de nivel GRAVEDAD 1 {#definition-of-a-severity-1-level-incident}
 
-A **GRAVEDAD 1** el incidente de nivel es un **ACTIVO** situación, **ocurre en el entorno de producción**, que no permite la finalización de los flujos de autenticación y/o autorización para un canal y un MVPD, afectando a un gran número de suscriptores del MVPD que realizan el flujo.
+A **GRAVEDAD 1** el incidente de nivel es un **ACTIVO** situación, **ocurre en el entorno de producción**, que no permite la finalización de los flujos de autenticación y/o autorización para un canal y un MVPD, afectando a un gran número de suscriptores del MVPD que realizan el flujo.
 
 
 ## Ejemplos de incidentes de GRAVEDAD 1 {#examples-of-severity-1-incidentcs}
@@ -62,7 +62,6 @@ Los incidentes de gravedad 1 pueden iniciarlos el Adobe o un socio de autenticac
    * (opcional) Cualquier captura de pantalla o vídeo disponible que demuestre el problema
 1. Si el Adobe no responde al ticket en 30 minutos, el socio llama al siguiente número:
    **1-205-693-9813**
-
    >[!IMPORTANT]
    >Si no incluyes &quot;URGENTE-INCIDENTE&quot; en el título del ticket, no será recogido por nuestro sistema de notificación**.
 
@@ -90,7 +89,7 @@ Los incidentes de gravedad 1 pueden iniciarlos el Adobe o un socio de autenticac
 
 Hay algunas situaciones en las que se realizará una acción predeterminada en el caso de que se produzca ese escenario:
 
-|  | Escenario | Descripción | Acciones |
+|   | Escenario | Descripción | Acciones |
 |---|---|---|---|
 | S1 | El Adobe identifica un problema con la integración de una MVPD durante las operaciones de producción normales. | Durante las operaciones de producción normales, el Adobe identifica un problema con una de las MVPD que hace que sea imposible realizar los flujos de autenticación/autorización (por ejemplo, certificados caducados, respuestas SAML caducadas, puertos cerrados, parámetros modificados, etc.) | - Adobe notificará a los MVPD y programadores afectados.  </br> </br> - Adobe desactivará este MVPD para todos los programadores afectados. </br> </br> - El Adobe abrirá un ticket con la MVPD siguiendo el procedimiento de soporte acordado con dicha MVPD |
 | S2 | Adobe activa un nuevo MVPD para un programador, y el programador permite el MVPD antes de la fecha de lanzamiento. | El Adobe está activando un nuevo MVPD para el sitio de un programador, y el sitio ya está mostrando el nuevo MVPD en el selector, incluso si no se suponía que lo hiciera. | - Adobe notificará al Programador sobre el nuevo MVPD que aparece en el selector antes de la fecha programada. </br> </br>  - El programador tomará medidas para eliminarlo del selector si es necesario. |

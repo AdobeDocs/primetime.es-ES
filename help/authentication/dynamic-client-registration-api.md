@@ -2,7 +2,7 @@
 title: API de registro de cliente dinámico
 description: API de registro de cliente dinámico
 exl-id: 06a76c71-bb19-4115-84bc-3d86ebcb60f3
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 0%
@@ -52,17 +52,17 @@ Después de recuperar una declaración de software del Tablero de TVE, debe regi
 
 **Solicitud**
 
-| llamada HTTP |  |
+| llamada HTTP |                    |
 |-----------|--------------------|
 | ruta | /o/client/register |
 | método | POST |
 
-| campos |  |  |
+| campos |                                                                           |           |
 |--------------------|---------------------------------------------------------------------------|-----------|
 | software_statement | La declaración de software creada en TVE Dashboard. | obligatorio |
 | redirect_uri | URI que utiliza la aplicación para completar el flujo de autenticación. | opcional |
 
-| encabezados de solicitud |  |  |
+| encabezados de solicitud |                                                                                |           |
 |-----------------|--------------------------------------------------------------------------------|-----------|
 | Content-Type | application/json | obligatorio |
 | X-Device-Info | La información del dispositivo tal como se define en Pasar información de dispositivo y conexión | obligatorio |
@@ -70,11 +70,11 @@ Después de recuperar una declaración de software del Tablero de TVE, debe regi
 
 **Respuesta**
 
-| encabezados de respuesta |  |  |
+| encabezados de respuesta |                  |           |
 |------------------|------------------|-----------|
 | Content-Type | application/json | obligatorio |
 
-| campos de respuesta |  |  |
+| campos de respuesta |                 |                            |
 |---------------------|-----------------|----------------------------|
 | client_id | Cadena | obligatorio |
 | client_secret | Cadena | obligatorio |
@@ -160,12 +160,12 @@ Después de recuperar el identificador de cliente único (ID de cliente y secret
 **Solicitud**
 
 
-| **llamada HTTP** |  |
+| **llamada HTTP** | |
 | --- | --- |
 | ruta | `/o/client/token` |
 | método | POST |
 
-| **parámetros de solicitud** |  |
+| **parámetros de solicitud** | |
 | --- | --- |
 | `grant_type` | Recibido en el proceso de registro de cliente.<br/> **Valor aceptado**<br/>`client_credentials`: se utiliza para clientes no seguros, como el SDK para Android. |
 | `client_id` | Identificador de cliente obtenido en el proceso de registro de cliente. |
@@ -173,13 +173,13 @@ Después de recuperar el identificador de cliente único (ID de cliente y secret
 
 **Respuesta**
 
-| campos de respuesta |  |  |
+| campos de respuesta | | |
 | --- | --- | --- |
 | `access_token` | El valor del token de acceso que debe utilizarse para llamar a las API de Primetime | obligatorio |
 | `expires_in` | Tiempo en segundos hasta que caduca access_token | obligatorio |
 | `token_type` | El tipo de token **portador** | obligatorio |
 | `created_at` | La hora de emisión del token | obligatorio |
-| **encabezados de respuesta** |  |  |
+| **encabezados de respuesta** | | |
 | `Content-Type` | application/json | obligatorio |
 
 **Respuesta de error**
@@ -240,7 +240,7 @@ Utilice el token de acceso para realizar Adobe Primetime [Llamadas de API de aut
 
 En caso de error, se podrían devolver las siguientes respuestas de error:
 
-| Respuestas de error |  |  |
+| Respuestas de error |     |                                                                                                        |
 |-----------------|-----|--------------------------------------------------------------------------------------------------------|
 | invalid_request | 400 | La solicitud tiene un formato incorrecto. |
 | invalid_client | 403 | El ID de cliente ya no tiene permiso para realizar solicitudes. Deben generarse nuevas credenciales de cliente. |

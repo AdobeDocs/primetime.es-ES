@@ -2,7 +2,7 @@
 title: Dynamic Client Registration Management
 description: Dynamic Client Registration Management
 exl-id: 2c3ebb0b-c814-4b9e-af57-ce1403651e9e
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1338'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Información general {#overview}
 
-Con la adopción generalizada de [Fichas personalizadas de Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target_white} y [Controladora de vista de Apple Safari](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target_blank} en las aplicaciones de nuestros clientes, estamos actualizando el flujo de autenticación de usuarios en la autenticación de Adobe Primetime. Más específicamente, ya no podemos lograr el objetivo de mantener el estado para que el flujo del agente de usuario de autenticación de un suscriptor de MVPD pueda rastrearse entre redirecciones. Anteriormente, esto se realizaba con cookies HTTP. Esta limitación es el controlador para empezar a migrar todas las API a OAuth 2.0 [RFC6749](https://tools.ietf.org/html/rfc6749){target_white}.
+Con la adopción generalizada de [Fichas personalizadas de Android Chrome](https://developer.chrome.com/multidevice/android/customtabs){target_blanck} y [Controladora de vista de Apple Safari](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target_blanck} en las aplicaciones de nuestros clientes, estamos actualizando el flujo de autenticación de usuarios en la autenticación de Adobe Primetime. Más específicamente, ya no podemos lograr el objetivo de mantener el estado para que el flujo del agente de usuario de autenticación de un suscriptor de MVPD pueda rastrearse entre redirecciones. Anteriormente, esto se realizaba con cookies HTTP. Esta limitación es el controlador para empezar a migrar todas las API a OAuth 2.0 [RFC6749](https://tools.ietf.org/html/rfc6749){target_blanck}.
 
 Con esta actualización, los clientes de autenticación de Adobe se convierten en clientes OAuth 2.0 y se implementa un servidor de autorización OAuth 2.0 personalizado para satisfacer las necesidades del servicio de autenticación de Adobe Primetime.
 
@@ -63,13 +63,13 @@ Como se ve en la siguiente imagen, los campos que debe rellenar son los siguient
 
 * **Nombre de aplicación** - el nombre de la aplicación
 
-* **Asignado al canal** - el nombre de su canal, t</span>a la que está vinculada esta aplicación. La configuración predeterminada de la máscara desplegable es **Todos los canales.** La interfaz permite seleccionar un canal o todos los canales.
+* **Asignado al canal** - el nombre de su canal, t</span>a la que está vinculada esta aplicación. La configuración predeterminada de la máscara desplegable es **Todos los canales.** La interfaz permite seleccionar un canal o todos los canales.
 
-* **Versión de aplicación** : de forma predeterminada, se establece en &quot;1.0.0&quot;, pero le recomendamos encarecidamente que lo modifique con su propia versión de la aplicación. Si decide cambiar la versión de la aplicación, se recomienda reflejarla creando una nueva aplicación registrada para ella.
+* **Versión de aplicación** : de forma predeterminada, se establece en &quot;1.0.0&quot;, pero le recomendamos encarecidamente que lo modifique con su propia versión de la aplicación. Si decide cambiar la versión de la aplicación, se recomienda reflejarla creando una nueva aplicación registrada para ella.
 
-* **Plataformas de aplicaciones** : las plataformas con las que se vinculará la aplicación. Tiene la opción de seleccionarlos todos o varios valores.
+* **Plataformas de aplicaciones** : las plataformas con las que se vinculará la aplicación. Tiene la opción de seleccionarlos todos o varios valores.
 
-* **Nombres de dominio** : los dominios de la aplicación con los que se va a vincular. Los dominios de la lista desplegable son una selección unificada de todos los dominios de todos los canales. Tiene la opción de seleccionar varios dominios en la lista. El significado de los dominios es URL de redireccionamiento [RFC6749](https://tools.ietf.org/html/rfc6749). En el proceso de registro del cliente, la aplicación cliente puede solicitar que se le permita utilizar una URL de redireccionamiento para finalizar el flujo de autenticación. Cuando una aplicación cliente solicita una URL de redireccionamiento específica, se valida con los dominios incluidos en la lista blanca de esta aplicación registrada asociada a la declaración de software.
+* **Nombres de dominio** : los dominios de la aplicación con los que se va a vincular. Los dominios de la lista desplegable son una selección unificada de todos los dominios de todos los canales. Tiene la opción de seleccionar varios dominios en la lista. El significado de los dominios es URL de redireccionamiento [RFC6749](https://tools.ietf.org/html/rfc6749). En el proceso de registro del cliente, la aplicación cliente puede solicitar que se le permita utilizar una URL de redireccionamiento para finalizar el flujo de autenticación. Cuando una aplicación cliente solicita una URL de redireccionamiento específica, se valida con los dominios incluidos en la lista blanca de esta aplicación registrada asociada a la declaración de software.
 
 
 ![](assets/new-reg-app.png)
@@ -94,7 +94,7 @@ Como se muestra a continuación, lo que es ligeramente diferente aquí, comparad
 
 Después de crear la aplicación registrada existe la posibilidad de obtener una declaración de software para presentar el servidor de autorización como parte de una solicitud.
 
-Esto se puede hacer navegando hasta el Programador o Canal para el que se crearon las aplicaciones registradas, donde se enumeran. 
+Esto se puede hacer navegando hasta el Programador o Canal para el que se crearon las aplicaciones registradas, donde se enumeran.
 
 Como se ilustra a continuación , cada entrada en la lista se identificará con un nombre, versión y símbolos para las plataformas a las que se haya vinculado.
 
@@ -124,7 +124,7 @@ El nombre del archivo se identifica de forma exclusiva añadiendo como prefijo &
 
 Tenga en cuenta que, para la misma aplicación registrada, se recibirán diferentes declaraciones de software cada vez que se haga clic en el botón de descarga, pero esto no invalida las declaraciones de software obtenidas anteriormente para esta aplicación. Esto sucede porque se generan en el momento, por cada solicitud de acción.
 
-Hay una **limitación** con respecto a la acción de descarga. Si se solicita una declaración de software haciendo clic en el botón &quot;Descargar&quot; poco después de crear la aplicación registrada y esto aún no se ha guardado y el json de configuración no se ha sincronizado, aparecerá el siguiente mensaje de error en la parte inferior de la página. 
+Hay una **limitación** con respecto a la acción de descarga. Si se solicita una declaración de software haciendo clic en el botón &quot;Descargar&quot; poco después de crear la aplicación registrada y esto aún no se ha guardado y el json de configuración no se ha sincronizado, aparecerá el siguiente mensaje de error en la parte inferior de la página.
 
 ![](assets/error-sw-statement-notready.png)
 

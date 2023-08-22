@@ -2,7 +2,7 @@
 title: Acerca de la autenticación de Adobe Primetime y TV Everywhere
 description: Acerca de la autenticación de Adobe Primetime y TV Everywhere
 exl-id: 5edeaccb-f9fa-4395-83b4-706c518d5a03
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '6288'
 ht-degree: 0%
@@ -135,7 +135,7 @@ En un nivel básico, la autenticación de Adobe Primetime consta de tres compone
 
 En plataformas totalmente compatibles (como Web, iOS, Android y Windows 8), los programadores interactúan con la autenticación de Adobe Primetime a través del componente de cliente Access Enabler. Este componente facilita todas las interacciones de autenticación y autorización con el cliente.  El Habilitador de acceso se ejecuta localmente en su sistema. Cuando un usuario accede a un sitio o aplicación del programador y solicita contenido, el componente del activador de acceso, alojado o mantenido por el Adobe, se carga en segundo plano de forma silenciosa.
 
-El Access Enabler gestiona los flujos de trabajo de asignación de derechos reales, mientras que el Programador mantiene la responsabilidad de la página web de nivel superior o de la aplicación de reproducción que implementa la interfaz de usuario e interactúa con el Access Enabler. Estas interacciones se realizan a través de un sistema asincrónico de funciones y llamadas de retorno, definido por la API de Access Enabler.
+El Access Enabler gestiona los flujos de trabajo de asignación de derechos reales, mientras que el Programador es responsable de la página web de nivel superior o de la aplicación de reproducción que implementa la interfaz de usuario e interactúa con el Access Enabler. Estas interacciones se realizan a través de un sistema asincrónico de funciones y llamadas de retorno, definido por la API de Access Enabler.
 
 Estos son los flujos de derechos básicos, fácilmente implementados mediante la API de Access Enabler:
 
@@ -290,7 +290,6 @@ Cuando un cliente solicita un recurso protegido de un programador por primera ve
 >* La autorización utiliza un intercambio de servicio web de canal de retorno (servidor a servidor) entre la autenticación de Adobe Primetime (el SP) y un proveedor de TV de pago (el IdP).
 
 
-
 ##### Comunicación del programador con el activador de acceso
 
 El canal de comunicación bidireccional entre el activador de acceso y la página web o la aplicación del reproductor del programador sigue un patrón totalmente asincrónico. El programador envía mensajes al activador de acceso a través de los métodos expuestos por la API del activador de acceso. El activador de acceso responde mediante llamadas de retorno registradas con la biblioteca del activador de acceso.
@@ -381,7 +380,7 @@ El movimiento de la industria conocido como TV en Todas Partes permite a los cli
 
 
 **¿Qué es la autenticación de Adobe Primetime y cómo se relaciona con TV Everywhere?**
-La autenticación de Adobe Primetime lleva a la TV en todas partes del concepto a la realidad, al verificar sin problemas el derecho de un usuario al contenido de una manera sencilla y segura. La autenticación de Adobe Primetime es un servicio alojado que permite una rápida integración del back-end en función de las reglas comerciales requeridas tanto por los programadores como por los proveedores de TV de pago. Esto significa un rápido momento para comercializar para todas las partes, un entorno más seguro para evitar el fraude y una experiencia de cliente superior, con más contenido de TV disponible para más personas en más plataformas.
+La autenticación de Adobe Primetime lleva a la TV en todas partes del concepto a la realidad, al verificar sin problemas el derecho de un usuario al contenido de una manera sencilla y segura. La autenticación de Adobe Primetime es un servicio alojado que permite una rápida integración del back-end en función de las reglas comerciales requeridas por los proveedores de Programadores y de TV de pago. Esto significa un rápido momento para comercializar para todas las partes, un entorno más seguro para evitar el fraude y una experiencia de cliente superior, con más contenido de TV disponible para más personas en más plataformas.
 
 
 **¿Cómo se ofrece/entrega la autenticación de Adobe Primetime?**
@@ -420,3 +419,4 @@ El uso de la autenticación de Adobe Primetime no supone ningún coste adicional
 >[!NOTE]
 >
 >**Pasos siguientes:** Para obtener más información, póngase en contacto con el representante del Adobe o rellene el formulario de solicitud de información [aquí](https://www.adobe.com/cfusion/mmform/index.cfm?name=adobepass_rfi).
+>

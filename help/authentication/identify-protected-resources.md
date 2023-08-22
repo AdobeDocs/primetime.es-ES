@@ -2,7 +2,7 @@
 title: Identificación de recursos protegidos
 description: Identificación de recursos protegidos
 exl-id: e96aea02-54b2-491d-ba91-253c0d0e681c
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 0%
@@ -23,15 +23,14 @@ Cada solicitud de autorización (o solicitud de comprobación de autorización) 
    - Canal
       - Mostrar
          - Episodio
-            - Recurso\
-                
+            - Recurso
 
 </br>
 
 ## Formato RSS de medios {#media_rss}
 
-Los recursos se pueden identificar mediante una cadena simple (un identificador único para un canal) o se pueden representar en formato RSS de medios (MRSS), tal como se acuerde entre Adobe (o un socio autorizado de autenticación de Adobe Primetime) y las MVPD y programadores participantes. La cadena RSS utilizada como especificador de recursos puede incluir información adicional, como clasificaciones y metadatos de control parental.\
- 
+Los recursos se pueden identificar mediante una cadena simple (un identificador único para un canal) o se pueden representar en formato RSS de medios (MRSS), tal como se acuerde entre Adobe (o un socio autorizado de autenticación de Adobe Primetime) y las MVPD y programadores participantes. La cadena RSS utilizada como especificador de recursos puede incluir información adicional, como clasificaciones y metadatos de control parental.
+
 
 Si utiliza un identificador de recurso simple, como &quot;TNT&quot;, se supone que representa un canal y se traduce en este especificador de recurso RSS:
 
@@ -42,7 +41,7 @@ Si utiliza un identificador de recurso simple, como &quot;TNT&quot;, se supone q
         </channel>
     </rss>
 ```
- 
+
 
 Un especificador más complejo podría incluir, por ejemplo, información de clasificación adicional. Puede pasar toda la cadena RSS a las funciones del Habilitador de acceso que requieren un ID de recurso, como [`getAuthorization()`](/help/authentication/rest-api-reference.md):
 

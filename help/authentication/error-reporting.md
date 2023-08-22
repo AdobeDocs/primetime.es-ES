@@ -2,7 +2,7 @@
 title: Informes de errores
 description: Informes de errores
 exl-id: a52bd2cf-c712-40a2-a25e-7d9560b46ba6
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '2961'
 ht-degree: 1%
@@ -20,9 +20,9 @@ ht-degree: 1%
 
 Los informes de errores en la autenticación de Adobe Primetime se implementan actualmente de dos formas diferentes:
 
-* **Informes de errores avanzados** El implementador registra una llamada de retorno de error en el caso del [SDK de JavaScript de AccessEnabler](#accessenabler-javascript-sdk) o implementa un método de interfaz denominado &quot;`status`&quot; en el caso de [SDK de AccessEnabler para iOS/tvOS](#accessenabler-ios-tvos-sdk) y [SDK de Android de AccessEnabler](#accessenabler-android-sdk), para recibir informes de errores avanzados. Los errores se clasifican en **Información**, **Advertencia**, y **Error** tipos. Este sistema de informes es **asíncrono**, en que **no hay garantía del orden en que se activarán los errores múltiples**.  Para obtener más información sobre el sistema de informes de errores avanzado, consulte [Informes de errores avanzados](#advanced-error-reporting) sección.
+* **Informes de errores avanzados** El implementador registra una llamada de retorno de error en el caso del [SDK de JavaScript de AccessEnabler](#accessenabler-javascript-sdk) o implementa un método de interfaz denominado &quot;`status`&quot; en el caso de [SDK de AccessEnabler para iOS/tvOS](#accessenabler-ios-tvos-sdk) y [SDK de Android de AccessEnabler](#accessenabler-android-sdk), para recibir informes de errores avanzados. Los errores se clasifican en **Información**, **Advertencia**, y **Error** tipos. Este sistema de informes es **asíncrono**, en que **no hay garantía del orden en que se activarán los errores múltiples**.  Para obtener más información sobre el sistema de informes de errores avanzado, consulte [Informes de errores avanzados](#advanced-error-reporting) sección.
 
-* **Informe de errores original -** Un sistema de informes estático en el que los mensajes de error se pasan a funciones de llamada de retorno específicas cuando fallan solicitudes específicas. Los errores se agrupan en tipos genéricos, de autenticación y de autorización. Para obtener la lista de errores notificados en el sistema original, consulte la [Informe de errores original](#original-error-reporting) sección.
+* **Informe de errores original -** Un sistema de informes estático en el que los mensajes de error se pasan a funciones de llamada de retorno específicas cuando fallan solicitudes específicas. Los errores se agrupan en tipos genéricos, de autenticación y de autorización. Para obtener la lista de errores notificados en el sistema original, consulte la [Informe de errores original](#original-error-reporting) sección.
 
 
 ## Informes de errores avanzados {#advanced-error-reporting}
@@ -38,7 +38,7 @@ Los informes de errores en la autenticación de Adobe Primetime se implementan a
 
 ### SDK de JavaScript de AccessEnabler {#accessenabler-javascript-sdk}
 
-El nuevo sistema de informes de errores se deja opcional, por lo que el implementador puede registrar explícitamente una llamada de retorno del controlador de errores para recibir informes de errores avanzados. El sistema incluye la capacidad de registrar y anular el registro de varias llamadas de retorno de error de forma dinámica. Además, puede registrar cualquier llamada de retorno de error nueva en cuanto se cargue el SDK de JavaScript de AccessEnabler, sin necesidad de realizar ninguna otra inicialización (antes de llamar a `setRequestor()`), lo que significa que puede recibir informes avanzados sobre los errores de inicialización y configuración.
+El nuevo sistema de informes de errores se deja opcional, por lo que el implementador puede registrar explícitamente una llamada de retorno del controlador de errores para recibir informes de errores avanzados. El sistema incluye la capacidad de registrar y anular el registro de varias llamadas de retorno de error de forma dinámica. Además, puede registrar cualquier llamada de retorno de error nueva en cuanto se cargue el SDK de JavaScript de AccessEnabler, sin necesidad de realizar ninguna otra inicialización (antes de llamar a `setRequestor()`), lo que significa que puede recibir informes avanzados sobre los errores de inicialización y configuración.
 
 
 #### Implementación {#access-enab-js-imp}
@@ -65,12 +65,12 @@ La función de devolución de llamada del controlador de errores recibirá un ú
 
 Adjunta un controlador para un evento.
 
-**`eventType`** - SOLO el &quot;`errorEvent`El valor &quot; provoca que el SDK de JavaScript de AccessEnabler active las llamadas de retorno de los informes de errores avanzados.
+**`eventType`** - SOLO el &quot;`errorEvent`El valor &quot; provoca que el SDK de JavaScript de AccessEnabler active las llamadas de retorno de los informes de errores avanzados.
 
-**`handlerName`** : una cadena que especifica el nombre de la función de controlador de errores.\
- 
+**`handlerName`** : una cadena que especifica el nombre de la función de controlador de errores.
 
-Ambos parámetros de enlace solo deben utilizar caracteres del siguiente conjunto: `[0-9a-zA-Z][-._a-zA-Z0-9]`; es decir, los parámetros deben comenzar con un número o una letra y, a continuación, solo pueden incluir guiones, puntos, guiones bajos y caracteres alfanuméricos.  Además, los parámetros no pueden superar los 1024 caracteres.  
+
+Ambos parámetros de enlace solo deben utilizar caracteres del siguiente conjunto: `[0-9a-zA-Z][-._a-zA-Z0-9]`; es decir, los parámetros deben comenzar con un número o una letra y, a continuación, solo pueden incluir guiones, puntos, guiones bajos y caracteres alfanuméricos.  Además, los parámetros no pueden superar los 1024 caracteres.
 
 **Ejemplo** de controladores de error de enlace:
 
@@ -81,18 +81,18 @@ accessEnabler.bind('errorEvent', 'errorLogger');
 
 Debido a limitaciones técnicas, no se puede enlazar un cierre ni una función anónima. Debe especificar el nombre del método en el segundo parámetro.
 
- 
+
 ### 2. Desenlazar {#unbind}
 
 **`.unbind(eventType:String, handlerName:String=null):void`**
 
 Quita un controlador de eventos previamente adjunto.
 
-**`eventType`** - SOLO el &#39;`errorEvent`&#39; da como resultado que el SDK de JavaScript de AccessEnabler active las llamadas de retorno de los informes de errores avanzados.
+**`eventType`** - SOLO el &#39;`errorEvent`&#39; da como resultado que el SDK de JavaScript de AccessEnabler active las llamadas de retorno de los informes de errores avanzados.
 
-**`handlerName`** : una cadena que especifica el nombre de la función de controlador de errores, si es nulo o faltan todos los controladores adjuntos para el especificado `eventType` se eliminará.
+**`handlerName`** : una cadena que especifica el nombre de la función de controlador de errores, si es nulo o faltan todos los controladores adjuntos para el especificado `eventType` se eliminará.
 
-Ambos parámetros de enlace solo deben utilizar caracteres del siguiente conjunto: `[0-9a-zA-Z][-._a-zA-Z0-9]`; es decir, los parámetros deben comenzar con un número o una letra y, a continuación, solo pueden incluir guiones, puntos, guiones bajos y caracteres alfanuméricos.  Además, los parámetros no pueden superar los 1024 caracteres.  
+Ambos parámetros de enlace solo deben utilizar caracteres del siguiente conjunto: `[0-9a-zA-Z][-._a-zA-Z0-9]`; es decir, los parámetros deben comenzar con un número o una letra y, a continuación, solo pueden incluir guiones, puntos, guiones bajos y caracteres alfanuméricos.  Además, los parámetros no pueden superar los 1024 caracteres.
 
 **Ejemplo** de eliminar un solo controlador de error:
 
@@ -109,7 +109,7 @@ El nuevo sistema de notificación de errores es obligatorio, por lo que el imple
 
 #### Implementación {#accessenab-ios-tvossdk-imp}
 
-Un implementador debe cumplir con lo siguiente **EntitlementStatus** protocolo:
+Un implementador debe cumplir con lo siguiente **EntitlementStatus** protocolo:
 
 **EntitlementStatus.h**
 
@@ -121,7 +121,7 @@ Un implementador debe cumplir con lo siguiente **EntitlementStatus** protocolo:
     @end
 ```
 
-Su **status** recibirá un solo objeto (un objeto `NSDictionary`) con la siguiente estructura:
+Su **status** recibirá un solo objeto (un objeto `NSDictionary`) con la siguiente estructura:
 
 ```OBJ-C
     {
@@ -153,11 +153,11 @@ Su **status** recibirá un solo objeto (un objeto `NSDictionary`) con la siguie
 
 ### SDK de Android de AccessEnabler {#accessenabler-android-sdk}
 
-El nuevo sistema de notificación de errores es obligatorio, ya que el implementador debe cumplir explícitamente con la `IAccessEnablerDelegate` protocolo definido por la interfaz. Este nuevo enfoque permite a los programadores recibir informes de errores avanzados.
+El nuevo sistema de notificación de errores es obligatorio, ya que el implementador debe cumplir explícitamente con la `IAccessEnablerDelegate` protocolo definido por la interfaz. Este nuevo enfoque permite a los programadores recibir informes de errores avanzados.
 
 #### Implementación {#access-enablr-androidsdk-imp}
 
-Un implementador debe gestionar el nuevo `status` desde la interfaz de`IAccessEnablerDelegate`. El **`status`** función recibirá un solo **`AdvancedStatus`** objeto con el siguiente modelo:
+Un implementador debe gestionar el nuevo `status` desde la interfaz de`IAccessEnablerDelegate`. El **`status`** función recibirá un solo **`AdvancedStatus`** objeto con el siguiente modelo:
 
 ```C++
     class AdvancedStatus {
@@ -240,7 +240,7 @@ En la tabla siguiente se enumeran y describen los códigos de error expuestos po
 | VSA503 | Información | Error de solicitud de metadatos de cuenta de suscriptor de vídeo de aplicación. | El extremo de MVPD no responde. La aplicación podría volver al flujo de autenticación normal. | n/a | n/a | Sí | n/a |
 | 500 | Error | Error interno | Utilice AccessEnablerDebug e inspeccione los registros de depuración (salida de console.log) para determinar qué ha fallado. | n/a | Sí | Sí | n/a |
 | SEC403 | Error | Error de seguridad de dominio. El solicitante está utilizando un dominio no válido. Todos los dominios utilizados por un ID de solicitante concreto deben incluirse en la lista blanca por Adobe. | : cargue AccessEnabler solo desde la lista de dominios permitidos <br> <br> - Póngase en contacto con el Adobe para administrar la lista de dominios admitidos para el ID de solicitante utilizado <br> <br> - iOS: compruebe que está utilizando el certificado correcto y que la firma se ha creado correctamente | n/a | n/a | Sí | n/a |
-| SEC412 | Advertencia | [ Disponible en la versión 2.5 ] El ID del dispositivo no coincide. Esto puede suceder siempre que la plataforma subyacente cambie su ID de dispositivo. En este caso, los tokens existentes se borrarán y el usuario ya no se autenticará. Tenga en cuenta que esto sucede de forma legítima cuando el usuario utiliza el SDK de JS y está en itinerancia (en JS, la IP del cliente forma parte del ID del dispositivo). De lo contrario, esto podría indicar un intento de fraude: un intento de copiar tokens de un dispositivo diferente. | - Monitorizar el número de advertencias. Si se disparan sin razón aparente (sin actualizaciones recientes del navegador; nuevos sistemas operativos) que podría ser un indicador de intentos de fraude.  <br> <br>- Si lo desea, informe al usuario de que debe volver a iniciar sesión. | Inicie sesión de nuevo. | Sí | Sí | Sí desde la versión 3.2 |
+| SEC412 | Advertencia | [Disponible en la versión 2.5] El ID del dispositivo no coincide. Esto puede suceder siempre que la plataforma subyacente cambie su ID de dispositivo. En este caso, los tokens existentes se borrarán y el usuario ya no se autenticará. Tenga en cuenta que esto sucede de forma legítima cuando el usuario utiliza el SDK de JS y está en itinerancia (en JS, la IP del cliente forma parte del ID del dispositivo). De lo contrario, esto podría indicar un intento de fraude: un intento de copiar tokens de un dispositivo diferente. | - Monitorizar el número de advertencias. Si se disparan sin razón aparente (sin actualizaciones recientes del navegador; nuevos sistemas operativos) que podría ser un indicador de intentos de fraude.  <br> <br>- Si lo desea, informe al usuario de que debe volver a iniciar sesión. | Inicie sesión de nuevo. | Sí | Sí | Sí desde la versión 3.2 |
 | SEC420 | Error | Error de seguridad HTTP al comunicarse con los servidores de autenticación de Adobe Primetime. Este error suele producirse cuando se utilizan servidores proxy o suplantación. | - Cargar `[https://]{SP_FQDN\}` en el explorador y acepte manualmente los certificados SSL, por ejemplo, **https://api.auth.adobe.com** o **https://api.auth-staging.adobe.com** <br> <br>- Marcar los certificados de proxy como de confianza | Si esto ocurre para un usuario normal, es una indicación de un posible ataque de hombre en medio. | Sí | Sí | Sí desde la versión 3.2 |
 | CFG100 | Advertencia | La fecha/hora/zona horaria del equipo cliente no está configurada correctamente. Esto probablemente dará lugar a errores de autenticación/autorización. | - Informar al usuario para establecer la hora correcta. <br> <br> Realice acciones para evitar flujos de derechos, ya que es probable que fallen. | Establezca la fecha y la hora correctas. | Sí | Sí | Sí desde la versión 3.2 |
 | CFG400 | Error | Se ha proporcionado un ID de solicitante no válido. | El desarrollador DEBE especificar un ID de solicitante válido. | n/a | Sí | Sí | Sí desde la versión 3.2 |
@@ -285,17 +285,17 @@ En esta sección se describe el sistema original de informe de errores, junto co
 Los informes de errores y las API de estado originales siguen funcionando exactamente como antes. Sin embargo, en adelante, las API de informes de errores originales no se actualizarán. Todos los informes de errores nuevos y las actualizaciones de los errores antiguos se reflejarán SOLAMENTE en el nuevo [Sistema de informes de errores avanzados](#advanced-error-reporting).
 
 
-Si desea ver ejemplos de uso del sistema de notificación de errores original, consulte la [Referencia de API de JavaScript](/help/authentication/javascript-sdk-api-reference.md):[setAuthenticationStatus()](/help/authentication/javascript-sdk-api-reference.md#set-authn-status-isauthn-error) y [tokenRequestFailed()](/help/authentication/javascript-sdk-api-reference.md#token-request-failed-error-msg) funciones, [Referencia de la API de iOS/tvOS](/help/authentication/iostvos-sdk-api-reference.md): [setAuthenticationStatus()](/help/authentication/javascript-sdk-api-reference.md#setAuthNStatus)y [tokentRequestFailed()](/help/authentication/javascript-sdk-api-reference.md#tokenReqFailed), [Referencia de API de Android](/help/authentication/android-sdk-api-reference.md): [setAuthenticationStatus()](/help/authentication/android-sdk-api-reference.md#setAuthNStatus) y [tokenRequestFailed()](/help/authentication/android-sdk-api-reference.md#setAuthNStatus#tokenRequestFailed).
+Si desea ver ejemplos de uso del sistema de notificación de errores original, consulte la [Referencia de API de JavaScript](/help/authentication/javascript-sdk-api-reference.md):[setAuthenticationStatus()](/help/authentication/javascript-sdk-api-reference.md#set-authn-status-isauthn-error) y [tokenRequestFailed()](/help/authentication/javascript-sdk-api-reference.md#token-request-failed-error-msg) funciones, [Referencia de la API de iOS/tvOS](/help/authentication/iostvos-sdk-api-reference.md): [setAuthenticationStatus()](/help/authentication/javascript-sdk-api-reference.md#setAuthNStatus)y [tokentRequestFailed()](/help/authentication/javascript-sdk-api-reference.md#tokenReqFailed), [Referencia de API de Android](/help/authentication/android-sdk-api-reference.md): [setAuthenticationStatus()](/help/authentication/android-sdk-api-reference.md#setAuthNStatus) y [tokenRequestFailed()](/help/authentication/android-sdk-api-reference.md#setAuthNStatus#tokenRequestFailed).
 
 ### Códigos de error de devolución de llamada original {#original-callback-error-codes}
 
-| **Errores genéricos** |  |
+| **Errores genéricos** | |
 |---|---|
 | Error interno | Se ha producido un error del sistema al intentar procesar la solicitud. |
 | Error de proveedor no seleccionado | Se produce cuando el cliente cancela en el cuadro de diálogo de selección de proveedores. |
 | Error de proveedor no disponible | Se produce cuando no hay proveedores disponibles. |
 |  |  |
-| **Errores de autenticación** |  |
+| **Errores de autenticación** | |
 | Error de autenticación genérica | Se devuelve cuando el motivo no se conoce o no puede publicarse. |
 | Error de autenticación interna | Se ha producido un error del sistema al intentar autenticarse. |
 | Error de usuario no autenticado | El usuario no está autenticado. |

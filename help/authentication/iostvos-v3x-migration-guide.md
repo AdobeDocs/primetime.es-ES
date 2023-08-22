@@ -2,7 +2,7 @@
 title: Guía de migración de iOS/tvOS v3.x
 description: Guía de migración de iOS/tvOS v3.x
 exl-id: 4c43013c-40af-48b7-af26-0bd7f8df2bdb
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
@@ -21,7 +21,6 @@ ht-degree: 0%
 >
 > - A partir de la versión 3.1 del sdk para iOS, los implementadores ahora pueden utilizar WKWebView o UIWebView de forma intercambiable. Dado que UIWebView está en desuso, las aplicaciones deben migrar a WKWebView para evitar problemas con futuras versiones de iOS.
 > - Tenga en cuenta que la migración implicaría simplemente cambiar la clase UIWebView con WKWebView, no hay ningún trabajo específico por hacer en relación con el AccessEnabler del Adobe.
-
 
 </br>
 
@@ -69,9 +68,9 @@ Después de obtener el esquema de URL personalizado, debe añadirlo al archivo i
 
 ## Interceptación de llamadas en el esquema de URL personalizado {#intercept}
 
-Esto solo se aplica en el caso de que la aplicación haya habilitado anteriormente la gestión manual del controlador de vista de Safari (SVC) mediante el [setOptions(\[&quot;handleSVC&quot;:true&quot;\])](/help/authentication/iostvos-sdk-api-reference.md) llamar a y para MVPD específicas que requieren el controlador de vista de Safari (SVC), por lo que es necesario cargar las direcciones URL de los extremos de autenticación y cierre de sesión mediante un controlador SFSafariViewController en lugar de un controlador UIWebView/WKWebView.
+Esto solo se aplica en el caso de que la aplicación haya habilitado anteriormente la gestión manual del controlador de vista de Safari (SVC) mediante el [setOptions(\[&quot;handleSVC&quot;:true&quot;\])](/help/authentication/iostvos-sdk-api-reference.md) llamar a y para MVPD específicas que requieren el controlador de vista de Safari (SVC), por lo que es necesario cargar las direcciones URL de los extremos de autenticación y cierre de sesión mediante un controlador SFSafariViewController en lugar de un controlador UIWebView/WKWebView.
 
-Durante los flujos de autenticación y cierre de sesión, la aplicación debe supervisar la actividad del `SFSafariViewController `a medida que pasa por varias redirecciones. La aplicación debe detectar el momento en que carga una dirección URL personalizada específica definida por el `application's custom URL scheme` (p. ej.,`adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com)`. Cuando el controlador carga esta dirección URL personalizada específica, la aplicación debe cerrar el `SFSafariViewController` y llame al servicio AccessEnabler `handleExternalURL:url `Método de API.
+Durante los flujos de autenticación y cierre de sesión, la aplicación debe supervisar la actividad del `SFSafariViewController `a medida que pasa por varias redirecciones. La aplicación debe detectar el momento en que carga una dirección URL personalizada específica definida por el `application's custom URL scheme` (p. ej.,`adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com)`. Cuando el controlador carga esta dirección URL personalizada específica, la aplicación debe cerrar el `SFSafariViewController` y llame al servicio AccessEnabler `handleExternalURL:url `Método de API.
 
 En su `AppDelegate` añada el siguiente método:
 

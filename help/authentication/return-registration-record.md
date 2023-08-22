@@ -2,7 +2,7 @@
 title: Devolver registro de registro
 description: Devolver registro de registro
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%
@@ -20,27 +20,27 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Producción - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Ensayo - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Producción - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Ensayo - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Producción - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Ensayo - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Producción - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Ensayo - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
- </br>
- 
+</br>
+
 
 ## Descripción {#description}
 
-Devuelve el registro del código de registro que contiene el UUID del código de registro, el código de registro y el ID del dispositivo con hash. 
+Devuelve el registro del código de registro que contiene el UUID del código de registro, el código de registro y el ID del dispositivo con hash.
 
- 
+
 
 <div>
 
 
-| Extremo | Llamado  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
+| Extremo | Llamado  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
 | --- | --- | --- | --- | --- | --- |
 | &lt;reggie_fqdn>;/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>Por ejemplo:</br></br>&lt;reggie_fqdn>/reggie/v1/sampleRequestorId/regcode/TJCFK?format=xml | Aplicación de streaming</br></br>o</br></br>Servicio de programador | 1. solicitante  </br>    (Componente Ruta)</br>2.  código de registro  </br>    (Componente Ruta) | GET | XML o JSON que contienen un código de registro e información. Consulte esquema y ejemplo a continuación. | 200 |
 

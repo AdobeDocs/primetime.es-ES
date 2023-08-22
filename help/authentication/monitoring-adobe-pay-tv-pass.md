@@ -2,7 +2,7 @@
 title: Supervisión de la autenticación de Adobe Primetime
 description: Supervisión de la autenticación de Adobe Primetime
 exl-id: fb000e9d-b5aa-45b1-a914-9e419ec8a4d9
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## Introducción {#intro}
 
-Los clientes pueden utilizar [Nagios](http://www.nagios.org) u otras herramientas para comprobar si la autenticación de Adobe Primetime está activada o desactivada. 
+Los clientes pueden utilizar [Nagios](http://www.nagios.org) u otras herramientas para comprobar si la autenticación de Adobe Primetime está activada o desactivada.
 
 ## Monitorización de extremos {#monitoring-endpoints}
 
@@ -25,17 +25,17 @@ Los clientes pueden utilizar [Nagios](http://www.nagios.org) u otras herramienta
 
 * Punto final de configuración para todas las plataformas: `https://sp.auth.adobe.com/adobe-services/config/[your-config-ID]`- Está disponible en HTTP o HTTPS (según la elección realizada por el desarrollador del proveedor de contenido). Si falta este punto de conexión, significa que el contenido no estará disponible en todas las plataformas y todas las MVPD. Para la API de REST sin cliente también tenemos el siguiente punto final:  `https://api.auth.adobe.com/adobe-services/config your-config-ID]`.
 
-* Los siguientes extremos son parte del SDK web de autenticación de Adobe Primetime.  Si falta, significa que pay-TVpass está desactivado para todos los programadores y todas las propiedades web:
+* Los siguientes extremos son parte del SDK web de autenticación de Adobe Primetime.  Si falta, significa que pay-TVpass está desactivado para todos los programadores y todas las propiedades web:
 
    * `https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js`
    * `https://entitlement.auth.adobe.com/entitlement/js/AccessEnabler.js`
 
- 
+
 ### Puntos finales que no debe monitorizar {#endpoints-not-monitor}
 
 * `https://sp.auth.adobe.com/sp/saml/SAMLAssertionConsumer`
 
-   Siempre obtendrá un error 503, ya que este punto de conexión necesita una respuesta SAML de MVPD.
+  Siempre obtendrá un error 503, ya que este punto de conexión necesita una respuesta SAML de MVPD.
 
 * Otros extremos de derechos - `adobe-services/1.0/authenticate/`, `adobe-services/1.0/deviceShortAuthorize`, `adobe-services/1.0/authorize`
 

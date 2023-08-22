@@ -2,7 +2,7 @@
 title: Flujo de asignación de derechos del programador
 description: Flujo de asignación de derechos del programador
 exl-id: b1c8623a-55da-4b7b-9827-73a9fe90ebac
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '1822'
 ht-degree: 0%
@@ -56,17 +56,17 @@ Establece la identidad del programador y el dispositivo, realiza tareas de inici
 
 * **`setRequestor()`** - Establece su identidad con AccessEnalber y, por extensión, con los servidores de autenticación de Adobe Primetime. Esta llamada es un precursor del resto del flujo de derechos. Por ejemplo, en JavaScript:
 
-   ```JavaScript
-     /* Define the requestor ID (Programmer/aggregator ID). */
-       var requestorID = "sample_requestor_Id";
-       ...
-       // Callback indicating that the AccessEnabler swf has initialized
-       function swfLoaded() {
-           // AccessEnabler is loaded so we can use the API function it provides
-           accessEnablerObject.setRequestor(requestorID); 
-       ...
-       }
-   ```
+  ```JavaScript
+    /* Define the requestor ID (Programmer/aggregator ID). */
+      var requestorID = "sample_requestor_Id";
+      ...
+      // Callback indicating that the AccessEnabler swf has initialized
+      function swfLoaded() {
+          // AccessEnabler is loaded so we can use the API function it provides
+          accessEnablerObject.setRequestor(requestorID); 
+      ...
+      }
+  ```
 
 **API sin cliente**
 
@@ -110,6 +110,7 @@ Un token de AuthN se considera válido si se cumplen los dos puntos siguientes:
 
 >[!IMPORTANT]
 >Comcast es el único MVPD en este momento que no proporciona una URL estática para el logotipo. Los programadores deben extraer los logotipos actualizados más recientes de [Portal para desarrolladores de XFINITY](https://developers.xfinity.com/products/tv-everywhere).
+>
 
 ### Flujo de autorización {#authorization}
 

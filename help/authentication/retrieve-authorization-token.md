@@ -2,7 +2,7 @@
 title: Recuperar token de autorización
 description: Recuperar token de autorización
 exl-id: 0b010958-efa8-4dd9-b11b-5d10f51f5680
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -19,24 +19,24 @@ ht-degree: 0%
 
 &lt;reggie_fqdn>:
 
-* Producción - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Ensayo - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Producción - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Ensayo - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 &lt;sp_fqdn>:
 
-* Producción - [api.auth.adobe.com](http://api.auth.adobe.com/)
-* Ensayo - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
+* Producción - [api.auth.adobe.com](http://api.auth.adobe.com/)
+* Ensayo - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
 </br>
 
 ## Descripción {#description}
 
-Recupera el token de autorización (AuthZ).  
+Recupera el token de autorización (AuthZ).
 
 
-| Extremo | Llamado  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
+| Extremo | Llamado  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/tokens/authz</br></br>Por ejemplo:</br></br>&lt;sp_fqdn>/api/v1/tokens/authz | Aplicación de streaming</br></br>o</br></br>Servicio de programador | 1. solicitante (obligatorio)</br>2.  deviceId (obligatorio)</br>3.  recurso (obligatorio)</br>4.  device_info/X-Device-Info (obligatorio)</br>5.  _deviceType_</br> 6.  _deviceUser_ (Obsoleto)</br>7.  _appId_ (Obsoleto) | GET | 1. Éxito</br>2.  Testigo de autenticación  </br>    no encontrado o caducado:   </br>    Motivo de explicación XML  </br>    no se ha encontrado el token de autor</br>3.  Token de autorización  </br>    no encontrado:  </br>    Explicación de XML</br>4.  Token de autorización  </br>    caducado:  </br>    Explicación de XML | 200 - Éxito  </br>412 - Sin AuthN</br></br>404 - Sin AuthZ</br></br>410 - AuthZ caducado |
+| &lt;sp_fqdn>/api/v1/tokens/authz</br></br>Por ejemplo:</br></br>&lt;sp_fqdn>/api/v1/tokens/authz | Aplicación de streaming</br></br>o</br></br>Servicio de programador | 1. solicitante (obligatorio)</br>2.  deviceId (obligatorio)</br>3.  recurso (obligatorio)</br>4.  device_info/X-Device-Info (obligatorio)</br>5.  _deviceType_</br> 6.  _deviceUser_ (Obsoleto)</br>7.  _appId_ (Obsoleto) | GET | 1. Éxito</br>2.  Testigo de autenticación  </br>    no encontrado o caducado:   </br>    Motivo de explicación XML  </br>    no se ha encontrado el token de autor</br>3.  Token de autorización  </br>    no encontrado:  </br>    Explicación de XML</br>4.  Token de autorización  </br>    caducado:  </br>    Explicación de XML | 200 - Éxito  </br>412 - Sin AuthN</br></br>404 - Sin AuthZ</br></br>410 - AuthZ caducado |
 
 {style="table-layout:auto"}
 
@@ -46,18 +46,18 @@ Recupera el token de autorización (AuthZ).  
 | --- | --- |
 | solicitante | Identificador de solicitante del programador para el que es válida esta operación. |
 | deviceId | El ID de dispositivo bytes. |
-| resource | Cadena que contiene un resourceId (o fragmento MRSS), identifica el contenido solicitado por un usuario y es reconocido por los extremos de autorización de MVPD. |
-| device_info/</br></br>X-Device-Info | Información del dispositivo de streaming.</br></br>**Nota**: Esto PUEDE pasarse a device_info como parámetro de URL, pero debido al tamaño potencial de este parámetro y a las limitaciones en la longitud de una URL de GET, DEBE pasarse como X-Device-Info en el encabezado http. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
-| _deviceType_ | El tipo de dispositivo (por ejemplo, Roku, PC).</br></br>Si este parámetro está configurado correctamente, ESM ofrece métricas que [desglosado por tipo de dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) cuando se utiliza sin cliente, de modo que se puedan realizar diferentes tipos de análisis, por ejemplo, Roku, Apple TV y Xbox.</br></br>Consulte. [Ventajas de utilizar el parámetro de tipo de dispositivo sin cliente en las métricas de pase ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota**: device_info reemplaza este parámetro. |
+| resource | Cadena que contiene un resourceId (o fragmento MRSS), identifica el contenido solicitado por un usuario y es reconocida por los extremos de autorización de MVPD. |
+| device_info/</br></br>X-Device-Info | Información del dispositivo de streaming.</br></br>**Nota**: Esto PUEDE pasarse a device_info como parámetro de URL, pero debido al tamaño potencial de este parámetro y a las limitaciones en la longitud de una URL de GET, DEBE pasarse como X-Device-Info en el encabezado http. </br></br><!--See the full details in [Passing Device and Connection Information](http://tve.helpdocsonline.com/passing-device-information)-->. |
+| _deviceType_ | El tipo de dispositivo (por ejemplo, Roku, PC).</br></br>Si este parámetro está configurado correctamente, ESM ofrece métricas que [desglosado por tipo de dispositivo](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) cuando se utiliza sin cliente, de modo que se puedan realizar diferentes tipos de análisis, por ejemplo, Roku, Apple TV y Xbox.</br></br>Consulte. [Ventajas de utilizar el parámetro de tipo de dispositivo sin cliente en las métricas de pase ](/help/authentication/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**Nota**: device_info reemplaza este parámetro. |
 | _deviceUser_ | El identificador de usuario del dispositivo. |
-| _appId_ | El nombre o ID de la aplicación. </br></br>**Nota**: device_info reemplaza este parámetro. |
+| _appId_ | El nombre o ID de la aplicación. </br></br>**Nota**: device_info reemplaza este parámetro. |
 
 {style="table-layout:auto"}
 
 
 ### Respuesta de ejemplo {#response}
 
- 
+
 
 #### Correcto
 
@@ -74,7 +74,7 @@ Recupera el token de autorización (AuthZ).  
     </authorization>
 ```
 
- 
+
 
 **JSON:**
 
@@ -88,7 +88,7 @@ Recupera el token de autorización (AuthZ).  
     }
 ```
 
- </br>
+</br>
 
 
 #### Testigo de autenticación no encontrado o caducado:
@@ -103,7 +103,7 @@ Recupera el token de autorización (AuthZ).  
     </error>
 ```
 
- 
+
 
 **JSON:**
 
@@ -116,7 +116,7 @@ Recupera el token de autorización (AuthZ).  
 ```
 
 </br>
- 
+
 
 #### No se encontró el token de autorización:
 
@@ -130,7 +130,7 @@ Recupera el token de autorización (AuthZ).  
     </error>
 ```
 
- 
+
 
 **JSON:**
 
@@ -144,7 +144,7 @@ Recupera el token de autorización (AuthZ).  
 
 </br>
 
- 
+
 
 #### Token de autorización caducado:
 
@@ -158,7 +158,7 @@ Recupera el token de autorización (AuthZ).  
     </error>
 ```
 
- 
+
 
 **JSON:**
 

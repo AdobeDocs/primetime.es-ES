@@ -2,9 +2,9 @@
 title: Uso del ID de Experience Cloud en la autenticación de Primetime
 description: Uso del ID de Experience Cloud en la autenticación de Primetime
 exl-id: 03354c01-5aad-4d81-beee-1c3834599134
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,7 @@ El ID del Experience Cloud (ECID, por sus siglas en inglés) es un ID único que
 
 Si ya dispone de un sistema que proporciona un ID de visitante, debe utilizar el mismo ID para el ámbito de este documento.
 
-Una forma de obtener el ECID es utilizar el servicio de ID de Experience Cloud. Puede utilizar el tipo de implementación que prefiera, ya sea en base a TDM, biblioteca JS, lado del servidor, integración directa o bibliotecas nativas para plataformas móviles. Para obtener una vista completa de los servicios, bibliotecas, SDK y guías de implementación disponibles, consulte: https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-implementation-guides.html
-
-
-
-
+Una forma de obtener el ECID es utilizar el servicio de ID de Experience Cloud. Puede utilizar el tipo de implementación que prefiera, ya sea en base a TDM, biblioteca JS, lado del servidor, integración directa o bibliotecas nativas para plataformas móviles. Para obtener una vista completa de los servicios, bibliotecas, SDK y guías de implementación disponibles, consulte: <https://experienceleague.adobe.com/docs/id-service/using/implementation/implementation-guides.html>
 
 ## ¿Cuál es la ventaja de utilizar el ID de Experience Cloud en la autenticación de Primetime? {#benefit-ex-cloud-id}
 
