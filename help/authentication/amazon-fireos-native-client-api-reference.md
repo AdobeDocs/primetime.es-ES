@@ -2,7 +2,7 @@
 title: Referencia de la API del cliente nativo de Amazon FireOS
 description: Referencia de la API del cliente nativo de Amazon FireOS
 exl-id: 8ac9f976-fd6b-4b19-a80d-49bfe57134b5
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 220c571db04afbd6bafc026b3179f78f60543372
 workflow-type: tm+mt
 source-wordcount: '3416'
 ht-degree: 0%
@@ -98,7 +98,7 @@ Si se proporciona un valor para *url* , la llamada de red resultante se dirige a
 | ```public void setRequestor(String requestorId)``` |
 
 
-**Disponibilidad:**v 3.0+
+**Disponibilidad:** v3.0+
 
 
 | Llamada de API: configuración del solicitante |
