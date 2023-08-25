@@ -2,7 +2,7 @@
 title: SSO mediante autenticación pasiva
 description: SSO mediante autenticación pasiva
 exl-id: ce45899f-6e94-4bb0-a2c1-51f03bd66d8d
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 914ef0b9baaf5c51e6c26a280af9102ea0df5271
 workflow-type: tm+mt
 source-wordcount: '776'
 ht-degree: 0%
@@ -101,7 +101,9 @@ Ejemplo de solicitud de SAML Este es un ejemplo de solicitud de SAML para el flu
 </saml2p:AuthnRequest>
 ```
 
-Las MVPD de reglas comerciales tienen restricciones de dominio de ámbito SSO específicas. Por ejemplo, algunas MVPD (SSO para la misma empresa de medios, pero no entre empresas) solo podrían permitir algunos dominios.
+## Reglas empresariales
+
+Las MVPD tienen restricciones de dominio de ámbito SSO específicas. Por ejemplo, algunas MVPD (SSO para la misma empresa de medios, pero no entre empresas) solo podrían permitir algunos dominios.
 Algunas MVPD pueden requerir que se apliquen reglas de autenticación diferentes. Por ejemplo, las MVPD pueden tener TTL de autenticación diferentes por redes diferentes. Además, las MVPD pueden habilitar la autenticación basada en el hogar para algunas redes, pero no para otras (los casos de uso de control parental se representan con fuerza aquí).
 
 
@@ -111,7 +113,9 @@ Esto se puede lograr utilizando la autenticación por red con el indicador pasiv
 
 
 
-Limitaciones conocidas de iOS: debido a la naturaleza del almacenamiento local de iOS, los flujos de SSO no funcionan en iOS para aplicaciones desarrolladas por distintos proveedores. Para obtener más información sobre SSO en iOS 8 y versiones posteriores, consulte esta nota técnica.
+## Limitaciones conocidas
+
+iOS: debido a la naturaleza del almacenamiento local de iOS, los flujos de SSO no funcionan en iOS para aplicaciones desarrolladas por distintos proveedores. Para obtener más información sobre SSO en iOS 8 y versiones posteriores, consulte esta nota técnica.
 
 
 <!--
