@@ -2,7 +2,7 @@
 title: SDK de Amazon FireOS con registro de cliente dinámico
 description: SDK de Amazon FireOS con registro de cliente dinámico
 exl-id: 27acf3f5-8b7e-4299-b0f0-33dd6782aeda
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: bfa2c3d55848dd1e50daa83fb77d040bc7c37045
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 0%
