@@ -2,7 +2,7 @@
 title: Información general del SDK para Android
 description: Información general del SDK para Android
 exl-id: a1d98325-32a1-4881-8635-9a3c38169422
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 4b858a06080ec221c60548e2a2a0f3b6010ede15
 workflow-type: tm+mt
 source-wordcount: '2707'
 ht-degree: 0%
@@ -113,7 +113,7 @@ Una vez que la autenticación y la autorización se hayan realizado correctament
 
 #### Testigo de autenticación
 
-- **AccessEnabler 1.6 y versiones posteriores** - **** La forma en que se almacenan en caché los tokens de autenticación en el dispositivo depende de &quot;**Autenticación por solicitante&quot;** Indicador asociado con la MVPD actual:
+- **AccessEnabler 1.6 y versiones posteriores** - La forma en que se almacenan en caché los tokens de autenticación en el dispositivo depende de la &quot;**Autenticación por solicitante&quot;** Indicador asociado con la MVPD actual:
 
 
 1. Si la función &quot;Autenticación por solicitante&quot; está *inhabilitado*, se almacenará un único token de autenticación localmente en la mesa de trabajo global. Este token se compartirá entre todas las aplicaciones que estén integradas con la MVPD actual.
