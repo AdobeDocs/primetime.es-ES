@@ -1,7 +1,7 @@
 ---
 title: Introducción a la monitorización de concurrencia
 description: Introducción a la monitorización de concurrencia
-source-git-commit: ac0c15b951f305e29bb8fa0bd45aa2c53de6ad15
+source-git-commit: 9bc4298edb22d72131156bf92717284866728ec5
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -15,9 +15,9 @@ Para obtener más información [Procedimientos de escalación](/help/concurrency
 
 La Monitorización de concurrencia permite a los proveedores de identidad y contenido (MVPD y programadores) definir y aplicar límites en el uso simultáneo en varias aplicaciones (potencialmente propiedad de varios socios).
 
-**La API de supervisión de concurrencia está alojada en la siguiente ubicación:
+**La API de monitorización de concurrencia está alojada en la siguiente ubicación:**
 
-* V2.0: [API de supervisión de concurrencia](http://docs.adobeptime.io/cm-api-v2/)**
+* **V2.0: [API de supervisión de concurrencia](http://docs.adobeptime.io/cm-api-v2/)**
 
 Para suscribirse a nuestro servicio de monitoreo de concurrencia, comuníquese con nuestro [Equipo de soporte](mailto:tve-support@adobe.com). Especifique la siguiente información y nuestro equipo estará encantado de ayudarle:
 
