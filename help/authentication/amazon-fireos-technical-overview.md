@@ -2,7 +2,7 @@
 title: Información general técnica de Amazon FireOS
 description: Información general técnica de Amazon FireOS
 exl-id: 939683ee-0dd9-42ab-9fde-8686d2dc0cd0
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 4691e769e1fee51507550c8e1fbecdcdff7e44eb
 workflow-type: tm+mt
 source-wordcount: '2142'
 ht-degree: 0%
@@ -80,7 +80,7 @@ Una vez que la autenticación y la autorización se hayan realizado correctament
 
 #### Testigo de autenticación
 
-- **AccessEnabler 1.10.1 para FireOS **se basa en AccessEnabler para Android 1.9.1: Este SDK introduce un nuevo método de almacenamiento de tokens, que permite varios bloques de MVPD de programador y, por lo tanto, varios tokens de autenticación.
+- **AccessEnabler 1.10.1 para FireOS** se basa en AccessEnabler para Android 1.9.1 . Este SDK introduce un nuevo método de almacenamiento de tokens, que permite varios bloques Programmer-MVPD y, por lo tanto, varios tokens de autenticación.
 
 #### Token de autorización
 
