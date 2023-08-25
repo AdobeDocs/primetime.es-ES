@@ -2,7 +2,7 @@
 title: Guía de integración de Amazon FireOS
 description: Guía de integración de Amazon FireOS
 exl-id: 1982c485-f0ed-4df3-9a20-9c6a928500c2
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: e5e42763fecae437cfc34bae98a5d2bd5adc4643
 workflow-type: tm+mt
 source-wordcount: '1433'
 ht-degree: 0%
@@ -198,7 +198,6 @@ El `event` parámetro indica qué evento de derecho se produjo;el parámetro `da
 
 ### F. Flujo de cierre de sesión {#logout_flow}
 
-1. Llamada [`logout()`](#$logout) para cerrar la sesión del usuario.\
-   AccessEnabler borra todos los valores en caché y tokens obtenidos por el usuario para la MVPD actual en todos los solicitantes que comparten el inicio de sesión mediante el inicio de sesión único. Después de borrar la caché, AccessEnabler realiza una llamada al servidor para limpiar las sesiones del lado del servidor.  Tenga en cuenta que, dado que la llamada al servidor podría provocar un redireccionamiento de SAML al IdP (esto permite la limpieza de la sesión en el lado del IdP), esta llamada debe seguir todas las redirecciones. Por este motivo, esta llamada se controlará dentro de un control WebView, invisible para el usuario.
+1. Llamada [`logout()`](#$logout) para cerrar la sesión del usuario. AccessEnabler borra todos los valores en caché y tokens obtenidos por el usuario para la MVPD actual en todos los solicitantes que comparten el inicio de sesión mediante el inicio de sesión único. Después de borrar la caché, AccessEnabler realiza una llamada al servidor para limpiar las sesiones del lado del servidor.  Tenga en cuenta que, dado que la llamada al servidor podría provocar un redireccionamiento de SAML al IdP (esto permite la limpieza de la sesión en el lado del IdP), esta llamada debe seguir todas las redirecciones. Por este motivo, esta llamada se controlará dentro de un control WebView, invisible para el usuario.
 
    **Nota:** El flujo de cierre de sesión difiere del flujo de autenticación en que el usuario no tiene que interactuar con WebView de ninguna manera. Por lo tanto, es posible (y recomendado) hacer que el control WebView sea invisible (es decir, oculto) durante el proceso de cierre de sesión.
