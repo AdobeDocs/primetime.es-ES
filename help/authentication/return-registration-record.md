@@ -2,7 +2,7 @@
 title: Devolver registro de registro
 description: Devolver registro de registro
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 622767e06f3b25222286a09a41e6a0cecff1967a
+source-git-commit: 9e1d178e00c49cab7bcf9693c3b16234cb29ba4c
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 * Producción - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * Ensayo - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-</br>
+
 
 
 ## Descripción {#description}
@@ -37,7 +37,7 @@ Devuelve el registro del código de registro que contiene el UUID del código de
 
 
 
-<div>
+
 
 
 | Extremo | Llamado  </br>Por | Entrada   </br>Parámetros | HTTP  </br>Método | Respuesta | HTTP  </br>Respuesta |
@@ -46,14 +46,16 @@ Devuelve el registro del código de registro que contiene el UUID del código de
 
 {style="table-layout:auto"}
 
-</br>
+
+
 
 | Parámetro de entrada | Descripción |
 | --- | --- |
 | solicitante | Identificador de solicitante del programador para el que es válida esta operación. |
 | código de registro | El valor del código de registro que se mostrará en el dispositivo de streaming (para introducirlo en el flujo de autenticación). |
 
-</br>
+
+
 
 ## Esquema XML de respuesta {#response-xml-schema}
 
