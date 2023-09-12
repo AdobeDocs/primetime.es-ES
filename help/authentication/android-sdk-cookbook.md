@@ -2,9 +2,9 @@
 title: Guía del SDK para Android
 description: Guía del SDK para Android
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 9fcbb5285ffa85306c0e18337da9564ac862a6eb
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1685'
 ht-degree: 0%
 
 ---
@@ -155,7 +155,7 @@ La actividad de red de AccessEnabler tiene lugar en un subproceso diferente, por
 
    **Nota:** En este punto, el usuario tiene la oportunidad de cancelar el flujo de autenticación. Si esto sucede, el nivel de la interfaz de usuario es responsable de informar a AccessEnabler sobre este evento llamando a `setSelectedProvider()` con `null` como parámetro. Esto permite al AccessEnabler limpiar su estado interno y restablecer el flujo de autenticación.
 
-1. Una vez que el usuario ha iniciado sesión correctamente, la capa de aplicación detecta la carga de una &quot;URL de redireccionamiento personalizada&quot; (por ejemplo, [http://adobepass.android.app](http://adobepass.android.app/)). Esta dirección URL personalizada es en realidad una dirección URL no válida que no está destinada a que WebView se cargue. Es una señal de que el flujo de autenticación se ha completado y de que WebView debe cerrarse.
+1. Una vez que el usuario ha iniciado sesión correctamente, la capa de aplicación detecta la carga de una &quot;URL de redireccionamiento personalizada&quot; (por ejemplo, `http://adobepass.android.app`). Esta dirección URL personalizada es en realidad una dirección URL no válida que no está destinada a que WebView se cargue. Es una señal de que el flujo de autenticación se ha completado y de que WebView debe cerrarse.
 
 1. Cierre el control WebView e invoque `getAuthenticationToken()`, que indica a AccessEnabler que recupere el token de autenticación del servidor back-end.
 
@@ -207,7 +207,7 @@ La actividad de red de AccessEnabler tiene lugar en un subproceso diferente, por
 
    a. Siguiendo el mismo patrón que el flujo de trabajo de autenticación, el dominio AccessEnabler realiza una solicitud a la capa de aplicación de la interfaz de usuario (a través de la variable`navigateToUrl()` llamada de retorno) para crear un control WebView e indicar a ese control que cargue la dirección URL del extremo de cierre de sesión en el servidor backend.
 
-   b. De nuevo, la interfaz de usuario debe supervisar la actividad del control WebView y detectar el momento en que el control, a medida que pasa por varias redirecciones, carga la dirección URL personalizada de la aplicación (es decir, [http://adobepass.android.app/](http://adobepass.android.app/)). Una vez que se produce este evento, la capa de aplicación de la interfaz de usuario cierra WebView y se completa el proceso de cierre de sesión.
+   b. De nuevo, la interfaz de usuario debe supervisar la actividad del control WebView y detectar el momento en que el control, a medida que pasa por varias redirecciones, carga la dirección URL personalizada de la aplicación (es decir, `http://adobepass.android.app/`). Una vez que se produce este evento, la capa de aplicación de la interfaz de usuario cierra WebView y se completa el proceso de cierre de sesión.
 
    **Nota:** El flujo de cierre de sesión difiere del flujo de autenticación en que el usuario no tiene que interactuar con WebView de ninguna manera. La capa de aplicación de la interfaz de usuario utiliza un WebView para asegurarse de que se siguen todas las redirecciones. Por lo tanto, es posible (y recomendado) hacer que el control WebView sea invisible (es decir, oculto) durante el proceso de cierre de sesión.
 

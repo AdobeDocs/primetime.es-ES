@@ -2,9 +2,9 @@
 description: Los componentes principales de Acceso a Adobe constan de un SDK de Java y los entornos de tiempo de ejecución de cliente de Flash Player y Adobe AIR.
 title: SDK de Java, Flash Player y cliente de Adobe AIR
 exl-id: 2df4da13-8df9-442b-8638-317c41d62fbe
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '910'
 ht-degree: 0%
 
 ---
@@ -35,11 +35,11 @@ Estas API se utilizan para definir derechos y preparar contenido para su distrib
 
 * Administración de directivas
 
-   La API de administración de políticas se utiliza para crear y modificar las políticas que se aplican al contenido. Se pueden crear o actualizar directivas, incluida la obtención/configuración de todas las reglas de uso y la autorización de parámetros adicionales en un área de nombres personalizada.
+  La API de administración de políticas se utiliza para crear y modificar las políticas que se aplican al contenido. Se pueden crear o actualizar directivas, incluida la obtención/configuración de todas las reglas de uso y la autorización de parámetros adicionales en un área de nombres personalizada.
 
 * Empaquetado de contenido
 
-   La API de empaquetado de contenido se utiliza para cifrar contenido y recuperar metadatos del contenido empaquetado.
+  La API de empaquetado de contenido se utiliza para cifrar contenido y recuperar metadatos del contenido empaquetado.
 
 ## API de Java para la emisión de licencias {#java-apis-for-issuing-licenses}
 
@@ -47,15 +47,15 @@ Estas API se utilizan cuando un cliente solicita una licencia al servidor. El SD
 
 * Autenticación
 
-   La API de autenticación se puede utilizar para gestionar solicitudes de autenticación y generar tokens de autenticación.
+  La API de autenticación se puede utilizar para gestionar solicitudes de autenticación y generar tokens de autenticación.
 
 * Generación y adquisición de licencias
 
-   La API de generación y adquisición de licencias se utiliza para generar una licencia para el usuario.
+  La API de generación y adquisición de licencias se utiliza para generar una licencia para el usuario.
 
 * Compatibilidad con clientes y contenido de la versión 1.5 de Adobe AIR
 
-   Con fines de compatibilidad con versiones anteriores, el SDK tiene API para gestionar solicitudes de aplicaciones de AIR creadas para utilizarlas con clientes de la versión 1.5 y anteriores de AIR, así como contenido protegido.
+  Con fines de compatibilidad con versiones anteriores, el SDK tiene API para gestionar solicitudes de aplicaciones de AIR creadas para utilizarlas con clientes de la versión 1.5 y anteriores de AIR, así como contenido protegido.
 
 ## Implementación de referencia {#reference-implementation}
 
@@ -76,8 +76,6 @@ Para obtener más información sobre el Flash Player, visite: [www.adobe.com/go/
 Adobe AIR es un motor en tiempo de ejecución de varios sistemas operativos que permite a los productores de contenido ampliar sus inversiones existentes en la web al escritorio mediante el diseño de aplicaciones multimedia personalizadas. Basado en tecnologías abiertas de probada eficacia, ofrece una forma fiable y simplificada para que las empresas desarrollen e implementen aplicaciones personalizadas en las que se pueda confiar para ofrecer una experiencia de usuario más segura y agradable. Adobe AIR permite a las empresas integrar fácilmente medios enriquecidos para crear una experiencia de usuario más envolvente e interactiva. Permite a los desarrolladores utilizar herramientas conocidas como software de Flex® de HTML, JavaScript, Flash o Adobe ® para implementar su combinación única de aplicaciones de Internet enriquecidas en Windows, Macintosh o Linux.
 
 Las empresas tienen un control completo de la interfaz de usuario y pueden diseñar una experiencia de usuario para reflejar y reforzar su marca. Con compatibilidad integrada para la reproducción de contenido protegido con el SDK de acceso a Adobe, Adobe AIR ayuda a crear cadenas de distribución de contenido personalizadas y de extremo a extremo.
-
-Para obtener más información sobre Adobe AIR, visite: [www.adobe.com/go/air](https://www.adobe.com/go/air)
 
 ## Aplicaciones nativas de iOS y Android {#native-ios-and-android-applications}
 

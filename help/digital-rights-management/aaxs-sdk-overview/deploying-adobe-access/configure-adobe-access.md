@@ -3,9 +3,9 @@ title: Implementar el acceso al Adobe
 description: Implementar el acceso al Adobe
 copied-description: true
 exl-id: bebf02d5-897e-4007-8c5c-1c91186fdc51
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '747'
 ht-degree: 0%
 
 ---
@@ -68,4 +68,4 @@ Para obtener más información sobre el empaquetado de contenido, consulte *Prot
 
 Para permitir que los consumidores accedan y vean contenido, desarrolle una aplicación de reproducción de vídeo mediante Flash Player o Adobe AIR. Una vez desarrollada una aplicación de reproducción de vídeo, debe implementarla para los consumidores. Si está desarrollando una aplicación mediante Flash Player, aloje la aplicación en el sitio web de su organización. Si está desarrollando una aplicación con Adobe® AIR®, publique el programa de instalación de la aplicación AIR para que los consumidores puedan descargar e instalar la aplicación en su equipo.
 
-Para obtener más información sobre el desarrollo de aplicaciones de reproducción de vídeo personalizadas para su uso con Adobe Access, consulte el capítulo &quot;Uso de vídeo&quot; en [Guía para desarrolladores de ActionScript 3.0](https://help.adobe.com/en_US/as3/dev/WS9936fa0d5984e93b3f4f38ec1272a447844-8000.html)*, *el [Centro de tecnología de vídeo Adobe](https://www.adobe.com/devnet/video/)y el Open Source Media Framework.
+Para obtener más información sobre el desarrollo de aplicaciones de reproducción de vídeo personalizadas para su uso con Adobe Access, consulte el capítulo &quot;Uso de vídeo&quot; en [Guía para desarrolladores de ActionScript 3.0](https://help.adobe.com/en_US/as3/dev/WS9936fa0d5984e93b3f4f38ec1272a447844-8000.html).

@@ -3,9 +3,9 @@ title: Implementación de referencia de Primetime
 description: Implementación de referencia de Primetime
 copied-description: true
 exl-id: 66be90f1-27e4-4e5f-b84e-fa11ec6f43de
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
 workflow-type: tm+mt
-source-wordcount: '207'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
@@ -36,4 +36,3 @@ Le damos la bienvenida a la ayuda de Implementación de referencia para Adobe Pr
 
 * [Foros de DRM de Adobe Primetime](https://forums.adobe.com/community/adobe_access)
 
-* [Recursos para desarrolladores de Adobe Primetime](https://www.adobe.com/devnet/primetime.html)
