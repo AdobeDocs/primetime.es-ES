@@ -3,9 +3,9 @@ title: Medios ultravioleta y DRM de Adobe Primetime
 description: Medios ultravioleta y DRM de Adobe Primetime
 copied-description: true
 exl-id: 03b01a29-e8e0-4fb5-a685-63a745a6417c
-source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
+source-git-commit: d49042b559ce6083eca0738517d04c490755a033
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Adobe Primetime DRM se puede utilizar con otras soluciones de transmisión de contenido de terceros para configurar un ecosistema de distribución de medios completo y seguro basado en DRM.
 
-UltraViolet es un sistema de autenticación de derechos digitales y distribución basado en la nube que puede permitir a los consumidores de contenido de entretenimiento doméstico digital transmitir y descargar contenido comprado a través de múltiples plataformas y dispositivos. El contenido ultravioleta se descargará (o transmitirá) en un formato de archivo común (CFF) con cifrado común (CENC).
+UltraViolet es un sistema de autenticación de derechos digitales y distribución basado en la nube que puede permitir a los consumidores de contenido de entretenimiento doméstico digital transmitir y descargar contenido comprado a través de múltiples plataformas y dispositivos. El contenido ultravioleta se descarga (o se transmite) en un formato de archivo común (CFF) mediante el cifrado común (CENC).
 
 Es fácil configurar un sistema UltraViolet junto con Adobe Primetime DRM. El siguiente caso de uso muestra el comportamiento del flujo de contenido:
 
@@ -23,10 +23,10 @@ Es fácil configurar un sistema UltraViolet junto con Adobe Primetime DRM. El si
 ![](assets/AdobeUV_web.png)
 
 1. El propietario del contenido codifica y empaqueta el contenido en CFF. El contenido empaquetado se distribuye bajo licencia a un minorista.
-1. El minorista carga el contenido en un proveedor de servicios digitales, como CDN. El contenido ya está disponible para descargar. Tenga en cuenta que una o más compañías pueden desempeñar algunos de estos roles.
+1. El minorista carga el contenido en un proveedor de servicios digitales, como CDN. El contenido ya está disponible para descargar. Algunas de estas funciones pueden ser desempeñadas por una o más compañías.
 
    El usuario final tiene un dispositivo que es compatible con Adobe AIR. Además, el usuario debe instalar una aplicación compatible con UltraViolet. La aplicación incluye el código necesario para analizar el CFF y presentarlo para que el motor en tiempo de ejecución lo consuma. Todas las operaciones criptográficas confidenciales se gestionan en el tiempo de ejecución seguro.
-1. La aplicación puede almacenar en déclencheur una unión de dominio para el dispositivo, que interactúa con el coordinador. El coordinador mantiene un bloqueador de derechos, una base de datos de usuarios y dominios. El administrador de dominios del coordinador se crea mediante el SDK de DRM de Primetime para implementar operaciones de unión/salida de dominio específicas de Primetime DRM.
+1. La aplicación puede almacenar en déclencheur una unión de dominio para el dispositivo, que interactúa con el coordinador. El coordinador mantiene un bloqueador de derechos, una base de datos de usuarios y dominios. El administrador de dominios del coordinador se crea mediante el SDK de DRM de Primetime para implementar operaciones de unión o salida de dominios específicas de DRM de Primetime.
 1. El usuario puede utilizar la aplicación para seleccionar el vídeo que desea adquirir en el establecimiento. El minorista suele proporcionar un portal web y gestiona toda la lógica empresarial.
 1. A continuación, el comerciante interactúa con el coordinador para añadir un token de derechos. A continuación, el minorista redirige la solicitud al proveedor de servicios para la descarga de contenido real.
 1. Si el dispositivo aún no tiene una licencia para el contenido, déclencheur una solicitud de licencia utilizando el CFF. La solicitud suele incluir un certificado de dominio, credenciales de usuario e información sobre la aplicación. El proveedor de servicios gestiona un servidor de licencias DRM de Primetime (desarrollado mediante el SDK de DRM de Primetime) que sigue las especificaciones UltraViolet.
