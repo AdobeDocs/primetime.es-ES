@@ -1,8 +1,7 @@
 ---
 description: Para añadir compatibilidad con VPAID 2.0, agregue una vista de anuncio personalizada y los oyentes adecuados.
 title: Implementación de la integración con VPAID 2.0
-exl-id: a0d9a370-8fb6-4246-b59d-3b7c0b043bed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%
@@ -42,8 +41,7 @@ Para añadir compatibilidad con VPAID 2.0, agregue una vista de anuncio personal
    >
    >Deseche únicamente la vista de anuncio personalizada cuando se invoque el restablecimiento. Por ejemplo:
    >
-   >
-   ```
+   >```
    >// on reset 
    >if (_mediaPlayer != null) { 
    >       _mediaPlayer.disposeCustomAdView(); 
@@ -54,8 +52,7 @@ Para añadir compatibilidad con VPAID 2.0, agregue una vista de anuncio personal
    >
    >Por último, antes de eliminar la vista de anuncios personalizada, debe eliminarla de `FrameLayout`. Por ejemplo:
    >
-   >
-   ```
+   >```
    >if (_playerFrame != null) 
    >       _playerFrame.removeAllViews(); 
    >```

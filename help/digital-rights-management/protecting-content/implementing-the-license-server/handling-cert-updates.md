@@ -2,8 +2,7 @@
 title: Administrar actualizaciones de certificados cuando caducan los certificados emitidos por el Adobe
 description: Administrar actualizaciones de certificados cuando caducan los certificados emitidos por el Adobe
 copied-description: true
-exl-id: 9051a647-87ed-4df6-8bbc-bb5c112383ee
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 0%
@@ -48,24 +47,24 @@ Para actualizar un servidor con certificados nuevos:
 
       * En la implementación de referencia, configúrela con el `LicenseHandler.ServerCredential` propiedad.
       * En el servidor DRM de Adobe Primetime para flujo protegido, la credencial actual debe ser la primera que se especifique en la variable `LicenseServerCredential` en el archivo flashaccess-tenant.xml.
+
    * Asegúrese de que las credenciales actuales y antiguas se proporcionan a `AsymmetricKeyRetrieval`
 
       * En la implementación de referencia, configúrela con el `LicenseHandler.ServerCredential` y `AsymmetricKeyRetrieval.ServerCredential. n` propiedades.
 
       * En el servidor DRM de Primetime para flujo protegido, las credenciales antiguas se especifican después de la primera credencial en el `LicenseServerCredential` en el archivo flashaccess-tenant.xml.
+
    Para las credenciales de transporte:
 
    * Asegúrese de que la credencial actual se pase al `HandlerConfiguration.setServerTransportCredential()` método:
 
       * En la implementación de referencia, configúrela con el `HandlerConfiguration.ServerTransportCredential` propiedad.
       * En el servidor DRM de Primetime para el streaming protegido, la credencial actual debe ser la primera credencial especificada en la variable `TransportCredential` elemento en el [!DNL flashaccess-tenant.xml] archivo.
+
    * Asegúrese de que las credenciales antiguas se proporcionan a `HandlerConfiguration.setAdditionalServerTransportCredentials`():
 
       * En la implementación de referencia, configúrela con el `HandlerConfiguration.AdditionalServerTransportCredential. n` propiedades.
       * En el servidor DRM de Primetime para flujo continuo protegido, esto se especifica después de la primera credencial en la `TransportCredential` en el archivo flashaccess-tenant.xml.
-
-
-
 
 1. Actualice las herramientas de empaquetado para asegurarse de que están empaquetando el contenido con las credenciales actuales. Asegúrese de que se utilizan el certificado de servidor de licencias, el certificado de transporte y las credenciales del empaquetador más recientes para el empaquetado.
 1. Actualice el certificado del servidor de licencias del servidor de claves de la siguiente manera:

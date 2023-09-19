@@ -1,8 +1,7 @@
 ---
 description: Los subtítulos opcionales muestran la parte de audio de un vídeo como texto en la pantalla cuando el sonido es inaudible o el visualizador tiene dificultades auditivas.
 title: Seleccionar una pista de rótulo actual entre las pistas disponibles
-exl-id: ff3e0c59-bcd9-4831-804c-35e13d96f499
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%

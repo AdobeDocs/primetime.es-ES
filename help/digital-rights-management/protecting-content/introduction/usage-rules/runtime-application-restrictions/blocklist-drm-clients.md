@@ -2,8 +2,7 @@
 title: Lista de bloqueados de clientes DRM con acceso restringido a contenido protegido
 description: Lista de bloqueados de clientes DRM con acceso restringido a contenido protegido
 copied-description: true
-exl-id: 837e55ef-8dff-46eb-a952-c787d40d4a1b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
@@ -23,7 +22,7 @@ Una versión de cliente DRM de Primetime puede identificarse mediante los atribu
 | Entorno | `“PC”, “PortingKit”` | Coincidencia exacta | Identifica si el cliente se está ejecutando en un escritorio o en cualquier otro dispositivo. |
 | SO | `“Win”, “Mac”, “Linux”, “Android”, “iOS”, "ChromeOS"` | Coincidencia exacta | Plataforma |
 | Arquitectura | `“32”, “64”` | Coincidencia exacta | 32 o 64 bits |
-| Tipo de pantalla | `“PC”, “Mobile”, “TV”` | Coincidencia exacta |  |
+| Tipo de pantalla | `“PC”, “Mobile”, “TV”` | Coincidencia exacta | |
 | Versión de tiempo de ejecución | Un número de versión válido. Por ejemplo, `“2.0.0”, "3.0", "4.0", "11.0"`, etc. | Coincide si la versión del cliente es menor o igual que la versión especificada. | El número de versión se especifica como una combinación de números y puntos (&quot;.&quot;) de cualquier longitud. |
 | Versión de biblioteca DRM de Primetime | Un número de versión válido. Por ejemplo, `“2.0.0”`. | Coincide si la versión del cliente es menor o igual que la versión especificada. | El número de versión se especifica como una combinación de números y puntos (&quot;.&quot;) de cualquier longitud. |
 | Proveedor OEM | Cadena de proveedor OEM que se puede encontrar en el certificado de tiempo de ejecución emitido a un cliente que transfirió Primetime DRM a un dispositivo. | Coincidencia exacta | Cadena de identificación del proveedor OEM para el dispositivo que usa el kit de portabilidad. |

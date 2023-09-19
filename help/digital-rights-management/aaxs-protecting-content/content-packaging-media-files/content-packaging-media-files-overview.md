@@ -2,8 +2,7 @@
 title: Información general
 description: Información general
 copied-description: true
-exl-id: 67c3d98f-8c17-4b5a-8abb-00f6f0f1e823
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Información general {#overview}
 
-*Empaquetando* hace referencia al proceso de cifrar y aplicar una directiva a archivos FLV o F4V. Utilice las API de empaquetado de medios para empaquetar archivos. El SDK de Java de Adobe Access solo puede empaquetar contenido de AIR y Flash de descarga progresiva, como FLV, F4V y MP4. Para empaquetar contenido mediante DRM de acceso al Adobe para otros formatos de contenido, como HTTP Dynamic Streaming de Adobe (HDS) o Apple HTTP Live Streaming (HLS), deberá utilizar otras herramientas, como Adobe Medium Server ( [https://www.adobe.com/products/adobe-media-server-family.html](https://www.adobe.com/products/adobe-media-server-family.html)) o un codificador que implemente el SDK de Adobe Broadcast ( [https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf](https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf)). Como alternativa, los clientes tienen la opción de utilizar el conjunto de herramientas del empaquetador Java Primetime de Adobe, que puede empaquetar contenido para una variedad de formatos de destino, como HDS, HLS y DASH.
+*Empaquetando* hace referencia al proceso de cifrar y aplicar una directiva a archivos FLV o F4V. Utilice las API de empaquetado de medios para empaquetar archivos. El SDK de Java de Adobe Access solo puede empaquetar contenido de AIR y Flash de descarga progresiva, como FLV, F4V y MP4. Para empaquetar contenido mediante DRM de acceso al Adobe para otros formatos de contenido, como HTTP Dynamic Streaming de Adobe (HDS) o Apple HTTP Live Streaming (HLS), deberá utilizar otras herramientas, como Adobe Media Server ( [https://www.adobe.com/products/adobe-media-server-family.html](https://www.adobe.com/products/adobe-media-server-family.html)) o un codificador que implemente el SDK de Adobe Broadcast ( [https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf](https://help.adobe.com/en_US/primetime/packagers/hdkb_api_overview_3.5.pdf)). Como alternativa, los clientes tienen la opción de utilizar el conjunto de herramientas del empaquetador Java Primetime de Adobe, que puede empaquetar contenido para una variedad de formatos de destino, como HDS, HLS y DASH.
 
 El paquete se desacopla del servidor de licencias. No es necesario que el empaquetador se conecte al servidor de licencias para intercambiar información sobre el contenido. Todo lo que el servidor de licencias necesita saber para emitir la licencia está incluido en los metadatos de contenido.
 

@@ -1,8 +1,7 @@
 ---
 description: Actualmente, TVSDK proporciona compatibilidad con metadatos de proveedor de publicidad integrada para anuncios TVSDK, pausas publicitarias directas y marcadores de publicidad personalizados.
 title: Tipos de inserción de publicidad
-exl-id: 1634ff41-8a8f-4f34-9685-149ec58518ba
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%
@@ -27,7 +26,7 @@ Admite los siguientes tipos de flujos de trabajo de inserción de publicidad par
   <tr> 
    <td colname="col1"> Anuncios de Adobe Primetime ad decisioning </td> 
    <td colname="col2">VOD <p>Activo </p> <p>Lineal </p> </td> 
-   <td colname="col3">La implementación de referencia proporciona lo siguiente <span class="codeph"> AuditudeMetadata</span> información para conectarse al servidor de para la toma de decisiones de anuncios de Primetime (anteriormente conocida como Auditude), en función de la información proporcionada en la sección de anuncios de Primetime</a> del archivo de configuración JSON</a>. </td> 
+   <td colname="col3">La implementación de referencia proporciona lo siguiente <span class="codeph"> AuditudeMetadata</span> información para conectarse al servidor de para la toma de decisiones y la publicación de Primetime (anteriormente conocido como Auditude), en función de la información proporcionada en la parte de anuncios de Primetime</a> del archivo de configuración JSON</a>. </td> 
   </tr> 
   <tr> 
    <td colname="col1"> Saltos de publicidad directos </td> 

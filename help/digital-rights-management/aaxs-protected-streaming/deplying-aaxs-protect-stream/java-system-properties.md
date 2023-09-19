@@ -2,8 +2,7 @@
 title: Propiedades del sistema Java
 description: Propiedades del sistema Java
 copied-description: true
-exl-id: 3fac8fac-7c71-4638-a671-eecc203dc871
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%

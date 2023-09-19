@@ -1,8 +1,7 @@
 ---
 description: Cuando los usuarios avanzan o rebobinan rápidamente a través de los medios, se encuentran en el modo de reproducción con trucos. Para entrar en el modo de reproducción con trucos, debe establecer la velocidad de reproducción de MediaPlayer en un valor distinto de 1.
 title: Implementar avance rápido y rebobinado
-exl-id: 58ed9a96-9617-4364-81d4-b404b23cf265
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 0%
@@ -54,4 +53,4 @@ Para cambiar la velocidad, debe establecer un valor.
 
    * `AdobePSDK.PSDKEventType.RATE_PLAYING` cuando la reproducción se reanuda a la velocidad seleccionada.
 
-      TVSDK envía ambos eventos cuando el reproductor vuelve del modo de truco al modo de reproducción normal.
+     TVSDK envía ambos eventos cuando el reproductor vuelve del modo de truco al modo de reproducción normal.

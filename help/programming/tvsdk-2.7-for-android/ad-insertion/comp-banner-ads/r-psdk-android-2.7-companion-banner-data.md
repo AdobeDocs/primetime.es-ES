@@ -1,8 +1,7 @@
 ---
 description: El contenido de un recurso publicitario describe un banner complementario.
 title: Datos de banner complementario
-exl-id: 922577fd-bc58-4669-b051-fe54b197a5f5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%

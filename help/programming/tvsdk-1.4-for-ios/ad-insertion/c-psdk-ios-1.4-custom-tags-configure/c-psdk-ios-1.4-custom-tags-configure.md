@@ -1,8 +1,7 @@
 ---
 description: Los flujos de medios pueden llevar metadatos adicionales en forma de etiquetas en el archivo de lista de reproducción/manifiesto, y este archivo indica la colocación de la publicidad. Puede especificar nombres de etiquetas personalizados y recibir notificaciones cuando determinadas etiquetas aparezcan en el archivo de manifiesto.
 title: Etiquetas personalizadas
-exl-id: 797b447d-3316-47c9-80e9-1ff1d3e04797
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%

@@ -2,8 +2,7 @@
 title: Información general
 description: Información general
 copied-description: true
-exl-id: 974b9a5e-43f6-4ec8-8048-dfcc1cff0f6f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '316'
 ht-degree: 0%
@@ -18,9 +17,9 @@ La Implementación de referencia incluye una opción de modo de demostración qu
 * **Alquiler/vídeo bajo demanda (VOD)** : el contenido disponible viene con restricciones basadas en el tiempo. Por ejemplo, los usuarios pueden reproducir contenido durante un periodo de 30 días. Una vez que comienza la reproducción, el usuario tiene hasta 48 horas para terminar de ver el contenido. El contenido debe verse en 30 días.
 * **Suscripción (todo lo que puedas comer)** - Algunos servicios ofrecen suscripciones de pago que dan a los usuarios acceso ilimitado a una gran biblioteca de contenido siempre y cuando sigan pagando una tarifa mensual. El servidor de licencias emite una licencia única para cada segmento de contenido y también una licencia raíz que caduca al final del período de suscripción. Cada mes, cuando los usuarios renuevan su suscripción, también se debe renovar la licencia raíz.
 
-   >[!NOTE]
-   >
-   >Para los modelos de uso anteriores, después de adquirir una licencia, los usuarios deben introducir sus credenciales para que el servidor pueda comprobar que los usuarios tienen una cuenta de alquiler.
+  >[!NOTE]
+  >
+  >Para los modelos de uso anteriores, después de adquirir una licencia, los usuarios deben introducir sus credenciales para que el servidor pueda comprobar que los usuarios tienen una cuenta de alquiler.
 
 * **Financiado por publicidad** - El contenido se monetiza incluyendo publicidad como parte de la experiencia. Con este modelo, el contenido se puede distribuir y no requiere autenticación del usuario.
 

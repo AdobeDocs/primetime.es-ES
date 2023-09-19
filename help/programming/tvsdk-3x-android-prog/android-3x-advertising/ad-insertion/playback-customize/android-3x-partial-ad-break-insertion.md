@@ -2,8 +2,7 @@
 title: Inserción de pausa publicitaria parcial
 description: Inserción de pausa publicitaria parcial
 copied-description: true
-exl-id: c86f1e99-7f1e-4a1e-b285-568ad6659f45
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%
@@ -28,4 +27,4 @@ Active la preferencia Inserción de pausa publicitaria parcial. Utilice el nuevo
     mediaPlayer.setPartialAdBreakPref(true);
 ```
 
-El anuncio previo a la emisión, si está disponible, se reproduce y, a continuación, el contenido se reproduce desde el punto en directo emulando la experiencia de la televisión en directo.
+Se reproduce el anuncio previo a la emisión, si está disponible, y el contenido se reproduce desde el punto de vista en directo emulando la experiencia de la televisión en directo.

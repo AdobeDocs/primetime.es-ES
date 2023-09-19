@@ -1,8 +1,7 @@
 ---
 description: En dispositivos que admiten la aceleración de GPU (hardware), puede utilizar un objeto flash.media.StageVideo para procesar vídeo en el hardware del dispositivo. La disponibilidad de StageVideo depende de las versiones y capacidades de diferentes partes del sistema, incluyendo Flash Player, hardware de vídeo, sistema operativo, controladores, navegador, conexión de red y contexto de visualización.
 title: Funciones y restricciones de StageVideo
-exl-id: 228ea2d0-5950-43f5-8cfd-640d1c482b05
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
@@ -19,9 +18,9 @@ El `StageVideo` permite aprovechar la aceleración de hardware para presentar v�
 
    * *Flash 15 y posterior* - Cuando la aceleración por hardware no está disponible, `StageVideo` vuelve al software y no tiene que hacer nada.
 
-      >[!TIP]
-      >
-      >Cuando la aceleración de hardware no está disponible, el rendimiento puede degradarse significativamente.
+     >[!TIP]
+     >
+     >Cuando la aceleración de hardware no está disponible, el rendimiento puede degradarse significativamente.
 
    * *Flash 14 y anteriores* - Cuando la aceleración por hardware no está disponible, `StageVideo` deja de estar disponible. En un pequeño conjunto de configuraciones en las que la aceleración de hardware no es compatible con el explorador o la GPU, o está desactivada en el Flash Player, la visualización de vídeo con la pila HLS de TVSDK fallará. En el *HDS* canalización, puede cambiar de `StageVideo` a una alternativa, como el objeto Video, que procesa vídeo en la CPU.
 
@@ -29,9 +28,9 @@ El `StageVideo` permite aprovechar la aceleración de hardware para presentar v�
 
 * **wmode** : En el contexto del explorador, la variable `wmode` la configuración es crítica para el rendimiento. El Adobe recomienda que mantenga `wmode` establezca en `direct` para garantizar el mejor rendimiento posible en el contexto del explorador.
 
-   >[!NOTE]
-   >
-   >La combinación de factores que incluyen `wmode`, `StageVideo`, y el Flash generan diferentes capacidades y restricciones, en función de la velocidad con la que se ejecute el hardware y de la versión del Flash que utilice.
+  >[!NOTE]
+  >
+  >La combinación de factores que incluyen `wmode`, `StageVideo`, y el Flash generan diferentes capacidades y restricciones, en función de la velocidad con la que se ejecute el hardware y de la versión del Flash que utilice.
 
    * *Flash 15 y posterior* - `StageVideo` está disponible con todos los disponibles `wmode` configuración. Sin embargo, si establece `wmode` a una configuración distinta de `direct`, el rendimiento será menor.
 

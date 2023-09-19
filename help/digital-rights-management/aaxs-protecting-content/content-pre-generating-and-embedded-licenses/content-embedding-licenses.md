@@ -2,8 +2,7 @@
 title: Incrustación de licencias
 description: Incrustación de licencias
 copied-description: true
-exl-id: 63b1bf18-b93d-4305-885a-3a9eee783a03
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%

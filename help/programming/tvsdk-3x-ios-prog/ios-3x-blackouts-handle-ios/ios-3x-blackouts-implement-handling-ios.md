@@ -1,8 +1,7 @@
 ---
 description: El TVSDK proporciona API y código de ejemplo para gestionar períodos de interrupción.
 title: Implementación de gestión de interrupciones
-exl-id: 57823364-fdb3-41c3-8441-008e991f19a7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: A partir del Flash 15 y versiones posteriores, cuando el procesamiento de hardware con StageVideo no está disponible, StageVideo vuelve sin problemas a un objeto StageVideo de software.
 title: Compatibilidad con Flash 15 para StageVideo
-exl-id: 23ef0806-3aa5-4c48-a4f7-4ad9b72bdcc9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '246'
 ht-degree: 0%
@@ -18,11 +17,11 @@ Tenga en cuenta la siguiente información sobre la alternativa de Flash 15 Stage
 * No es necesario realizar cambios en el código de su aplicación.
 * No se requiere ningún cambio en TVSDK.
 
-   No es necesario actualizar el SDK de TVSDK para utilizar StageVideo como alternativa al software.
+  No es necesario actualizar el SDK de TVSDK para utilizar StageVideo como alternativa al software.
 * Sus aplicaciones necesitan ser recompiladas para el Flash 15.
 * Las aplicaciones que recompile para el Flash 15 seguirán funcionando con el Flash 14 y versiones anteriores, siempre que estas aplicaciones no utilicen ninguna API nueva incluida en el Flash Player 15.
 
-   Si la aplicación de Flash 14 necesita utilizar una nueva API de Flash 15, debe llamar dinámicamente a la API con una conversión al tipo de objeto, de modo que la aplicación no falle en el Flash Player 14 durante la ejecución.
+  Si la aplicación de Flash 14 necesita utilizar una nueva API de Flash 15, debe llamar dinámicamente a la API con una conversión al tipo de objeto, de modo que la aplicación no falle en el Flash Player 14 durante la ejecución.
 
 ## Superposiciones de HTML {#html-overlays}
 

@@ -1,8 +1,7 @@
 ---
 description: Puede personalizar o anular los comportamientos de los anuncios.
 title: Configuración de la reproducción personalizada
-exl-id: 28c28589-9e94-40de-b921-1bffc0392c29
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
@@ -18,11 +17,11 @@ Para personalizar los comportamientos de los anuncios, realice una de las siguie
 
 * Implementación de `AdPolicySelector` y todos sus métodos.
 
-   Esta opción se recomienda si necesita anular la **todo** los comportamientos de anuncio predeterminados.
+  Esta opción se recomienda si necesita anular la **todo** los comportamientos de anuncio predeterminados.
 
 * Ampliación de la `DefaultAdPolicySelector` y proporcionan implementaciones solo para los comportamientos que requieren personalización.
 
-   Esta opción se recomienda si solo necesita anular la selección **algunos** de los comportamientos predeterminados.
+  Esta opción se recomienda si solo necesita anular la selección **algunos** de los comportamientos predeterminados.
 
 Para ambas opciones, complete las siguientes tareas:
 

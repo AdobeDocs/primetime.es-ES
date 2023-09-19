@@ -1,8 +1,7 @@
 ---
 description: Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD mediante diferentes combinaciones de modo de se√±alizaci√≥n de publicidad y metadatos de publicidad. Las diferentes combinaciones de modo de se√±alizaci√≥n y metadatos resultan en comportamientos diferentes.
 title: Efecto en la inserci√≥n y eliminaci√≥n de publicidad de las combinaciones de modo de se√±alizaci√≥n de publicidad y metadatos de publicidad
-exl-id: 949ca84f-4aa9-4668-b91b-99fdf13f625c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 0%
@@ -46,8 +45,8 @@ En la tabla siguiente se proporcionan los detalles sobre el modo de se√±alizaci√
   </tr> 
   <tr> 
    <td></td> 
-   <td> Eliminar, audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Eliminar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td> 
     <ul id="ul_E0A2F885E93B4D23A486C37B305E17D8"> 
      <li id="li_D977B398D3904A44AFEC4B05AB0E3340"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
@@ -64,8 +63,8 @@ En la tabla siguiente se proporcionan los detalles sobre el modo de se√±alizaci√
   </tr> 
   <tr> 
    <td></td> 
-   <td> Reemplazar, Audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Reemplazar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
    <td> Intervalos reemplazados </td> 
   </tr> 
@@ -78,7 +77,7 @@ En la tabla siguiente se proporcionan los detalles sobre el modo de se√±alizaci√
   </tr> 
   <tr> 
    <td></td> 
-   <td> Marcar, audiencia </td> 
+   <td> Mark, Auditude </td> 
    <td> CustomAd, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Intervalos marcados, sin anuncios insertados </td> 
@@ -99,8 +98,8 @@ En la tabla siguiente se proporcionan los detalles sobre el modo de se√±alizaci√
   </tr> 
   <tr> 
    <td></td> 
-   <td> Eliminar, audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Eliminar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td> 
     <ul id="ul_2DD298538E9344B9BAB882485BB57747"> 
      <li id="li_F39A69EFA7ED45C18978A2C462AF7641"><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)</span> </li> 
@@ -110,8 +109,8 @@ En la tabla siguiente se proporcionan los detalles sobre el modo de se√±alizaci√
   </tr> 
   <tr> 
    <td></td> 
-   <td> Marcar, audiencia </td> 
-   <td> Marcar, audiencia </td> 
+   <td> Mark, Auditude </td> 
+   <td> Mark, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Intervalos marcados, sin anuncios insertados </td> 
   </tr> 
@@ -131,8 +130,8 @@ En la tabla siguiente se proporcionan los detalles sobre el modo de se√±alizaci√
   </tr> 
   <tr> 
    <td></td> 
-   <td> Reemplazar, Audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Reemplazar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
    <td> Intervalos reemplazados </td> 
   </tr> 
@@ -152,8 +151,8 @@ En la tabla siguiente se proporcionan los detalles sobre el modo de se√±alizaci√
   </tr> 
   <tr> 
    <td></td> 
-   <td> Eliminar, audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Eliminar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)</span> </td> 
    <td> Intervalos eliminados, sin anuncios insertados </td> 
   </tr> 
@@ -166,8 +165,8 @@ En la tabla siguiente se proporcionan los detalles sobre el modo de se√±alizaci√
   </tr> 
   <tr> 
    <td></td> 
-   <td> Reemplazar, Audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Reemplazar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
    <td> Intervalos reemplazados por anuncios </td> 
   </tr> 
@@ -180,7 +179,7 @@ En la tabla siguiente se proporcionan los detalles sobre el modo de se√±alizaci√
   </tr> 
   <tr> 
    <td></td> 
-   <td> Marcar, audiencia </td> 
+   <td> Mark, Auditude </td> 
    <td> Anuncio personalizado, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Intervalos marcados, sin anuncios insertados </td> 
@@ -201,8 +200,8 @@ En la tabla siguiente se proporcionan los detalles sobre el modo de se√±alizaci√
   </tr> 
   <tr> 
    <td></td> 
-   <td> Eliminar, audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Eliminar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </td> 
    <td> Intervalos eliminados, anuncios insertados </td> 
   </tr> 
@@ -215,8 +214,8 @@ En la tabla siguiente se proporcionan los detalles sobre el modo de se√±alizaci√
   </tr> 
   <tr> 
    <td></td> 
-   <td> Reemplazar, Audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Reemplazar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
    <td> Intervalos reemplazados por anuncios </td> 
   </tr> 
@@ -229,7 +228,7 @@ En la tabla siguiente se proporcionan los detalles sobre el modo de se√±alizaci√
   </tr> 
   <tr> 
    <td></td> 
-   <td> Marcar, audiencia </td> 
+   <td> Mark, Auditude </td> 
    <td> CustomAd, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Intervalos marcados </td> 

@@ -1,8 +1,7 @@
 ---
 description: La interfaz Video Encoder del AVE devuelve estas notificaciones de reproducción de vídeo en el objeto de metadatos NATIVE_ERROR.
 title: NATIVE_ERROR Valores de reproducción de vídeo
-exl-id: 8e6ea6f8-bef2-4000-97a5-8d14c165079e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1339'
 ht-degree: 6%

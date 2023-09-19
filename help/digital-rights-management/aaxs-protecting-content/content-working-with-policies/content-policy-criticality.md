@@ -2,8 +2,7 @@
 title: Crítica de política
 description: Crítica de política
 copied-description: true
-exl-id: 6c6971fe-0c0a-4998-917c-aebbf1c4a9df
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%

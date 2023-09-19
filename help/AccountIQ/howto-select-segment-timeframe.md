@@ -1,8 +1,7 @@
 ---
 title: Definición de un segmento y un lapso de tiempo
 description: Definición de un segmento y un lapso de tiempo
-exl-id: 86fe010d-3202-4ce2-b803-ff44f5538d7e
-source-git-commit: c17fb003d8c8103aac36696f696c9e3c7bb83c4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
@@ -29,7 +28,7 @@ Para seleccionar MVPD de **MVPD en el segmento** opción:
 
    >[!NOTE]
    >
-   >**Todo** las MVPD del sector se seleccionan de forma predeterminada. Desde aquí, puede seleccionar cualquiera de las siguientes opciones **Las 10 principales MVPD por puntuación de uso compartido**, **Las 10 principales MVPD por uso**, **Principales 10 MVPD por cuentas**, o MVPD individuales. Sin embargo, para seleccionar MVPD individuales debe anular la selección **Todo**.
+   >**Todo** las MVPD del sector se seleccionan de forma predeterminada. Desde aquí, puede seleccionar cualquiera de las siguientes opciones **Las 10 principales MVPD por puntuación de uso compartido**, **Principales 10 MVPD por uso**, **Principales 10 MVPD por cuentas**, o MVPD individuales. Sin embargo, para seleccionar MVPD individuales debe anular la selección **Todo**.
 
 1. Toque o haga clic en las MVPD que desee.
 

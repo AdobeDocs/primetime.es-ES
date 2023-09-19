@@ -1,8 +1,7 @@
 ---
 description: Puede activar la reserva cuando un anuncio en línea de VMAP contenga un tipo de medio no válido.
 title: Definir comportamiento de anuncios de reserva para anuncios en línea VMAP
-exl-id: 50de85b0-df2b-422f-893c-dfa641b4901e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%

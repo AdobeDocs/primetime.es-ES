@@ -1,8 +1,7 @@
 ---
 description: Puede implementar sus propias resoluciones de contenido en función de las resoluciones predeterminadas.
 title: Implementación de un solucionador de contenido personalizado
-exl-id: 1f442e2b-65fc-4040-ada2-7a49e488bdef
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -116,22 +115,22 @@ Cuando TVSDK genera una nueva oportunidad, se repite a través de los solucionad
 
       * Si la resolución del anuncio se realiza correctamente, invoque `process(List<TimelineOperation> proposals)` y `notifyCompleted(Opportunity opportunity)` en el `ContentResolverClient`
 
-         ```java
-         _client.process(timelineOperations); 
-         _client.notifyCompleted(opportunity); 
-         ```
+        ```java
+        _client.process(timelineOperations); 
+        _client.notifyCompleted(opportunity); 
+        ```
 
       * Si la resolución del anuncio falla, invoque `notifyResolveError` en el `ContentResolverClient`
 
-         ```java
-         _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
-         ```
+        ```java
+        _client.notifyFailed(Opportunity opportunity, PSDKErrorCode error);
+        ```
 
-         Por ejemplo:
+        Por ejemplo:
 
-         ```java
-         _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
-         ```
+        ```java
+        _client.notifyFailed(opportunity, UNSUPPORTED_OPERATION);
+        ```
 
 <!--<a id="example_463B718749504A978F0B887786844C39"></a>-->
 

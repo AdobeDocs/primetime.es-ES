@@ -1,8 +1,7 @@
 ---
 description: Puede configurar elementos visuales para notificar al usuario que el contenido se está almacenando en búfer.
 title: Almacenamiento en búfer
-exl-id: 1b2f32b4-1839-4256-82d6-b262569aa751
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%

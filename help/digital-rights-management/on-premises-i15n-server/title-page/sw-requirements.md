@@ -2,8 +2,7 @@
 title: Requisitos de software
 description: Requisitos de software
 copied-description: true
-exl-id: aa2ae6ac-7c2a-4cc3-a3a4-b7f92e478d23
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%

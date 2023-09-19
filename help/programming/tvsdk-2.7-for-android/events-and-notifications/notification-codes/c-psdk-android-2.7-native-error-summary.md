@@ -2,8 +2,7 @@
 title: Detalles de la notificación NATIVE_ERROR
 description: Detalles de la notificación NATIVE_ERROR
 copied-description: true
-exl-id: 51c75349-0fa8-405d-9e09-b51b425fe21b
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '6868'
 ht-degree: 2%
@@ -141,7 +140,7 @@ Cuando TVSDK administra un error nativo, devuelve algunos o todos los valores de
   </tr> 
   <tr> 
    <td colname="col1"><span class="codeph"> AUDITUDE_ERROR_CODE</span> </td> 
-   <td colname="col2"> Código de error de audiencia (número). </td> 
+   <td colname="col2"> Código de error del Auditude (número). </td> 
   </tr> 
  </tbody> 
 </table>
@@ -245,7 +244,7 @@ Cuando se comuniquen errores de DRM al Adobe, asegúrese de incluir el `NATIVE_S
    <td colname="col2"><span class="codeph"> AAXS_InternalFailure</span> </td> 
    <td colname="col3"> <p>Esto generalmente representa un error en el código de acceso de Adobe y es inesperado, a menos que haya un error conocido, como se muestra a continuación. subErrorId contiene un error específico del cliente o un error de línea. </p> 
     <ul id="ul_79F4A9655A2148519B1E9509C41F78C3"> 
-     <li id="li_0E093AB4D6BD489B852279E6C1525A15">Si el navegador es Chrome en Windows y la versión de Flash es 11.6 (versión de SWF 19 o buena), el software del distribuidor debe suponer que el usuario pulsó <span class="uicontrol"> Denegar</span> en la barra de información y tratar lo mismo que un 3368. </li> 
+     <li id="li_0E093AB4D6BD489B852279E6C1525A15">Si el navegador es Chrome en Windows y la versión de Flash es 11.6 (versión de SWF 19 o superior), el software del distribuidor debe suponer que el usuario ha pulsado <span class="uicontrol"> Denegar</span> en la barra de información y tratar lo mismo que un 3368. </li> 
      <li id="li_0215D1089B344861A2C0A73E1067CFEF">Si 3307 se produce cuando el explorador no es Chrome o la versión de Flash no es 11.6, el distribuidor debe escalar a Adobe. </li> 
     </ul> <p>Importante: <span class="codeph"> 3307:1107296344 (FailedToGetBrokerHandle)</span> puede ocurrir con las versiones 24-28 del explorador Chrome. </p> </td> 
   </tr> 
@@ -386,7 +385,7 @@ Cuando se comuniquen errores de DRM al Adobe, asegúrese de incluir el `NATIVE_S
    <td colname="col3"> <p>Los ficheros utilizados por el cliente DRM se han modificado inesperadamente. subErrorId contiene un error de línea o específico del cliente. </p> 
     <ul id="ul_96EA771046CA4B2B9FAE24D493F43FF2"> 
      <li id="li_D2693CD8EFEF46108828BA17E3F54FF6">El software del distribuidor debe guiar al usuario para restablecer de la misma manera que para 3322. </li> 
-     <li id="li_0149B82436B64E28AC2B8C9B0EB09898">Si el GlobalStore está fallando a una velocidad buena a la tasa de fallo esperada de los discos duros de su base de usuarios, escale el problema al Adobe. </li> 
+     <li id="li_0149B82436B64E28AC2B8C9B0EB09898">Si el GlobalStore está fallando a una velocidad mayor que la tasa de fallo esperada de los discos duros de su base de usuarios, escale el problema al Adobe. </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -415,7 +414,7 @@ Cuando se comuniquen errores de DRM al Adobe, asegúrese de incluir el `NATIVE_S
    <td colname="col3"> <p>Los ficheros utilizados por el cliente DRM se han modificado inesperadamente. <span class="codeph"> subErrorId</span> contiene un error de línea o específico del cliente. </p> 
     <ul id="ul_860D2402DA61460AB0D938F1116F6D64"> 
      <li id="li_CF368C43452B4265B62ADA3E223894BA">El software del distribuidor debe volver a intentar la operación, ya que AdobeCP ha eliminado internamente el almacén del servidor infractor y se debe realizar un reintento correctamente. Si el reintento falla, registre el problema. </li> 
-     <li id="li_51A5803A1F754970BB4EBD6494F5DC96">Si los reintentos fallan a una tasa buena a la tasa de errores esperada en los discos duros de su base de usuarios, escale el problema al Adobe. </li> 
+     <li id="li_51A5803A1F754970BB4EBD6494F5DC96">Si los reintentos fallan a una velocidad mayor que la tasa de errores esperada en los discos duros de su base de usuarios, escale el problema al Adobe. </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -695,7 +694,7 @@ Cuando se comuniquen errores de DRM al Adobe, asegúrese de incluir el `NATIVE_S
   <tr> 
    <td colname="col1"> 3370 </td> 
    <td colname="col2"><span class="codeph"> AAXS_ContentIdSettingsNoAccess</span> </td> 
-   <td colname="col3"> <p>El usuario ha desactivado la <span class="uicontrol"> Permitir identificadores para contenido protegido</span> configuración. </p> <p>Sugerencia: Este error apareció en las versiones 13.0.0.x o buenas de Pepper. </p> <p>El software del distribuidor debe guiar al usuario para habilitar la <span class="uicontrol"> Permitir identificadores para contenido protegido</span> configuración. </p> <p>El equipo de operaciones del distribuidor debe guiar al usuario para habilitar la <span class="uicontrol"> Permitir identificadores para contenido protegido</span> configuración. </p> <p>Para obtener más información, consulte <a href="https://forums.adobe.com/message/6518323#6518323" format="https" scope="external"> https://forums.adobe.com/message/6518323#6518323</a>. </p> </td> 
+   <td colname="col3"> <p>El usuario ha desactivado la <span class="uicontrol"> Permitir identificadores para contenido protegido</span> configuración. </p> <p>Sugerencia: Este error apareció en las versiones 13.0.0.x o posteriores de Pepper. </p> <p>El software del distribuidor debe guiar al usuario para habilitar la <span class="uicontrol"> Permitir identificadores para contenido protegido</span> configuración. </p> <p>El equipo de operaciones del distribuidor debe guiar al usuario para habilitar la <span class="uicontrol"> Permitir identificadores para contenido protegido</span> configuración. </p> <p>Para obtener más información, consulte <a href="https://forums.adobe.com/message/6518323#6518323" format="https" scope="external"> https://forums.adobe.com/message/6518323#6518323</a>. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> 3371 </td> 

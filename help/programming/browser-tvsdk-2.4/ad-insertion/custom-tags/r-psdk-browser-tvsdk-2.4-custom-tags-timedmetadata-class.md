@@ -1,8 +1,7 @@
 ---
 description: Cuando el TVSDK del explorador detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta procesar automáticamente la etiqueta y exponerla como un objeto TimedMetadata.
 title: Clase de metadatos cronometrados
-exl-id: 893879b5-03ed-4c11-80a6-b57b7d54a95c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%

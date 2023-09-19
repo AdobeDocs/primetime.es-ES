@@ -1,8 +1,7 @@
 ---
 description: Algunos anuncios de terceros (o creativos) no se pueden vincular al flujo de contenido HTTP Live Streaming (HLS) porque su formato de vídeo no es compatible con HLS. Primetime ad insertion y TVSDK pueden intentar opcionalmente volver a empaquetar anuncios incompatibles en vídeos M3U8 compatibles.
 title: Reempaquetar anuncios incompatibles con el servicio de reempaquetado creativo de Adobe
-exl-id: 6766bdf7-bffb-4dc1-bc8d-148a7f713f5f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%

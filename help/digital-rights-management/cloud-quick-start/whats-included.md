@@ -1,8 +1,7 @@
 ---
 description: Adobe proporciona un servicio DRM en la nube a los clientes de DRM de Adobe Primetime que no desean desarrollar y mantener su propio servidor de licencias DRM de Primetime. Al utilizar este servicio, los clientes pueden reducir la complejidad operativa y de desarrollo relacionada con la emisión de licencias de DRM. Primetime Cloud DRM puede emitir licencias DRM a todos los dispositivos capaces de ejecutar una aplicación de vídeo habilitada para TVSDK del explorador de Primetime, como iOS, Android, Escritorios y Xbox360. Este servicio DRM se aloja y mantiene por Adobe, con tiempo de actividad 24/7.
 title: Fondo
-exl-id: bb5ad080-5b1d-43a6-8d0e-9b5735c82d96
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%

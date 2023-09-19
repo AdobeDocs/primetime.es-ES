@@ -1,8 +1,7 @@
 ---
 description: Esta tabla proporciona información detallada sobre INFO. escribir notificaciones.
 title: Códigos de notificación INFO
-exl-id: 65cd0a63-c765-4624-9028-d46cb8fbec3a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 4%

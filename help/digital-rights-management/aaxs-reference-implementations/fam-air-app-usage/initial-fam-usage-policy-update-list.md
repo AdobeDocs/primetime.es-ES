@@ -2,8 +2,7 @@
 title: Lista de actualización de directivas
 description: Lista de actualización de directivas
 copied-description: true
-exl-id: 78078e95-775e-4c64-ab0f-d8bf644f3aee
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%

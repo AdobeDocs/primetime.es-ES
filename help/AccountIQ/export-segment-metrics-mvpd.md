@@ -1,8 +1,7 @@
 ---
 title: Exportar métricas para un MVPD y programadores seleccionados
 description: Exportar métricas para un MVPD y programadores seleccionados
-exl-id: 868016ec-71aa-44b9-a002-0d124a64c167
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -20,11 +19,11 @@ Para exportar métricas de un MVPD y de programadores seleccionados, una vez que
 1. Vaya a uno de los siguientes paneles:
 
    * Programadores en el segmento
-      ![](assets/prog-segment-export-option.png)
+     ![](assets/prog-segment-export-option.png)
 
    * Número de cuentas y uso compartido por nivel de probabilidad
 
-      ![](assets/progr-usage-panel-export.png)
+     ![](assets/progr-usage-panel-export.png)
 
 1. Seleccionar **Exportar** opción disponible en la esquina superior derecha del panel.
 
@@ -32,9 +31,9 @@ Los datos se exportan en formato CSV y el archivo se descarga localmente en el d
 
 * Programadores en el segmento
 
-   ![](assets/export-progr-in-seg.png)
+  ![](assets/export-progr-in-seg.png)
 
 
 * Número de cuentas y uso compartido por nivel de probabilidad
 
-   ![](assets/export-acc-usage.png)
+  ![](assets/export-acc-usage.png)

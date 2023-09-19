@@ -1,8 +1,7 @@
 ---
 description: La clase de utilidad TimeRangeCollection abstrae la noción de una colección ordenada de especificaciones de TimeRange y proporciona servicios para traducirse a sí misma en una instancia de metadatos.
 title: clase TimeRangeCollection
-exl-id: 2e5160b0-2254-4a40-8c32-fe3e05b9fc30
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 0%

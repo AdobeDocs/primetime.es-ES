@@ -1,8 +1,7 @@
 ---
 description: Para proporcionar una experiencia de visualización más fluida, TVSDK a veces almacena en búfer el flujo de vídeo. Puede configurar la forma en que el reproductor se almacena en búfer.
 title: Políticas de tiempo de almacenamiento en búfer
-exl-id: 78f1bb9f-3d10-4f05-90dd-5b52eee0feec
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 0%

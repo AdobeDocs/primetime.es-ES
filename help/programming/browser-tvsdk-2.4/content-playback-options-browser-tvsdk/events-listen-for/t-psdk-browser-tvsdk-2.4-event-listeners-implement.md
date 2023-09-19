@@ -1,8 +1,7 @@
 ---
 description: Los controladores de eventos permiten que el TVSDK del explorador responda a eventos.
 title: Implementación de oyentes de eventos y llamadas de retorno
-exl-id: 2ab33c03-4df6-48e5-825c-95aeef8855d2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
@@ -21,13 +20,13 @@ La aplicación debe implementar detectores de eventos para los eventos TVSDK del
 
    * **Eventos obligatorios**: escucha todos los eventos de reproducción.
 
-      >[!IMPORTANT]
-      >
-      >El evento de reproducción `STATUS_CHANGED` proporciona el estado del reproductor, incluidos los errores. Cualquiera de los estados puede afectar al siguiente paso del reproductor.
+     >[!IMPORTANT]
+     >
+     >El evento de reproducción `STATUS_CHANGED` proporciona el estado del reproductor, incluidos los errores. Cualquiera de los estados puede afectar al siguiente paso del reproductor.
 
    * **Otros eventos**: Opcional, según la aplicación.
 
-      Por ejemplo, si incorpora publicidad en la reproducción, escuche todas las `AdBreakPlaybackEvent` y `AdPlaybackEvent` eventos.
+     Por ejemplo, si incorpora publicidad en la reproducción, escuche todas las `AdBreakPlaybackEvent` y `AdPlaybackEvent` eventos.
 
 1. Implemente detectores de eventos para cada evento.
 

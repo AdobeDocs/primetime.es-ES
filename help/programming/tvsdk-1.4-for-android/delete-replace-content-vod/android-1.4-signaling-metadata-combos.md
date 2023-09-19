@@ -1,8 +1,7 @@
 ---
 description: Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD mediante diferentes combinaciones de modo de señalización de publicidad y metadatos de publicidad. Las diferentes combinaciones de modo de señalización y metadatos resultan en comportamientos diferentes.
 title: Efecto en la inserción y eliminación de publicidad de las combinaciones de modo de señalización de publicidad y metadatos de publicidad
-exl-id: 0b265471-2d5c-432b-b1c9-c850ce99f2f5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%
@@ -46,8 +45,8 @@ Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD median
   </tr> 
   <tr> 
    <td></td> 
-   <td> Eliminar, audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Eliminar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td> 
     <ul> 
      <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), </span> </li> 
@@ -64,8 +63,8 @@ Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD median
   </tr> 
   <tr> 
    <td></td> 
-   <td> Reemplazar, Audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Reemplazar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
    <td> Intervalos reemplazados </td> 
   </tr> 
@@ -78,7 +77,7 @@ Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD median
   </tr> 
   <tr> 
    <td></td> 
-   <td> Marcar, audiencia </td> 
+   <td> Mark, Auditude </td> 
    <td> CustomAd, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Intervalos marcados, sin anuncios insertados </td> 
@@ -99,8 +98,8 @@ Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD median
   </tr> 
   <tr> 
    <td></td> 
-   <td> Eliminar, audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Eliminar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td> 
     <ul> 
      <li><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)</span> </li> 
@@ -110,8 +109,8 @@ Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD median
   </tr> 
   <tr> 
    <td></td> 
-   <td> Marcar, audiencia </td> 
-   <td> Marcar, audiencia </td> 
+   <td> Mark, Auditude </td> 
+   <td> Mark, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Intervalos marcados, sin anuncios insertados </td> 
   </tr> 
@@ -131,8 +130,8 @@ Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD median
   </tr> 
   <tr> 
    <td></td> 
-   <td> Reemplazar, Audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Reemplazar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
    <td> Intervalos reemplazados </td> 
   </tr> 
@@ -152,8 +151,8 @@ Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD median
   </tr> 
   <tr> 
    <td></td> 
-   <td> Eliminar, audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Eliminar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE)</span> </td> 
    <td> Intervalos eliminados, sin anuncios insertados </td> 
   </tr> 
@@ -166,8 +165,8 @@ Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD median
   </tr> 
   <tr> 
    <td></td> 
-   <td> Reemplazar, Audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Reemplazar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
    <td> Intervalos reemplazados por anuncios </td> 
   </tr> 
@@ -180,7 +179,7 @@ Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD median
   </tr> 
   <tr> 
    <td></td> 
-   <td> Marcar, audiencia </td> 
+   <td> Mark, Auditude </td> 
    <td> Anuncio personalizado, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Intervalos marcados, sin anuncios insertados </td> 
@@ -201,8 +200,8 @@ Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD median
   </tr> 
   <tr> 
    <td></td> 
-   <td> Eliminar, audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Eliminar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.SERVER_MAP, Mode.INSERT)</span> </td> 
    <td> Intervalos eliminados, anuncios insertados </td> 
   </tr> 
@@ -215,8 +214,8 @@ Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD median
   </tr> 
   <tr> 
    <td></td> 
-   <td> Reemplazar, Audiencia </td> 
-   <td> Eliminar, audiencia </td> 
+   <td> Reemplazar, Auditude </td> 
+   <td> Eliminar, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.DELETE), PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.REPLACE)</span> </td> 
    <td> Intervalos reemplazados por anuncios </td> 
   </tr> 
@@ -229,7 +228,7 @@ Puede marcar, eliminar y reemplazar intervalos de tiempo en flujos de VOD median
   </tr> 
   <tr> 
    <td></td> 
-   <td> Marcar, audiencia </td> 
+   <td> Mark, Auditude </td> 
    <td> CustomAd, Auditude </td> 
    <td><span class="codeph"> PlacementInfo (Type.CUSTOM_TIME_RANGE, Mode.MARK)</span> </td> 
    <td> Intervalos marcados </td> 

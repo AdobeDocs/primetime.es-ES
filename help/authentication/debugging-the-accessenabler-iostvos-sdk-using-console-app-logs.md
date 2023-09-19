@@ -1,8 +1,7 @@
 ---
 title: Depuración del SDK de AccessEnabler para iOS/tvOS mediante los registros de aplicación de la consola
 description: Depuración del SDK de AccessEnabler para iOS/tvOS mediante los registros de aplicación de la consola
-exl-id: 0dad325e-db15-4ea0-a87a-75409eaf8d46
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 0%

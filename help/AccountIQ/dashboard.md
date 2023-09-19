@@ -1,8 +1,7 @@
 ---
 title: Panel de Account IQ
 description: El panel ayuda a identificar las instancias en las que se comparte la contraseña mediante el análisis de una amplia gama de datos de suscriptores.
-exl-id: 616da2a5-c9fe-40ea-90cf-f565bc13e764
-source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
@@ -74,7 +73,7 @@ También puede ver el indicador de tendencia, que muestra un aumento o una caíd
 
 La puntuación general de uso compartido está compuesta por puntuaciones de uso compartido, incluidos &quot;Nivel de uso compartido&quot; y &quot;Uso de z desde cuentas compartidas&quot;.
 
-Proporciona un valor pensado para reflejar el impacto relativo del uso compartido en comparación con el sector. Su propósito es similar al de una calificación crediticia, resumiendo la situación con un solo número. Pero en este caso, cuanto mayor sea el número, más bueno será el daño potencial.
+Proporciona un valor pensado para reflejar el impacto relativo del uso compartido en comparación con el sector. Su propósito es similar al de una calificación crediticia, resumiendo la situación con un solo número. Pero en este caso, cuanto mayor sea el número, mayor será el daño potencial.
 
 ![](assets/overall-sharing-score.png)
 

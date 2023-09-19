@@ -1,8 +1,7 @@
 ---
 description: La protección de salida basada en resolución (RBOP) es un mecanismo que proporciona protección de salida basada en el recuento vertical de píxeles del contenido.
 title: Información general de RBOP
-exl-id: 57c39c4e-d8f3-4f28-95a5-2e61a1bd7793
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 0%

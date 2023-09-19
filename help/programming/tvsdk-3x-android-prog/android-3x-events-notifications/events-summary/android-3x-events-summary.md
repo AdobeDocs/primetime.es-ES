@@ -1,8 +1,7 @@
 ---
 description: La aplicación puede monitorizar la actividad del reproductor y su estado cambiando al escuchar los eventos que envía TVSDK.
 title: Resumen de eventos del reproductor Primetime
-exl-id: 3912f140-1600-41fb-9dc4-306646b7cd85
-source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 0%
@@ -94,7 +93,7 @@ TVSDK le avisa cuando se producen eventos, a los que la aplicación debe respond
 
 `BufferingBeginEventListener`
 
-* **Significado** El reproductor ha comenzado el almacenamiento en búfer.
+* **Significado** El reproductor ha iniciado el almacenamiento en búfer.
 
 * **Llamada de retorno para implementar** `onBufferingBegin(BufferEvent event)`
 

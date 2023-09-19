@@ -2,8 +2,7 @@
 title: Generación previa de licencias
 description: Generación previa de licencias
 copied-description: true
-exl-id: d0bdd722-fd0e-4f34-87e7-28a564daf82b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%

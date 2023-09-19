@@ -1,8 +1,7 @@
 ---
 description: Para reproducir el contenido DASH resultante del empaquetado de contenido, el cliente TVSDK deberá obtener la clave de descifrado de contenido que se pasó durante el proceso de empaquetado en el flujo de trabajo de adquisición de claves. La clave de descifrado de contenido del cliente se suele entregar al cliente mediante un servidor de licencias Widevine/PlayReady en respuesta a una o varias publicaciones HTTP/HTTPS del cliente.
 title: Resumen del flujo de trabajo Solicitud de clave de cliente
-exl-id: ae600cbd-415b-441a-bf01-f259993071f2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%

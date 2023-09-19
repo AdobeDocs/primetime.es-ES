@@ -1,8 +1,7 @@
 ---
 description: Puede utilizar la API Objective-C del reproductor Primetime para personalizar el comportamiento del reproductor.
 title: Clases de reproductor multimedia
-exl-id: b58efff0-2455-4db5-93a0-4624291dc526
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 0%

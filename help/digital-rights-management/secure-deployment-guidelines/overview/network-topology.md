@@ -2,8 +2,7 @@
 title: Introducción a la topología de red
 description: Introducción a la topología de red
 copied-description: true
-exl-id: a4737ea3-407a-48fd-ae3e-4df56a4c1812
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%

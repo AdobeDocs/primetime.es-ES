@@ -1,8 +1,7 @@
 ---
 description: Para recibir notificaciones sobre etiquetas en el manifiesto, registre los oyentes de eventos correspondientes.
 title: Añadir oyentes para notificaciones de metadatos cronometradas
-exl-id: 1df8a4fc-8368-4a80-8f8b-00c1207e6602
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
@@ -17,15 +16,15 @@ Puede monitorizar los metadatos cronometrados si escucha los siguientes eventos,
 
 * `MediaPlayerItemEvent.ITEM_CREATED`: la lista inicial de `TimedMetadata` está disponible después de que `MediaPlayerItem` se ha creado.
 
-   Este evento notifica a la aplicación cuando esto sucede.
+  Este evento notifica a la aplicación cuando esto sucede.
 
 * `MediaPlayerItemEvent.ITEM_UPDATED`: Para emisiones lineales/en directo en las que el manifiesto/lista de reproducción se actualiza periódicamente, es posible que aparezcan etiquetas personalizadas adicionales en la lista de reproducción/manifiesto actualizado, por lo que resulta `TimedMetadata` objetos que se pueden añadir a `MediaPlayerItem.timedMetadata` propiedad.
 
-   Este evento notifica a la aplicación cuando esto sucede.
+  Este evento notifica a la aplicación cuando esto sucede.
 
 * `TimedMetadataEvent.TIMED_METADATA_AVAILABLE`: Cada vez que se crea un nuevo `TimedMetadata` se crea, este evento es distribuido por MediaPlayer.
 
-   Este evento no se envía para `TimedMetadata` objeto creado durante la fase de inicialización.
+  Este evento no se envía para `TimedMetadata` objeto creado durante la fase de inicialización.
 
 1. Implemente los oyentes adecuados.
 

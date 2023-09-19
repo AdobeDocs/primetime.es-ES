@@ -1,8 +1,7 @@
 ---
 title: Explicación de los ID de usuario
 description: Explicación de los ID de usuario
-exl-id: 813a8501-db72-4850-a387-c8db6120db80
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 0%

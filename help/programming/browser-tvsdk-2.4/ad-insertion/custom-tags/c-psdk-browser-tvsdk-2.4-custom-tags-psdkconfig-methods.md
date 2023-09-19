@@ -1,8 +1,7 @@
 ---
 description: Puede configurar nombres de etiquetas personalizados en una secuencia con la clase MediaPlayerItemConfig.
 title: Métodos de clase de configuración para etiquetas
-exl-id: 864d5c35-2b26-447b-8134-414e82096f18
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%
@@ -66,6 +65,6 @@ Recuerde lo siguiente:
 
 * El nombre de etiqueta personalizado debe contener la variable `#` prefijo.
 
-   Por ejemplo, `#EXT-X-ASSET` es un nombre de etiqueta personalizado correcto, pero `EXT-X-ASSET` es incorrecto.
+  Por ejemplo, `#EXT-X-ASSET` es un nombre de etiqueta personalizado correcto, pero `EXT-X-ASSET` es incorrecto.
 
 * No puede cambiar la configuración después de cargar el flujo de medios.

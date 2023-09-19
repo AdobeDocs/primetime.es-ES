@@ -1,8 +1,7 @@
 ---
 description: Puede utilizar la API del reproductor de Primetime para personalizar el comportamiento del reproductor.
 title: Clases de Mediacore
-exl-id: fdbe9cd3-a5ca-4935-b9b3-8a6c04aed9ab
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 0%

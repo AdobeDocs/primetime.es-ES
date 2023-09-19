@@ -1,8 +1,7 @@
 ---
 title: Explicación de los entornos de Adobe
 description: Explicación de los entornos de Adobe
-exl-id: bb6cf37f-48cd-47bb-b3c2-f7a96e49b12d
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%

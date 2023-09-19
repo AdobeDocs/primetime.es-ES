@@ -1,8 +1,7 @@
 ---
 title: Flujo de trabajo de CEK externo de AXS DRM
 description: Este flujo de trabajo se aleja de la mayoría de los sistemas DRM existentes, ya que no requiere el uso de ningún repositorio central ni de un sistema de administración de claves de contenido (CKMS)
-exl-id: f084aa57-8bef-40a0-b52d-4d23dfdf36c4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%

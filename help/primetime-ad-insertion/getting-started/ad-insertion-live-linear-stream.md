@@ -1,8 +1,7 @@
 ---
 title: Usar Ad Insertion en flujo en directo/lineal
 description: Uso del Ad Insertion en un flujo en directo/lineal
-exl-id: d56ed723-ec72-4bbd-befc-6858c7c9d800
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Para los contenidos en directo y vídeo bajo demanda (VOD), TVSDK inicia la reproducción descargando la lista de reproducción asociada a la velocidad de bits de resolución media y descarga los segmentos de contenidos definidos por dicha lista de reproducción. Selecciona rápidamente la lista de reproducción de velocidad de bits de alta resolución y sus medios asociados y continúa el proceso de descarga.
 title: Reproducción de medios y failover
-exl-id: eef1e5ed-422b-4731-8228-d0be63f6f908
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 0%

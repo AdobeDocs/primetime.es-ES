@@ -1,8 +1,7 @@
 ---
 description: Si genera previamente licencias que incluyen reglas de uso basadas en el tiempo, la licencia debe incluir requisitos de sincronización para aplicar de forma segura la caducidad de la licencia.
 title: Generación previa de licencias
-exl-id: f3b6927d-66cf-4aa2-802d-d4b3a5652c63
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Puede guardar la posición de reproducción actual en un vídeo y reanudar la reproducción en la misma posición en una sesión futura.
 title: Guardar la posición del vídeo y reanudarlo más tarde
-exl-id: a06897a6-bf57-4902-b1b4-e931419b56ba
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 0%
@@ -43,9 +42,9 @@ Los anuncios insertados dinámicamente difieren entre las sesiones de usuario, p
 
    * Para reanudar la reproducción del vídeo desde la posición guardada en una sesión anterior, utilice `seekToLocal`.
 
-      >[!TIP]
-      >
-      >Solo se llama a este método con valores de hora local. Si se llama al método con los resultados de la hora actual, se produce un comportamiento incorrecto.
+     >[!TIP]
+     >
+     >Solo se llama a este método con valores de hora local. Si se llama al método con los resultados de la hora actual, se produce un comportamiento incorrecto.
 
    * Para buscar la hora actual, utilice `seek`.
 

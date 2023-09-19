@@ -2,8 +2,7 @@
 title: Ejemplos de solicitudes de clientes
 description: Ejemplos de solicitudes de clientes
 copied-description: true
-exl-id: 2b6a1349-aafc-4222-9081-525662f62961
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '105'
 ht-degree: 0%

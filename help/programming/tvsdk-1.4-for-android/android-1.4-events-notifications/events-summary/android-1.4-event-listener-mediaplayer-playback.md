@@ -1,8 +1,7 @@
 ---
 description: TVSDK envía eventos de reproducción cuando se producen operaciones de reproducción de contenido, como un vídeo que empieza a reproducirse.
 title: Eventos de reproducción
-exl-id: 675dd444-d58c-4316-9d62-b64e6433b650
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 0%

@@ -2,8 +2,7 @@
 title: Creación de una directiva DRM con la API de Java
 description: Creación de una directiva DRM con la API de Java
 copied-description: true
-exl-id: fcae76c3-4e51-449d-b6d5-2138bf1c583e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: La aplicación debe utilizar los objetos PTTimedMetadata adecuados en los momentos apropiados.
 title: Almacenar objetos de metadatos cronometrados a medida que se envían
-exl-id: 43bc2b47-b947-4af1-bba8-6f2063c7b60c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '199'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Browser TVSDK proporciona generadores de oportunidades predeterminados y solucionadores de contenido que colocan anuncios en la cronología. Estos generadores y solucionadores se basan en etiquetas no estándar en el manifiesto. Es posible que la aplicación tenga que modificar la cronología en función de las oportunidades identificadas en el manifiesto.
 title: Generadores de oportunidades y solucionadores de contenido
-exl-id: a47acd22-8b1b-4c66-a7eb-a4d99afb5f17
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%

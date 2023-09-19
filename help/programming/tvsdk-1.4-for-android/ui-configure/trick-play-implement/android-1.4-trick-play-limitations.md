@@ -1,8 +1,7 @@
 ---
 description: Hay algunas limitaciones y algunos problemas en la forma en que se comporta el modo de juego con trucos.
 title: Limitaciones y comportamiento para el juego de trucos
-exl-id: 98558970-9e5e-4dc1-a327-63d9db1d4fed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
@@ -33,4 +32,4 @@ Estas son las limitaciones del modo de juego con trucos:
    * El `MediaPlayerEvent.AD_BREAK_SKIPPED` el evento se envía inmediatamente antes de que se vaya a omitir una pausa publicitaria. El reproductor puede utilizar este evento para implementar una lógica personalizada relacionada con los saltos de publicidad omitidos.
    * La salida del juego de trucos invoca la misma política de reproducción de anuncios que al salir de la búsqueda.
 
-      Por lo tanto, como en la búsqueda, el comportamiento depende de si la directiva de reproducción de la aplicación es diferente de la predeterminada. De forma predeterminada, la última pausa publicitaria omitida se reproduce en el punto en el que sale del modo de reproducción con trucos.
+     Por lo tanto, como en la búsqueda, el comportamiento depende de si la directiva de reproducción de la aplicación es diferente de la predeterminada. De forma predeterminada, la última pausa publicitaria omitida se reproduce en el punto en el que sale del modo de reproducción con trucos.

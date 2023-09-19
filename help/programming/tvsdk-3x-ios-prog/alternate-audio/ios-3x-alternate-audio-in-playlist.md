@@ -1,8 +1,7 @@
 ---
 description: El audio alternativo o de enlace tardío le permite alternar entre las pistas de audio disponibles para una pista de vídeo. De este modo, los usuarios pueden seleccionar una pista de idioma cuando se reproduce el vídeo.
 title: Pistas de audio alternativas en la lista de reproducción
-exl-id: d8d8c122-5837-4f0e-934f-a3d6e1b037c8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Puede utilizar el empaquetador Bento4 de ExpressPlay para preparar contenido para cualquiera de las soluciones DRM compatibles con Primetime Cloud DRM, con tecnología ExpressPlay.
 title: ExpressPlay Packager / Cloud DRM / TVSDK
-exl-id: ff937279-3866-4d0a-9a19-cf61726299e1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 0%

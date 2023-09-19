@@ -2,8 +2,7 @@
 title: Crítica de política de DRM
 description: Crítica de política de DRM
 copied-description: true
-exl-id: b9f5a095-9ec4-4ad7-8b70-9abae72d2a86
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '155'
 ht-degree: 0%

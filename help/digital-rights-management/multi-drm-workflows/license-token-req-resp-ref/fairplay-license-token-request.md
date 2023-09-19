@@ -1,8 +1,7 @@
 ---
 description: La interfaz del token de licencia de FairPlay proporciona servicios de producción y prueba.
 title: Solicitud/respuesta de token de licencia de FairPlay
-exl-id: 7073a74b-d907-4d45-8550-4305655c33f5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 4%
@@ -38,9 +37,9 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
 
 * **Respuesta de ejemplo:**
 
-   ```
-   https://fp.service.expressplay.com:80/hms/fp/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
-   ```
+  ```
+  https://fp.service.expressplay.com:80/hms/fp/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
+  ```
 
 **Parámetros de consulta de solicitud**
 
@@ -57,7 +56,7 @@ La interfaz del token de licencia de FairPlay proporciona servicios de producci�
 |---|---|---|
 | `generalFlags` | Cadena hexadecimal de 4 bytes que representa los indicadores de licencia. &quot;0000&quot; es el único valor permitido. | No |
 | `kek` | Clave de cifrado de clave (KEK). Las claves se almacenan cifradas con una KEK mediante un algoritmo de ajuste de claves (AES Key Wrap, RFC3394). If `kek` se suministra, cualquiera de las `kid` o el `ek` es necesario proporcionar parámetros, *pero no ambas*. | No |
-| `kid` | Una representación de cadena hexadecimal de 16 bytes de la clave de cifrado de contenido o una cadena `'^somestring'`. La longitud de la cadena seguida de la variable `'^'` no puede tener buenos 64 caracteres. | No |
+| `kid` | Una representación de cadena hexadecimal de 16 bytes de la clave de cifrado de contenido o una cadena `'^somestring'`. La longitud de la cadena seguida de la variable `'^'` no puede tener más de 64 caracteres. | No |
 | `ek` | Una representación de cadena hexadecimal de la clave de contenido cifrada. | No |
 | `contentKey` | Una representación de cadena hexadecimal de 16 bytes de la clave de cifrado de contenido | Sí, a menos que `kek` y `ek` o `kid` se proporcionan. |
 | `iv` | Una representación de cadena hexadecimal de 16 bytes del cifrado de contenido IV | Sí |

@@ -2,8 +2,7 @@
 title: Uso de directivas de protección de salida
 description: Uso de directivas de protección de salida
 copied-description: true
-exl-id: d91c9181-a6b2-4982-a3ba-57c4b56428eb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%

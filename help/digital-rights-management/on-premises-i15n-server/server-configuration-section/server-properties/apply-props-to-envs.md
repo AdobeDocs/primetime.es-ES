@@ -1,8 +1,7 @@
 ---
 description: Debe configurar las propiedades del servidor para que reflejen su entorno. Puede hacerlo mediante cualquiera de las siguientes opciones
 title: Aplicar propiedades a entornos de servidor
-exl-id: 0c78011a-e8c8-43a8-8c2d-a5c4ed54a8d7
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%
@@ -17,14 +16,14 @@ Debe configurar las propiedades del servidor para que reflejen su entorno. Puede
 
 * [!DNL AdobeInitial.properties] - Muestra ubicada en el [!DNL /shared] carpeta en el DVD
 
-   Puede utilizar este archivo para anular las propiedades establecidas en el archivo WAR de la siguiente manera:
+  Puede utilizar este archivo para anular las propiedades establecidas en el archivo WAR de la siguiente manera:
 
    1. Establezca los valores de propiedad de anulación en [!DNL AdobeInitial.properties]
    1. Lugar [!DNL AdobeInitial.properties] en la ruta de clase.
 
-   >[!NOTE]
-   >
-   >El Adobe recomienda que utilice el [!DNL AdobeInitial.properties] , ya que esto le permite actualizar los archivos WAR de la aplicación sin correr el riesgo de perder ninguna configuración de propiedad anterior que haya realizado en el [!DNL flashaccess-i15n.properties] archivo.
+  >[!NOTE]
+  >
+  >El Adobe recomienda que utilice el [!DNL AdobeInitial.properties] , ya que esto le permite actualizar los archivos WAR de la aplicación sin correr el riesgo de perder ninguna configuración de propiedad anterior que haya realizado en el [!DNL flashaccess-i15n.properties] archivo.
 
 * Mecanismo de propiedad del sistema Java.
 
@@ -65,4 +64,4 @@ El servidor emplea este orden de búsqueda para las propiedades:
 >[!NOTE]
 >
 >Debe especificar el nombre de entorno del servidor como una propiedad del sistema Java al iniciar el servidor. Por ejemplo, al iniciar Tomcat con [!DNL catalina.bat], configure el `CATALINA_OPTS` como se indica a continuación:
->-DENVIRONMENT_NAME=[ DEV | FASE | PROD ]
+>-DENVIRONMENT_NAME=[DEV | FASE | PROD]

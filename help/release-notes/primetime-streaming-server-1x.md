@@ -3,8 +3,7 @@ title: Versiones de Primetime Streaming Server
 description: Novedades de las versiones 1.3 y 1.4 de Primetime Streaming Server.
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: 80c4687e-b0ac-48f2-a1c3-8751552da9d1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1916'
 ht-degree: 0%

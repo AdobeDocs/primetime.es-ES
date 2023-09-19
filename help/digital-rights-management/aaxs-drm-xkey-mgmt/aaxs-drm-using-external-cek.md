@@ -1,8 +1,7 @@
 ---
 description: Utilice la función CEK externo para vender y empaquetar licencias utilizando el CKMS existente.
 title: Uso de CEK externo para vender y empaquetar licencias
-exl-id: 3944624a-099e-4fc0-b829-6ab154a53758
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
@@ -36,7 +35,6 @@ Durante la adquisición de la licencia, el servidor de licencias de AAXS observa
 >* El código fuente Java se puede crear con el ANT incluido `build-samples.xml`
 >* El SDK de Flash Access ( `adobe-flashaccess-sdk.jar`) debe estar en la ruta de clase
 >
-
 
 ## Flujo de trabajo del servidor
 

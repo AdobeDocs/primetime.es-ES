@@ -2,8 +2,7 @@
 description: La aplicación debe controlar la suspensión y restauración del MediaPlayer de TVSDK cuando la pantalla de un dispositivo está desactivada y activada.
 keywords: SurfaceView;Suspender;Restaurar;BroadcastReceiver
 title: Suspender y restaurar MediaPlayer
-exl-id: 159f0f4f-2bb7-40a1-9747-be970dfbb04d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%

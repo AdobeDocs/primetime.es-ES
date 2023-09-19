@@ -1,8 +1,7 @@
 ---
 description: Puede implementar las resoluciones en función de las resoluciones predeterminadas.
 title: Implementación de un solucionador de contenido/oportunidad personalizado
-exl-id: f2a8512f-9f6c-4fd9-8694-32132cddc7d2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
@@ -63,11 +62,12 @@ Puede implementar las resoluciones en función de las resoluciones predeterminad
 
          * A `CMTimeRange` con la hora de inicio y la duración de la pausa.
 
-            Se establece como la propiedad de rango de `PTAdBreak`.
+           Se establece como la propiedad de rango de `PTAdBreak`.
 
          * `NSArray` de `PTAd`s.
 
-            Se establece como la propiedad ads de `PTAdBreak`.
+           Se establece como la propiedad ads de `PTAdBreak`.
+
    * A `PTAd` representa el anuncio, y cada `PTAd` tiene lo siguiente:
 
       * A `PTAdHLSAsset` establezca como propiedad de recurso principal de la publicidad.

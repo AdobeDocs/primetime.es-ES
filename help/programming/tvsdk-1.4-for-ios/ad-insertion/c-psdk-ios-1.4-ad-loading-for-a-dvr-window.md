@@ -1,8 +1,7 @@
 ---
 description: Puede decidir si desea resolver solo los anuncios que se producen después del punto en directo actual del usuario o también los anuncios que se producen antes del punto en directo actual.
 title: Cargar anuncio para una ventana de DVR
-exl-id: f0799002-5cba-41c2-86bb-9ccf6b906357
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%

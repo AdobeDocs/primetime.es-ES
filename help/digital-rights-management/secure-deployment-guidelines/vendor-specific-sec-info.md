@@ -1,8 +1,7 @@
 ---
 description: Los sistemas operativos y los servidores de aplicaciones están incluidos en la solución DRM de Adobe Primetime.
 title: Información de seguridad específica del proveedor
-exl-id: 4cc39414-cab5-4282-825d-64651d9b03e1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%

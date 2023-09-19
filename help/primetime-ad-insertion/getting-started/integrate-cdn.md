@@ -1,8 +1,7 @@
 ---
 title: Integración de su CDN
 description: Integración de su CDN
-exl-id: b93031a2-6e66-4de1-9cf2-b0260f88fe13
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%

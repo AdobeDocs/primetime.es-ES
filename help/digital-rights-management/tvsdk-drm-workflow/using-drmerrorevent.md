@@ -2,8 +2,7 @@
 title: Información general sobre el uso de la clase DRMErrorEvent
 description: Información general sobre el uso de la clase DRMErrorEvent
 copied-description: true
-exl-id: c651cdcf-f8f8-4085-a88e-d82030f90f11
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%

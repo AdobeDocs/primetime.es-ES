@@ -1,8 +1,7 @@
 ---
 description: Los problemas comunes durante las pruebas suelen involucrar a los autenticadores de ExpressPlay, protocolos de transporte y parámetros de solicitud de servicio requeridos.
 title: Solución de problemas de inicio rápido
-exl-id: d8908f9c-98f4-4100-a003-d3b990105dee
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%

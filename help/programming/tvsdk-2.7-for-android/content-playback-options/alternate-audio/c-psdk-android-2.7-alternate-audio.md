@@ -1,8 +1,7 @@
 ---
 description: El audio alternativo permite alternar entre las pistas de audio disponibles para una pista de vídeo. Los usuarios pueden seleccionar la pista de idioma que prefieran cuando se reproduzca el vídeo.
 title: Audio alternativo
-exl-id: c2eb10dc-3fe0-472b-8450-2fbfc6b09487
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 0%

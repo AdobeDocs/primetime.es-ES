@@ -1,8 +1,7 @@
 ---
 description: Puede utilizar las notificaciones para implementar el registro en tiempo real en la aplicación de vídeo.
 title: Añadir el registro y la depuración en tiempo real
-exl-id: 06ba7207-bb6e-4f77-8575-746505b131bd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%

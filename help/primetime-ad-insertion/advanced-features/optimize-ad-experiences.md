@@ -2,8 +2,7 @@
 title: Optimización de experiencias publicitarias
 description: Optimización de experiencias publicitarias
 copied-description: true
-exl-id: 0cdfbfe5-95f2-4509-8a67-623b77febbc8
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Puede configurar un control de interfaz de usuario para ajustar el volumen del vídeo.
 title: Proporcionar control de volumen
-exl-id: 8b8b0263-9874-4e87-853e-eb394ebef3e3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%

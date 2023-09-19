@@ -1,8 +1,7 @@
 ---
 description: Una vez que se ha utilizado una vista de MediaPlayer para reproducir vídeo, puede ocultarla y mostrarla de nuevo mediante un método TVSDK o manualmente.
 title: Ocultar una vista de vídeo
-exl-id: 92354cd3-f0ed-4434-a7af-a3545e0e2460
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
@@ -22,9 +21,9 @@ Debe pausar un vídeo antes de borrarlo o moverlo de la pantalla.
    * Ponga en pausa el vídeo que desee ocultar.
    * Mueva la vista fuera del escenario. Por ejemplo:
 
-      ```
-      view.x = -300; 
-      view.y = -300;
-      ```
+     ```
+     view.x = -300; 
+     view.y = -300;
+     ```
 
    * Para volver a mostrar el vídeo, mueva la vista de nuevo al escenario.

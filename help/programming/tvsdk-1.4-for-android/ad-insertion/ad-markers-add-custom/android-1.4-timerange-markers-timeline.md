@@ -1,8 +1,7 @@
 ---
 description: Este ejemplo muestra la forma recomendada de incluir especificaciones de TimeRange en la cronología de reproducción.
 title: Colocar marcadores de anuncios de TimeRange en la cronología
-exl-id: 53b48d5b-7725-48ae-848a-ccd2a54b132a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -22,7 +21,7 @@ Este ejemplo muestra la forma recomendada de incluir especificaciones de TimeRan
 * Gestión de conflictos de cronología: puede haber casos en los que algunos `TimeRange` las especificaciones se superponen en la cronología de reproducción. Por ejemplo, el valor de la posición inicial correspondiente a un `TimeRange` la especificación puede ser inferior al valor de la posición final que ya se ha colocado. En este caso, TVSDK ajusta silenciosamente la posición inicial del infractor `TimeRange` especificación para evitar conflictos de cronología. Mediante este ajuste, el nuevo `TimeRange` se hace más corto de lo especificado originalmente. Si el ajuste es tan extremo que llevaría a una `TimeRange` con una duración de cero ms, TVSDK descarta silenciosamente el elemento infractor `TimeRange` especificación.
 * Cuándo `TimeRange` Cuando se proporcionan especificaciones para las pausas publicitarias personalizadas, TVSDK intenta traducirlas en anuncios que se agrupan dentro de las pausas publicitarias. TVSDK busca elementos adyacentes `TimeRange` las especificaciones y las agrupa en pausas publicitarias independientes. Si hay intervalos de tiempo que no son adyacentes a ningún otro intervalo de tiempo, se traducen en saltos de publicidad que contienen un solo anuncio.
 * Se da por hecho que el elemento del reproductor de contenidos que se está cargando apunta a un recurso de VOD. TVSDK comprueba esto cada vez que la aplicación intenta cargar un recurso multimedia cuyos metadatos contienen `TimeRange` especificaciones que solo se pueden utilizar en el contexto de la función de marcadores de publicidad personalizados. Si el recurso subyacente no es de tipo VOD, la biblioteca TVSDK genera una excepción.
-* Cuando se trata de marcadores de publicidad personalizados, TVSDK desactiva otros mecanismos de resolución de anuncios (a través de Adobe Primetime ad decisioning (anteriormente conocido como Auditude) u otro sistema de aprovisionamiento de anuncios). Puede utilizar uno de los distintos módulos de resolución de anuncios que proporciona TVSDK o el mecanismo de marcadores de anuncio personalizado. Al utilizar la API personalizada de marcadores de publicidad, el contenido del anuncio se considera ya resuelto y se coloca en la cronología.
+* Cuando se trata de marcadores de publicidad personalizados, TVSDK desactiva otros mecanismos de resolución de anuncios (a través de Adobe Primetime ad decisioning (anteriormente conocido como Auditude) u otro sistema de suministro de anuncios). Puede utilizar uno de los distintos módulos de resolución de anuncios que proporciona TVSDK o el mecanismo de marcadores de anuncio personalizado. Al utilizar la API personalizada de marcadores de publicidad, el contenido del anuncio se considera ya resuelto y se coloca en la cronología.
 
 El siguiente fragmento de código proporciona un ejemplo sencillo en el que un conjunto de tres especificaciones TimeRange se colocan en la cronología como marcadores de anuncios personalizados.
 

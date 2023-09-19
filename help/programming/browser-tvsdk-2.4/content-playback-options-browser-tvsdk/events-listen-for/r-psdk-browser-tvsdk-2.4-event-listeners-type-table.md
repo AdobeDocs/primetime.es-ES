@@ -1,8 +1,7 @@
 ---
 description: Al registrar detectores de eventos con el explorador TVSDK, se especifica el tipo de evento que se va a detectar y el nombre de la llamada de retorno. Cuando se produce un evento, TVSDK del explorador llama a la llamada de retorno y le pasa un objeto de evento del tipo adecuado.
 title: Tipos de eventos y clases para llamadas de retorno
-exl-id: 94c571ea-6dd2-4c15-89db-7015d89c9208
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%

@@ -2,8 +2,7 @@
 title: Parte inicial del contenido en la zona de borrado
 description: Parte inicial del contenido en la zona de borrado
 copied-description: true
-exl-id: ef296d64-e0e1-4126-8258-f95d5da3adbf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 0%

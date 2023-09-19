@@ -1,8 +1,7 @@
 ---
 description: Puede restablecer, reutilizar o liberar una instancia de MediaPlayer que ya no necesite.
 title: Reutilización o eliminación de una instancia de MediaPlayer
-exl-id: 8b84c7f1-713a-46b4-8eb7-d699a79e74b7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '272'
 ht-degree: 0%
@@ -21,13 +20,13 @@ Esta operación resulta útil en los siguientes casos:
 
 * Desea volver a utilizar un `MediaPlayer` instancia, pero debe cargar una nueva `MediaResource` (contenido de vídeo) y reemplace la instancia anterior.
 
-   El restablecimiento le permite reutilizar el `MediaPlayer` instancia sin los gastos generales de liberación de recursos, recreando la `MediaPlayer`y la reasignación de recursos.
+  El restablecimiento le permite reutilizar el `MediaPlayer` instancia sin los gastos generales de liberación de recursos, recreando la `MediaPlayer`y la reasignación de recursos.
 
 * Si la variable `MediaPlayer` está en estado ERROR y debe borrarse.
 
-   >[!IMPORTANT]
-   >
-   >Esta es la única manera de recuperarse del estado de ERROR.
+  >[!IMPORTANT]
+  >
+  >Esta es la única manera de recuperarse del estado de ERROR.
 
    1. Llamada `reset` para devolver el `MediaPlayer` a su estado sin inicializar:
 
@@ -57,10 +56,10 @@ Estas son algunas razones para publicar un `MediaPlayer`:
 
 * Suelte el `MediaPlayer`.
 
-   ```java
-   void release() throws MediaPlayerException;
-   ```
+  ```java
+  void release() throws MediaPlayerException;
+  ```
 
-   >[!NOTE]
-   >
-   >Después del `MediaPlayer` Una vez liberada, ya no puede utilizarla. Si hay algún método del `MediaPlayer` se llama a la interfaz de después de su lanzamiento, un `MediaPlayerException` se ha lanzado.
+  >[!NOTE]
+  >
+  >Después del `MediaPlayer` Una vez liberada, ya no puede utilizarla. Si hay algún método del `MediaPlayer` se llama a la interfaz de después de su lanzamiento, un `MediaPlayerException` se ha lanzado.

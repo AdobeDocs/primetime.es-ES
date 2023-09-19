@@ -1,8 +1,7 @@
 ---
 title: Registro dinámico de clientes
 description: Registro dinámico de clientes
-exl-id: 9bc2597d-b634-4542-849b-8e91a76cb8da
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Puede rastrear el uso de vídeo integrando TVSDK con Adobe Analytics.
 title: Integración de análisis de vídeo
-exl-id: c335b864-7468-49ae-ab7f-0d23f3d5bc25
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%

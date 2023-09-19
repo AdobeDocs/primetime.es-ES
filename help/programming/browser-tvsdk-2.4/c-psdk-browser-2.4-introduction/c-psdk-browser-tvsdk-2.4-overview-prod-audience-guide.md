@@ -1,8 +1,7 @@
 ---
 description: Esta guía proporciona información sobre cómo desarrollar aplicaciones de reproductor de vídeo mediante el explorador TVSDK.
 title: Información general del producto y audiencia
-exl-id: e2bbec5e-d1ce-430c-986c-ba3152190b1c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 0%

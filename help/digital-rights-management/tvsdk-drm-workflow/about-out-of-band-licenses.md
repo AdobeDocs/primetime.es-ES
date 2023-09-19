@@ -2,8 +2,7 @@
 title: Información general sobre las licencias fuera de banda
 description: Información general sobre las licencias fuera de banda
 copied-description: true
-exl-id: 31a9f097-74e8-41d0-9b9a-1c2a08d3e63a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 0%

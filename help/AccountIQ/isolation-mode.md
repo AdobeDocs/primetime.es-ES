@@ -1,8 +1,7 @@
 ---
 title: Ver informes en modo de aislamiento
 description: Ver informes en modo de aislamiento para Xfinity.
-exl-id: e7cf24c5-9bfa-48f6-b5c8-20443a976891
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 0%
@@ -46,4 +45,4 @@ Para ver las métricas en el modo de aislamiento:
 
    *Imagen: uso compartido de indicadores de probabilidad en el modo Aislamiento*
 
-   Tenga en cuenta que los indicadores anteriores muestran que solo el 6% de todas las cuentas se comparten; y solo el 8% del contenido se consume en ese 8%. Así que los canales pueden comparar sus puntuaciones en el modo de aislamiento con las de los otros MVPD. Por lo tanto, la información obtenida mediante el Modo de aislamiento debe interpretarse de forma diferente a los demás datos.
+   Tenga en cuenta que los indicadores anteriores muestran que solo el 6% de todas las cuentas se comparten; y solo el 8% del contenido se consume por esos 8%. Así que los canales pueden comparar sus puntuaciones en el modo de aislamiento con las de los otros MVPD. Por lo tanto, la información obtenida mediante el Modo de aislamiento debe interpretarse de forma diferente a los demás datos.

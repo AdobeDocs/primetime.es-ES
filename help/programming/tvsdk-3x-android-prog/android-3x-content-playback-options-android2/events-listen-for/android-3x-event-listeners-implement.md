@@ -1,8 +1,7 @@
 ---
 description: Los controladores de eventos permiten responder a eventos de TVSDK.
 title: Implementación de oyentes de eventos y llamadas de retorno
-exl-id: 1f7977e3-4f96-4c0d-ae33-319c84a33ed6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 0%
@@ -23,9 +22,9 @@ La aplicación debe implementar detectores de eventos para cualquier evento de T
 
    * Eventos requeridos: escucha todos los eventos de reproducción.
 
-      >[!IMPORTANT]
-      >
-      >Escuche el evento de cambio de estado, que se produce cuando el estado del reproductor cambia de las formas que necesite saber. La información que proporciona incluye errores que podrían afectar lo que el reproductor puede hacer a continuación.
+     >[!IMPORTANT]
+     >
+     >Escuche el evento de cambio de estado, que se produce cuando el estado del reproductor cambia de las formas que necesite saber. La información que proporciona incluye errores que podrían afectar lo que el reproductor puede hacer a continuación.
 
    * Para ver otros eventos, según la aplicación, consulte  [Resumen de eventos del reproductor Primetime](../../android-3x-events-notifications/events-summary/android-3x-events-summary.md).
 

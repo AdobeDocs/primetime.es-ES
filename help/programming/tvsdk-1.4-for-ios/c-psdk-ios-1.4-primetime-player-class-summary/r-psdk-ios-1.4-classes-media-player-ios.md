@@ -1,8 +1,7 @@
 ---
 description: Estas clases describen el reproductor de contenidos y sus recursos.
 title: Clases de reproductor multimedia
-exl-id: de7f7488-2026-43b4-b74d-feff67bdc69a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Puede utilizar TimedMetadata cuando el tiempo de reproducción actual coincida con el tiempo de inicio.
 title: Usar metadatos cronometrados
-exl-id: 7f87cd14-121a-4543-ab0a-a03d829d040b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%

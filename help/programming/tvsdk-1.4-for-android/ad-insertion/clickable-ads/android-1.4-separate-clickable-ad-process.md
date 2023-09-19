@@ -1,8 +1,7 @@
 ---
 description: Debe separar la lógica de la interfaz de usuario del reproductor del proceso que administra los clics en los anuncios. Una forma de hacerlo es implementar varios fragmentos para una actividad.
 title: Separar el proceso de publicidad en el que se puede hacer clic
-exl-id: 6519b8ed-2963-4708-bbb9-8ff178c1fa86
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%

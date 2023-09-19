@@ -2,8 +2,7 @@
 title: Deshabilitar anuncios previos a la emisión
 description: Deshabilitar anuncios previos a la emisión
 copied-description: true
-exl-id: ff52588e-540e-4072-bec0-e531c8cb6fe3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '43'
 ht-degree: 0%

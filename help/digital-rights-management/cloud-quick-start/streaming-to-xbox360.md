@@ -2,8 +2,7 @@
 title: Establezca el token XSTS en su reproductor
 description: Establezca el token XSTS en su reproductor
 copied-description: true
-exl-id: 1b83baac-e6a6-4e84-8ea5-07bd7e4afd9d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 0%
@@ -67,7 +66,7 @@ Se necesitan pasos de configuración adicionales para admitir el descifrado y la
 | Propiedad del sistema | Valor predeterminado | Comentario |
 |---|---|---|
 | xsts-keystore | xsts.jks | Almacén de claves de formato JKS utilizado por el validador. |
-| xsts-keystore-password |  | Contraseña del almacén de claves |
+| xsts-keystore-password | | Contraseña del almacén de claves |
 | xsts-alias | xsts | Alias utilizado para recuperar la clave de descifrado del almacén de claves |
 | xsts-verify-cert-alias | xsts-verify-cert | Alias utilizado para recuperar el certificado de validación del almacén de claves |
 

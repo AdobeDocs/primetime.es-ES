@@ -1,8 +1,7 @@
 ---
 description: Los flujos de trabajo de DRM implican empaquetar el contenido, proporcionar licencias para el contenido y reproducir el contenido protegido desde su propia aplicación de vídeo. El flujo de trabajo suele ser similar para cada solución de DRM, pero con algunas diferencias está en los detalles.
 title: Flujo de trabajo de varios DRM para FairPlay
-exl-id: a66cecda-762b-48f7-afed-6fef6303d169
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 0%
@@ -202,44 +201,44 @@ Para agregar la rotación de licencias, haga lo siguiente:
 
 * Inserte una nueva etiqueta de clave FairPlay durante el tiempo de rotación de la licencia.
 
-   Se puede añadir cualquier número de etiquetas de clave.
+  Se puede añadir cualquier número de etiquetas de clave.
 
-   Para el contenido lineal, asegúrese de mantener la etiqueta de clave más reciente en la ventana de M3U8. iOS solicitará el siguiente M3U8 cuando queden aproximadamente dos segmentos TS por reproducir (alrededor de 20 segundos). Si el nuevo M3U8 contiene nuevas etiquetas de clave, todas las solicitudes de clave se producirán inmediatamente. No se volverán a solicitar las claves existentes anteriormente. iOS esperará a que finalicen todas las solicitudes clave antes de que comience la reproducción.
+  Para el contenido lineal, asegúrese de mantener la etiqueta de clave más reciente en la ventana de M3U8. iOS solicitará el siguiente M3U8 cuando queden aproximadamente dos segmentos TS por reproducir (alrededor de 20 segundos). Si el nuevo M3U8 contiene nuevas etiquetas de clave, todas las solicitudes de clave se producirán inmediatamente. No se volverán a solicitar las claves existentes anteriormente. iOS esperará a que finalicen todas las solicitudes clave antes de que comience la reproducción.
 
-   En el caso del contenido de VOD con rotación de licencia, todas las solicitudes de clave se producirán al principio de la reproducción.
+  En el caso del contenido de VOD con rotación de licencia, todas las solicitudes de clave se producirán al principio de la reproducción.
 
-   A continuación se muestra un ejemplo de M3U8 con rotación de clave:
+  A continuación se muestra un ejemplo de M3U8 con rotación de clave:
 
-   ```
-   #EXTM3U
-   #EXT-X-TARGETDURATION:10
-   #EXT-X-VERSION:5
-   #EXT-X-MEDIA-SEQUENCE:0
-   #EXT-X-PLAYLIST-TYPE:VOD
-   #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://one?cek=1dc2cc71d913f4f74eca0c4632
-   212b25&iv=e21f0f72b6363ff6143737cb1e9ca8d7",KEYFORMAT="com.apple.streaming
-   keydelivery",KEYFORMATVERSIONS="1"
-   #EXTINF:10,
-   fileSequence0.ts
-   #EXTINF:10,
-   fileSequence1.ts
-   #EXTINF:10,
-   fileSequence2.ts
-   #EXTINF:10,
-   fileSequence3.ts
-   #EXTINF:10,
-   fileSequence4.ts
-   #EXTINF:10,
-   fileSequence5.ts
-   #EXTINF:10,
-   fileSequence6.ts
-   #EXTINF:10,
-   fileSequence7.ts
-   #EXTINF:10,
-   #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://two?cek=f6efc698b96cf8f4fa46d5237d
-   337c77&iv=18401077091784bcda8079acf978dc95",KEYFORMAT="com.apple.streaming
-   keydelivery",KEYFORMATVERSIONS="1"
-   #EXTINF:10,
-   fileSequence8.ts
-   #EXTINF:10,
-   ```
+  ```
+  #EXTM3U
+  #EXT-X-TARGETDURATION:10
+  #EXT-X-VERSION:5
+  #EXT-X-MEDIA-SEQUENCE:0
+  #EXT-X-PLAYLIST-TYPE:VOD
+  #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://one?cek=1dc2cc71d913f4f74eca0c4632
+  212b25&iv=e21f0f72b6363ff6143737cb1e9ca8d7",KEYFORMAT="com.apple.streaming
+  keydelivery",KEYFORMATVERSIONS="1"
+  #EXTINF:10,
+  fileSequence0.ts
+  #EXTINF:10,
+  fileSequence1.ts
+  #EXTINF:10,
+  fileSequence2.ts
+  #EXTINF:10,
+  fileSequence3.ts
+  #EXTINF:10,
+  fileSequence4.ts
+  #EXTINF:10,
+  fileSequence5.ts
+  #EXTINF:10,
+  fileSequence6.ts
+  #EXTINF:10,
+  fileSequence7.ts
+  #EXTINF:10,
+  #EXT-X-KEY:METHOD=SAMPLE-AES,URI="skd://two?cek=f6efc698b96cf8f4fa46d5237d
+  337c77&iv=18401077091784bcda8079acf978dc95",KEYFORMAT="com.apple.streaming
+  keydelivery",KEYFORMATVERSIONS="1"
+  #EXTINF:10,
+  fileSequence8.ts
+  #EXTINF:10,
+  ```

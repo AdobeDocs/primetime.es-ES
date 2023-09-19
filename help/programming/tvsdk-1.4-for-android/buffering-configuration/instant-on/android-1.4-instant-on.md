@@ -1,8 +1,7 @@
 ---
 description: El término instantáneo hace referencia a la precarga de uno o más canales para que un usuario que selecciona uno o cambia de canal vea que el contenido se reproduce inmediatamente. El almacenamiento en búfer ya está hecho para cuando el usuario empieza a ver.
 title: Instantáneo en
-exl-id: f640f208-d1b3-467a-be97-38690e10b7ed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%

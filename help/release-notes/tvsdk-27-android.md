@@ -3,8 +3,7 @@ title: Notas de la versión de TVSDK 2.7 para Android™
 description: Las notas de la versión de TVSDK 2.7 para Android™ describen las novedades o los cambios, los problemas resueltos y conocidos, y los problemas de los dispositivos en TVSDK para Android™ 2.7
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: d64f0ef2-60a9-43a1-b2f9-44764a570538
-source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '4037'
 ht-degree: 0%
@@ -25,9 +24,7 @@ El reproductor de referencia de Android™ se incluye con Android™ TVSDK en el
 >
 >1. Descargar VideoHeartbeat.jar desde [https://github.com/Adobe-Marketing-Cloud/media-sdks/releases](https://github.com/Adobe-Marketing-Cloud/media-sdks/releases) (Biblioteca de VideoHeartbeat para Android™ v2.0.0)
 >1. Extraiga VideoHeartbeat.jar en la carpeta libs/.
-
 >
-
 
 ## Nuevas funciones {#new-features}
 
@@ -46,7 +43,7 @@ TVSDK 2.7 admite la resolución simultánea de todas las solicitudes de publicid
 * **TVSDK 2.5 es compatible con Android™ P**
 * **Habilitar audio de fondo**
 
-   Para habilitar la reproducción de audio cuando la aplicación se mueve de primer plano a segundo plano, la aplicación debe llamar a la API enableAudioPlaybackInBackground de MediaPlayer con el valor true como argumento cuando el reproductor está en estado PREPARED.
+  Para habilitar la reproducción de audio cuando la aplicación se mueve de primer plano a segundo plano, la aplicación debe llamar a la API enableAudioPlaybackInBackground de MediaPlayer con el valor true como argumento cuando el reproductor está en estado PREPARED.
 
 * **alwaysUseAudioOutputLatency(valor booleano) en la clase MediaPlayer**
 
@@ -60,14 +57,14 @@ TVSDK ahora cancela la descarga del segmento en curso, si es necesario, y cambia
 
 * **Inserción parcial de desglose de anuncios**
 
-   Experiencia similar a la de una TV de unirse en medio de un anuncio sin activar el seguimiento del anuncio parcialmente visto.\
-   Ejemplo: Las uniones de usuarios se producen en medio (a los 40 segundos) de una pausa publicitaria de 90 segundos y consisten en tres anuncios de 30 segundos. Son 10 segundos del segundo anuncio de la pausa.
+  Experiencia similar a la de una TV de unirse en medio de un anuncio sin activar el seguimiento del anuncio parcialmente visto.\
+  Ejemplo: Las uniones de usuarios se producen en medio (a los 40 segundos) de una pausa publicitaria de 90 segundos y consisten en tres anuncios de 30 segundos. Son 10 segundos del segundo anuncio de la pausa.
    * El segundo anuncio se reproduce durante el tiempo restante (20 segundos) seguido del tercer anuncio.
    * Los rastreadores de anuncios para el anuncio parcial reproducido (segundo anuncio) no se activan. Los rastreadores solo del tercer anuncio se activan.
 
 * **Carga segura de publicidad a través de HTTPS**
 
-   Adobe Primetime proporciona una opción para solicitar la primera llamada al servidor de publicidad de primetime y a CRS a través de https.
+  Adobe Primetime proporciona una opción para solicitar la primera llamada al servidor de publicidad de primetime y a CRS a través de https.
 
 * **Se ha agregado un ID de sistema de anuncios y creativo a las solicitudes CRS**
 
@@ -81,7 +78,7 @@ Android™ TVSDK v2.5.4 ofrece las siguientes actualizaciones y cambios en la AP
 
 * Cambios en el valor predeterminado para `WebViewDebbuging`
 
-   El `WebViewDebbuging` el valor se establece en _Falso_ de forma predeterminada. Para habilitarlo, llame a `setWebContentsDebuggingEnabled` hasta _Verdadero_ en la aplicación.
+  El `WebViewDebbuging` el valor se establece en _Falso_ de forma predeterminada. Para habilitarlo, llame a `setWebContentsDebuggingEnabled` hasta _Verdadero_ en la aplicación.
 
 * Actualización de la versión de OpenSSL y Curl `libcurl` a v7.57.0 y OpenSSL a v1.0.2k.
 * Acceso de nivel de aplicación para el objeto de respuesta VAST Se ha introducido una nueva API NetworkAdInfo::getVastXml() que proporciona acceso al objeto de respuesta VAST a la aplicación.
@@ -92,7 +89,7 @@ Android™ TVSDK v2.5.3 ofrece las siguientes actualizaciones y cambios en la AP
 
 * Se recomienda a todos los clientes de TVSDK que utilicen CRS que actualicen sus aplicaciones con TVSDK 2.5.3.85 o la versión más reciente en Android™. Se trata de un sustituto desplegable de la implementación de la aplicación existente. Después de la actualización de TVSDK, compruebe las solicitudes de URL creativas de CRS en una herramienta proxy (por ejemplo: Charles) y confirme que el nombre de host y la versión en la ruta se reflejan como en la estructura de URL de ejemplo a continuación.
 
-   `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
+  `https://primetime-a.akamaihd.net/assets/3p/v3.1/222000/167/d77/167d775d00cbf7fd224b112sf5a4bc7d_0e34cd3ca5177fbc74d66d784 bf3586d.m3u8`
 
 * Agente de usuario de TVSDK personalizable: hemos agregado algunas API nuevas para personalizar los agentes de usuario.
 
@@ -138,9 +135,9 @@ Nota: La conmutación ABR, la reproducción con trucos, la inserción de anuncio
    * **Juego de trucos con velocidad de bits adaptable (ABR) -** Esta función permite a TVSDK cambiar entre flujos de iFrame en el modo de reproducción con trucos. Puede utilizar perfiles que no sean de iFrame para realizar trucos a velocidades más bajas.
    * **Juego de truco más suave -** Estas mejoras mejoran la experiencia del usuario:
 
-          * Selección de velocidad de bits adaptable y velocidad de fotogramas durante el truco, según el ancho de banda y el perfil del búfer
-          * Uso del flujo principal en lugar del flujo IDR para obtener una reproducción rápida de hasta 30 fps.
-      
+         * Selección de velocidad de bits adaptable y velocidad de fotogramas durante el truco, según el ancho de banda y el perfil del búfer
+         * Uso del flujo principal en lugar del flujo IDR para obtener una reproducción rápida de hasta 30 fps.
+     
 * **Protección de contenido**
 
    * **Protección de salida basada en resolución:** Esta función vincula las restricciones de reproducción a resoluciones específicas, proporcionando controles DRM de grano más preciso.
@@ -163,19 +160,19 @@ TVSDK recopila automáticamente las métricas, cumpliendo con el contrato de ven
 * **SizeAvailableEventListener**
    * Los métodos getHeight() y getWidth() de SizeAvailableEvent ahora devuelven el resultado en alto y ancho respectivamente. La proporción de aspecto de la pantalla se puede calcular de la siguiente manera:
 
-      ```
-      SizeAvailableEvent e;
-      
-      DAR = e.getWidth()/ e.getHeight();
-      
-      Storage Aspect Ratio in terms of Sar width and Sar height can also be used to calculate Frame width and Frame height:
-      
-      SAR = e.getSarWidth()/e.getSarHeight();
-      
-      frameHeight = e.getHeight();
-      
-      frameWidth = e.getWidth()/SAR;    
-      ```
+     ```
+     SizeAvailableEvent e;
+     
+     DAR = e.getWidth()/ e.getHeight();
+     
+     Storage Aspect Ratio in terms of Sar width and Sar height can also be used to calculate Frame width and Frame height:
+     
+     SAR = e.getSarWidth()/e.getSarHeight();
+     
+     frameHeight = e.getHeight();
+     
+     frameWidth = e.getWidth()/SAR;    
+     ```
 
 * **Cookies**
 
@@ -339,7 +336,7 @@ Esta sección proporciona un resumen del problema resuelto en la versión de TVS
 * Zendesk#25590 - Mejora: Almacén de cookies de TVSDK (de C++ a Java™)
    * Android™ TVSDK ahora admite el acceso de cookies entre la capa Java™ (almacenada en CookieStore de la aplicación Android™) y la capa C++ TVSDK.
 * Zendesk#32252 - TVSDK_Android_2.5.2.12 no parece tener la corrección para PTPLAY-20269 Este problema se ha corregido e integrado en la rama 2.5.2.
-* Zendesk#31806 - Los sticks de audiencia en la PREPARACIÓN del reproductor se quedaron atascados en el estado de preparación porque el xml de respuesta tenía una etiqueta vacía. Ahora el problema está solucionado.
+* Zendesk#31806 - Los sticks del Auditude en la PREPARACIÓN del reproductor se quedaron atascados en el estado de preparación porque el xml de respuesta tenía una etiqueta vacía. Ahora el problema está solucionado.
 * Zendesk#31727 - TVSDK 2.5: los caracteres de subtítulos se sueltan o se escriben incorrectamente.
    * El problema se ha corregido y no se ha omitido ningún carácter.
 * Zendesk#31485 - DrmManager en 2.5
@@ -364,15 +361,15 @@ La cadena de versión de Adobe Primetime se agrega al agente de usuario del sist
 * El evento SEEK_END que falta #30809 de Zendesk impide que la aplicación pase a un estado de reproducción.
 * El color &#39;cian&#39; de Zendesk #30415 Closed Caption es ahora un tono más oscuro de azul (turquesa), en comparación con las versiones anteriores de TVSDK de Primetime.
 
-   El color cambia de CianOscuro a Cian.
+  El color cambia de CianOscuro a Cian.
 
 * Los anuncios de Zendesk #30727 VOD no se descargan o resuelven.
 
-   En VMAP XML si hay una etiqueta VAST vacía sin una etiqueta de cierre explícita (‘&lt;/vast>&#39;) y sin un carácter de nueva línea después, el XML de VMAP no se analiza correctamente y es posible que no se reproduzcan anuncios.
+  En VMAP XML si hay una etiqueta VAST vacía sin una etiqueta de cierre explícita (‘&lt;/vast>&#39;) y sin un carácter de nueva línea después, el XML de VMAP no se analiza correctamente y es posible que no se reproduzcan anuncios.
 
 **Android™ TVSDK 2.5.1**
 
-* Se bloquea el dispositivo específico (Samsung Galaxy Tab 4); VOD DRM LBA con Auditude y hace clic en los anuncios.
+* Dispositivo específico (Samsung Galaxy Tab 4) crash; VOD DRM LBA con el Auditude y haga clic en los anuncios.
 * VHL: se envían llamadas de latido incorrectas al iniciar contenido desde un desplazamiento.
 * Cuando se reproducen anuncios VPAID, Heartbeat de VHL llama a un evento:type:falta el anuncio de reproducción.
 * Después de pasar al estado COMPLETO, el reproductor vuelve al estado REPRODUCIENDO con SKIP adBreakPolicy para los anuncios posteriores a la emisión.

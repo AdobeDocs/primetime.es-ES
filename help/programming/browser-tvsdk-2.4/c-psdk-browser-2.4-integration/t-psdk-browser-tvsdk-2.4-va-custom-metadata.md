@@ -1,8 +1,7 @@
 ---
 description: Puede proporcionar metadatos personalizados sobre el contenido, los anuncios y las llamadas de seguimiento de capítulos mediante funciones de devolución de llamada.
 title: Implementación de compatibilidad con metadatos personalizados
-exl-id: d2291649-79e2-4935-8980-4f2038d58342
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%

@@ -2,8 +2,7 @@
 title: Cómo utilizar la implementación de referencia de Primetime
 description: Cómo utilizar la implementación de referencia de Primetime
 copied-description: true
-exl-id: 45145f0d-c0e4-4d36-94fd-72f07619dc91
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 0%

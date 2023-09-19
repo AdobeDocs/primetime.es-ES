@@ -1,8 +1,7 @@
 ---
 description: Puede activar esta función y buscar eventos relacionados.
 title: Usar actualización activa del manifiesto maestro
-exl-id: 02cb3116-cc30-4139-841b-8d6297214b8b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%

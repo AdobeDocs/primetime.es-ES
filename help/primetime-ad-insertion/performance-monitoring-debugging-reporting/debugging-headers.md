@@ -2,8 +2,7 @@
 title: Depuración de encabezados
 description: Depuración de encabezados
 copied-description: true
-exl-id: 42c19089-2c61-4622-b53a-c28b8d495ef8
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 7%

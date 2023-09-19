@@ -1,8 +1,7 @@
 ---
 description: La referencia de Primetime de TVSDK es una aplicación de Android creada en torno a los marcos de TVSDK y AVE.
 title: Genere la implementación de referencia de Primetime
-exl-id: d2950f2b-06d7-4fc8-a031-5f058ce47545
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 0%

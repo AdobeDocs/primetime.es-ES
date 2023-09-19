@@ -2,8 +2,7 @@
 title: Reglas basadas en el tiempo
 description: Reglas basadas en el tiempo
 copied-description: true
-exl-id: 02a5c10d-13f5-4482-b525-bf6a1ec9dcf0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '523'
 ht-degree: 0%

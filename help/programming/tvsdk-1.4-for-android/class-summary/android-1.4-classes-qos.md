@@ -1,8 +1,7 @@
 ---
 description: Estas clases proporcionan información que le ayuda a determinar el rendimiento del reproductor.
 title: Clases de QoS
-exl-id: 928accdc-488a-4beb-bf8f-a7e007366c5d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%

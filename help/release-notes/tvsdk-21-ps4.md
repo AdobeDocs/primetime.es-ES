@@ -4,8 +4,7 @@ description: Las notas de la versión de TVSDK 2.1 para PlayStation 4 describen 
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: 32af3fe4-c730-41f6-a558-987bd14c9bae
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
@@ -23,12 +22,10 @@ Estos son los problemas resueltos para TVSDK 2.1 para PlayStation 4:
 **Versión 2.1.0.638**
 
 * **PLAY-10439:**
-Cuando el enlace del anuncio envoltorio de VMAP se rompió, el reproductor se quedaba atascado en el estado de preparación (no se enviaba) 
-`onComplete` a su llamador).
+Cuando el enlace del anuncio envoltorio de VMAP se rompió, el reproductor se quedaba atascado en el estado de preparación (no se enviaba) `onComplete` a su llamador).
 
 * **PLAY-10179:**
-
-   `creativeRepackaging` y `fallbackOnInvalidCreative` Los valores de ahora están desactivados de forma predeterminada. Además, cuando la variable `creativeRepackaging` se ha establecido el indicador, pero no `creativeRepackaging` se ha proporcionado, la variable `onRepackagingComplete` recibía llamadas tantas veces como anuncios en la pausa publicitaria, lo que provocaba que las pausas publicitarias se crearan varias veces.
+  `creativeRepackaging` y `fallbackOnInvalidCreative` Los valores de ahora están desactivados de forma predeterminada. Además, cuando la variable `creativeRepackaging` se ha establecido el indicador, pero no `creativeRepackaging` se ha proporcionado, la variable `onRepackagingComplete` recibía llamadas tantas veces como anuncios en la pausa publicitaria, lo que provocaba que las pausas publicitarias se crearan varias veces.
 
 * **#10304 de Zendesk**: no se inicializó la variable de activación/desactivación de cancelación de publicidad. Ahora inicializamos la variable desde `DataSetEntry's` Actor.
 
@@ -39,14 +36,12 @@ Al entrar en el modo de reproducción con trucos, volver al modo de reproducció
 * **PTPLAY-9552**
 Después de analizar los archivos XML de respuesta, el código de error 1108 ahora se ping siempre que no haya anuncios presentes.
 * **PTPLAY-9551**
-Cuando no hay ninguna pausa publicitaria después del procesamiento de la audiencia, el CRS llama a 
-**onPrefetchComplete** lo que reduce groupCount. Dado que no hay pausa publicitaria, la variable **groupCount** es 0 y se reduce en 1. Anteriormente, el **groupCount** era **uint32_t** debido a lo cual se utilizaba para cambiar al valor máximo. Esto es ahora **int32_t**.
+Cuando no hay pausa publicitaria después del procesamiento del Auditude, el CRS llama a **onPrefetchComplete** lo que reduce groupCount. Dado que no hay pausa publicitaria, la variable **groupCount** es 0 y se reduce en 1. Anteriormente, el **groupCount** era **uint32_t** debido a lo cual se utilizaba para cambiar al valor máximo. Esto es ahora **int32_t**.
 
 **Versión 2.1.0.621**
 
 * **#4555 de Zendesk**
-Problemas instantáneos de memoria que generan errores de carga - 
-`MediaItemLoader` Corrección de que se produzca un bloqueo durante la liberación `mediaitemloader`
+Problemas instantáneos de memoria que generan errores de carga - `MediaItemLoader` Corrección de que se produzca un bloqueo durante la liberación `mediaitemloader`
 
 * **#17223 de Zendesk**
 CSAI 2.x: No se activan todas las direcciones URL de seguimiento de anuncios
@@ -55,31 +50,27 @@ CSAI 2.x: No se activan todas las direcciones URL de seguimiento de anuncios
 * **#17224 de Zendesk**
 El agente de usuario de PS4 mueve la información de primetime al final de UAString
 * **#17226 de Zendesk**
-CSAI 2.x: No todos los anuncios se vinculan en.
-\
-   La corrección indica que la escala de tiempo ha cambiado debido a las operaciones insertBy o eraseBy, y realiza el cambio de punto en consecuencia.
+CSAI 2.x: No todos los anuncios se vinculan en.\
+  La corrección indica que la escala de tiempo ha cambiado debido a las operaciones insertBy o eraseBy, y realiza el cambio de punto en consecuencia.
 
 * **#17284 de Zendesk**
-   [Todas las plataformas] Los subtítulos opcionales no aparecen.\
-   HLS: compatibilidad con `EXT-X-MEDIA-TIME` para archivos de subtítulos VTT.
+  [Todas las plataformas] Los subtítulos opcionales no aparecen.\
+  HLS: compatibilidad con `EXT-X-MEDIA-TIME` para archivos de subtítulos VTT.
 
 * **#17889 de Zendesk**
-Reproducción &quot;Milky&quot; en PS4
-\
-   se aplicó el desplazamiento correcto (para la conversión de color)
+Reproducción &quot;Milky&quot; en PS4\
+  se aplicó el desplazamiento correcto (para la conversión de color)
 
 * **#17954 de Zendesk**
-Lógica de reserva de publicidad + administración de contenido vasto vacío
-\
-   Se ha corregido el problema de que si uno de los contenedores de Vast estaba vacío, el analizador de Vast solía seguir procesando el contenedor.
+Lógica de reserva de publicidad + administración de contenido vasto vacío\
+  Se ha corregido el problema de que si uno de los contenedores de Vast estaba vacío, el analizador de Vast solía seguir procesando el contenedor.
 
 * **#17807 de Zendesk**
 No se puede pasar de la vasta y vacía Igual que Zendesk #3103
 
 * **#17865 de Zendesk**
-Lógica alternativa en PS4 y XBox One
-\
-   Igual que Zendesk #3103
+Lógica alternativa en PS4 y XBox One\
+  Igual que Zendesk #3103
 
 **Versión 2.1.0.591**
 
@@ -111,9 +102,8 @@ CSAI de PS4: cambiar la cadena predeterminada de usuario-agente para todas las l
 ¿TVSDK es compatible con Playstation SDK 2.5? El TVSDK ahora se crea con el SDK 2.5 de Playstation.
 
 * **#4093 de Zendesk**
-targetingInfo pares de clave-valor en la solicitud de Pt Ads.
-\
-   Se agregó un carácter de nueva línea que separa los pares clave/valor.
+targetingInfo pares de clave-valor en la solicitud de Pt Ads.\
+  Se agregó un carácter de nueva línea que separa los pares clave/valor.
 
 ## Funciones compatibles {#supported-features}
 

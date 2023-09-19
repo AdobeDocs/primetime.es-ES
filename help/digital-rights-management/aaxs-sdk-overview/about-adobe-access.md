@@ -2,8 +2,7 @@
 title: Acerca del acceso al Adobe
 description: Acerca del acceso al Adobe
 copied-description: true
-exl-id: fb994516-fcad-44a7-9cf0-44a7e3dd8fa1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: El TVSDK del explorador proporciona herramientas para crear una aplicación de reproductor de vídeo avanzada (su reproductor de Primetime) que puede integrar con otros componentes de Primetime.
 title: Failover de Flash
-exl-id: 76bd9214-767a-4f26-977d-81fbac3e0c42
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%

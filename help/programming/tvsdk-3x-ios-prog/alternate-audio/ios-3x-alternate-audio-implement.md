@@ -1,8 +1,7 @@
 ---
 description: El audio de enlace tardío utiliza PTMediaPlayer para reproducir un vídeo que se especifica en una lista de reproducción de HLS M3U8 y que puede contener varios flujos de audio alternativos.
 title: Acceso a pistas de audio alternativas
-exl-id: c95e2bae-fcf3-4ae2-be11-fb3191b380f1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%

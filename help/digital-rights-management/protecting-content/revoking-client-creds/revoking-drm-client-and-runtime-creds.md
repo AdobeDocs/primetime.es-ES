@@ -2,8 +2,7 @@
 title: Revocar credenciales de tiempo de ejecución y cliente DRM
 description: Revocar credenciales de tiempo de ejecución y cliente DRM
 copied-description: true
-exl-id: 3a91a256-ab01-48d8-99f3-854195faae6f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 0%
@@ -16,7 +15,7 @@ Las versiones de DRM/Runtime se identifican por nivel de seguridad, número de v
 
 Consulte [Lista de bloqueados de clientes DRM con acceso restringido a contenido protegido](../../protecting-content/introduction/usage-rules/runtime-application-restrictions/blocklist-drm-clients.md) para obtener más información sobre los atributos utilizados para identificar un módulo DRM/Runtime.
 
-Si se establece el nivel de seguridad mínimo, la versión del cliente (especificada en el token del equipo) debe ser buena o igual al valor especificado.
+Si se establece el nivel de seguridad mínimo, la versión del cliente (especificada en el token del equipo) debe ser mayor o igual que el valor especificado.
 
 Si se especifica una lista de versiones excluidas y la versión del cliente coincide con cualquiera de los identificadores de versión de la lista, no se permitirá al cliente utilizar un derecho que contenga esta instancia ModuleRequirements. Para que un módulo coincida con la información de la versión, todos los parámetros especificados en la información de la versión, excepto la versión de la versión, deben coincidir exactamente con los valores de los módulos. La versión de la versión coincide si el valor del módulo de cliente es menor o igual que el valor de la información de la versión.
 

@@ -1,8 +1,7 @@
 ---
 description: TVSDK requiere propiedades específicas para el contenido multimedia, el contenido de manifiesto y las versiones de software.
 title: Requisitos
-exl-id: 2b81ae19-7907-4038-80e1-f579a8c04540
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '309'
 ht-degree: 0%
@@ -35,7 +34,7 @@ A continuación se proporciona información sobre la etiqueta `#EXT-X-VERSION`, 
 
 * La versión debe coincidir con las funciones y atributos de la lista de reproducción de HLS; de lo contrario, podrían producirse errores de reproducción.
 
-   Para obtener más información, consulte [Especificación de flujo en directo HTTP](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
+  Para obtener más información, consulte [Especificación de flujo en directo HTTP](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
 * Si la etiqueta no se incluye en las listas de reproducción maestras o de medios, o si no se especifica ninguna versión, se utiliza la versión 1 de forma predeterminada. El contenido que no cumpla con la versión 1 no se reproducirá.
 * Adobe recomienda utilizar al menos la versión 2 para la reproducción en clientes basados en TVSDK.
 

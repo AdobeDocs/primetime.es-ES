@@ -1,8 +1,7 @@
 ---
 title: Informes de cuentas compartidas
 description: Informes de cuentas compartidas
-exl-id: 16c5ded1-2a95-4373-8b90-b445131f333a
-source-git-commit: dd1001d94e32a1a8b5346ff97b0f6cb7d244dcf2
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%

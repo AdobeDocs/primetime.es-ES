@@ -1,8 +1,7 @@
 ---
 description: Puede configurar globalmente nombres de etiquetas personalizados en TVSDK con la clase MediaPlayerItemConfig.
 title: Métodos de clase de configuración para etiquetas
-exl-id: 0a07ebdf-7336-4d4d-b7df-294afb3fd606
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
@@ -35,9 +34,9 @@ Recuerde lo siguiente:
 
 * Los métodos del establecedor no permiten que el parámetro de etiquetas contenga valores nulos.
 
-   Si se encuentra, TVSDK genera un `IllegalArgumentException`.
+  Si se encuentra, TVSDK genera un `IllegalArgumentException`.
 * El nombre de etiqueta personalizado debe contener la variable `#` prefijo.
 
-   Por ejemplo, `#EXT-X-ASSET` es un nombre de etiqueta personalizado correcto, pero `EXT-X-ASSET` es incorrecto.
+  Por ejemplo, `#EXT-X-ASSET` es un nombre de etiqueta personalizado correcto, pero `EXT-X-ASSET` es incorrecto.
 
 * No puede cambiar la configuración después de cargar el flujo de medios.

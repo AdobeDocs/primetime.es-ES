@@ -3,8 +3,7 @@ keywords: parada forzada
 title: Propiedades de configuración
 description: Propiedades de configuración
 copied-description: true
-exl-id: f88c57d6-d951-4d7a-8de1-44cd1aa8e5f7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1217'
 ht-degree: 0%

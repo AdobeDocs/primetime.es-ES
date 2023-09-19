@@ -2,8 +2,7 @@
 title: Reglas del cortafuegos
 description: Reglas del cortafuegos
 copied-description: true
-exl-id: 5f560782-7b09-411a-8791-8d227bc4049b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '365'
 ht-degree: 0%

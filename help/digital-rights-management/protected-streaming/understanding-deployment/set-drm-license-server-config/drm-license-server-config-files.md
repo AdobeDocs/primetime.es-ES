@@ -2,8 +2,7 @@
 title: Archivos de configuración del servidor de licencias
 description: Archivos de configuración del servidor de licencias
 copied-description: true
-exl-id: d48e88a4-caae-4f4e-b870-38da4f3a715e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Para que los subtítulos cerrados estén disponibles para el reproductor cliente, debe habilitarlos. El usuario puede activar o desactivar los subtítulos y seleccionar el formato.
 title: Exponer subtítulos cerrados
-exl-id: 57168c6e-a958-4a89-b22b-0c9f1cab3a49
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%

@@ -2,8 +2,7 @@
 title: De Descarga Propia
 description: De Descarga Propia
 copied-description: true
-exl-id: 5fb00d70-da06-4104-b513-ae1f2b9c1b65
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%

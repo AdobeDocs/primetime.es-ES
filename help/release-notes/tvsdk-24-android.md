@@ -3,8 +3,7 @@ title: Notas de la versión de TVSDK 2.4.1 para Android
 description: Las notas de la versión de TVSDK 2.4.1 para Android describen las funciones nuevas y admitidas, así como los problemas y limitaciones conocidos de TVSDK para Android 2.4.1.
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: 3de09048-ae32-43b4-a019-34b217931a4c
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1962'
 ht-degree: 0%

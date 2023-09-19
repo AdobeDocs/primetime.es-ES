@@ -1,8 +1,7 @@
 ---
 description: Si la aplicación necesita gestionar eventos distribuidos desde el administrador de funciones, debe registrar el administrador en el archivo PlayerFragment.java.
 title: Gestión de eventos
-exl-id: 4c9a76bb-071e-4408-819c-a7611fe615cd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%

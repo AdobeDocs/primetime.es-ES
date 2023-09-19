@@ -1,8 +1,7 @@
 ---
 title: Limitaciones y problemas conocidos
 description: Problemas conocidos del producto.
-exl-id: 08d65716-8b6a-4300-acda-fec63e1e6815
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%
@@ -15,7 +14,7 @@ Adobe se esfuerza por ofrecer una funcionalidad sólida y experiencias de usuari
 
 * Al definir cohortes en las páginas de informes o tableros, actualmente no hay opción para agregar métricas como **número de dispositivos** para refinar el segmento. Esta capacidad estará disponible en una versión futura.
 
-* Al estimar las puntuaciones de uso compartido para cuentas individuales, Account IQ adopta un enfoque conservador que permite a las empresas actuar sobre el uso compartido con un bueno grado de confianza. Sin embargo, este enfoque tiende a subestimar la cantidad total de uso compartido cuando se acumula en muchas cuentas.
+* Al estimar las puntuaciones de uso compartido para cuentas individuales, Account IQ adopta un enfoque conservador que permite a las empresas actuar en el uso compartido con un alto grado de confianza. Sin embargo, este enfoque tiende a subestimar la cantidad total de uso compartido cuando se acumula en muchas cuentas.
 
 * El [Puntuación general de uso compartido](/help/AccountIQ/dashboard.md#overall-sharing-score) actualmente solo hay factores en [Nivel de uso compartido](/help/AccountIQ/dashboard.md#sharing-level) y [Uso de cuentas compartidas](/help/AccountIQ/dashboard.md#usage-from-shared-accounts). Las versiones futuras tendrán en cuenta las métricas adicionales.
 

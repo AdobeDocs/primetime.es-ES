@@ -1,8 +1,7 @@
 ---
 title: Información general sobre supervisión del servicio de derechos
 description: Información general sobre supervisión del servicio de derechos
-exl-id: ebd5d650-0a32-4583-9045-5156356494e2
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1179'
 ht-degree: 0%

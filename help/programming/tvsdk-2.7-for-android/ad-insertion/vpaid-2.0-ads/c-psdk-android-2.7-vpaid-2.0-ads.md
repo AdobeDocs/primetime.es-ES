@@ -1,8 +1,7 @@
 ---
 description: La definición de la interfaz del servidor de anuncios del reproductor de vídeo (VPAID) 2.0 proporciona una interfaz común para reproducir anuncios de vídeo. Proporciona una experiencia multimedia enriquecida para los usuarios y permite a los editores segmentar mejor los anuncios, rastrear las impresiones de los anuncios y monetizar el contenido de vídeo.
 title: Compatibilidad con anuncios VPAID 2.0
-exl-id: 24146e32-9021-4472-94f6-b3d4703f0f9a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 0%
@@ -17,11 +16,11 @@ Se admiten las siguientes funciones:
 
 * Versión 2.0 de la especificación VPAID
 
-   Para obtener más información, consulte [IAB VPAID 2.0](https://www.iab.com/wp-content/uploads/2015/06/VPAID_2_0_Final_04-10-2012.pdf).
+  Para obtener más información, consulte [IAB VPAID 2.0](https://www.iab.com/wp-content/uploads/2015/06/VPAID_2_0_Final_04-10-2012.pdf).
 * Anuncios VPAID lineales con contenido de vídeo bajo demanda (VOD)
 * Anuncios VPAID de JavaScript
 
-   Los anuncios VPAID deben estar basados en JavaScript y la respuesta de publicidad debe identificar el tipo de medio del anuncio VPAID como `application/javascript`.
+  Los anuncios VPAID deben estar basados en JavaScript y la respuesta de publicidad debe identificar el tipo de medio del anuncio VPAID como `application/javascript`.
 
 No se admiten las siguientes funciones:
 
@@ -47,4 +46,4 @@ Mientras se reproduce el anuncio VPAID:
 
 * Los anuncios VPAID no tienen una duración predefinida, ya que el anuncio puede ser interactivo.
 
-   Es posible que la duración de la publicidad y la duración total de la pausa publicitaria especificadas en la respuesta del servidor de publicidad no sean precisas.
+  Es posible que la duración de la publicidad y la duración total de la pausa publicitaria especificadas en la respuesta del servidor de publicidad no sean precisas.

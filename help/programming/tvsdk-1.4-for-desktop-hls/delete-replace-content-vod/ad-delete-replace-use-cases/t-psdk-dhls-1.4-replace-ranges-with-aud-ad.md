@@ -2,8 +2,7 @@
 title: Reemplazo de intervalos de tiempo con un anuncio de Adobe Primetime ad Decisioning
 description: Reemplazo de intervalos de tiempo con un anuncio de Adobe Primetime ad Decisioning
 copied-description: true
-exl-id: 263274b7-4602-4be0-b0ad-040f6f0f2fae
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%

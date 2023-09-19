@@ -1,8 +1,7 @@
 ---
 title: Intercambio de metadatos de contenido MVPD
 description: Intercambio de metadatos de contenido MVPD
-exl-id: d17e60dc-6c61-4ca2-bad8-1840c95261e0
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%

@@ -2,8 +2,7 @@
 title: Cifrado de pistas
 description: Cifrado de pistas
 copied-description: true
-exl-id: affb8e10-f07c-4c15-ad0f-26489c0fa417
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 0%

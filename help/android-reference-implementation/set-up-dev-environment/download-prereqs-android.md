@@ -1,8 +1,7 @@
 ---
 title: Descargar y configurar software necesario
 description: El proceso de instalación es sencillo. Si ya tiene el JDK instalado en el sistema, puede omitir este paso, pero tenga en cuenta que el JDK, Eclipse IDE y el sistema operativo deben ser compatibles.
-exl-id: c2884a55-4f5e-4da8-807d-633625d7fef9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
@@ -30,18 +29,18 @@ ht-degree: 0%
 
       * Para Mac OS X/Unix:
 
-         ```
-         chmod +x android 
-         android update sdk --no-ui
-         ```
+        ```
+        chmod +x android 
+        android update sdk --no-ui
+        ```
 
       * Para Windows:
 
-         ```
-         android update sdk --no-ui
-         ```
+        ```
+        android update sdk --no-ui
+        ```
 
-         Este proceso lleva un tiempo.
+        Este proceso lleva un tiempo.
 
 1. Configure Eclipse.
    1. Inicie Eclipse.

@@ -3,8 +3,7 @@ keywords: reglas de selección creativa;AdobeTVSDKConfig
 title: Aplicar reglas de selección creativa
 description: Aplicar reglas de selección creativa
 copied-description: true
-exl-id: 17d540f3-1eea-4d12-a4b4-66e7c639591f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%

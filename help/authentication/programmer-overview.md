@@ -1,8 +1,7 @@
 ---
 title: Información general para programadores
 description: Información general para programadores
-exl-id: 64a12e49-0ecb-4b81-977d-60c10925bb59
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '4272'
 ht-degree: 0%
@@ -215,7 +214,6 @@ La comunicación entre el Habilitador de acceso y su página web o aplicación d
 >* La autenticación se produce como un intercambio SAML, entre la autenticación de Adobe Primetime como proveedor de servicios (SP) y la MVPD como proveedor de identidad (IdP).
 >
 >* La autorización utiliza un intercambio de servicio web de canal de retorno (servidor a servidor) entre la autenticación de Adobe Primetime (el SP) y un MVPD (el IdP).
-
 
 
 #### 2 ter. Proporción De Una Interfaz De Usuario De Derechos {#entitlement-ui}

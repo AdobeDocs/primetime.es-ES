@@ -2,8 +2,7 @@
 title: Implementación de los archivos WAR
 description: Implementación de los archivos WAR
 copied-description: true
-exl-id: 9f491596-2a02-4a55-9baa-86407e389d20
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%

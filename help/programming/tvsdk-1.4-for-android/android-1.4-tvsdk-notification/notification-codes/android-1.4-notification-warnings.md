@@ -1,8 +1,7 @@
 ---
 description: Esta tabla proporciona información detallada sobre las notificaciones de tipo WARN.
 title: Códigos de notificación de ADVERTENCIA
-exl-id: e787fad5-fbdc-416d-b03d-8c84f4884c5a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '407'
 ht-degree: 2%

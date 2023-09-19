@@ -1,8 +1,7 @@
 ---
 title: Autorización de comprobación preliminar
 description: Autorización de comprobación preliminar
-exl-id: 036b1a8e-f2dc-4e9a-9eeb-0787e40c00d9
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 0%

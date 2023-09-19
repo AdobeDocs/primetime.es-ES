@@ -1,8 +1,7 @@
 ---
 title: Exportar métricas de un programador y de las MVPD seleccionadas en un segmento
 description: Exportar métricas de un programador y de las MVPD seleccionadas en un segmento
-exl-id: 129f3ae3-09ff-4b40-98a1-157dbd14f13e
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
@@ -20,15 +19,15 @@ Para exportar métricas para programadores específicos y las MVPD seleccionadas
 1. Vaya a uno de los siguientes paneles:
 
    * Puntuaciones generales de uso compartido en toda la industria, para MVPD seleccionados
-      ![](assets/ind-sharpanel-export-option.png)
+     ![](assets/ind-sharpanel-export-option.png)
 
    * Puntuación de uso compartido por canales y MVPD
 
-      ![](assets/sharscorepanel-export-option.png)
+     ![](assets/sharscorepanel-export-option.png)
 
    * Número de cuentas y uso compartido por nivel de probabilidad
 
-      ![](assets/usage-panel-export-option.png)
+     ![](assets/usage-panel-export-option.png)
 
 1. Seleccionar **Exportar** opción disponible en la esquina superior derecha del panel.
 
@@ -36,12 +35,12 @@ Los datos se exportan en formato CSV y el archivo se descarga localmente en el d
 
 * Puntuaciones de uso compartido a nivel de sector para MVPD seleccionadas
 
-   ![](assets/export-ind-sharing-score.png)
+  ![](assets/export-ind-sharing-score.png)
 
 * Puntuación de uso compartido por canales y MVPD en el segmento
 
-   ![](assets/export-risk-index-by-mvpdchannels.png)
+  ![](assets/export-risk-index-by-mvpdchannels.png)
 
 * Número de cuentas y uso compartido por nivel de probabilidad
 
-   ![](assets/export-acc-usage.png)
+  ![](assets/export-acc-usage.png)

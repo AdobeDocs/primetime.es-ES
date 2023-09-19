@@ -1,8 +1,7 @@
 ---
 description: Un MediaResource representa el contenido que está a punto de cargar la instancia de MediaPlayer.
 title: Clases MediaPlayer y MediaResource
-exl-id: c431c9f9-98a3-402c-b799-450f30f668dd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
@@ -20,9 +19,9 @@ La biblioteca TVSDK proporciona un medio sencillo para cargar y preparar el cont
 * Una dirección URL que representa la ubicación del contenido que se va a cargar.
 * Un tipo, que es el tipo de contenido que se va a cargar.
 
-   Es una cadena que define los tipos de contenido que puede cargar el `MediaPlayer`. Los valores posibles son HLS y HDS. Cada valor está asociado con la cadena que representa las extensiones de archivo utilizadas normalmente, &quot;m3u8&quot; para HLS y &quot;f4m&quot; para HDS.
+  Es una cadena que define los tipos de contenido que puede cargar el `MediaPlayer`. Los valores posibles son HLS y HDS. Cada valor está asociado con la cadena que representa las extensiones de archivo utilizadas normalmente, &quot;m3u8&quot; para HLS y &quot;f4m&quot; para HDS.
 * Algunos metadatos, que es una instancia de `Metadata` clase.
 
-   Esta estructura de tipo diccionario puede contener información adicional sobre el contenido que se va a cargar, como información sobre el contenido alternativo o publicitario que se debe colocar en el contenido principal.
+  Esta estructura de tipo diccionario puede contener información adicional sobre el contenido que se va a cargar, como información sobre el contenido alternativo o publicitario que se debe colocar en el contenido principal.
 
 Los metadatos son el medio a través del cual se pasa información relacionada con contenido alternativo a TVSDK. El `Metadata` define la API para un almacén genérico de clave-valor, donde tanto la clave como el valor son cadenas sin formato.

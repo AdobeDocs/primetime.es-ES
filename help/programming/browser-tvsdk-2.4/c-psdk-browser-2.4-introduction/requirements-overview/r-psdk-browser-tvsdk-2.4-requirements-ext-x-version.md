@@ -1,15 +1,14 @@
 ---
 description: La versión de EXT-X-VERSION en el archivo .m3u8 afecta a las funciones disponibles para su aplicación y a las etiquetas EXT válidas en la lista de reproducción/manifiesto.
-title: EXT-X-VERSION requirements
-exl-id: 1b7c205b-c6b1-416f-885a-d1cd23d8e803
-source-git-commit: e2a796dc5eb017929297d127cc79b65ba51a0c75
+title: REQUISITOS DE LA VERSIÓN EXT-X
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 0%
 
 ---
 
-# EXT-X-VERSION requirements{#ext-x-version-requirements}
+# REQUISITOS DE LA VERSIÓN EXT-X{#ext-x-version-requirements}
 
 La versión de `#EXT-X-VERSION` en el archivo .m3u8 afecta a las características disponibles para la aplicación y a las etiquetas EXT válidas en la lista de reproducción/manifiesto.
 
@@ -20,7 +19,7 @@ A continuación se proporciona información sobre la etiqueta `#EXT-X-VERSION`, 
 * La versión debe coincidir con las funciones y atributos de la lista de reproducción de HLS; de lo contrario, podrían producirse errores de reproducción. Para obtener más información, consulte [Especificación de flujo en directo HTTP](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
 * El Adobe recomienda utilizar al menos la versión 2 para la reproducción en clientes basados en TVSDK del explorador.
 
-   Los clientes y servidores deben implementar las versiones de la siguiente manera:
+  Los clientes y servidores deben implementar las versiones de la siguiente manera:
 
 <table frame="all" colsep="1" rowsep="1" id="table_62EB98EDD9DE49EC84CB1C7D59BC40E6"> 
  <thead> 

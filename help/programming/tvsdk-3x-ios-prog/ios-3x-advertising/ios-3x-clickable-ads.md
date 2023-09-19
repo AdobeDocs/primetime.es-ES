@@ -1,8 +1,7 @@
 ---
 description: TVSDK le proporciona información para que pueda actuar sobre los anuncios en los que se hace clic. A medida que crea la interfaz de usuario del reproductor, debe decidir cómo responder cuando un usuario haga clic en un anuncio en el que se puede hacer clic.
 title: Anuncios en los que se puede hacer clic
-exl-id: 4c4d37ee-0353-4c0f-8a11-d9be9bd427ec
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%
@@ -38,10 +37,10 @@ Cuando un usuario hace clic en un anuncio, en un anuncio tipo titular o en un bo
 
    * En la aplicación, al abrir la URL de pulsación en un explorador.
 
-      En plataformas de escritorio, el área de reproducción de anuncios de vídeo se utiliza para invocar direcciones URL de pulsación cuando el usuario hace clic.
+     En plataformas de escritorio, el área de reproducción de anuncios de vídeo se utiliza para invocar direcciones URL de pulsación cuando el usuario hace clic.
    * Redirija a los usuarios a su explorador web móvil externo.
 
-      En dispositivos móviles, el área de reproducción de anuncios de vídeo se utiliza para otras funciones, como ocultar y mostrar controles, pausar la reproducción, expandirse a pantalla completa, etc. En estos dispositivos, se utiliza una vista independiente, como un botón patrocinador, para iniciar la URL de pulsación.
+     En dispositivos móviles, el área de reproducción de anuncios de vídeo se utiliza para otras funciones, como ocultar y mostrar controles, pausar la reproducción, expandirse a pantalla completa, etc. En estos dispositivos, se utiliza una vista independiente, como un botón patrocinador, para iniciar la URL de pulsación.
 
 1. Cierre la ventana del explorador en la que se muestra la información de pulsaciones y reanude la reproducción del vídeo.
 

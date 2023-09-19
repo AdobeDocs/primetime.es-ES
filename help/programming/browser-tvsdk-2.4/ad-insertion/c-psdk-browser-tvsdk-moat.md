@@ -2,8 +2,7 @@
 title: Medición de anuncios de Moat
 description: Medición de anuncios de Moat
 copied-description: true
-exl-id: 3d54ca34-0b75-4a8e-ab2d-bbe59683c2cf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%

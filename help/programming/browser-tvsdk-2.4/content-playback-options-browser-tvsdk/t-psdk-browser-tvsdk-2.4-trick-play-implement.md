@@ -1,8 +1,7 @@
 ---
 description: Cuando los usuarios avanzan o rebobinan rápidamente a través de los medios, se encuentran en el modo de reproducción con trucos. Para entrar en el modo de reproducción con trucos, debe establecer la velocidad de reproducción de MediaPlayer en un valor distinto de 1.
 title: Implementar avance rápido y rebobinado
-exl-id: 21f9a3f6-1cae-4240-991d-c03a0e49adf3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 0%
@@ -20,7 +19,6 @@ Cuando los usuarios avanzan o rebobinan rápidamente a través de los medios, se
 >* Al cambiar del contenido principal a un anuncio, el TVSDK del explorador deja el modo de reproducción con trucos.
 >
 
-
 Para cambiar la velocidad, debe establecer un valor.
 
 1. Cambie del modo de reproducción normal (1x) al modo de reproducción con trucos ajustando la velocidad en el `MediaPlayer` a un valor permitido.
@@ -28,23 +26,23 @@ Para cambiar la velocidad, debe establecer un valor.
    * El `MediaPlayerItem` define las velocidades de reproducción permitidas.
    * TVSDK del explorador selecciona la tasa permitida más cercana si la tasa especificada no está permitida.
 
-      La siguiente función de ejemplo establece la tasa:
+     La siguiente función de ejemplo establece la tasa:
 
-      ```js
-      setTrickPlayRate = function (player, trickPlayRate) { 
-                    player.rate = trickPlayRate; 
-      }
-      ```
+     ```js
+     setTrickPlayRate = function (player, trickPlayRate) { 
+                   player.rate = trickPlayRate; 
+     }
+     ```
 
-      La siguiente función de ejemplo se puede utilizar para consultar las tasas de reproducción disponibles:
+     La siguiente función de ejemplo se puede utilizar para consultar las tasas de reproducción disponibles:
 
-      ```js
-      getAvailableTrickPlayRates = function (player) { 
-               var item = player.currentItem; 
-               var availableRates = item. availablePlaybackRates; 
-               return availableRates; 
-      } 
-      ```
+     ```js
+     getAvailableTrickPlayRates = function (player) { 
+              var item = player.currentItem; 
+              var availableRates = item. availablePlaybackRates; 
+              return availableRates; 
+     } 
+     ```
 
 1. Si lo desea, puede escuchar eventos de cambio de tarifa, que le permiten saber cuándo solicitó un cambio de tarifa y cuándo se produce realmente un cambio de tarifa.
 
@@ -54,7 +52,7 @@ Para cambiar la velocidad, debe establecer un valor.
 
    * `AdobePSDK.PSDKEventType.RATE_PLAYING` cuando la reproducción se reanuda a la velocidad seleccionada.
 
-      El TVSDK del explorador envía ambos eventos cuando el reproductor vuelve del modo truco-reproducción al modo de reproducción normal.
+     El TVSDK del explorador envía ambos eventos cuando el reproductor vuelve del modo truco-reproducción al modo de reproducción normal.
 
 ## Elementos de API de tasa de cambio {#rate-change-API-elements}
 
@@ -67,12 +65,12 @@ Utilice los siguientes elementos de la API para cambiar las tasas de reproducci�
 * `MediaPlayerItem.istrickPlaySupported`
 * `MediaPlayerItem.availablePlaybackRates` - especifica tasas válidas.
 
-   | Valor de tarifa | Efecto en la reproducción |
-   |---|---|
-   | 2.0, 4.0, 8.0, 16.0, 32.0, 64.0 | Cambia al modo de avance rápido con el multiplicador especificado más rápido de lo normal (por ejemplo, 4 es 4 veces más rápido de lo normal) |
-   | -2.0, -4.0, -8.0, -16.0, -32.0, -64.0 | Cambia al modo de rebobinado rápido |
-   | 1.0 | Cambia al modo de reproducción normal (llamando a `play` es lo mismo que establecer la propiedad tasa en 1,0) |
-   | 0.0 | Pausas (llamada a `pause` es lo mismo que establecer la propiedad tasa en 0,0) |
+  | Valor de tarifa | Efecto en la reproducción |
+  |---|---|
+  | 2.0, 4.0, 8.0, 16.0, 32.0, 64.0 | Cambia al modo de avance rápido con el multiplicador especificado más rápido de lo normal (por ejemplo, 4 es 4 veces más rápido de lo normal) |
+  | -2.0, -4.0, -8.0, -16.0, -32.0, -64.0 | Cambia al modo de rebobinado rápido |
+  | 1.0 | Cambia al modo de reproducción normal (llamando a `play` es lo mismo que establecer la propiedad tasa en 1,0) |
+  | 0.0 | Pausas (llamada a `pause` es lo mismo que establecer la propiedad tasa en 0,0) |
 
 ## Limitaciones y comportamiento para el truco {#limitations-and-behavior-trick-play}
 
@@ -87,4 +85,4 @@ Esta es una lista de las limitaciones del modo truco-juego:
 * En las búsquedas, si la reproducción se encuentra en modo de reproducción con trucos, la velocidad de reproducción se establece en 1 y la reproducción normal se reanuda.
 * La lógica de velocidad de bits adaptable (ABR) está habilitada.
 
-   Cuando se utilizan adaptaciones normales, los perfiles están restringidos entre `ABRControlParameters.minBitRate` y `ABRControlParameters.maxBitRate`. Al utilizar adaptaciones de juego con trucos, los perfiles están restringidos entre `ABRControlParameters.minTrickPlayBitRate` y `ABRControlParameters.maxTrickPlayBitRate`.
+  Cuando se utilizan adaptaciones normales, los perfiles están restringidos entre `ABRControlParameters.minBitRate` y `ABRControlParameters.maxBitRate`. Al utilizar adaptaciones de juego con trucos, los perfiles están restringidos entre `ABRControlParameters.minTrickPlayBitRate` y `ABRControlParameters.maxTrickPlayBitRate`.

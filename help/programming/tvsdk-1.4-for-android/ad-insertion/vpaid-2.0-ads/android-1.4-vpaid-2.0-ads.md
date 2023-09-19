@@ -1,8 +1,7 @@
 ---
 description: La Definición de la interfaz para servicio de anuncios del reproductor de vídeo (VPAID) 2.0 proporciona una interfaz común para reproducir anuncios de vídeo. Proporciona una experiencia multimedia enriquecida para los usuarios y permite a los editores segmentar mejor los anuncios, rastrear las impresiones de los anuncios y monetizar el contenido de vídeo.
 title: Compatibilidad con anuncios VPAID 2.0
-exl-id: ee3e0cd9-463e-4de9-a94f-292e968b6f08
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 0%
@@ -17,11 +16,11 @@ Se admiten las siguientes funciones:
 
 * Versión 2.0 de la especificación VPAID
 
-   Para obtener más información, consulte [IAB VPAID 2.0](https://www.iab.com/wp-content/uploads/2015/06/VPAID_2_0_Final_04-10-2012.pdf).
+  Para obtener más información, consulte [IAB VPAID 2.0](https://www.iab.com/wp-content/uploads/2015/06/VPAID_2_0_Final_04-10-2012.pdf).
 * Anuncios VPAID lineales en contenido de vídeo bajo demanda (VOD)
 * Anuncios VPAID de JavaScript
 
-   Los anuncios VPAID deben estar basados en JavaScript y la respuesta de publicidad debe identificar el tipo de medio del anuncio VPAID como `application/javascript`.
+  Los anuncios VPAID deben estar basados en JavaScript y la respuesta de publicidad debe identificar el tipo de medio del anuncio VPAID como `application/javascript`.
 
 No se admiten las siguientes funciones:
 
@@ -38,15 +37,15 @@ Se han realizado los siguientes cambios en la API:
 
 * A `getCustomAdView` se ha añadido la función en `MediaPlayer` y devuelve la vista web que procesa el anuncio VPAID.
 
-   Para obtener más información sobre `CustomAdView` objeto devuelto por esta función, consulte [Referencias de API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/index.html).
+  Para obtener más información sobre `CustomAdView` objeto devuelto por esta función, consulte [Referencias de API](https://help.adobe.com/en_US/primetime/api/psdk/javadoc_1.4/index.html).
 
 * A `CUSTOM_AD` El evento se envía desde la instancia del reproductor de contenidos.
 
-   La aplicación puede registrar una llamada de retorno de evento implementando `CustomAdEventListener`.
+  La aplicación puede registrar una llamada de retorno de evento implementando `CustomAdEventListener`.
 
 * `MediaPlayer.setCustomAdTimeout(int milliseconds)` permite cambiar el tiempo de espera predeterminado en el proceso de carga de VPAID.
 
-   El valor de tiempo de espera predeterminado es 10 segundos.
+  El valor de tiempo de espera predeterminado es 10 segundos.
 
 <!--<a id="section_495700E1C5404A7B85307A4137C740C5"></a>-->
 
@@ -57,7 +56,7 @@ Mientras se reproduce el anuncio VPAID:
 
 * Los anuncios VPAID no tienen una duración predefinida, ya que el anuncio puede ser interactivo.
 
-   Es posible que la duración del anuncio y la duración total de la pausa publicitaria definidas por la respuesta del servidor de publicidad no sean precisas.
+  Es posible que la duración del anuncio y la duración total de la pausa publicitaria definidas por la respuesta del servidor de publicidad no sean precisas.
 
 ## Implementación de la integración con VPAID 2.0 {#implement-vpaid-integration}
 

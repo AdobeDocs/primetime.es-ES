@@ -2,8 +2,7 @@
 title: Selección de las pistas de audio
 description: Selección de las pistas de audio
 copied-description: true
-exl-id: d4a7260a-82dd-4b57-8037-b91815d9b954
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '136'
 ht-degree: 0%

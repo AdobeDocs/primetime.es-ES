@@ -1,8 +1,7 @@
 ---
 description: MediaPlayer proporciona una función notifyClick() que envía eventos relacionados con anuncios cuando se reproduce un anuncio en el que se puede hacer clic. Estos eventos proporcionan información sobre anuncios y pausas publicitarias que la aplicación puede utilizar para ofrecer funciones de pulsación.
 title: Gestionar anuncios en los que se puede hacer clic
-exl-id: 25738592-f3fe-4f13-b2bb-26a5f942cd18
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%

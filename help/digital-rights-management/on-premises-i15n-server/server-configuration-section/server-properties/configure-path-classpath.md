@@ -2,8 +2,7 @@
 title: Configurar la ruta y la ruta de clase
 description: Configurar la ruta y la ruta de clase
 copied-description: true
-exl-id: e6e9f837-4e3d-43e1-971d-3fa0ccaeff39
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
@@ -19,6 +18,7 @@ El [!DNL flashaccess.war] contains [!DNL jsafeWithNative.jar], que es la bibliot
    * **Linux / [!DNL libjsafe.so] -** El directorio que contiene [!DNL libjsafe.so] debe estar en la ruta (las bibliotecas nativas Crypto-J también están disponibles para otras plataformas). Por ejemplo, set [!DNL libjsafe.so] el `LD_LIBRARY_PATH`.
 
    * **Windows / [!DNL jsafe.dll] -** El homólogo de Windows en [!DNL libjsafe.so] es el adecuado [!DNL jsafe.dll].
+
    Estas bibliotecas están disponibles en el [!DNL thirdparty] carpeta de la biblioteca.
 1. Ponga uno de los [!DNL adobe-flashaccess-certs] archivos jar en la ruta de clase.
 

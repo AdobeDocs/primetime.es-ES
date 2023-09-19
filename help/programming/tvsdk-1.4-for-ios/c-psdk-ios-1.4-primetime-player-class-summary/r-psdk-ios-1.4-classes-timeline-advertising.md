@@ -1,8 +1,7 @@
 ---
 description: Estas clases proporcionan información sobre los anuncios que se producen dentro de una cronología.
 title: Clases de publicidad de cronología
-exl-id: 004c706a-55cc-446a-93b1-c5c7c011ba42
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 0%

@@ -2,8 +2,7 @@
 title: Establecer una hora de inicio personalizada en la implementación de referencia
 description: Establecer una hora de inicio personalizada en la implementación de referencia
 copied-description: true
-exl-id: efa2560e-d6f5-44e9-9422-a72947616f61
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%

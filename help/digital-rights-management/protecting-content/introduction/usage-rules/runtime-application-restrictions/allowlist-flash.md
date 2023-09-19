@@ -2,8 +2,7 @@
 title: Lista de permitidos para SWF de Adobe ® Flash ® Player
 description: Lista de permitidos para SWF de Adobe ® Flash ® Player
 copied-description: true
-exl-id: 1bae06b6-dbac-4839-b1d3-b7f6379b521a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 0%

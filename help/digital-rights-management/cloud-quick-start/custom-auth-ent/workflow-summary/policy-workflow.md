@@ -2,8 +2,7 @@
 title: Detalles del flujo de trabajo de políticas
 description: Detalles del flujo de trabajo de políticas
 copied-description: true
-exl-id: e3daf7a9-def0-48a9-8190-adb25eec7b59
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Si utiliza Adobe Primetime DRM Professional, puede generar previamente licencias e incrustar licencias en el contenido. Esta función se puede combinar con el encadenamiento de licencias mejorado, de modo que una licencia de hoja se genera previamente y se incrusta en el contenido, y el cliente puede solicitar una licencia de raíz (enlazada a un equipo o dominio) desde un servidor de licencias. Como alternativa, las aplicaciones cliente pueden implementar un flujo de trabajo en el que el dispositivo se registra previamente con un servidor, el servidor genera previamente las licencias enlazadas a dicho dispositivo y el cliente recupera sus licencias desde un simple servidor web HTTP.
 title: Generación previa de licencias
-exl-id: 6ced7dde-b4bb-470d-bdae-3042f5577b67
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '611'
 ht-degree: 0%

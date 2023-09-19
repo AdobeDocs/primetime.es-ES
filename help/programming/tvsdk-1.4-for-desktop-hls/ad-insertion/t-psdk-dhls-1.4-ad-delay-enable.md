@@ -1,8 +1,7 @@
 ---
 description: Puede especificar si desea permitir la reproducción antes de que todos los anuncios se carguen y se coloquen en la cronología. Iniciar la reproducción de esta manera permite que el usuario acceda más rápido al contenido principal. Esta función solo se aplica al DVR en directo y no funciona, por ejemplo, en los recursos de VOD.
 title: Habilitar la carga diferida de anuncios
-exl-id: 6b70a7ae-28ce-4a19-9560-26e937c721cd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 title: Cómo incorporarse y empezar a usar Account IQ
 description: Incorporación, requisitos previos e introducción a Account IQ.
-exl-id: 840ab081-0073-492f-86b2-ba174ae93256
-source-git-commit: b83105b94dc1c78de84908f5676ade6a62486349
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 0%
@@ -52,4 +51,4 @@ Account IQ es compatible con las versiones más recientes de los siguientes expl
 
 >[!IMPORTANT]
 >
->Si los usuarios no pueden acceder al panel de control de Account IQ, póngase en contacto con el servicio de asistencia al Adobe para asegurarse de que el ID de su organización esté en la lista blanca de Account IQ.
+>Si los usuarios no pueden acceder al panel de control de Account IQ, póngase en contacto con el servicio de asistencia al Adobe para asegurarse de que el ID de su organización esté incluido en la lista blanca de Account IQ.

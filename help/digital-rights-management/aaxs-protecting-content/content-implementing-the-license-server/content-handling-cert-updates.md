@@ -2,8 +2,7 @@
 title: Administrar actualizaciones de certificados cuando caducan los certificados emitidos por el Adobe
 description: Administrar actualizaciones de certificados cuando caducan los certificados emitidos por el Adobe
 copied-description: true
-exl-id: 9768544e-7e92-4c3a-9863-af9aed74a0c0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
@@ -46,23 +45,23 @@ Utilice el siguiente procedimiento para actualizar el servidor con los nuevos ce
 
       * En la implementación de referencia, configúrela a través de `LicenseHandler.ServerCredential` propiedad.
       * En Adobe Access Server para flujo protegido, la credencial actual debe ser la primera credencial especificada en la variable `LicenseServerCredential` en el archivo flashaccess-tenant.xml.
+
    * Asegúrese de que las credenciales actuales y antiguas se proporcionan a `AsymmetricKeyRetrieval`
 
       * En la implementación de referencia, configúrela a través de `LicenseHandler.ServerCredential` y `AsymmetricKeyRetrieval.ServerCredential. n` propiedades.
       * En Adobe Access Server para flujo protegido, las credenciales antiguas se especifican después de la primera credencial de la `LicenseServerCredential` en el archivo flashaccess-tenant.xml.
+
    Para las credenciales de transporte:
 
    * Asegúrese de que la credencial actual se pase al `HandlerConfiguration.setServerTransportCredential()` método:
 
       * En la implementación de referencia, configúrela a través de `HandlerConfiguration.ServerTransportCredential` propiedad.
       * En Adobe Access Server para el streaming protegido, la credencial actual debe ser la primera especificada en la variable `TransportCredential` en el archivo flashaccess-tenant.xml.
+
    * Asegúrese de que las credenciales antiguas se proporcionan a `HandlerConfiguration.setAdditionalServerTransportCredentials`():
 
       * En la implementación de referencia, configúrela a través de `HandlerConfiguration.AdditionalServerTransportCredential. n` propiedades.
       * En Adobe Access Server para flujo continuo protegido, esto se especifica después de la primera credencial en la `TransportCredential` en el archivo flashaccess-tenant.xml.
-
-
-
 
 1. Actualice las herramientas de empaquetado para asegurarse de que empaquetan el contenido con las credenciales actuales. Asegúrese de que se utilizan el certificado de servidor de licencias, el certificado de transporte y las credenciales del empaquetador más recientes para el empaquetado.
 1. Para actualizar el certificado del servidor de licencias del servidor de claves:

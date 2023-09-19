@@ -2,8 +2,7 @@
 title: Nivel de seguridad mínimo para DRM y tiempos de ejecución
 description: Nivel de seguridad mínimo para DRM y tiempos de ejecución
 copied-description: true
-exl-id: 52f51382-ebd1-4efd-9e58-93e951c0a54c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%

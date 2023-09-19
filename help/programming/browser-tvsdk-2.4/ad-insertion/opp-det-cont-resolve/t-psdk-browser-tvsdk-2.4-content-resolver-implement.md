@@ -1,8 +1,7 @@
 ---
 description: Puede implementar sus propias resoluciones de contenido en función de las resoluciones predeterminadas.
 title: Implementación de un solucionador de contenido personalizado
-exl-id: f594840b-ff56-49c5-baf5-ac2800411215
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Recuerde la siguiente información:
 
 * El solucionador de contenido llama a `client.process` para especificar qué operación de cronología debe ejecutar TVSDK.
 
-   La operación suele ser una colocación de pausa publicitaria.
+  La operación suele ser una colocación de pausa publicitaria.
 
 * El solucionador de contenido llama a `client.notifyCompleted` si el proceso de resolución se ha realizado correctamente o `client.notifyFailed` si el proceso falla.
 

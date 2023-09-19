@@ -1,8 +1,7 @@
 ---
 description: Cuando los usuarios avanzan o rebobinan rápidamente a través de los medios, se encuentran en el modo de reproducción con trucos. Para entrar en el modo de reproducción con trucos, debe establecer la velocidad de reproducción de MediaPlayer en un valor distinto de 1.
 title: Implementar avance rápido y rebobinado
-exl-id: c1d70d46-449b-494b-9b89-5553e9bcdbc3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 0%
@@ -20,9 +19,9 @@ Para cambiar la velocidad, debe establecer un valor.
    * El `MediaPlayerItem` define las velocidades de reproducción permitidas.
    * TVSDK selecciona la tasa permitida más cercana si la tasa especificada no está permitida.
 
-      Cuando se cambia la tasa de reproducción engañosa de 0 (pausa) o 1 (reproducción normal) a una tasa que es buena que 1 o menor que -1, se eliminan todos los anuncios de la cronología. Solo hay un punto en toda la cronología que facilita una acción de juego engañoso para permitir que el contenido se reenvíe y rebobine rápidamente sin detenerse en ninguna posición del anuncio. Esta acción se habilita mediante una acción de desprendimiento de escala de tiempo en TVSDK para eliminar todos los AdBreaks resueltos. Cuando el juego de trucos se reanuda en 0 o 1, la acción de adjunto de la cronología restaura primero los saltos de publicidad.
+     Cuando se cambia la velocidad de reproducción engañosa de 0 (pausa) o 1 (reproducción normal) a una velocidad mayor que 1 o menor que -1, se eliminan todos los anuncios de la cronología. Solo hay un punto en toda la cronología que facilita una acción de juego engañoso para permitir que el contenido se reenvíe y rebobine rápidamente sin detenerse en ninguna posición del anuncio. Esta acción se habilita mediante una acción de desprendimiento de escala de tiempo en TVSDK para eliminar todos los AdBreaks resueltos. Cuando el juego de trucos se reanuda en 0 o 1, la acción de adjunto de la cronología restaura primero los saltos de publicidad.
 
-      Recuerde la siguiente información:
+     Recuerde la siguiente información:
 
    * Si la acción de reproducción engañosa es rebobinar el contenido, la reproducción se reanuda cuando la velocidad se cambia a 1.
    * Si la acción de reproducción engañosa es avanzar rápidamente por el contenido, el último adBreak omitido se reproduce en la posición de reanudación.
@@ -90,4 +89,4 @@ Estas son las limitaciones del modo de juego con trucos:
    * El `AdBreakPlaybackEvent.AD_BREAK_SKIPPED` el evento se envía inmediatamente antes de que se vaya a omitir una pausa publicitaria. El reproductor puede utilizar este evento para implementar una lógica personalizada relacionada con los saltos de publicidad omitidos.
    * La salida del juego de trucos invoca la misma política de reproducción de anuncios que al salir de la búsqueda.
 
-      Por lo tanto, como en la búsqueda, el comportamiento depende de si la directiva de reproducción de la aplicación es diferente de la predeterminada. De forma predeterminada, la última pausa publicitaria omitida se reproduce en el punto en el que sale de la reproducción con trucos.
+     Por lo tanto, como en la búsqueda, el comportamiento depende de si la directiva de reproducción de la aplicación es diferente de la predeterminada. De forma predeterminada, la última pausa publicitaria omitida se reproduce en el punto en el que sale de la reproducción con trucos.

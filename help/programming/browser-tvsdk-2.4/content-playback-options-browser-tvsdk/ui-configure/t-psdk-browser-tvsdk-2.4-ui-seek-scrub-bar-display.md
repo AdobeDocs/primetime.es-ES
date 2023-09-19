@@ -1,8 +1,7 @@
 ---
 description: En el TVSDK del explorador, puede buscar una posición específica (tiempo) en un flujo. Un flujo puede ser una lista de reproducción de ventana deslizante o contenido de vídeo bajo demanda (VOD).
 title: Controlar la búsqueda al utilizar la barra de búsqueda
-exl-id: 4c09b218-917a-4318-82b0-c221d450a2c1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
@@ -46,7 +45,7 @@ En el TVSDK del explorador, puede buscar una posición específica (tiempo) en u
 
    Esto es importante porque la posición de inicio real después de la búsqueda podría ser diferente de la posición solicitada. Algunas de las siguientes reglas pueden aplicarse:
 
-   * El comportamiento de reproducción se ve afectado si una búsqueda u otro cambio de posición termina en mitad de una pausa publicitaria o omite las pausas publicitarias.
+   * El comportamiento de reproducción se ve afectado si una búsqueda, u otro cambio de posición, termina en mitad de una pausa publicitaria o omite las pausas publicitarias.
    * Solo puede buscar en la duración buscada del recurso. Para VOD, es decir, desde 0 hasta la duración del recurso.
 
 1. Para la barra de búsqueda creada en el ejemplo anterior, escuche `setPositionChangeListener()` para ver cuándo está borrando el usuario:

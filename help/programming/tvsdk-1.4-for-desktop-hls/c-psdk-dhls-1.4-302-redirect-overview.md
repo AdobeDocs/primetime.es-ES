@@ -1,8 +1,7 @@
 ---
 description: La optimización de redireccionamiento 302 minimiza el número de respuestas de redireccionamiento 302, lo que permite que su aplicación equilibre la carga de forma más eficaz.
 title: Optimización de redireccionamiento HTTP 302
-exl-id: 9b9d98ae-a509-47dc-a5ac-6be9b0f214c1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 0%
@@ -24,7 +23,7 @@ Si activa esta función, solo funcionará correctamente si *todo* de las siguien
 
 >[!IMPORTANT]
 >
->Para asegurarse de que las cookies se pasan con solicitudes de publicidad, deshabilite el redireccionamiento 302. Cuando la redirección 302 está habilitada, la solicitud de publicidad puede redirigirse a un dominio diferente del dominio del que se originó la cookie.
+>Para asegurarse de que las cookies se pasan con solicitudes de publicidad, deshabilite el redireccionamiento 302. Cuando la redirección 302 está habilitada, la solicitud de publicidad puede redirigirse a un dominio diferente del dominio desde el que se originó la cookie.
 
 ## Deshabilitar o habilitar la optimización de redireccionamiento 302 {#section_D6687FC44C61446F878008B629A5FA19}
 

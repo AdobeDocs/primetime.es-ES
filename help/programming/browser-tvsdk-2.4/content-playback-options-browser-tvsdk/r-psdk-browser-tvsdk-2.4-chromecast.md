@@ -1,8 +1,7 @@
 ---
 description: Puede convertir cualquiera de los flujos de una aplicación de remitente basada en TVSDK y hacer que el flujo se reproduzca en Chromecast con el TVSDK del explorador.
 title: Aplicación Google Cast para el explorador TVSDK
-exl-id: 71077467-8040-4f04-a43b-cc963701c426
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -19,12 +18,12 @@ Hay dos componentes en una aplicación habilitada para colada:
 
 * La aplicación del remitente, que actúa como control remoto.
 
-   Las aplicaciones de remitente incluyen teléfonos inteligentes, equipos personales, etc. La aplicación se puede desarrollar con SDK nativos para iOS, Android y Chrome.
+  Las aplicaciones de remitente incluyen teléfonos inteligentes, equipos personales, etc. La aplicación se puede desarrollar con SDK nativos para iOS, Android y Chrome.
 * La aplicación del receptor, que se ejecuta en Chromecast y reproduce el contenido.
 
-   >[!IMPORTANT]
-   >
-   >Esta aplicación solo puede ser de HTML5.
+  >[!IMPORTANT]
+  >
+  >Esta aplicación solo puede ser de HTML5.
 
 El remitente y el destinatario se comunican mediante los SDK de conversión para pasar mensajes.
 
@@ -67,18 +66,18 @@ Para establecer una conexión, el remitente y el receptor deben completar las si
 * El remitente debe revisar la documentación de la plataforma en [Desarrollo de aplicación de remitente](https://developers.google.com/cast/docs/sender_apps).
 * El receptor utiliza las API del receptor de difusión para establecer una conexión con la aplicación del remitente. Por ejemplo:
 
-   ```js
-   window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance(); 
-   
-   window.castReceiverManager.onReady = function (event) { /*handle event*/ }; 
-   window.castReceiverManager.onSenderConnected = function (event) { /*handle event*/ }; 
-   window.castReceiverManager.onSenderDisconnected = function (event) { /*handle event*/ }; 
-   
-   var customMessageBus = window.castReceiverManager.getCastMessageBus(MSG_NAMESPACE); 
-   customMessageBus.onMessage = function (event) { /*handle messages*/ }; 
-   
-   window.castReceiverManager.start(); 
-   ```
+  ```js
+  window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance(); 
+  
+  window.castReceiverManager.onReady = function (event) { /*handle event*/ }; 
+  window.castReceiverManager.onSenderConnected = function (event) { /*handle event*/ }; 
+  window.castReceiverManager.onSenderDisconnected = function (event) { /*handle event*/ }; 
+  
+  var customMessageBus = window.castReceiverManager.getCastMessageBus(MSG_NAMESPACE); 
+  customMessageBus.onMessage = function (event) { /*handle messages*/ }; 
+  
+  window.castReceiverManager.start(); 
+  ```
 
 ## Gestión de mensajes {#section_3E4814546F5946C9B3E7A1AE384B4FF8}
 

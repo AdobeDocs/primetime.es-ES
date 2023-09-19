@@ -1,8 +1,7 @@
 ---
 description: Para proporcionar una experiencia de visualización más fluida, el TVSDK del explorador a veces almacena en búfer el flujo de vídeo. Puede configurar la forma en que el reproductor se almacena en búfer.
 title: Almacenamiento en búfer
-exl-id: 786379d1-0f2d-44a9-b580-1c8dcbd3fd17
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 0%
@@ -25,11 +24,11 @@ MediaPlayer proporciona métodos para establecer y obtener el tiempo de almacena
 
 * Para utilizar los parámetros de búfer, utilice el `bufferControlParameters` atributo.
 
-   Por ejemplo, para establecer el búfer inicial en 2 segundos y el tiempo de búfer de reproducción en 30 segundos:
+  Por ejemplo, para establecer el búfer inicial en 2 segundos y el tiempo de búfer de reproducción en 30 segundos:
 
-   ```js
-   var params = new AdobePSDK.BufferControlParameters(2000, 30000);
-   ```
+  ```js
+  var params = new AdobePSDK.BufferControlParameters(2000, 30000);
+  ```
 
 ## Políticas de tiempo de almacenamiento en búfer {#section_7EF2947931654CCC8DAB9172391FA4EB}
 

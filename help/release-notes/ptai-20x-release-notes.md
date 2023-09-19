@@ -1,8 +1,7 @@
 ---
 title: Notas de la versión de PTAI 20.12.1
 description: Las notas de la versión de PTAI describen las novedades o los cambios, los problemas resueltos y conocidos en Primetime Ad Insertion en el año 2020.
-exl-id: 47e36e42-b6a0-408c-93da-f63c929396b5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1081'
 ht-degree: 0%
@@ -66,9 +65,9 @@ Para obtener más información o habilitar esta función, póngase en contacto c
 
 * Se proporciona compatibilidad para limitar el tiempo total de resolución de anuncios, si los proveedores tardan demasiado en responder. Para habilitar la limitación, establezca el parámetro de API de arranque `ptadtimeout` a un valor en milisegundos.
 
-   >[!NOTE]
-   >
-   >Este tiempo de espera solo se aplica a solicitudes de publicidad, no a solicitudes de creatividad publicitaria.
+  >[!NOTE]
+  >
+  >Este tiempo de espera solo se aplica a solicitudes de publicidad, no a solicitudes de creatividad publicitaria.
 
 ### Versión 20.9.1
 
@@ -195,11 +194,11 @@ Póngase en contacto con la asistencia técnica del Adobe para habilitar las sig
 
 * **Compatibilidad con VMAP con FER para nbc CueFormat**
 
-   Convertir las señales de flujo FER en parámetros de anulación de línea de tiempo FW, cuando `ptcueformat=nbc` y el flujo es un flujo de VOD con señales en manifiesto y anuncios predefinidos.
+  Convertir las señales de flujo FER en parámetros de anulación de línea de tiempo FW, cuando `ptcueformat=nbc` y el flujo es un flujo de VOD con señales en manifiesto y anuncios predefinidos.
 
 * Limpie el campo user-agent en el encabezado HTTP antes de reenviarlo a proveedores de publicidad de terceros/CDN.
 
-* Filtre los caracteres de control/no imprimibles (código ASCII &lt; 32) de los encabezados HTTP user-agent antes de enviarlos a Auditude y otros proveedores de publicidad, CDN. Auditude Ad-Call solía fallar para estos encabezados no válidos.
+* Filtre los caracteres de control/no imprimibles (código ASCII &lt; 32) de los encabezados HTTP user-agent antes de enviarlos al Auditude y a otros proveedores de publicidad, CDN. La llamada de anuncio del Auditude solía fallar para estos encabezados no válidos.
 
 * Purgue los objetos V1 antiguos de los grupos de NetStorage para mantener el recuento de objetos dentro de los límites seguros de Akamai.
 

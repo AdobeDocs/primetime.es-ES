@@ -2,8 +2,7 @@
 title: Propiedades del archivo de configuración
 description: Propiedades del archivo de configuración
 copied-description: true
-exl-id: 6405126d-4cf2-4ffc-821d-fbfdc00b60ef
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1119'
 ht-degree: 0%
@@ -91,7 +90,7 @@ El archivo de configuración especifica las siguientes propiedades. Para nombres
      <ul id="ul_a5j_q4t_44"> 
       <li id="li_25CAF96C27F34848A95B2E3693847C71"><span class="codeph"> start</span> (obligatorio): el intervalo de inicio especifica que el cliente debe iniciar la sincronización con el servidor esta cantidad de minutos desde la última sincronización. </li> 
       <li id="li_CC9068CFE75645029C947C9E1B53351F"><span class="codeph"> forzar</span> (opcional): la probabilidad de sincronización forzada es la probabilidad (0-100) con la que el cliente debe forzar un mensaje de sincronización durante la reproducción. </li> 
-      <li id="li_C31A6250F19348FBB8B7569D00C6314E"><span class="codeph"> hardStop</span> (opcional): El intervalo de parada grave es el tiempo en minutos tras el cual el cliente falla en la reproducción si no puede sincronizarse. Si se establece, debe ser bueno que el intervalo de inicio. </li> 
+      <li id="li_C31A6250F19348FBB8B7569D00C6314E"><span class="codeph"> hardStop</span> (opcional): El intervalo de parada grave es el tiempo en minutos tras el cual el cliente falla en la reproducción si no puede sincronizarse. Si se establece, debe ser mayor que el intervalo de inicio. </li> 
      </ul>Durante la actualización, utilice <span class="codeph"> -sync</span> sin los argumentos restantes para quitar los requisitos de sincronización. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 

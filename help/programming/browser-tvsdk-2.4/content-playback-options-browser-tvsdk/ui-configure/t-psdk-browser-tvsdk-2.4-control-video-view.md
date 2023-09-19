@@ -1,8 +1,7 @@
 ---
 description: Puede controlar la posición y el tamaño de la vista de vídeo mediante el objeto MediaPlayerView.
 title: Controlar la posición y el tamaño de la vista de vídeo
-exl-id: ab88a90f-4493-4f05-8da0-703ab3cf159e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 Puede controlar la posición y el tamaño de la vista de vídeo mediante el objeto MediaPlayerView.
 
-TVSDK del explorador intenta mantener de forma predeterminada la relación de aspecto de la vista de vídeo siempre que el tamaño o la posición del vídeo se modifican debido a un cambio realizado por la aplicación, un conmutador de perfil, un conmutador de contenido, etc.
+TVSDK del explorador intenta de forma predeterminada mantener la relación de aspecto de la vista de vídeo siempre que el tamaño o la posición del vídeo se modifican debido a un cambio realizado por la aplicación, un conmutador de perfil, un conmutador de contenido, etc.
 
 Puede anular el comportamiento de relación de aspecto predeterminado especificando un *política de escalado*. Especifique la política de escalado mediante la variable `MediaPlayerView` del objeto `scalePolicy` propiedad. La política de escala predeterminada de `MediaPlayerView` se configura con una instancia de `MaintainAspectRatioScalePolicy` clase. Para restablecer la política de escalado, sustituya la instancia predeterminada de `MaintainAspectRatioScalePolicy` el `MediaPlayerView.scalePolicy` con su propia política.
 

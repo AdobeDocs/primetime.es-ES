@@ -1,8 +1,7 @@
 ---
 description: Cuando un consumidor adquiere un archivo de contenido protegido de un sitio web o CDN, también debe adquirir una licencia que contenga una clave para descifrar el vídeo antes de poder reproducirlo. Los siguientes pasos ilustran un flujo de trabajo común sobre cómo un equipo que ejecuta Flash Player o Adobe AIR accede al contenido protegido
 title: Adquisición de contenido
-exl-id: 92d51928-6021-4284-9310-4e6ce758bffc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 0%

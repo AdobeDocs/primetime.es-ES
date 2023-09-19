@@ -2,8 +2,7 @@
 title: Resumen del proceso de adquisición de licencia
 description: Resumen del proceso de adquisición de licencia
 copied-description: true
-exl-id: 0e1c43a5-9a7d-4534-acd6-7feff94f4670
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%

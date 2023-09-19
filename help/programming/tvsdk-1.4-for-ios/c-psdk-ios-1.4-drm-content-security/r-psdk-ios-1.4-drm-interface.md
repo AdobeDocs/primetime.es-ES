@@ -1,8 +1,7 @@
 ---
 description: El elemento clave del lado del cliente del sistema de administración de derechos digitales (DRM) de Primetime es el Administrador de DRM.
 title: Información general sobre la interfaz DRM Primetime
-exl-id: dee420cf-8aad-42e8-965d-9fd9395f2c45
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 0%
@@ -29,9 +28,9 @@ Estos son los elementos de API más importantes para trabajar con DRM:
 
 * Referencia en el reproductor de contenido al objeto del administrador de DRM que implementa el subsistema de DRM:
 
-   ```
-   @property (readonly, nonatomic) DRMManager *drmManager
-   ```
+  ```
+  @property (readonly, nonatomic) DRMManager *drmManager
+  ```
 
 <!--<a id="section_F986DB1EDD6F44CD8E57419CCA0921E8"></a>-->
 
@@ -45,8 +44,7 @@ Si el flujo protegido por DRM tiene codificación de tasa de bits múltiple (MBR
 >
 >Al hacer referencia a direcciones URL de recursos protegidos por DRM en la aplicación de iOS, el parámetro de cadena de consulta `?faxs=1` debe añadirse a la URL M3U8 de nivel de conjunto (MBR). Por ejemplo:
 >
->
-```
+>```
 >https://your.domain.com/hls/[...]/index.m3u8?faxs=1
 >```
 >

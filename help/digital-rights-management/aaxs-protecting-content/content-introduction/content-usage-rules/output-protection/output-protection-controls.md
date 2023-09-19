@@ -2,8 +2,7 @@
 title: Controles de protección de salida
 description: Controles de protección de salida
 copied-description: true
-exl-id: e27e49f9-9bc3-493f-a9ba-efe623694942
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 0%

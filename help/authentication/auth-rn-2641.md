@@ -1,8 +1,7 @@
 ---
 title: Notas de la versión de autenticación de Adobe Primetime 2.64.1
 description: Notas de la versión de autenticación de Adobe Primetime 2.64.1
-exl-id: b0edbd90-ebb5-40a7-9034-1699dccfadb5
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: En esta sección se describen las funciones disponibles con las distintas versiones de Flash Player y TVSDK.
 title: Compatibilidad con clientes RBOP
-exl-id: 1120587e-45cf-45cc-8b41-1886ab2ed2a4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
@@ -23,11 +22,10 @@ En esta sección se describen las funciones disponibles con las distintas versio
 >
 >* Todas las plataformas de Flash y móviles admiten el envío de errores, pero solo los clientes TVSDK enumerados arriba procesan errores relacionados con RBOP.
 >* Relacionado con RBOP [Errores del cliente DRM](https://help.adobe.com/en_US/primetime/drm/index.html#reference-DRM_Client_Error_Messages):
-   >    * **3371** - Resolución mal formada basada en las restricciones de protección de salida en la licencia.
-   >    * **3372** : la resolución del contenido es mayor que la resolución máxima especificada en la restricción de protección de salida. (Esto puede ocurrir si alguien intentó insertar contenido destinado a otro dispositivo).
-   >    * **3373** : la resolución del contenido es mayor que la resolución especificada por la restricción de protección de salida activa actualmente. (Esto significa que tendremos que bajar de categoría).
+>    * **3371** - Resolución mal formada basada en las restricciones de protección de salida en la licencia.
+>    * **3372** : la resolución del contenido es mayor que la resolución máxima especificada en la restricción de protección de salida. (Esto puede ocurrir si alguien intentó insertar contenido destinado a otro dispositivo).
+>    * **3373** : la resolución del contenido es mayor que la resolución especificada por la restricción de protección de salida activa actualmente. (Esto significa que tendremos que bajar de categoría).
 >
-
 
 **Descenso automático** - La técnica utilizada para reducir la escala varía según la plataforma y la versión del Flash Player:
 

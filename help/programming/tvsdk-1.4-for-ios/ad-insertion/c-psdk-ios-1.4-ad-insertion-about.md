@@ -1,8 +1,7 @@
 ---
 description: La inserción de anuncios resuelve los anuncios para vídeo bajo demanda (VOD) , para flujo en directo y para flujo lineal con seguimiento de anuncios y reproducción de anuncios. TVSDK realiza las solicitudes necesarias al servidor de publicidad, recibe información sobre los anuncios del contenido especificado y coloca los anuncios en el contenido por fases.
 title: Inserción de anuncios
-exl-id: 4e5a4fe2-6887-48d0-b335-f3e99559dca8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '580'
 ht-degree: 0%
@@ -65,7 +64,7 @@ Estos son algunos ejemplos de retorno anticipado de una pausa publicitaria:
 
 * La duración de la pausa publicitaria en determinados eventos deportivos.
 
-   Aunque se proporciona una duración predeterminada, si el juego se reanuda antes de que finalice la pausa publicitaria, esta debe cerrarse.
+  Aunque se proporciona una duración predeterminada, si el juego se reanuda antes de que finalice la pausa publicitaria, esta debe cerrarse.
 * Una señal de emergencia durante una pausa publicitaria en una emisión en directo.
 
 La capacidad de salir de una pausa publicitaria antes de tiempo se identifica mediante una etiqueta personalizada en el manifiesto conocida como etiqueta de entrada o de entrada. TVSDK permite que la aplicación se suscriba a estas etiquetas de empalme para proporcionar una oportunidad de empalme.
@@ -96,8 +95,7 @@ La capacidad de salir de una pausa publicitaria antes de tiempo se identifica me
       >
       >El siguiente código supone que la aplicación tiene una implementación para `isCueInOpportunity` método.
       >
-      >
-      ```
+      >```
       >- (PTPlacementOpportunity *)preparePlacementOpportunity:(PTTimedMetadata *)timedMetadata 
       >{ 
       >       if ([self isCueInOpportunity:timedMetadata]) 
@@ -110,6 +108,7 @@ La capacidad de salir de una pausa publicitaria antes de tiempo se identifica me
       >       } 
       >}
       >```
+      >
 
    1. Registre el solucionador de oportunidades extendido en la `PTDefaultMediaPlayerClientFactory` ejemplo.
 

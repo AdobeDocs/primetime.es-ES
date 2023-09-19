@@ -1,8 +1,7 @@
 ---
 description: La reproducción de evento completo (FER) es un recurso de VOD que actúa como un recurso activo/DVR, por lo que la aplicación debe tomar medidas para garantizar que los anuncios se coloquen correctamente.
 title: Habilitar los anuncios en la reproducción de evento completo
-exl-id: 866a696d-0c5e-4665-8890-cbbaed3e7a04
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '319'
 ht-degree: 0%

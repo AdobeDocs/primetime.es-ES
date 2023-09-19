@@ -1,8 +1,7 @@
 ---
 description: Existen varias propiedades del sistema Java que puede configurar en el servidor de licencias para controlar la ubicación de los archivos de configuración y registro.
 title: Propiedades del sistema Java
-exl-id: 08fe6910-9d58-41c3-91d3-514406bedf05
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Si lo desea, puede configurar las siguientes propiedades del sistema Java:
 
 * *`LicenseServer.ConfigRoot`* — Nombre del directorio que incluye los ficheros de configuración del servidor de licencias.
 
-   Consulte *Archivos de configuración del servidor de licencias* para obtener más información sobre el contenido de estos archivos. Si no se configura, el valor predeterminado es `CATALINA_BASE/licenseserver`.
+  Consulte *Archivos de configuración del servidor de licencias* para obtener más información sobre el contenido de estos archivos. Si no se configura, el valor predeterminado es `CATALINA_BASE/licenseserver`.
 
 * *LicenseServer.LogRoot* — Nombre de la [!DNL logs] directorio en el que se encuentran los registros de la aplicación del servidor de licencias. Si no ha modificado el nombre de este directorio, el nombre de este directorio se configura como *LicenseServer.ConfigRoot* de forma predeterminada.
 

@@ -1,8 +1,7 @@
 ---
 description: La lista de reproducción de un vídeo puede especificar un número ilimitado de pistas de audio alternativas para el contenido de vídeo principal. Por ejemplo, es posible que desee añadir diferentes idiomas al contenido de vídeo o permitir al usuario cambiar entre diferentes pistas en su dispositivo mientras se reproduce el contenido.
 title: Pistas de audio alternativas en la lista de reproducción
-exl-id: 8640cc09-91db-4bd3-87d1-c4fac395a0bc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 0%

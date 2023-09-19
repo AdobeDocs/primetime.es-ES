@@ -1,8 +1,7 @@
 ---
 description: Para utilizar TVSDK de forma más eficaz, debe tener en cuenta determinados detalles de su funcionamiento y seguir determinadas prácticas recomendadas.
 title: Consideraciones y prácticas recomendadas
-exl-id: 5e1e09e1-f22e-4797-807a-14dbf50bb835
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Recuerde la siguiente información al utilizar TVSDK:
 
 * Adobe Primetime no funciona en emuladores o simuladores.
 
-   Debe utilizar dispositivos reales para realizar pruebas.
+  Debe utilizar dispositivos reales para realizar pruebas.
 * La reproducción solo es compatible con contenido de flujo en directo HTTP (HLS).
 * El contenido del vídeo principal puede ser multiplexado, donde los flujos de vídeo y audio están en la misma representación, o no multiplexado, donde los flujos de vídeo y audio están en representaciones independientes.
 * La API de TVSDK se implementa en ActionScript.
@@ -28,12 +27,12 @@ Recuerde la siguiente información al utilizar TVSDK:
    * Los subtítulos opcionales son compatibles en la medida en que los proporciona el AVE.
    * En función de la precisión del codificador, la duración real de los medios codificados puede diferir de las duraciones registradas en el manifiesto de recursos de flujo.
 
-      No existe una forma fiable de volver a sincronizar la escala de tiempo virtual ideal con la de reproducción real. El seguimiento del progreso de la reproducción del flujo para la gestión de anuncios y Video Analytics debe utilizar el tiempo de reproducción real, por lo que es posible que los informes y el comportamiento de la interfaz de usuario no rastreen con precisión el contenido de los medios y los anuncios.
+     No existe una forma fiable de volver a sincronizar la escala de tiempo virtual ideal con la de reproducción real. El seguimiento del progreso de la reproducción del flujo para la gestión de anuncios y Video Analytics debe utilizar el tiempo de reproducción real, por lo que es posible que los informes y el comportamiento de la interfaz de usuario no rastreen con precisión el contenido de los medios y los anuncios.
    * El nombre del agente de usuario entrante para todas las solicitudes HTTP de TVSDK en esta plataforma se asigna al siguiente patrón de cadena:
 
-      ```
-      "Adobe Flash Player"
-      ```
+     ```
+     "Adobe Flash Player"
+     ```
 
 ## Prácticas recomendadas {#section_tvsdk_best_practices}
 
@@ -42,4 +41,4 @@ Estas son las prácticas recomendadas para TVSDK:
 * Utilice la versión 3.0 o superior de HLS para el contenido del programa.
 * Para TVSDK 1.4 para DHLS, la carga de publicidad diferida está habilitada de forma predeterminada.
 
-   Para contenido sin anuncio previo o anuncio durante la emisión, puede utilizar `AdvertisingMetadata.delayAdLoading` para acelerar aún más la carga de contenido.
+  Para contenido sin anuncio previo o anuncio durante la emisión, puede utilizar `AdvertisingMetadata.delayAdLoading` para acelerar aún más la carga de contenido.

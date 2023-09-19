@@ -2,8 +2,7 @@
 title: Actualización de directivas DRM
 description: Actualización de directivas DRM
 copied-description: true
-exl-id: 27dc35d2-134c-4b88-9251-c6bb04a48f13
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%

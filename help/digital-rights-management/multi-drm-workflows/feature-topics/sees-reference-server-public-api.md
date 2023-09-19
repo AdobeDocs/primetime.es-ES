@@ -1,8 +1,7 @@
 ---
 description: La solicitud y la respuesta de asignación de derechos se pasan a través de una conexión SSL mutuamente autenticada entre el servidor de licencias y el servicio de asignación de derechos del cliente.
 title: CONSULTA API pública
-exl-id: b78cd74d-06ea-4d31-a1f2-0f0d84d23670
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%

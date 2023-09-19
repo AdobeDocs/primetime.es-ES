@@ -2,8 +2,7 @@
 title: Implementación del servidor DRM de Adobe Primetime para el streaming protegido
 description: Implementación del servidor DRM de Adobe Primetime para el streaming protegido
 copied-description: true
-exl-id: 814c08e6-5d09-495b-b529-cedc9b9c02a7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%

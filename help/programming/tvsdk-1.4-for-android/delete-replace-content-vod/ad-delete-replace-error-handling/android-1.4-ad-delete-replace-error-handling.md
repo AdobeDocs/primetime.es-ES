@@ -1,8 +1,7 @@
 ---
 description: TVSDK gestiona los errores de intervalo de tiempo según el problema específico, ya sea combinando o reordenando los intervalos de tiempo definidos incorrectamente.
 title: Gestión de errores de eliminación y sustitución de anuncios
-exl-id: 3147d446-68a1-4e4b-9a29-f464b936d650
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%

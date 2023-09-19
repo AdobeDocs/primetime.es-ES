@@ -1,8 +1,7 @@
 ---
 description: Puede implementar su propio sistema de registro.
 title: Explicación del registro personalizado
-exl-id: 8b6a916e-783e-40e1-8a3d-706b57a6ff63
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%
@@ -92,7 +91,7 @@ A continuación, se muestra un ejemplo de filtrado de registros utilizando `PTLo
 
 Para registrarse y escuchar registros:
 
-Crear un nuevo `PTLogEntry` y añadirlo a `thePTLogFactory`:
+Crear un nuevo `PTLogEntry` y agréguelo a `thePTLogFactory`:
 
 Puede crear manualmente una instancia de `PTLogEntry` y agréguelo a la `PTLogFactory` instancia compartida o utilice una de las macros para realizar la misma tarea.
 

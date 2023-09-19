@@ -1,8 +1,7 @@
 ---
 description: Los eventos y las notificaciones le ayudan a administrar los aspectos asincrónicos de la aplicación de vídeo.
 title: Notificaciones y eventos para el estado del reproductor, la actividad, los errores y el registro
-exl-id: 39149c41-920b-4016-9f31-83e772f41cab
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '480'
 ht-degree: 0%
@@ -76,7 +75,6 @@ A continuación se muestra un ejemplo de cómo recuperar notificaciones:
    >1. Reduzca el intervalo de tiempo que controla el subproceso que sondea los nuevos eventos.
    >
    >1. Aumente el tamaño de la lista de notificaciones.
-
 
 1. Serialice las entradas de evento de notificación más recientes en formato JSON y envíe las entradas a un servidor remoto para su posprocesamiento.
 

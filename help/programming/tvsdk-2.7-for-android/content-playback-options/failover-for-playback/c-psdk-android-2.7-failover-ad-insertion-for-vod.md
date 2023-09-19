@@ -1,8 +1,7 @@
 ---
 description: El proceso de inserción de anuncios de vídeo bajo demanda (VOD) consiste en las fases de resolución de anuncios, inserción de anuncios y reproducción de anuncios. Para el seguimiento de anuncios, TVSDK debe informar a un servidor de seguimiento remoto sobre el progreso de reproducción de cada anuncio. Cuando se producen situaciones inesperadas, TVSDK realiza las acciones adecuadas.
 title: Inserción de publicidad y failover para VOD
-exl-id: d0bb720e-3309-4346-88fe-053b0291ad64
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
@@ -21,20 +20,20 @@ TVSDK admite los siguientes tipos de proveedores de publicidad:
 
 * Proveedor de publicidad de metadatos
 
-   Los datos del anuncio se codifican en archivos JSON de texto sin formato.
+  Los datos del anuncio se codifican en archivos JSON de texto sin formato.
 * Proveedor de publicidad de Primetime ad decisioning
 
-   TVSDK envía una solicitud, que incluye un conjunto de parámetros de objetivo y un número de identificación de recurso, al servidor back-end de Primetime y Decisioning. Primetime ad decisioningresponde con un documento de lenguaje de integración multimedia (SMIL) sincronizado que contiene la información de publicidad necesaria.
+  TVSDK envía una solicitud, que incluye un conjunto de parámetros de objetivo y un número de identificación de recurso, al servidor back-end de Primetime y Decisioning. Primetime ad decisioningresponde con un documento de lenguaje de integración multimedia (SMIL) sincronizado que contiene la información de publicidad necesaria.
 * Proveedor de marcadores de publicidad personalizados
 
-   Gestiona la situación en la que los anuncios se queman en el flujo, desde el servidor. TVSDK no realiza la inserción real de anuncios, pero debe realizar un seguimiento de los anuncios insertados en el servidor. Este proveedor establece los marcadores de anuncio que utiliza TVSDK para realizar el seguimiento de anuncios.
+  Gestiona la situación en la que los anuncios se queman en el flujo, desde el servidor. TVSDK no realiza la inserción real de anuncios, pero debe realizar un seguimiento de los anuncios insertados en el servidor. Este proveedor establece los marcadores de anuncio que utiliza TVSDK para realizar el seguimiento de anuncios.
 
 Durante esta fase se puede producir una de las siguientes situaciones de conmutación por error:
 
 * No se pueden recuperar los datos porque, por ejemplo, no hay conectividad o se ha producido un error en el lado del servidor, como no se puede encontrar un recurso, etc.
 * Se recuperaron los datos, pero el formato no es válido.
 
-   Esto puede deberse, por ejemplo, a un error en el análisis de los datos de entrada.
+  Esto puede deberse, por ejemplo, a un error en el análisis de los datos de entrada.
 
 TVSDK envía una notificación de advertencia sobre el error y continúa el procesamiento.
 
@@ -66,6 +65,6 @@ TVSDK reenvía los eventos activados a la aplicación, incluidos los eventos de 
 * El perfil se cambia debido al algoritmo de conmutación por error.
 * Se han tenido en cuenta todas las opciones de conmutación por error y no se puede realizar ninguna acción adicional de forma automática.
 
-   La aplicación debe realizar la acción adecuada.
+  La aplicación debe realizar la acción adecuada.
 
 Independientemente de si se producen errores, TVSDK llama a `onAdBreakComplete` para cada `onAdBreakStart` y `onAdComplete` para cada `onAdStart`. Sin embargo, si no se pueden descargar los segmentos, puede haber espacios en la cronología. Cuando los huecos son lo suficientemente grandes, los valores de la posición del cabezal de reproducción y el progreso del anuncio notificado pueden mostrar discontinuidades.

@@ -1,8 +1,7 @@
 ---
 title: Cómo ver los informes de las 10 principales MVPD por persona del programador.
 description: Ver informes de las 10 principales MVPD.
-exl-id: 76fd1af8-dd96-426b-b9c8-a356b53b491d
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
@@ -49,7 +48,7 @@ Cada una de estas páginas reflejará la actividad.
 
 ![](assets/top-ten-mvpds-overallscore.png)
 
-## Las 10 principales MVPD por uso {#top-10mvpds-usage}
+## Principales 10 MVPD por uso {#top-10mvpds-usage}
 
 Cuando se utiliza la selección **Las 10 principales MVPD por uso** para definir el segmento, el sistema Account IQ identifica 10 MVPD de toda la industria para enumerar como máximo diez MVPD (junto con sus métricas correspondientes) en el orden descendente de sus [uso desde cuentas compartidas](/help/AccountIQ/product-concepts.md)
 

@@ -1,8 +1,7 @@
 ---
 description: Cargue un recurso creando directamente una instancia de MediaResource y cargando el contenido de vídeo que desea reproducir. Esta es una forma de cargar un recurso multimedia.
 title: Cargar un recurso multimedia en MediaPlayer
-exl-id: 2d5e95bc-3962-4356-b90f-e550066f7a70
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -36,7 +35,6 @@ Cargue un recurso creando directamente una instancia de MediaResource y cargando
 >* A `state` parámetro de tipo `MediaPlayer.PlayerState` con el valor de `MediaPlayer.PlayerState.ERROR`.
 >
 >* A `notification` parámetro de tipo `MediaPlayerNotification` que contiene información de diagnóstico sobre el evento de error.
-
 
 El siguiente código de ejemplo simplificado ilustra el proceso de carga de un recurso multimedia:
 

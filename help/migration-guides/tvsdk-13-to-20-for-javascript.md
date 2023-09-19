@@ -4,8 +4,7 @@ description: Muchas firmas de método y nombres de elementos de API han cambiado
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: migration
-exl-id: 4b251e26-cee6-4d96-bb55-6c47195da4d0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '5034'
 ht-degree: 0%
@@ -527,7 +526,7 @@ Tablas de este tema:
   </tr> 
   <tr> 
    <td><p>interfaz DRMLicenseDomain {<br /> atributo de solo lectura DomString authenticationDomain;<br /> atributo de solo lectura DRMAuthenticationMethod authenticationMethod; <br /> atributo de solo lectura DomString serverUrl;<br /> };</p> </td> 
-   <td><p>interfaz DRMLicenseDomain {<br /> atributo de solo lectura DomString authDomain;<br /> atributo de solo lectura DRMAuthenticationMethod authMethod; <br /> atributo de solo lectura DomString serverURL;<br /> };</p> </td> 
+   <td><p>interfaz DRMLicenseDomain {<br /> atributo de solo lectura DomString authDomain;<br /> atributo readonly DRMAuthenticationMethod authMethod; <br /> atributo de solo lectura DomString serverURL;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -542,7 +541,7 @@ Tablas de este tema:
   </tr> 
   <tr> 
    <td><p>interfaz DRMPolicy<br /> {<br /> atributo de solo lectura DomString authenticationDomain;<br /> atributo de solo lectura DRMAuthenticationMethod authenticationMethod;<br /> <br /> atributo de solo lectura DomString displayName;<br /> atributo readonly DRMLicenseDomain licenseDomain;<br /> };</p> </td> 
-   <td><p>interfaz DRMPolicy<br /> {<br /> atributo de solo lectura DomString authDomain;<br /> atributo de solo lectura DRMAuthenticationMethod authMethod;<br /> atributo de solo lectura DomString dispName;<br /> atributo readonly DRMLicenseDomain licenseDomain;<br /> };</p> </td> 
+   <td><p>interfaz DRMPolicy<br /> {<br /> atributo de solo lectura DomString authDomain;<br /> atributo readonly DRMAuthenticationMethod authMethod;<br /> atributo de solo lectura DomString dispName;<br /> atributo readonly DRMLicenseDomain licenseDomain;<br /> };</p> </td> 
   </tr> 
  </tbody> 
 </table>

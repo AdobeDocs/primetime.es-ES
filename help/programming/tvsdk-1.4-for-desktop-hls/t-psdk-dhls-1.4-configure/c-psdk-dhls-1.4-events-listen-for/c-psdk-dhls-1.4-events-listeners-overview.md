@@ -1,8 +1,7 @@
 ---
 description: Los eventos de TVSDK indican el estado del reproductor, los errores que se producen, la finalización de las acciones que ha solicitado, como un vídeo que empieza a reproducirse, o las acciones que se producen implícitamente, como la finalización de un anuncio.
 title: Escuchar eventos de reproductor de Primetime
-exl-id: 3a740245-a9e1-4e36-8761-f9f4b4e85b93
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 0%
@@ -19,13 +18,13 @@ El tiempo de ejecución de Flash proporciona un mecanismo de eventos genérico, 
 
    * **Eventos obligatorios**: escucha todos los eventos de reproducción.
 
-      >[!IMPORTANT]
-      >
-      >El evento de reproducción `MediaPlayerStatusChangeEvent.STATUS_CHANGE` proporciona el estado del reproductor, incluidos los errores. Cualquiera de los estados puede afectar al siguiente paso del reproductor.
+     >[!IMPORTANT]
+     >
+     >El evento de reproducción `MediaPlayerStatusChangeEvent.STATUS_CHANGE` proporciona el estado del reproductor, incluidos los errores. Cualquiera de los estados puede afectar al siguiente paso del reproductor.
 
    * **Otros eventos**: Opcional, según la aplicación.
 
-      Por ejemplo, si incorpora publicidad en la reproducción, escuche todas las `AdBreakPlaybackEvent` y `AdPlaybackEvent` eventos.
+     Por ejemplo, si incorpora publicidad en la reproducción, escuche todas las `AdBreakPlaybackEvent` y `AdPlaybackEvent` eventos.
 
 1. Implemente detectores de eventos para cada evento.
 

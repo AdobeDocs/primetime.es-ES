@@ -2,8 +2,7 @@
 title: Seguridad de capa de red
 description: Seguridad de capa de red
 copied-description: true
-exl-id: 70c9917d-32bc-43f6-add3-62883f98ac5e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Seguridad de capa de red{#network-layer-security}
 
-Las vulnerabilidades de seguridad de red están entre las principales amenazas a las que está expuesto un servidor de aplicaciones orientado a Internet o a la intranet. En esta sección se describe el proceso de protección de los hosts de la red frente a estas vulnerabilidades. Aborda la segmentación de red, la protección de pila del Protocolo de control de transmisión/Protocolo Internet (TCP/IP) y el uso de cortafuegos para la protección del host.
+Las vulnerabilidades de seguridad de red están entre las principales amenazas a las que está expuesto un servidor de aplicaciones orientado a Internet o a la intranet. Esta sección describe el proceso de protección de los hosts de la red frente a estas vulnerabilidades. Aborda la segmentación de red, la protección de pila del Protocolo de control de transmisión/Protocolo Internet (TCP/IP) y el uso de cortafuegos para la protección del host.
 
 Esta tabla describe técnicas comunes que reducen las vulnerabilidades de seguridad de red.
 
@@ -38,7 +37,7 @@ Esta tabla describe técnicas comunes que reducen las vulnerabilidades de seguri
      <ul class="- topic/ul " id="ul-wjf-lhz-n4"> 
       <li class="- topic/li " id="li-8031632160F44037B092988183139202"> <p class="- topic/p ">Implemente servidores de seguridad que admitan servidores proxy o inspección de estado en lugar de soluciones simples de filtrado de paquetes. </p> </li> 
       <li class="- topic/li " id="li-B65CBB92113E4503B79EB194C34FCA50"> <p class="- topic/p ">Utilice un cortafuegos compatible con un paradigma de seguridad en el que pueda denegar todos los servicios excepto los explícitamente permitidos. </p> </li> 
-      <li class="- topic/li " id="li-5CE4C7B65D84410DB4BE966FD8922993"> <p class="- topic/p ">Implemente una solución de cortafuegos de doble alojamiento o multialojamiento. Esta arquitectura proporciona el bueno nivel de seguridad y ayuda a evitar que usuarios no autorizados eludan la seguridad del cortafuegos. </p> </li> 
+      <li class="- topic/li " id="li-5CE4C7B65D84410DB4BE966FD8922993"> <p class="- topic/p ">Implemente una solución de cortafuegos de doble alojamiento o multialojamiento. Esta arquitectura proporciona el máximo nivel de seguridad y ayuda a evitar que usuarios no autorizados eludan la seguridad del cortafuegos. </p> </li> 
      </ul> </p> </td> 
   </tr> 
  </tbody> 

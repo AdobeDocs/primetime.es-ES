@@ -2,8 +2,7 @@
 title: Implementar el registro de dominios basado en identidad
 description: Implementar el registro de dominios basado en identidad
 copied-description: true
-exl-id: e2f826a8-eea5-4d5f-ac4d-401d7a6c5373
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%

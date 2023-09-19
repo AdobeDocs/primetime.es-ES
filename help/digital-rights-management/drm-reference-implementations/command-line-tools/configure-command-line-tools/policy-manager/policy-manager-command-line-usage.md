@@ -2,8 +2,7 @@
 title: Uso de la línea de comandos del Administrador de directivas
 description: Uso de la línea de comandos del Administrador de directivas
 copied-description: true
-exl-id: 888be282-7eaa-4101-b4b1-4f8df99a967a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1223'
 ht-degree: 0%
@@ -57,7 +56,7 @@ java -jar AdobePolicyManager.jar
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -e fecha </span> </td> 
    <td colname="2" class="- topic/entry "> <p class="- topic/p ">La fecha antes de que las licencias sean válidas. </p> <p>Puede especificar la fecha en <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd </span> o <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd-h24:min:s </span> formato. Por ejemplo, 2008-12-1 o 2008-12-1-00:00:00 para la medianoche del 1 de diciembre de 2008. </p> <p> 
      <ul id="ul_D5DB5044756D4BD6A734813971598425"> 
-      <li id="li_B6BD62A524384060A9DDA14FF50936FA">El valor debe ser bueno al valor de <span class="codeph"> -s </span> si está presente. </li> 
+      <li id="li_B6BD62A524384060A9DDA14FF50936FA">El valor debe ser mayor que el valor de <span class="codeph"> -s </span> si está presente. </li> 
       <li id="li_C3C5AD0231A240EC9AC57685B9206E8D">No puede aplicar esta opción con <span class="codeph"> -r </span>. </li> 
       <li id="li_3790E2F829A149979BF44E0914CFF431">Para eliminar la fecha de finalización al actualizar una directiva DRM, aplique <span class="codeph"> -e </span> sin especificar una fecha. </li> 
      </ul> </p> </td> 

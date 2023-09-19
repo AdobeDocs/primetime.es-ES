@@ -1,8 +1,7 @@
 ---
 description: Instant-on precarga partes del contenido en uno o más canales. Una vez que el usuario selecciona o cambia de canal, el contenido comienza antes porque parte del almacenamiento en búfer ya se ha completado.
 title: Instant-on
-exl-id: 096104a7-867f-43e3-8433-f697d0224e21
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%

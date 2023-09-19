@@ -1,8 +1,7 @@
 ---
 description: TVSDK descarga los segmentos de publicidad y los procesa en la pantalla del dispositivo.
 title: Fase de reproducción del anuncio
-exl-id: c12dcf84-0daa-4bc2-8e17-fdf47a760296
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 0%
@@ -27,6 +26,6 @@ Para las tres clases de error, TVSDK reenvía eventos activados a la aplicación
 * Eventos de notificación cuando se cambia el perfil debido al algoritmo de failover.
 * Los eventos de notificación se activan cuando se han tenido en cuenta todas las opciones de conmutación por error y no se puede realizar ninguna acción adicional de forma automática.
 
-   La aplicación debe realizar la acción adecuada.
+  La aplicación debe realizar la acción adecuada.
 
 Independientemente de si se producen errores o no, TVSDK llama a onAdBreakComplete para cada uno `onAdBreakStart` y `onAdComplete` para cada `onAdStart`. Sin embargo, si no se pueden descargar los segmentos, puede haber espacios en la cronología. Cuando los huecos son lo suficientemente grandes, los valores de la posición del cabezal de reproducción y el progreso del anuncio notificado pueden mostrar discontinuidades.

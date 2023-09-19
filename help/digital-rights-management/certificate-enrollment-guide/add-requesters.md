@@ -2,8 +2,7 @@
 title: Agregar solicitantes
 description: Agregar solicitantes
 copied-description: true
-exl-id: 66d9bc90-8287-4a07-9f60-4263888d5cce
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%
@@ -20,14 +19,14 @@ Una licencia DRM de Adobe Primetime puede tener hasta cinco solicitantes. Sin em
 
    * Agregar usuario.
 
-      Si el empleado tiene una cuenta Adobe, introduzca la dirección de correo electrónico. Clic **[!UICONTROL Add]** y continuar.
+     Si el empleado tiene una cuenta Adobe, introduzca la dirección de correo electrónico. Clic **[!UICONTROL Add]** y continuar.
    * Invitar al usuario.
 
-      Si el empleado no tiene una cuenta de Adobe, invítelos a crear una. Introduzca la dirección de correo electrónico y el nombre del empleado y haga clic en **[!UICONTROL Send an invitation]**. El sitio envía una invitación por correo electrónico al invitado. El correo electrónico contiene un vínculo a adobe.com donde el invitado puede crear una cuenta. El invitado debe utilizar la dirección de correo electrónico a la que se envió la invitación.
+     Si el empleado no tiene una cuenta de Adobe, invítelos a crear una. Introduzca la dirección de correo electrónico y el nombre del empleado y haga clic en **[!UICONTROL Send an invitation]**. El sitio envía una invitación por correo electrónico al invitado. El correo electrónico contiene un vínculo a adobe.com donde el invitado puede crear una cuenta. El invitado debe utilizar la dirección de correo electrónico a la que se envió la invitación.
 
-      >[!NOTE]
-      >
-      >El administrador no recibe una notificación cuando un usuario ha creado una cuenta. Compruebe la **[!UICONTROL User accounts]** en el sitio de inscripción de certificados para ver si un invitado ha creado una cuenta.
+     >[!NOTE]
+     >
+     >El administrador no recibe una notificación cuando un usuario ha creado una cuenta. Compruebe la **[!UICONTROL User accounts]** en el sitio de inscripción de certificados para ver si un invitado ha creado una cuenta.
 
 1. Si agregó un usuario, la pantalla de la sección de funciones del **[!UICONTROL User accounts]** se abre. Haga lo siguiente:
 

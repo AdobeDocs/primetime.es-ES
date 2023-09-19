@@ -2,8 +2,7 @@
 title: Información general sobre empaquetado de archivos multimedia
 description: Información general sobre empaquetado de archivos multimedia
 copied-description: true
-exl-id: 88c593a7-33b5-4773-b283-2ab16f9e8c3a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%

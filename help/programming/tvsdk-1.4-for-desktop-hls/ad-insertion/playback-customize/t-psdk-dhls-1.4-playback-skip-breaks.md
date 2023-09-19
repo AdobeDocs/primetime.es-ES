@@ -1,8 +1,7 @@
 ---
 description: De forma predeterminada, TVSDK fuerza la reproducción de una pausa publicitaria cuando el usuario realiza una búsqueda sobre una pausa publicitaria. Puede personalizar el comportamiento para omitir una pausa publicitaria si el tiempo transcurrido desde que se completó una pausa anterior se encuentra dentro de un determinado número de minutos.
 title: Omitir pausas publicitarias durante un periodo de tiempo
-exl-id: 7d5ee788-4a67-4c70-acc7-a950e6b2db8a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%
@@ -17,7 +16,7 @@ De forma predeterminada, TVSDK fuerza la reproducción de una pausa publicitaria
 >
 >Cuando hay una búsqueda interna para omitir un anuncio, puede haber una ligera pausa en la reproducción.
 
-El siguiente ejemplo de selector de políticas de publicidad personalizado omite los anuncios en los siguientes cinco minutos (hora del reloj) después de que un usuario haya visto una pausa publicitaria.
+El siguiente ejemplo de selector de políticas de publicidad personalizado omite los anuncios en los siguientes cinco minutos (hora del reloj mural) después de que un usuario haya visto una pausa publicitaria.
 
 1. Amplíe el selector predeterminado de directivas de publicidad para anular el comportamiento predeterminado.
 

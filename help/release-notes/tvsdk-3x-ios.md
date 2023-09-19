@@ -1,8 +1,7 @@
 ---
 title: Notas de la versión de TVSDK 3.13 para iOS
 description: Las notas de la versión de TVSDK 3.13 para iOS describen las novedades o los cambios, los problemas resueltos y conocidos, y los problemas de los dispositivos en TVSDK iOS 3.13.
-exl-id: adf8ab23-86d6-4113-b243-2709d5f7f829
-source-git-commit: 59ea8008c828f3bdf275fea5cc2a59c37b0c4845
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '7575'
 ht-degree: 0%
@@ -111,7 +110,7 @@ Se ha agregado compatibilidad con las notificaciones de error en caso de:
 Se ha añadido compatibilidad con notificaciones descriptivas si se producen errores de reproducción de publicidad.
 
 * **Añadido [!DNL Fairplay] Compatibilidad con flujo CMAF cifrado**
-   [!DNL Fairplay] Ahora se admiten flujos CMAF cifrados con reproducción de códec AVC.
+  [!DNL Fairplay] Ahora se admiten flujos CMAF cifrados con reproducción de códec AVC.
 
 **Versión 3.0.1**
 
@@ -138,7 +137,7 @@ No hay nuevas funciones ni mejoras en esta versión.
 **Versión 1.4.43**
 
 * Experiencia similar a la de TV de poder unirse en medio de un anuncio sin activar el seguimiento parcial de anuncios.\
-   Ejemplo: Las uniones de usuarios se producen en medio (a los 40 segundos) de una pausa publicitaria de 90 segundos y consisten en tres anuncios de 30 segundos. Son 10 segundos del segundo anuncio de la pausa.
+  Ejemplo: Las uniones de usuarios se producen en medio (a los 40 segundos) de una pausa publicitaria de 90 segundos y consisten en tres anuncios de 30 segundos. Son 10 segundos del segundo anuncio de la pausa.
 
    * El segundo anuncio se reproduce durante el tiempo restante (20 segundos) seguido del tercer anuncio.
    * Los rastreadores de anuncios para el anuncio parcial reproducido (segundo anuncio) no se activan. Solo se activan los rastreadores del tercer anuncio.
@@ -168,7 +167,7 @@ No hay nuevas funciones.
 
 * El SDK de TVSDK de iOS se actualiza para realizar solicitudes de CRS desde el nuevo host de Akamai `primetime-a.akamaihd.net`.
 
-* La nueva configuración de nombre de host proporciona la entrega de recursos CRS a través de HTTP y HTTPS (SSL) a buena escala.
+* La nueva configuración de nombre de host proporciona la entrega de recursos CRS a través de HTTP y HTTPS (SSL) a mayor escala.
 
 **Versión 1.4.36**
 
@@ -184,7 +183,7 @@ Las API de TVSDK ahora proporcionan información adicional sobre las respuestas 
 
 * **Métricas de facturación** Para dar cabida a los clientes que desean pagar únicamente por lo que utilizan, en lugar de una tasa fija independientemente del uso real, los Adobes recopilan las métricas de uso y las utilizan para determinar cuánto facturar a los clientes.
 
-   Cada vez que TVSDK genera un evento de inicio de flujo, el reproductor comienza a enviar mensajes HTTP periódicamente al sistema de facturación de Adobe. El periodo, conocido como duración facturable, puede ser diferente para VOD estándar, PRO VOD (anuncios mid-roll habilitados) y contenido en directo. La duración predeterminada de cada tipo de contenido es de 30 minutos, pero el contrato con el Adobe determina los valores reales.
+  Cada vez que TVSDK genera un evento de inicio de flujo, el reproductor comienza a enviar mensajes HTTP periódicamente al sistema de facturación de Adobe. El periodo, conocido como duración facturable, puede ser diferente para VOD estándar, PRO VOD (anuncios mid-roll habilitados) y contenido en directo. La duración predeterminada de cada tipo de contenido es de 30 minutos, pero el contrato con el Adobe determina los valores reales.
 
 * **Compatibilidad con varias CDN para anuncios CRS** TVSDK ahora es compatible con Multi-CDN para anuncios CRS. Al proporcionar detalles de FTP para los anuncios CRS, puede especificar ubicaciones de CDN distintas de la CDN de propiedad del Adobe predeterminada, como [!DNL Akamai].
 
@@ -206,7 +205,7 @@ Primetime iOS TVSDK ahora es compatible con los creativos de JavaScript VPAID 2.
 
 * tvOS
 
-   TVSDK admite aplicaciones nativas de tvOS.
+  TVSDK admite aplicaciones nativas de tvOS.
 * Se pueden reproducir los siguientes tipos de contenido:
 
    * VOD
@@ -424,104 +423,104 @@ Se ha mejorado la corrección de los #34385 de problemas cerrados en la versión
 
 * (ZD#34385): La reproducción se detiene con una URL incorrecta al volver de la inserción de publicidad basada en señales.
 
-   Aumentar el número máximo de concurrentes para `CustomAVAssetLoaderOperations`, para que las lecturas del manifiesto puedan seguir ejecutándose.
+  Aumentar el número máximo de concurrentes para `CustomAVAssetLoaderOperations`, para que las lecturas del manifiesto puedan seguir ejecutándose.
 
 * (ZD#34373) - Los usuarios finales no pueden transmitir a dispositivos conectados a HDMI cuando la grabación de flujo no está permitida.
 
 * (ZD#32678): TVSDK no recopila los ID de anuncio correctos en iOS.
 
-   El ID de anuncio del creativo de publicidad final ahora se recoge en los pings VHL si hay redirecciones VAST/VMAP.
+  El ID de anuncio del creativo de publicidad final ahora se recoge en los pings VHL si hay redirecciones VAST/VMAP.
 
 * (ZD#33904): TVSDK no está registrado para notificaciones de AVFfoundation `AVAudioSessionMediaServicesWereLostNotification` y `AVAudioSessionMediaServicesWereResetNotification`.
 
-   `PTMediaServicesWereLostNotification` y `PTMediaServicesWereResetNotification` Ahora se puede registrar en la aplicación del reproductor para obtener las notificaciones cuando se restablecen o pierden los servicios de medios.
+  `PTMediaServicesWereLostNotification` y `PTMediaServicesWereResetNotification` Ahora se puede registrar en la aplicación del reproductor para obtener las notificaciones cuando se restablecen o pierden los servicios de medios.
 
 * (ZD#33815): Los clientes no pueden actualizar sus reglas de CRS de priorización y normalización sin requerir una actualización de la aplicación.
 
-   Se ha añadido la `getCRSRulesJsonURL` y `setCRSRulesJsonURL` API para el TVSDK de iOS
+  Se ha añadido la `getCRSRulesJsonURL` y `setCRSRulesJsonURL` API para el TVSDK de iOS
 
 **Versión 1.4.41 (1.4.41.76)**
 
 * (ZD #34464): Problemas al crear la aplicación de referencia con TVSDK versión 1.4.41
 
-   A partir de esta versión, se requiere Xcode 9 para compilar TVSDK para iOS.
+  A partir de esta versión, se requiere Xcode 9 para compilar TVSDK para iOS.
 * (ZD #29456) - El juego aéreo comienza en estado pausado
 
-   Se ha corregido el problema de pausa que se produce cuando el vídeo se pausa al entrar en reproducción.
+  Se ha corregido el problema de pausa que se produce cuando el vídeo se pausa al entrar en reproducción.
 * (ZD #30371): La hora de inicio de AdBreak cambia cuando insertamos más de dos anuncios en un flujo lineal
 
-   Se ha corregido el error al intentar reproducir contenido en Apple TV, que impedía la reproducción por completo
+  Se ha corregido el error al intentar reproducir contenido en Apple TV, que impedía la reproducción por completo
 * (ZD #32146)- No `PTMediaPlayerStatusError` se recibe para el contenido de HLS Live al bloquear iOS 11 dev beta
 
-   No `PTMediaPlayerStatusError` se recibe para el contenido de HLS Live y VOD en bloqueo mediante Charles (Colocar conexión y 403).
+  No `PTMediaPlayerStatusError` se recibe para el contenido de HLS Live y VOD en bloqueo mediante Charles (Colocar conexión y 403).
 
 * (ZD #29242): La reproducción de vídeo de Airplay falla con los anuncios activados.
 
-   Cuando los anuncios están activados y AirPlay está habilitado para comenzar a reproducir un vídeo, la reproducción de vídeo nunca se inicia y no se muestra ningún error.
+  Cuando los anuncios están activados y AirPlay está habilitado para comenzar a reproducir un vídeo, la reproducción de vídeo nunca se inicia y no se muestra ningún error.
 
 * (ZD#33341) - `DRMInterface.h` Los déclencheur generan advertencias en Xcode 9.
 
-   Se corrigieron dos prototipos de bloques en `DRMInterface.h` que no incluían la palabra &quot;void&quot; en sus listas de parámetros.
+  Se corrigieron dos prototipos de bloques en `DRMInterface.h` que no incluían la palabra &quot;void&quot; en sus listas de parámetros.
 
 * (ZD#31979): No se compila/ejecuta cuando es iOS 10 o posterior para iPhone 7/iPhone7+.
 
-   Se ha solucionado que la compilación de documentos del IB para versiones anteriores a iOS 7 ya no es compatible.
+  Se ha solucionado que la compilación de documentos del IB para versiones anteriores a iOS 7 ya no es compatible.
 
 * (ZD#32920): Pantalla en blanco dentro de una pausa publicitaria y sin finalización de la pausa publicitaria.
 
-   Cuando una pausa publicitaria presenta instancias de anuncio y una vez finalizada una instancia de anuncio, se muestra una pantalla en blanco.
+  Cuando una pausa publicitaria presenta instancias de anuncio y una vez finalizada una instancia de anuncio, se muestra una pantalla en blanco.
 
 * (ZD#32509) - Deshabilitar la grabación de pantalla de iOS 11 Deshabilitar la grabación de pantalla en iOS 11.
 
 * (ZD#33179) - Fallo de evento intermitente en iOS11.
 
-   Se ha corregido el error de evento en iOS 11.
+  Se ha corregido el error de evento en iOS 11.
 
 **Versión 1.4.40** (1.4.40.72)
 
 * (ZD #32465): el reproductor no puede gestionar listas de reproducción combinadas.
 
-   Llamada `finishLoadingWithError`(con: Error) para que la base AV pruebe secuencias alternativas / conmutación por error de déclencheur.
+  Llamada `finishLoadingWithError`(con: Error) para que la base AV pruebe secuencias alternativas / conmutación por error de déclencheur.
 
 * (ZD #31951): Error de TVSDK durante las rotaciones de licencias.
 
-   Se ha corregido el problema de rotación de licencias.
+  Se ha corregido el problema de rotación de licencias.
 * (ZD #31951): Pantalla en blanco dentro de una pausa publicitaria y sin finalización de la pausa publicitaria.
 
-   Se ha solucionado un problema por el que los anuncios VPAID de Facebook devolvían a menudo varios bloques CDATA en un único `<AdParameters>` Nodo VAST.
+  Se ha solucionado un problema por el que los anuncios VPAID de Facebook devolvían a menudo varios bloques CDATA en un único `<AdParameters>` Nodo VAST.
 * (ZD #33336) - iOS TVSDK: Los pods de publicidad no se rellenan, a pesar de que Freewheel devuelve suficientes anuncios.
 
-   Se ha creado una relación principal-secundario entre el anuncio de secuencia y el anuncio de reserva y la ordenación basada en la secuencia principal y el índice.
+  Se ha creado una relación principal-secundario entre el anuncio de secuencia y el anuncio de reserva y la ordenación basada en la secuencia principal y el índice.
 
 **Versión 1.4.39** (1.4.39.43)
 
 * (ZD #32178): la versión de TVSDK de iOS es incorrecta.
 
-   La salida de la versión de TVSDK en los archivos de registro era 1.0.211. Se ha corregido para que muestre la versión correcta.
+  La salida de la versión de TVSDK en los archivos de registro era 1.0.211. Se ha corregido para que muestre la versión correcta.
 
 * (ZD #32199) Carga lenta de publicidad: no se muestra el vídeo para el contenido.
 
-   La cronología de Adbreak local que no se inicializaba anteriormente, ahora se actualiza antes de su uso.
+  La cronología de Adbreak local que no se inicializaba anteriormente, ahora se actualiza antes de su uso.
 
 * (ZD #27528): el vídeo, el audio o ambos se bloquean entre 1 y 45 segundos después de que se inicie la reproducción de un recurso, si el audio secundario está establecido en no predeterminado en iOS 1.2.
 
-   Prepare e informe pistas de audio en estado Ready.
+  Prepare e informe pistas de audio en estado Ready.
 
 * (ZD #30411) - Puede obtener resultados inesperados como no audio o audio incorrecto, si elige un idioma Sap secundario.
 
-   Prepare e informe pistas de audio en estado Ready.
+  Prepare e informe pistas de audio en estado Ready.
 
 * (ZD #32199) Carga lenta de publicidad: no se muestra el vídeo para el contenido.
 
-   La cronología de Adbreak local que no se inicializaba anteriormente, ahora se actualiza antes de su uso.
+  La cronología de Adbreak local que no se inicializaba anteriormente, ahora se actualiza antes de su uso.
 
 * (ZD #27528): el vídeo, el audio o ambos se bloquean entre 1 y 45 segundos después de que se inicie la reproducción de un recurso, si el audio secundario está establecido en no predeterminado en iOS 1.2.
 
-   Prepare e informe pistas de audio en estado Ready.
+  Prepare e informe pistas de audio en estado Ready.
 
 * (ZD #30411) - Puede obtener resultados inesperados como no audio o audio incorrecto, si elige un idioma Sap secundario.
 
-   Prepare e informe pistas de audio en estado Ready.
+  Prepare e informe pistas de audio en estado Ready.
 
 **Versión 1.4.38** (1.4.38.860)
 
@@ -1142,7 +1141,6 @@ Compatibilidad con el ping de direcciones URL vacías de seguimiento de pausas p
 >* Cámara lenta, en cualquier plataforma o versión.
 >* Jugar truco en vivo.
 
-
 **Versión 1.4.43**
 
 * TVSDK 1.4.43 está certificado para iOS 11.
@@ -1165,9 +1163,9 @@ Esta versión del TVSDK ha sido certificada con el Soporte FairPlay para iOS y t
 
 * tvOS
 
-   Esta versión del SDK de TVSDK incluye compatibilidad con tvOS y se ha certificado para flujos HLS no cifrados.
+  Esta versión del SDK de TVSDK incluye compatibilidad con tvOS y se ha certificado para flujos HLS no cifrados.
 
-   **Nota**: Recuerde las siguientes directrices de compilación:
+  **Nota**: Recuerde las siguientes directrices de compilación:
 
    * La compatibilidad con tvOs de TVSDK se limita a las secuencias cifradas DRM que no sean de Adobe. Debe quitar la referencia a `drmNativeInterface.framework` en la configuración de compilación de tvOS. Las secuencias cifradas AES siguen siendo compatibles.
    * Apple requiere que todas las aplicaciones de Apple TV estén habilitadas para código de bits, por lo que debe activar este indicador en la configuración del proyecto.

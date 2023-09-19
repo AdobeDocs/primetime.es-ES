@@ -1,8 +1,7 @@
 ---
 description: Un generador de oportunidades identifica las oportunidades de ubicación mediante etiquetas personalizadas en un flujo, modo de señalización, marcadores personalizados, etc. El generador de oportunidades envía estas oportunidades de colocación al solucionador de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y los metadatos de la oportunidad de colocación.
 title: Personalizar generadores de oportunidades y solucionadores de contenido
-exl-id: 5d0ebaa6-4708-4602-b9d7-882c389fb030
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%

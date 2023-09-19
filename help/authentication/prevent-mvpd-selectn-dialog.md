@@ -1,8 +1,7 @@
 ---
 title: Evitar que las MVPD aparezcan en el cuadro de diálogo de selección
 description: Evitar que las MVPD aparezcan en el cuadro de diálogo de selección
-exl-id: 20faf501-c006-45e2-a725-fb1273ecaffe
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%

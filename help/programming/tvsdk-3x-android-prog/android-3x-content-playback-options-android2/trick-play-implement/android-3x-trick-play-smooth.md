@@ -1,8 +1,7 @@
 ---
 description: Si el sistema tiene acceso a la descodificación asistida por hardware, puede lograr un juego de trucos más suave que con la implementación de TVSDK de software puro mediante el formato iFrame.
 title: Operaciones de juego de trucos más suaves
-exl-id: f69bf480-122b-474d-8f35-31655ea87c70
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%

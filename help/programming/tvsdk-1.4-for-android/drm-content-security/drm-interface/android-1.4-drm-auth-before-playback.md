@@ -1,8 +1,7 @@
 ---
 description: Cuando los metadatos DRM de un vídeo son independientes del flujo de medios, realice la autenticación antes de comenzar la reproducción.
 title: Autenticación DRM antes de la reproducción
-exl-id: da81ec38-ea77-4fcd-a6e4-5804465385cb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%

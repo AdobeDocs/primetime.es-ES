@@ -4,8 +4,7 @@ description: Las notas de la versión 5.3.1 de DRM describen las nuevas funcione
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: e4e0a933-cfc6-4713-ae13-5df11cfc1aad
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 0%

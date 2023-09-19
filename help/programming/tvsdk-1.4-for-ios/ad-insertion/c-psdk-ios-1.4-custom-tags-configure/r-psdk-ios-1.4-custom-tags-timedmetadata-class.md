@@ -1,8 +1,7 @@
 ---
 description: Cuando TVSDK detecta una etiqueta suscrita en la lista de reproducción/manifiesto, el reproductor intenta procesar automáticamente la etiqueta y exponerla en forma de objeto PTTimedMetadata.
 title: Clase de metadatos cronometrados
-exl-id: b619b019-cb6d-4c31-a7e2-7ebe2f44a4b0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '326'
 ht-degree: 0%
@@ -57,15 +56,15 @@ Recuerde lo siguiente:
 
 * TVSDK extrae automáticamente la lista de atributos en pares clave-valor y almacena los atributos en la propiedad de metadatos.
 
-   >[!TIP]
-   >
-   >Los datos complejos de las etiquetas personalizadas del manifiesto, como cadenas con caracteres especiales, deben estar entre comillas. Por ejemplo:
-   >
-   >
-   ```
-   >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url=
-   >"www.example.com:8090?parameter1=xyz&parameter2=abc"
-   >```
+  >[!TIP]
+  >
+  >Los datos complejos de las etiquetas personalizadas del manifiesto, como cadenas con caracteres especiales, deben estar entre comillas. Por ejemplo:
+  >
+  >```
+  >#EXT-CUSTOM-TAG:type=SpliceOut,ID=1,time=71819.7222,duration=30.0,url=
+  >"www.example.com:8090?parameter1=xyz&parameter2=abc"
+  >```
+  >
 
 * Si la extracción falla debido a un formato de etiqueta personalizado, la propiedad content siempre contiene los datos sin procesar de la etiqueta, que es la cadena después de los dos puntos. En este caso no se produce ningún error.
 

@@ -2,8 +2,7 @@
 title: Archivo de propiedades del servidor de licencias
 description: Archivo de propiedades del servidor de licencias
 copied-description: true
-exl-id: ac105ea6-b5a4-4416-bf17-f619abcf7cd5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%

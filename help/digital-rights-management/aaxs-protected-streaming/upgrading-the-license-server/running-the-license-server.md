@@ -1,8 +1,7 @@
 ---
 description: Para actualizar un servidor que ejecute Adobe Access Server for Protected Streaming, reemplace el archivo flashaccessserver.war implementado en el servidor de aplicaciones por el archivo incluido con el último acceso de Adobe. Si desea utilizar las nuevas opciones de configuración descritas anteriormente, actualice flashaccess-tenant.xml del servidor. También debe actualizar jsafe.dll o libjsafe.so a la versión incluida con el último acceso de Adobe.
 title: Ejecución de Adobe Access Server para flujo protegido
-exl-id: 02ba87c9-d4ec-4d39-926e-5d98b1858349
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%

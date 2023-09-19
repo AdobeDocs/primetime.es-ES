@@ -2,8 +2,7 @@
 title: Actualización de metadatos
 description: Actualización de metadatos
 copied-description: true
-exl-id: 04b3fb22-489e-41bb-95d0-99375f92fbae
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 0%

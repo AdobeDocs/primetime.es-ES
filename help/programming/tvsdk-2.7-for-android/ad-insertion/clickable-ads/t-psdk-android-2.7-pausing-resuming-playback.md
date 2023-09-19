@@ -1,8 +1,7 @@
 ---
 description: Cuando un usuario hace clic en un anuncio, la aplicación debe pausar la reproducción del contenido de vídeo principal.
 title: Pausar y reanudar la reproducción
-exl-id: 99db31ff-37f1-41f9-84a4-73dfaac8a93a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%

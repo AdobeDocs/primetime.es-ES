@@ -1,8 +1,7 @@
 ---
 description: El proceso de inserción de anuncios de vídeo bajo demanda (VOD) consiste en las fases de resolución de anuncios, inserción de anuncios y reproducción de anuncios. Para el seguimiento de anuncios, el TVSDK del explorador debe informar a un servidor de seguimiento remoto sobre el progreso de reproducción de cada anuncio. Cuando surgen situaciones inesperadas, se deben tomar las medidas adecuadas.
 title: Inserción de publicidad y failover para VOD
-exl-id: 62b82f56-e8c7-4c44-8b70-f204908777c5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '671'
 ht-degree: 0%
@@ -21,18 +20,19 @@ El TVSDK del explorador es compatible con los siguientes tipos de proveedores de
 
 * Proveedor de publicidad de metadatos
 
-   Los datos del anuncio se codifican en archivos JSON de texto sin formato.
+  Los datos del anuncio se codifican en archivos JSON de texto sin formato.
 * Proveedor de publicidad de Adobe Primetime ad decisioning
 
-   TVSDK del explorador envía una solicitud, que incluye un conjunto de parámetros de segmentación y un número de identificación de recurso, al servidor back-end de Adobe Primetime y Decisioning. Adobe Primetime ad decisioning responde con un documento SMIL (sincronizado multimedia integration language) que contiene la información de publicidad necesaria.
+  TVSDK del explorador envía una solicitud, que incluye un conjunto de parámetros de segmentación y un número de identificación de recurso, al servidor back-end de Adobe Primetime y Decisioning. Adobe Primetime ad decisioning responde con un documento SMIL (sincronizado multimedia integration language) que contiene la información de publicidad necesaria.
 
-   Durante esta fase se puede producir una de las siguientes situaciones de conmutación por error:
+  Durante esta fase se puede producir una de las siguientes situaciones de conmutación por error:
 
    * Los datos no se pueden recuperar por motivos como falta de conectividad o un error del lado del servidor, como que no se puede encontrar un recurso, etc.
    * Se recuperaron los datos, pero el formato no es válido.
 
-      Esto puede deberse, por ejemplo, a un error en el análisis de los datos de entrada.
-   TVSDK del explorador emite una notificación de advertencia sobre el error y continúa procesando.
+     Esto puede deberse, por ejemplo, a un error en el análisis de los datos de entrada.
+
+  TVSDK del explorador emite una notificación de advertencia sobre el error y continúa procesando.
 
 ## Fase de inserción de publicidad {#section_88A0E4FA12394717A9D85689BD11D59F}
 
@@ -62,6 +62,6 @@ Para las tres clases de error, el TVSDK del explorador reenvía eventos activado
 * Eventos de notificación cuando se cambia el perfil debido al algoritmo de failover.
 * Los eventos de notificación se activan cuando se han tenido en cuenta todas las opciones de conmutación por error y no se puede realizar ninguna acción adicional de forma automática.
 
-   La aplicación debe realizar la acción adecuada.
+  La aplicación debe realizar la acción adecuada.
 
 Si se producen errores o no, Browser TVSDK le notifica cuando se inicia una pausa publicitaria y cuando se completa. Sin embargo, si no se pueden descargar los segmentos, puede haber espacios en la cronología. Cuando los huecos son lo suficientemente grandes, los valores de la posición del cabezal de reproducción y el progreso del anuncio notificado pueden mostrar discontinuidades.

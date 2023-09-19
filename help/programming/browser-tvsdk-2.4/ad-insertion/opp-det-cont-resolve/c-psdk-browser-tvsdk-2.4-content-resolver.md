@@ -1,8 +1,7 @@
 ---
 description: Un detector de oportunidades es un componente TVSDK del explorador que detecta las etiquetas personalizadas en un flujo e identifica las oportunidades de ubicación. Estas oportunidades se envían al solucionador de contenido, que personaliza el flujo de trabajo de inserción de contenido/publicidad en función de las propiedades y los metadatos de la oportunidad de ubicación.
 title: Personalizar detectores de oportunidades y solucionadores de contenido
-exl-id: 1866ed53-acfc-45d3-941e-0ed171aa038b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%

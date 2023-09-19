@@ -1,8 +1,7 @@
 ---
 title: API de Bootstrap
 description: API de Bootstrap
-exl-id: bc7fe244-8664-43ac-b9a1-3967ea8749b1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1148'
 ht-degree: 0%
@@ -42,7 +41,7 @@ La API de Bootstrap suele ser la dirección URL que se envía a las API de clien
 
    **Solicitudes HTTP o HTTPS**
 
-   El servidor de manifiestos crea direcciones URL utilizando el mismo protocolo HTTP de la solicitud del cliente. Si un reproductor realiza una solicitud HTTP (http) no segura, el servidor de manifiestos devuelve direcciones URL de manifiesto y direcciones URL de seguimiento de audiencia con el protocolo http. Si un reproductor realiza una conexión HTTP segura (https), un servidor de manifiesto, devuelve direcciones URL de manifiesto y direcciones URL de seguimiento de audiencia con el protocolo https.
+   El servidor de manifiestos crea direcciones URL utilizando el mismo protocolo HTTP de la solicitud del cliente. Si un reproductor realiza una solicitud HTTP (http) no segura, el servidor de manifiestos devuelve las direcciones URL de manifiesto y las direcciones URL de seguimiento del Auditude con el protocolo http. Si un reproductor realiza una conexión HTTP segura (https), un servidor de manifiesto, devuelve direcciones URL de manifiesto y direcciones URL de seguimiento del Auditude con el protocolo https.
 
    >[!NOTE]
    >
@@ -72,7 +71,7 @@ Los parámetros de se pasan al servidor de publicidad.
 | ptparallelstream | Permite a los clientes con reproductores que solicitan secuencias de audio o vídeo desmuxadas de CMAF en paralelo garantizar que los anuncios en las pistas de audio y vídeo sean coherentes. | Solo HLS |
 | ptprotoswitch | Habilita las reglas de reescritura de manifiestos con nombre y las reglas de recuperación de anuncios, que suele configurar el representante de asistencia técnica.<br>Ejemplo: adfetch_fw, cdn_akm | HLS/GUIÓN |
 | pttagds | Permite la inyección de etiquetas EXT-X-DISCONTINUITY-SEQUENCE en encabezados HLS.Valores posibles:true para habilitar, omita deshabilitar (valor predeterminado deshabilitado) | Solo HLS |
-| pttimeline | Cadena que contiene la cronología deseada para la ubicación y el contenido del anuncio, que anula los saltos de anuncio en el flujo de contenido. [ Consulte Formato de línea de tiempo de VOD ] | HLS/GUIÓN |
+| pttimeline | Cadena que contiene la cronología deseada para la ubicación y el contenido del anuncio, que anula los saltos de anuncio en el flujo de contenido. [Consulte Formato de línea de tiempo de VOD] | HLS/GUIÓN |
 | pttoken | Habilita los esquemas de protección de token de autorización de fragmentos/segmentos de contenido para CDN<br>Valores posibles:<br>akamai, lnw (limelight), ctl (centurylink) (la tokenización predeterminada está desactivada) | HLS/GUIÓN |
 | pttrackingmode | Habilite los esquemas de seguimiento de anuncios.<br>Valores posibles:<br>sencillo para el seguimiento de anuncios del lado del cliente<br>sstm para el seguimiento de anuncios del lado del servidor<br>simplesstm para el seguimiento de anuncios de cliente/servidor híbrido (de forma predeterminada, no se realiza ningún seguimiento de anuncios) | HLS/GUIÓN |
 | pttrackingposition | Indica al servidor de manifiesto que devuelva únicamente información de seguimiento de anuncios. No especifique este parámetro en la solicitud de arranque.<br>Nota: El servidor de manifiestos ignora todos los valores pasados. Sin embargo, si pasa una cadena nula o vacía, el servidor de manifiesto devuelve el M3U8 | HLS/GUIÓN<br>Seguimiento del lado del cliente |

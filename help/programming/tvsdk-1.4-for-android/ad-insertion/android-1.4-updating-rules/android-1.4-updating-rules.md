@@ -2,8 +2,7 @@
 description: Puede utilizar el archivo de configuración de TVSDK (AdobeTVSDKConfig.json) para actualizar las prioridades de selección de creatividad publicitaria en las respuestas VAST/VMAP. También puede utilizar este archivo de configuración para definir las reglas de transformación de URL de origen para los creativos de anuncios.
 keywords: reglas de selección creativa;AdobeTVSDKConfig;agregar prioridades creativas;reglas de transformación
 title: Actualización y reglas de selección creativa
-exl-id: d52ac207-dbb9-49d7-bd04-b722159d0314
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -21,7 +20,6 @@ Cuando el reproductor de vídeo realiza una solicitud a un servidor de publicida
 >* No cambie el nombre del archivo de configuración de TVSDK. El nombre debe permanecer [!DNL AdobeTVSDKConfig.json].
 >* Este archivo debe colocarse en la [!DNL assets/] de su proyecto.
 >
-
 
 Puede especificar dos tipos de reglas en [!DNL AdobeTVSDKConfig.json]: *Prioridad* reglas y *Normalizar* reglas.
 

@@ -1,8 +1,7 @@
 ---
 description: Puede gestionar interrupciones en emisiones de vídeo en directo y proporcionar contenido alternativo durante una interrupción.
 title: Elementos de API de interrupción
-exl-id: 8e4f1dc3-f2f6-4db9-b9d0-3e79d21032e9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 0%
@@ -46,9 +45,9 @@ Puede utilizar lo siguiente al implementar una solución de interrupción en el 
 
 * **BlackoutMetadata** -
 
-   Una clase de metadatos específica de las interrupciones.
+  Una clase de metadatos específica de las interrupciones.
 
-   Esto le permite establecer intervalos no buscables (una matriz de `TimeRanges`) en TVSDK. TVSDK comprueba estos intervalos cada vez que el usuario realiza una búsqueda. Si está establecido y el usuario busca en un rango no buscable, TVSDK fuerza al visor al final del rango no buscable.
+  Esto le permite establecer intervalos no buscables (una matriz de `TimeRanges`) en TVSDK. TVSDK comprueba estos intervalos cada vez que el usuario realiza una búsqueda. Si está establecido y el usuario busca en un rango no buscable, TVSDK fuerza al visor al final del rango no buscable.
 
 * **COMIENCE AQUÍ SIGUIENTE AdvertisingMetadata** Habilite o deshabilite el preroll en un flujo en vivo mediante la configuración `enableLivePreroll` a true o false. Si es false, TVSDK no realiza una llamada explícita al servidor de publicidad para los anuncios previos a la emisión antes de la reproducción del contenido y, por lo tanto, no reproduce el anuncio previo a la emisión. Esto no afecta a los mid-rolls. El valor predeterminado es True.
 

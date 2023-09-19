@@ -1,8 +1,7 @@
 ---
 description: TVSDK admite la eliminación y el reemplazo mediante programación del contenido de anuncios en flujos de VOD.
 title: Eliminar y reemplazar anuncios en flujos de VOD
-exl-id: 44d75250-23ee-4ce3-a0c1-59bd488a5aba
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
@@ -24,11 +23,11 @@ Los siguientes cambios en la compatibilidad, eliminación y sustitución de TVSD
    * `property PTTimeRangeCollectionType type` indica el tipo de intervalo de tiempo.
    * `property NSArray* ranges` se utiliza para establecer los intervalos de tiempo.
 
-      El tipo de objetos esperado en la matriz es `PTReplacementTimeRange` o `CMTimeRange`.
+     El tipo de objetos esperado en la matriz es `PTReplacementTimeRange` o `CMTimeRange`.
 
-      >[!TIP]
-      >
-      >Todos los objetos de la matriz deben ser del mismo tipo.
+     >[!TIP]
+     >
+     >Todos los objetos de la matriz deben ser del mismo tipo.
 
    * `PTTimeRangeCollectionType` es una enumeración que define el comportamiento para los intervalos definidos en la variable `PTTimeRangeCollection`:
 
@@ -56,11 +55,11 @@ Los siguientes cambios en la compatibilidad, eliminación y sustitución de TVSD
 
       * Tipo: advertencia
       * Descripción: el modo de señalización de publicidad se define como intervalos personalizados, pero los intervalos personalizados no están definidos.
+
    * `INVALID_TIME_RANGES`
 
       * Tipo: advertencia
       * Descripción: uno o más intervalos de tiempo no son válidos y se ignorarán o modificarán.
-
 
 **API obsoletas**
 

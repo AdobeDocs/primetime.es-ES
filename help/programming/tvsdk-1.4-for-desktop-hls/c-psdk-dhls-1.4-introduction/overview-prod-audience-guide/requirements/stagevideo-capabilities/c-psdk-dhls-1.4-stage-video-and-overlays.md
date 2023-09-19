@@ -1,8 +1,7 @@
 ---
 description: Puede utilizar las superposiciones de HTML con StageVideo para mostrar los elementos de la interfaz de usuario en el plano de vídeo de la lista de visualización de Flash. Este plano está por encima del plano de StageVideo, por lo que StageVideo siempre se muestra detrás de los elementos de la lista de visualización de Flash.
 title: Superposiciones de vídeo y HTML de fase
-exl-id: 6beda4c8-0981-4a38-bd5e-5714b9ec7efa
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Las superposiciones de HTML son elementos de la interfaz de usuario que se puede
 
 >[!IMPORTANT]
 >
->Según las capacidades del sistema, el rendimiento puede reducirse en bueno o en menor grado al utilizar superposiciones de HTML.
+>Según las capacidades del sistema, el rendimiento puede degradarse en mayor o menor medida cuando se utilizan superposiciones de HTML.
 
 Tenga en cuenta la siguiente información:
 
@@ -42,6 +41,6 @@ Estos son los requisitos mínimos del explorador para utilizar superposiciones d
 
 * Chrome versión 26 y posterior
 
-   >[!IMPORTANT]
-   >
-   >Chrome Pepper en Windows XP y Windows Vista no es compatible.
+  >[!IMPORTANT]
+  >
+  >Chrome Pepper en Windows XP y Windows Vista no es compatible.

@@ -1,8 +1,7 @@
 ---
 description: Los marcadores de anuncios personalizados le permiten pasar un conjunto de especificaciones de TimeRange que representan segmentos de cronología a TVSDK.
 title: clase TimeRange
-exl-id: 7451c4f6-40df-48b2-a2c7-6d7826724716
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%

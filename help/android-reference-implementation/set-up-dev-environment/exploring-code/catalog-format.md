@@ -1,8 +1,7 @@
 ---
 description: La implementación de referencia de Primetime utiliza un formato de fuente basado en JSON para las respuestas. Este formato se analiza mediante una implementación de la interfaz IFeedItemAdapter.
 title: Formato de catálogo
-exl-id: faaeb647-9c01-4290-be1e-2b8461c8ad27
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '620'
 ht-degree: 0%
@@ -137,7 +136,7 @@ El siguiente bloque de código define la variable **objeto de metadatos**:
 | Propiedad | Descripción |
 |--- |--- |
 | anuncio | Metadatos relacionados con el anuncio. |
-| type | El valor puede ser Anuncios de Primetime, Pausas publicitarias directas o Marcadores de publicidad personalizados. <br/><br/>El PSDK proporciona compatibilidad integrada con los siguientes tipos de metadatos: metadatos relacionados con la audiencia para el servicio de publicidad de Primetime (anuncios de Primetime), pausas publicitarias directas con direcciones URL (pausas publicitarias directas) y marcadores de publicidad personalizados que proporcionan el intervalo de tiempo para cada marcador de publicidad (marcadores de publicidad personalizados). Cada tipo tiene un AdProvider integrado en el PSDK que procesa los metadatos.  <br/><br/>A continuación se define el formato JSON para cada uno de ellos. |
+| type | El valor puede ser Anuncios de Primetime, Pausas publicitarias directas o Marcadores de publicidad personalizados. <br/><br/>El PSDK proporciona compatibilidad integrada con los siguientes tipos de metadatos: metadatos relacionados con el Auditude para el servicio de publicidad de Primetime (anuncios de Primetime), pausas publicitarias directas con direcciones URL (pausas publicitarias directas) y marcadores de publicidad personalizados que proporcionan el intervalo de tiempo para cada marcador de publicidad (marcadores de publicidad personalizados). Cada tipo tiene un AdProvider integrado en el PSDK que procesa los metadatos.  <br/><br/>A continuación se define el formato JSON para cada uno de ellos. |
 | detalles | Incluye los atributos de metadatos de publicidad. Ambos tipos de metadatos de publicidad tienen su propio conjunto de atributos definidos a continuación. Para los tipos integrados, los atributos incluidos definen los datos esperados por el PSDK para ese tipo. |
 | derecho | Metadatos relacionados con derechos |
 | id | ID de recurso de medios utilizado para las solicitudes de autorización contra el servicio de pase de televisión de pago de Adobe Primetime. El ID puede ser una cadena de texto o una cadena mRSS con codificación de HTML. Cualquier contenido multimedia que requiera autorización debe contener un ID de recurso válido. |

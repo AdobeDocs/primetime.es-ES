@@ -1,8 +1,7 @@
 ---
 description: Puede configurar un lugar en la aplicación para realizar el control de errores en respuesta al estado ERROR.
 title: Configuración de la gestión de errores
-exl-id: c0ce1d80-85d5-4344-9ab0-bd56906421cb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%

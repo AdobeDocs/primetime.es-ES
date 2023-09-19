@@ -2,8 +2,7 @@
 title: Lógica de registro de dominio basada en identidad
 description: Lógica de registro de dominio basada en identidad
 copied-description: true
-exl-id: 6e391fce-00b4-45cf-b785-3b0ec734a11e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -36,8 +35,8 @@ La implementación de referencia aplica la siguiente lógica para el registro de
       1. Si se trata de un equipo nuevo, agregue una entrada al `UserDomainMembership` tabla.
       1. Busque los registros coincidentes en `UserDomainRefCount` tabla.
       1. Si no existe ninguna entrada para este GUID de equipo, agregue un registro.
-   1. Si es un dispositivo nuevo y la variable `Max Membership` se ha alcanzado el valor de, error devuelto
 
+   1. Si es un dispositivo nuevo y la variable `Max Membership` se ha alcanzado el valor de, error devuelto
 
 1. Busque todas las claves de dominio de este dominio en la `DomainKeys` tabla:
 

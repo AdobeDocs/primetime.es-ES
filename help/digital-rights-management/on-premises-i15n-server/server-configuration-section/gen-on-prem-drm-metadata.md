@@ -2,8 +2,7 @@
 title: Generar los metadatos DRM locales
 description: Generar los metadatos DRM locales
 copied-description: true
-exl-id: b42e3491-081b-45bf-bd00-8fb769a97446
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%
@@ -20,7 +19,7 @@ A [!DNL CreateMetadata.jar] se incluye en la variable [!DNL create_metadata] car
    * [!DNL commons-cli-1.2.jar]
    * [!DNL createMetadata.properties]
 
-      Los dos archivos JAR pueden residir en el [!DNL Command Line Tools/libs] carpeta. El [!DNL createMetadata.properties] El archivo puede residir junto al [!DNL flashaccesstools.properties] archivo.
+     Los dos archivos JAR pueden residir en el [!DNL Command Line Tools/libs] carpeta. El [!DNL createMetadata.properties] El archivo puede residir junto al [!DNL flashaccesstools.properties] archivo.
 
 <!--<a id="example_2116349CA33642CD9293EAD94A532ED8"></a>-->
 

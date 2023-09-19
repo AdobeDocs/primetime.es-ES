@@ -2,8 +2,7 @@
 title: Actualización de una directiva mediante la API de Java
 description: Actualización de una directiva mediante la API de Java
 copied-description: true
-exl-id: 1b03f033-0d29-46cc-ae14-d6fef96fe970
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%

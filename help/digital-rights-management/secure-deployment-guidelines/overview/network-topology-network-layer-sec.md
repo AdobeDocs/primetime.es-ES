@@ -1,8 +1,7 @@
 ---
 description: Las vulnerabilidades de seguridad de red se encuentran entre las principales amenazas a las que está expuesto un servidor de aplicaciones orientado a Internet o a la intranet, y es necesario proteger los hosts de la red contra estas vulnerabilidades.
 title: Seguridad de capa de red
-exl-id: 0a45d18a-66aa-4ecc-8eaf-e2af599eb3b8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
@@ -37,7 +36,7 @@ Estas son algunas técnicas comunes que reducen las vulnerabilidades de segurida
      <ul class="- topic/ul " id="ul_wjf_lhz_n4"> 
       <li class="- topic/li " id="li_A620D0B635384590BA7804F9720D04D0">Implemente servidores de seguridad que admitan servidores proxy o inspección de estado, en lugar de soluciones simples de filtrado de paquetes. </li> 
       <li class="- topic/li " id="li_3E4F814A30C047539185C23F4F57C282">Utilice un cortafuegos compatible con un paradigma de seguridad en el que pueda denegar todos los servicios, excepto los servicios explícitamente permitidos. </li> 
-      <li class="- topic/li " id="li_96160B3F14C4425397F017AF93FABE32">Implemente una solución de cortafuegos de doble alojamiento o multialojamiento. Esta arquitectura proporciona el bueno nivel de seguridad y evita que usuarios no autorizados eludan la seguridad del firewall. </li> 
+      <li class="- topic/li " id="li_96160B3F14C4425397F017AF93FABE32">Implemente una solución de cortafuegos de doble alojamiento o multialojamiento. Esta arquitectura proporciona el máximo nivel de seguridad y evita que usuarios no autorizados eludan la seguridad del cortafuegos. </li> 
      </ul> </p> </td> 
   </tr> 
  </tbody> 

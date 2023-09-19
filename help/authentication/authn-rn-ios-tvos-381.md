@@ -1,7 +1,7 @@
 ---
 title: Autenticación Notas de la versión de iOS/tvOS 3.8.1
 description: Autenticación Notas de la versión de iOS/tvOS 3.8.1
-source-git-commit: 6a32450d99b84835d820b54679a73ffe5dc61636
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%

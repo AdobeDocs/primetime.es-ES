@@ -1,8 +1,7 @@
 ---
 title: Patrones de uso
 description: Ver el comportamiento de uso compartido de cuentas para diferentes tipologías de usuario.
-exl-id: 2faa7e75-b3a1-491b-bb7d-bd3a149cbe79
-source-git-commit: 560611f2af2605ba399e4cf5ddfd331b6e8e0231
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 0%
@@ -11,7 +10,7 @@ ht-degree: 0%
 
 # Patrones de uso {#usage-patterns}
 
-Account IQ clasifica a los usuarios de cuentas de suscriptor en varias categorías en términos de comportamiento social, como viajero o persona que viaja al trabajo, familia numerosa y uso compartido en la comunidad. El **Patrones de uso** Esta página muestra varios análisis e informes diferentes para estas tipologías de usuario. Por ejemplo, **Distribución de patrones de uso: usuarios en segmento frente a total** Este informe compara el comportamiento de uso del segmento actual frente a todo el sector.
+Account IQ clasifica a los usuarios de cuentas de suscriptor en varias categorías en términos de comportamiento social, como viajero o persona que viaja al trabajo, familia numerosa y uso compartido de la comunidad. El **Patrones de uso** Esta página muestra varios análisis e informes diferentes para estas tipologías de usuario. Por ejemplo, **Distribución de patrones de uso: usuarios en segmento frente a total** Este informe compara el comportamiento de uso del segmento actual frente a todo el sector.
 
 Al igual que las demás páginas de la aplicación, los análisis e informes se basan en el segmento actual definido en la variable [panel de segmentos](/help/AccountIQ/segments-timeframe.md).
 

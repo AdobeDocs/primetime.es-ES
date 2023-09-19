@@ -1,8 +1,7 @@
 ---
 description: Para proporcionar una experiencia de visualización más fluida, TVSDK a veces almacena en búfer el flujo de vídeo. Puede configurar la forma en que el reproductor se almacena en búfer.
 title: Establecer tiempos de almacenamiento en búfer
-exl-id: 4542d10a-b6f8-430d-8b9a-5a358d1c0e9d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
@@ -31,23 +30,23 @@ El `MediaPlayer` proporciona métodos para establecer y obtener el tiempo de alm
    
    * Para establecer el tiempo de búfer inicial igual al tiempo de búfer de reproducción:
 
-      ```java
-      public static BufferControlParameters createSimple( 
-          long bufferTime)
-      ```
+     ```java
+     public static BufferControlParameters createSimple( 
+         long bufferTime)
+     ```
 
    * Para definir los tiempos iniciales y del búfer de reproducción:
 
-      ```java
-      public static BufferControlParameters createDual( 
-          long initialBuffer,   
-          long bufferTime)
-      ```
+     ```java
+     public static BufferControlParameters createDual( 
+         long initialBuffer,   
+         long bufferTime)
+     ```
 
-      Estos métodos inician un `IllegalArgumentException` si los parámetros no son válidos, como cuando:
+     Estos métodos inician un `IllegalArgumentException` si los parámetros no son válidos, como cuando:
 
    * El tiempo de búfer inicial es inferior a cero.
-   * El tiempo de búfer inicial es bueno que el tiempo de búfer.
+   * El tiempo de búfer inicial es mayor que el tiempo de búfer.
 
 1. Para establecer los valores de los parámetros de búfer, utilice este `MediaPlayer` método:
 

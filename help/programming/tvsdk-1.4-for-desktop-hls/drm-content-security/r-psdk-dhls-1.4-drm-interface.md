@@ -1,8 +1,7 @@
 ---
 description: El elemento clave del lado del cliente del sistema de administración de derechos digitales (DRM) de Primetime es el Administrador de DRM.
 title: Información general sobre la interfaz DRM Primetime
-exl-id: 8d6b9416-5d8a-4d1e-b8e6-47c43389f079
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
@@ -23,9 +22,9 @@ Estos son los elementos de API más importantes para trabajar con DRM:
 
 * Referencia en el reproductor de contenido al objeto del administrador de DRM que implementa el subsistema de DRM:
 
-   ```
-   public function get drmManager():DRMManager 
-   ```
+  ```
+  public function get drmManager():DRMManager 
+  ```
 
 <!--<a id="section_4204CE2731A44F67A3664AEDE8CCCA47"></a>-->
 

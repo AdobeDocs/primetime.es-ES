@@ -1,8 +1,7 @@
 ---
 title: Ver informes de uso compartido de cuentas de varios programadores y canales
 description: Ver informes de uso compartido de cuentas de varios programadores y canales
-exl-id: 8afa9e45-f0e3-43a3-970f-05a11adc0e42
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -25,9 +24,9 @@ Para ver las estadísticas de uso compartido de cuentas de suscriptor de varios 
 
 * [Tablero](/help/AccountIQ/dashboard.md) (el tablero ofrece una visión de los gráficos seleccionados de las diferentes páginas de informes).
 
-   ![](assets/mult-prog-dashboard.png)
+  ![](assets/mult-prog-dashboard.png)
 
-   *Imagen: informe de panel para varios programadores*
+  *Imagen: informe de panel para varios programadores*
 
 * [Uso general](/help/AccountIQ/general-usage-reports.md)
 

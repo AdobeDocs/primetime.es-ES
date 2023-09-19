@@ -1,8 +1,7 @@
 ---
 title: Creación de una operación en un segmento de usuario y seguimiento de efectos
 description: Cómo crear una operación que afecte y rastree el efecto en un segmento definido de usuarios.
-exl-id: ab74f857-e178-4120-8f9c-655ec921d096
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
@@ -77,7 +76,7 @@ Este segmento define los suscriptores (que son visualizadores de canales especí
 
 ### Segmentación adicional {#additional-segmentation}
 
-Además, puede restringir el segmento de destinatario agregando más métricas. Por ejemplo, puede agregar otra métrica Probabilidad de uso compartido buena al 90 %. Ahora la declaración del problema dice *&quot;crear una operación para las cuentas de suscriptor de MVPD denominadas &#39;C&#39; que están viendo el canal &#39;N Sports&#39; que tienen una probabilidad de uso compartido del 90 % bueno&quot;*.
+Además, puede restringir el segmento de destinatario agregando más métricas. Por ejemplo, puede agregar otra métrica Probabilidad de uso compartido mayor del 90 %. Ahora la declaración del problema dice *&quot;crear una operación para cuentas de suscriptor de MVPD llamadas &#39;C&#39; que están viendo el canal &#39;N Sports&#39; que tienen una probabilidad de uso compartido mayor del 90%&quot;*.
 
 ![](assets/additional-segment.gif)
 

@@ -2,8 +2,7 @@
 title: Prácticas recomendadas para anuncios de banner complementarios
 description: Prácticas recomendadas para anuncios de banner complementarios
 copied-description: true
-exl-id: e7d15916-9059-4993-a588-baf7d7ddc534
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%
@@ -19,9 +18,9 @@ Cuando muestre anuncios complementarios, siga estas recomendaciones:
 * Intente presentar tantos anuncios de banner de vídeo como se ajusten al diseño del reproductor.
 * Presente un banner complementario solo si tiene una ubicación que coincida con la altura y anchura especificadas del anuncio.
 
-   >[!IMPORTANT]
-   >
-   >No cambie el tamaño del anuncio.
+  >[!IMPORTANT]
+  >
+  >No cambie el tamaño del anuncio.
 
 * Empiece a presentar los titulares del anuncio lo antes posible después de que comience el anuncio.
 * No superponga el contenedor de vídeo/anuncio principal con titulares complementarios.

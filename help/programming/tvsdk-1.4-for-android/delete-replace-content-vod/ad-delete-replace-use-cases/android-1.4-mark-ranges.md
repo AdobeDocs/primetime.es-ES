@@ -1,8 +1,7 @@
 ---
 description: Puede designar intervalos de tiempo en el contenido de VOD como pausas publicitarias.
 title: Marcar intervalos
-exl-id: cd661327-20b2-4a49-8002-6ecee86c2a2c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%

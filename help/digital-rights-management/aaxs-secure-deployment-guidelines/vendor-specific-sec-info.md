@@ -2,8 +2,7 @@
 title: Información de seguridad específica del proveedor
 description: Información de seguridad específica del proveedor
 copied-description: true
-exl-id: 668321c5-b2c7-4bb3-9f68-2dba622a54de
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%

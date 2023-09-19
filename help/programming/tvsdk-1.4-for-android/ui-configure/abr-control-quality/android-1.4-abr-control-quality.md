@@ -1,8 +1,7 @@
 ---
 description: Los flujos HLS y DASH proporcionan diferentes codificaciones (perfiles) de velocidad de bits para la misma ráfaga corta de vídeo. TVSDK puede seleccionar el nivel de calidad para cada ráfaga en función del ancho de banda disponible.
 title: Velocidad de bits adaptable (ABR) para la calidad de vídeo
-exl-id: d5bcce93-9bd1-45cf-a4c4-bec97476f560
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -21,7 +20,7 @@ Puede establecer la directiva de conmutación de velocidad de bits adaptable (AB
  <tbody> 
   <tr> 
    <td colname="col01"> Velocidad de bits inicial </td> 
-   <td colname="col2"> <p>La velocidad de bits de reproducción deseada (en bits por segundo) para el primer segmento. Cuando comienza la reproducción, se utiliza el perfil más cercano, que es igual o bueno que la velocidad de bits inicial, para el primer segmento. </p> <p> Si se define una velocidad de bits mínima y la velocidad de bits inicial es inferior a la velocidad mínima, TVSDK selecciona el perfil con la velocidad de bits más baja por encima de la velocidad de bits mínima. Si la tasa inicial está por encima de la tasa máxima, TVSDK selecciona la tasa más alta por debajo de la tasa máxima. </p> <p>Si la velocidad de bits inicial es cero o indefinida, la velocidad de bits inicial viene determinada por la directiva ABR. </p> <p><span class="codeph"> getABRInitialBitRate</span> devuelve un valor entero que representa el perfil de byte por segundo. </p> </td> 
+   <td colname="col2"> <p>La velocidad de bits de reproducción deseada (en bits por segundo) para el primer segmento. Cuando comienza la reproducción, se utiliza el perfil más cercano, que es igual o mayor que la velocidad de bits inicial, para el primer segmento. </p> <p> Si se define una velocidad de bits mínima y la velocidad de bits inicial es inferior a la velocidad mínima, TVSDK selecciona el perfil con la velocidad de bits más baja por encima de la velocidad de bits mínima. Si la tasa inicial está por encima de la tasa máxima, TVSDK selecciona la tasa más alta por debajo de la tasa máxima. </p> <p>Si la velocidad de bits inicial es cero o indefinida, la velocidad de bits inicial viene determinada por la directiva ABR. </p> <p><span class="codeph"> getABRInitialBitRate</span> devuelve un valor entero que representa el perfil de byte por segundo. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col01"> Velocidad de bits mínima </td> 

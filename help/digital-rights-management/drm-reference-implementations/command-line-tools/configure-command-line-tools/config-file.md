@@ -2,8 +2,7 @@
 title: Acerca de los archivos de configuración de herramientas de línea de comandos
 description: Acerca de los archivos de configuración de herramientas de línea de comandos
 copied-description: true
-exl-id: 0ec4917e-7c70-4b84-86ac-c34c8a522018
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
@@ -18,7 +17,7 @@ Los archivos de configuración de las herramientas de la línea de comandos util
 
 * Salga de las barras invertidas con una barra invertida adicional.
 
-   Por ejemplo, en un equipo con Windows, para especificar la variable [!DNL C:\credentials.pfx] , debe introducirlo como. [!DNL C:\\credentials.pfx] o `C:/credentials.pfx`. Para especificar un archivo en un servidor de red de Windows, debe escribir `\\\\server\\folder\\filename.pfx`
+  Por ejemplo, en un equipo con Windows, para especificar la variable [!DNL C:\credentials.pfx] , debe introducirlo como. [!DNL C:\\credentials.pfx] o `C:/credentials.pfx`. Para especificar un archivo en un servidor de red de Windows, debe escribir `\\\\server\\folder\\filename.pfx`
 * Incluir solo *Latin-1* caracteres.
 
-   Para utilizar recursos que no sean *Latin-1* caracteres, debe utilizar la secuencia de escape Unicode adecuada. Si lo desea, puede aplicar el [!DNL native2ascii] (incluida con Java) a las entradas del archivo de configuración.
+  Para utilizar recursos que no sean *Latin-1* caracteres, debe utilizar la secuencia de escape Unicode adecuada. Si lo desea, puede aplicar el [!DNL native2ascii] (incluida con Java) a las entradas del archivo de configuración.

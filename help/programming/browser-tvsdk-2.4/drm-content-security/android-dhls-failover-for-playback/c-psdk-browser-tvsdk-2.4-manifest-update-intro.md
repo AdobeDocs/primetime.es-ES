@@ -1,8 +1,7 @@
 ---
 description: El TVSDK del explorador puede detectar información de reproducción modificada en manifiestos m3u8 maestros para flujo en directo y actualizar la información de reproducción mientras se reproduce el flujo. TVSDK del explorador admite un conjunto dinámico de perfiles de velocidad de bits a medida que los perfiles aparecen o desaparecen del manifiesto principal, incluidas las tasas de bits de perfil no superpuestas entre actualizaciones.
 title: Actualización activa del manifiesto maestro
-exl-id: 2f89131c-5204-465b-8757-b47e955f5894
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%

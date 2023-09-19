@@ -2,8 +2,7 @@
 title: Revocar credenciales de cliente
 description: Revocar credenciales de cliente
 copied-description: true
-exl-id: 583dff28-c34a-4759-81a6-0471feab309f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%

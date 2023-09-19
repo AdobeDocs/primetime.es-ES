@@ -1,8 +1,7 @@
 ---
 description: TVSDK proporciona generadores de oportunidades predeterminados y solucionadores de contenido que colocan anuncios en la cronología, y estos generadores y solucionadores se basan en etiquetas no estándar en el manifiesto. Es posible que la aplicación tenga que modificar la cronología en función de las oportunidades identificadas en el manifiesto, como los indicadores de un periodo de interrupción.
 title: Generadores de oportunidades y solucionadores de contenido
-exl-id: 6daf7ff4-10c4-4750-8592-94a2be489473
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 0%

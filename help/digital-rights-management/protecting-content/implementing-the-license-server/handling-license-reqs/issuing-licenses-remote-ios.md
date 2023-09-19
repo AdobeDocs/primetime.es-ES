@@ -2,8 +2,7 @@
 title: Emisión de licencias para la entrega de claves remotas a clientes de iOS (requiere Adobe Primetime)
 description: Emisión de licencias para la entrega de claves remotas a clientes de iOS (requiere Adobe Primetime)
 copied-description: true
-exl-id: f9f13ab3-3394-4729-a64c-f28c67601e26
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 0%

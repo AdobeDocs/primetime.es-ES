@@ -1,8 +1,7 @@
 ---
 title: API de informe
-description: API del informe de audiencia
-exl-id: 50eb4869-3765-4591-8c41-794b29d50044
-source-git-commit: 628544e38616715e83e0274ba26cf93302ce0e61
+description: API de informe de Auditude
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1042'
 ht-degree: 1%
@@ -34,13 +33,13 @@ Para explorar [!DNL Primetime Ad Insertion] API consulte [Puntos finales de API 
 |----------|-----------------------------------------------------------------------------------------------|----------------|----------------|---------------------|------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | endDate | Fecha de finalización de los datos del informe | fecha | Y | NINGUNO | no más reciente que ayer en UTC-8 | ######## |
 | filtros | filtrar en una o varias columnas | cadena | N | NINGUNO | ad_config_id , zone_id | ad_config_id=990,900;state=active |
-|  |  |  |  |  | Cuando metaData se establece en &quot;true&quot; en la solicitud, también puede filtrar por nombre. |  |
-|  |  |  |  |  |  | Las claves de varios filtros se separan con punto y coma. |
-|  |  |  |  |  |  | Utilice valores separados por comas para proporcionar una lista de valores para la clave de filtro |
+|          |                                                                                               |                |                |                     | Cuando metaData se establece en &quot;true&quot; en la solicitud, también puede filtrar por nombre. |                                                                         |
+|          |                                                                                               |                |                |                     |                                                                                    | Las claves de varios filtros se separan con punto y coma. |
+|          |                                                                                               |                |                |                     |                                                                                    | Utilice valores separados por comas para proporcionar una lista de valores para la clave de filtro |
 | groupBy | Agrupar por tiempo ( año \| mes \| día) o ad_config_id. Adconfig es sinónimo de AdRule. | cadena | N | NINGUNO | y \| m \| d , ad_config_id | m , ad_config_id |
-|  |  |  |  |  |  |  |
-|  |  |  |  |  |  | Para groupBy on time, proporcione uno de y, m o d |
-|  |  |  |  |  |  |  |
+|          |                                                                                               |                |                |                     |                                                                                    |                                                                         |
+|          |                                                                                               |                |                |                     |                                                                                    | Para groupBy on time, proporcione uno de y, m o d |
+|          |                                                                                               |                |                |                     |                                                                                    |                                                                         |
 
 
 
@@ -49,14 +48,15 @@ Para explorar [!DNL Primetime Ad Insertion] API consulte [Puntos finales de API 
 | Nombre | Tipo de valor | Obligatorio | Valor de muestra | Importancia |
 |-----------------------|----------------|---------------|-------------------------------------|------------------------------------|
 | Aceptar | cadena | Y | text/csv para CSV | Tipo de respuesta esperada de la API |
-|  |  |  | application/json o &#39;*/*&#39; para JSON |  |
+|                       |                |               | application/json o &#39;*/*&#39; para JSON |                                    |
 | Token de autorización | cadena | Y | xyz | token de autorización |
 | x-api-key | cadena | Y | xyz | Clave de API |
 | x-gw-ims-org-id | cadena | Y | xyz12345 | ID de organización de IMS de su cuenta |
 
 * Puede generar el token de autorización (también conocido como token de acceso) siguiendo los pasos detallados en la página de ayuda de autenticación JWT de Adobe.io.
-   >[!NOTE]
-   >El token de autorización tiene una caducidad de 24 horas, por lo que si utiliza la API de informes con un script recurrente, asegúrese de generar el token de autenticación antes de su caducidad o cuando reciba un error de OAuth sobre la no validez del token.
+  >>
+  [!NOTE]
+  >El token de autorización tiene una caducidad de 24 horas, por lo que si utiliza la API de informes con un script recurrente, asegúrese de generar el token de autenticación antes de su caducidad o cuando reciba un error de OAuth sobre la no validez del token.
 
 * Para establecer los valores correctos en el encabezado de la solicitud y generar el token de autorización (mediante autenticación JWT), necesitará conocer las siguientes configuraciones para su cuenta. Póngase en contacto con el equipo de asistencia de Primetime para obtener estos valores.
 ID de cuenta técnica

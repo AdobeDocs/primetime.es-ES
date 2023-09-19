@@ -2,8 +2,7 @@
 title: Información general
 description: Información general
 copied-description: true
-exl-id: 07f2ef0b-c6aa-4574-a3ae-18685a090cf2
-source-git-commit: a1fc67b708f3d5821532d3827639adbadf15f6b4
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%

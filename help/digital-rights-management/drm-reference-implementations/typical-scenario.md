@@ -2,8 +2,7 @@
 title: Flujo de trabajo típico
 description: Flujo de trabajo típico
 copied-description: true
-exl-id: c2020b48-7e97-4df5-a453-7b76e2e1d458
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%

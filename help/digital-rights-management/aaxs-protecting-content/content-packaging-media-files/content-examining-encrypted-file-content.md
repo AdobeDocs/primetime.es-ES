@@ -2,8 +2,7 @@
 title: Examen del contenido de archivos cifrados
 description: Examen del contenido de archivos cifrados
 copied-description: true
-exl-id: a8a61d1c-c259-4346-9a71-6741f70697ae
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%

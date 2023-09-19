@@ -4,8 +4,7 @@ description: Las notas de la versión de TVSDK 1.4 para Android describen las no
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: 1e3ec3b7-25be-4640-870e-928e832fe12d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '7802'
 ht-degree: 0%
@@ -54,26 +53,26 @@ No hay nuevas funciones.
 
 * TVSDK está certificado con VHL 2.0.1 y con VHL 2.0.1 con Nielsen.
 * El TVSDK de Android se ha actualizado para realizar solicitudes de CRS desde el nuevo host de Akamai `primetime-a.akamaihd.net`.
-* La nueva configuración de nombre de host proporciona la entrega de recursos CRS a través de HTTP y HTTPS (SSL) a buena escala.
+* La nueva configuración de nombre de host proporciona la entrega de recursos CRS a través de HTTP y HTTPS (SSL) a mayor escala.
 * TVSDK admite la versión de Android Oreo.
 * Se agrega una nueva función a `AdClientFactory` para admitir el registro de varios detectores de oportunidades:
 
-   ```
-   public List<PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem item);
-   ```
+  ```
+  public List<PlacementOpportunityDetector> createOpportunityDetectors(MediaPlayerItem item);
+  ```
 
-   Esto debería devolver una matriz de PlacementOpportunityDetector. Ahora puede registrar varios detectores de oportunidades. Por ejemplo, para la función de salida anticipada de publicidad, se requerían dos detectores de oportunidades: uno para la inserción de publicidad y otro para la salida anticipada de publicidad. Solo debe implementar este nuevo impacto de función si ha implementado su propio AdvertisingFactory (y no utiliza DefaultAdvertisingFactory). Para obtener el comportamiento existente, debe crear un único detector de oportunidades, como en la función createOpportunityDetector() , y colocar en una matriz y devolver:
+  Esto debería devolver una matriz de PlacementOpportunityDetector. Ahora puede registrar varios detectores de oportunidades. Por ejemplo, para la función de salida anticipada de publicidad, se requerían dos detectores de oportunidades: uno para la inserción de publicidad y otro para la salida anticipada de publicidad. Solo debe implementar este nuevo impacto de función si ha implementado su propio AdvertisingFactory (y no utiliza DefaultAdvertisingFactory). Para obtener el comportamiento existente, debe crear un único detector de oportunidades, como en la función createOpportunityDetector() , y colocar en una matriz y devolver:
 
-   ```
-   public class MyAdvertisingFactory extends AdvertisingFactory {  
-   …  
-   @Override  
-   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {  
-   List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();  
-   opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));  
-   return opportunityDetectors;  
-   } }
-   ```
+  ```
+  public class MyAdvertisingFactory extends AdvertisingFactory {  
+  …  
+  @Override  
+  public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {  
+  List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();  
+  opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));  
+  return opportunityDetectors;  
+  } }
+  ```
 
 >[!NOTE]
 >
@@ -87,7 +86,7 @@ Corrección de errores para la omisión de contenido en Android.
 
 * **Información de anuncio de red**
 
-   Las API de TVSDK ahora proporcionan información adicional sobre las respuestas VAST de terceros. Las extensiones de ID de anuncio, sistema de publicidad y anuncio VAST se proporcionan en la clase NetworkAdInfo, a la que se puede acceder mediante la propiedad networkAdInfo de un recurso de publicidad. Esta información se puede utilizar para integrar con otras plataformas de Ad Analytics como **Análisis de foso**.
+  Las API de TVSDK ahora proporcionan información adicional sobre las respuestas VAST de terceros. Las extensiones de ID de anuncio, sistema de publicidad y anuncio VAST se proporcionan en la clase NetworkAdInfo, a la que se puede acceder mediante la propiedad networkAdInfo de un recurso de publicidad. Esta información se puede utilizar para integrar con otras plataformas de Ad Analytics como **Análisis de foso**.
 
 **Versión 1.4.31**
 
@@ -139,26 +138,26 @@ Para obtener más información, consulte [Anuncio alternativo para anuncios VAST
 * La interfaz PlaybackEventListener tiene un nuevo método denominado onReplaceMediaPlayerItem, que puede utilizar para detectar un nuevo evento, `ITEM_REPLACED`. Este evento se envía cada vez que se reemplaza una instancia de MediaPlayer en MediaPlayer. La aplicación cliente que implementa este PlaybackEventListener debe implementar o anular este nuevo método.
 * AdClientFactory tiene una nueva función agregada a la clase para registrarse en varios detectores de oportunidades:
 
-   ```
-   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem item);
-   
-   For example for early ad exit feature, you need two Opportunity Detectors - one for ad insertion and another for  early  exit from  `ad`.
-   
-   To override this new function create a single Opportunity Detector, and put into an array and return:
-   
-   @Override
-   
-   public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
-   
-   List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();
-   
-   opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
-   
-   return opportunityDetectors;
-   }
-   
-   }
-   ```
+  ```
+  public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem item);
+  
+  For example for early ad exit feature, you need two Opportunity Detectors - one for ad insertion and another for  early  exit from  `ad`.
+  
+  To override this new function create a single Opportunity Detector, and put into an array and return:
+  
+  @Override
+  
+  public List&lt;PlacementOpportunityDetector&gt; createOpportunityDetectors(MediaPlayerItem mediaPlayerItem) {
+  
+  List&lt;PlacementOpportunityDetector&gt; opportunityDetectors = new ArrayList&lt;PlacementOpportunityDetector&gt;();
+  
+  opportunityDetectors.add(createOpportunityDetector(mediaPlayerItem));
+  
+  return opportunityDetectors;
+  }
+  
+  }
+  ```
 
 ## Cambios en TVSDK para 1.4 {#tvsdk-changes}
 
@@ -198,7 +197,6 @@ return opportunityDetectors;
 >
 >* Cámara lenta, en cualquier plataforma o versión.
 >* Jugar truco en vivo.
-
 
 **Versión 1.4.43**
 
@@ -445,7 +443,7 @@ Este problema se resolvió permitiendo que TVSDK informara de la respuesta de er
 
 * Zendesk #18358: el reproductor se bloquea en el conmutador de velocidad de bits con discontinuidades fuera de sincronización Este problema se resolvió al tratar adecuadamente los casos extremos de vinculación ABR.
 
-* Zendesk #19232: La aplicación que utiliza TVSDK 1.4.18 se está comportando de forma extraña en la versión 4 del sistema operativo Amazon más antigua. Este problema se resolvió eliminando la creación de vistas web ocultas en el proceso de inicialización del reproductor TVSDK para evitar conflictos con los dispositivos que no admiten Android Webview.
+* Zendesk #19232: La aplicación que utiliza TVSDK 1.4.18 se comporta de forma extraña en la versión 4 del sistema operativo Amazon más antigua. Este problema se resolvió eliminando la creación de vistas web ocultas en el proceso de inicialización del reproductor TVSDK para evitar conflictos con los dispositivos que no admiten Android Webview.
 
 * Zendesk #19585: Reproducción a cámara lenta cuando se produce una transición de velocidad de bits adaptable.
 Durante el cambio ABR, si el nuevo perfil tiene una velocidad de muestreo de audio diferente a la del perfil actual, la reproducción se vuelve a cámara lenta o rápida. Esto se debe a que no se notifica al presentador de vídeo que el formato de audio ha cambiado.
@@ -477,7 +475,7 @@ Para corregir el bloqueo, la llamada al método mediaPlayer.setCustomConfigurati
 
 * Zendesk #19038 - No hay transmisión en vivo en Asus Zenpad 10.
 
-   Este problema se resolvía cargando previamente la información del códec de medios, de modo que no se consultaba la función en tiempo de ejecución.
+  Este problema se resolvía cargando previamente la información del códec de medios, de modo que no se consultaba la función en tiempo de ejecución.
 
 * Los siguientes problemas son los mismos que Zendesk #19038:
    * Zendesk #19483: El TVSDK se bloquea en la plataforma Intel.
@@ -507,7 +505,7 @@ Este problema se resolvió comprobando el tamaño de los metadatos DRM de perfil
 
 **Versión 1.4.16 (1454)**
 
-* Zendesk #3875 - Tab S se bloquea durante la reproducción Revirtiendo la dependencia de OKHTTP en Auditude para CRS porque TVSDK ahora utiliza directamente httpurlconnection en lugar de curl. El problema se resolvió borrando las excepciones antes de realizar cualquier otra llamada JNI.
+* Zendesk #3875 - Tab S se bloquea durante la reproducción Revirtiendo la dependencia de OKHTTP en el Auditude para CRS porque TVSDK ahora utiliza directamente httpurlconnection en lugar de curl. El problema se resolvió borrando las excepciones antes de realizar cualquier otra llamada JNI.
 
 * Zendesk #4487 - Seguimiento del canal lineal de contenido El problema se resolvió permitiendo reiniciar el rastreador de Video Heartbeat durante una sesión de reproducción de flujo lineal.
 
@@ -620,7 +618,7 @@ Los reproductores de referencia de muestra de Android se han mejorado con una op
 
 Después de una búsqueda, caso posible en el que el motor de vídeo establece el estado en REPRODUCIENDO antes de que el presentador de vídeo esté listo para reproducir. Se produce cuando el estado del búfer es alto antes de la búsqueda. Solucionar notificando al motor de vídeo que el estado del búfer es bajo. Con el motor de vídeo en un estado de búfer bajo, la llamada a Reproducir provoca un cambio de estado en ALMACENAMIENTO EN BÚFER en lugar de REPRODUCIR. La reproducción se reanuda cuando el estado cambia a REPRODUCIENDO.
 
-* Zendesk #2846 - Solicitud de mejora: Proporciona la capacidad de establecer diferentes cadenas de usuario-agente para las llamadas realizadas por la biblioteca de Auditude
+* Zendesk #2846 - Solicitud de mejora: Proporciona la capacidad de establecer diferentes cadenas de usuario-agente para las llamadas realizadas por la biblioteca del Auditude
 
 Se ha añadido una nueva API para establecer el agente de usuario para las llamadas relacionadas con publicidad, auditudeSettings.setUserAgent(&quot;user/agent&quot;). Si no se establece ningún agente de usuario, se utilizará el predeterminado. Esto solo afecta al agente de usuario para llamadas relacionadas con anuncios; el agente de usuario para llamadas de medios no cambia y es &quot;Adobe Primetime&quot;+&lt;default useragent=&quot;&quot;>.
 
@@ -640,7 +638,7 @@ Se ha añadido una nueva API para establecer el agente de usuario para las llama
 * Zendesk #2805: error del reproductor al principio de la reproducción, la misma solución que Zendesk #2719
 * Zendesk #2817 - Reproductor de Android: El reproductor a veces se bloquea y deja de reproducir, corregido ampliando los búferes de decodificación de 2.0 a 3.0 segundos
 * Zendesk #2839 - ¿Adobe Primetime PSDK es compatible con chipsets ARMv8?, se agregó una corrección para el bloqueo que se encuentra en el Galaxy S6.
-* Zendesk #2885 - Reproducción de Auditude Crashing, misma solución que Zendesk #2719
+* Zendesk #2885: Reproducción de Auditude que se bloquea, la misma solución que Zendesk #2719
 * Zendesk #2895: error de HLS en directo de forma consistente tras 10 minutos de reproducción
 * Zendesk #2925 - Comentarios con respecto a Android dev build (1.4.5), en ciertos dispositivos cuando ponemos el paquete en cola de entrada, si el PTS es negativo, el decodificador entra en un estado extraño que siempre obtenemos un PTS de salida negativo para paquetes futuros. La corrección establece el PTS de entrada en cero si es negativo para evitar este problema.
 * PTPLAY-4645: desactiva la compatibilidad con cifrado RC4 en openssl. Hay exploits conocidos para RC4. Esto significa que si se intenta conectar con un servidor que sólo admite RC4, se producirá un error.
@@ -732,7 +730,7 @@ Este problema se solucionó añadiendo latencia entre las descargas de segmentos
 * PTPLAY-3355 - WIN DEATH se estrelló en Motorola Xoom con 4.0.x después de ~ 1 hora de reproducción continua.
 * PTPLAY-3557: el rebobinado en una pausa publicitaria está causando la finalización del flujo
 * PTPLAY-7079: La ventana de reproducción en el cliente de Android no funciona con Secure Stop/Hard Stop
-* #3760144 de errores: La resolución puede cambiar o parecer que pulsa cuando el flujo está en pausa en algunos dispositivos como Kindle Fire 7 y Samsung Galaxy Nexus. Solo observable bajo estrecha inspección
+* Error #3760144: la resolución puede cambiar o parecer que pulsa cuando el flujo está en pausa en algunos dispositivos como Kindle Fire 7 y Samsung Galaxy Nexus. Solo observable bajo estrecha inspección
 * Error #3761170: seekToLocal en Live with Ads no puede buscar contenido de anuncios, lo mejor es utilizar las API currentTime para emisiones en directo
 * Error #3763370: Las transmisiones en directo con anuncios ocasionalmente muestran dos marcadores de publicidad muy juntos cuando solo debería haber uno. Estos marcadores de publicidad representan el mismo anuncio y solo se reproducirá uno
 * Error #3763373: el marcador de anuncio puede desaparecer brevemente al buscar más allá de un anuncio en flujos de VOD. El marcador de anuncio se restaura y no hay ningún otro efecto adverso en la cronología

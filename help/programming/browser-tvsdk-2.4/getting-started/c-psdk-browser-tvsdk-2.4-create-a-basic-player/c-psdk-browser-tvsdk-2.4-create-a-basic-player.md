@@ -1,8 +1,7 @@
 ---
 description: 'Para utilizar el SDK de TVSDK del explorador, debe crear y configurar un reproductor básico. Para reproducir contenido de vídeo, puede crear un reproductor básico de dos formas: con el explorador TVSDK o con el marco de la interfaz de usuario.'
 title: Reproductor básico
-exl-id: f51d7bf7-1784-447e-97ab-275ea53d5e46
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 0%

@@ -2,8 +2,7 @@
 title: Autenticación Adobe Primetime y DRM Adobe Primetime
 description: Autenticación Adobe Primetime y DRM Adobe Primetime
 copied-description: true
-exl-id: 7239be8b-9725-48b6-a4e2-8d13461f297d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%

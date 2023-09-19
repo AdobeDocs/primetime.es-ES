@@ -1,8 +1,7 @@
 ---
 description: La implementación de referencia ilustra cómo configurar el reproductor para anuncios, lo que incluye la configuración de metadatos de vídeo para la inserción de anuncios y la resolución de los anuncios previos, medios y posteriores a la emisión en flujos de vídeo de VOD o de vídeo en directo/lineales. También ilustra cómo gestionar los anuncios en los que se puede hacer clic.
 title: Inserción de publicidad
-exl-id: 3c2d8fca-2a0e-4577-81f3-7b390f6396e1
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%

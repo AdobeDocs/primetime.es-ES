@@ -1,8 +1,7 @@
 ---
 description: El uso de MediaPlayerItemLoader le ayuda a obtener información sobre un flujo de medios sin crear una instancia de MediaPlayer. Esto resulta especialmente útil en flujos de almacenamiento en búfer previo para que la reproducción pueda comenzar sin demora.
 title: Cargar un recurso multimedia mediante MediaPlayerItemLoader
-exl-id: de61ec1c-f578-4e19-a131-51f36169c7ed
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '325'
 ht-degree: 0%
@@ -80,6 +79,7 @@ El `MediaPlayerItemLoader` La clase le ayuda a intercambiar un recurso multimedi
 
    * Asegúrese de que todo lo que pueda afectar al almacenamiento en búfer, por ejemplo, la selección de pistas de audio o WebVTT, esté completo e invoque `prepareBuffer()` para aprovechar las ventajas de la activación instantánea.
    * Adjunte el elemento al `MediaPlayer` mediante el uso de `replaceCurrentItem()`.
+
    Si llama a `prepareBuffer()`, recibirá el evento BUFFER_PREPARED en su `onBufferPrepared` cuando finalice la preparación.
 1. Llamada `load` en el `MediaPlayerItemLoader` y pasan el recurso que se va a cargar, y opcionalmente el ID de contenido y un `MediaPlayerItemConfig` ejemplo.
 
@@ -100,6 +100,7 @@ El `MediaPlayerItemLoader` La clase le ayuda a intercambiar un recurso multimedi
       1. Llamada `prepareToPlay()`.
       1. Espere al estado PREPARADO.
       1. Llamada `play()`.
+
    * Si el elemento se almacena en búfer:
 
       1. Espere al evento preparado para el búfer.

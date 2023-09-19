@@ -1,8 +1,7 @@
 ---
 description: La interfaz de token de licencia de Widevine proporciona servicios de producción y prueba.
 title: Solicitud/respuesta de token de licencia de Widevine
-exl-id: f8d71f63-7783-44f9-8b1b-4b5646dca339
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '858'
 ht-degree: 5%
@@ -25,16 +24,16 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia de W
 
 * **Solicitud de ejemplo:**
 
-   ```
-   https://wv-gen.service.expressplay.com/hms/wv/token?customerAuthenticator= 
-   <ExpressPlay customer authenticator identifier>
-   ```
+  ```
+  https://wv-gen.service.expressplay.com/hms/wv/token?customerAuthenticator= 
+  <ExpressPlay customer authenticator identifier>
+  ```
 
 * **Respuesta de ejemplo:**
 
-   ```
-   https://wv.service.expressplay.com/hms/wv/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
-   ```
+  ```
+  https://wv.service.expressplay.com/hms/wv/rights/?ExpressPlayToken=<base64-encoded ExpressPlay token>
+  ```
 
 <!--<a id="section_1E22012EE4B94BB2974D3B16DE8812D9"></a>-->
 
@@ -68,7 +67,7 @@ Esta solicitud HTTP devuelve un token que se puede canjear por una licencia de W
 |--- |--- |--- |
 | `generalFlags` | Cadena hexadecimal de 4 bytes que representa los indicadores de licencia. &quot;0000&quot; es el único valor permitido | No |
 | `kek` | Clave de cifrado de clave (KEK). Las claves se almacenan cifradas con una KEK mediante un algoritmo de ajuste de claves (AES Key Wrap, RFC3394). | No |
-| `kid` | Una representación de cadena hexadecimal de 16 bytes de la clave de cifrado de contenido o una cadena `^somestring'`. La longitud de la cadena seguida de la variable `^` no puede tener buenos 64 caracteres. Consulte la nota siguiente para ver un ejemplo. | Sí |
+| `kid` | Una representación de cadena hexadecimal de 16 bytes de la clave de cifrado de contenido o una cadena `^somestring'`. La longitud de la cadena seguida de la variable `^` no puede tener más de 64 caracteres. Consulte la nota siguiente para ver un ejemplo. | Sí |
 | `ek` | Una representación de cadena hexadecimal de la clave de contenido cifrada. | No |
 | `contentKey` | Una representación de cadena hexadecimal de 16 bytes de la clave de cifrado de contenido | Sí, a menos `kek` y `ek` o `kid` se proporcionan |
 | `contentId` | ID de contenido | No |

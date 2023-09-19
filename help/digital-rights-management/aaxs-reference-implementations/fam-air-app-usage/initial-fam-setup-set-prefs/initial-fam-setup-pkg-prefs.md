@@ -2,8 +2,7 @@
 title: Preferencias del empaquetador
 description: Preferencias del empaquetador
 copied-description: true
-exl-id: 43e49372-a875-413a-ba27-25e3ce5c64c4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%

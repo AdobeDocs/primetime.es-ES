@@ -2,8 +2,7 @@
 title: Carga segura de publicidad a través de HTTPS
 description: Carga segura de publicidad a través de HTTPS
 copied-description: true
-exl-id: f9de1a2b-4eea-4028-83db-1b4021d1fbb7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%

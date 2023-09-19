@@ -1,8 +1,7 @@
 ---
 title: Informes de uso general
 description: Informes de uso general
-exl-id: 1272073a-61fe-47ec-aced-2e8055b6b11e
-source-git-commit: a2181a8fd7334f19b8387a31c71527d4f689ab9d
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 0%
@@ -66,28 +65,28 @@ El eje x presenta las unidades dentro del lapso de tiempo actual y el eje y repr
 
 * **AuthN OK**
 
-   AuthN OK es el número de autenticaciones correctas. Para obtener más información y definición, consulte [Conceptos de producto: AuthN OK](/help/AccountIQ/product-concepts.md#authn-ok-def).
+  AuthN OK es el número de autenticaciones correctas. Para obtener más información y definición, consulte [Conceptos de producto: AuthN OK](/help/AccountIQ/product-concepts.md#authn-ok-def).
 
 * **AuthZ OK**
 
-   AuthZ OK es el número de autorizaciones correctas. Para obtener más información y definición, consulte [Conceptos de producto: AuthZ OK](/help/AccountIQ/product-concepts.md#authz-ok-def).
+  AuthZ OK es el número de autorizaciones correctas. Para obtener más información y definición, consulte [Conceptos de producto: AuthZ OK](/help/AccountIQ/product-concepts.md#authz-ok-def).
 
 * **Solicitudes de reproducción**
 
-   Las solicitudes de reproducción son el número de solicitudes de reproducción. Para obtener más información y definición, consulte [Conceptos de producto: solicitudes de reproducción](/help/AccountIQ/product-concepts.md#play-requests-def)
+  Las solicitudes de reproducción son el número de solicitudes de reproducción. Para obtener más información y definición, consulte [Conceptos de producto: solicitudes de reproducción](/help/AccountIQ/product-concepts.md#play-requests-def)
 
-   >[!NOTE]
-   >
-   >El gráfico de líneas de solicitudes de reproducción no está disponible para los usuarios de MVPD.
+  >[!NOTE]
+  >
+  >El gráfico de líneas de solicitudes de reproducción no está disponible para los usuarios de MVPD.
 
 
 * **Suscriptores únicos**
 
-   Los suscriptores únicos son el número de suscriptores únicos correctos. Para obtener más información y definición, consulte [Conceptos de producto: suscriptores únicos](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
+  Los suscriptores únicos son el número de suscriptores únicos correctos. Para obtener más información y definición, consulte [Conceptos de producto: suscriptores únicos](/help/AccountIQ/product-concepts.md#unique-subscriber-def)
 
-   >[!NOTE]
-   >
-   >El número total de suscriptores únicos también incluye el número de dispositivos únicos si el uso de TempPass de Adobe por parte de un programador (es decir, vista previa gratuita) es parte del segmento.
+  >[!NOTE]
+  >
+  >El número total de suscriptores únicos también incluye el número de dispositivos únicos si el uso de TempPass de Adobe por parte de un programador (es decir, vista previa gratuita) es parte del segmento.
 
 ## Resumen de Instantáneas: Cuentas por encima de los umbrales {#snapshot-overview}
 
@@ -123,7 +122,7 @@ El gráfico muestra lo siguiente:
 
 * porcentaje del total de cuentas de suscriptor en ese segmento,
 
-   que utilizan un número X de dispositivos, un número Y de direcciones IP y un número Z de códigos postales para consumir contenido de su canal para las MVPD (segmento definido de), durante un periodo de tiempo.
+  que utilizan un número X de dispositivos, un número Y de direcciones IP y un número Z de códigos postales para consumir contenido de su canal para las MVPD (segmento definido de), durante un periodo de tiempo.
 
 ![](assets/select-thresholds.png)
 
@@ -204,4 +203,3 @@ El gráfico de barras Vista histórica le ayuda a comparar las métricas de uso 
 >[!MORELIKETHIS]
 >
 >* Obtenga información sobre cómo exportar informes para los 1000 suscriptores principales del segmento seleccionado mediante filtros en Informe de uso general mediante [Exportar las 1000 cuentas principales](/help/AccountIQ/export-acc-information.md) opción.
-

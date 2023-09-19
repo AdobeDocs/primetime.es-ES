@@ -1,8 +1,7 @@
 ---
 description: El proceso de inserción de anuncios de vídeo bajo demanda (VOD) consiste en las fases de resolución de anuncios, inserción de anuncios y reproducción de anuncios. Para el seguimiento de anuncios, TVSDK debe informar a un servidor de seguimiento remoto sobre el progreso de reproducción de cada anuncio. Cuando surgen situaciones inesperadas, se deben tomar las medidas adecuadas.
 title: Inserción de publicidad y failover para VOD
-exl-id: 5af5bef6-e948-4215-a89f-ee46fd2d8a38
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
@@ -21,17 +20,17 @@ TVSDK admite los siguientes tipos de proveedores de publicidad:
 
 * Proveedor de publicidad de metadatos
 
-   Los datos del anuncio se codifican en archivos JSON de texto sin formato.
+  Los datos del anuncio se codifican en archivos JSON de texto sin formato.
 * Proveedor de publicidad de Primetime ad decisioning
 
-   TVSDK envía una solicitud, que incluye un conjunto de parámetros de objetivo y un número de identificación de recurso, al servidor back-end de Primetime y Decisioning. Primetime ad decisioning responde con un documento SMIL (lenguaje de integración multimedia sincronizado) que contiene la información de publicidad necesaria.
+  TVSDK envía una solicitud, que incluye un conjunto de parámetros de objetivo y un número de identificación de recurso, al servidor back-end de Primetime y Decisioning. Primetime ad decisioning responde con un documento SMIL (lenguaje de integración multimedia sincronizado) que contiene la información de publicidad necesaria.
 
 Durante esta fase se puede producir una de las siguientes situaciones de conmutación por error:
 
 * Los datos no se pueden recuperar por motivos como falta de conectividad o un error del lado del servidor, como que no se puede encontrar un recurso, etc.
 * Se recuperaron los datos, pero el formato no es válido.
 
-   Esto puede deberse, por ejemplo, a un error en el análisis de los datos de entrada.
+  Esto puede deberse, por ejemplo, a un error en el análisis de los datos de entrada.
 
 TVSDK envía una notificación de advertencia sobre el error y continúa el procesamiento.
 
@@ -63,6 +62,6 @@ Para las tres clases de error, TVSDK reenvía eventos activados a la aplicación
 * Eventos de notificación cuando se cambia el perfil debido al algoritmo de failover.
 * Los eventos de notificación se activan cuando se han tenido en cuenta todas las opciones de conmutación por error y no se puede realizar ninguna acción adicional de forma automática.
 
-   La aplicación debe realizar la acción adecuada.
+  La aplicación debe realizar la acción adecuada.
 
 Si se producen errores o no, las llamadas de TVSDK `AdBreakPlaybackEvent.AD_BREAK_COMPLETE` para cada `AdBreakPlaybackEvent.AD_BREAK_STARTED` y `AdPlaybackEvent.AD_COMPLETED` para cada `AdPLaybackEvent.AD_STARTED`. Sin embargo, si no se pueden descargar los segmentos, puede haber espacios en la cronología. Cuando los huecos son lo suficientemente grandes, los valores de la posición del cabezal de reproducción y el progreso del anuncio notificado pueden mostrar discontinuidades.

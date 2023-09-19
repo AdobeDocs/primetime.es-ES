@@ -1,8 +1,7 @@
 ---
 description: Puede proporcionar información de estilo para las pistas de subtítulos cerrados mediante la clase TextFormat. Esto establece el estilo de cualquier subtítulo que se muestre en el reproductor.
 title: Control del estilo de subtítulos
-exl-id: 0083c141-9c03-46a2-902b-6e7eebaadea4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -52,31 +51,31 @@ Puede aplicar estilo al texto de subtítulos opcionales con métodos TVSDK.
 
    * Obtenga toda la configuración de estilo con `MediaPlayer.getCCStyle`.
 
-      El valor devuelto es una instancia de `TextFormat` interfaz.
+     El valor devuelto es una instancia de `TextFormat` interfaz.
 
-      ```js
-      /** 
-      * @return the current closed captioning style.  
-      * If no style was previously set, it returns a TextFormat object 
-      * with default values for each attribute. 
-      * @throws IllegalStateException if media player was already released. 
-      */ 
-      public TextFormat getCCStyle() throws IllegalStateException;
-      ```
+     ```js
+     /** 
+     * @return the current closed captioning style.  
+     * If no style was previously set, it returns a TextFormat object 
+     * with default values for each attribute. 
+     * @throws IllegalStateException if media player was already released. 
+     */ 
+     public TextFormat getCCStyle() throws IllegalStateException;
+     ```
 
    * Obtenga la configuración de una en una a través de la `TextFormat` métodos de captador de interfaz.
 
-      ```js
-      public Color getFontColor(); 
-      public Color getBackgroundColor(); 
-      public Color getFillColor(); // retrieve the font fill color 
-      public Color getEdgeColor(); // retrieve the font edge color 
-      public Size getSize(); // retrieve the font size 
-      public FontEdge getFontEdge(); // retrieve the font edge type 
-      public Font getFont(); // retrieve the font type 
-      public int getFontOpacity(); 
-      public int getBackgroundOpacity();
-      ```
+     ```js
+     public Color getFontColor(); 
+     public Color getBackgroundColor(); 
+     public Color getFillColor(); // retrieve the font fill color 
+     public Color getEdgeColor(); // retrieve the font edge color 
+     public Size getSize(); // retrieve the font size 
+     public FontEdge getFontEdge(); // retrieve the font edge type 
+     public Font getFont(); // retrieve the font type 
+     public int getFontOpacity(); 
+     public int getBackgroundOpacity();
+     ```
 
 1. Para cambiar la configuración de estilo, siga uno de estos procedimientos:
 
@@ -86,41 +85,41 @@ Puede aplicar estilo al texto de subtítulos opcionales con métodos TVSDK.
 
    * Uso del método setter `MediaPlayer.setCCStyle`, pasando una instancia de `TextFormat` interfaz:
 
-      ```js
-      /** 
-      * Sets the closed captioning style. Used to control the closed captioning font, 
-      * size, color, edge and opacity.  
-      * 
-      * This method is safe to use even if the current media stream doesn't have closed 
-      * captions. 
-      * 
-      * @param textFormat 
-      * @throws IllegalStateException 
-      */ 
-      public void setCCStyle(TextFormat textFormat) throws IllegalStateException;
-      ```
+     ```js
+     /** 
+     * Sets the closed captioning style. Used to control the closed captioning font, 
+     * size, color, edge and opacity.  
+     * 
+     * This method is safe to use even if the current media stream doesn't have closed 
+     * captions. 
+     * 
+     * @param textFormat 
+     * @throws IllegalStateException 
+     */ 
+     public void setCCStyle(TextFormat textFormat) throws IllegalStateException;
+     ```
 
    * Utilice el `TextFormatBuilder` , que define métodos de establecedor individuales.
 
-      El `TextFormat` La interfaz define un objeto inmutable, por lo que solo hay métodos de captador y no hay definidores. Puede establecer los parámetros de estilo de subtítulos opcionales sólo con el `TextFormatBuilder` clase:
+     El `TextFormat` La interfaz define un objeto inmutable, por lo que solo hay métodos de captador y no hay definidores. Puede establecer los parámetros de estilo de subtítulos opcionales sólo con el `TextFormatBuilder` clase:
 
-      ```js
-      // set font type 
-      public void setFont(Font font)  
-      public void setBackgroundColor(Color backgroundColor) 
-      public void setFillColor(Color fillColor) 
-      // set the font-edge color 
-      public void setEdgeColor(Color edgeColor)  
-      // set the font size 
-      public void setSize(Size size)  
-      // set the font edge type 
-      public void setFontEdge(FontEdge fontEdge)  
-      public void setFontOpacity(int fontOpacity) 
-      public void setBackgroundOpacity(int backgroundOpacity) 
-      // set the font-fill opacity level 
-      public void setFillOpacity(int fillOpacity)  
-      public void setFontColor(Color fontColor)
-      ```
+     ```js
+     // set font type 
+     public void setFont(Font font)  
+     public void setBackgroundColor(Color backgroundColor) 
+     public void setFillColor(Color fillColor) 
+     // set the font-edge color 
+     public void setEdgeColor(Color edgeColor)  
+     // set the font size 
+     public void setSize(Size size)  
+     // set the font edge type 
+     public void setFontEdge(FontEdge fontEdge)  
+     public void setFontOpacity(int fontOpacity) 
+     public void setBackgroundOpacity(int backgroundOpacity) 
+     // set the font-fill opacity level 
+     public void setFillOpacity(int fillOpacity)  
+     public void setFontColor(Color fontColor)
+     ```
 
 La configuración del estilo de subtítulos es una operación asincrónica, por lo que los cambios pueden tardar hasta unos segundos en aparecer en la pantalla.
 

@@ -1,8 +1,7 @@
 ---
 description: Trabaje con el SEES para ver cómo habilitar un servicio de asignación de derechos basado en el tiempo mediante ExpressPlay.
 title: Derecho basado en tiempo del servicio de referencia
-exl-id: a37b0e71-ba7b-4f03-9866-5e8b062e0b7d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%

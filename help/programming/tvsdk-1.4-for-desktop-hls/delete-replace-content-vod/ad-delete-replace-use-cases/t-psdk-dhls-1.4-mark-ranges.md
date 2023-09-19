@@ -2,8 +2,7 @@
 title: Marcar intervalos
 description: Marcar intervalos
 copied-description: true
-exl-id: 173769cd-6580-4461-9dbc-5bb2fed346d2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '24'
 ht-degree: 0%

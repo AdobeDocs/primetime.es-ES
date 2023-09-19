@@ -4,8 +4,7 @@ description: Las notas de la versión del explorador TVSDK 2.4 describen las fun
 contentOwner: dekalra
 topic-tags: release-notes
 products: SG_PRIMETIME
-exl-id: 83fdf530-5cbb-41d9-ab2a-28e117f04488
-source-git-commit: 3b051c3188c81673129e12dfeb573aaf85c15c97
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '6812'
 ht-degree: 0%
@@ -104,7 +103,7 @@ Las siguientes mejoras y adiciones están disponibles como parte de la versión 
 
 · El marco de la interfaz de usuario ahora admite DRM de acceso HLS en el flujo de trabajo de Flash, solo publicidad y segmentación de información.
 
-· La API setDRMAuthenticateData se agrega al marco de la interfaz de usuario. Para reproducir flujos protegidos con DRM de acceso a Adobe, invoque esta API. Como alternativa, el atributo drmAuthenticateData se puede especificar en el reproductor. Consulte [AdobePSDK.videoBehavior ](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)para obtener más información.
+· La API setDRMAuthenticateData se agrega al marco de la interfaz de usuario. Para reproducir flujos protegidos con DRM de acceso a Adobe, invoque esta API. Como alternativa, el atributo drmAuthenticateData se puede especificar en el reproductor. Consulte [AdobePSDK.videoBehavior](https://help.adobe.com/en_US/primetime/api/psdk/btvsdk-ui-framework/VideoBehavior.html)para obtener más información.
 
 **Versión 2.4.7**
 
@@ -188,15 +187,15 @@ Las siguientes funciones son nuevas en la versión 2.4.5:
 
 * **Reproducciones y anuncios de eventos completos**
 
-   Los flujos de reproducción completa de eventos (FER) de HLS ahora admiten la resolución de anuncios y comportamientos de anuncios. Para habilitar esta compatibilidad, establezca el modo de señalización de publicidad en `MANIFEST_CUES` al crear el `MediaPlayerItemConfig` objeto.
+  Los flujos de reproducción completa de eventos (FER) de HLS ahora admiten la resolución de anuncios y comportamientos de anuncios. Para habilitar esta compatibilidad, establezca el modo de señalización de publicidad en `MANIFEST_CUES` al crear el `MediaPlayerItemConfig` objeto.
 
 * **Compatibilidad con MediaplayerView ScalePolicy**
 
-   Los desarrolladores de aplicaciones ahora pueden especificar un scalePolicy diferente para la vista mediante la propiedad scalePolicy de MediaPlayerView.
+  Los desarrolladores de aplicaciones ahora pueden especificar un scalePolicy diferente para la vista mediante la propiedad scalePolicy de MediaPlayerView.
 
 * **Compatibilidad con contenido anamórfico**
 
-   La reproducción de contenido anamórfico ahora se admite al utilizar MSE y la reproducción en Flash.
+  La reproducción de contenido anamórfico ahora se admite al utilizar MSE y la reproducción en Flash.
 
 * **Aplicación selectiva de`withCredentials`**
 
@@ -220,11 +219,11 @@ Las siguientes funciones fueron nuevas en la versión 2.4.3:
 
 * **Etiquetas personalizadas para DASH VOD**
 
-   Las etiquetas personalizadas en línea (eventos) se pueden suscribir y recibir como un objeto TimedMetadata.
+  Las etiquetas personalizadas en línea (eventos) se pueden suscribir y recibir como un objeto TimedMetadata.
 
 * **Reproducción de flujos sin extensiones**
 
-   Ahora se admiten flujos HLS y DASH sin extensiones. Para el archivo de manifiesto, es necesario especificar resourceType al cargar el recurso. Para segmentos y archivos VTT, se utiliza el encabezado de respuesta Content-Type para determinar el tipo de contenido.
+  Ahora se admiten flujos HLS y DASH sin extensiones. Para el archivo de manifiesto, es necesario especificar resourceType al cargar el recurso. Para segmentos y archivos VTT, se utiliza el encabezado de respuesta Content-Type para determinar el tipo de contenido.
 
 **Versión 2.4.2**
 
@@ -236,15 +235,15 @@ Para obtener una lista completa de la paridad de la API, consulte la [Guía de m
 
 * **Compatibilidad con AES de muestra**
 
-   Esta versión agrega compatibilidad con la reproducción de contenido cifrado AES de muestra en MSE y la reserva de Flash. Se ha eliminado la obligación de alojar contenido AES sobre un origen seguro en Google Chrome.
+  Esta versión agrega compatibilidad con la reproducción de contenido cifrado AES de muestra en MSE y la reserva de Flash. Se ha eliminado la obligación de alojar contenido AES sobre un origen seguro en Google Chrome.
 
 * **Compatibilidad con contenedores de AAC**
 
-   Ahora se admite la reproducción de archivos con la extensión .aac. Pueden ser emisiones de solo audio o audio alternativo.
+  Ahora se admite la reproducción de archivos con la extensión .aac. Pueden ser emisiones de solo audio o audio alternativo.
 
-   >[!NOTE]
-   >
-   >Los códecs AC3 y AC3 mejorados aún no son compatibles.
+  >[!NOTE]
+  >
+  >Los códecs AC3 y AC3 mejorados aún no son compatibles.
 
 * **Reproducción de flujo tokenizada**
 
@@ -280,11 +279,11 @@ Las siguientes funciones estaban disponibles en la versión 2.4:
 
 * **Reproducción de audio MP3**
 
-   Esta versión es compatible con la reproducción de audio MP3 en navegadores con extensiones de fuentes de medios (MSE) y con la etiqueta de vídeo Safari.
+  Esta versión es compatible con la reproducción de audio MP3 en navegadores con extensiones de fuentes de medios (MSE) y con la etiqueta de vídeo Safari.
 
 * **Reproducción de vídeo MP4**
 
-   Se admiten las siguientes funciones:
+  Se admiten las siguientes funciones:
 
    * Reproducción de un solo flujo
    * Anuncios MP4 previos a la emisión y posteriores a la emisión con comportamientos y seguimiento de anuncios
@@ -1386,7 +1385,7 @@ Los siguientes problemas se solucionan en la versión 2.4.8 de TVSDK para explor
 
 Se han corregido los siguientes problemas en la versión 2.4.7:
 
-· **8397**: Es posible que los flujos en directo de HLS generados a través de Adobe Medium Server no se reproduzcan si los segmentos no comienzan con un fotograma clave.
+· **8397**: Es posible que los flujos en directo de HLS generados a través del Adobe Media Server no se reproduzcan si los segmentos no comienzan con un fotograma clave.
 
 · **13606**: se han corregido varios problemas relacionados con la búsqueda para la emisión HLS en el navegador Chrome.
 
@@ -1440,7 +1439,7 @@ A continuación se mencionan las limitaciones y problemas conocidos de TVSDK par
    <td>VOD + Activo</td> 
    <td>Reproducción general (reproducir, pausar, buscar)</td> 
    <td><p>· No se admiten formatos de medios distintos de HLS.</p> <p>8799: La reserva de Flash no se encarga del contenido mixto y, por lo tanto, debe asegurarse de que el contenido, el anuncio y otras URL no produzcan contenido mixto (contenido seguro y no seguro juntos).</p> <p>· 19271: La reproducción multivisión a través de la interfaz de usuario no es compatible con el modo de reserva de Flash.</p> <p>· La reserva de Flash no funciona en Microsoft Internet Explorer 8 y 9 en Windows 7, ya que estas versiones no son compatibles con el SDK.</p> <p>· 20262: La reserva de Flash añade parámetros personalizados a la lista de información de objetivo. Además, el orden de prioridad de los parámetros personalizados es diferente en el caso del Flash y el MSE.</p> <p>· 20653: La reserva de Flash de TVSDK del explorador no funciona en Win10 con Creators Update.</p> <p>· Flash Fallback funciona con Flash Player versión 23 y posterior.</p> <p>· 20087 - Chrome 59 Beta con</p> <p>Flash 25.0.0.171</p> <p>Beta (predeterminada), la reproducción HLS no funciona en el modo de reserva de Flash. Está funcionando bien en Canarias.</p> </td> 
-   <td><p>· 12563: Los flujos de guiones con códec de audio mp4a.40.02 no se reproducen en Firefox debido a una cadena de códec de audio no compatible en MPD. Se admite el códec de audio mp4a.40.2.</p> <p>15029: Al cambiar entre vídeos en multiView en UI-Framework, el botón de reproducción/pausa no se actualiza en consecuencia.</p> <p>· 16034: En Windows 8.1 IE, llamar a reset() conduce a un error de tipo MIME desconocido. Vuelva a cargar el contenido para reanudar la reproducción.</p> <p>· 18235: Se observan ciertos problemas de búsqueda con los flujos de vod de DASH con los anuncios.</p> <p>· 18727: La API de error no es compatible con MSE</p> <p>18750: es posible que los eventos de cambio de estado estén desordenados en algunos casos tanto para el SDK como para el marco de trabajo de la interfaz de usuario y que en el marco de trabajo de la interfaz de usuario falten eventos IDLE e Inicializando el cambio de estado para los oyentes de evento agregados después de cargar el recurso.</p> <p>· 18889: Si MediaPlayer está en estado ERROR, no se devuelve el objeto de vista.</p> <p>· 19039: Si AdobePSDK. Reproductor multimedia. seekToLocal() se utiliza con un valor bueno a EOF y la reproducción comienza desde el principio en el caso de MSE.</p> <p>· 19049: No se informa de ningún estado de error en el Flash Player en Chrome, IE o Firefox cuando el vídeo se bloquea durante la reproducción.</p> <p>· 17205: La reproducción de vídeo se detiene cuando se reproduce un flujo sin mezclar durante unas horas mientras el audio sigue reproduciéndose (problema de cromo# 664033).</p> <p>· 12308: Es posible que se le haya aplicado timeStampOffset a los flujos de DASH con el elemento layout_time_offset especificado en el navegador Chrome, lo que provoca un tiempo de descodificación negativo y, por lo tanto, un error MEDIA_ERR_ SRC_NOT_ SUPPORTED (#398141 de problemas de Chromium).</p> <p>· 14126: La reproducción puede detenerse en Firefox (número de problema 1316024) debido a un hueco interno en el búfer de origen MSE. Intente buscar para reanudar la reproducción.</p> <p>· 19115: MS Edge e IE 11 (Win 8.1 y 10) no establecen Origin como nulo en el redireccionamiento CORS y, sin embargo, falla porque el encabezado no es nulo, lo que provoca un error de reproducción.</p> <p>· 19861: Problema con el comportamiento de adición en el búfer de origen para los medios ya reproducidos. Chrome rechaza el fragmento anexado, incluido moov, lo que provoca un error de descodificación posterior. (#735335 de problema de cromo)</p> <p>19921: La reproducción se detiene para cierto contenido HLS aunque se haya almacenado en búfer correctamente (#713540 de problemas de Chromium)</p> <p>· 20444: Si se busca el final del alcance del almacenamiento en búfer en IE y Edge, la reproducción puede estancarse.</p> <p>· 20511: A veces, el rechazo de búsqueda se puede observar en los flujos HLS con o sin anuncios.</p> <p>· 20743: En Windows 10 Chrome, el flujo en directo de HLS se reproduce durante unos segundos antes de la reproducción previa a la emisión de MP4.</p> <p>· 21043: Es posible que la dimensión de vídeo no sea correcta al cargar por primera vez debido a la falta de metadatos.</p> <p>· 21115: Se requiere el gesto del usuario de Android para iniciar la reproducción si el anuncio previo a la emisión está disponible para los vídeos en una lista de reproducción.</p> <p>· HLS Live no admite la rollover de marca de tiempo.</p> <p>· No admite audio AAC-SSR.</p> <p>Los códecs de audio AC3 y Enhanced AC3 no son compatibles.</p> <p>· Para emisiones con discontinuidad de marca de tiempo pero sin marcadores de discontinuidad</p> <p>· La reproducción puede tener problemas y una búsqueda incorrecta debido a saltos.</p> <p>· Es posible que la duración del contenido y de la reproducción no coincidan.</p> <p>· Las discontinuidades entre representaciones y representaciones deben coincidir en cuanto a otros aspectos, lo que puede provocar problemas de sincronización y estancamiento.</p> <p>· Los subtítulos y WebVTT podrían no aparecer cerca del final del flujo.</p> <p>· Los cambios de códec de audio no son compatibles con los saltos de marca de tiempo.</p> <p>· No se admite la inserción de anuncios.</p> <p>· El modo de truco de avance rápido puede conducir a un bucle de reproducción en Win 8.1 IE 11 (MS issue #12446268).</p> <p>GUIÓN:</p> <p>· Para emisiones en directo: se admite el perfil en directo con tipo dinámico.</p> <p>· Para emisiones VoD: se admite el perfil en directo con tipo estático.</p> <p>Para flujos VoD: el perfil ondemand no está certificado para flujos de trabajo publicitarios.</p> </td> 
+   <td><p>· 12563: Los flujos de guiones con códec de audio mp4a.40.02 no se reproducen en Firefox debido a una cadena de códec de audio no compatible en MPD. Se admite el códec de audio mp4a.40.2.</p> <p>15029: Al cambiar entre vídeos en multiView en UI-Framework, el botón de reproducción/pausa no se actualiza en consecuencia.</p> <p>· 16034: En Windows 8.1 IE, llamar a reset() conduce a un error de tipo MIME desconocido. Vuelva a cargar el contenido para reanudar la reproducción.</p> <p>· 18235: Se observan ciertos problemas de búsqueda con los flujos de vod de DASH con los anuncios.</p> <p>· 18727: La API de error no es compatible con MSE</p> <p>18750: es posible que los eventos de cambio de estado estén desordenados en algunos casos tanto para el SDK como para el marco de trabajo de la interfaz de usuario y que en el marco de trabajo de la interfaz de usuario falten eventos IDLE e Inicializando el cambio de estado para los oyentes de evento agregados después de cargar el recurso.</p> <p>· 18889: Si MediaPlayer está en estado ERROR, no se devuelve el objeto de vista.</p> <p>· 19039: Si AdobePSDK. Reproductor multimedia. seekToLocal() se utiliza con un valor mayor que EOF y la reproducción comienza desde el principio en el caso de MSE.</p> <p>· 19049: No se informa de ningún estado de error en el Flash Player en Chrome, IE o Firefox cuando el vídeo se bloquea durante la reproducción.</p> <p>· 17205: La reproducción de vídeo se detiene cuando se reproduce un flujo sin mezclar durante unas horas mientras el audio sigue reproduciéndose (problema de cromo# 664033).</p> <p>· 12308: Es posible que se le haya aplicado timeStampOffset a los flujos de DASH con el elemento layout_time_offset especificado en el navegador Chrome, lo que provoca un tiempo de descodificación negativo y, por lo tanto, un error MEDIA_ERR_ SRC_NOT_ SUPPORTED (#398141 de problemas de Chromium).</p> <p>· 14126: La reproducción puede detenerse en Firefox (número de problema 1316024) debido a un hueco interno en el búfer de origen MSE. Intente buscar para reanudar la reproducción.</p> <p>· 19115: MS Edge e IE 11 (Win 8.1 y 10) no establecen Origin como nulo en el redireccionamiento CORS y, sin embargo, falla porque el encabezado no es nulo, lo que provoca un error de reproducción.</p> <p>· 19861: Problema con el comportamiento de adición en el búfer de origen para los medios ya reproducidos. Chrome rechaza el fragmento anexado, incluido moov, lo que provoca un error de descodificación posterior. (#735335 de problema de cromo)</p> <p>19921: La reproducción se detiene para cierto contenido HLS aunque se haya almacenado en búfer correctamente (#713540 de problemas de Chromium)</p> <p>· 20444: Si se busca el final del alcance del almacenamiento en búfer en IE y Edge, la reproducción puede estancarse.</p> <p>· 20511: A veces, el rechazo de búsqueda se puede observar en los flujos HLS con o sin anuncios.</p> <p>· 20743: En Windows 10 Chrome, el flujo en directo de HLS se reproduce durante unos segundos antes de la reproducción previa a la emisión de MP4.</p> <p>· 21043: Es posible que la dimensión de vídeo no sea correcta al cargar por primera vez debido a la falta de metadatos.</p> <p>· 21115: Se requiere el gesto del usuario de Android para iniciar la reproducción si el anuncio previo a la emisión está disponible para los vídeos en una lista de reproducción.</p> <p>· HLS Live no admite la rollover de marca de tiempo.</p> <p>· No admite audio AAC-SSR.</p> <p>Los códecs de audio AC3 y Enhanced AC3 no son compatibles.</p> <p>· Para emisiones con discontinuidad de marca de tiempo pero sin marcadores de discontinuidad</p> <p>· La reproducción puede tener problemas y una búsqueda incorrecta debido a saltos.</p> <p>· Es posible que la duración del contenido y de la reproducción no coincidan.</p> <p>· Las discontinuidades entre representaciones y representaciones deben coincidir en cuanto a otros aspectos, lo que puede provocar problemas de sincronización y estancamiento.</p> <p>· Los subtítulos y WebVTT podrían no aparecer cerca del final del flujo.</p> <p>· Los cambios de códec de audio no son compatibles con los saltos de marca de tiempo.</p> <p>· No se admite la inserción de anuncios.</p> <p>· El modo de truco de avance rápido puede conducir a un bucle de reproducción en Win 8.1 IE 11 (MS issue #12446268).</p> <p>GUIÓN:</p> <p>· Para emisiones en directo: se admite el perfil en directo con tipo dinámico.</p> <p>· Para emisiones VoD: se admite el perfil en directo con tipo estático.</p> <p>Para flujos VoD: el perfil ondemand no está certificado para flujos de trabajo publicitarios.</p> </td> 
    <td><p>· No se admiten los flujos de vídeo en directo y a petición DASH.</p> <p>· La reproducción de vídeo PIP (Imagen en imagen) no es compatible con iOS en modo de pantalla completa.</p> <p>En Safari (Etiqueta de vídeo), la extensión menos manifiesto sin tener un encabezado de tipo de contenido correcto no funciona.</p> </td> 
    <td><p>· applicationID en la aplicación del remitente debe ser el mismo que se genera al registrar la URL del receptor como aplicación de receptor personalizada.</p> <p>· El reproductor de referencia está certificado para flujos de trabajo DASH. El marco de interfaz de usuario no está certificado.</p> <p>Para obtener una lista de los códecs multimedia admitidos, consulte <a href="https://developers.google.com/cast/docs/media"><em>aquí</em></a>.</p> </td> 
   </tr> 

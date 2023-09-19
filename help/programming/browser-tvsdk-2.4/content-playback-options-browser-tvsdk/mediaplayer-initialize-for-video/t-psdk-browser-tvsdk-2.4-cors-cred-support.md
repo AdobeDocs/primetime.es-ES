@@ -2,8 +2,7 @@
 description: La compatibilidad con el atributo withCredentials en XMLHttpRequests permite que las solicitudes de uso compartido de recursos de origen cruzado (CORS) incluyan las cookies del dominio de destino para una variedad de tipos de solicitud.
 keywords: CORS;origen cruzado;uso compartido de recursos;cookies;con credenciales
 title: Uso compartido de recursos de origen cruzado
-exl-id: 02826c87-b0c6-495b-a17d-67c5693a9772
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 0%

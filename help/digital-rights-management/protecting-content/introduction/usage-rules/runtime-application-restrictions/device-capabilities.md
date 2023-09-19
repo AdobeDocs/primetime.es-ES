@@ -2,8 +2,7 @@
 title: Funciones del dispositivo necesarias para reproducir contenido protegido
 description: Funciones del dispositivo necesarias para reproducir contenido protegido
 copied-description: true
-exl-id: 540fbb53-ec1a-43be-b51b-9937ed31e384
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
@@ -12,7 +11,7 @@ ht-degree: 0%
 
 # Funciones del dispositivo necesarias para reproducir contenido protegido {#device-capabilities-required-to-play-protected-content}
 
-Las funcionalidades de dispositivo requeridas especifican las funcionalidades de hardware necesarias para acceder al contenido. La información acerca de las funciones de hardware está disponible para los dispositivos que utilizan el kit de portabilidad.
+Las funcionalidades del dispositivo requeridas especifican las funcionalidades de hardware necesarias para acceder al contenido. La información acerca de las funciones de hardware está disponible para los dispositivos que utilizan el kit de portabilidad.
 
 Los atributos siguientes pueden identificar las capacidades del dispositivo:
 

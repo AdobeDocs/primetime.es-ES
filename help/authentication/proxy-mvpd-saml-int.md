@@ -1,8 +1,7 @@
 ---
 title: Integración de SAML de MVPD proxy
 description: Integración de SAML de MVPD proxy
-exl-id: 6c83e703-d8cd-476b-8514-05b8230902be
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '711'
 ht-degree: 1%

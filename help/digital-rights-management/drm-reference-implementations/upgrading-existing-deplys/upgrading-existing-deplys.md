@@ -1,8 +1,7 @@
 ---
 description: Para actualizar un servidor que admita el servidor de licencias de implementación de referencia de la versión 3.0 o el empaquetador de carpetas inspeccionadas, debe reemplazar los archivos .war que se han implementado en un servidor de aplicaciones por los archivos que se han incluido con el servidor de implementación de referencia de Adobe Primetime DRM.
 title: Actualización de implementaciones existentes
-exl-id: 83edaf0a-e527-470d-8b8d-23e5ba86b039
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 0%

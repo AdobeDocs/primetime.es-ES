@@ -1,8 +1,7 @@
 ---
 description: Existen varias formas de determinar la inserción y la ubicación de los anuncios.
 title: Inserción y colocación de publicidad
-exl-id: 73f24a65-4be2-47d3-8cb9-5cb2c81e6d93
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
@@ -27,15 +26,15 @@ El TVSDK puede obtener ubicaciones para una posible ubicación de anuncios desde
 
 * **Metadatos/señales de manifiesto**
 
-   El TVSDK detecta las señales, extrae la información necesaria de estas señales y se comunica con un servidor de publicidad para obtener los anuncios correspondientes. Esta fuente es común para emisiones en directo/lineales.
+  El TVSDK detecta las señales, extrae la información necesaria de estas señales y se comunica con un servidor de publicidad para obtener los anuncios correspondientes. Esta fuente es común para emisiones en directo/lineales.
 
-   El TVSDK generalmente reemplaza el contenido principal con los anuncios en la ubicación indicada por los metadatos/señales; de lo contrario, el cliente dejaría cada vez más detrás del punto en directo real.
+  El TVSDK generalmente reemplaza el contenido principal con los anuncios en la ubicación indicada por los metadatos/señales; de lo contrario, el cliente dejaría cada vez más detrás del punto en directo real.
 
 * **El mapa del servidor de publicidad**
 
-   Normalmente, los metadatos sobre estos flujos se registran en el servidor de publicidad antes de la reproducción. TVSDK recupera la cronología de la publicidad y los anuncios correspondientes del servidor. Esta fuente es común para flujos de VOD.
+  Normalmente, los metadatos sobre estos flujos se registran en el servidor de publicidad antes de la reproducción. TVSDK recupera la cronología de la publicidad y los anuncios correspondientes del servidor. Esta fuente es común para flujos de VOD.
 
-   Normalmente, TVSDK inserta los anuncios resueltos en el contenido principal tal como indica el mapa del servidor.
+  Normalmente, TVSDK inserta los anuncios resueltos en el contenido principal tal como indica el mapa del servidor.
 
 >[!NOTE]
 >

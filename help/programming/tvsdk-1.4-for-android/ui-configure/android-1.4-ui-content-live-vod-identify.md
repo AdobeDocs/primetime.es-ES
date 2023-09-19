@@ -1,8 +1,7 @@
 ---
 description: En algunos casos, es necesario saber si el contenido multimedia está activo o es VOD.
 title: Identificar si el contenido está activo o es VOD
-exl-id: b93cc61b-aa72-4edd-a070-93c111dec339
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%

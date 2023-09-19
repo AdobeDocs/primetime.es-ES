@@ -1,8 +1,7 @@
 ---
 description: En AdobeTVSDKConfig.json puede especificar reglas predeterminadas y reglas para zonas específicas.
 title: Ejemplo de reglas de selección creativa
-exl-id: 2f777f83-948b-47e1-97c1-4259a7482cfb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '84'
 ht-degree: 0%

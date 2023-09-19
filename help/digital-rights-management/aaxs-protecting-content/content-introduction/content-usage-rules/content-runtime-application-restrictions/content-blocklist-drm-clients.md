@@ -2,8 +2,7 @@
 title: Lista de bloqueados de clientes DRM con acceso restringido a contenido protegido
 description: Lista de bloqueados de clientes DRM con acceso restringido a contenido protegido
 copied-description: true
-exl-id: 74ddb5ed-4e68-4570-9cd5-bfc699609972
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 0%
@@ -25,7 +24,7 @@ Una versión de cliente DRM puede identificarse mediante los atributos especific
 | Entorno | &quot;PC&quot;, &quot;PortingKit&quot; | Coincidencia exacta | Identifica si el cliente se está ejecutando en un escritorio o en cualquier otro dispositivo. |
 | SO | &quot;Win&quot;, &quot;Mac&quot;, &quot;Linux&quot;, &quot;Android&quot;, &quot;iOS&quot;, &quot;ChromeOS&quot; | Coincidencia exacta | Plataforma |
 | Arquitectura | “32”, “64” | Coincidencia exacta | 32 o 64 bits |
-| Tipo de pantalla | &quot;PC&quot;, &quot;Mobile&quot;, &quot;TV&quot; | Coincidencia exacta |  |
+| Tipo de pantalla | &quot;PC&quot;, &quot;Mobile&quot;, &quot;TV&quot; | Coincidencia exacta | |
 | Versión de tiempo de ejecución | Un número de versión válido. Por ejemplo, &quot;2.0.0&quot;, &quot;3.0&quot;, &quot;4.0&quot;, &quot;11.0&quot;, etc. | Coincide si la versión del cliente es menor o igual que la versión especificada. | El número de versión se especifica como una combinación de números y puntos (&quot;.&quot;) de cualquier longitud. |
 | Versión de biblioteca DRM | Un número de versión válido. Por ejemplo, &quot;2.0.0&quot;. | Coincide si la versión del cliente es menor o igual que la versión especificada. | El número de versión se especifica como una combinación de números y puntos (&quot;.&quot;) de cualquier longitud. |
 | Proveedor OEM | Cadena de proveedor OEM | Coincidencia exacta | Cadena de identificación del proveedor OEM para el dispositivo que usa el kit de portabilidad. |

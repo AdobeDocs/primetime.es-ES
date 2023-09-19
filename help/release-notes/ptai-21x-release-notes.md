@@ -1,8 +1,7 @@
 ---
 title: Notas de la versión de PTAI 21.11.1
 description: Las notas de la versión de PTAI describen las novedades o los cambios, los problemas resueltos y conocidos en Primetime Ad Insertion en el año 2021.
-exl-id: 39a05f6d-431a-4416-81b1-21d82c0dbd69
-source-git-commit: f4c6ef44c7f13bf8170a1f23a7ae8eba0171316a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 0%
@@ -33,7 +32,7 @@ Cuándo: martes, 12 de octubre de 2021, de 7:45 a.m. a 1:45 p.m., hora del este
 
 Cuándo: martes, 28 de septiembre de 2021, de 5:00 a.m. a 6:00 a.m., hora del este
 
-* Actualizaciones de la pila del equilibrador de carga de Elastic Load de AWS a Application Load Balancer de AWS para mejorar la funcionalidad y la escalabilidad. Estos equilibradores de carga se utilizan para enrutar y solicitar tráfico al backend de Auditude desde la capa de Ad Insertion (SSAI/CSAI).
+* Actualizaciones de la pila del equilibrador de carga de Elastic Load de AWS a Application Load Balancer de AWS para mejorar la funcionalidad y la escalabilidad. Estos equilibradores de carga se utilizan para enrutar y solicitar tráfico al backend del Auditude desde la capa del Ad Insertion (SSAI/CSAI).
 
 ### Versión 21.9.1
 

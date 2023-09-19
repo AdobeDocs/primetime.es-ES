@@ -2,8 +2,7 @@
 title: Archivo de directiva entre dominios
 description: Archivo de directiva entre dominios
 copied-description: true
-exl-id: dbe16692-cdf7-4a91-9303-8afc2d487112
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Puede configurar el reproductor para que lea las estadísticas de reproducción y del dispositivo del proveedor de QoS con la frecuencia necesaria.
 title: Mostrar estadísticas de reproducción de QoS y de dispositivo
-exl-id: 369b6e9a-70a2-4f62-a1bf-f69030c5d6c3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 0%

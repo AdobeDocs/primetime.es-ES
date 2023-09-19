@@ -1,8 +1,7 @@
 ---
 description: Cuando se reproduce contenido, el TVSDK del explorador puede mostrar anuncios y pasar información sobre los anuncios al crear el objeto MediaResource.
 title: Anuncios
-exl-id: a44ad0fa-841f-474b-89f4-39666190231f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 0%

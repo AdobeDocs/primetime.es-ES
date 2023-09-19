@@ -2,8 +2,7 @@
 title: Aplicación de Jailbreak (requiere Adobe Primetime)
 description: Aplicación de Jailbreak (requiere Adobe Primetime)
 copied-description: true
-exl-id: d7b931b5-0adb-42c8-8f24-340f385ffb4e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 title: Permitir MVPD en el cuadro de diálogo de selección
 description: Permitir MVPD en el cuadro de diálogo de selección
-exl-id: 2c0e0f06-ddc6-4bea-90dc-d7ef8e78d27e
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%

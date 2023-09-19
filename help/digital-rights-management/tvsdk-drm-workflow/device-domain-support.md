@@ -1,15 +1,14 @@
 ---
 description: Normalmente, todas las licencias DRM de Primetime, en el momento de la creación, están enlazadas a un dispositivo único. Este enlace impide que los usuarios compartan licencias entre dispositivos distintos sin autorización. Además del enlace por dispositivo, Primetime DRM permite enlazar licencias a un dominio de dispositivo o a un grupo de dispositivos.
 title: Reproducción de contenido cifrado mediante la compatibilidad con dominios
-exl-id: 3c9badfc-046b-4c56-bde1-7b3b708bfaa2
-source-git-commit: 59f7f8aa82be59c4012ee80648032600590bc4e1
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
 
 ---
 
-# Compatibilidad con dominio del dispositivo {#device-domain-support}
+# Compatibilidad con dominio de dispositivo {#device-domain-support}
 
 Normalmente, todas las licencias DRM de Primetime, en el momento de la creación, están enlazadas a un dispositivo único. Este enlace impide que los usuarios compartan licencias entre dispositivos distintos sin autorización. Además del enlace por dispositivo, Primetime DRM permite enlazar licencias a un dominio de dispositivo o a un grupo de dispositivos.
 
@@ -28,6 +27,7 @@ Para reproducir contenido cifrado con Primetime DRM , realice los siguientes pas
 
       * Obtener el nombre de usuario y la contraseña del usuario e invocar `DRMManager.authenticate(deviceGroup.serverURL, deviceGroup.domain, username, password)`.
       * Obtenga un token de autenticación en caché o generado previamente e invoque `DRMManager.setAuthenticationToken()`.
+
    1. Invocar `DRMManager.addToDeviceGroup()`
 1. Obtenga la licencia para el contenido realizando una de las siguientes tareas:
    1. Utilice el `DRMManager.loadVoucher()` método.

@@ -1,8 +1,7 @@
 ---
 description: La descarga de vídeo y audio en paralelo, en lugar de en serie, reduce los retrasos de inicio.
 title: Descargas paralelas
-exl-id: 6c93154b-8de4-448b-bc33-776fcc1f6243
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '304'
 ht-degree: 0%
@@ -38,7 +37,7 @@ La conexión HTTP puede experimentar retrasos en las siguientes fases:
 
 * Al establecer la conexión TCP/IP con el servidor
 
-   Aunque el cliente y el servidor han acordado comunicarse, aún no se ha producido ninguna comunicación HTTP. Este tipo de retraso depende de la infraestructura entre el cliente y el servidor. Este proceso requiere encontrar una ruta a través de Internet entre el cliente y el servidor y asegurarse de que todos los dispositivos, como enrutadores y servidores de seguridad, de la ruta acepten la transferencia de datos.
+  Aunque el cliente y el servidor han acordado comunicarse, aún no se ha producido ninguna comunicación HTTP. Este tipo de retraso depende de la infraestructura entre el cliente y el servidor. Este proceso requiere encontrar una ruta a través de Internet entre el cliente y el servidor y asegurarse de que todos los dispositivos, como enrutadores y servidores de seguridad, de la ruta acepten la transferencia de datos.
 * Al enviar una solicitud HTTP para un segmento o un manifiesto a través de la conexión TCP/IP.
 
-   El servidor recibe la solicitud, la procesa y comienza a enviar los datos de nuevo al cliente. El grado de retraso depende de la carga y la complejidad del software en el servidor y, en cierta medida, de la velocidad de conexión de carga cuando el cliente envía la solicitud.
+  El servidor recibe la solicitud, la procesa y comienza a enviar los datos de nuevo al cliente. El grado de retraso depende de la carga y la complejidad del software en el servidor y, en cierta medida, de la velocidad de conexión de carga cuando el cliente envía la solicitud.

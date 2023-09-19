@@ -1,8 +1,7 @@
 ---
 title: Comprobar flujo de autenticación por aplicación web en segunda pantalla
 description: Comprobar flujo de autenticación por aplicación web en segunda pantalla
-exl-id: 5807f372-a520-4069-b837-67ae41b7f79b
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%

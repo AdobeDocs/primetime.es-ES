@@ -2,8 +2,7 @@
 title: Información general sobre la implementación de modelos de uso
 description: Información general sobre la implementación de modelos de uso
 copied-description: true
-exl-id: 48e7db54-484f-4c46-9a4e-a51bae7c84b4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -46,11 +45,11 @@ Cuando un usuario solicita una licencia, el servidor de implementación de refer
          * If `CustomerAuthorization.UsageType` es `DTO`, genere una licencia para *Descargar Para Poseer* modelo de uso y enviarlo al usuario.
 
          * If `CustomerAuthorization.UsageType` es `VOD`, genere una licencia para *Vídeo bajo demanda* modelo de uso y enviarlo al usuario.
+
    * Si ninguna de las directivas permite el acceso anónimo:
 
       * Si no hay un token de autenticación válido en la solicitud, devuelva el error &quot;se requiere autenticación&quot;.
       * De lo contrario, devuelve el error &quot;no autorizado&quot;.
-
 
 * Si una de las políticas permite el acceso anónimo, genere una licencia para el modelo de uso financiado con publicidad y envíela al usuario.
 

@@ -1,8 +1,7 @@
 ---
 title: Glosario de Account IQ
 description: Un glosario de terminologías de productos.
-exl-id: 2ee54442-9538-4c30-b999-265310b3935f
-source-git-commit: 4eb5ba53fb3e0a0c314695fcd30cf15c7242b53c
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1456'
 ht-degree: 0%
@@ -60,7 +59,7 @@ Clúster que tiene al menos un dispositivo estático.
 ## Concurrencia {#consurrency-def}
 
 El concurrente se define por dos (o más) emisiones reproducidas al mismo tiempo o muy cerca en el tiempo, de modo que el intervalo entre ellas no puede justificarse viajando a una velocidad normal.
-El uso simultáneo se calcula utilizando la velocidad máxima (millas/hora) entre 2 grupos diferentes. Se considera que un usuario tiene un uso simultáneo si tiene una velocidad buena superior a 124 m/h en una distancia inferior a 124 millas o si tiene una velocidad buena superior a 400 m/h en una distancia buena a 124 millas. La distancia se calcula entre ubicaciones de diferentes grupos. Se permite el uso simultáneo en el mismo clúster.
+El uso simultáneo se calcula utilizando la velocidad máxima (millas/hora) entre 2 grupos diferentes. Se considera que un usuario tiene un uso simultáneo si tiene una velocidad superior a 124 m/h en una distancia inferior a 124 millas o si tiene una velocidad superior a 400 m/h en una distancia superior a 124 millas. La distancia se calcula entre ubicaciones de diferentes grupos. Se permite el uso simultáneo en el mismo clúster.
 
 ## Dispositivo {#device-def}
 

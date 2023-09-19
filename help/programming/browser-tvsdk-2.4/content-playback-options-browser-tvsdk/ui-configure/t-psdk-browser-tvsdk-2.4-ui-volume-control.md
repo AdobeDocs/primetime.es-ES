@@ -1,8 +1,7 @@
 ---
 description: Puede configurar un control de interfaz de usuario para el volumen de sonido.
 title: Proporcionar control de volumen
-exl-id: 5c446081-5491-46b6-9259-293131af80cb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 0%

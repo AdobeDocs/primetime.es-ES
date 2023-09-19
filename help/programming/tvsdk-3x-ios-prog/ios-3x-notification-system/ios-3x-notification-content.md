@@ -1,8 +1,7 @@
 ---
 description: Los objetos PTNotification proporcionan información sobre cambios en el estado del reproductor, advertencias y errores. Los errores que detienen la reproducción del vídeo también provocan un cambio en el estado del reproductor.
 title: Contenido de notificación
-exl-id: 62423718-b154-4105-82b2-f6e389105ec8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%

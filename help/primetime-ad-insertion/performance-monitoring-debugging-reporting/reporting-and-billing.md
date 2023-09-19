@@ -2,8 +2,7 @@
 title: Informes y facturación
 description: Informes y facturación
 copied-description: true
-exl-id: efe91d97-a429-448a-9b7f-cac50b850f35
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Estas clases proporcionan información sobre los medios.
 title: Clases Info
-exl-id: af09c81f-07f4-423b-af97-53bc2274cddc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 0%

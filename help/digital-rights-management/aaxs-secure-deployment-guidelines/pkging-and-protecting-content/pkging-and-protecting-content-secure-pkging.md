@@ -2,8 +2,7 @@
 title: Empaquetado seguro del contenido
 description: Empaquetado seguro del contenido
 copied-description: true
-exl-id: f554852c-83d9-4b31-8dde-2af577c70989
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%

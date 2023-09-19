@@ -2,8 +2,7 @@
 title: Monitorización de eventos en directo
 description: Monitorización de eventos en directo
 copied-description: true
-exl-id: 004672c9-d064-46b7-8c8f-b4411b96e7cb
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%

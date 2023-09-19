@@ -2,8 +2,7 @@
 title: Configurar la base de datos del servidor de licencias
 description: Configurar la base de datos del servidor de licencias
 copied-description: true
-exl-id: be6232b4-bf51-486f-9c85-ab6f6ec6d9bd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%

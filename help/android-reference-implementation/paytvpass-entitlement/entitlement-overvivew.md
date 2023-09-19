@@ -1,8 +1,7 @@
 ---
 description: El Administrador de derechos es el administrador de funciones que admite la implementación de autenticación de Primetime.
 title: Información general del administrador de derechos
-exl-id: a66e131e-283f-4378-b834-7cfa887b3ec9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 0%

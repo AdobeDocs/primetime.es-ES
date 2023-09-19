@@ -1,8 +1,7 @@
 ---
 description: El comportamiento de la reproducción de contenido se ve afectado por la búsqueda, la pausa, el avance rápido o el rebobinado (modo de reproducción con trucos) y la inclusión de publicidad.
 title: Comportamiento de reproducción predeterminado y personalizado con anuncios
-exl-id: 56544683-28a3-4720-bfd8-946cb09880aa
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%

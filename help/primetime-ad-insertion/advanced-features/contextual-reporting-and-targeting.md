@@ -2,8 +2,7 @@
 title: Segmentación e informes contextuales
 description: Segmentación e informes contextuales
 copied-description: true
-exl-id: 6d6c1f48-95ca-4055-a369-97ff27782ff0
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%

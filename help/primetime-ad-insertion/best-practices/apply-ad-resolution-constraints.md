@@ -2,8 +2,7 @@
 title: Aplicar restricciones de resolución de publicidad
 description: Aplicar restricciones de resolución de publicidad
 copied-description: true
-exl-id: aae17be8-d23c-4c5c-90fd-7ee6fba69e9a
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Para la inserción de anuncios de flujo en directo, es posible que tenga que salir de una pausa publicitaria antes de que se reproduzcan todos los anuncios de la pausa hasta su finalización.
 title: Implementar un retorno de pausa publicitaria anticipado
-exl-id: 3c61f34f-3587-40c2-b480-4734b4cf9aef
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Para implementar DRM necesita certificados y claves particulares, incluida una clave de cifrado de contenido o CEK para cifrar el contenido, un autenticador de cliente para proteger las comunicaciones con los servidores ExpressPlay y CEKSID para identificar las claves de cifrado de contenido almacenadas en un sistema de administración de claves.
 title: Claves, ID y autenticadores
-exl-id: b769192d-92ad-4b93-84dd-80b182fc6c43
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 0%
@@ -42,16 +41,16 @@ o (para el empaquetador sin conexión de Adobe):
 
 * ** [!DNL [somefile].bin]**: el empaquetador sin conexión de Adobe hace referencia a la CEK como [!DNL [somefile].bin]; p. ej., * [!DNL Keyfile.bin]* - Este es su CEK como lo utiliza el Packager sin conexión de Adobe, en forma de archivo en la máquina que utiliza para empaquetar contenido.
 
-   Usted &quot;Base64&quot; su cadena hexagonal aleatoria CEK, y guardarlo como un archivo (por ejemplo, [!DNL keyfile.bin]), normalmente ubicado en el [!DNL creds] directorio debajo de [!DNL offlinepkgr/]. En el archivo de configuración de Packager (por ejemplo, podría llamarlo [!DNL widevine.xml] si está empaquetando para el Widevine (DRM), haga referencia a su CEK en el archivo de configuración de esta manera:
+  Usted &quot;Base64&quot; su cadena hexagonal aleatoria CEK, y guardarlo como un archivo (por ejemplo, [!DNL keyfile.bin]), normalmente ubicado en el [!DNL creds] directorio debajo de [!DNL offlinepkgr/]. En el archivo de configuración de Packager (por ejemplo, podría llamarlo [!DNL widevine.xml] si está empaquetando para el Widevine (DRM), haga referencia a su CEK en el archivo de configuración de esta manera:
 
-   ```
-   <config>  
-     <in_path>sample.mp4</in_path>  
-     <out_type>dash</out_type>
-     <b><key_file_path>keyfile.bin</key_file_path></b> // This is your CEK  
-     […] 
-   </config> 
-   ```
+  ```
+  <config>  
+    <in_path>sample.mp4</in_path>  
+    <out_type>dash</out_type>
+    <b><key_file_path>keyfile.bin</key_file_path></b> // This is your CEK  
+    […] 
+  </config> 
+  ```
 
 * **Clave de contenido** : También puede ver la CEK denominada como clave de contenido en las llamadas ( `&contentKey=`), en mensajes de error, en vales de soporte y en otra documentación.
 

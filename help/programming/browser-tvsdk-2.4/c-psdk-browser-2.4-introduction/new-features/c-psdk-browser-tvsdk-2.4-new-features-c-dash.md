@@ -1,8 +1,7 @@
 ---
 description: El TVSDK del explorador admite una serie de funciones de DASH que puede implementar para añadir funcionalidad a las aplicaciones de vídeo.
 title: Funciones de DASH compatibles
-exl-id: 29a5d1a3-e31e-459c-90b5-80227df46e4b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 0%

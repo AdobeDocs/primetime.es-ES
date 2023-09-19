@@ -1,8 +1,7 @@
 ---
 description: Para la inserción de anuncios de flujo en directo, es posible que tenga que salir de una pausa publicitaria antes de que se reproduzcan todos los anuncios de la pausa hasta su finalización.
 title: Implementación de un retorno anticipado de la pausa publicitaria
-exl-id: 584e870e-1408-41a9-bb6f-e82b921fe99e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%
@@ -21,13 +20,13 @@ Estos son algunos requisitos que se deben tener en cuenta:
 
 * Analizar marcadores como `EXT-X-CUE-IN` (o etiqueta de marcador equivalente) que aparecen en los flujos lineales o FER.
 
-   Registre los marcadores como el marcador de un punto de retorno anticipado. Sólo reproducir `adBreaks` hasta esta posición del marcador durante la reproducción, que anula la duración del `adBreak` marcado por el interlineado `EXE-X-CUE-OUT` marcador.
+  Registre los marcadores como el marcador de un punto de retorno anticipado. Sólo reproducir `adBreaks` hasta esta posición del marcador durante la reproducción, que anula la duración del `adBreak` marcado por el interlineado `EXE-X-CUE-OUT` marcador.
 
 * Si dos `EXT-X-CUE-IN` existen marcadores para lo mismo `EXT-X-CUE-OUT` marcador, el primero `EXT-X-CUE-IN` el marcador que aparece es el que cuenta.
 
 * Si la variable `EXE-X-CUE-IN` el marcador aparece en la línea de tiempo sin interlineado `EXT-X-CUE-OUT` marcador, el `EXE-X-CUE-IN` el marcador se descarta.
 
-   En una emisión en directo, si la inicial `EXT-X-CUE-OUT` El marcador acaba de salir de la ventana, TVSDK no responderá a él.
+  En una emisión en directo, si la inicial `EXT-X-CUE-OUT` El marcador acaba de salir de la ventana, TVSDK no responderá a él.
 
 * Cuando hay un retorno anticipado de una pausa publicitaria, la variable `adBreak` se reproduce hasta que el cabezal de reproducción vuelva a la posición original en el momento en que se suponía que la pausa publicitaria debía finalizar y se reanude la reproducción del contenido principal desde esa posición.
 

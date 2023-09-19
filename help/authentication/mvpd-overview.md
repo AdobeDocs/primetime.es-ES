@@ -1,8 +1,7 @@
 ---
 title: Información general sobre MVPD
 description: Información general sobre MVPD
-exl-id: b918550b-96a8-4e80-af28-0a2f63a02396
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2736'
 ht-degree: 0%
@@ -77,6 +76,7 @@ Servicios web sin cliente (para dispositivos no compatibles con la web): servici
 >[!NOTE]
 >
 >Como MVPD, los servicios web deben poder reconocer las solicitudes de autenticación y autorización de la autenticación de Adobe Primetime y responder con los datos requeridos en el formato esperado.
+>
 
 La autenticación de Adobe Primetime le permite proporcionar a los clientes administración de identidades federadas, también conocida como autenticación y autorización de inicio de sesión único (SSO). Con la autenticación de Adobe Primetime, no es necesario que los suscriptores vuelvan a iniciar sesión después de su primera autenticación, siempre y cuando la MVPD permita que persista esa autenticación. (Normalmente, 30 días). Para ello, la autenticación de Adobe Primetime proporciona un dominio común para los tokens de autenticación de nuestros clientes. Esta información de estado de autenticación está disponible para todos los sitios participantes que están integrados con una MVPD determinada.
 

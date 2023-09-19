@@ -2,8 +2,7 @@
 title: Información general
 description: Información general
 copied-description: true
-exl-id: 1e06bead-4b45-4bf0-8bcf-1ea376af6bd8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%
@@ -83,7 +82,7 @@ java -jar AdobePolicyUpdateListManager.jar -d
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -r idDeDirectiva </span> <span class="+ topic/ph pr-d/codeph codeph"> fecha </span> " <span class="+ topic/ph pr-d/codeph codeph"> reasonCode </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonText </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonURL </span>" </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Opcional) Revoca el ID de la directiva DRM en la fecha especificada. Puede proporcionar un código de motivo, un texto de motivo y una URL de motivo opcionales. Debe especificar una cadena vacía "" para indicar que no se proporciona ningún valor para los parámetros opcionales. Puede especificar la fecha en <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd </span> o <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd-h24:min:s </span> en estos formatos. Por ejemplo, 2008-12-1 o 2008-12-1-00:00:00 representa la medianoche del 1 de diciembre de 2008). Si no especifica una fecha, se aplica automáticamente la fecha actual. Por lo tanto, el código de razón debe ser bueno o igual a 0. También puede especificar varias opciones -r. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">(Opcional) Revoca el ID de la directiva DRM en la fecha especificada. Puede proporcionar un código de motivo, un texto de motivo y una URL de motivo opcionales. Debe especificar una cadena vacía "" para indicar que no se proporciona ningún valor para los parámetros opcionales. Puede especificar la fecha en <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd </span> o <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd-h24:min:s </span> en estos formatos. Por ejemplo, 2008-12-1 o 2008-12-1-00:00:00 representa la medianoche del 1 de diciembre de 2008). Si no especifica una fecha, se aplica automáticamente la fecha actual. Por lo tanto, el código de razón debe ser mayor o igual que 0. También puede especificar varias opciones -r. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <p class="- topic/p ">-rf <span class="+ topic/ph pr-d/codeph codeph"> policyFilename </span> <span class="+ topic/ph pr-d/codeph codeph"> fecha </span> " <span class="+ topic/ph pr-d/codeph codeph"> reasonCode </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonText </span>" " <span class="+ topic/ph pr-d/codeph codeph"> reasonURL </span>" </p> </td> 
@@ -91,7 +90,7 @@ java -jar AdobePolicyUpdateListManager.jar -d
   </tr> 
   <tr rowsep="0" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="codeph"> -u nombreDeArchivo " códigoDeRazón " " textoDeRazón " " URLDeRazón" </span> </td> 
-   <td colname="2" class="- topic/entry "> <p>Reemplaza cualquier política DRM coincidente en una solicitud de licencia por esta política DRM mediante el código de motivo dado (opcional), el texto de motivo (opcional) y la URL de motivo (opcional). </p> <p>Una cadena vacía "" indica que no ha proporcionado ningún valor para los parámetros opcionales. </p> <p>El código de motivo debe ser bueno o igual a <span class="codeph"> 0 </span>. Puede especificar varias <span class="codeph"> -u </span> opciones. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p>Reemplaza cualquier política DRM coincidente en una solicitud de licencia por esta política DRM mediante el código de motivo dado (opcional), el texto de motivo (opcional) y la URL de motivo (opcional). </p> <p>Una cadena vacía "" indica que no ha proporcionado ningún valor para los parámetros opcionales. </p> <p>El código de motivo debe ser mayor o igual que <span class="codeph"> 0 </span>. Puede especificar varias <span class="codeph"> -u </span> opciones. </p> </td> 
   </tr> 
  </tbody> 
 </table>

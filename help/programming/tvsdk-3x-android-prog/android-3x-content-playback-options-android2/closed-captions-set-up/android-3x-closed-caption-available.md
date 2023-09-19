@@ -1,8 +1,7 @@
 ---
 description: Puede seleccionar una pista de una lista de pistas de subtítulos cerrados disponibles actualmente. Esta se convierte en la pista actual, que se muestra cuando la visibilidad está activada. Es posible que algunas pistas no estén disponibles inicialmente, por lo que debe escuchar el evento que indica que hay más pistas disponibles.
 title: Seleccionar una pista de rótulo actual entre las pistas disponibles
-exl-id: 9f1a0f7e-44f8-4595-8879-568ab237ca1c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%

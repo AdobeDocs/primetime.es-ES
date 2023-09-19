@@ -1,8 +1,7 @@
 ---
 description: Puede habilitar FairPlay para Safari cuando trabaje con Primetime DRM Cloud, con tecnología ExpressPlay.
 title: Habilitar FairPlay para Safari HLS
-exl-id: 761c7cb8-3068-44c9-8ceb-6411c509c0a7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
@@ -17,7 +16,7 @@ Asegúrese de que dispone de lo siguiente:
 
 * Una aplicación de ejemplo en funcionamiento que puede reproducir vídeo HLS.
 
-   La aplicación de ejemplo debe poder reproducir contenido protegido por FairPlay con la licencia gestionada a través de Primetime DRM con tecnología ExpressPlay.
+  La aplicación de ejemplo debe poder reproducir contenido protegido por FairPlay con la licencia gestionada a través de Primetime DRM con tecnología ExpressPlay.
 * Contenido HLS de muestra (un manifiesto M3U8) empaquetado con protección FairPlay.
 
 Para utilizar completamente la información aquí, obtenga información sobre los flujos de trabajo de Multi-DRM que comienzan con la subsección [Servidor de referencia: Servidor de derechos de ExpressPlay de muestra (SEES)](https://helpx.adobe.com/content/dam/help/en/primetime/drm/drm_multi_drm_workflows.pdf) en la guía Flujos de trabajo de Multi-DRM. Lea primero esa documentación sobre cómo configurar su derecho y servidor de claves, y la información siguiente será mucho más útil.
@@ -44,22 +43,22 @@ Para modificar su aplicación FairPlay / Safari:
    * Utilice su propio autenticador de cliente de producción de ExpressPlay.
    * Utilice la misma clave de contenido y `iv` en esta solicitud que se utilizó para empaquetar el contenido que desea reproducir.
 
-      Ejecute el siguiente comando desde el shell y sustituya el autenticador de cliente de ExpressPlay para obtener la URL del token de licencia para el contenido de ejemplo:
+     Ejecute el siguiente comando desde el shell y sustituya el autenticador de cliente de ExpressPlay para obtener la URL del token de licencia para el contenido de ejemplo:
 
-      ```
-      curl -v "https://fp-gen.service.expressplay.com/hms/fp/token? 
-           customerAuthenticator=<ExpressPlay customer authenticator identifier>& 
-           errorFormat=json& 
-           contentKey=<your content key>& 
-           iv=<your iv here>"
-      ```
+     ```
+     curl -v "https://fp-gen.service.expressplay.com/hms/fp/token? 
+          customerAuthenticator=<ExpressPlay customer authenticator identifier>& 
+          errorFormat=json& 
+          contentKey=<your content key>& 
+          iv=<your iv here>"
+     ```
 
-      La respuesta con la URL del token de licencia tendrá este aspecto:
+     La respuesta con la URL del token de licencia tendrá este aspecto:
 
-      ```
-      https://fp.service.expressplay.com:80/hms/fp/rights/? 
-           ExpressPlayToken=<base64-encoded ExpressPlay token>
-      ```
+     ```
+     https://fp.service.expressplay.com:80/hms/fp/rights/? 
+          ExpressPlayToken=<base64-encoded ExpressPlay token>
+     ```
 
 1. Configure una variable con la URL del token de licencia de ExpressPlay.
 

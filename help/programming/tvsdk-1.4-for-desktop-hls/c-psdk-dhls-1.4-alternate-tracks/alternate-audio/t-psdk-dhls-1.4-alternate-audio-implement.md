@@ -1,8 +1,7 @@
 ---
 description: El audio de enlace tardío utiliza MediaPlayer para reproducir un vídeo que se especifica en una lista de reproducción de HLS M3U8 y que puede contener varios flujos de audio alternativos.
 title: Acceso a pistas de audio alternativas
-exl-id: 08158b3b-1ed2-4f86-a710-2b128bb28ed0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: La administración de la conmutación por error se produce cuando una lista de reproducción de variante tiene varias representaciones para la misma velocidad de bits y una de las representaciones deja de funcionar. TVSDK cambia entre representaciones.
 title: Failover
-exl-id: 3da378ac-1665-4e51-a901-3d7772ede69a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%

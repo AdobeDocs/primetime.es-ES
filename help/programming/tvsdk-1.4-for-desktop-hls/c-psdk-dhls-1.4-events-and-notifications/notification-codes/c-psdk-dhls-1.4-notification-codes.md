@@ -1,8 +1,7 @@
 ---
 description: El sistema de notificación de TVSDK produce varios avisos de error, advertencia e información que proporcionan metadatos de diagnóstico.
 title: Códigos de notificación
-exl-id: 7ea079f1-658d-45ab-891d-044b7b4ff4ec
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 0%

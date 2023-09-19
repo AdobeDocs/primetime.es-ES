@@ -1,8 +1,7 @@
 ---
 description: Estas clases permiten personalizar el registro.
 title: Registrar clases
-exl-id: e420f557-eb4f-4adf-9b87-1cffc6b36d53
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%

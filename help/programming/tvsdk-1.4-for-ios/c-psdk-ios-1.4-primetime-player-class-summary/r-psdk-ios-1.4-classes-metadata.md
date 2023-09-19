@@ -1,8 +1,7 @@
 ---
 description: Estas clases proporcionan metadatos para publicidad, áreas de nombres y seguimiento.
 title: Clases de metadatos
-exl-id: 15b7548f-bd9c-42cb-b9f3-477fc4415f8d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 0%

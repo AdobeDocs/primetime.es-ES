@@ -1,8 +1,7 @@
 ---
 description: Estas clases proporcionan la interfaz entre TVSDK y Adobe Video Analytics.
 title: Clases de Video Analytics
-exl-id: 980d8e36-cfd1-45d4-8c40-f3c53e29b6f6
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '93'
 ht-degree: 0%

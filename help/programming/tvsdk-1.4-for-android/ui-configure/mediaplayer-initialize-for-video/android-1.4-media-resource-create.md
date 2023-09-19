@@ -1,8 +1,7 @@
 ---
 description: Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource con información sobre el contenido de vídeo y cargue el recurso de medios. La clase MediaResource representa el contenido que carga la instancia de MediaPlayer.
 title: Creación de un recurso multimedia
-exl-id: cda70f91-7f30-4e37-9dfa-888b707e3d61
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
@@ -71,8 +70,9 @@ Para cada nuevo contenido de vídeo, inicialice una instancia de MediaResource c
 
    * Su instancia de MediaPlayer.
 
-      Para obtener más información, consulte [Cargar un recurso multimedia en MediaPlayer](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md).
+     Para obtener más información, consulte [Cargar un recurso multimedia en MediaPlayer](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-resource-load.md).
    * A `MediaPlayerItemLoader` Para obtener más información, consulte [Cargar un recurso multimedia mediante MediaPlayerItemLoader](../../../tvsdk-1.4-for-android/ui-configure/mediaplayer-initialize-for-video/android-1.4-media-mediaplayeritemloader.md).
+
    >[!IMPORTANT]
    >
    >No cargue el recurso multimedia en un subproceso en segundo plano. La mayoría de las operaciones de TVSDK deben ejecutarse en el subproceso principal, y ejecutarlas en un subproceso en segundo plano puede provocar que la operación genere un error y salga.

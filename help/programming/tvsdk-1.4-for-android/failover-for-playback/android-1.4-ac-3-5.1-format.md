@@ -1,8 +1,7 @@
 ---
 description: El streaming a través de Internet requiere una conexión constante y estable para reproducir un flujo desde un servidor remoto. Sin embargo, la variabilidad de la conexión a Internet o de la reproducción de una transmisión en tiempo real de un usuario significa que la reproducción remota podría no tener la calidad del contenido reproducido localmente.
 title: Formato AC-3 5.1
-exl-id: dcc43c1b-b9ce-44a1-a4c9-50ccfc5d572d
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
@@ -29,10 +28,10 @@ TVSDK admite las siguientes funciones de AC-3 5.1:
 * Flujos mixtos/no mixtos para el tipo de audio envolvente
 * Posibilidad de consultar el dispositivo para ver si el códec de audio envolvente está disponible en el dispositivo.
 
-   Los resultados determinan qué tipo de códec de audio preferido se selecciona. Se descarta el manifiesto del tipo de códec de audio que el dispositivo no va a utilizar. Por ejemplo, si se ha seleccionado el formato AC-3, no se tienen en cuenta los perfiles con el formato Advanced Audio Coding (AAC).
+  Los resultados determinan qué tipo de códec de audio preferido se selecciona. Se descarta el manifiesto del tipo de códec de audio que el dispositivo no va a utilizar. Por ejemplo, si se ha seleccionado el formato AC-3, no se tienen en cuenta los perfiles con el formato Advanced Audio Coding (AAC).
 * Modo de paso a través
 
-   En el modo de paso a través, en lugar de descodificar los medios del formato AC-3 5.1 a un formato de modulación de código de pulso multicanal (PCM), el TVSDK se modifica o no modifica (según el dispositivo) los medios Dolby del Decodificador. Este medio se envía al dispositivo de audio (altavoz o receptor) para que el dispositivo de audio pueda descodificar y reproducir el flujo Dolby surround.
+  En el modo de paso a través, en lugar de descodificar los medios del formato AC-3 5.1 a un formato de modulación de código de pulso multicanal (PCM), el TVSDK se modifica o no modifica (según el dispositivo) los medios Dolby del Decodificador. Este medio se envía al dispositivo de audio (altavoz o receptor) para que el dispositivo de audio pueda descodificar y reproducir el flujo Dolby surround.
 
 TVSDK admite las funciones AC-3 5.1 solo en el dispositivo Amazon Fire TV de primera generación.
 
@@ -59,7 +58,7 @@ Este es el flujo de trabajo típico que se produce cuando TVSDK encuentra un man
 
 Al procesar medios AC-3, si un dispositivo Android está conectado al sistema de altavoces, la decisión de reproducir contenido en modo surround o estéreo depende de cómo esté configurado el dispositivo.
 
-|  | Sonido envolvente | Altavoz estéreo |
+|   | Sonido envolvente | Altavoz estéreo |
 |---|---|---|
 | Configuración del dispositivo Dolby activado (o automático) | Configuración del dispositivo Dolby activado (o automático) | Modo estéreo |
 | Configuración del dispositivo Dolby desactivado | Modo estéreo | Modo estéreo |

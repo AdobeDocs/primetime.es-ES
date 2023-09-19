@@ -1,8 +1,7 @@
 ---
 description: Cuando la reproducción llega a una pausa publicitaria, pasa una pausa publicitaria o termina en una pausa publicitaria, TVSDK define algún comportamiento predeterminado para la colocación del cabezal de reproducción actual.
 title: Personalización de la reproducción con anuncios
-exl-id: f59e94c2-7ca0-4e0b-b0b1-af076fdd4064
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 0%
@@ -25,7 +24,7 @@ Puede personalizar el comportamiento de reproducción de la publicidad de las si
 * Si se presenta una pausa publicitaria al usuario, este no mostrará anuncios adicionales durante una serie de minutos, aunque busque una nueva posición.
 * Si el contenido no se reproduce después de unos minutos, reinicie el flujo o realice una conmutación por error a un origen diferente para el mismo contenido.
 
-   En la sesión de reproducción por error, para permitir que el usuario omita los anuncios y se reanude a la posición con error anterior, puede desactivar los anuncios previos a la emisión o los anuncios durante la emisión. TVSDK proporciona métodos para habilitar la omisión de anuncios previos a la emisión y anuncios durante la emisión.
+  En la sesión de reproducción por error, para permitir que el usuario omita los anuncios y se reanude a la posición con error anterior, puede desactivar los anuncios previos a la emisión o los anuncios durante la emisión. TVSDK proporciona métodos para habilitar la omisión de anuncios previos a la emisión y anuncios durante la emisión.
 
 ## Elementos de API para la reproducción de publicidad {#section_296ADE00CFEA40CBA1B46142720D13A5}
 
@@ -76,11 +75,11 @@ Para personalizar los comportamientos de los anuncios, realice una de las siguie
 
 * Conformidad con el `PTAdPolicySelector` e implementar todos los métodos de selección de directivas necesarios.
 
-   Esta opción se recomienda si necesita anular la **todo** los comportamientos de anuncio predeterminados.
+  Esta opción se recomienda si necesita anular la **todo** los comportamientos de anuncio predeterminados.
 
 * Anular la variable `PTDefaultAdPolicySelector` y proporcionan implementaciones solo para los comportamientos que requieren personalización.
 
-   Esta opción se recomienda si solo necesita anular la selección **algunos** de los comportamientos predeterminados.
+  Esta opción se recomienda si solo necesita anular la selección **algunos** de los comportamientos predeterminados.
 
 Para ambas opciones, complete las siguientes tareas:
 
@@ -111,7 +110,7 @@ De forma predeterminada, TVSDK fuerza la reproducción de una pausa publicitaria
 >
 >Cuando hay una búsqueda interna para omitir un anuncio, puede haber una ligera pausa en la reproducción.
 
-El siguiente ejemplo de selector de políticas de publicidad personalizado omite los anuncios en los siguientes cinco minutos (hora del reloj) después de que un usuario haya visto una pausa publicitaria.
+El siguiente ejemplo de selector de políticas de publicidad personalizado omite los anuncios en los siguientes cinco minutos (hora del reloj mural) después de que un usuario haya visto una pausa publicitaria.
 
 1. Registre la instancia de directiva que utilizará TVSDK a través de la fábrica del cliente.
 

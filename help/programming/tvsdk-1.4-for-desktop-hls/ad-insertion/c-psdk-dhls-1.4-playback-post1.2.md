@@ -1,8 +1,7 @@
 ---
 description: El comportamiento de la reproducción de contenido se ve afectado por la búsqueda, la pausa, el avance rápido o el rebobinado (modo de reproducción con trucos) y la inclusión de publicidad.
 title: Comportamiento de reproducción predeterminado y personalizado con anuncios
-exl-id: 03c2b398-c595-4344-b816-ef0184cfadc3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 0%
@@ -70,7 +69,7 @@ En la tabla siguiente se describe cómo gestiona TVSDK los anuncios y las pausas
    <td colname="col3">Especifique una política de publicidad diferente para la pausa publicitaria (con el estado de observación establecido en verdadero) y para el anuncio específico en el que la búsqueda ha finalizado utilizando <span class="codeph"> selectPolicyForSeekIntoAd</span>. </td> 
   </tr> 
   <tr> 
-   <td colname="col1"> La aplicación entra en el modo "trick-play" (modo DVR). La tasa de reproducción puede ser negativa (rebobinado) o buena que 1 (avance rápido). </td> 
+   <td colname="col1"> La aplicación entra en el modo "trick-play" (modo DVR). La velocidad de reproducción puede ser negativa (rebobinado) o superior a 1 (avance rápido). </td> 
    <td colname="col2"> Omite todos los anuncios durante el avance rápido o el rebobinado, reproduce la última pausa omitida después de que finalice la reproducción de trucos y salta a la posición de reproducción de trucos seleccionada por el usuario cuando esa pausa termina la reproducción. </td> 
    <td colname="col3">Seleccione cuál de los descansos omitidos se reproducirá una vez finalizada la reproducción con trucos <span class="codeph"> selectAdBreaksToPlay</span>. </td> 
   </tr> 

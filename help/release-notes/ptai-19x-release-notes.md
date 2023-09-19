@@ -1,8 +1,7 @@
 ---
 title: Notas de la versión de PTAI 19.11.1
 description: Las notas de la versión 19.11.1 de PTAI describen las novedades o los cambios, los problemas resueltos y conocidos en Primetime Ad Insertion en 2019.
-exl-id: 0cc9067c-cd46-48f4-afa4-de8b15193723
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1971'
 ht-degree: 0%
@@ -62,6 +61,7 @@ Se ha corregido un error por el cual los reproductores de Chromecast salían de 
       * Solicitudes/respuestas de publicidad
       * Anuncios insertados
       * Balizas activadas (solo seguimiento del lado del servidor)
+
    * Puede buscar la actividad de un ID de sesión específico hasta 30 días después de que se haya realizado esa sesión de SSAI
    * Puede exportar los eventos
 * Base de datos: actualizaciones de seguridad
@@ -87,10 +87,9 @@ Se ha corregido un error por el cual los reproductores de Chromecast salían de 
    * Se ha añadido la regla de normalización de URL creativa para Innovid, utilizada por SSAI
    * La regla de normalización utilizada por CRS se añadió en una versión anterior
    * TVSDK: La regla de normalización que se va a añadir en las reglas CRS JSON se proporcionó después de una versión anterior, pero para mayor seguridad, póngase en contacto con su administrador de cuentas técnico para revisar todas las reglas de normalización que tenga en vigor.
-
-      >[!NOTE]
-      >
-      >La mayoría de las URL creativas de Innovid se transcodificarán y vincularán correctamente sin la regla de normalización. En ocasiones, sin embargo, se encuentran URL creativas de Innovid con parámetros dinámicos. La regla de normalización es necesaria para gestionar estas instancias.
+     >[!NOTE]
+     >
+     >La mayoría de las URL creativas de Innovid se transcodificarán y vincularán correctamente sin la regla de normalización. En ocasiones, sin embargo, se encuentran URL creativas de Innovid con parámetros dinámicos. La regla de normalización es necesaria para gestionar estas instancias.
 
 ### Versión 19.5.2
 
@@ -176,9 +175,9 @@ Se ha corregido un error por el cual los reproductores de Chromecast salían de 
 
 * CRS: Se ha agregado la capacidad de lista de bloqueados/lista de permitidos de solicitudes CRS de sistemas de publicidad específicos, ID de publicidad, ID de creatividad, URL de creatividad o formato creativo
 
-   >Nota
-   >
-   >El Adobe añadirá reglas de lista de bloqueados cuando se encuentren proveedores de publicidad con valores dinámicos (por ejemplo, parámetro dinámico en URL) para el mismo anuncio. Estas reglas de lista de bloqueados se desactivarán después de que el componente dinámico se resuelva, ya sea por el proveedor o a través de una regla de normalización.
+  >Nota
+  >
+  >El Adobe añadirá reglas de lista de bloqueados cuando se encuentren proveedores de publicidad con valores dinámicos (por ejemplo, parámetro dinámico en URL) para el mismo anuncio. Estas reglas de lista de bloqueados se desactivarán después de que el componente dinámico se resuelva, ya sea por el proveedor o a través de una regla de normalización.
 
    * Si desea agregar una lista de bloqueados o regla de lista de permitidos para su zona, póngase en contacto con el administrador de cuentas técnico para obtener ayuda.
 

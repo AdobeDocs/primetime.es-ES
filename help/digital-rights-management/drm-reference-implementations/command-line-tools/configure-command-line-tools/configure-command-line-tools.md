@@ -2,8 +2,7 @@
 title: Configurar y ejecutar las herramientas de la línea de comandos
 description: Configurar y ejecutar las herramientas de la línea de comandos
 copied-description: true
-exl-id: ff0d4316-24e6-4a34-b332-abd737d6fcf9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%

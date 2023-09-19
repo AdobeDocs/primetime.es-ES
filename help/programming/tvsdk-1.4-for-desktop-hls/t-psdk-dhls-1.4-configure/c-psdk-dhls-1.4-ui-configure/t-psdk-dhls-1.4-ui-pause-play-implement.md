@@ -1,8 +1,7 @@
 ---
 description: Puede añadir el comportamiento de TVSDK a los botones de pausa y reproducción.
 title: Reproducir y pausar un vídeo
-exl-id: c1c259a4-edb8-475b-96a2-7fa0903804c3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%

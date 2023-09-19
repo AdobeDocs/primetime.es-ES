@@ -1,8 +1,7 @@
 ---
 title: Segmentos de suscriptor y lapso de tiempo
 description: Defina cohortes o seleccione segmentos de suscriptores para medir las posibilidades de uso compartido de cuentas y los patrones de sus visualizadores de canales para utilizar herramientas gráficas e informes en Account IQ.
-exl-id: c38cde37-70d9-486d-b8d0-7c1cbd2baf2e
-source-git-commit: 326f97d058646795cab5d062fa5b980235f7da37
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 0%
@@ -32,7 +31,7 @@ En este selector, además de seleccionar las MVPD individuales, también puede s
 
 * [Las 10 principales MVPD por puntuación de uso compartido](/help/AccountIQ/product-concepts.md#top-mvpds-def)
 
-* [Las 10 principales MVPD por uso](/help/AccountIQ/product-concepts.md#top-mvpds-def)
+* [Principales 10 MVPD por uso](/help/AccountIQ/product-concepts.md#top-mvpds-def)
 
 * [Principales 10 MVPD por cuentas](/help/AccountIQ/product-concepts.md#top-mvpds-def)
 

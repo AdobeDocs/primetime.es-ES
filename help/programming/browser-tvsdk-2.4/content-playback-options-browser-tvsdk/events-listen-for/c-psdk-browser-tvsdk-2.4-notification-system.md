@@ -1,8 +1,7 @@
 ---
 description: La parte de notificación de la biblioteca TVSDK del explorador permite crear un sistema de registro y depuración que puede ser útil para fines de diagnóstico y validación.
 title: Sistema de notificación
-exl-id: 6a3a3c56-1580-4f43-ba81-220a5b0fe5c3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%

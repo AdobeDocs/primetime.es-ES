@@ -1,8 +1,7 @@
 ---
 description: Las secuencias HLS que se entregan a través de una red de distribución de contenido (CDN) a veces pueden utilizar tokens de autenticación en las solicitudes de manifiesto y segmento para la verificación. Estos tokens se pueden proporcionar como parámetros de URL o como encabezados de cookie.
 title: Flujos de segmentos tokenizados
-exl-id: 20a3e8a2-2e9d-4c0d-abea-66edcbcf0003
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '159'
 ht-degree: 0%

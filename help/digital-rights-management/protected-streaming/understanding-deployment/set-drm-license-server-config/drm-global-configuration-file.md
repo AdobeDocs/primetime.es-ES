@@ -1,8 +1,7 @@
 ---
 description: El archivo de configuración flashaccess-global.xml incluye opciones que se aplican a todos los inquilinos del servidor de licencias.
 title: Archivo de configuración global
-exl-id: 3e74bce6-1634-469f-9d02-1121e9d50687
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%
@@ -21,7 +20,7 @@ El archivo de configuración global incluye:
 
 * Almacenamiento en caché: controla el almacenamiento en caché de los archivos de configuración en la memoria.
 
-   Consulte *Actualización de archivos de configuración* para obtener información sobre la configuración de almacenamiento en caché.
+  Consulte *Actualización de archivos de configuración* para obtener información sobre la configuración de almacenamiento en caché.
 * Registro: especifica el nivel de registro y la frecuencia con la que se acumulan los archivos de registro.
 * Contraseña de HSM: sólo es necesaria si se utiliza un HSM para almacenar las credenciales del servidor.
 

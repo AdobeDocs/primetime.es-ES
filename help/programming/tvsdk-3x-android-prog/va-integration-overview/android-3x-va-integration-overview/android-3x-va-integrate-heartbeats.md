@@ -2,8 +2,7 @@
 title: Inicialización y configuración de análisis de vídeo
 description: Inicialización y configuración de análisis de vídeo
 copied-description: true
-exl-id: 26bdc11e-b8f6-414f-a3e9-53bc895d25ce
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 0%
@@ -18,7 +17,7 @@ Antes de activar el seguimiento de vídeo (latidos de vídeo), asegúrese de que
 * TVSDK 3.0 para Android.
 * Información de configuración/inicialización
 
-   Póngase en contacto con su representante de Adobe para obtener la información específica de su cuenta de seguimiento de vídeo:
+  Póngase en contacto con su representante de Adobe para obtener la información específica de su cuenta de seguimiento de vídeo:
 
 <table id="table_3565328ABBEE4605A92EAE1ADE5D6F84"> 
  <tbody> 

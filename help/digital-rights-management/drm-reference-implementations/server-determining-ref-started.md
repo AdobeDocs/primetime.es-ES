@@ -2,8 +2,7 @@
 title: Comprobar si el servidor de licencias se inició correctamente
 description: Comprobar si el servidor de licencias se inició correctamente
 copied-description: true
-exl-id: 05995a75-9468-4237-9091-a07606297772
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%

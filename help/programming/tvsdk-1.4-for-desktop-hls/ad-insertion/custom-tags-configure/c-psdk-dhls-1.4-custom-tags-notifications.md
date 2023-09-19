@@ -1,8 +1,7 @@
 ---
 description: La propiedad MediaPlayerItem.timedMetadata proporciona acceso a todos los objetos TimedMetadata creados a partir de etiquetas de lista de reproducción/manifiesto o de etiquetas ID3 dentro del flujo de medios. La propiedad MediaPlayerItem.hasTimedMetadata indica si hay una etiqueta personalizada suscrita en el contenido actual.
 title: Notificaciones para etiquetas de manifiesto
-exl-id: 1a91fa47-edd5-4496-9755-17c906a3cf54
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%

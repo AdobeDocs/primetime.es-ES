@@ -1,8 +1,7 @@
 ---
 description: Cuando la reproducción incluye publicidad, el TVSDK del explorador envía eventos/notificaciones en secuencias generalmente esperadas. El reproductor puede implementar acciones basadas en eventos en la secuencia esperada.
 title: Orden de los eventos publicitarios
-exl-id: fcc40aa8-9364-40a8-b2f2-9327e24819af
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%

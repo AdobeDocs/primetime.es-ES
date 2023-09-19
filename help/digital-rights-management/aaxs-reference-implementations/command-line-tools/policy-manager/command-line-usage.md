@@ -2,8 +2,7 @@
 title: Uso de línea de comandos
 description: Uso de línea de comandos
 copied-description: true
-exl-id: 2142cb76-e71c-4443-8b5d-348e45587331
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1023'
 ht-degree: 0%
@@ -59,7 +58,7 @@ En la tabla siguiente se describen las opciones de línea de comandos que se pue
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -e fecha </span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">La fecha antes de la cual las licencias serán válidas. Especificar como <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd </span> o <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd-h24:min:s </span>. Por ejemplo, 2008-12-1 o 2008-12-1-00:00:00 para la medianoche del 1 de diciembre de 2008. El valor debe ser bueno al valor de <span class="codeph"> -s </span>, si está presente. Esta opción no se puede utilizar con <span class="codeph"> -r </span>. Para eliminar la fecha de finalización al actualizar una directiva, utilice <span class="codeph"> -e </span> sin especificar una fecha. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">La fecha antes de la cual las licencias serán válidas. Especificar como <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd </span> o <span class="+ topic/ph pr-d/codeph codeph"> aaaa-mm-dd-h24:min:s </span>. Por ejemplo, 2008-12-1 o 2008-12-1-00:00:00 para la medianoche del 1 de diciembre de 2008. El valor debe ser mayor que el valor de <span class="codeph"> -s </span>, si está presente. Esta opción no se puede utilizar con <span class="codeph"> -r </span>. Para eliminar la fecha de finalización al actualizar una directiva, utilice <span class="codeph"> -e </span> sin especificar una fecha. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "> <span class="+ topic/ph pr-d/codeph codeph"> -r minutos </span> </td> 

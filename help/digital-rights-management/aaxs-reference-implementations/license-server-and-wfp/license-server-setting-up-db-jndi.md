@@ -2,8 +2,7 @@
 title: Configuración de la base de datos y de la fuente de datos JNDI
 description: Configuración de la base de datos y de la fuente de datos JNDI
 copied-description: true
-exl-id: ed22f095-924b-4792-8a10-e7548fab2c3b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 0%

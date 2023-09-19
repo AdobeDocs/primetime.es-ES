@@ -1,8 +1,7 @@
 ---
 description: TVSDK proporciona generadores de oportunidades predeterminados y solucionadores de contenido que colocan anuncios en la cronología, y estos generadores y solucionadores se basan en etiquetas no estándar en el manifiesto. Es posible que la aplicación tenga que modificar la cronología en función de las oportunidades identificadas en el manifiesto, como los indicadores de un periodo de interrupción.
 title: Generadores de oportunidades y solucionadores de contenido
-exl-id: 8c8a4302-756e-4eae-a286-24e5e503dadb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 0%
@@ -15,7 +14,7 @@ TVSDK proporciona generadores de oportunidades predeterminados y solucionadores 
 
 Un *`opportunity`* representa un punto de interés en la cronología que generalmente indica una oportunidad de ubicación de publicidad. Esta oportunidad también puede indicar una operación personalizada que podría afectar a la cronología, como un periodo de interrupción. Un *`opportunity generator`* identifica oportunidades específicas (etiquetas) en la cronología y notifica a TVSDK que estas oportunidades se han etiquetado. Las oportunidades se identifican en una cronología en mediante la inclusión de una etiqueta no estándar (no HLS).
 
-Cuando se notifica a la aplicación una oportunidad, esta puede modificar la cronología insertando una serie de anuncios, cambiando a un flujo alternativo (interrupciones) o editando de otro modo el contenido de la cronología. De forma predeterminada, TVSDK llama al método apropiado *`content resolver`* para implementar los cambios o las acciones de cronología necesarios. Su aplicación puede utilizar la resolución de contenido de anuncios de TVSDK predeterminada o registrar su propia resolución de contenido.
+Cuando se notifica a la aplicación sobre una oportunidad, esta podría modificar la cronología insertando una serie de anuncios, cambiando a un flujo alternativo (interrupciones) o editando de otro modo el contenido de la cronología. De forma predeterminada, TVSDK llama al método apropiado *`content resolver`* para implementar los cambios o las acciones de cronología necesarios. Su aplicación puede utilizar la resolución de contenido de anuncios de TVSDK predeterminada o registrar su propia resolución de contenido.
 
 También puede utilizar `MediaPlayerItemConfig.setAdTags` para añadir más etiquetas/indicaciones de marcador de anuncio para que TVSDK pueda reconocer y utilizar `MediaPlayerItemConfig.subscribedTags` y notifique a la aplicación sobre etiquetas adicionales que puedan tener información del flujo de trabajo de publicidad.
 

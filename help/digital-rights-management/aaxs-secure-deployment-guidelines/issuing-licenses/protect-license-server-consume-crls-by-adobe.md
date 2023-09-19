@@ -2,8 +2,7 @@
 title: Consumir CRL publicadas por Adobe
 description: Consumir CRL publicadas por Adobe
 copied-description: true
-exl-id: b7f68a29-f834-4613-b64d-e610f660e6fc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%

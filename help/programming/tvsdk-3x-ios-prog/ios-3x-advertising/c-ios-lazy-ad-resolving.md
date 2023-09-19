@@ -1,8 +1,7 @@
 ---
 description: La resolución de anuncios y la carga de anuncios pueden provocar un retraso inaceptable para un usuario que espera a que se inicie la reproducción. La función de resolución de carga diferida de publicidad puede reducir este retraso en el inicio. Los anuncios ahora se pueden resolver en un intervalo especificado antes de la posición de la pausa publicitaria. Esto se logra utilizando un enfoque de doble reproductor.
 title: Resolución de anuncios Just-In-Time
-exl-id: dd5342c5-9f34-4778-a47a-91ff2eb03155
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -38,7 +37,6 @@ Por ejemplo, de forma predeterminada `delayAdLoadingTolerance` se establece en 5
 >* El modo Imagen en imagen no es compatible con la resolución de anuncios diferidos. Desactive los modos de imagen en imagen si activa la resolución de anuncios diferidos.
 >* La resolución diferida de los anuncios no afecta a los anuncios previos a la emisión.
 >
-
 **Habilitar la resolución de anuncios diferidos**
 
 Puede activar o desactivar la función de resolución de anuncios diferidos mediante el mecanismo de carga de anuncios diferidos existente (la resolución de anuncios diferidos está desactivada de forma predeterminada).

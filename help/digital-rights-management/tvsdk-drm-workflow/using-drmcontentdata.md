@@ -2,8 +2,7 @@
 title: Uso de la clase DRMContentData
 description: Uso de la clase DRMContentData
 copied-description: true
-exl-id: 97428f1c-4335-4c1c-a0dc-249b6a333c02
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 0%

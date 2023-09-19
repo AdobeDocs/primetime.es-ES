@@ -1,8 +1,7 @@
 ---
 title: Autorización de comprobación preliminar de MVPD
 description: Autorización de comprobación preliminar de MVPD
-exl-id: da2e7150-b6a8-42f3-9930-4bc846c7eee9
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '745'
 ht-degree: 0%
@@ -125,7 +124,7 @@ En la tabla siguiente se enumeran las MVPD que admiten la autorización de compr
 
 | Método de comprobación preliminar | MVPD | Notas |
 |:-------------------------------:|:--------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------:|
-| AuthZ multicanal. | Comcast AT&amp;T Proxy Clearleap Charter_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |  |
+| AuthZ multicanal. | Comcast AT&amp;T Proxy Clearleap Charter_Direct Proxy GLDS Rogers Verizon OSN Bell Sasktel Optimum AlticeOne |                                                                    |
 | Alineación de canales en metadatos de usuario | Suddenlink HTC | Todas las integraciones directas de Synacor también pueden admitir este enfoque. |
 | Bifurcar y unir | Todos los demás no enumerados anteriormente | El número máximo predeterminado de recursos comprobados = 5. |
 

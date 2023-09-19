@@ -1,8 +1,7 @@
 ---
 description: Puede controlar la visibilidad de los subtítulos. Cuando la visibilidad está activada, se muestra la pista seleccionada actualmente. Si cambia qué pista es la actual, el ajuste de visibilidad sigue siendo el mismo.
 title: Control de la visibilidad de subtítulos
-exl-id: 358e32d8-7a3b-42bd-900b-dafe8eae3edf
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 0%
@@ -19,13 +18,13 @@ Puede controlar la visibilidad de los subtítulos. Cuando la visibilidad está a
 >
 >Los valores de visibilidad de los subtítulos opcionales se definen en `MediaPlayer.Visibility`.
 >
->
-```java
+>```java
 >enum Visibility {  
 >       VISIBLE,  
 >       INVISIBLE 
 >}
 >```
+>
 
 1. Espere a que `MediaPlayer` para que esté al menos en estado PREPARADO.
 

@@ -1,8 +1,7 @@
 ---
 title: Facilitar el cambio del reproductor HLS a flujos de failover/backup
 description: La pila HLS de Apple admite el cambio a flujos de conmutación por error/copia de seguridad si no puede recuperar ningún flujo del conjunto principal. En el caso de dispositivos HLS de Apple, para facilitar la conmutación por error, puede indicar al servidor de manifiesto que trate los flujos de conmutación por error principales y los identificados en la lista de reproducción maestra como conjuntos separados (con sus propios UUID).
-exl-id: 58c7a490-403f-41b2-bdbd-6f93e27083b0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 0%

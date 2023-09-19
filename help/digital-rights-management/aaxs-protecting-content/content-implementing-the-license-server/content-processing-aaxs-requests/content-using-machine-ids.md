@@ -2,8 +2,7 @@
 title: Uso de identificadores de equipo
 description: Uso de identificadores de equipo
 copied-description: true
-exl-id: 61ff9240-0c29-437e-b676-7983e2cc5f7b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
@@ -16,4 +15,4 @@ Todas las solicitudes de acceso de Adobe (excepto las solicitudes que admiten la
 
 Existen dos formas de utilizar el identificador. El `getUniqueId()` El método devuelve una cadena asignada al dispositivo durante la individualización. Puede almacenar las cadenas en una base de datos y buscar por identificador. Sin embargo, este identificador cambiará si el usuario vuelve a dar formato al disco duro y vuelve a individualizar. Este identificador también tendrá un valor diferente entre Adobe® AIR® y Adobe ® Flash ® Player en exploradores diferentes del mismo equipo.
 
-Para contar las máquinas con mayor precisión, puede utilizar `getBytes()` para almacenar el identificador completo. Para determinar si el equipo ya se ha visto, obtenga todos los identificadores para un nombre de usuario y llame a `matches()` para comprobar si hay alguna coincidencia. Debido a que el `matches()` debe utilizarse para comparar los valores devueltos por `MachineId.getBytes`Sin embargo, esta opción solo es práctica cuando hay un pequeño número de valores para comparar (por ejemplo, los equipos asociados con un usuario en particular).
+Para contar las máquinas con mayor precisión, puede utilizar `getBytes()` para almacenar el identificador completo. Para determinar si el equipo ya se ha visto antes, obtenga todos los identificadores para un nombre de usuario y llame a `matches()` para comprobar si hay alguna coincidencia. Debido a que el `matches()` debe utilizarse para comparar los valores devueltos por `MachineId.getBytes`Sin embargo, esta opción solo es práctica cuando hay un pequeño número de valores para comparar (por ejemplo, los equipos asociados con un usuario en particular).

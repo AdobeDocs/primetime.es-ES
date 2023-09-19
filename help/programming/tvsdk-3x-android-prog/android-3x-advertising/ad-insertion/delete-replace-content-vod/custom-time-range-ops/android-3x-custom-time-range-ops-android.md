@@ -1,8 +1,7 @@
 ---
 description: La clase CustomRangeMetadata identifica distintos tipos de intervalos de tiempo en un flujo de VOD para marcar, eliminar y reemplazar. Para cada uno de estos tipos de intervalos de tiempo personalizados, puede realizar las operaciones correspondientes, incluida la eliminación y el reemplazo del contenido de la publicidad.
 title: Operaciones de intervalo de tiempo personalizadas
-exl-id: ae457ee6-5649-469b-b5f1-1e0b16b6eb9c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
@@ -27,8 +26,8 @@ Para admitir estas operaciones de intervalo de tiempo personalizado, TVSDK propo
 
 * Varias resoluciones de contenido
 
-   Un flujo puede tener varias resoluciones de contenido basadas en el modo de señalización de publicidad y los metadatos de publicidad. El comportamiento cambia con diferentes combinaciones de modos de señalización de publicidad y metadatos de publicidad.
+  Un flujo puede tener varias resoluciones de contenido basadas en el modo de señalización de publicidad y los metadatos de publicidad. El comportamiento cambia con diferentes combinaciones de modos de señalización de publicidad y metadatos de publicidad.
 * Varias oportunidades iniciales con `CustomMarkerOpportunityGenerator`.
 * Un nuevo modo de señalización de publicidad, `CUSTOM_RANGES`.
 
-   Los anuncios se colocan en función de los datos de Intervalo de tiempo de una fuente externa, como un archivo JSON.
+  Los anuncios se colocan en función de los datos de Intervalo de tiempo de una fuente externa, como un archivo JSON.

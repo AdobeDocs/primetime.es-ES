@@ -2,8 +2,7 @@
 title: Renovación de certificados
 description: Renovación de certificados
 copied-description: true
-exl-id: db130ca5-4e26-447f-b2f4-4eee0838fd56
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%
@@ -16,13 +15,13 @@ Debe tener en cuenta las siguientes restricciones de renovación de certificados
 
 * SDK de producción de DRM de Primetime
 
-   Adobe proporciona el conjunto inicial de certificados gratuitos para el SDK de producción de DRM de Primetime al adquirir un contrato de soporte. Si no tiene un contrato de soporte, puede adquirir un conjunto de certificados de renovación válidos durante dos años.
+  Adobe proporciona el conjunto inicial de certificados gratuitos para el SDK de producción de DRM de Primetime al adquirir un contrato de soporte. Si no tiene un contrato de soporte, puede adquirir un conjunto de certificados de renovación válidos durante dos años.
 * SDK de evaluación DRM de Primetime
 
-   El conjunto de certificados para este SDK es válido durante un año y no se puede renovar.
+  El conjunto de certificados para este SDK es válido durante un año y no se puede renovar.
 * SDK de prueba de Primetime DRM
 
-   El SDK de prueba de Primetime DRM es válido durante tres meses y Adobe proporciona un conjunto de certificados de renovación gratuitos.
+  El SDK de prueba de Primetime DRM es válido durante tres meses y Adobe proporciona un conjunto de certificados de renovación gratuitos.
 
 ## Implementar nuevos certificados y utilizar certificados antiguos para el contenido existente {#section_345C92D1C9794B0BBB9A9B0702EC95FF}
 

@@ -1,8 +1,7 @@
 ---
 description: Cuando la reproducción llega a una pausa publicitaria, pasa una pausa publicitaria o termina en una pausa publicitaria, TVSDK define algún comportamiento predeterminado para la colocación del cabezal de reproducción actual.
 title: Personalización de la reproducción con anuncios
-exl-id: edee2f6d-dbb1-4d54-8f69-82bf303ce6fc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '222'
 ht-degree: 0%
@@ -25,4 +24,4 @@ Puede personalizar el comportamiento de reproducción de la publicidad de las si
 * Si se presenta una pausa publicitaria al usuario, este no mostrará anuncios adicionales durante una serie de minutos, aunque busque una nueva posición.
 * Si el contenido no se reproduce después de unos minutos, reinicie el flujo o realice una conmutación por error a un origen diferente para el mismo contenido.
 
-   En la sesión de reproducción por error, para permitir que el usuario omita los anuncios y se reanude a la posición con error anterior, puede desactivar los anuncios previos a la emisión o los anuncios durante la emisión. TVSDK proporciona métodos para habilitar la omisión de anuncios previos a la emisión y anuncios durante la emisión.
+  En la sesión de reproducción por error, para permitir que el usuario omita los anuncios y se reanude a la posición con error anterior, puede desactivar los anuncios previos a la emisión o los anuncios durante la emisión. TVSDK proporciona métodos para habilitar la omisión de anuncios previos a la emisión y anuncios durante la emisión.

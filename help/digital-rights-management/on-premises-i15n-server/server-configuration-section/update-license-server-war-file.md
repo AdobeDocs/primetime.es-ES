@@ -2,8 +2,7 @@
 title: Actualizar el archivo WAR del servidor de licencias
 description: Actualizar el archivo WAR del servidor de licencias
 copied-description: true
-exl-id: a70d04e2-24a4-4848-9e9b-97467f2c1749
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 0%

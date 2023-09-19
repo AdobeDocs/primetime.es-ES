@@ -2,8 +2,7 @@
 title: Métricas clave y dimensiones de datos
 description: Métricas clave y dimensiones de datos
 copied-description: true
-exl-id: 71da0c5e-646e-4238-88ee-b6e0b068f6e3
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%

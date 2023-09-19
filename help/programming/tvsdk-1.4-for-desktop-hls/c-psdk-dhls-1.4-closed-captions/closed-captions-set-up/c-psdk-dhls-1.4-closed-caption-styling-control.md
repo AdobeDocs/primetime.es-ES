@@ -1,8 +1,7 @@
 ---
 description: Puede proporcionar información de estilo para las pistas de subtítulos cerrados mediante la clase ClosedCaptionStyles. Esto establece el estilo de cualquier subtítulo que se muestre en el reproductor.
 title: Control del estilo de subtítulos
-exl-id: fd94a851-1e8f-4406-a3bb-ca115b4e60f8
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%

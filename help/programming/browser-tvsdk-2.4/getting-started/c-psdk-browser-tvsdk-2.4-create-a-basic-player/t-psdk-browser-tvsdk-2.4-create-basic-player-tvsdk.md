@@ -1,8 +1,7 @@
 ---
 description: Complete los siguientes pasos para crear un reproductor básico con el TVSDK del explorador.
 title: Creación de un reproductor básico con TVSDK
-exl-id: ea7485e0-5d15-469b-b8b6-f9604d283492
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '206'
 ht-degree: 0%
@@ -41,7 +40,7 @@ Complete los siguientes pasos para crear un reproductor básico con el TVSDK del
    <script src= "frameworks/player/primetimeei.min.js"></script>
    ```
 
-1. Para la etiqueta de cuerpo, añada la variable `onLoad` sección.
+1. Para la etiqueta body, añada el `onLoad` sección.
 
    ```
    <body onload="startVideo()">

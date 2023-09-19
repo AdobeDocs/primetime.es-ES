@@ -2,8 +2,7 @@
 title: Propiedades del archivo de configuración
 description: Propiedades del archivo de configuración
 copied-description: true
-exl-id: eec6a53d-d831-4ec4-a90c-8b3e7997f330
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 0%
@@ -40,7 +39,7 @@ Antes de ejecutar el empaquetador de medios, especifique los valores de las prop
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.content.secondsUnencryption</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Si el valor es bueno que 0, no se cifrará el número especificado de segundos de contenido al principio del archivo. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Si el valor es mayor que 0, no se cifrará el número especificado de segundos de contenido al principio del archivo. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.asymmetric.certfile</span> </td> 
@@ -48,7 +47,7 @@ Antes de ejecutar el empaquetador de medios, especifique los valores de las prop
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">encrypt.keys.policyFile.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Esta propiedad se utiliza repetidamente para crear una lista de directivas que se aplicarán al contenido. <span class="codeph"> n</span> es un entero cuyo valor es 1 o bueno. El cliente utilizará la primera instancia de forma predeterminada. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Esta propiedad se utiliza repetidamente para crear una lista de directivas que se aplicarán al contenido. <span class="codeph"> n</span> es un entero cuyo valor es 1 o mayor. El cliente utilizará la primera instancia de forma predeterminada. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.serverurl</span> </td> 

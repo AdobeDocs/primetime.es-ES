@@ -1,8 +1,7 @@
 ---
 title: Cómo migrar la página de inicio de sesión de MVPD de iFrame a Emergente
 description: Cómo migrar la página de inicio de sesión de MVPD de iFrame a Emergente
-exl-id: 389ea0ea-4e18-4c2e-a527-c84bffd808b4
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 0%
@@ -232,4 +231,3 @@ function checkClosed() {
 >* El código de ejemplo solo se ejecutará correctamente desde un dominio de la lista blanca asociado al ID de solicitante utilizado.
 >* Dado que todo el código está disponible para su descarga, el código presentado en esta nota técnica se ha truncado. Para ver una muestra completa, consulte **Ejemplo de iFrame de JS frente a ventana emergente**.
 >* Las bibliotecas JavaScript externas se vincularon desde [Servicios alojados de Google](https://developers.google.com/speed/libraries/).
-

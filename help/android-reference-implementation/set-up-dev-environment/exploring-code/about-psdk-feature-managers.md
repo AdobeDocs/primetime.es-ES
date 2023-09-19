@@ -1,8 +1,7 @@
 ---
 title: Administradores de funciones
 description: Los administradores de funciones proporcionan una forma de controlar las funciones individuales sin atravesar todo el SDK de TVSDK en busca de código para una función que podría estar dispersa en varias ubicaciones.
-exl-id: dbf2dc8b-6067-4d94-9c3c-553452b7ffd9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
@@ -16,16 +15,13 @@ Los administradores de funciones proporcionan una forma de controlar las funcion
 Los administradores de funciones realizan las siguientes tareas:
 
 * **Funciones de Déclencheur TVSDK.**
-Son llamadas a funciones para almacenar en déclencheur una función de TVSDK. Por ejemplo, 
-`PlaybackManager.play()` se invoca cuando la aplicación de reproducción necesita iniciar la reproducción del vídeo.
+Son llamadas a funciones para almacenar en déclencheur una función de TVSDK. Por ejemplo, `PlaybackManager.play()` se invoca cuando la aplicación de reproducción necesita iniciar la reproducción del vídeo.
 
 * **Escucha eventos de TVSDK.**
-El administrador de funciones debe escuchar los eventos de TVSDK para adquirir información del TVSDK. Por ejemplo, 
-`AdsManager` escucha eventos de TVSDK Ads para recibir notificaciones cuando se inician las pausas publicitarias.
+El administrador de funciones debe escuchar los eventos de TVSDK para adquirir información del TVSDK. Por ejemplo, `AdsManager` escucha eventos de TVSDK Ads para recibir notificaciones cuando se inician las pausas publicitarias.
 
 * **Envía eventos al controlador.**
-Una vez que los administradores de funciones reciben y procesan los eventos del TVSDK, notifican al lado del cliente para que se ocupe del evento. Por ejemplo, después de 
-`AdsManager` recibe un evento de inicio de pausa publicitaria, indica al fragmento del reproductor que refleje este cambio en la interfaz de usuario (deshabilite la barra de desplazamiento, muestre la superposición de publicidad, etc.).
+Una vez que los administradores de funciones reciben y procesan los eventos del TVSDK, notifican al lado del cliente para que se ocupe del evento. Por ejemplo, después de `AdsManager` recibe un evento de inicio de pausa publicitaria, indica al fragmento del reproductor que refleje este cambio en la interfaz de usuario (deshabilite la barra de desplazamiento, muestre la superposición de publicidad, etc.).
 
 La implementación de referencia de Primetime incluye los siguientes administradores de funciones:
 

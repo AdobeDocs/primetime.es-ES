@@ -1,8 +1,7 @@
 ---
 description: Puede especificar varias opciones de estilo de rótulo, que sustituirán a las opciones de estilo de los rótulos originales.
 title: Opciones de estilo de subtítulos
-exl-id: df5377c2-741b-4239-b345-145753896c6b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%

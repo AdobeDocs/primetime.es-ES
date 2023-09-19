@@ -2,8 +2,7 @@
 title: Determinar si el servidor de licencias de implementación de referencia se está ejecutando correctamente
 description: Determinar si el servidor de licencias de implementación de referencia se está ejecutando correctamente
 copied-description: true
-exl-id: ef28e169-f8d2-4c7f-b606-aa4e811aae9b
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%

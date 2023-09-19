@@ -1,8 +1,7 @@
 ---
 title: Notas de la versión de autenticación de Adobe Primetime 2.65
 description: Notas de la versión de autenticación de Adobe Primetime 2.65
-exl-id: fa0d38d5-c3c3-4ecf-a5f4-6c33a8617108
-source-git-commit: c430d76b7ef76541f382e2d32fea0042d6f5b752
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%

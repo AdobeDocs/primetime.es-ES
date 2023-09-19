@@ -1,8 +1,7 @@
 ---
 description: Las siguientes nuevas API permiten definir devoluciones de llamadas DRM.
 title: Implementación de llamadas de retorno DRM
-exl-id: 3aaa502d-9273-4320-a022-642fee75dafd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%

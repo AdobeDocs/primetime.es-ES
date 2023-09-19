@@ -1,8 +1,7 @@
 ---
 description: TVSDK envía eventos de metadatos cronometrados y genera metadatos cronometrados cada vez que se encuentran etiquetas predeterminadas o personalizadas, o cuando cambia una lista de reproducción en un manifiesto. Los eventos se distribuyen en el orden en que aparecen en el manifiesto.
 title: Eventos de metadatos cronometrados
-exl-id: 4c58b06e-5f70-452c-a743-55c4b6206711
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 0%

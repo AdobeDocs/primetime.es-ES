@@ -2,8 +2,7 @@
 title: Anuncios de enrutamiento basados en reglas
 description: Anuncios de enrutamiento basados en reglas
 copied-description: true
-exl-id: e057e53d-a6c0-4e24-b6c7-29850f7cde60
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 0%

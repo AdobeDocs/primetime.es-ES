@@ -1,8 +1,7 @@
 ---
 description: Puede utilizar la DRM nativa de Android Widevine con flujos DASH.
 title: DRM de Widevine
-exl-id: 6a011cd7-446a-4f3a-ae36-110618001bf3
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Los objetos MediaPlayerStatus proporcionan información sobre los cambios en el estado del reproductor. Los objetos de notificación proporcionan información sobre advertencias y errores. Los errores que detienen la reproducción del vídeo también provocan un cambio en el estado del reproductor. Los detectores de eventos se implementan para capturar y responder a eventos (objetos MediaPlayerEvent).
 title: Notificaciones y eventos para el estado del reproductor, la actividad, los errores y el registro
-exl-id: c25e834e-ffa0-444c-9285-331e6841ac29
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -75,7 +74,7 @@ A continuación se muestra un ejemplo de cómo recuperar notificaciones:
    >
    >1. Reduzca el intervalo de tiempo que controla el subproceso que sondea los nuevos eventos.
    >1. Aumente el tamaño de la lista de notificaciones.
-
+   >
 
 1. Serialice las entradas de evento de notificación más recientes en formato JSON y envíe las entradas a un servidor remoto para su posprocesamiento.
 

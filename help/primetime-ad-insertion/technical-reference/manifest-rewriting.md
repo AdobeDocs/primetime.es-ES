@@ -1,8 +1,7 @@
 ---
 title: Reglas de reescritura de manifiestos y recuperación de anuncios
 description: Reglas de reescritura de manifiestos y recuperación de anuncios
-exl-id: 3750abc1-da60-4faf-ba85-37914f33641f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 0%

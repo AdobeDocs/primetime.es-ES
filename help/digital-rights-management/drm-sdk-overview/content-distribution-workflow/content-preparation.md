@@ -1,8 +1,7 @@
 ---
 description: Cualquier uso de DRM de Adobe Primetime consiste en dos pasos clave en diferentes puntos del flujo de trabajo. La preparación del contenido debe realizarse una vez por recurso y resulta en la creación de contenido protegido. La adquisición de contenido se realiza varias veces, una por cada consumidor que desea ver ese recurso protegido.
 title: Preparación de contenido
-exl-id: 6ec8e5a1-3cf4-498b-9cbb-760c525fb9c7
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%

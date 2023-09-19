@@ -1,8 +1,7 @@
 ---
 description: Este ejemplo muestra la forma recomendada de incluir marcadores de publicidad personalizados en la cronología de reproducción.
 title: Colocar marcadores de publicidad personalizados en la cronología
-exl-id: a5dafca5-5217-4800-a467-ad5c51471bc2
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
@@ -24,15 +23,15 @@ Este ejemplo muestra la forma recomendada de incluir marcadores de publicidad pe
 Este es el resultado de completar las tareas de este ejemplo: >
 * Si un `ReplaceTimeRange` se solapa con otra en la cronología de reproducción como, por ejemplo, la posición inicial de un objeto `ReplaceTimeRange` es anterior a una posición final ya colocada, TVSDK ajusta silenciosamente el inicio de la infracción `ReplaceTimeRange` para evitar el conflicto.
 
-   Esto hace que el ajuste `ReplaceTimeRange` más corta de lo especificado originalmente. Si el ajuste conduce a una duración de cero, TVSDK descarta silenciosamente el elemento infractor `ReplaceTimeRange`.
+  Esto hace que el ajuste `ReplaceTimeRange` más corta de lo especificado originalmente. Si el ajuste conduce a una duración de cero, TVSDK descarta silenciosamente el elemento infractor `ReplaceTimeRange`.
 
 * TVSDK busca intervalos de tiempo adyacentes para las pausas publicitarias personalizadas y las agrupa en pausas publicitarias independientes.
 
-   Los intervalos de tiempo que no sean adyacentes a ningún otro intervalo de tiempo se traducen en pausas publicitarias que contienen un solo anuncio.
+  Los intervalos de tiempo que no sean adyacentes a ningún otro intervalo de tiempo se traducen en pausas publicitarias que contienen un solo anuncio.
 * Si la aplicación intenta cargar un recurso multimedia cuya configuración contiene `CustomRangeMetadata` que solo se puede utilizar en los marcadores de publicidad personalizados de contexto, TVSDK genera una excepción si el recurso subyacente no es de tipo VOD.
 * Al tratar con marcadores de anuncios personalizados, TVSDK desactiva otros mecanismos de resolución de anuncios (por ejemplo, Adobe Primetime ad decisioning).
 
-   Puede utilizar cualquier módulo de resolución de anuncios de TVSDK o el mecanismo de marcadores de publicidad personalizados. Cuando se utilizan marcadores de anuncio personalizados, el contenido del anuncio se considera resuelto y se coloca en la cronología.
+  Puede utilizar cualquier módulo de resolución de anuncios de TVSDK o el mecanismo de marcadores de publicidad personalizados. Cuando se utilizan marcadores de anuncio personalizados, el contenido del anuncio se considera resuelto y se coloca en la cronología.
 
 El siguiente fragmento de código coloca tres intervalos de tiempo en la cronología como marcadores de anuncio personalizados.
 

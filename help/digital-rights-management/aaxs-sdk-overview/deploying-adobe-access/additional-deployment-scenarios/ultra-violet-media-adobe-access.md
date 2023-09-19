@@ -1,8 +1,7 @@
 ---
 description: Adobe Access se puede utilizar con otras soluciones de transmisión de contenido de terceros para configurar un ecosistema de distribución de medios completo y seguro basado en DRM.
 title: Acceso a medios y Adobe UltraViolet
-exl-id: cca476a4-1961-46d8-aad4-bc7c996d7b02
-source-git-commit: 8d7a4f69a6400b0c3242d4cb0c5daac81f27db3a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%

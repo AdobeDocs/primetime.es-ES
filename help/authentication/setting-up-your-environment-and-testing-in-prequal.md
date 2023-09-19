@@ -1,29 +1,28 @@
 ---
 title: Configurar el entorno y realizar pruebas en la calidad previa
 description: Configurar el entorno y realizar pruebas en la calidad previa
-exl-id: f822c0a1-045a-401f-a44f-742ed25bfcdc
-source-git-commit: 84a16ce775a0aab96ad954997c008b5265e69283
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
 
 ---
 
-# Configuración del entorno y prueba de antemano{#setting-up-your-environment-and-testing-in-prequal}
+# Configuración del entorno y pruebas en Pre-Qual{#setting-up-your-environment-and-testing-in-prequal}
 
 >[!NOTE]
 >
->La contenido en esta Página se ofrece únicamente con fines informativos. El uso de esta API requiere una licencia actual de Adobe Systems. No se permite el uso no autorizado.
+>Los contenido de este Página se proporcionan únicamente con fines informativos. El uso de esta API requiere una licencia vigente de Adobe Systems. No se permite ningún uso no autorizado.
 
-El objetivo de esta nota técnica es ayudar a nuestros socios a configurar sus entorno y inicio a probar una nueva versión implementada en los entorno Adobe Systems previas a la calificación.
+El propósito de esta nota técnica es ayudar a nuestros socios a configurar sus entorno y inicio probar un nuevo versión implementado en el Adobe Systems entorno de precalificación.
 
-Dado que hay dos tipos de versión: ***producción*** y ***ensayo*** , en este documento se enfocar en la configuración de producción con la mención de que todos los pasos son los mismos para el ensayo, pero solo las direcciones URL son diferentes.
+Dado que hay dos versión sabores: ***producción y*** puesta en escena, en este documento enfocar en la configuración de producción ***con la mención de que todos los pasos son iguales para la puesta en escena***, solo que las URL son diferentes.
 
-Los pasos 1 y 2 están configurando el prueba entorno en uno de los equipos de prueba, el paso 3 es una verificación del flujo básico y los pasos 4 a 5 de la presentación de algunas pautas de prueba.
+Los pasos 1 y 2 están configurando el prueba entorno en una de las máquinas de prueba, el paso 3 es una verificación del flujo básico y los pasos 4 y 5 presentan algunas pautas de prueba.
 
 >[!IMPORTANT]
 >
-> Es muy importante que ejecute los pasos 1 y 2 cada vez que desee cambiar la entorno de la prueba (cambio del ensayo a perfil de producción o viceversa)
+> Es muy importante ejecutar los pasos 1 y 2 cada vez que desee cambiar su entorno de prueba (cambiar de ensayo a perfil de producción, o al revés)
 
 
 ## PASO 1. Resolver el paso del dominio a una dirección IP {#resolving-pass-domain-to-an-ip}
@@ -56,19 +55,19 @@ Los pasos 1 y 2 están configurando el prueba entorno en uno de los equipos de p
 
 >[!NOTE]
 >
->Los dominios se excluyen de la respuesta porque no son relevantes y pueden diferir de usuario a usuario.
+>Dominios excluidos de la respuesta, ya que no son relevantes y pueden diferir de un usuario a usuario otro.
 
 >[!IMPORTANT]
 >
-> Estas direcciones IP pueden cambiar en el futuro y es posible que no sean las mismas para los usuarios de diferentes regiones geográficas.
+> Estas direcciones IP pueden cambiar en el futuro y pueden no ser las mismas para los usuarios de diferentes regiones geográficas.
 
 
-## PASO 2.  Suplantación de la entorno previa a la calificación para la producción {#spoofing-the-prequalification-environment}
+## PASO 2.  Suplantación de la precalificación entorno para ser producción {#spoofing-the-prequalification-environment}
 
-* Editar el archivo C:\\windows\\System32\\drivers\\etc\\hosts *(en Windows) o* el *archivo/etc/hosts* (en Macintosh/Linux/Android) y agregue lo siguiente:
+* Editar el archivo c:\\windows\\System32\\drivers\\etc\\hosts (en Windows) o *el* archivo /etc/hosts ** (en Macintosh/Linux/Android) y añada lo siguiente:
 
-* perfil de producción falsas
-   * 52.13.71.11 http://entitlement.auth.adobe.com, http://sp.auth.adobe.com, http://api.auth.adobe.com
+* Producción de suplantación de identidad perfil
+   * 52.13.71.11 http://entitlement.auth.adobe.com, http://sp.auth.adobe.com http://api.auth.adobe.com
 
 **Suplantación en Android:** Para falsificar en Android, debe utilizar un emulador de Android.
 
@@ -79,16 +78,16 @@ Los pasos 1 y 2 están configurando el prueba entorno en uno de los equipos de p
 
 **Este es un paso fácil:**
 
-* Cargue [ el derecho prequal entorno ](https://entitlement-prequal.auth.adobe.com/environment.html) y [ derecho ](https://entitlement.auth.adobe.com/environment.html) . Deben devolver la misma respuesta.
+* Load [Entitlement prequal entorno](https://entitlement-prequal.auth.adobe.com/environment.html) and [entitlement](https://entitlement.auth.adobe.com/environment.html). Deben devolver la misma respuesta.
 
 
-## PASO 4.  Realización de un flujo simple de autenticación/autorización mediante el sitio web del programador {#peform-a-simple-auth-flow}
+## PASO 4.  Realice un flujo simple de autenticación/autorización utilizando el sitio web del programador {#peform-a-simple-auth-flow}
 
-* Este paso requiere la dirección del sitio web del programador y algunas credenciales de MVPD válidas (una usuario que está autenticada y autorizada).
+* Este paso requiere la dirección del sitio web del programador y algunas credenciales MVPD válidas (un usuario de que esté autenticado y autorizado).
 
-## PASO 5.  Realización de pruebas de escenarios con los sitios web del programador {#perform-scenario-testing-using-programmer-website}
+## PASO 5.  Realizar pruebas de escenarios utilizando los sitios web del programador {#perform-scenario-testing-using-programmer-website}
 
-* Una vez completada la configuración de entorno y asegurándose de que el flujo básico de autorización de autenticación esté funcionando, puede continuar con la prueba de escenarios más complejos.
+* Después de completar la configuración entorno y asegurarse de que funciona el flujo básico de autenticación-autorización, puede continuar con las pruebas de escenarios más complejos.
 
 
 ## PASO 6.  Realizar pruebas mediante el sitio de prueba de la API {#perform-testing-using-api-testing-site}

@@ -2,8 +2,7 @@
 title: Almacenamiento de credenciales
 description: Almacenamiento de credenciales
 copied-description: true
-exl-id: 42bccf3a-307f-4763-8b02-f983bcc2e131
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%

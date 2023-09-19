@@ -2,8 +2,7 @@
 title: Instalación de Tomcat
 description: Instalación de Tomcat
 copied-description: true
-exl-id: aed8fc1c-0d75-47ca-bbd4-c0934a66e284
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%

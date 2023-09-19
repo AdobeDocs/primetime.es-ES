@@ -1,8 +1,7 @@
 ---
 description: Este procedimiento es un ejemplo de cómo crear un botón que permita al usuario seleccionar un seguimiento de subtítulos.
 title: Permitir a los usuarios cambiar el seguimiento de los subtítulos
-exl-id: b8c058ef-384c-4ad4-a289-dfd6bf3dfbdb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%

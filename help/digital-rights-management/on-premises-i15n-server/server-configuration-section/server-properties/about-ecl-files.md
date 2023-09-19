@@ -2,8 +2,7 @@
 title: Acerca de los archivos ECI
 description: Acerca de los archivos ECI
 copied-description: true
-exl-id: ac452897-3c64-4481-a3b7-4b69ef6edb61
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '238'
 ht-degree: 0%

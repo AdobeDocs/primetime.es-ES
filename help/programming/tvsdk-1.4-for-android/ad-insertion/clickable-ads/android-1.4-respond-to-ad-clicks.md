@@ -1,8 +1,7 @@
 ---
 description: Cuando un usuario hace clic en un anuncio o en un botón relacionado, la aplicación debe responder. TVSDK proporciona información sobre la URL de destino para el clic.
 title: Responder a clics en anuncios
-exl-id: dc1f1ad7-2f11-4a6c-8459-e02cf8a2e0aa
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 0%
@@ -29,10 +28,10 @@ Cuando un usuario hace clic en un anuncio o en un botón relacionado, la aplicac
    
    * En la aplicación, al abrir la URL de pulsación en un explorador.
 
-      En plataformas de escritorio, el área de reproducción de anuncios de vídeo se utiliza para invocar direcciones URL de pulsación cuando el usuario hace clic.
+     En plataformas de escritorio, el área de reproducción de anuncios de vídeo se utiliza para invocar direcciones URL de pulsación cuando el usuario hace clic.
    * Redirija a los usuarios a su explorador web móvil externo.
 
-      En dispositivos móviles, el área de reproducción de anuncios de vídeo se utiliza para otras funciones, como ocultar y mostrar controles, pausar la reproducción, expandirse a pantalla completa, etc. En estos dispositivos, se utiliza una vista independiente, como un botón patrocinador, para iniciar la URL de pulsación.
+     En dispositivos móviles, el área de reproducción de anuncios de vídeo se utiliza para otras funciones, como ocultar y mostrar controles, pausar la reproducción, expandirse a pantalla completa, etc. En estos dispositivos, se utiliza una vista independiente, como un botón patrocinador, para iniciar la URL de pulsación.
 
 1. Cierre la ventana del explorador en la que se muestra la información de pulsaciones y reanude la reproducción del vídeo.
 

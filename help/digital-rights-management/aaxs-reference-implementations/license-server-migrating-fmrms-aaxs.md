@@ -2,8 +2,7 @@
 title: Migración de FMRMS 1.0 o 1.5 a Adobe Access 2.0 y versiones posteriores
 description: Migración de FMRMS 1.0 o 1.5 a Adobe Access 2.0 y versiones posteriores
 copied-description: true
-exl-id: 9aadf9a0-a7c5-466b-9dd1-c1bab2b8bfc6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 0%

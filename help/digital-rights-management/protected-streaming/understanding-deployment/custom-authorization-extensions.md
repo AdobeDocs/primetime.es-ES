@@ -1,8 +1,7 @@
 ---
 description: Puede invocar la lógica de autorización personalizada durante la adquisición de la licencia para decidir si se debe emitir una licencia al cliente solicitante.
 title: Extensiones de autorización personalizadas
-exl-id: dbdda9c6-32bf-4904-981f-0029bf0a82f0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 0%

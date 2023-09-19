@@ -2,8 +2,7 @@
 title: Introducción al Generador de licencias
 description: Introducción al Generador de licencias
 copied-description: true
-exl-id: 72882790-a25a-4fb0-bb8a-a2daf9360554
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '56'
 ht-degree: 0%

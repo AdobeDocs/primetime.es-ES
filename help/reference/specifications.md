@@ -4,8 +4,7 @@ seo-title: Adobe Primetime Specifications
 description: Especificaciones de Adobe Primetime
 seo-description: Adobe Primetime Specifications
 topic-tags: Adobe Primetime Specifications
-exl-id: 0d54855d-3fee-4324-ac51-644b4b64bc7a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%

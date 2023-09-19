@@ -1,8 +1,7 @@
 ---
 description: Cuando los metadatos DRM de un vídeo son independientes del flujo de medios, debe autenticarse antes de comenzar la reproducción.
 title: Autenticación DRM antes de la reproducción
-exl-id: b3267363-f734-44a6-99f5-e155deb53f3e
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
@@ -97,59 +96,59 @@ En este ejemplo, puede utilizar `DRMHelper` métodos para descargar el contenido
    * Si no se requiere autenticación, inicie la reproducción.
    * Si se requiere autenticación, complete la autenticación adquiriendo la licencia.
 
-      ```java
-      /** 
-      * Helper method to perform DRM authentication. 
-      * 
-      * @param drmManager 
-      * the DRMManager, used to perform the authentication. 
-      * @param drmMetadata 
-      * the DRMMetadata, containing the DRM specific information. 
-      * @param authenticationListener 
-      * the listener, on which the user can be notified about the 
-      * authentication process status. 
-      */ 
-      public static void performDrmAuthentication( 
-           final DRMManager drmManager,  
-           final DRMMetadata drmMetadata, 
-           final String authUser,  
-           final String authPass,  
-           final DRMAuthenticationListener authenticationListener);
-      ```
+     ```java
+     /** 
+     * Helper method to perform DRM authentication. 
+     * 
+     * @param drmManager 
+     * the DRMManager, used to perform the authentication. 
+     * @param drmMetadata 
+     * the DRMMetadata, containing the DRM specific information. 
+     * @param authenticationListener 
+     * the listener, on which the user can be notified about the 
+     * authentication process status. 
+     */ 
+     public static void performDrmAuthentication( 
+          final DRMManager drmManager,  
+          final DRMMetadata drmMetadata, 
+          final String authUser,  
+          final String authPass,  
+          final DRMAuthenticationListener authenticationListener);
+     ```
 
-      En este ejemplo, para simplificar, el nombre y la contraseña del usuario se codifican explícitamente:
+     En este ejemplo, para simplificar, el nombre y la contraseña del usuario se codifican explícitamente:
 
-      ```java
-      DRMHelper.performDrmAuthentication(drmManager,  
-                                         drmMetadata,  
-                                         DRM_USERNAME,  
-                                         DRM_PASSWORD, new DRMAuthenticationListener() { 
-          @Override 
-          public void onAuthenticationStart() { 
-              Log.i(LOG_TAG + "#onAuthenticationStart", "DRM authentication started."); 
-              // Spinner is already showing. 
-          } 
-          @Override 
-          public void onAuthenticationError(int major,  
-                                            int minor,  
-                                            String errorString,  
-                                            String serverErrorURL) { 
-              Log.e(LOG_TAG +  
-                    "#onAuthenticationError",  
-                    "DRM authentication failed. " +  
-                    major + " 0x" + Long.toHexString(minor)); 
-              showToast(getString(R.string.drmAuthenticationError));   
-              showLoadingSpinner(false); 
-          } 
-          @Override 
-          public void onAuthenticationComplete(byte[] authenticationToken) { 
-              Log.i(LOG_TAG +  
-                    "#onAuthenticationComplete", "Auth successful. Launching content."); 
-              showLoadingSpinner(false); 
-              startPlayerActivity(ASSET_URL); 
-          } 
-      }); 
-      ```
+     ```java
+     DRMHelper.performDrmAuthentication(drmManager,  
+                                        drmMetadata,  
+                                        DRM_USERNAME,  
+                                        DRM_PASSWORD, new DRMAuthenticationListener() { 
+         @Override 
+         public void onAuthenticationStart() { 
+             Log.i(LOG_TAG + "#onAuthenticationStart", "DRM authentication started."); 
+             // Spinner is already showing. 
+         } 
+         @Override 
+         public void onAuthenticationError(int major,  
+                                           int minor,  
+                                           String errorString,  
+                                           String serverErrorURL) { 
+             Log.e(LOG_TAG +  
+                   "#onAuthenticationError",  
+                   "DRM authentication failed. " +  
+                   major + " 0x" + Long.toHexString(minor)); 
+             showToast(getString(R.string.drmAuthenticationError));   
+             showLoadingSpinner(false); 
+         } 
+         @Override 
+         public void onAuthenticationComplete(byte[] authenticationToken) { 
+             Log.i(LOG_TAG +  
+                   "#onAuthenticationComplete", "Auth successful. Launching content."); 
+             showLoadingSpinner(false); 
+             startPlayerActivity(ASSET_URL); 
+         } 
+     }); 
+     ```
 
 1. Utilice un detector de eventos para comprobar el estado de autenticación.
 

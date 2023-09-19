@@ -1,8 +1,7 @@
 ---
 title: Preguntas frecuentes sobre Account IQ
 description: Respuestas a las preguntas más frecuentes de los clientes.
-exl-id: d6e11fc9-0d14-46d8-9a85-f1006ac81fb1
-source-git-commit: 4eb5ba53fb3e0a0c314695fcd30cf15c7242b53c
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 0%

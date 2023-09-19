@@ -1,8 +1,7 @@
 ---
 description: Para los medios en directo y VOD, el TVSDK del explorador inicia la reproducción descargando la lista de reproducción asociada a la velocidad de bits de resolución media y, a continuación, descargando segmentos de los medios de velocidad de bits de resolución media definidos por la lista de reproducción.
 title: Reproducción de contenidos
-exl-id: 56033ca2-8a63-4a0d-ac7d-bf208273a238
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: TVSDK gestiona las interrupciones en las emisiones de vídeo en directo y proporciona contenido alternativo durante una interrupción.
 title: Controlar interrupciones
-exl-id: 4a2ff371-69a9-4c13-ac61-3c5cd9c83a6f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 0%

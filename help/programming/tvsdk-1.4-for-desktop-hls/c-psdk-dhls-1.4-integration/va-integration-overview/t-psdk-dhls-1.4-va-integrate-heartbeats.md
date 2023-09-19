@@ -1,8 +1,7 @@
 ---
 description: Puede configurar el reproductor para que rastree y analice el uso del vídeo.
 title: Inicialización y configuración de análisis de vídeo
-exl-id: 58d560d1-f668-4e1d-a817-b2e02008fdbe
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '697'
 ht-degree: 0%
@@ -55,24 +54,24 @@ Para configurar el seguimiento de vídeo en el reproductor:
    
    * La creación de instancias requiere un parámetro de entrada de ID de organización de Marketing Cloud proporcionado por Adobe.
 
-      Este es un valor de cadena.
+     Este es un valor de cadena.
    * La única opción de configuración para la biblioteca de la API de visitante es la URL del extremo back-end que proporciona el identificador único del usuario actual.
    * La URL del servidor de seguimiento de visitantes es la misma que la URL del servidor de seguimiento de Analytics.
 
-      Para obtener información sobre la implementación del servicio de ID de visitante, consulte Implementación del servicio de ID de visitante.
+     Para obtener información sobre la implementación del servicio de ID de visitante, consulte Implementación del servicio de ID de visitante.
 
    ```
    var_visitor = new Visitor("MARKETING_CLOUD_ORG_ID"); 
    _visitor.trackingServer = "URL_OF_THE_VISITOR_TRACKER_SERVER”; 
    ```
 
-1. Cree una instancia del componente AppMeasurement y configúrelo.
+1. Crear una instancia del componente AppMeasurement y configurarlo.
 
    La instancia de AppMeasurement tiene muchas opciones de configuración. Para obtener más información, consulte la [Adobe Analytics Developer](https://microsite.omniture.com/t2/help/en_US/reference/#Developer) documentación. Las opciones del siguiente código de ejemplo ( `account`, `visitorNamespace`, y `trackingServer`) son obligatorios y los valores los proporciona el Adobe.
 
    >[!IMPORTANT]
    >
-   >Debe asegurarse de que la cadena de dependencias está configurada correctamente. La instancia de AppMeasurement agrega (depende de) el componente de la API de visitante.
+   >Debe asegurarse de que la cadena de dependencias está configurada correctamente. La instancia de AppMeasurement agrega (depende de) el componente de API de visitante.
 
    ```
    // Instantiate and configure AppMeasurement 

@@ -1,8 +1,7 @@
 ---
 description: En ocasiones, habrá ocasiones en que el contenido no se pueda reproducir. Cualquier número de situaciones puede causar esto, incluidos errores en la pila de red del explorador, la capa de transporte, el sistema operativo, el tiempo de ejecución del Flash Player o el sistema DRM de Primetime.
 title: Resumen de errores de prueba
-exl-id: fe94d0a4-4f3c-4b0e-b830-a7a83bac1e85
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%

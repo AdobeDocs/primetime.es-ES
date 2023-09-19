@@ -1,8 +1,7 @@
 ---
 description: Puede utilizar la autenticación de Adobe Primetime para administrar los derechos de usuario en el reproductor.
 title: Información general
-exl-id: 0db18747-0ccb-4654-8f1d-9b51915b3652
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '99'
 ht-degree: 0%

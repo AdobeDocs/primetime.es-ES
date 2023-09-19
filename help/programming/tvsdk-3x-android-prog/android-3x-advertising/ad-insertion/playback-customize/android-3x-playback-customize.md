@@ -1,8 +1,7 @@
 ---
 description: Cuando la reproducción llega a una pausa publicitaria, pasa una pausa publicitaria o termina en una pausa publicitaria, TVSDK define algún comportamiento predeterminado para la colocación del cabezal de reproducción actual.
 title: Personalización de la reproducción con anuncios
-exl-id: 5606c9c6-58ff-42a7-974e-3a445f3d3f28
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '221'
 ht-degree: 0%

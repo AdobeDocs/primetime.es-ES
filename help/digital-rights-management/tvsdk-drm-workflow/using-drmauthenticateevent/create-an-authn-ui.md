@@ -2,8 +2,7 @@
 title: Crear una interfaz de usuario de autenticación
 description: Crear una interfaz de usuario de autenticación
 copied-description: true
-exl-id: 54853dcf-2241-44e6-9565-7eca94cc84cc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%

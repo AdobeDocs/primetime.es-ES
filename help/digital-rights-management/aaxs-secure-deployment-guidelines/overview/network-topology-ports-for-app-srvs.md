@@ -2,8 +2,7 @@
 title: Puertos para servidores de aplicaciones
 description: Puertos para servidores de aplicaciones
 copied-description: true
-exl-id: 589d598f-aa3e-4567-9e41-0fd2177a4742
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%

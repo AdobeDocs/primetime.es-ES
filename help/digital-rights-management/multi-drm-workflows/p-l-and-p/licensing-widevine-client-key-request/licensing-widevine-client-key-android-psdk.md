@@ -1,8 +1,7 @@
 ---
 description: El código de cliente pasa datos a una API de Android.
 title: Flujo de trabajo de solicitud de claves en Android PSDK
-exl-id: 3ff52c0d-0789-4fe5-bf9d-f03184bad488
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '142'
 ht-degree: 0%

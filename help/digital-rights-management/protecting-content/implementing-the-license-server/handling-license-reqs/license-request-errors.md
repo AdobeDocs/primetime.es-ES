@@ -2,8 +2,7 @@
 title: Gestión de errores de solicitud de licencia
 description: Gestión de errores de solicitud de licencia
 copied-description: true
-exl-id: 7cfdebc5-db2b-4629-98e6-31ad71cb424c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%

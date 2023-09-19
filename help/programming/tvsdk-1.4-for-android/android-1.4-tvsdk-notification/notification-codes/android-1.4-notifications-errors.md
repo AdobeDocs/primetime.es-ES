@@ -1,8 +1,7 @@
 ---
 description: Esta tabla proporciona información detallada sobre las notificaciones de tipo ERROR.
 title: Códigos de notificación de ERROR
-exl-id: 3e60488e-b368-41f6-b32c-cda5688d67de
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 4%

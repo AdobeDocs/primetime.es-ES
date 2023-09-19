@@ -1,8 +1,7 @@
 ---
 description: Puede utilizar TVSDK para enviar datos arbitrarios en encabezados de cookies para la administración de sesiones, el acceso a puertas, etc.
 title: Trabajo con cookies
-exl-id: 7f0e7d77-0718-4df7-8380-0e9351f588bc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 0%

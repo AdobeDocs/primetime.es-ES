@@ -2,8 +2,7 @@
 title: Registro detallado
 description: Registro detallado
 copied-description: true
-exl-id: f2d1b0c2-ba28-4fba-9a4e-71d1421f37fe
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2155'
 ht-degree: 0%
@@ -107,7 +106,7 @@ Los registros de este tipo registran los resultados de las solicitudes de anunci
 | status | cadena | Código de estado HTTP devuelto |
 | request_duration | entero | Tiempo (milisegundos) desde la solicitud hasta la respuesta |
 | ad_server_query_url | cadena | URL para la llamada de anuncio, incluidos los parámetros de consulta |
-| ad_system_id | cadena | Sistema de publicidad, desde la respuesta del servidor de publicidad (Audiencia si no se especifica) |
+| ad_system_id | cadena | Sistema de publicidad, desde la respuesta del servidor de publicidad (Auditude si no se especifica) |
 | avail_id | cadena | ID de la ventaja, de la señal de anuncio en el archivo de manifiesto de contenido (N/D para VOD) |
 | avail_duration | número | Duración (segundos) de la disponibilidad, desde la señal de anuncio en el archivo de manifiesto de contenido (N/D para VOD) |
 | ad_server_response | cadena | Respuesta codificada en Base64 del servidor de publicidad |
@@ -130,7 +129,7 @@ Los registros de este tipo registran los resultados de las solicitudes de public
 | ad_duration | entero | Duración (segundos) de la publicidad, desde la respuesta del servidor de publicidad. |
 | ad_content_url | cadena | URL del archivo de manifiesto del anuncio, desde la respuesta del servidor de publicidad. |
 | **†** ad_content_url_actual | cadena | URL del archivo de manifiesto del anuncio insertado. Vacío para TRACE_AD_REDIRECT. |
-| ad_system_id | cadena | Sistema de publicidad, desde la respuesta del servidor de publicidad (audiencia si no se especifica). |
+| ad_system_id | cadena | Sistema de publicidad, desde la respuesta del servidor de publicidad (Auditude si no se especifica). |
 | ad_id | cadena | ID del anuncio, de la respuesta del servidor de publicidad. |
 | creative_id | cadena | ID del creativo, desde el nodo de publicidad, desde la respuesta del servidor de publicidad. |
 | **†** ad_call_id | cadena | No se usa. Reservado para uso futuro. |
@@ -328,15 +327,13 @@ https://manifest.auditude.com/auditude/{live/vod}/{publisherAssetID}/{rendition}
 ```
 
 * **live/vod**
-El servidor de manifiesto establece este valor en función del tipo de lista de reproducción del contenido: Live/linear (
-`#EXT-X-PLAYLIST-TYPE:EVENT`) o VOD (`#EXT-X-PLAYLIST-TYPE:VOD`)
+El servidor de manifiesto establece este valor en función del tipo de lista de reproducción del contenido: Live/linear (`#EXT-X-PLAYLIST-TYPE:EVENT`) o VOD (`#EXT-X-PLAYLIST-TYPE:VOD`)
 
 * **publisherAssetID**
 ID único del publicador para el contenido específico proporcionado en la solicitud de URL del Bootstrap.
 
 * **representación**
-El servidor de manifiestos lo establece en función de lo siguiente 
-`BANDWIDTH` valor del flujo de contenido y lo utiliza para hacer coincidir la velocidad de bits del anuncio con la velocidad de bits del contenido. La velocidad de bits del anuncio no puede superar la velocidad de bits del contenido a menos que lo haga la representación del anuncio con la velocidad de bits más baja.
+El servidor de manifiestos lo establece en función de lo siguiente `BANDWIDTH` valor del flujo de contenido y lo utiliza para hacer coincidir la velocidad de bits del anuncio con la velocidad de bits del contenido. La velocidad de bits del anuncio no puede superar la velocidad de bits del contenido a menos que lo haga la representación del anuncio con la velocidad de bits más baja.
 
 * **groupID**
 El servidor de manifiestos genera este valor y lo utiliza para asegurarse de que coloca anuncios de forma coherente, independientemente de las representaciones de velocidad de bits para las que el cliente solicite los anuncios.

@@ -2,8 +2,7 @@
 title: Información general sobre ABEJAS
 description: Información general sobre ABEJAS
 copied-description: true
-exl-id: 481af72b-40a3-4f33-9e91-990dc5308596
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%

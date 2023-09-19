@@ -2,8 +2,7 @@
 title: Información general
 description: Información general
 copied-description: true
-exl-id: 866b3147-c28b-41b0-8653-06ba867354c5
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1315'
 ht-degree: 0%
@@ -40,7 +39,7 @@ java -jar AdobePackager.jar
 * `source` - El nombre del archivo que desea cifrar.
 * `dest` : nombre del archivo cifrado resultante.
 
-   Si especifica un directorio, el archivo cifrado se guarda automáticamente en el directorio especificado con el mismo nombre de archivo especificado como archivo de origen. Sin embargo, no puede especificar un directorio de destino que incluya el archivo de origen.
+  Si especifica un directorio, el archivo cifrado se guarda automáticamente en el directorio especificado con el mismo nombre de archivo especificado como archivo de origen. Sin embargo, no puede especificar un directorio de destino que incluya el archivo de origen.
 
 **Empaquetar varios archivos con la misma clave** (para compatibilidad con varias velocidades de bits):
 
@@ -172,7 +171,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.content.secondsUnencryption</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Si un valor es bueno que 0, el número especificado de segundos de contenido al principio del archivo no se cifrará. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Si un valor es mayor que 0, el número especificado de segundos de contenido al principio del archivo no se cifrará. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.keys.asymmetric.certfile</span> </td> 
@@ -180,7 +179,7 @@ java -jar AdobePackager.jar -dm <metadatafile> [-e]
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="+ topic/ph pr-d/codeph codeph">encrypt.keys.policyFile.n</span> </td> 
-   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Esta propiedad se utiliza repetidamente para crear una lista de directivas DRM que se aplican al contenido. <span class="codeph"> n</span> representa un entero cuyo valor es 1 o bueno. El cliente utiliza la primera instancia de forma predeterminada. </p> </td> 
+   <td colname="2" class="- topic/entry "> <p class="- topic/p ">Esta propiedad se utiliza repetidamente para crear una lista de directivas DRM que se aplican al contenido. <span class="codeph"> n</span> representa un entero cuyo valor es 1 o mayor. El cliente utiliza la primera instancia de forma predeterminada. </p> </td> 
   </tr> 
   <tr rowsep="1" class="- topic/row "> 
    <td colname="1" class="- topic/entry "><span class="codeph"> encrypt.license.serverurl</span> </td> 

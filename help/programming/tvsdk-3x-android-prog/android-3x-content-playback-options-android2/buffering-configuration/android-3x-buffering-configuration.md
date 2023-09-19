@@ -1,8 +1,7 @@
 ---
 description: Para proporcionar una experiencia de visualización más fluida, TVSDK a veces almacena en búfer el flujo de vídeo. Puede configurar el modo en que el reproductor se almacena en búfer.
 title: Almacenamiento en búfer
-exl-id: 3b706420-878d-487a-8db7-cff2a12c2660
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 0%
@@ -45,22 +44,22 @@ El `MediaPlayer` proporciona métodos para establecer y obtener el tiempo de alm
 
    * Para establecer el tiempo de búfer inicial igual al tiempo de búfer de reproducción:
 
-      ```
-      public static BufferControlParameters createSimple(long bufferTime)
-      ```
+     ```
+     public static BufferControlParameters createSimple(long bufferTime)
+     ```
 
    * Para definir los tiempos iniciales y de búfer de reproducción:
 
-      ```
-      public static BufferControlParameters createDual( 
-        long initialBuffer,  
-        long bufferTime)
-      ```
+     ```
+     public static BufferControlParameters createDual( 
+       long initialBuffer,  
+       long bufferTime)
+     ```
+
    Si los parámetros no son válidos, estos métodos activan `MediaPlayerException` con código de error `PSDKErrorCode.INVALID_ARGUMENT`, como cuando se cumplen las siguientes condiciones:
 
    * El tiempo de búfer inicial es inferior a cero.
-   * El tiempo de búfer inicial es bueno que el tiempo de búfer.
-
+   * El tiempo de búfer inicial es mayor que el tiempo de búfer.
 
 1. Para definir los valores de los parámetros de búfer, utilice esta opción `MediaPlayer` método:
 

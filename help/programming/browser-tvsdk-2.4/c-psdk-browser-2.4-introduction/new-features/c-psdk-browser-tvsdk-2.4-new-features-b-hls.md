@@ -1,8 +1,7 @@
 ---
 description: El TVSDK del explorador admite una serie de funciones HLS que puede implementar para agregar funcionalidad a las aplicaciones de vídeo.
 title: Funciones HLS compatibles
-exl-id: 111a6683-fb5c-4f0a-8665-5b1aab77056c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 0%

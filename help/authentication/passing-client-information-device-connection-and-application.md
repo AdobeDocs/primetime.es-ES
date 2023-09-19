@@ -1,8 +1,7 @@
 ---
 title: Pasar información del cliente (dispositivo, conexión y aplicación)
 description: Pasar información del cliente (dispositivo, conexión y aplicación)
-exl-id: 0b21ef0e-c169-48ff-ac01-25411cfece1e
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '1681'
 ht-degree: 0%
@@ -43,30 +42,30 @@ La información del cliente es un objeto JSON creado con claves presentadas en l
 >
 >Las siguientes claves tienen **restringido** valores: `primaryHardwareType`, `osName`, `osFamily`, `browserName`, `browserVendor`, `connectionSecure`.
 
-|  | Clave | Restringido | Descripción | Valores posibles |
+|   | Clave | Restringido | Descripción | Valores posibles |
 |---|---|---|---|---|
-|  | primaryHardwareType | # Sí | El tipo de hardware principal del dispositivo. | # Los valores están restringidos: Cámara DataCollectionTerminal Desktop EmbeddedNetworkModule eReader GamesConsole GeolocationTracker Gafas MediaPlayer MobilePhone PaymentTerminal PluginModem SetTopBox TV Tablet WirelessHotspot Wristwatch Unknown |
+|            | primaryHardwareType | # Sí | El tipo de hardware principal del dispositivo. | # Los valores están restringidos: Cámara DataCollectionTerminal Desktop EmbeddedNetworkModule eReader GamesConsole GeolocationTracker Gafas MediaPlayer MobilePhone PaymentTerminal PluginModem SetTopBox TV Tablet WirelessHotspot Wristwatch Unknown |
 | #mandatory | model | No | El nombre del modelo del dispositivo. | por ejemplo, iPhone, SM-G930V, AppleTV, etc. |
-|  | version | No | La versión del dispositivo. | p. ej., 2.0.1, etc. |
-|  | fabricante | No | La empresa u organización fabricante del dispositivo. | Por ejemplo: Samsung, LG, ZTE, Huawei, Motorola, Apple, etc. |
-|  | vendedor | No | La empresa u organización vendedora del dispositivo. | por ejemplo, Apple, Samsung, LG, Google, etc. |
+|            | version | No | La versión del dispositivo. | p. ej., 2.0.1, etc. |
+|            | fabricante | No | La empresa u organización fabricante del dispositivo. | Por ejemplo: Samsung, LG, ZTE, Huawei, Motorola, Apple, etc. |
+|            | vendedor | No | La empresa u organización vendedora del dispositivo. | por ejemplo, Apple, Samsung, LG, Google, etc. |
 | #mandatory | osName | # Sí | El nombre del sistema operativo (SO) del dispositivo. | # Los valores están restringidos: Android Chrome OS Linux Mac OS X OpenBSD Roku OS Windows iOS tvOS webOS |
-|  | osFamily | Sí | El nombre del grupo del sistema operativo (SO) del dispositivo. | # Los valores están restringidos: Android BSD Linux PlayStation OS Roku OS Symbian Tizen Windows iOS macOS tvOS webOS |
-|  | osVendor | No | El proveedor del sistema operativo (SO) del dispositivo. | Amazon Apple Google LG Microsoft Mozilla Nintendo Nokia Roku Samsung Sony Tizen Project |
-|  | osVersion | No | La versión del sistema operativo (SO) del dispositivo. | p. ej. 10.2, 9.0.1, etc. |
-|  | browserName | # Sí | El nombre del explorador. | # Los valores están restringidos: Android Browser Chrome Edge Firefox Internet Explorer Opera Safari SeaMonkey Symbian Browser |
-|  | browserVendor | # Sí | La empresa u organización que crea el explorador. | # Los valores están restringidos: Amazon Apple Google Microsoft Motorola Mozilla Netscape Nintendo Nokia Samsung Sony Ericsson |
-|  | browserVersion | No | La versión del explorador del dispositivo. | p. ej. 60.0.3112 |
-|  | userAgent | No | El agente de usuario del dispositivo. | Por ejemplo, Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, como Gecko) Versión/10.0.3 Safari/602.4.8 |
-|  | displayWidth | No | Ancho de pantalla físico del dispositivo. |  |
-|  | displayHeight | No | Altura de la pantalla física del dispositivo. |  |
-|  | displayPpi | No | La densidad de píxeles de la pantalla física del dispositivo. | p.ej. 294 |
-|  | diagonalScreenSize | No | Dimensión diagonal de la pantalla física del dispositivo en pulgadas. | p. ej. 5.5, 10.1 |
-|  | connectionIp | No | IP del dispositivo que se utiliza para enviar solicitudes HTTP. | p. ej., 8.8.4.4 |
-|  | connectionPort | No | Puerto del dispositivo utilizado para enviar solicitudes HTTP. | p. ej. 53124 |
-|  | connectionType | No | Tipo de conexión de red. | por ejemplo, WiFi, LAN, 3G, 4G, 5G |
-|  | connectionSecure | # Sí | Estado de seguridad de la conexión de red. | # Los valores están restringidos: true (en el caso de una red segura, false) en el caso de una zona pública activa. |
-|  | applicationId | No | El identificador único de la aplicación. | Por ejemplo, CNN |
+|            | osFamily | Sí | El nombre del grupo del sistema operativo (SO) del dispositivo. | # Los valores están restringidos: Android BSD Linux PlayStation OS Roku OS Symbian Tizen Windows iOS macOS tvOS webOS |
+|            | osVendor | No | El proveedor del sistema operativo (SO) del dispositivo. | Amazon Apple Google LG Microsoft Mozilla Nintendo Nokia Roku Samsung Sony Tizen Project |
+|            | osVersion | No | La versión del sistema operativo (SO) del dispositivo. | p. ej. 10.2, 9.0.1, etc. |
+|            | browserName | # Sí | El nombre del explorador. | # Los valores están restringidos: Android Browser Chrome Edge Firefox Internet Explorer Opera Safari SeaMonkey Symbian Browser |
+|            | browserVendor | # Sí | La empresa u organización que crea el explorador. | # Los valores están restringidos: Amazon Apple Google Microsoft Motorola Mozilla Netscape Nintendo Nokia Samsung Sony Ericsson |
+|            | browserVersion | No | La versión del explorador del dispositivo. | p. ej. 60.0.3112 |
+|            | userAgent | No | El agente de usuario del dispositivo. | Por ejemplo, Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, como Gecko) Versión/10.0.3 Safari/602.4.8 |
+|            | displayWidth | No | Ancho de pantalla físico del dispositivo. |                                                                                                                                                                                                                                                                                                                                                           |
+|            | displayHeight | No | Altura de la pantalla física del dispositivo. |                                                                                                                                                                                                                                                                                                                                                           |
+|            | displayPpi | No | La densidad de píxeles de la pantalla física del dispositivo. | p.ej. 294 |
+|            | diagonalScreenSize | No | Dimensión diagonal de la pantalla física del dispositivo en pulgadas. | p. ej. 5.5, 10.1 |
+|            | connectionIp | No | IP del dispositivo que se utiliza para enviar solicitudes HTTP. | p. ej., 8.8.4.4 |
+|            | connectionPort | No | Puerto del dispositivo utilizado para enviar solicitudes HTTP. | p. ej. 53124 |
+|            | connectionType | No | Tipo de conexión de red. | por ejemplo, WiFi, LAN, 3G, 4G, 5G |
+|            | connectionSecure | # Sí | Estado de seguridad de la conexión de red. | # Los valores están restringidos: true (en el caso de una red segura, false) en el caso de una zona pública activa. |
+|            | applicationId | No | El identificador único de la aplicación. | Por ejemplo, CNN |
 
 ## Referencias de API {#api-ref}
 
@@ -135,31 +134,32 @@ Esta sección presenta un libro de cocina para crear el objeto JSON de informaci
 
 La información del dispositivo se puede construir de la siguiente manera:
 
-|  | Clave | Origen | Valor (ejemplo) |
+|   | Clave | Origen | Valor (ejemplo) |
 |---|---------------|-----------------------------|---------------|
 | ! | model | Build.MODEL | GT-I9505 |
-|  | vendedor | Build.BRAND | samsung |
-|  | fabricante | Build.MANUFACTURER | samsung |
+|   | vendedor | Build.BRAND | samsung |
+|   | fabricante | Build.MANUFACTURER | samsung |
 | ! | version | Build.DEVICE | jflte |
-|  | displayWidth | DisplayMetrics.widthPixels | 600 |
-|  | displayHeight | DisplayMetrics.heightPixels | 800 |
+|   | displayWidth | DisplayMetrics.widthPixels | 600 |
+|   | displayHeight | DisplayMetrics.heightPixels | 800 |
 | ! | osName | codificado | Android |
 | ! | osVersion | Build.VERSION.RELEASE | 5.0.1 |
 
 La información de conexión se puede construir de la siguiente manera:
 
-|  | Clave | Origen | Valor (ejemplo) |
+|   | Clave | Origen | Valor (ejemplo) |
 |---|---|---|---|
 | ! | connectionType | `<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>` `getSystemService(Context.CONNECTIVITY_SERVICE).getActiveNetworkInfo().getType()` | `"WIFI","BLUETOOTH","MOBILE","ETHERNET","VPN","DUMMY","MOBILE_DUN","WIMAX","notAccessible"` |
-|  | connectionSecure |  |  |
+|   | connectionSecure |                                                                                                                                                           |                                                                                           |
 
 La información de la aplicación se puede construir de la siguiente manera:
 
-|  | Clave | Origen | Valor (ejemplo) |
+|   | Clave | Origen | Valor (ejemplo) |
 |---|---------------|-----------|--------------|
-|  | applicationId | codificado | CNN |
+|   | applicationId | codificado | CNN |
 
 >[!IMPORTANT]
+>
 La información del dispositivo, la conexión y la aplicación debe agregarse al mismo objeto JSON. Después, el objeto resultante debe ser **Codificado en Base64**. Además, en el caso de las API de REST de autenticación de Adobe Primetime, el valor debe ser **Codificado con URL**.
 
 **Código de muestra**
@@ -238,77 +238,79 @@ private JSONObject computeClientInformation() {
 ```
 
 >[!NOTE]
+>
 **Recursos:**
 * clase pública [generar](https://developer.android.com/reference/android/os/Build.html){target=_blank} en la documentación para desarrolladores de Java.
-
 
 ### FireTV {#fire-tv}
 
 La información del dispositivo se puede construir de la siguiente manera:
 
-|  | Clave | Origen | Valor (p. ej., ) |
+|   | Clave | Origen | Valor (p. ej., ) |
 |---|---------------|-----------------------------|--------------|
 | ! | model | Build.MODEL | AFTM |
-|  | vendedor | Build.BRAND | Amazon |
-|  | fabricante | Build.MANUFACTURER | Amazon |
+|   | vendedor | Build.BRAND | Amazon |
+|   | fabricante | Build.MANUFACTURER | Amazon |
 | ! | version | Build.DEVICE | montoya |
-|  | displayWidth | DisplayMetrics.widthPixels |  |
-|  | displayHeight | DisplayMetrics.heightPixels |  |
+|   | displayWidth | DisplayMetrics.widthPixels |              |
+|   | displayHeight | DisplayMetrics.heightPixels |              |
 | ! | osName | codificado | Android |
 | ! | osVersion | Build.VERSION.RELEASE | 5.1.1 |
 
 La información de conexión se puede construir de la siguiente manera:
 
-|  | Clave | Origen | Valor (ejemplo) |
+|   | Clave | Origen | Valor (ejemplo) |
 |---|------------------|--------|---------------|
-| ! | connectionType |  |  |
-|  | connectionSecure |  |  |
+| ! | connectionType |        |               |
+|   | connectionSecure |        |               |
 
 La información de la aplicación se puede construir de la siguiente manera:
 
-|  | Clave | Origen | Valor (ejemplo) |
+|   | Clave | Origen | Valor (ejemplo) |
 |---|---------------|-----------|--------------|
-|  | applicationId | codificado | CNN |
+|   | applicationId | codificado | CNN |
 
 >[!IMPORTANT]
+>
 La información del dispositivo, la conexión y la aplicación debe agregarse al mismo objeto JSON. Después, el objeto resultante debe ser **Codificado en Base64**. Además, en el caso de las API de REST de autenticación de Adobe Primetime, el valor debe ser **Codificado con URL**.
 
 >[!NOTE]
+>
 **Recursos:**
 * clase pública [Generar](https://developer.android.com/reference/android/os/Build.html){target=_blank} en la documentación de los desarrolladores de Android.
 * [Identificación de dispositivos FireTV](https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html){target=_blank}
-
 
 ### iOS/tvOS {#ios-tvos}
 
 La información del dispositivo se puede construir de la siguiente manera:
 
-|  | Clave | Origen | Valor (ejemplo) |
+|   | Clave | Origen | Valor (ejemplo) |
 |---|---------------|------------------------|--------------|
 | ! | model | uname.machine | iPhone |
-|  | vendedor | codificado | Apple |
-|  | fabricante | codificado | Apple |
+|   | vendedor | codificado | Apple |
+|   | fabricante | codificado | Apple |
 | ! | version | uname.machine | 8,1 |
-|  | displayWidth | UIScreen.mainScreen | 320 |
-|  | displayHeight | UIScreen.mainScreen | 568 |
+|   | displayWidth | UIScreen.mainScreen | 320 |
+|   | displayHeight | UIScreen.mainScreen | 568 |
 | ! | osName | UIDevice.systemName | iOS |
 | ! | osVersion | UIDevice.systemVersion | 10.2 |
 
 La información de conexión se puede construir de la siguiente manera:
 
-|  | Clave | Origen | Valor (ejemplo) |
+|   | Clave | Origen | Valor (ejemplo) |
 |---|------------------|-------------------------------------------|--------------|
-| ! | connectionType | [Reachability currentReachabilityStatus] |  |
-|  | connectionSecure |  |  |
+| ! | connectionType | [Reachability currentReachabilityStatus] |              |
+|   | connectionSecure |                                           |              |
 
 
 La información de la aplicación se puede construir de la siguiente manera:
 
-|  | Clave | Origen | Valor (ejemplo) |
+|   | Clave | Origen | Valor (ejemplo) |
 |---|---------------|-----------|--------------|
-|  | applicationId | codificado | CNN |
+|   | applicationId | codificado | CNN |
 
 >[!IMPORTANT]
+>
 La información del dispositivo, la conexión y la aplicación debe agregarse al mismo objeto JSON. Después, el objeto resultante debe tener codificación Base64. Además, en el caso de las API de REST de autenticación de Adobe Primetime, el valor debe tener codificación de dirección URL.
 
 **Código de muestra**
@@ -380,67 +382,69 @@ La información del dispositivo, la conexión y la aplicación debe agregarse al
 ```
 
 >[!NOTE]
+>
 **Recursos:**
 * [UIDevice](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice){target=_blank}
 * [uname](https://man7.org/linux/man-pages/man2/uname.2.html){target=_blank}
 * [Acerca de Reachability](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html){target=_blank}
 
-
 ### Roku {#roku}
 
 La información del dispositivo se puede construir de la siguiente manera:
 
-| Clave | Origen | Valor (ejemplo) |  |
+| Clave | Origen | Valor (ejemplo) |                 |
 |-----|---------------|--------------------------------------------|-----------------|
 | ! | model | codificado | &quot;Roku&quot; |
-|  | vendedor | ifDeviceInfo.GetModelDetails().VendorName | &quot;Sharp&quot;, &quot;Roku&quot; |
-|  | fabricante | ifDeviceInfo.GetModelDetails().VendorName | &quot;Sharp&quot;, &quot;Roku&quot; |
+|     | vendedor | ifDeviceInfo.GetModelDetails().VendorName | &quot;Sharp&quot;, &quot;Roku&quot; |
+|     | fabricante | ifDeviceInfo.GetModelDetails().VendorName | &quot;Sharp&quot;, &quot;Roku&quot; |
 | ! | version | ifDeviceInfo.GetModelDetails().ModelNumber | &quot;5303X&quot; |
-|  | displayWidth | ifDeviceInfo.GetDisplaySize().w | 1920 |
-|  | displayHeight | ifDeviceInfo.GetDisplaySize().h | 1080 |
+|     | displayWidth | ifDeviceInfo.GetDisplaySize().w | 1920 |
+|     | displayHeight | ifDeviceInfo.GetDisplaySize().h | 1080 |
 | ! | osName | codificado | &quot;Roku&quot; |
-| ! | osVersion | ifDeviceInfo.getVersion() |  |
+| ! | osVersion | ifDeviceInfo.getVersion() |                 |
 
 La información de conexión se puede construir de la siguiente manera:
 
-|  | Clave | Origen | Valor (ejemplo) |
+|   | Clave | Origen | Valor (ejemplo) |
 |---|---|---|---|
 | ! | connectionType | ifDeviceInfo.GetConnectionType() | &quot;WifiConnection&quot;, &quot;WiredConnection&quot; |
-|  | connectionSecure | codificado | true si la conexión está cableada |
+|   | connectionSecure | codificado | true si la conexión está cableada |
 
 La información de la aplicación se puede construir de la siguiente manera:
 
-|  | Clave | Origen | Valor (ejemplo) |
+|   | Clave | Origen | Valor (ejemplo) |
 |---|---------------|-----------|--------------|
-|  | applicationId | codificado | CNN |
+|   | applicationId | codificado | CNN |
 
 >[!IMPORTANT]
+>
 La información del dispositivo, la conexión y la aplicación debe agregarse al mismo objeto JSON. Después, el objeto resultante debe ser **Codificado en Base64**. Además, en el caso de las API de REST de autenticación de Adobe Primetime, el valor debe tener codificación de dirección URL.
 
 >[!NOTE]
+>
 Para obtener más información, consulte [ifDeviceInfo](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md)
 
 ### XBOX 1/360 {#xbox}
 
 La información del dispositivo se puede construir de la siguiente manera:
 
-|  | Clave | Origen | Valor (ejemplo) |
+|   | Clave | Origen | Valor (ejemplo) |
 |---|---|---|---|
-| ! | model | EasClientDeviceInformation.SystemProductName |  |
-|  | vendedor | codificado | Microsoft |
-|  | fabricante | codificado | Microsoft |
-| ! | version | EasClientDeviceInformation.SystemHardwareVersion |  |
-|  | displayWidth | DisplayInformation.ScreenWidthInRawPixels | 1920 |
-|  | displayHeight | DisplayInformation.ScreenHeightInRawPixels | 1080 |
-| ! | osName | EasClientDeviceInformation.OperatingSystem |  |
-| ! | osVersion | EasClientDeviceInformation.SystemFirmwareVersion |  |
+| ! | model | EasClientDeviceInformation.SystemProductName |                 |
+|   | vendedor | codificado | Microsoft |
+|   | fabricante | codificado | Microsoft |
+| ! | version | EasClientDeviceInformation.SystemHardwareVersion |                 |
+|   | displayWidth | DisplayInformation.ScreenWidthInRawPixels | 1920 |
+|   | displayHeight | DisplayInformation.ScreenHeightInRawPixels | 1080 |
+| ! | osName | EasClientDeviceInformation.OperatingSystem |                 |
+| ! | osVersion | EasClientDeviceInformation.SystemFirmwareVersion |                 |
 
 La información de conexión se puede construir de la siguiente manera:
 
-|  | Clave | Origen | Ejemplo |
+|   | Clave | Origen | Ejemplo |
 |---|---|---|---|
-| ! | connectionType |  |  |
-|  | connectionSecure | NetworkAuthenticationType | &quot;None&quot;, &quot;Wpa&quot;, etc |
+| ! | connectionType |                                                   |                   |
+|   | connectionSecure | NetworkAuthenticationType | &quot;None&quot;, &quot;Wpa&quot;, etc |
 
 La información de la aplicación se puede construir de la siguiente manera:
 
@@ -449,6 +453,7 @@ La información de la aplicación se puede construir de la siguiente manera:
 | applicationId | codificado | CNN |
 
 >[!IMPORTANT]
+>
 La información del dispositivo, la conexión y la aplicación debe agregarse al mismo objeto JSON. Después, el objeto resultante debe ser **Codificado en Base64**. Además, en el caso de las API de REST de autenticación de Adobe Primetime, el valor debe ser **Codificado con URL**.
 
 **Recursos**

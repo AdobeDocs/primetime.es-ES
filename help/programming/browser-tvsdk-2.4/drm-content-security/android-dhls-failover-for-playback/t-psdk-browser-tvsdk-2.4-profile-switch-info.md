@@ -1,8 +1,7 @@
 ---
 description: Cuando el reproductor multimedia cambia su perfil actual a un nuevo perfil, puede recuperar información sobre el conmutador, incluso cuándo ha cambiado, la información de anchura y altura o por qué se ha utilizado una velocidad de bits diferente.
 title: Obtener información sobre el conmutador de perfil
-exl-id: 3ef4b319-dd78-4abd-9c2d-ab1d608f6cea
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 0%

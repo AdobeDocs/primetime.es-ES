@@ -1,8 +1,7 @@
 ---
 title: Lista de direcciones IP de MVPD
 description: Lista de direcciones IP de MVPD
-exl-id: be18084c-22f5-47b5-b088-d9032681113d
-source-git-commit: 7e4c274e2ab443ac034139f4ccc00350f64b444b
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 18%

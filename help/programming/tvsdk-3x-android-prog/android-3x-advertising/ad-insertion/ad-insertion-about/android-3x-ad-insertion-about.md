@@ -1,8 +1,7 @@
 ---
 description: La inserción de publicidad resuelve los anuncios para vídeo bajo demanda (VOD), para flujo en directo y para flujo lineal con seguimiento de anuncios y reproducción de publicidad. TVSDK realiza las solicitudes necesarias al servidor de publicidad, recibe información sobre los anuncios del contenido especificado y coloca los anuncios en el contenido por fases.
 title: Inserción de anuncios
-exl-id: 899d28b5-92aa-42cb-b7e8-9168fb68dbbd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 0%

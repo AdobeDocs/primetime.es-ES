@@ -1,8 +1,7 @@
 ---
 description: La definición de la interfaz de servicio de anuncios del reproductor de vídeo (VPAID) proporciona una interfaz común para reproducir anuncios de vídeo. VPAID ofrece una experiencia multimedia enriquecida para los usuarios y permite a los editores segmentar mejor los anuncios, rastrear las impresiones de los anuncios y monetizar el contenido de vídeo.
 title: Requisitos de publicidad personalizados
-exl-id: c13748d6-23f1-4f34-95b4-7b532db6e536
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -23,7 +22,7 @@ TVSDK admite las siguientes funciones:
 * Anuncios VPAID lineales en contenido de vídeo bajo demanda (VOD)
 * Flash de anuncios VPAID
 
-   Los anuncios VPAID deben basarse en el Flash y la respuesta de publicidad debe identificar el tipo de medio del anuncio VPAID como `application/x-shockwave-flash`.
+  Los anuncios VPAID deben basarse en el Flash y la respuesta de publicidad debe identificar el tipo de medio del anuncio VPAID como `application/x-shockwave-flash`.
 
 No se admiten las siguientes funciones:
 
@@ -52,4 +51,4 @@ Después del `AdStopped` evento, TVSDK reanuda el contenido de vídeo.
 
 Si el anuncio tarda demasiado en cargarse o hay errores en él, TVSDK puede ignorarlo y el siguiente anuncio del pod de anuncios se reproduce automáticamente.
 
-Si la variable `AuditudeSettings.customAdLoadTimeout` La configuración especifica un número de segundos bueno a cero, TVSDK intenta cargar el anuncio durante el tiempo especificado. Si no puede cargar el anuncio, este se omitirá. Por ejemplo, si configura `AuditudeSettings.customAdLoadTimeout:5`, el TVSDK intenta cargar el anuncio durante un máximo de 5 segundos. Si el anuncio sigue sin cargarse, se ignora.
+Si la variable `AuditudeSettings.customAdLoadTimeout` La configuración especifica un número de segundos mayor que cero, el TVSDK intenta cargar el anuncio durante el tiempo especificado. Si no puede cargar el anuncio, este se omitirá. Por ejemplo, si configura `AuditudeSettings.customAdLoadTimeout:5`, el TVSDK intenta cargar el anuncio durante un máximo de 5 segundos. Si el anuncio sigue sin cargarse, se ignora.

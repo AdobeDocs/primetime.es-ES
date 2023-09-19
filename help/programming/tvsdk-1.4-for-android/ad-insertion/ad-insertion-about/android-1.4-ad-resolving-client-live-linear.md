@@ -1,8 +1,7 @@
 ---
 description: Para el contenido en directo/lineal, TVSDK reemplaza una parte del contenido del flujo principal con una pausa publicitaria de la misma duración, de modo que la duración de la cronología sigue siendo la misma.
 title: Resolución e inserción de anuncios lineales/activos
-exl-id: 85d59ede-3421-483a-bea4-694f312e6378
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 0%

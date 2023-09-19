@@ -2,8 +2,7 @@
 title: Requisitos publicitarios
 description: Requisitos publicitarios
 copied-description: true
-exl-id: 906f4910-396c-4909-8e22-119486ed13a0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -27,4 +26,4 @@ Para incorporar anuncios al contenido del vídeo, asegúrese de que la publicida
 * Si el contenido principal es de tasa de bits múltiple (MBR), el contenido de la publicidad también debe ser MBR.
 * Si el contenido principal tiene pistas de audio alternativas, cada anuncio debe tener al menos una secuencia de solo audio.
 
-   Si el anuncio no tiene al menos un flujo de solo audio, se omite el anuncio.
+  Si el anuncio no tiene al menos un flujo de solo audio, se omite el anuncio.

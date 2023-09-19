@@ -1,8 +1,7 @@
 ---
 description: Mediante marcadores de anuncio personalizados, puede marcar secciones específicas del contenido principal como periodos de contenido relacionados con anuncios.
 title: Añadir marcadores de publicidad personalizados
-exl-id: 067bb595-d9cb-40d7-95bc-795c12fb7439
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '299'
 ht-degree: 0%
@@ -21,7 +20,7 @@ El seguimiento de anuncios no se gestiona internamente mediante TVSDK, como cuan
 
 * La pausa publicitaria
 
-   Una pausa publicitaria es una lista ordenada de anuncios consecutivos individuales.
+  Una pausa publicitaria es una lista ordenada de anuncios consecutivos individuales.
 * Un anuncio individual
 
 Los eventos de reproducción se activan por separado para las pausas publicitarias y los anuncios en los puntos de inicio y finalización de cada anuncio.

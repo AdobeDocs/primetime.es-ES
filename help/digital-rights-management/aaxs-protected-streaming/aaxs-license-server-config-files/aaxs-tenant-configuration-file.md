@@ -2,8 +2,7 @@
 title: Archivo de configuración de inquilino
 description: Archivo de configuración de inquilino
 copied-description: true
-exl-id: 0f6cafbe-99d9-43bc-9a7f-d87c4da1f37f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -28,7 +27,7 @@ El archivo de configuración de inquilino incluye:
 
    * **Almacenamiento en caché de licencias** — Opcional. Especifica cuánto tiempo se puede almacenar la licencia en el cliente. De forma predeterminada, el almacenamiento en caché de licencias está deshabilitado. Para habilitar el almacenamiento en caché de licencias durante un período de tiempo limitado, establezca la fecha de finalización o el número de segundos durante los cuales se debe almacenar la licencia (a partir del momento en que se emite la licencia). Si establece el número de segundos en 0, se deshabilita el almacenamiento de licencias en caché.
 
-      Tenga en cuenta que todas las licencias emitidas por el servidor para transmisión protegida tienen un periodo de caducidad de 24 horas (86400 segundos). Por lo tanto, este valor se aplica implícitamente como un límite superior a la fecha de finalización o duración establecida para el almacenamiento en caché de licencias, con un valor máximo de 86400 segundos, aunque el esquema aplique límites más altos.
+     Tenga en cuenta que todas las licencias emitidas por el servidor para transmisión protegida tienen un periodo de caducidad de 24 horas (86400 segundos). Por lo tanto, este valor se aplica implícitamente como un límite superior a la fecha de finalización o duración establecida para el almacenamiento en caché de licencias, con un valor máximo de 86400 segundos, aunque el esquema aplique límites más altos.
 
    * **Reproducir a la derecha** — Se debe especificar al menos un derecho. Si se especifican varios derechos, el cliente utilizará el primer derecho para el que cumpla todos los requisitos.
 
@@ -40,13 +39,12 @@ El archivo de configuración de inquilino incluye:
          * `model`
          * `screenType`
 
-         Los siguientes atributos ahora son opcionales:
+        Los siguientes atributos ahora son opcionales:
 
          * `osVersion`
          * `version`
+
       * **Requisitos de capacidad del dispositivo** — especifica opcionalmente las capacidades de hardware necesarias para acceder al contenido.
       * **Requisitos de detección de jailbreak** — especifica de forma opcional que no se permite la reproducción en los dispositivos en los que se detecta una fuga.
-
-
 
 Consulte los comentarios en el archivo de configuración del inquilino de ejemplo para obtener más información.

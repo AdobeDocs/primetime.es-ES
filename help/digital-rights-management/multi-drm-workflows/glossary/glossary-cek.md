@@ -1,8 +1,7 @@
 ---
 title: Glosario
 description: Términos utilizados con frecuencia que requieren una definición especial.
-exl-id: 4e7874f7-c5c0-4f2c-ada2-a0da3ed4d4bf
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 0%
@@ -31,7 +30,7 @@ Los nombres de archivo de una CEK se muestran como:
 * `creds/fairplaybin`
 * `Jaigo_DASH/_info/key.B64.random`
 
-El CEK en sí puede almacenarse en un sistema de administración de claves y cifrarse. Esta guía hace referencia al índice de almacenamiento como CEK Storage ID CEKSID. El término clave de cifrado de clave (KEK) hace referencia a la clave de cifrado de segundo nivel y al término `ek` hace referencia al valor de ese cifrado.
+El CEK en sí puede almacenarse en un sistema de administración de claves, así como cifrarse. Esta guía hace referencia al índice de almacenamiento como CEK Storage ID CEKSID. El término clave de cifrado de clave (KEK) hace referencia a la clave de cifrado de segundo nivel y al término `ek` hace referencia al valor de ese cifrado.
 Algunas llamadas utilizan tanto el CEK como el CEK Storage ID CEKSID, y el CEK recuperado del almacenamiento debe coincidir con el CEK proporcionado en la llamada.
 Para HLS Offline con FairPlay, también hay un `persistentContentKey` que se puede configurar para que caduque.
 

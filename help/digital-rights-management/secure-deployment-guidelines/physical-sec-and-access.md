@@ -1,8 +1,7 @@
 ---
 description: Proteger físicamente su entorno de DRM de Adobe Primetime es crucial para evitar el acceso no autorizado.
 title: Seguridad física y acceso
-exl-id: ecfe6036-8068-4936-892b-174cf7d4f480
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 0%

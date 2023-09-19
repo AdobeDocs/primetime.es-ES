@@ -4,8 +4,7 @@ description: Las notas de la versión de TVSDK para Desktop HLS describen las no
 contentOwner: asgupta
 products: SG_PRIMETIME
 topic-tags: release-notes
-exl-id: 5e227c99-acf6-4b16-a35a-68e2928fdbfd
-source-git-commit: 1bc2f6c230c262babf2958c32fee31afcad04c2f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '5194'
 ht-degree: 0%
@@ -202,7 +201,7 @@ Este problema se solucionó añadiendo el código para comprobar el valor de AUD
 
 Este problema se resolvió teniendo en cuenta que, cuando no hay ninguna configuración de publicidad, TVSDK puede acelerar el procesamiento al eliminar la retención de anuncio previo a la emisión y la retención de reserva en directo en la cronología diseñada para sincronizar la inserción de publicidad.
 
-* Zendesk #24344 - Desactivar archivos WebVTT para mejorar los tiempos de inicio.
+* Zendesk #24344 - Desactivar los archivos WebVTT para mejorar los tiempos de inicio.
 
 **Nota**: este problema requiere el reproductor de Flash 23 o posterior.
 
@@ -488,7 +487,7 @@ Se ha corregido un error en el código de manipulación de cookies que podría t
 
 **Versión 1.4.16** (1.4.16.684)
 
-* Zendesk #3732: Añada compatibilidad con proxies en Chrome para la integridad del flujo (requiere Flash Player FP 19.0.0.207 o bueno)
+* Zendesk #3732: Añada compatibilidad con proxies en Chrome para la integridad del flujo (requiere Flash Player FP 19.0.0.207 o superior)
 
 Esto es una mejora.
 
@@ -502,31 +501,31 @@ Este problema se resolvió reinicializando el rastreador de Video Heartbeat dura
 
 * Zendesk #17427: La integridad de la emisión de Adobe no funciona a través de un proxy en Chrome (Win7) ()
 
-**Nota**: La resolución requiere el Flash Player FP 19.0.0.207 o bueno.
+**Nota**: La resolución requiere el Flash Player FP 19.0.0.207 o superior.
 
 Este problema es el mismo que el de Zendesk #3732.
 
 * Zendesk #17907 - Retraso en la transmisión en vivo de pHLS con el Flash Player 19
 
-**Nota**: La resolución requiere el Flash Player FP 19.0.0.207 o bueno.
+**Nota**: La resolución requiere el Flash Player FP 19.0.0.207 o superior.
 
 Este problema se resolvió administrando los flujos en directo donde los dominios de los archivos TS cambian al volver a cargar el manifiesto en directo y los archivos se descargan dos veces.
 
 * Zendesk #17931: El contenido HLS con pizarra al principio falla en la reproducción
 
-**Nota**: La resolución requiere el Flash Player FP 19.0.0.207 o bueno.
+**Nota**: La resolución requiere el Flash Player FP 19.0.0.207 o superior.
 
 El problema se resolvió gestionando flujos sin audio en los primeros 2 segundos del primer archivo TS.
 
 * Zendesk #17934: Error en el streaming en directo con el Flash 19.0.0.185
 
-**Nota**: La resolución requiere el Flash Player FP 19.0.0.207 o bueno.
+**Nota**: La resolución requiere el Flash Player FP 19.0.0.207 o superior.
 
 El problema se resolvía gestionando emisiones en directo con intercalación temporal entre fotogramas de audio y vídeo en los límites de los segmentos.
 
 * Zendesk #17973: El último Flash Player 19.0.0.185 se bloquea durante el anuncio
 
-**Nota**: La resolución requiere el Flash Player FP 19.0.0.207 o bueno.
+**Nota**: La resolución requiere el Flash Player FP 19.0.0.207 o superior.
 
 El problema se resolvió gestionando el audio sin mezclar con la inserción del anuncio durante la emisión. (Se produce el cambio de analizador; en cualquier momento de la reproducción, el contenido pasa al anuncio mid-roll o en mitad de la reproducción del anuncio, etc.).
 
@@ -577,15 +576,15 @@ Proporcione parámetros personalizados para cada pausa publicitaria.
 
 **Versión 1.4.13** (1.4.13.660)
 
-* Zendesk #4037: Error de perfil no utilizable (requiere el Flash Player 18.0.0.232 o bueno)
+* Zendesk #4037: Error de perfil no utilizable (requiere el Flash Player 18.0.0.232 o superior)
 
 se corrigió un problema con el análisis de url cuando el parámetro de consulta contiene &quot;http&quot;
 
-* Zendesk #4260: el Flash Player 18 se bloquea en IE11 (requiere el Flash Player 18.0.0.232 o bueno)
+* Zendesk #4260: el Flash Player 18 se bloquea en IE11 (requiere el Flash Player 18.0.0.232 o superior)
 
 Se corrigió un bloqueo al reproducir vídeo en modo de pantalla completa con IE11
 
-* Zendesk #4262: El reproductor de Adobe Primetime se bloquea en windows 10 (requiere el Flash Player 18.0.0.232 o bueno)
+* Zendesk #4262: El reproductor de Adobe Primetime se bloquea en windows 10 (requiere el Flash Player 18.0.0.232 o superior)
 
 Se corrigió un bloqueo al reproducir vídeo en modo de pantalla completa con FireFox en Windows.
 
@@ -593,11 +592,11 @@ Se corrigió un bloqueo al reproducir vídeo en modo de pantalla completa con Fi
 
 Se ha corregido un problema por el cual una dirección URL no reconocía correctamente su tipo porque no tenía extensión
 
-* Zendesk #4306: Se bloquea el Flash Player cuando se pasa a pantalla completa solo en Win (requiere el Flash Player 18.0.0.232 o bueno)
+* Zendesk #4306: Se bloquea el Flash Player cuando se pasa a pantalla completa solo en Win (requiere Flash Player 18.0.0.232 o superior)
 
 Se ha corregido un bloqueo al reproducir vídeo en modo de pantalla completa en Windows.
 
-* Zendesk #4480: Faltan eventos de etiquetas ID3 (requiere el Flash Player 18.0.0.232 o bueno)
+* Zendesk #4480: Faltan eventos de etiquetas ID3 (se requiere el Flash Player 18.0.0.232 o superior)
 
 **1.4.12 **(1.4.12.656)
 
@@ -609,7 +608,7 @@ Se ha actualizado el servicio de reempaquetado creativo para que gestione correc
 
 Ahora se admite la reproducción básica del contenido MP4, incluidas reproducción, pausa y búsqueda.
 
-Lo siguiente requiere el Flash Player 18.0.0.225 o bueno:
+Los siguientes requisitos son el Flash Player 18.0.0.225 o superior:
 
 * Zendesk #3992 - Velocidades adicionales de TrickPlay.
 
@@ -706,17 +705,17 @@ Los tipos MIME para el formato HLS distinguían entre mayúsculas y minúsculas,
 
 **Versión 1.4.4**
 
-* Zendesk #1561 - Re: `[Adobe Primetime]` Actualización: compatibilidad de conmutación por error basada en cliente HLS para PROGRAM-DATE-TIME en PSDK de escritorio (requiere la versión de Flash Player 16.0.0.305 o buena)
+* Zendesk #1561 - Re: `[Adobe Primetime]` Actualización: compatibilidad de conmutación por error basada en cliente HLS para PROGRAM-DATE-TIME en PSDK de escritorio (requiere la versión de Flash Player 16.0.0.305 o superior)
 * Zendesk #2197 - `[Ads]` Seguimiento de errores de publicidad
 * Zendesk #2286 - Solicitud de funcionalidad: Proporcione información sobre el estado de carga del anuncio (VPAID)
 * Zendesk #2285 - Solicitud de característica: Omitir anuncio después de una duración de tiempo de espera especificada
-* Error #3921755: actualización de la biblioteca OpenSSL a la versión 1.0.1L en Flash Player (requiere la versión de Flash Player 16.0.0.305 o buena)
+* Error #3921755: actualización de la biblioteca OpenSSL a la versión 1.0.1L en Flash Player (requiere la versión de Flash Player 16.0.0.305 o superior)
 
 **Versión 1.4.2**
 
-* Zendesk #1303 - Desplazamiento vertical para subtítulos (requiere la versión de Flash Player 16.0.0.235 o buena, fecha prevista de lanzamiento: diciembre de 2014)
-* Zendesk #1870 - Subtítulos Encendidos y Apagados (requiere la versión de Flash Player 16.0.0.235 o buena, fecha prevista de lanzamiento: diciembre de 2014)
-* Zendesk #2110: La reproducción se atasca después de intentar entrar a pantalla completa durante un anuncio VPAID (requiere la versión de Flash Player 16.0.0.235 o buena, fecha de lanzamiento prevista: diciembre de 2014)
+* Zendesk #1303 - Desplazamiento vertical para subtítulos (requiere la versión de Flash Player 16.0.0.235 o superior, fecha prevista de lanzamiento: diciembre de 2014)
+* Zendesk #1870 - Subtítulos Encendidos y Apagados (requiere la versión de Flash Player 16.0.0.235 o superior, fecha prevista de lanzamiento: diciembre de 2014)
+* Zendesk #2110: La reproducción se atasca después de intentar entrar a pantalla completa durante un anuncio VPAID (requiere la versión de Flash Player 16.0.0.235 o superior, fecha prevista de lanzamiento: diciembre de 2014)
 * Zendesk #2199 - `[VPAID]` El reproductor no responde al buscar una pausa publicitaria pasada
 * Zendesk #2358 - Re: `[Analytics]` Datos de capítulo incorrectos
 

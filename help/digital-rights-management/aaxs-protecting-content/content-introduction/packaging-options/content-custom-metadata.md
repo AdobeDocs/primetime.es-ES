@@ -2,8 +2,7 @@
 title: Metadatos personalizados
 description: Metadatos personalizados
 copied-description: true
-exl-id: d7783420-b345-44de-8f22-a16dda5d7554
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%

@@ -2,8 +2,7 @@
 title: Analizar rendimiento
 description: Analizar rendimiento
 copied-description: true
-exl-id: bef14bc2-30dc-44e5-bdfe-8b79f3af2cec
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 0%

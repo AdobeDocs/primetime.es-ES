@@ -2,8 +2,7 @@
 title: Almacenamiento en caché
 description: Almacenamiento en caché
 copied-description: true
-exl-id: c12c2345-db55-468a-b4b5-5a9e1364a46d
-source-git-commit: 3e63c187f12d1bff53370bbcde4d6a77f58f3b4f
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: TVSDK introduce la entrega segura a través de HTTPS.
 title: Envío seguro a través de HTTPS
-exl-id: 41e2c925-2145-4dfd-909a-aec57dbae9cd
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 0%
@@ -13,7 +12,7 @@ ht-degree: 0%
 
 Adobe Primetime TVSDK proporciona compatibilidad con el envío HTTPS para todas las llamadas que se originan desde TVSDK, que incluyen
 
-* Llamadas al servidor de Auditude Ad
+* Llamadas al Auditude y al servidor
 * Solicitudes CRS
 * Llamadas de licencia DRM
 * Pings de Video Analytics

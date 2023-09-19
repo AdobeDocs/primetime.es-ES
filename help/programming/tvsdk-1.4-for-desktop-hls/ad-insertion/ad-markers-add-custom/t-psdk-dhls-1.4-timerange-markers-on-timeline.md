@@ -1,8 +1,7 @@
 ---
 description: Este ejemplo muestra la forma recomendada de incluir especificaciones de TimeRange en la cronología de reproducción.
 title: Colocar marcadores de anuncios de TimeRange en la cronología
-exl-id: a4d45395-38a4-4345-9ba3-87cd9200b9f6
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -25,7 +24,7 @@ Este ejemplo muestra la forma recomendada de incluir especificaciones de TimeRan
 
 * Se da por hecho que el elemento del reproductor de contenidos que se está cargando apunta a un recurso de VOD. TVSDK comprueba esto cada vez que la aplicación intenta cargar un recurso multimedia cuyos metadatos contienen `TimeRange` especificaciones que solo se pueden utilizar en el contexto de la función de marcadores de publicidad personalizados. Si el recurso subyacente no es de tipo VOD, la biblioteca TVSDK genera una excepción.
 
-* Cuando se trata de marcadores de publicidad personalizados, TVSDK desactiva otros mecanismos de resolución de anuncios (a través de Adobe Primetime ad decisioning (anteriormente conocido como Auditude) u otro sistema de aprovisionamiento de anuncios). Puede utilizar uno de los distintos módulos de resolución de anuncios que proporciona TVSDK o el mecanismo de marcadores de anuncio personalizado. Al utilizar la API personalizada de marcadores de publicidad, el contenido del anuncio se considera ya resuelto y se coloca en la cronología.
+* Cuando se trata de marcadores de publicidad personalizados, TVSDK desactiva otros mecanismos de resolución de anuncios (a través de Adobe Primetime ad decisioning (anteriormente conocido como Auditude) u otro sistema de suministro de anuncios). Puede utilizar uno de los distintos módulos de resolución de anuncios que proporciona TVSDK o el mecanismo de marcadores de anuncio personalizado. Al utilizar la API personalizada de marcadores de publicidad, el contenido del anuncio se considera ya resuelto y se coloca en la cronología.
 
 <!--<a id="example_639BD1B66CE74F3DB65ED06CAD23EB09"></a>-->
 

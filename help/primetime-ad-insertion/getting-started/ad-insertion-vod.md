@@ -1,8 +1,7 @@
 ---
 title: Usar Ad Insertion para VOD
 description: Uso del Ad Insertion para VOD
-exl-id: c998938e-f8a6-4ad3-97f6-ca4ad5055f15
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 0%

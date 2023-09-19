@@ -1,8 +1,7 @@
 ---
 description: Estas clases proporcionan formas de procesar distintos tipos de información.
 title: Clases de utilidad
-exl-id: 1fa56e72-02a8-47fd-af0d-917e046565f0
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Las licencias son el mecanismo principal por el cual a los usuarios se les permite o deniega la capacidad de reproducir un fragmento de contenido de vídeo protegido. Un usuario legítimo (con derecho a acceso) puede recibir una licencia (una clave) para descifrar y reproducir una parte específica del contenido cifrado de su proveedor de contenido.
 title: Licencias
-exl-id: 60aa3e77-f821-41b3-ba0e-1a2c05b2bb1a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
@@ -22,7 +21,6 @@ Su servidor de derechos o tienda solicitará un token de licencia al servidor Ex
 >La solicitud de token de licencia no se puede realizar desde el propio cliente:
 >1. Los derechos deben comprobarse en un entorno de confianza; y
 >1. El autenticador del cliente debe mantenerse en secreto.
-
 
 1. Realice la solicitud del token de licencia.
 

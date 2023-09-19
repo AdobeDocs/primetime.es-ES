@@ -1,8 +1,7 @@
 ---
 description: Puede configurar el reproductor para que rastree y analice el uso del vídeo.
 title: Inicialización y configuración de análisis de vídeo
-exl-id: 3f108ca4-2562-4400-b4e2-10933bde3254
-source-git-commit: 3bbf70e07b51585c9b53f470180d55aa7ac084bc
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '615'
 ht-degree: 0%

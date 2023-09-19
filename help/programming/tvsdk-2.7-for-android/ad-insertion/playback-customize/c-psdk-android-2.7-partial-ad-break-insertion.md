@@ -2,8 +2,7 @@
 title: Inserción de pausa publicitaria parcial
 description: Inserción de pausa publicitaria parcial
 copied-description: true
-exl-id: bcd4b108-9b91-479e-8147-ec4d24862e37
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '204'
 ht-degree: 0%

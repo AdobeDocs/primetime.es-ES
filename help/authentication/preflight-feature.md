@@ -1,8 +1,7 @@
 ---
 title: Función de comprobación preliminar, Cómo habilitar, solucionar problemas o determinar el problema
 description: Función de comprobación preliminar, Cómo habilitar, solucionar problemas o determinar el problema
-exl-id: 9e4ec343-371f-4116-915f-191e5f42cb47
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 0%
@@ -34,7 +33,7 @@ Por lo tanto, estos son aspectos que hay que buscar al habilitar/solucionar prob
 
 * El método que admite la MVPD (ramificación y unión, alineación de canales o multicanal).
 * Si solo se admite fork &amp; join, es necesario preguntar al programador cuántos resourceID enviará en la llamada de comprobación preliminar.
-* Es necesario consultar la MVPD y conocer el impacto de realizar un número &quot;n&quot; de llamadas de autorización de ramificación y unión. Después, el valor debe configurarse en config si es bueno que 5.
+* Es necesario consultar la MVPD y conocer el impacto de realizar un número &quot;n&quot; de llamadas de autorización de ramificación y unión. Después, el valor debe configurarse en config si es mayor que 5.
 
 **Limitación**
 

@@ -2,8 +2,7 @@
 title: Administrar solicitudes de registro de dominio
 description: Administrar solicitudes de registro de dominio
 copied-description: true
-exl-id: 6f4ed908-32ee-4c8b-8965-53381b737989
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%

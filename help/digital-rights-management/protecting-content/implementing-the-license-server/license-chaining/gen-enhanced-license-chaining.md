@@ -2,8 +2,7 @@
 title: Encadenamiento de licencias mejorado
 description: Encadenamiento de licencias mejorado
 copied-description: true
-exl-id: 4b07b29c-e739-4bf9-b464-0c82f68542d4
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 0%

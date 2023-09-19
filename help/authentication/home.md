@@ -1,8 +1,7 @@
 ---
 title: Bienvenido a Adobe&reg; Autenticación de Primetime.
 description: Bienvenido a Adobe&reg; Resumen de autenticación de Primetime
-exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
@@ -25,15 +24,17 @@ La autenticación de Adobe Primetime es una solución de asignación de derechos
 
 ## Ayuda popular y preguntas frecuentes {#help-faqs}
 
-| **Elementos destacados** | |-| | <ul><li>Inicio de sesión único para iOS</li><li>[Pase temporal promocional](/help/authentication/promotional-temp-pass.md)</li><li>[Autenticación basada en el hogar (HBA)](/help/authentication/home-based-authn-tve.md)</li><li>[Infografía de HBA](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[Guía del usuario del panel TVE de Primetime](/help/authentication/tve-dashboard-user-guide.md)</li></ul> |
+| **Elementos destacados** |
+|-|
+| <ul><li>Inicio de sesión único para iOS</li><li>[Pase temporal promocional](/help/authentication/promotional-temp-pass.md)</li><li>[Autenticación basada en el hogar (HBA)](/help/authentication/home-based-authn-tve.md)</li><li>[Infografía de HBA](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[Guía del usuario del panel TVE de Primetime](/help/authentication/tve-dashboard-user-guide.md)</li></ul> |
 
 | **Para programadores** | **Para MVPD** |
 |------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
 | <ul><li>[Guía de KickStart del programador](/help/authentication/programmer-kickstart-guide.md)</li><li>**Selector de MVPD (&quot;selector&quot;)**</li><li>[Metadatos del usuario](/help/authentication/user-metadata.md)</li></ul> | <ul><li>[Guía de Kickstart de MVPD](/help/authentication/mvpd-kickstart-guide.md)</li><li>[Autenticación](/help/authentication/authn-usecase.md)</li><li>[Autorización](/help/authentication/authz-usecase.md)</li><li>[Cerrar sesión](/help/authentication/usecase-mvpd-logout.md)</li></ul> |
 | **Para clientes de aplicaciones nativas** | **Para todos** |
 | <ul><li>[Información general técnica de iOS](/help/authentication/iostvos-sdk-overview.md)</li><li>[Información técnica de Android](/help/authentication/android-sdk-overview.md)</li></ul> | <ul><li>[Documento técnico](/help/authentication/technical-paper.md)</li><li>[Procedimientos de escalación](/help/authentication/escalation-procedures.md)</li><li>**Sistemas compatibles**</li><li>[Glosario](/help/authentication/glossary.md)</li></ul> |
-| **Para Smart Devices** |  |
-| <ul><li>[Información técnica de Clientless](/help/authentication/rest-api-overview.md)</li><li>[API sin cliente](/help/authentication/rest-api-reference.md)</li></ul> |  |
+| **Para Smart Devices** | |
+| <ul><li>[Información técnica de Clientless](/help/authentication/rest-api-overview.md)</li><li>[API sin cliente](/help/authentication/rest-api-reference.md)</li></ul> | |
 
 >[!IMPORTANT]
 >
@@ -42,6 +43,7 @@ La autenticación de Adobe Primetime es una solución de asignación de derechos
 >[Enviando correo electrónico a nuestro equipo de asistencia](mailto:tve-support@adobe.com) también es el primer paso para cualquier problema o informe de incidente.
 >
 >Si tiene un [GRAVEDAD 1 ACTIVA](/help/authentication/escalation-procedures.md) problema y nos ha enviado un correo electrónico y han transcurrido 30 minutos sin respuesta. A continuación, consulte la [Procedimientos de escalación](/help/authentication/escalation-procedures.md) documento para que los números de teléfono llamen.
+>
 
 
 ## Para encontrar lo que necesita {#how-to-search}

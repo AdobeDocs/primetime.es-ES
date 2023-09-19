@@ -1,8 +1,7 @@
 ---
 description: Puede completar flujos de trabajo específicos del Digital Rights Management (DRM).
 title: Digital Rights Management
-exl-id: 5a40252b-2917-4341-bc64-8642432ddda9
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%

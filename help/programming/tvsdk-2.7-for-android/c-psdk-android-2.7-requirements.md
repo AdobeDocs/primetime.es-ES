@@ -1,8 +1,7 @@
 ---
 description: TVSDK tiene requisitos específicos para el contenido multimedia, el contenido de manifiesto, DRM y las versiones de software.
 title: Requisitos
-exl-id: 8c252761-eee3-4fec-a85f-a38c1d9be9cb
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 0%
@@ -32,16 +31,16 @@ Compruebe las restricciones y requisitos para emisiones y listas de reproducció
 |---|---|
 | Manifiestos de variante de anuncio | Must have the same bit-rate renditions as the renditions of the main content. |
 
-## #EXT-X-VERSION requirements {#section_49A33664651A46EC9ED888BA9C1C3F6D}
+## #EXT-X-VERSION requisitos {#section_49A33664651A46EC9ED888BA9C1C3F6D}
 
 La versión de `#EXT-X-VERSION` en el archivo de manifiesto [!DNL .m3u8] afecta a las características disponibles para la aplicación y a las etiquetas `EXT` que son válidas.
 
-Here is some information about the `#EXT-X-VERSION` tag, which specifies the HLS protocol version:
+A continuación se proporciona información sobre la etiqueta `#EXT-X-VERSION`, que especifica la versión del protocolo HLS:
 
 * La versión debe coincidir con las funciones y atributos de la lista de reproducción de HLS; de lo contrario, podrían producirse errores de reproducción. Para obtener más información, consulte [Especificación de flujo en directo HTTP](https://datatracker.ietf.org/doc/draft-pantos-http-live-streaming/?include_text=1).
 * Adobe recomienda utilizar al menos la versión 2 de HLS para la reproducción en clientes basados en TVSDK.
 
-   Los clientes y servidores deben implementar las versiones de la siguiente manera:
+  Los clientes y servidores deben implementar las versiones de la siguiente manera:
 
 <table frame="all" colsep="1" rowsep="1" id="table_62EB98EDD9DE49EC84CB1C7D59BC40E6"> 
  <thead> 

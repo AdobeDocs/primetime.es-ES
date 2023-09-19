@@ -1,8 +1,7 @@
 ---
 description: Cuando el reproductor multimedia cambia su perfil actual a un nuevo perfil, puede recuperar información sobre el conmutador, incluso cuándo ha cambiado, la información de anchura y altura o por qué se ha utilizado una velocidad de bits diferente.
 title: Obtener información sobre el conmutador de perfil
-exl-id: b46909fe-666a-4730-8922-15c3eb7a1cba
-source-git-commit: 0019a95fa9ca6d21249533d559ce844897ab67cf
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 0%
@@ -22,7 +21,7 @@ Cuando el reproductor multimedia cambia su perfil actual a un nuevo perfil, pued
    * `time`: tiempo de flujo en el que se produjo el cambio.
    * `description`: Descripción textual del motivo del cambio de la velocidad de bits, como una cadena de pares de clave/valor separados por punto y coma. Incluye un máximo de uno `Reason` y uno `Bitrate`. Si la información no está disponible o la velocidad de bits no ha cambiado, esta cadena está vacía.
 
-      <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
+     <table id="table_E400FD9C57FF40CBAC14AF6847CD8301"> 
        <thead> 
          <tr> 
          <th colname="col1" class="entry"> Nombre de clave </th> 
@@ -51,20 +50,20 @@ Cuando el reproductor multimedia cambia su perfil actual a un nuevo perfil, pued
        </tbody> 
        </table>
 
-      Estos son algunos ejemplos de `description` cadenas:
+     Estos son algunos ejemplos de `description` cadenas:
 
-      ```
-      "Bitrate::=up;Reason::=Network Adaptation;" 
-      
-      "Bitrate::=down;Reason::=Failover;"
-      ```
+     ```
+     "Bitrate::=up;Reason::=Network Adaptation;" 
+     
+     "Bitrate::=down;Reason::=Failover;"
+     ```
 
    * `width`: Entero que indica la anchura en píxeles.
    * `height`: Entero que indica la altura en píxeles.
 
-      >[!NOTE]
-      >
-      >Los datos de anchura y altura solo están disponibles cuando están incluidos en la variable `RESOLUTION` en el manifiesto M3U8. Si la información no se incluye en el M3U8, las propiedades de anchura y altura se establecen en 0, ya que no forman parte de la información de perfil.
+     >[!NOTE]
+     >
+     >Los datos de anchura y altura solo están disponibles cuando están incluidos en la variable `RESOLUTION` en el manifiesto M3U8. Si la información no se incluye en el M3U8, las propiedades de anchura y altura se establecen en 0, ya que no forman parte de la información de perfil.
 
 <!--<a id="example_A713D420AE2E4E3CB7B78C6BC732BE90"></a>-->
 

@@ -2,8 +2,7 @@
 description: Puede activar o desactivar la función de resolución de anuncios diferidos mediante el mecanismo de carga de anuncios diferidos existente (la resolución de anuncios diferidos está desactivada de forma predeterminada).
 keywords: Diferido;Resolución de publicidad;Carga de publicidad;delayLoading
 title: Habilitar la resolución de anuncios diferidos
-exl-id: a52a1f9a-3bf6-4193-8347-1ef248ba8884
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 0%
@@ -22,8 +21,8 @@ Puede habilitar o deshabilitar la resolución de anuncios diferidos llamando a [
    * If *hasDelayAdLoading* devuelve true, TVSDK resuelve solo los anuncios iniciales y las transiciones al estado PREPARED.
 
       * Los anuncios restantes se resuelven y se colocan durante la reproducción.
-   * Cuando *hasPreroll *o *hasLivePreroll* devuelve false, TVSDK supone que no hay ningún anuncio preroll e inicia la reproducción del contenido inmediatamente. Se establecen en true de forma predeterminada.
 
+   * Cuando *hasPreroll *o *hasLivePreroll* devuelve false, TVSDK supone que no hay ningún anuncio preroll e inicia la reproducción del contenido inmediatamente. Se establecen en true de forma predeterminada.
 
 **API relevantes para la resolución de anuncios diferidos:**
 
@@ -47,7 +46,7 @@ Methods:
 
 Para reflejar los anuncios con precisión como indicaciones en una barra de desplazamiento, escuche la `TimelineEvent`y vuelva a dibujar la barra de desplazamiento cada vez que reciba este evento.
 
-Cuando la resolución lenta de anuncios está habilitada para emisiones de VOD, todas las pausas publicitarias se colocan en la cronología; sin embargo, muchas de las pausas publicitarias no se resolverán aún. La aplicación puede determinar si se deben dibujar o no estos marcadores marcando la `TimelineMarker::getDuration()`. Si el valor es bueno que cero, se han resuelto los anuncios de la pausa publicitaria.
+Cuando la resolución diferida de anuncios está habilitada para emisiones de VOD, todas las pausas publicitarias se colocan en la cronología; sin embargo, muchas de las pausas publicitarias no se resolverán aún. La aplicación puede determinar si se deben dibujar o no estos marcadores marcando la `TimelineMarker::getDuration()`. Si el valor es mayor que cero, se han resuelto los anuncios de la pausa publicitaria.
 
 TVSDK envía este evento cuando se ha resuelto una pausa publicitaria y también cuando el reproductor pasa al estado PREPARADO.
 

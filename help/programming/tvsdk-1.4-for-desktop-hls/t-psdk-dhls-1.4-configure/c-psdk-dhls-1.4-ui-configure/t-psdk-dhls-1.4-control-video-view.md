@@ -1,8 +1,7 @@
 ---
 description: Puede controlar la posición y el tamaño de la vista de vídeo mediante el objeto MediaPlayerView.
 title: Controlar la posición y el tamaño de la vista de vídeo
-exl-id: 5e7ae557-7f2b-4697-85eb-e72d1f43a7fc
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
@@ -33,8 +32,7 @@ Puede anular el comportamiento de relación de aspecto predeterminado especifica
    >
    >Por ejemplo:
    >
-   >
-   ```
+   >```
    >public class CustomScalePolicy implements MediaPlayerViewScalePolicy { 
    >       /** 
    >         * Default constructor. 
@@ -56,6 +54,7 @@ Puede anular el comportamiento de relación de aspecto predeterminado especifica
    >       } 
    >}
    >```
+   >
 
 1. Asigne la implementación a `MediaPlayerView` propiedad.
 

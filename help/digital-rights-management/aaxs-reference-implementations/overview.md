@@ -2,8 +2,7 @@
 title: 'Información general: uso de las implementaciones de referencia'
 description: 'Información general: uso de las implementaciones de referencia'
 copied-description: true
-exl-id: 2a5075f4-3e7b-4e4c-b69d-c044b064e282
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%

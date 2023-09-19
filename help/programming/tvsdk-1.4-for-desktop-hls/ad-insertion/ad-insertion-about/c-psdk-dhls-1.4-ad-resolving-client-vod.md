@@ -1,8 +1,7 @@
 ---
 description: Para el contenido de vídeo bajo demanda (VOD), TVSDK inserta saltos de publicidad uniendo los anuncios en el contenido principal para que aumente la duración de la cronología.
 title: Resolución e inserción de anuncios de VOD
-exl-id: 6f02c7fc-028d-442f-92d4-9efa671b7f02
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 0%
@@ -30,7 +29,7 @@ Después de que comience la reproducción, no se pueden producir cambios adicion
 * Insertado
 * Eliminado
 
-   Por ejemplo, no puede eliminar anuncios integrados del contenido para ofrecer una experiencia sin anuncios.
+  Por ejemplo, no puede eliminar anuncios integrados del contenido para ofrecer una experiencia sin anuncios.
 * Reemplazado
 
-   Por ejemplo, no se pueden reemplazar los anuncios integrados con anuncios de destino.
+  Por ejemplo, no se pueden reemplazar los anuncios integrados con anuncios de destino.

@@ -2,8 +2,7 @@
 title: Consumir CRL generadas localmente
 description: Consumir CRL generadas localmente
 copied-description: true
-exl-id: d96418d0-8fd3-4f6d-8480-191fe540080a
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
@@ -16,8 +15,8 @@ Para consumir listas de revocación de certificados (CRL) generadas localmente y
 
 * Llamada `RevocationList.verifySignature` para comprobar la firma antes de proporcionar RevocationList a cualquier API.
 
-   Para obtener más información, consulte `RevocationListFactory` en el *Referencia de API de acceso de Adobe*.
+  Para obtener más información, consulte `RevocationListFactory` en el *Referencia de API de acceso de Adobe*.
 
 * Llamada `PolicyUpdateList.verifySignature`para comprobar la firma antes de proporcionar el `PolicyUpdateList` a cualquier API.
 
-   Para obtener más información, consulte `PolicyUpdateList` en el *Referencia de API de acceso de Adobe*.
+  Para obtener más información, consulte `PolicyUpdateList` en el *Referencia de API de acceso de Adobe*.

@@ -1,8 +1,7 @@
 ---
 description: El modo de señalización de anuncio especifica dónde debe obtener la información publicitaria el flujo de vídeo.
 title: Modo de señalización de anuncio
-exl-id: ddee6753-522f-46e8-8ba2-38b9593e7abe
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 0%

@@ -1,8 +1,7 @@
 ---
 description: Adobe Primetime DRM Server for Protected Streaming es una implementación de servidor de licencias basada en el SDK de DRM de Primetime. Este servidor emite licencias para contenido protegido a clientes de DRM de Primetime.
 title: Acerca del servidor DRM de Adobe Primetime para flujo protegido
-exl-id: 911acd61-8b27-4ac7-a420-2faeb46e8087
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 0%

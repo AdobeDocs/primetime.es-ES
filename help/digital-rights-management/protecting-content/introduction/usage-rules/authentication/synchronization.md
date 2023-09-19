@@ -2,8 +2,7 @@
 title: Requisitos para la sincronización
 description: Requisitos para la sincronización
 copied-description: true
-exl-id: 0368e363-893f-4b51-a317-00791d0ab54f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 0%

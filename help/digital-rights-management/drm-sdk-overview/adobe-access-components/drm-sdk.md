@@ -1,8 +1,7 @@
 ---
 description: Los componentes principales de Primetime DRM constan de un SDK de Java y los entornos de tiempo de ejecución de cliente de Flash Player y Adobe AIR.
 title: SDK de Java, Flash Player y cliente de Adobe AIR
-exl-id: 5422d282-da9c-4810-a782-3c3af5fdeb3f
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
@@ -19,7 +18,7 @@ Las API de Java proporcionadas en el SDK se describen en las siguientes subsecci
 
 Estas API se utilizan para permitir que el servidor administre solicitudes de cliente para unirse y abandonar dominios de grupos de dispositivos.
 
-Un dominio de grupo de dispositivos es una colección lógica de dispositivos que pueden compartir licencias entre sí. Para que esto suceda, cada dispositivo debe unirse/registrarse primero en el mismo dominio. El SDK de DRM de Primetime, que se ejecuta en un servidor, debe administrar las solicitudes de unión (registro) de dominio de dispositivo, así como las solicitudes de baja (anulación de registro) de dominio de dispositivo. Los dispositivos que no están unidos a ningún dominio recibirán licencias enlazadas a ese dispositivo, que no se podrán compartir con ningún otro.
+Un dominio de grupo de dispositivos es una colección lógica de dispositivos que pueden compartir licencias entre sí. Para que esto suceda, cada dispositivo debe unirse/registrarse primero en el mismo dominio. El SDK de DRM de Primetime, que se ejecuta en un servidor, debe gestionar las solicitudes de unión (registro) de dominio de dispositivo, así como las solicitudes de baja (anulación de registro) de dominio de dispositivo. Los dispositivos que no están unidos a ningún dominio recibirán licencias enlazadas a ese dispositivo, que no se podrán compartir con ningún otro.
 
 ## API de Java para proteger contenido{#java-apis-for-protecting-content}
 
@@ -27,11 +26,11 @@ Estas API se utilizan para definir derechos y preparar contenido para su distrib
 
 * Administración de directivas
 
-   La API de administración de políticas se utiliza para crear y modificar las políticas que se aplican al contenido. Se pueden crear o actualizar directivas, incluida la obtención/configuración de todas las reglas de uso y la autorización de parámetros adicionales en un área de nombres personalizada.
+  La API de administración de políticas se utiliza para crear y modificar las políticas que se aplican al contenido. Se pueden crear o actualizar directivas, incluida la obtención/configuración de todas las reglas de uso y la autorización de parámetros adicionales en un área de nombres personalizada.
 
 * Empaquetado de contenido
 
-   La API de empaquetado de contenido se utiliza para cifrar contenido y recuperar metadatos del contenido empaquetado.
+  La API de empaquetado de contenido se utiliza para cifrar contenido y recuperar metadatos del contenido empaquetado.
 
 ## API de Java para la emisión de licencias{#java-apis-for-issuing-licenses}
 
@@ -39,15 +38,15 @@ Estas API se utilizan cuando un cliente solicita una licencia al servidor. El SD
 
 * Autenticación
 
-   La API de autenticación se puede utilizar para gestionar solicitudes de autenticación y generar tokens de autenticación.
+  La API de autenticación se puede utilizar para gestionar solicitudes de autenticación y generar tokens de autenticación.
 
 * Generación y adquisición de licencias
 
-   La API de generación y adquisición de licencias se utiliza para generar una licencia para el usuario.
+  La API de generación y adquisición de licencias se utiliza para generar una licencia para el usuario.
 
 * Compatibilidad con clientes y contenido de la versión 1.5 de Adobe AIR
 
-   Con fines de compatibilidad con versiones anteriores, el SDK tiene API para gestionar solicitudes de aplicaciones de AIR creadas para utilizarlas con clientes de la versión 1.5 y anteriores de AIR, así como contenido protegido.
+  Con fines de compatibilidad con versiones anteriores, el SDK tiene API para gestionar solicitudes de aplicaciones de AIR creadas para utilizarlas con clientes de la versión 1.5 y anteriores de AIR, así como contenido protegido.
 
 ## Implementación de referencia {#reference-implementation}
 

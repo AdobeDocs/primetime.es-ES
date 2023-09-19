@@ -1,8 +1,7 @@
 ---
 title: Pase temporal
 description: Pase temporal
-exl-id: 1df14090-8e71-4e3e-82d8-f441d07c6f64
-source-git-commit: bfc3ba55c99daba561255760baf273b6538a3c6e
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '2210'
 ht-degree: 0%
@@ -38,8 +37,8 @@ Temp Pass permite a los programadores ofrecer acceso temporal a su contenido pro
 * **Cómo se calcula el tiempo de visualización** : La cantidad de tiempo que un pase temporal sigue siendo válido no se correlaciona con la cantidad de tiempo que un usuario emplea para ver contenido en la aplicación del programador.  Tras la solicitud inicial de autorización del usuario a través de Temp Pass, se calcula un tiempo de caducidad añadiendo el tiempo de solicitud actual inicial al TTL especificado por el Programador. Esta hora de caducidad está asociada al ID de dispositivo del usuario y al ID de solicitante del programador, y se almacena en la base de datos de autenticación de Primetime. Cada vez que el usuario intenta acceder al contenido mediante Temp Pass desde el mismo dispositivo, la autenticación de Primetime comparará el tiempo de solicitud del servidor con el tiempo de caducidad asociado con el ID de dispositivo del usuario y el ID del solicitante del programador. Si el tiempo de solicitud del servidor es menor que el tiempo de caducidad, se concederá la autorización; de lo contrario, se denegará la autorización.
 * **Parámetros de configuración** - Un programador puede especificar los siguientes parámetros de pase temporal para crear una regla de pase temporal:
    * **TTL de token** : cantidad de tiempo que un usuario puede ver sin iniciar sesión en una MVPD. Esta hora está basada en el reloj y caduca tanto si el usuario ve el contenido como si no.
-   >[!NOTE]
-   >Un ID de solicitante no puede tener asociada más de una regla de Temp Pass.
+  >[!NOTE]
+  >Un ID de solicitante no puede tener asociada más de una regla de Temp Pass.
 * **Autenticación/autorización** - En el flujo Pase temporal, especifique la MVPD como &quot;Pase temporal&quot;.  La autenticación de Primetime no se comunica con una MVPD real en el flujo de Temp Pass, por lo que la MVPD de &quot;Temp Pass&quot; autoriza cualquier recurso. Los programadores pueden especificar un recurso al que se puede tener acceso mediante Pase temporal, tal como lo hacen para el resto de los recursos del sitio. La biblioteca de Media Verifier se puede utilizar de la forma habitual para verificar el token de medios corto de Temp Pass y aplicar la comprobación de recursos antes de la reproducción.
 * **Seguimiento de datos en flujo de pase temporal** : Dos puntos con respecto al seguimiento de datos durante un flujo de derechos de Temp Pass:
    * El ID de seguimiento que se pasa de la autenticación de Primetime a su **sendTrackingData()** Callback es un hash del ID del dispositivo.

@@ -2,8 +2,7 @@
 title: Autenticación de usuario
 description: Autenticación de usuario
 copied-description: true
-exl-id: 7e21ff0e-ee0f-474f-9f22-8a4a77470c63
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 0%

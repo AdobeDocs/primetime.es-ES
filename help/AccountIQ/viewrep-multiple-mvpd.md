@@ -1,8 +1,7 @@
 ---
 title: Ver informes de uso compartido de cuentas de varias MVPD
 description: Cómo ver los informes de uso compartido de varias MVPD.
-exl-id: c616e6e1-373c-471d-a2dc-c484b7cd5cf5
-source-git-commit: 5963c55d87385fbd92646bfc45a3650fb568bca5
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 0%
@@ -25,9 +24,9 @@ Para ver las estadísticas de uso compartido de cuentas de suscriptor de varias 
 
 * [Tablero](/help/AccountIQ/dashboard.md) (el tablero ofrece una visión de los gráficos seleccionados de las diferentes páginas de informes).
 
-   ![](assets/mult-mvpds-dashboard.png)
+  ![](assets/mult-mvpds-dashboard.png)
 
-   *Imagen: informe del panel de varias MVPD*
+  *Imagen: informe del panel de varias MVPD*
 
 * [Uso general](/help/AccountIQ/general-usage-reports.md)
 

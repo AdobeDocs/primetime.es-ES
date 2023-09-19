@@ -1,8 +1,7 @@
 ---
 description: Cuando Primetime ad decisioningencuentra un anuncio VAST (creativo) vacío o con un tipo de medio no válido para HLS, evalúa los anuncios de reserva para determinar qué se debe devolver.
 title: Comportamiento de reserva de anuncio para VAST y VMAP
-exl-id: 8145d928-5d38-40f1-8dc3-fee9b815465c
-source-git-commit: be43bbbd1051886c8979ff590a3197b2a7249b6a
+source-git-commit: 02ebc3548a254b2a6554f1ab34afbb3ea5f09bb8
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
