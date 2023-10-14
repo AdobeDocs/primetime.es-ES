@@ -1,12 +1,12 @@
 ---
 product: primetime
 audience: end-user
-user-guide-title: Ayuda de implementación de referencia de Primetime
+user-guide-title: Ayuda para la implementación de referencia de Primetime
 user-guide-description: Ayuda a comprender el SDK de TVSDK y a modificar los administradores de funciones para personalizar su reproductor personal.
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '246'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -70,4 +70,4 @@ ht-degree: 0%
       + [Configuración de Video Analytics](video-analytics/configure-video-analytics-manager.md)
       + [Documentación de API relacionada](video-analytics/va-apis-callbacks.md)
    + [Crear una interfaz de usuario personalizada](build-custom-ui.md)
-   + [Solución de problemas](troubleshooting.md)
+   + [Resolución de problemas](troubleshooting.md)

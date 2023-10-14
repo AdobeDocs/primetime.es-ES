@@ -6,14 +6,14 @@ user-guide-description: Proporciona información específica de la versión, req
 source-git-commit: a29715b0ef833f795760094fd0eb9161462dabb7
 workflow-type: tm+mt
 source-wordcount: '116'
-ht-degree: 0%
+ht-degree: 17%
 
 ---
 
 
 # Notas de la versión de Primetime {#release-notes}
 
-+ [Información general sobre notas de versión](home.md)
++ [Notas de la versión Información general](home.md)
 + Ad Insertion de Primetime {#ptai}
    + [Notas de la versión de PTAI 22.9.2](ptai-22x-release-notes.md)
    + [Notas de la versión de PTAI 21.11.1](ptai-21x-release-notes.md)

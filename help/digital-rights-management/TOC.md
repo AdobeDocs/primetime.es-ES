@@ -1,12 +1,12 @@
 ---
 product: adobe primetime
 audience: end-user
-user-guide-title: Ayuda de Digital Rights Management de Primetime
-user-guide-description: Ayuda a conocer mejor los distintos escenarios de usuario en Digital Rights Management (DRM).
+user-guide-title: Ayuda de Primetime Digital Rights Management
+user-guide-description: Ayuda a conocer mejor los distintos casos de usuario en Digital Rights Management (DRM).
 source-git-commit: 95626ebde981d1996652a67bc9e0cea05f24aa6d
 workflow-type: tm+mt
 source-wordcount: '2215'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -66,7 +66,7 @@ ht-degree: 0%
    + Opciones de empaquetado {#packaging-options}
       + [Utilizar el empaquetador sin conexión de Primetime incluido](cloud-quick-start/packaging-options/use-offline-packager.md)
       + [Utilice un codificador de terceros](cloud-quick-start/packaging-options/use-third-party-encoder.md)
-      + [Usar Adobe Medium Server](cloud-quick-start/packaging-options/use-adobe-media-server.md)
+      + [Usar Adobe Media Server](cloud-quick-start/packaging-options/use-adobe-media-server.md)
    + [Prueba del contenido empaquetado](cloud-quick-start/test-packaged-content.md)
    + [Activación de errores](cloud-quick-start/triaging-errors/client-error-triaging.md)
    + Autenticación/derecho personalizados {#custom-auth-ent}
@@ -300,7 +300,7 @@ ht-degree: 0%
       + [Configuración de HSM](drm-reference-implementations/configuration/hsm-config.md)
       + [Archivo de política entre dominios](drm-reference-implementations/configuration/hsm-config-crossdomain-policy-file.md)
    + [Implementación del servidor de licencias](drm-reference-implementations/deploy-a-license-server.md)
-   + [Solución de problemas](drm-reference-implementations/server-and-wfp-troubleshooting.md)
+   + [Resolución de problemas](drm-reference-implementations/server-and-wfp-troubleshooting.md)
    + [Comprobar si el servidor de licencias se inició correctamente](drm-reference-implementations/server-determining-ref-started.md)
    + [Determinar si el servidor de licencias de implementación de referencia se ejecuta correctamente](drm-reference-implementations/server-determining-ref-running.md)
    + Implementación de los modelos de uso {#implement-usage-models}
@@ -335,7 +335,7 @@ ht-degree: 0%
    + [Uso de la clase DRManager](tvsdk-drm-workflow/using-drmmanager/using-drmmanager-overview.md)
    + [Uso de la clase DRMContentData](tvsdk-drm-workflow/using-drmcontentdata.md)
    + [Licencias fuera de banda](tvsdk-drm-workflow/about-out-of-band-licenses.md)
-   + [Compatibilidad con dominio del dispositivo](tvsdk-drm-workflow/device-domain-support.md)
+   + [Compatibilidad con dominio de dispositivo](tvsdk-drm-workflow/device-domain-support.md)
    + [Previsualización de licencia](tvsdk-drm-workflow/license-preview.md)
    + [Entrega de contenido](tvsdk-drm-workflow/delivering-content.md)
 + [Referencia de mensaje de error del cliente DRM](client-error-message-reference.md)
@@ -508,7 +508,7 @@ ht-degree: 0%
    + [Creación de reproductores de vídeo](aaxs-protecting-content/content-creating-video-players.md)
 + Implementaciones de referencia de acceso a Adobe {#reference-implementation}
    + [Información general: uso de las implementaciones de referencia](aaxs-reference-implementations/overview.md)
-   + [Herramientas de línea de comandos para empaquetar contenido y crear listas de revocaciones ](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
+   + [Herramientas de línea de comandos para empaquetar contenido y crear listas de revocaciones](aaxs-reference-implementations/command-line-tools/aaxs-ref-impl-command-line-overview.md)
    + Gestor de políticas {#policy-manager}
       + [Uso del Administrador de directivas](aaxs-reference-implementations/command-line-tools/policy-manager/using-aaxs-policy-manager.md)
       + [Propiedades del archivo de configuración](aaxs-reference-implementations/command-line-tools/policy-manager/config-file-properties.md)
@@ -550,7 +550,7 @@ ht-degree: 0%
       + [Archivo de directiva entre dominios](aaxs-reference-implementations/license-server-and-wfp/license-server-hsm-config-crossdomain-policy-file.md)
    + Implementación del servidor de licencias y del empaquetador de carpetas vigiladas {#license-server-and-wfp}
       + [Información general sobre la implementación del servidor de licencias y el empaquetador de carpetas inspeccionadas](aaxs-reference-implementations/deploying-license-server-and-wfp/deploying-license-server-wfp-overview.md)
-      + [Solución de problemas](aaxs-reference-implementations/deploying-license-server-and-wfp/deploying-license-server-wfp-troubleshooting.md)
+      + [Resolución de problemas](aaxs-reference-implementations/deploying-license-server-and-wfp/deploying-license-server-wfp-troubleshooting.md)
    + [Determinar si el servidor de licencias de implementación de referencia se está ejecutando correctamente](aaxs-reference-implementations/deploying-license-server-determining-ref-running.md)
    + Implementación de los modelos de uso {#usage-models}
       + [Información general sobre la implementación de modelos de uso](aaxs-reference-implementations/deploying-license-impl-usage-models/deploying-license-impl-usage-overview.md)
